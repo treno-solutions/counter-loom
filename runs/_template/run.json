@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "run_id": null,
+  "title": null,
+  "protocol_version": null,
+  "readiness_status": "draft",
+  "start_check_file": "inputs/start-check.md",
+  "archive_status": "awaiting_results",
+  "execution_status": null,
+  "mirofish": {
+    "project_id": null,
+    "simulation_id": null,
+    "url": null,
+    "ids_verified_against_export": false
+  },
+  "started_at": null,
+  "finished_at": null,
+  "timestamps_timezone": null,
+  "model": {
+    "provider": null,
+    "name": null,
+    "version_or_digest": null,
+    "temperature": null,
+    "random_seed": null
+  },
+  "configuration": {
+    "agent_count": null,
+    "platforms": [],
+    "planned_rounds": null,
+    "completed_rounds_by_platform": {},
+    "simulation_time_mapping": null,
+    "export_file": null
+  },
+  "inputs": [],
+  "input_manifest": null,
+  "prior_run_ids": [],
+  "prior_run_findings_file": null,
+  "exports": [],
+  "notes": []
+}

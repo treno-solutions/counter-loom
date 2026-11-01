@@ -1,0 +1,103 @@
+{
+  "source_id": "SI26",
+  "pdf_page": 11,
+  "printed_page": 9,
+  "units": "million troy ounces (Moz)",
+  "periods": [
+    {
+      "year": 2024,
+      "status": "historical estimate revised in 2026 edition"
+    },
+    {
+      "year": 2025,
+      "status": "historical estimate"
+    },
+    {
+      "year": 2026,
+      "status": "forecast as of report publication, not actual"
+    }
+  ],
+  "metrics": {
+    "mine_production": [
+      823.6,
+      846.6,
+      844.1
+    ],
+    "recycling": [
+      194.5,
+      197.6,
+      211.3
+    ],
+    "net_hedging_supply": [
+      0.0,
+      44.7,
+      10.0
+    ],
+    "net_official_sector_sales": [
+      1.5,
+      1.5,
+      1.0
+    ],
+    "total_supply": [
+      1019.6,
+      1090.4,
+      1066.4
+    ],
+    "industrial_total": [
+      679.0,
+      657.4,
+      639.6
+    ],
+    "photovoltaics_subset_of_industrial": [
+      197.5,
+      186.6,
+      151.0
+    ],
+    "photography": [
+      25.5,
+      24.2,
+      22.5
+    ],
+    "jewelry": [
+      205.1,
+      189.3,
+      159.4
+    ],
+    "silverware": [
+      53.5,
+      42.1,
+      33.5
+    ],
+    "coin_and_net_bar_demand": [
+      190.9,
+      217.7,
+      257.6
+    ],
+    "net_hedging_demand": [
+      3.5,
+      0.0,
+      0.0
+    ],
+    "total_demand": [
+      1157.4,
+      1130.6,
+      1112.6
+    ],
+    "market_balance": [
+      -137.9,
+      -40.3,
+      -46.3
+    ],
+    "net_investment_in_etps": [
+      67.5,
+      278.1,
+      30.0
+    ],
+    "market_balance_less_etps": [
+      -205.4,
+      -318.4,
+      -76.3
+    ]
+  },
+  "warning": "Photovoltaics is a subset of industrial demand; do not sum both. ETP investment is separate from the headline market balance."
+}

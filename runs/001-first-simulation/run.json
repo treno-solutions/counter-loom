@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "run_id": "001-first-simulation",
+  "title": "Erste abzulegende Edelmetall-Simulation",
+  "archive_status": "awaiting_results",
+  "execution_status": null,
+  "mirofish": {
+    "project_id": null,
+    "simulation_id": null,
+    "url": null,
+    "ids_verified_against_export": false,
+    "candidate_from_chat": {
+      "project_id": "proj_1a8710f2603c",
+      "simulation_id": "sim_30812a387855",
+      "url": "https://fish.treno.solutions/simulation/sim_30812a387855",
+      "evidence": "Recorded creation in this chat; not checked against a result export."
+    }
+  },
+  "started_at": null,
+  "finished_at": null,
+  "timestamps_timezone": null,
+  "model": {
+    "provider": null,
+    "name": null,
+    "version_or_digest": null,
+    "temperature": null,
+    "random_seed": null
+  },
+  "configuration": {
+    "agent_count": null,
+    "platforms": [],
+    "planned_rounds": null,
+    "completed_rounds_by_platform": {},
+    "simulation_time_mapping": null,
+    "export_file": null
+  },
+  "inputs": [
+    "inputs/precious-metals-research-seed.md",
+    "inputs/prompt.md"
+  ],
+  "input_manifest": "inputs/input-manifest.json",
+  "exports": [],
+  "notes": [
+    "Noch keine Ergebnisse importiert.",
+    "Die verbindlichen MiroFish-IDs bleiben bis zum Abgleich mit dem Ergebnisexport offen.",
+    "Seed lokal exakt kopiert; Prompt aus dem im Chat dokumentierten Upload rekonstruiert.",
+    "Das später erstellte Recherchepaket ist nicht als tatsächlich verwendete Eingabe dieses Laufs eingetragen."
+  ],
+  "prepared_on": "2026-11-01"
+}

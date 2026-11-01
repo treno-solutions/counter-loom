@@ -1,0 +1,147 @@
+[
+  {
+    "id": "silver_institute",
+    "name": "The Silver Institute",
+    "aliases": [
+      "Silver Institute"
+    ],
+    "role": "industry association and survey publisher",
+    "source_id": "SI26",
+    "locator": "PDF p.8"
+  },
+  {
+    "id": "metals_focus",
+    "name": "Metals Focus",
+    "aliases": [],
+    "role": "metals-market research firm",
+    "source_id": "SI26",
+    "locator": "PDF p.8"
+  },
+  {
+    "id": "wgc",
+    "name": "World Gold Council",
+    "aliases": [
+      "WGC"
+    ],
+    "role": "industry research publisher",
+    "source_id": "WGC26",
+    "locator": "public report"
+  },
+  {
+    "id": "usgs",
+    "name": "U.S. Geological Survey",
+    "aliases": [
+      "USGS",
+      "United States Geological Survey"
+    ],
+    "role": "government statistical agency",
+    "source_id": "USGS26",
+    "locator": "cover"
+  },
+  {
+    "id": "iea",
+    "name": "International Energy Agency",
+    "aliases": [
+      "IEA"
+    ],
+    "role": "intergovernmental energy analysis agency",
+    "source_id": "IEAAI25",
+    "locator": "cover"
+  },
+  {
+    "id": "smc",
+    "name": "Sound Money Capital AG",
+    "aliases": [],
+    "role": "IGWT publisher responsible for report content",
+    "source_id": "IGWT26",
+    "locator": "PDF p.3"
+  },
+  {
+    "id": "incrementum",
+    "name": "Incrementum AG",
+    "aliases": [],
+    "role": "IGWT co-brand; distinct entity from Sound Money Capital AG",
+    "source_id": "IGWT26",
+    "locator": "PDF p.3"
+  },
+  {
+    "id": "stoeferle",
+    "name": "Ronald-Peter Stöferle",
+    "aliases": [
+      "Ronald-Peter Stoeferle"
+    ],
+    "role": "IGWT author",
+    "source_id": "IGWT26",
+    "locator": "PDF p.1"
+  },
+  {
+    "id": "valek",
+    "name": "Mark J. Valek",
+    "aliases": [
+      "Mark Valek"
+    ],
+    "role": "IGWT author",
+    "source_id": "IGWT26",
+    "locator": "PDF p.1"
+  },
+  {
+    "id": "coeur",
+    "name": "Coeur Mining, Inc.",
+    "aliases": [
+      "Coeur Mining"
+    ],
+    "role": "precious-metals producer; corporate description within sponsored report",
+    "source_id": "SI26",
+    "locator": "PDF p.4"
+  },
+  {
+    "id": "fresnillo",
+    "name": "Fresnillo plc",
+    "aliases": [],
+    "role": "silver and gold producer; corporate description within sponsored report",
+    "source_id": "SI26",
+    "locator": "PDF p.4"
+  },
+  {
+    "id": "penoles",
+    "name": "Industrias Peñoles, S.A.B. de C.V.",
+    "aliases": [
+      "Peñoles"
+    ],
+    "role": "mining, smelting and refining group; corporate description",
+    "source_id": "SI26",
+    "locator": "PDF p.4"
+  },
+  {
+    "id": "new_afton",
+    "name": "New Afton",
+    "aliases": [],
+    "role": "gold-copper mine, British Columbia; attributed corporate description",
+    "source_id": "SI26",
+    "locator": "PDF p.4"
+  },
+  {
+    "id": "rochester",
+    "name": "Rochester",
+    "aliases": [],
+    "role": "silver-gold mine, Nevada; attributed corporate description",
+    "source_id": "SI26",
+    "locator": "PDF p.4"
+  },
+  {
+    "id": "saucito",
+    "name": "Saucito",
+    "aliases": [],
+    "role": "Mexican mine; attributed corporate description",
+    "source_id": "SI26",
+    "locator": "PDF p.4"
+  },
+  {
+    "id": "juanicipio",
+    "name": "Juanicipio",
+    "aliases": [],
+    "role": "Mexican mine; attributed corporate description",
+    "source_id": "SI26",
+    "locator": "PDF p.4"
+  }
+]

@@ -1,0 +1,367 @@
+[
+  {
+    "path": "RESEARCH.md",
+    "bytes": 3425,
+    "sha256": "795f5532345e9c046ccb8ad55bfd184737c0da4926a7df5aa13050c7b75dee04"
+  },
+  {
+    "path": "mirofish/historical-price-evidence.md",
+    "bytes": 1524,
+    "sha256": "cf03f8b2dbce55b94d5779fda102da72b736f6f300f4996a672564ce2e02c6c3"
+  },
+  {
+    "path": "mirofish/next-run-prompt.md",
+    "bytes": 1027,
+    "sha256": "236870fc82104c1e67f13f31f65d95d589c2871a176ff3369812ed2ce09a4448"
+  },
+  {
+    "path": "mirofish/precious-metals-evidence-pack.md",
+    "bytes": 7813,
+    "sha256": "ea23277b5bfe2c9ed5279a218ebb455e20aadce436f4a515bf33252387cd15a0"
+  },
+  {
+    "path": "notes/energy-data.md",
+    "bytes": 1169,
+    "sha256": "6b3b32b64b4807359bb9b6a2d5dc723344d25b2e94b711464bbd3bb2bdf0a19b"
+  },
+  {
+    "path": "notes/historical-price-analysis.md",
+    "bytes": 1524,
+    "sha256": "cf03f8b2dbce55b94d5779fda102da72b736f6f300f4996a672564ce2e02c6c3"
+  },
+  {
+    "path": "notes/iran-energy-scenarios.md",
+    "bytes": 5422,
+    "sha256": "32df4b203eed441a71d5f3cfcab7fd33d6ea2f81b615a3e1b2ab0251e1901752"
+  },
+  {
+    "path": "notes/iterative-run-design.md",
+    "bytes": 4837,
+    "sha256": "d782ccc7ceb3d72c5cf12f817121651634194af434fea8da65b6a77a0ab104bc"
+  },
+  {
+    "path": "notes/research-findings.md",
+    "bytes": 3092,
+    "sha256": "986487a49332a4849ec1ce9f34647289403d45c374956974fbb0f6b3ada64fb1"
+  },
+  {
+    "path": "notes/run-comparison-plan.md",
+    "bytes": 6637,
+    "sha256": "01e8a639e1fcaa1c3e96e740084982081faa6478163df4941e898bebaf2c8c71"
+  },
+  {
+    "path": "processed/energy-monthly-prices.csv",
+    "bytes": 24640,
+    "sha256": "69d8c05c565026623138ddd64a97f2f95ccfd79dc74654b5ee367d0aa9311587"
+  },
+  {
+    "path": "processed/energy-monthly-prices.json",
+    "bytes": 179431,
+    "sha256": "c2e079c290f79808e3fb577d6d50680bad7a95db42737cf2084a3e2d8317bc0f"
+  },
+  {
+    "path": "processed/entities.json",
+    "bytes": 3334,
+    "sha256": "36086fe252a6d508b19e6d0e905ff81d3cd9516137983610cf34995818a4cb46"
+  },
+  {
+    "path": "processed/fact-register.json",
+    "bytes": 4817,
+    "sha256": "e668a0cf3256af536e14a14a40fd40c159b64291270ec7d902f7868f9aaa1fba"
+  },
+  {
+    "path": "processed/historical-price-metrics.json",
+    "bytes": 2266,
+    "sha256": "7a1c9cd521568108e0d8a5c20b1b8f97237e30bbc980e90165162d1008d72a3e"
+  },
+  {
+    "path": "processed/iea-critical-minerals-2026.clean.md",
+    "bytes": 659009,
+    "sha256": "e03d55611504b6e36263536755c8a401ae5937806fd99483ed9e1ac0baed6da8"
+  },
+  {
+    "path": "processed/iea-critical-minerals-2026.fulltext.txt",
+    "bytes": 681682,
+    "sha256": "ac544a575774028386d7414e912988f77f5184442cf433974b5086e7de8e227c"
+  },
+  {
+    "path": "processed/iea-critical-minerals-2026.pages.json",
+    "bytes": 722793,
+    "sha256": "5d85b8139e4af8d43c58197be15079b1faf21a9b49339fe13234f48d2543790e"
+  },
+  {
+    "path": "processed/iea-energy-and-ai-2025.clean.md",
+    "bytes": 784328,
+    "sha256": "bf60867da8412d9f8514c8206dd0d751fb9e79d64527ed1cfefc701162263831"
+  },
+  {
+    "path": "processed/iea-energy-and-ai-2025.fulltext.txt",
+    "bytes": 797927,
+    "sha256": "9a08f502ad770ac00ee3f0f737c9de5830b8a56c1774eb962340501cb4139ad1"
+  },
+  {
+    "path": "processed/iea-energy-and-ai-2025.pages.json",
+    "bytes": 832255,
+    "sha256": "39e7bbf3497efbeaeefac35b78ab5c9dd4cc911f4b9906b20b55db6f87508746"
+  },
+  {
+    "path": "processed/in-gold-we-trust-2026-de.clean.md",
+    "bytes": 1339192,
+    "sha256": "f847965107715eeacc0a66c99972b6d93e8f4aa0fdd3a732348b985350197fef"
+  },
+  {
+    "path": "processed/in-gold-we-trust-2026-de.fulltext.txt",
+    "bytes": 1348878,
+    "sha256": "9b2746da63ef81f6105359befd4a48821ead3a35a1dd627c8648035d70f987b1"
+  },
+  {
+    "path": "processed/in-gold-we-trust-2026-de.pages.json",
+    "bytes": 1411574,
+    "sha256": "8ab98c58e0f7cf6c53e0cb168b180b7a7ce38482cebd9c0d921f8949f7fd6c61"
+  },
+  {
+    "path": "processed/metals-monthly-prices.csv",
+    "bytes": 20382,
+    "sha256": "378d929d047d6594ce37c5693f5114a8780127e412de8e2fcbb176958ec97860"
+  },
+  {
+    "path": "processed/metals-monthly-prices.json",
+    "bytes": 83808,
+    "sha256": "bc97837ff5d387c26efb3cc318e6811ce9f8764ddc16f1e58e32d35bb98b5a71"
+  },
+  {
+    "path": "processed/monthly-return-correlations.json",
+    "bytes": 532,
+    "sha256": "047f2fcc7ba67b7ffaa6b00921a94eabcd411114889960bb6393c577006d7151"
+  },
+  {
+    "path": "processed/real-yield-change-correlations.json",
+    "bytes": 700,
+    "sha256": "b9674408f7ac6d7053fb0ea0a6105ab79f30657e1dd9a593012c44f566645463"
+  },
+  {
+    "path": "processed/real-yield-monthly-mean.csv",
+    "bytes": 6989,
+    "sha256": "79cfb721b989928947e1721a2ebbe7d5ae3562a3d0a15de25657fedf80dffa3b"
+  },
+  {
+    "path": "processed/relationships.json",
+    "bytes": 1534,
+    "sha256": "cf73913e0cb424a39e5d0cf34fcf29b25fc91fd1a9cf518352d6983698a03e1b"
+  },
+  {
+    "path": "processed/silver-supply-demand-selected.json",
+    "bytes": 1683,
+    "sha256": "1e14e4661167290d60eee39050702831f04f4035e3514c774923b926a9b44c04"
+  },
+  {
+    "path": "processed/usgs-mcs-2026.clean.md",
+    "bytes": 810408,
+    "sha256": "3e49351a0cdbfac80a7956b9325d747c3d574745386420725501e90e2673e3ae"
+  },
+  {
+    "path": "processed/usgs-mcs-2026.fulltext.txt",
+    "bytes": 816214,
+    "sha256": "80f9fb6450a4cc03217c4c6c83b447575fe6595ca0630f701dc4604d17543d90"
+  },
+  {
+    "path": "processed/usgs-mcs-2026.pages.json",
+    "bytes": 855419,
+    "sha256": "a3781407dc0767c83dee4579a7e5f75cef84f4b6d28ed1e97571de4321d6b914"
+  },
+  {
+    "path": "processed/wgc-demand-tables.json",
+    "bytes": 21350,
+    "sha256": "dbdf27031eaa5017cfd404d5b1508f4b6d50202c3f4f22dde81580d9db5301fd"
+  },
+  {
+    "path": "processed/wgc-gold-demand-trends-q2-2026.clean.md",
+    "bytes": 122685,
+    "sha256": "0cd1216d316601a5f0ca7167005237e4b042e633f59c9e158d9b70cfe826ae08"
+  },
+  {
+    "path": "processed/world-silver-survey-2026.clean.md",
+    "bytes": 237157,
+    "sha256": "3347092affcab6cdefdd4cea117a85865922257523bfd7177bec20e3a2bef8fe"
+  },
+  {
+    "path": "processed/world-silver-survey-2026.fulltext.txt",
+    "bytes": 239130,
+    "sha256": "57b106e8dbfc8bf2c791b1183714577d325378714cc665a4944def023f3da3ce"
+  },
+  {
+    "path": "processed/world-silver-survey-2026.pages.json",
+    "bytes": 258925,
+    "sha256": "5b11ab1ac2dc84d831960e9d36eb2fd8f6ff41975f4afa49e6b789e3d626aaa3"
+  },
+  {
+    "path": "qa/conversion-and-validation.md",
+    "bytes": 1945,
+    "sha256": "96da5424801d4b760d7f1f1db86eaad0eff032645a94e946b3f2e6735419da37"
+  },
+  {
+    "path": "qa/conversion-report.json",
+    "bytes": 3164,
+    "sha256": "f90e0cd95ee1417089575882e539fab7ec4e31ba24ea138b6fcaedfcd8fed749"
+  },
+  {
+    "path": "qa/in-gold-we-trust-2026-de-page-368.png",
+    "bytes": 131058,
+    "sha256": "d5ef637444a14b91c8edfd8f75466770c08bb7227e164f16377807463c48d130"
+  },
+  {
+    "path": "qa/package-validation.json",
+    "bytes": 452,
+    "sha256": "3f5fe8c9d56a50ffaa06c4e1a03907dcaf355752e9aba47cf92dd832ebd52dc3"
+  },
+  {
+    "path": "qa/price-data-validation.json",
+    "bytes": 468,
+    "sha256": "83d457c6513423ab44246f263803bb686d97dee071a4f4850bf19a58fd978f0e"
+  },
+  {
+    "path": "qa/silver-table-reconciliation.json",
+    "bytes": 568,
+    "sha256": "686f3d30adbd78d34aa5262a01c62d936a63f27e91aef87332601fac13b7c0b7"
+  },
+  {
+    "path": "qa/usgs-mcs-2026-page-177.png",
+    "bytes": 197664,
+    "sha256": "fd26320cffb7911ed4ba71fd906a049d120f67c0478086ce9f6520053938eeba"
+  },
+  {
+    "path": "qa/world-silver-survey-2026-page-11.png",
+    "bytes": 151602,
+    "sha256": "fc141cc27c6e52b6dd6efc5426cd84fb1d76f27b28b54b2276fca97b8ff0d997"
+  },
+  {
+    "path": "raw/fred-dfii10-metadata.json",
+    "bytes": 694,
+    "sha256": "a7c86baa98c07b3547cc60b8be53ec2b2344567e0fc01f9f223d823ebcbc890f"
+  },
+  {
+    "path": "raw/fred-dfii10.csv",
+    "bytes": 99415,
+    "sha256": "c7367a06a914bb86c02974e37ef6d1979de31e78e88402af697640b85b41c791"
+  },
+  {
+    "path": "raw/iea-critical-minerals-2026.pdf",
+    "bytes": 14846179,
+    "sha256": "722c7333e2100b2404f9fb9b25f693ec1670a6cbd54961a0ee45541cecc43db0"
+  },
+  {
+    "path": "raw/iea-energy-and-ai-2025.pdf",
+    "bytes": 8213160,
+    "sha256": "3956b80152d4aac6b659a09d0cd7671a4bd53efeeb067e4d50df4230701b33e4"
+  },
+  {
+    "path": "raw/in-gold-we-trust-2026-de.pdf",
+    "bytes": 53011547,
+    "sha256": "4be98a91d70759285469759452e81a5b47ca3d53c7a774b4152c2e18355b589c"
+  },
+  {
+    "path": "raw/usgs-mcs-2026.pdf",
+    "bytes": 17646709,
+    "sha256": "595e6e66674236dea40125a03eb1ea6b347f331c0bcf3411a1e77eba53c0d391"
+  },
+  {
+    "path": "raw/wgc-gold-demand-trends-q2-2026-web.json",
+    "bytes": 136419,
+    "sha256": "07cfcd9ddc040af1433e3347170e51b70bf90417ed54df19fdcb51366d1abf89"
+  },
+  {
+    "path": "raw/world-bank-monthly-2026-10.xlsx",
+    "bytes": 586099,
+    "sha256": "ea1c350827878ea3bbe30e3cda16a13fd3bd5b409b8458940dc94a36b5a33154"
+  },
+  {
+    "path": "raw/world-silver-survey-2026.pdf",
+    "bytes": 15262541,
+    "sha256": "dc7a35277822a20498319fc6737f17b9e8f8fa93e5ce49b6a6565967ae220383"
+  },
+  {
+    "path": "sources/README.md",
+    "bytes": 5317,
+    "sha256": "3f0cdcd2a4f203c320fe7b0cca42de3f5ba790e3b48c9ad78b428d0c6863385c"
+  },
+  {
+    "path": "sources/fred-dfii10.md",
+    "bytes": 12064,
+    "sha256": "d9148ef4fc3824927f857ec4c7b94278124f67264db7372d4e37566ec4b4934a"
+  },
+  {
+    "path": "sources/iea-critical-minerals-2026.md",
+    "bytes": 17541,
+    "sha256": "1779d8351f5011b32fe7b2eba50ec9ed061f9e3c5bc37f9b4a25a786fd659e8f"
+  },
+  {
+    "path": "sources/iea-energy-and-ai.md",
+    "bytes": 20655,
+    "sha256": "82ae5fe6890dbc3f391393007cd23f889bfcf7f87eaccd2f2c9111c61cb818b9"
+  },
+  {
+    "path": "sources/igwt-2026-download-page.md",
+    "bytes": 10157,
+    "sha256": "3546f15b7ec90769ae268bb83cb1ab7d3124394e284b63b1e27de1f399f244b6"
+  },
+  {
+    "path": "sources/macro-2026-11-01/ecb-policy-rates.md",
+    "bytes": 11366,
+    "sha256": "8cb18400dd41ce8bf26f27a88fc409fc3909fcc890672d3a7c197b67bd9282bf"
+  },
+  {
+    "path": "sources/macro-2026-11-01/iea-oil-market-report-october-2026.md",
+    "bytes": 36296,
+    "sha256": "9d9305c0bde40e4cd931b1fa91318a4448e70f027686573c5cdd67c4f005c201"
+  },
+  {
+    "path": "sources/macro-2026-11-01/insee-france-debt-q2-2026.md",
+    "bytes": 22148,
+    "sha256": "63ef150cd288a57c7ce9d4aef2e961cbb205158c46ef3e2394e55021c112fa99"
+  },
+  {
+    "path": "sources/macro-2026-11-01/source-register.json",
+    "bytes": 2154,
+    "sha256": "7e0c7d44e6f6dda3e6818373aa6baa3006b7046030f9154894cdc609a814c537"
+  },
+  {
+    "path": "sources/macro-2026-11-01/treasury-debt-to-the-penny.md",
+    "bytes": 6865,
+    "sha256": "ad6e93b894ddc2dd85f62d30585c176b8b427e2c893345388a6fa69665a9ad6b"
+  },
+  {
+    "path": "sources/macro-2026-11-01/world-bank-energy-outlook-october-2026.md",
+    "bytes": 12164,
+    "sha256": "4804b47a45427d3e3048a8adc23a7df1a955ac2f694c7a3c09e855e9ca38bb08"
+  },
+  {
+    "path": "sources/silver-survey-index.md",
+    "bytes": 6396,
+    "sha256": "d2f104bcaa03325dd1752b5ca7db2abb80d4ab37f858291a1d0640875994bf1f"
+  },
+  {
+    "path": "sources/source-register.json",
+    "bytes": 5558,
+    "sha256": "f1d75b6c775d96d756ff4faa35f021f7157918094e6ca08e8a829495a3f05e4b"
+  },
+  {
+    "path": "sources/usgs-mcs2026.md",
+    "bytes": 14324,
+    "sha256": "6c5fad413b639e325383626c28d52cef5e7d237d06fedc3c5063d30604f4707c"
+  },
+  {
+    "path": "sources/world-bank-commodity-markets.md",
+    "bytes": 11135,
+    "sha256": "dd607c72226a3f8fa96d9bb621d1e476910751737f0710189b852e4c898fe4d6"
+  },
+  {
+    "path": "tools/assemble_evidence.py",
+    "bytes": 34250,
+    "sha256": "55953d6645fea41c185f7269046faaff14e7da35dd98e37b4f5f137edff8b2d6"
+  },
+  {
+    "path": "tools/prepare_research.py",
+    "bytes": 8371,
+    "sha256": "940f11d4e23bf3c8c2e8991e14240642f0e604305bd6248dfc588890df35df54"
+  }
+]

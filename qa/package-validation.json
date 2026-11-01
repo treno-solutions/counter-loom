@@ -1,0 +1,16 @@
+{
+  "source_count": 8,
+  "fact_count": 17,
+  "entity_count": 16,
+  "relationship_count": 7,
+  "original_seed_modified": false,
+  "source_references_resolve": true,
+  "entity_references_resolve": true,
+  "drawdown_crosscheck": true,
+  "pdf_sample_pages_reviewed": [
+    "SI26 physical 11",
+    "IGWT26 physical 368",
+    "USGS26 physical 177"
+  ],
+  "scope": "verification covers curated figures and sampled pages, not all claims in original reports"
+}

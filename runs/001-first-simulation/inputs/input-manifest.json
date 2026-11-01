@@ -1,0 +1,16 @@
+[
+  {
+    "path": "inputs/precious-metals-research-seed.md",
+    "bytes": 34347,
+    "sha256": "a805bf969322596a1de6ab0a8e33ec6a554fe920e25fdad0be70efe7e66ebe56",
+    "origin": "project root precious-metals-research-seed.md",
+    "note": "Exact local copy; association with the result export remains to be confirmed."
+  },
+  {
+    "path": "inputs/prompt.md",
+    "bytes": 1320,
+    "sha256": "05e4d6e1be1eef6ecf5ac71572377a460c9d9da0d9f723fdcebba402d5e9e2b0",
+    "origin": "Prompt submitted in the chat for proj_1a8710f2603c",
+    "note": "Reconstructed from the recorded submission, not retrieved from a server export."
+  }
+]

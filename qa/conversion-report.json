@@ -1,0 +1,142 @@
+[
+  {
+    "file": "world-silver-survey-2026.pdf",
+    "source_id": "SI26",
+    "pages": 92,
+    "original_bytes": 15262541,
+    "clean_bytes": 237157,
+    "sha256": "dc7a35277822a20498319fc6737f17b9e8f8fa93e5ce49b6a6565967ae220383",
+    "low_text_pages": [
+      1,
+      92
+    ],
+    "repeated_marginal_strings_removed": [
+      "Chapter 9: Appendices",
+      "World Silver Survey 2026"
+    ],
+    "charts_digitized": false,
+    "verification": "sample pages only; full document conversion, not full visual audit"
+  },
+  {
+    "file": "in-gold-we-trust-2026-de.pdf",
+    "source_id": "IGWT26",
+    "pages": 486,
+    "original_bytes": 53011547,
+    "clean_bytes": 1339192,
+    "sha256": "4be98a91d70759285469759452e81a5b47ca3d53c7a774b4152c2e18355b589c",
+    "low_text_pages": [
+      1,
+      6,
+      23,
+      34,
+      88,
+      89,
+      105,
+      118,
+      135,
+      150,
+      178,
+      199,
+      214,
+      215,
+      216,
+      253,
+      298,
+      299,
+      319,
+      342,
+      377,
+      387,
+      431,
+      485,
+      486
+    ],
+    "repeated_marginal_strings_removed": [
+      "Back to the Monetary Future"
+    ],
+    "charts_digitized": false,
+    "verification": "sample pages only; full document conversion, not full visual audit"
+  },
+  {
+    "file": "usgs-mcs-2026.pdf",
+    "source_id": "USGS26",
+    "pages": 226,
+    "original_bytes": 17646709,
+    "clean_bytes": 810408,
+    "sha256": "595e6e66674236dea40125a03eb1ea6b347f331c0bcf3411a1e77eba53c0d391",
+    "low_text_pages": [
+      6,
+      41
+    ],
+    "repeated_marginal_strings_removed": [
+      "U.S. Geological Survey, Mineral Commodity Summaries, February 2026"
+    ],
+    "charts_digitized": false,
+    "verification": "sample pages only; full document conversion, not full visual audit"
+  },
+  {
+    "file": "iea-energy-and-ai-2025.pdf",
+    "source_id": "IEAAI25",
+    "pages": 304,
+    "original_bytes": 8213160,
+    "clean_bytes": 784328,
+    "sha256": "3956b80152d4aac6b659a09d0cd7671a4bd53efeeb067e4d50df4230701b33e4",
+    "low_text_pages": [
+      1,
+      108,
+      164,
+      204,
+      253,
+      254,
+      274
+    ],
+    "repeated_marginal_strings_removed": [
+      "IEA. CC BY 4.0.",
+      "International Energy Agency | Energy and AI"
+    ],
+    "charts_digitized": false,
+    "verification": "sample pages only; full document conversion, not full visual audit"
+  },
+  {
+    "file": "iea-critical-minerals-2026.pdf",
+    "source_id": "IEACM26",
+    "pages": 372,
+    "original_bytes": 14846179,
+    "clean_bytes": 659009,
+    "sha256": "722c7333e2100b2404f9fb9b25f693ec1670a6cbd54961a0ee45541cecc43db0",
+    "low_text_pages": [
+      1,
+      5,
+      14,
+      19,
+      20,
+      58,
+      75,
+      91,
+      96,
+      108,
+      109,
+      124,
+      138,
+      147,
+      155,
+      163,
+      174,
+      186,
+      197,
+      198,
+      213,
+      214,
+      336,
+      337,
+      346,
+      372
+    ],
+    "repeated_marginal_strings_removed": [
+      "Global Critical Minerals Outlook 2026",
+      "IEA. CC BY 4.0."
+    ],
+    "charts_digitized": false,
+    "verification": "sample pages only; full document conversion, not full visual audit"
+  }
+]

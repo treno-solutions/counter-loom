@@ -1,0 +1,58 @@
+[
+  {
+    "subject": "metals_focus",
+    "predicate": "PREPARES_REPORT_FOR",
+    "object": "silver_institute",
+    "source_id": "SI26",
+    "locator": "PDF p.8",
+    "evidence_type": "publication credit"
+  },
+  {
+    "subject": "stoeferle",
+    "predicate": "COAUTHORS_IGWT_WITH",
+    "object": "valek",
+    "source_id": "IGWT26",
+    "locator": "PDF p.1",
+    "evidence_type": "publication credit"
+  },
+  {
+    "subject": "smc",
+    "predicate": "COBRANDS_IGWT_WITH",
+    "object": "incrementum",
+    "source_id": "IGWT26",
+    "locator": "PDF p.3",
+    "evidence_type": "publication notice"
+  },
+  {
+    "subject": "coeur",
+    "predicate": "OPERATES",
+    "object": "new_afton",
+    "source_id": "SI26",
+    "locator": "PDF p.4",
+    "evidence_type": "attributed sponsor corporate profile; not independently audited here"
+  },
+  {
+    "subject": "coeur",
+    "predicate": "OPERATES",
+    "object": "rochester",
+    "source_id": "SI26",
+    "locator": "PDF p.4",
+    "evidence_type": "attributed sponsor corporate profile; not independently audited here"
+  },
+  {
+    "subject": "fresnillo",
+    "predicate": "OPERATES",
+    "object": "saucito",
+    "source_id": "SI26",
+    "locator": "PDF p.4",
+    "evidence_type": "attributed sponsor corporate profile; not independently audited here"
+  },
+  {
+    "subject": "fresnillo",
+    "predicate": "OPERATES",
+    "object": "juanicipio",
+    "source_id": "SI26",
+    "locator": "PDF p.4",
+    "evidence_type": "attributed sponsor corporate profile; not independently audited here"
+  }
+]

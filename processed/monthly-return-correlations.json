@@ -1,0 +1,23 @@
+{
+  "method": "Pearson correlation of simple monthly price changes; common nonmissing months; descriptive, not causal",
+  "start": "1960-02",
+  "end": "2026-09",
+  "n": 800,
+  "matrix": {
+    "gold": {
+      "gold": 1.0,
+      "silver": 0.7000694779207407,
+      "copper": 0.24726144353390625
+    },
+    "silver": {
+      "gold": 0.7000694779207407,
+      "silver": 1.0,
+      "copper": 0.3061614379962177
+    },
+    "copper": {
+      "gold": 0.24726144353390625,
+      "silver": 0.3061614379962177,
+      "copper": 1.0
+    }
+  }
+}

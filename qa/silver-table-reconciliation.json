@@ -1,0 +1,23 @@
+[
+  {
+    "year": 2024,
+    "supply_rounding_difference": 0.0,
+    "demand_rounding_difference": 0.1,
+    "headline_balance_rounding_difference": 0.1,
+    "etp_balance_difference": 0.0
+  },
+  {
+    "year": 2025,
+    "supply_rounding_difference": 0.0,
+    "demand_rounding_difference": 0.1,
+    "headline_balance_rounding_difference": 0.1,
+    "etp_balance_difference": -0.0
+  },
+  {
+    "year": 2026,
+    "supply_rounding_difference": 0.0,
+    "demand_rounding_difference": 0.0,
+    "headline_balance_rounding_difference": 0.1,
+    "etp_balance_difference": 0.0
+  }
+]

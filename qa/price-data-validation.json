@@ -1,0 +1,20 @@
+{
+  "rows": 801,
+  "first": "1960-01",
+  "last": "2026-09",
+  "missing": {
+    "copper": 0,
+    "gold": 0,
+    "silver": 0
+  },
+  "unique_months": true,
+  "positive_values": true,
+  "source_sheet": "Monthly Prices",
+  "source_column_indices_zero_based": {
+    "copper": 64,
+    "gold": 69,
+    "silver": 71
+  },
+  "source_has_mismatch_details_sheet": true,
+  "note": "Auxiliary Mismatch Details sheet retained in original. No edits or imputation to Monthly Prices."
+}

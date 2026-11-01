@@ -1,0 +1,4818 @@
+{
+  "source_id": "WB01",
+  "sheet": "Monthly Prices",
+  "update_label": "Updated on October 02, 2026",
+  "units": {
+    "copper": "($/mt)",
+    "gold": "($/troy oz)",
+    "silver": "($/troy oz)"
+  },
+  "observations": [
+    {
+      "month": "1960-01",
+      "copper": 715.0,
+      "gold": 35.0,
+      "silver": 0.9
+    },
+    {
+      "month": "1960-02",
+      "copper": 728.0,
+      "gold": 35.0,
+      "silver": 0.9
+    },
+    {
+      "month": "1960-03",
+      "copper": 685.0,
+      "gold": 35.0,
+      "silver": 0.9
+    },
+    {
+      "month": "1960-04",
+      "copper": 723.0,
+      "gold": 35.0,
+      "silver": 0.9
+    },
+    {
+      "month": "1960-05",
+      "copper": 685.0,
+      "gold": 35.0,
+      "silver": 0.9
+    },
+    {
+      "month": "1960-06",
+      "copper": 692.0,
+      "gold": 35.0,
+      "silver": 0.9
+    },
+    {
+      "month": "1960-07",
+      "copper": 702.0,
+      "gold": 35.0,
+      "silver": 0.9
+    },
+    {
+      "month": "1960-08",
+      "copper": 676.0,
+      "gold": 35.0,
+      "silver": 0.9
+    },
+    {
+      "month": "1960-09",
+      "copper": 647.0,
+      "gold": 35.0,
+      "silver": 0.9
+    },
+    {
+      "month": "1960-10",
+      "copper": 613.0,
+      "gold": 35.0,
+      "silver": 0.9
+    },
+    {
+      "month": "1960-11",
+      "copper": 642.0,
+      "gold": 35.0,
+      "silver": 0.9
+    },
+    {
+      "month": "1960-12",
+      "copper": 637.0,
+      "gold": 35.0,
+      "silver": 0.9
+    },
+    {
+      "month": "1961-01",
+      "copper": 607.0,
+      "gold": 35.0,
+      "silver": 0.9
+    },
+    {
+      "month": "1961-02",
+      "copper": 617.0,
+      "gold": 35.0,
+      "silver": 0.9
+    },
+    {
+      "month": "1961-03",
+      "copper": 621.0,
+      "gold": 35.0,
+      "silver": 0.9
+    },
+    {
+      "month": "1961-04",
+      "copper": 632.0,
+      "gold": 35.0,
+      "silver": 0.9
+    },
+    {
+      "month": "1961-05",
+      "copper": 668.0,
+      "gold": 35.0,
+      "silver": 0.9
+    },
+    {
+      "month": "1961-06",
+      "copper": 652.0,
+      "gold": 35.0,
+      "silver": 0.9
+    },
+    {
+      "month": "1961-07",
+      "copper": 633.0,
+      "gold": 35.0,
+      "silver": 0.9
+    },
+    {
+      "month": "1961-08",
+      "copper": 636.0,
+      "gold": 35.0,
+      "silver": 0.9
+    },
+    {
+      "month": "1961-09",
+      "copper": 633.0,
+      "gold": 35.0,
+      "silver": 0.9
+    },
+    {
+      "month": "1961-10",
+      "copper": 630.0,
+      "gold": 35.0,
+      "silver": 0.9
+    },
+    {
+      "month": "1961-11",
+      "copper": 632.0,
+      "gold": 35.0,
+      "silver": 0.9
+    },
+    {
+      "month": "1961-12",
+      "copper": 635.0,
+      "gold": 35.0,
+      "silver": 1.0
+    },
+    {
+      "month": "1962-01",
+      "copper": 635.0,
+      "gold": 35.0,
+      "silver": 1.0
+    },
+    {
+      "month": "1962-02",
+      "copper": 648.0,
+      "gold": 35.0,
+      "silver": 1.0
+    },
+    {
+      "month": "1962-03",
+      "copper": 648.0,
+      "gold": 35.0,
+      "silver": 1.0
+    },
+    {
+      "month": "1962-04",
+      "copper": 646.0,
+      "gold": 35.0,
+      "silver": 1.0
+    },
+    {
+      "month": "1962-05",
+      "copper": 646.0,
+      "gold": 35.0,
+      "silver": 1.0
+    },
+    {
+      "month": "1962-06",
+      "copper": 646.0,
+      "gold": 35.0,
+      "silver": 1.0
+    },
+    {
+      "month": "1962-07",
+      "copper": 646.0,
+      "gold": 35.0,
+      "silver": 1.0
+    },
+    {
+      "month": "1962-08",
+      "copper": 646.0,
+      "gold": 35.0,
+      "silver": 1.1
+    },
+    {
+      "month": "1962-09",
+      "copper": 646.0,
+      "gold": 35.0,
+      "silver": 1.2
+    },
+    {
+      "month": "1962-10",
+      "copper": 646.0,
+      "gold": 35.0,
+      "silver": 1.2
+    },
+    {
+      "month": "1962-11",
+      "copper": 646.0,
+      "gold": 35.0,
+      "silver": 1.2
+    },
+    {
+      "month": "1962-12",
+      "copper": 646.0,
+      "gold": 35.0,
+      "silver": 1.2
+    },
+    {
+      "month": "1963-01",
+      "copper": 646.0,
+      "gold": 35.0,
+      "silver": 1.2
+    },
+    {
+      "month": "1963-02",
+      "copper": 646.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1963-03",
+      "copper": 646.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1963-04",
+      "copper": 646.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1963-05",
+      "copper": 646.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1963-06",
+      "copper": 646.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1963-07",
+      "copper": 646.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1963-08",
+      "copper": 646.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1963-09",
+      "copper": 646.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1963-10",
+      "copper": 646.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1963-11",
+      "copper": 646.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1963-12",
+      "copper": 650.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1964-01",
+      "copper": 656.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1964-02",
+      "copper": 694.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1964-03",
+      "copper": 745.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1964-04",
+      "copper": 862.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1964-05",
+      "copper": 828.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1964-06",
+      "copper": 808.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1964-07",
+      "copper": 855.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1964-08",
+      "copper": 999.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1964-09",
+      "copper": 1162.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1964-10",
+      "copper": 1358.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1964-11",
+      "copper": 1400.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1964-12",
+      "copper": 1269.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1965-01",
+      "copper": 1001.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1965-02",
+      "copper": 1180.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1965-03",
+      "copper": 1237.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1965-04",
+      "copper": 1348.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1965-05",
+      "copper": 1379.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1965-06",
+      "copper": 1309.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1965-07",
+      "copper": 1134.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1965-08",
+      "copper": 1210.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1965-09",
+      "copper": 1328.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1965-10",
+      "copper": 1402.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1965-11",
+      "copper": 1469.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1965-12",
+      "copper": 1518.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1966-01",
+      "copper": 1679.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1966-02",
+      "copper": 1874.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1966-03",
+      "copper": 1875.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1966-04",
+      "copper": 1907.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1966-05",
+      "copper": 1664.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1966-06",
+      "copper": 1696.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1966-07",
+      "copper": 1568.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1966-08",
+      "copper": 1195.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1966-09",
+      "copper": 1128.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1966-10",
+      "copper": 1275.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1966-11",
+      "copper": 1302.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1966-12",
+      "copper": 1215.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1967-01",
+      "copper": 1244.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1967-02",
+      "copper": 1220.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1967-03",
+      "copper": 1098.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1967-04",
+      "copper": 995.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1967-05",
+      "copper": 1036.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1967-06",
+      "copper": 1015.0,
+      "gold": 35.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1967-07",
+      "copper": 997.0,
+      "gold": 35.0,
+      "silver": 1.6
+    },
+    {
+      "month": "1967-08",
+      "copper": 1045.0,
+      "gold": 35.0,
+      "silver": 1.7
+    },
+    {
+      "month": "1967-09",
+      "copper": 1060.0,
+      "gold": 35.0,
+      "silver": 1.7
+    },
+    {
+      "month": "1967-10",
+      "copper": 1138.0,
+      "gold": 35.0,
+      "silver": 1.8
+    },
+    {
+      "month": "1967-11",
+      "copper": 1444.0,
+      "gold": 35.0,
+      "silver": 2.0
+    },
+    {
+      "month": "1967-12",
+      "copper": 1324.0,
+      "gold": 35.0,
+      "silver": 2.1
+    },
+    {
+      "month": "1968-01",
+      "copper": 1409.0,
+      "gold": 36.0,
+      "silver": 2.0
+    },
+    {
+      "month": "1968-02",
+      "copper": 1720.0,
+      "gold": 36.0,
+      "silver": 1.9
+    },
+    {
+      "month": "1968-03",
+      "copper": 1701.0,
+      "gold": 37.0,
+      "silver": 2.2
+    },
+    {
+      "month": "1968-04",
+      "copper": 1255.0,
+      "gold": 38.0,
+      "silver": 2.2
+    },
+    {
+      "month": "1968-05",
+      "copper": 1097.0,
+      "gold": 41.0,
+      "silver": 2.4
+    },
+    {
+      "month": "1968-06",
+      "copper": 1137.0,
+      "gold": 41.0,
+      "silver": 2.5
+    },
+    {
+      "month": "1968-07",
+      "copper": 1054.0,
+      "gold": 39.0,
+      "silver": 2.3
+    },
+    {
+      "month": "1968-08",
+      "copper": 1056.0,
+      "gold": 39.0,
+      "silver": 2.2
+    },
+    {
+      "month": "1968-09",
+      "copper": 1110.0,
+      "gold": 40.0,
+      "silver": 2.2
+    },
+    {
+      "month": "1968-10",
+      "copper": 1080.0,
+      "gold": 39.0,
+      "silver": 2.0
+    },
+    {
+      "month": "1968-11",
+      "copper": 1100.0,
+      "gold": 40.0,
+      "silver": 2.0
+    },
+    {
+      "month": "1968-12",
+      "copper": 1185.0,
+      "gold": 41.0,
+      "silver": 2.0
+    },
+    {
+      "month": "1969-01",
+      "copper": 1256.0,
+      "gold": 42.0,
+      "silver": 2.0
+    },
+    {
+      "month": "1969-02",
+      "copper": 1285.0,
+      "gold": 43.0,
+      "silver": 1.8
+    },
+    {
+      "month": "1969-03",
+      "copper": 1278.0,
+      "gold": 43.0,
+      "silver": 1.8
+    },
+    {
+      "month": "1969-04",
+      "copper": 1388.0,
+      "gold": 43.0,
+      "silver": 1.8
+    },
+    {
+      "month": "1969-05",
+      "copper": 1392.0,
+      "gold": 43.0,
+      "silver": 1.8
+    },
+    {
+      "month": "1969-06",
+      "copper": 1483.0,
+      "gold": 41.0,
+      "silver": 1.6
+    },
+    {
+      "month": "1969-07",
+      "copper": 1454.0,
+      "gold": 42.0,
+      "silver": 1.6
+    },
+    {
+      "month": "1969-08",
+      "copper": 1607.0,
+      "gold": 41.0,
+      "silver": 1.7
+    },
+    {
+      "month": "1969-09",
+      "copper": 1579.0,
+      "gold": 41.0,
+      "silver": 1.8
+    },
+    {
+      "month": "1969-10",
+      "copper": 1554.0,
+      "gold": 40.0,
+      "silver": 1.9
+    },
+    {
+      "month": "1969-11",
+      "copper": 1631.0,
+      "gold": 37.0,
+      "silver": 1.9
+    },
+    {
+      "month": "1969-12",
+      "copper": 1700.0,
+      "gold": 35.0,
+      "silver": 1.8
+    },
+    {
+      "month": "1970-01",
+      "copper": 1626.0,
+      "gold": 35.0,
+      "silver": 1.9
+    },
+    {
+      "month": "1970-02",
+      "copper": 1657.0,
+      "gold": 35.0,
+      "silver": 1.9
+    },
+    {
+      "month": "1970-03",
+      "copper": 1754.0,
+      "gold": 35.0,
+      "silver": 1.9
+    },
+    {
+      "month": "1970-04",
+      "copper": 1742.0,
+      "gold": 36.0,
+      "silver": 1.9
+    },
+    {
+      "month": "1970-05",
+      "copper": 1598.0,
+      "gold": 36.0,
+      "silver": 1.7
+    },
+    {
+      "month": "1970-06",
+      "copper": 1458.0,
+      "gold": 35.0,
+      "silver": 1.6
+    },
+    {
+      "month": "1970-07",
+      "copper": 1367.0,
+      "gold": 35.0,
+      "silver": 1.7
+    },
+    {
+      "month": "1970-08",
+      "copper": 1267.0,
+      "gold": 35.0,
+      "silver": 1.8
+    },
+    {
+      "month": "1970-09",
+      "copper": 1247.0,
+      "gold": 36.0,
+      "silver": 1.8
+    },
+    {
+      "month": "1970-10",
+      "copper": 1142.0,
+      "gold": 38.0,
+      "silver": 1.7
+    },
+    {
+      "month": "1970-11",
+      "copper": 1085.0,
+      "gold": 37.0,
+      "silver": 1.8
+    },
+    {
+      "month": "1970-12",
+      "copper": 1046.0,
+      "gold": 37.0,
+      "silver": 1.6
+    },
+    {
+      "month": "1971-01",
+      "copper": 1010.0,
+      "gold": 38.0,
+      "silver": 1.6
+    },
+    {
+      "month": "1971-02",
+      "copper": 1020.0,
+      "gold": 39.0,
+      "silver": 1.6
+    },
+    {
+      "month": "1971-03",
+      "copper": 1144.0,
+      "gold": 39.0,
+      "silver": 1.7
+    },
+    {
+      "month": "1971-04",
+      "copper": 1252.0,
+      "gold": 39.0,
+      "silver": 1.7
+    },
+    {
+      "month": "1971-05",
+      "copper": 1114.0,
+      "gold": 41.0,
+      "silver": 1.7
+    },
+    {
+      "month": "1971-06",
+      "copper": 1074.0,
+      "gold": 40.0,
+      "silver": 1.6
+    },
+    {
+      "month": "1971-07",
+      "copper": 1115.0,
+      "gold": 41.0,
+      "silver": 1.6
+    },
+    {
+      "month": "1971-08",
+      "copper": 1098.0,
+      "gold": 43.0,
+      "silver": 1.6
+    },
+    {
+      "month": "1971-09",
+      "copper": 1056.0,
+      "gold": 42.0,
+      "silver": 1.4
+    },
+    {
+      "month": "1971-10",
+      "copper": 1041.0,
+      "gold": 43.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1971-11",
+      "copper": 1014.0,
+      "gold": 43.0,
+      "silver": 1.3
+    },
+    {
+      "month": "1971-12",
+      "copper": 1038.0,
+      "gold": 43.0,
+      "silver": 1.4
+    },
+    {
+      "month": "1972-01",
+      "copper": 1078.0,
+      "gold": 46.0,
+      "silver": 1.5
+    },
+    {
+      "month": "1972-02",
+      "copper": 1112.0,
+      "gold": 48.0,
+      "silver": 1.5
+    },
+    {
+      "month": "1972-03",
+      "copper": 1108.0,
+      "gold": 48.0,
+      "silver": 1.5
+    },
+    {
+      "month": "1972-04",
+      "copper": 1133.0,
+      "gold": 49.0,
+      "silver": 1.6
+    },
+    {
+      "month": "1972-05",
+      "copper": 1106.0,
+      "gold": 55.0,
+      "silver": 1.6
+    },
+    {
+      "month": "1972-06",
+      "copper": 1063.0,
+      "gold": 62.0,
+      "silver": 1.6
+    },
+    {
+      "month": "1972-07",
+      "copper": 1035.0,
+      "gold": 66.0,
+      "silver": 1.7
+    },
+    {
+      "month": "1972-08",
+      "copper": 1047.0,
+      "gold": 67.0,
+      "silver": 1.8
+    },
+    {
+      "month": "1972-09",
+      "copper": 1061.0,
+      "gold": 65.0,
+      "silver": 1.8
+    },
+    {
+      "month": "1972-10",
+      "copper": 918.0,
+      "gold": 65.0,
+      "silver": 1.8
+    },
+    {
+      "month": "1972-11",
+      "copper": 1007.0,
+      "gold": 63.0,
+      "silver": 1.8
+    },
+    {
+      "month": "1972-12",
+      "copper": 1024.0,
+      "gold": 64.0,
+      "silver": 2.0
+    },
+    {
+      "month": "1973-01",
+      "copper": 1119.0,
+      "gold": 65.0,
+      "silver": 2.0
+    },
+    {
+      "month": "1973-02",
+      "copper": 1244.0,
+      "gold": 74.0,
+      "silver": 2.2
+    },
+    {
+      "month": "1973-03",
+      "copper": 1510.0,
+      "gold": 84.0,
+      "silver": 2.3
+    },
+    {
+      "month": "1973-04",
+      "copper": 1588.0,
+      "gold": 91.0,
+      "silver": 2.2
+    },
+    {
+      "month": "1973-05",
+      "copper": 1552.0,
+      "gold": 102.0,
+      "silver": 2.4
+    },
+    {
+      "month": "1973-06",
+      "copper": 1749.0,
+      "gold": 120.0,
+      "silver": 2.6
+    },
+    {
+      "month": "1973-07",
+      "copper": 2021.0,
+      "gold": 120.0,
+      "silver": 2.7
+    },
+    {
+      "month": "1973-08",
+      "copper": 2123.0,
+      "gold": 107.0,
+      "silver": 2.6
+    },
+    {
+      "month": "1973-09",
+      "copper": 1936.0,
+      "gold": 103.0,
+      "silver": 2.7
+    },
+    {
+      "month": "1973-10",
+      "copper": 2065.0,
+      "gold": 100.0,
+      "silver": 2.9
+    },
+    {
+      "month": "1973-11",
+      "copper": 2273.0,
+      "gold": 95.0,
+      "silver": 2.9
+    },
+    {
+      "month": "1973-12",
+      "copper": 2244.0,
+      "gold": 107.0,
+      "silver": 3.1
+    },
+    {
+      "month": "1974-01",
+      "copper": 2032.0,
+      "gold": 129.0,
+      "silver": 3.6
+    },
+    {
+      "month": "1974-02",
+      "copper": 2292.0,
+      "gold": 150.0,
+      "silver": 5.4
+    },
+    {
+      "month": "1974-03",
+      "copper": 2743.0,
+      "gold": 168.0,
+      "silver": 5.3
+    },
+    {
+      "month": "1974-04",
+      "copper": 3032.0,
+      "gold": 172.0,
+      "silver": 5.0
+    },
+    {
+      "month": "1974-05",
+      "copper": 2876.0,
+      "gold": 163.0,
+      "silver": 5.4
+    },
+    {
+      "month": "1974-06",
+      "copper": 2440.0,
+      "gold": 154.0,
+      "silver": 4.9
+    },
+    {
+      "month": "1974-07",
+      "copper": 1919.0,
+      "gold": 143.0,
+      "silver": 4.4
+    },
+    {
+      "month": "1974-08",
+      "copper": 1803.0,
+      "gold": 155.0,
+      "silver": 4.4
+    },
+    {
+      "month": "1974-09",
+      "copper": 1461.0,
+      "gold": 152.0,
+      "silver": 4.0
+    },
+    {
+      "month": "1974-10",
+      "copper": 1399.0,
+      "gold": 159.0,
+      "silver": 4.8
+    },
+    {
+      "month": "1974-11",
+      "copper": 1417.0,
+      "gold": 182.0,
+      "silver": 4.7
+    },
+    {
+      "month": "1974-12",
+      "copper": 1289.0,
+      "gold": 184.0,
+      "silver": 4.4
+    },
+    {
+      "month": "1975-01",
+      "copper": 1211.0,
+      "gold": 176.0,
+      "silver": 4.2
+    },
+    {
+      "month": "1975-02",
+      "copper": 1267.0,
+      "gold": 180.0,
+      "silver": 4.4
+    },
+    {
+      "month": "1975-03",
+      "copper": 1344.0,
+      "gold": 178.0,
+      "silver": 4.3
+    },
+    {
+      "month": "1975-04",
+      "copper": 1329.0,
+      "gold": 170.0,
+      "silver": 4.2
+    },
+    {
+      "month": "1975-05",
+      "copper": 1254.0,
+      "gold": 167.0,
+      "silver": 4.5
+    },
+    {
+      "month": "1975-06",
+      "copper": 1193.0,
+      "gold": 164.0,
+      "silver": 4.5
+    },
+    {
+      "month": "1975-07",
+      "copper": 1222.0,
+      "gold": 165.0,
+      "silver": 4.7
+    },
+    {
+      "month": "1975-08",
+      "copper": 1277.0,
+      "gold": 163.0,
+      "silver": 4.9
+    },
+    {
+      "month": "1975-09",
+      "copper": 1210.0,
+      "gold": 144.0,
+      "silver": 4.5
+    },
+    {
+      "month": "1975-10",
+      "copper": 1179.0,
+      "gold": 143.0,
+      "silver": 4.3
+    },
+    {
+      "month": "1975-11",
+      "copper": 1180.0,
+      "gold": 142.0,
+      "silver": 4.3
+    },
+    {
+      "month": "1975-12",
+      "copper": 1151.0,
+      "gold": 139.0,
+      "silver": 4.1
+    },
+    {
+      "month": "1976-01",
+      "copper": 1193.0,
+      "gold": 131.0,
+      "silver": 4.1
+    },
+    {
+      "month": "1976-02",
+      "copper": 1219.0,
+      "gold": 131.0,
+      "silver": 4.1
+    },
+    {
+      "month": "1976-03",
+      "copper": 1329.0,
+      "gold": 133.0,
+      "silver": 4.2
+    },
+    {
+      "month": "1976-04",
+      "copper": 1510.0,
+      "gold": 128.0,
+      "silver": 4.4
+    },
+    {
+      "month": "1976-05",
+      "copper": 1512.0,
+      "gold": 127.0,
+      "silver": 4.5
+    },
+    {
+      "month": "1976-06",
+      "copper": 1550.0,
+      "gold": 126.0,
+      "silver": 4.8
+    },
+    {
+      "month": "1976-07",
+      "copper": 1647.0,
+      "gold": 118.0,
+      "silver": 4.8
+    },
+    {
+      "month": "1976-08",
+      "copper": 1539.0,
+      "gold": 110.0,
+      "silver": 4.3
+    },
+    {
+      "month": "1976-09",
+      "copper": 1459.0,
+      "gold": 114.0,
+      "silver": 4.3
+    },
+    {
+      "month": "1976-10",
+      "copper": 1285.0,
+      "gold": 116.0,
+      "silver": 4.2
+    },
+    {
+      "month": "1976-11",
+      "copper": 1279.0,
+      "gold": 130.0,
+      "silver": 4.4
+    },
+    {
+      "month": "1976-12",
+      "copper": 1287.0,
+      "gold": 134.0,
+      "silver": 4.4
+    },
+    {
+      "month": "1977-01",
+      "copper": 1396.0,
+      "gold": 132.0,
+      "silver": 4.4
+    },
+    {
+      "month": "1977-02",
+      "copper": 1426.0,
+      "gold": 136.0,
+      "silver": 4.5
+    },
+    {
+      "month": "1977-03",
+      "copper": 1515.0,
+      "gold": 148.0,
+      "silver": 4.9
+    },
+    {
+      "month": "1977-04",
+      "copper": 1429.0,
+      "gold": 149.0,
+      "silver": 4.8
+    },
+    {
+      "month": "1977-05",
+      "copper": 1371.0,
+      "gold": 147.0,
+      "silver": 4.7
+    },
+    {
+      "month": "1977-06",
+      "copper": 1312.0,
+      "gold": 141.0,
+      "silver": 4.5
+    },
+    {
+      "month": "1977-07",
+      "copper": 1248.0,
+      "gold": 143.0,
+      "silver": 4.5
+    },
+    {
+      "month": "1977-08",
+      "copper": 1160.0,
+      "gold": 145.0,
+      "silver": 4.5
+    },
+    {
+      "month": "1977-09",
+      "copper": 1195.0,
+      "gold": 150.0,
+      "silver": 4.5
+    },
+    {
+      "month": "1977-10",
+      "copper": 1210.0,
+      "gold": 159.0,
+      "silver": 4.8
+    },
+    {
+      "month": "1977-11",
+      "copper": 1182.0,
+      "gold": 162.0,
+      "silver": 4.8
+    },
+    {
+      "month": "1977-12",
+      "copper": 1261.0,
+      "gold": 160.0,
+      "silver": 4.7
+    },
+    {
+      "month": "1978-01",
+      "copper": 1261.0,
+      "gold": 173.0,
+      "silver": 4.9
+    },
+    {
+      "month": "1978-02",
+      "copper": 1217.0,
+      "gold": 178.0,
+      "silver": 5.0
+    },
+    {
+      "month": "1978-03",
+      "copper": 1254.0,
+      "gold": 184.0,
+      "silver": 5.3
+    },
+    {
+      "month": "1978-04",
+      "copper": 1285.0,
+      "gold": 175.0,
+      "silver": 5.2
+    },
+    {
+      "month": "1978-05",
+      "copper": 1303.0,
+      "gold": 176.0,
+      "silver": 5.1
+    },
+    {
+      "month": "1978-06",
+      "copper": 1333.0,
+      "gold": 184.0,
+      "silver": 5.3
+    },
+    {
+      "month": "1978-07",
+      "copper": 1337.0,
+      "gold": 189.0,
+      "silver": 5.4
+    },
+    {
+      "month": "1978-08",
+      "copper": 1426.0,
+      "gold": 206.0,
+      "silver": 5.5
+    },
+    {
+      "month": "1978-09",
+      "copper": 1442.0,
+      "gold": 212.0,
+      "silver": 5.6
+    },
+    {
+      "month": "1978-10",
+      "copper": 1506.0,
+      "gold": 227.0,
+      "silver": 5.9
+    },
+    {
+      "month": "1978-11",
+      "copper": 1481.0,
+      "gold": 206.0,
+      "silver": 5.9
+    },
+    {
+      "month": "1978-12",
+      "copper": 1533.0,
+      "gold": 208.0,
+      "silver": 5.9
+    },
+    {
+      "month": "1979-01",
+      "copper": 1659.0,
+      "gold": 227.0,
+      "silver": 6.2
+    },
+    {
+      "month": "1979-02",
+      "copper": 1944.0,
+      "gold": 246.0,
+      "silver": 7.3
+    },
+    {
+      "month": "1979-03",
+      "copper": 2050.0,
+      "gold": 242.0,
+      "silver": 7.4
+    },
+    {
+      "month": "1979-04",
+      "copper": 2100.0,
+      "gold": 239.0,
+      "silver": 7.4
+    },
+    {
+      "month": "1979-05",
+      "copper": 1926.0,
+      "gold": 258.0,
+      "silver": 8.4
+    },
+    {
+      "month": "1979-06",
+      "copper": 1878.0,
+      "gold": 279.0,
+      "silver": 8.6
+    },
+    {
+      "month": "1979-07",
+      "copper": 1814.0,
+      "gold": 295.0,
+      "silver": 9.1
+    },
+    {
+      "month": "1979-08",
+      "copper": 1976.0,
+      "gold": 301.0,
+      "silver": 9.3
+    },
+    {
+      "month": "1979-09",
+      "copper": 2096.0,
+      "gold": 355.0,
+      "silver": 13.8
+    },
+    {
+      "month": "1979-10",
+      "copper": 2076.0,
+      "gold": 392.0,
+      "silver": 16.6
+    },
+    {
+      "month": "1979-11",
+      "copper": 2090.0,
+      "gold": 392.0,
+      "silver": 16.7
+    },
+    {
+      "month": "1979-12",
+      "copper": 2214.0,
+      "gold": 455.0,
+      "silver": 22.5
+    },
+    {
+      "month": "1980-01",
+      "copper": 2601.0,
+      "gold": 675.0,
+      "silver": 38.9
+    },
+    {
+      "month": "1980-02",
+      "copper": 2918.0,
+      "gold": 665.0,
+      "silver": 35.2
+    },
+    {
+      "month": "1980-03",
+      "copper": 2306.0,
+      "gold": 554.0,
+      "silver": 24.7
+    },
+    {
+      "month": "1980-04",
+      "copper": 2070.0,
+      "gold": 517.0,
+      "silver": 14.9
+    },
+    {
+      "month": "1980-05",
+      "copper": 2037.0,
+      "gold": 514.0,
+      "silver": 12.7
+    },
+    {
+      "month": "1980-06",
+      "copper": 2006.0,
+      "gold": 601.0,
+      "silver": 15.8
+    },
+    {
+      "month": "1980-07",
+      "copper": 2176.0,
+      "gold": 643.0,
+      "silver": 16.3
+    },
+    {
+      "month": "1980-08",
+      "copper": 2082.0,
+      "gold": 627.0,
+      "silver": 15.9
+    },
+    {
+      "month": "1980-09",
+      "copper": 2060.0,
+      "gold": 674.0,
+      "silver": 19.9
+    },
+    {
+      "month": "1980-10",
+      "copper": 2040.0,
+      "gold": 661.0,
+      "silver": 20.2
+    },
+    {
+      "month": "1980-11",
+      "copper": 2010.0,
+      "gold": 625.0,
+      "silver": 18.6
+    },
+    {
+      "month": "1980-12",
+      "copper": 1879.0,
+      "gold": 538.0,
+      "silver": 16.5
+    },
+    {
+      "month": "1981-01",
+      "copper": 1869.0,
+      "gold": 557.0,
+      "silver": 14.8
+    },
+    {
+      "month": "1981-02",
+      "copper": 1801.0,
+      "gold": 500.0,
+      "silver": 13.1
+    },
+    {
+      "month": "1981-03",
+      "copper": 1818.0,
+      "gold": 499.0,
+      "silver": 12.3
+    },
+    {
+      "month": "1981-04",
+      "copper": 1821.0,
+      "gold": 496.0,
+      "silver": 11.5
+    },
+    {
+      "month": "1981-05",
+      "copper": 1742.0,
+      "gold": 480.0,
+      "silver": 10.9
+    },
+    {
+      "month": "1981-06",
+      "copper": 1700.0,
+      "gold": 461.0,
+      "silver": 10.0
+    },
+    {
+      "month": "1981-07",
+      "copper": 1682.0,
+      "gold": 409.0,
+      "silver": 8.6
+    },
+    {
+      "month": "1981-08",
+      "copper": 1787.0,
+      "gold": 410.0,
+      "silver": 8.9
+    },
+    {
+      "month": "1981-09",
+      "copper": 1710.0,
+      "gold": 444.0,
+      "silver": 10.1
+    },
+    {
+      "month": "1981-10",
+      "copper": 1666.0,
+      "gold": 438.0,
+      "silver": 9.2
+    },
+    {
+      "month": "1981-11",
+      "copper": 1651.0,
+      "gold": 413.0,
+      "silver": 8.5
+    },
+    {
+      "month": "1981-12",
+      "copper": 1655.0,
+      "gold": 410.0,
+      "silver": 8.4
+    },
+    {
+      "month": "1982-01",
+      "copper": 1611.0,
+      "gold": 384.0,
+      "silver": 8.0
+    },
+    {
+      "month": "1982-02",
+      "copper": 1598.0,
+      "gold": 374.0,
+      "silver": 8.3
+    },
+    {
+      "month": "1982-03",
+      "copper": 1510.0,
+      "gold": 330.0,
+      "silver": 7.2
+    },
+    {
+      "month": "1982-04",
+      "copper": 1522.0,
+      "gold": 350.0,
+      "silver": 7.3
+    },
+    {
+      "month": "1982-05",
+      "copper": 1528.0,
+      "gold": 334.0,
+      "silver": 6.7
+    },
+    {
+      "month": "1982-06",
+      "copper": 1300.0,
+      "gold": 315.0,
+      "silver": 5.6
+    },
+    {
+      "month": "1982-07",
+      "copper": 1441.0,
+      "gold": 339.0,
+      "silver": 6.5
+    },
+    {
+      "month": "1982-08",
+      "copper": 1452.0,
+      "gold": 364.0,
+      "silver": 7.1
+    },
+    {
+      "month": "1982-09",
+      "copper": 1427.0,
+      "gold": 437.0,
+      "silver": 8.8
+    },
+    {
+      "month": "1982-10",
+      "copper": 1461.0,
+      "gold": 422.0,
+      "silver": 9.4
+    },
+    {
+      "month": "1982-11",
+      "copper": 1444.0,
+      "gold": 415.0,
+      "silver": 9.8
+    },
+    {
+      "month": "1982-12",
+      "copper": 1473.0,
+      "gold": 445.0,
+      "silver": 10.6
+    },
+    {
+      "month": "1983-01",
+      "copper": 1572.0,
+      "gold": 481.0,
+      "silver": 12.3
+    },
+    {
+      "month": "1983-02",
+      "copper": 1647.0,
+      "gold": 491.0,
+      "silver": 14.0
+    },
+    {
+      "month": "1983-03",
+      "copper": 1598.0,
+      "gold": 420.0,
+      "silver": 10.6
+    },
+    {
+      "month": "1983-04",
+      "copper": 1675.0,
+      "gold": 433.0,
+      "silver": 11.6
+    },
+    {
+      "month": "1983-05",
+      "copper": 1766.0,
+      "gold": 438.0,
+      "silver": 12.9
+    },
+    {
+      "month": "1983-06",
+      "copper": 1701.0,
+      "gold": 413.0,
+      "silver": 11.7
+    },
+    {
+      "month": "1983-07",
+      "copper": 1704.0,
+      "gold": 403.0,
+      "silver": 12.0
+    },
+    {
+      "month": "1983-08",
+      "copper": 1640.0,
+      "gold": 416.0,
+      "silver": 12.1
+    },
+    {
+      "month": "1983-09",
+      "copper": 1561.0,
+      "gold": 412.0,
+      "silver": 12.0
+    },
+    {
+      "month": "1983-10",
+      "copper": 1435.0,
+      "gold": 394.0,
+      "silver": 9.9
+    },
+    {
+      "month": "1983-11",
+      "copper": 1389.0,
+      "gold": 382.0,
+      "silver": 8.8
+    },
+    {
+      "month": "1983-12",
+      "copper": 1415.0,
+      "gold": 388.0,
+      "silver": 9.1
+    },
+    {
+      "month": "1984-01",
+      "copper": 1376.0,
+      "gold": 371.0,
+      "silver": 8.3
+    },
+    {
+      "month": "1984-02",
+      "copper": 1430.0,
+      "gold": 386.0,
+      "silver": 9.1
+    },
+    {
+      "month": "1984-03",
+      "copper": 1501.0,
+      "gold": 394.0,
+      "silver": 9.6
+    },
+    {
+      "month": "1984-04",
+      "copper": 1533.0,
+      "gold": 381.0,
+      "silver": 9.2
+    },
+    {
+      "month": "1984-05",
+      "copper": 1421.0,
+      "gold": 377.0,
+      "silver": 9.0
+    },
+    {
+      "month": "1984-06",
+      "copper": 1367.0,
+      "gold": 378.0,
+      "silver": 8.8
+    },
+    {
+      "month": "1984-07",
+      "copper": 1331.0,
+      "gold": 348.0,
+      "silver": 7.5
+    },
+    {
+      "month": "1984-08",
+      "copper": 1338.0,
+      "gold": 348.0,
+      "silver": 7.6
+    },
+    {
+      "month": "1984-09",
+      "copper": 1294.0,
+      "gold": 340.0,
+      "silver": 7.3
+    },
+    {
+      "month": "1984-10",
+      "copper": 1273.0,
+      "gold": 341.0,
+      "silver": 7.3
+    },
+    {
+      "month": "1984-11",
+      "copper": 1345.0,
+      "gold": 342.0,
+      "silver": 7.5
+    },
+    {
+      "month": "1984-12",
+      "copper": 1321.0,
+      "gold": 320.0,
+      "silver": 6.6
+    },
+    {
+      "month": "1985-01",
+      "copper": 1359.0,
+      "gold": 303.0,
+      "silver": 6.1
+    },
+    {
+      "month": "1985-02",
+      "copper": 1389.0,
+      "gold": 299.0,
+      "silver": 6.1
+    },
+    {
+      "month": "1985-03",
+      "copper": 1390.0,
+      "gold": 314.0,
+      "silver": 6.0
+    },
+    {
+      "month": "1985-04",
+      "copper": 1502.0,
+      "gold": 327.0,
+      "silver": 6.4
+    },
+    {
+      "month": "1985-05",
+      "copper": 1531.0,
+      "gold": 316.0,
+      "silver": 6.3
+    },
+    {
+      "month": "1985-06",
+      "copper": 1432.0,
+      "gold": 317.0,
+      "silver": 6.2
+    },
+    {
+      "month": "1985-07",
+      "copper": 1475.0,
+      "gold": 317.0,
+      "silver": 6.0
+    },
+    {
+      "month": "1985-08",
+      "copper": 1420.0,
+      "gold": 330.0,
+      "silver": 6.2
+    },
+    {
+      "month": "1985-09",
+      "copper": 1366.0,
+      "gold": 323.0,
+      "silver": 6.1
+    },
+    {
+      "month": "1985-10",
+      "copper": 1385.0,
+      "gold": 326.0,
+      "silver": 6.2
+    },
+    {
+      "month": "1985-11",
+      "copper": 1370.0,
+      "gold": 322.0,
+      "silver": 6.1
+    },
+    {
+      "month": "1985-12",
+      "copper": 1391.0,
+      "gold": 322.0,
+      "silver": 5.9
+    },
+    {
+      "month": "1986-01",
+      "copper": 1418.0,
+      "gold": 347.0,
+      "silver": 6.0
+    },
+    {
+      "month": "1986-02",
+      "copper": 1406.0,
+      "gold": 339.0,
+      "silver": 5.9
+    },
+    {
+      "month": "1986-03",
+      "copper": 1445.0,
+      "gold": 346.0,
+      "silver": 5.6
+    },
+    {
+      "month": "1986-04",
+      "copper": 1435.0,
+      "gold": 340.0,
+      "silver": 5.2
+    },
+    {
+      "month": "1986-05",
+      "copper": 1419.0,
+      "gold": 342.0,
+      "silver": 5.1
+    },
+    {
+      "month": "1986-06",
+      "copper": 1413.0,
+      "gold": 343.0,
+      "silver": 5.1
+    },
+    {
+      "month": "1986-07",
+      "copper": 1344.0,
+      "gold": 348.0,
+      "silver": 5.0
+    },
+    {
+      "month": "1986-08",
+      "copper": 1303.0,
+      "gold": 377.0,
+      "silver": 5.2
+    },
+    {
+      "month": "1986-09",
+      "copper": 1347.0,
+      "gold": 418.0,
+      "silver": 5.6
+    },
+    {
+      "month": "1986-10",
+      "copper": 1317.0,
+      "gold": 424.0,
+      "silver": 5.6
+    },
+    {
+      "month": "1986-11",
+      "copper": 1303.0,
+      "gold": 398.0,
+      "silver": 5.6
+    },
+    {
+      "month": "1986-12",
+      "copper": 1336.0,
+      "gold": 391.0,
+      "silver": 5.4
+    },
+    {
+      "month": "1987-01",
+      "copper": 1346.0,
+      "gold": 408.0,
+      "silver": 5.5
+    },
+    {
+      "month": "1987-02",
+      "copper": 1380.0,
+      "gold": 401.0,
+      "silver": 5.5
+    },
+    {
+      "month": "1987-03",
+      "copper": 1466.0,
+      "gold": 409.0,
+      "silver": 5.7
+    },
+    {
+      "month": "1987-04",
+      "copper": 1484.0,
+      "gold": 438.0,
+      "silver": 7.3
+    },
+    {
+      "month": "1987-05",
+      "copper": 1520.0,
+      "gold": 460.0,
+      "silver": 8.5
+    },
+    {
+      "month": "1987-06",
+      "copper": 1572.0,
+      "gold": 450.0,
+      "silver": 7.4
+    },
+    {
+      "month": "1987-07",
+      "copper": 1695.0,
+      "gold": 451.0,
+      "silver": 7.6
+    },
+    {
+      "month": "1987-08",
+      "copper": 1756.0,
+      "gold": 461.0,
+      "silver": 7.8
+    },
+    {
+      "month": "1987-09",
+      "copper": 1811.0,
+      "gold": 460.0,
+      "silver": 7.6
+    },
+    {
+      "month": "1987-10",
+      "copper": 1967.0,
+      "gold": 465.0,
+      "silver": 7.6
+    },
+    {
+      "month": "1987-11",
+      "copper": 2524.0,
+      "gold": 468.0,
+      "silver": 6.8
+    },
+    {
+      "month": "1987-12",
+      "copper": 2869.0,
+      "gold": 486.0,
+      "silver": 6.8
+    },
+    {
+      "month": "1988-01",
+      "copper": 2663.0,
+      "gold": 477.0,
+      "silver": 6.7
+    },
+    {
+      "month": "1988-02",
+      "copper": 2330.0,
+      "gold": 442.0,
+      "silver": 6.3
+    },
+    {
+      "month": "1988-03",
+      "copper": 2359.0,
+      "gold": 444.0,
+      "silver": 6.4
+    },
+    {
+      "month": "1988-04",
+      "copper": 2286.0,
+      "gold": 452.0,
+      "silver": 6.5
+    },
+    {
+      "month": "1988-05",
+      "copper": 2448.0,
+      "gold": 451.0,
+      "silver": 6.5
+    },
+    {
+      "month": "1988-06",
+      "copper": 2540.0,
+      "gold": 451.0,
+      "silver": 7.0
+    },
+    {
+      "month": "1988-07",
+      "copper": 2214.0,
+      "gold": 438.0,
+      "silver": 7.0
+    },
+    {
+      "month": "1988-08",
+      "copper": 2201.0,
+      "gold": 431.0,
+      "silver": 6.7
+    },
+    {
+      "month": "1988-09",
+      "copper": 2436.0,
+      "gold": 413.0,
+      "silver": 6.4
+    },
+    {
+      "month": "1988-10",
+      "copper": 2940.0,
+      "gold": 407.0,
+      "silver": 6.3
+    },
+    {
+      "month": "1988-11",
+      "copper": 3305.0,
+      "gold": 420.0,
+      "silver": 6.3
+    },
+    {
+      "month": "1988-12",
+      "copper": 3499.0,
+      "gold": 419.0,
+      "silver": 6.1
+    },
+    {
+      "month": "1989-01",
+      "copper": 3394.0,
+      "gold": 404.0,
+      "silver": 6.0
+    },
+    {
+      "month": "1989-02",
+      "copper": 3097.0,
+      "gold": 388.0,
+      "silver": 5.9
+    },
+    {
+      "month": "1989-03",
+      "copper": 3264.0,
+      "gold": 390.0,
+      "silver": 6.0
+    },
+    {
+      "month": "1989-04",
+      "copper": 3118.0,
+      "gold": 384.0,
+      "silver": 5.8
+    },
+    {
+      "month": "1989-05",
+      "copper": 2739.0,
+      "gold": 371.0,
+      "silver": 5.5
+    },
+    {
+      "month": "1989-06",
+      "copper": 2546.0,
+      "gold": 368.0,
+      "silver": 5.3
+    },
+    {
+      "month": "1989-07",
+      "copper": 2505.0,
+      "gold": 375.0,
+      "silver": 5.2
+    },
+    {
+      "month": "1989-08",
+      "copper": 2762.0,
+      "gold": 365.0,
+      "silver": 5.2
+    },
+    {
+      "month": "1989-09",
+      "copper": 2884.0,
+      "gold": 362.0,
+      "silver": 5.1
+    },
+    {
+      "month": "1989-10",
+      "copper": 2861.0,
+      "gold": 367.0,
+      "silver": 5.1
+    },
+    {
+      "month": "1989-11",
+      "copper": 2591.0,
+      "gold": 394.0,
+      "silver": 5.5
+    },
+    {
+      "month": "1989-12",
+      "copper": 2419.0,
+      "gold": 409.0,
+      "silver": 5.6
+    },
+    {
+      "month": "1990-01",
+      "copper": 2367.0,
+      "gold": 410.0,
+      "silver": 5.2
+    },
+    {
+      "month": "1990-02",
+      "copper": 2360.0,
+      "gold": 417.0,
+      "silver": 5.3
+    },
+    {
+      "month": "1990-03",
+      "copper": 2626.0,
+      "gold": 393.0,
+      "silver": 5.1
+    },
+    {
+      "month": "1990-04",
+      "copper": 2686.0,
+      "gold": 374.0,
+      "silver": 5.1
+    },
+    {
+      "month": "1990-05",
+      "copper": 2742.0,
+      "gold": 369.0,
+      "silver": 5.1
+    },
+    {
+      "month": "1990-06",
+      "copper": 2585.0,
+      "gold": 352.0,
+      "silver": 4.9
+    },
+    {
+      "month": "1990-07",
+      "copper": 2769.0,
+      "gold": 363.0,
+      "silver": 4.9
+    },
+    {
+      "month": "1990-08",
+      "copper": 2957.0,
+      "gold": 395.0,
+      "silver": 5.0
+    },
+    {
+      "month": "1990-09",
+      "copper": 3031.0,
+      "gold": 389.0,
+      "silver": 4.8
+    },
+    {
+      "month": "1990-10",
+      "copper": 2744.0,
+      "gold": 381.0,
+      "silver": 4.4
+    },
+    {
+      "month": "1990-11",
+      "copper": 2586.0,
+      "gold": 382.0,
+      "silver": 4.2
+    },
+    {
+      "month": "1990-12",
+      "copper": 2485.0,
+      "gold": 377.0,
+      "silver": 4.1
+    },
+    {
+      "month": "1991-01",
+      "copper": 2449.0,
+      "gold": 384.0,
+      "silver": 4.1
+    },
+    {
+      "month": "1991-02",
+      "copper": 2449.0,
+      "gold": 364.0,
+      "silver": 3.7
+    },
+    {
+      "month": "1991-03",
+      "copper": 2410.0,
+      "gold": 363.0,
+      "silver": 3.9
+    },
+    {
+      "month": "1991-04",
+      "copper": 2472.0,
+      "gold": 358.0,
+      "silver": 4.0
+    },
+    {
+      "month": "1991-05",
+      "copper": 2306.0,
+      "gold": 357.0,
+      "silver": 4.0
+    },
+    {
+      "month": "1991-06",
+      "copper": 2219.0,
+      "gold": 367.0,
+      "silver": 4.4
+    },
+    {
+      "month": "1991-07",
+      "copper": 2236.0,
+      "gold": 368.0,
+      "silver": 4.3
+    },
+    {
+      "month": "1991-08",
+      "copper": 2233.0,
+      "gold": 356.0,
+      "silver": 4.0
+    },
+    {
+      "month": "1991-09",
+      "copper": 2325.0,
+      "gold": 349.0,
+      "silver": 4.0
+    },
+    {
+      "month": "1991-10",
+      "copper": 2364.0,
+      "gold": 359.0,
+      "silver": 4.1
+    },
+    {
+      "month": "1991-11",
+      "copper": 2380.0,
+      "gold": 360.0,
+      "silver": 4.1
+    },
+    {
+      "month": "1991-12",
+      "copper": 2223.0,
+      "gold": 362.0,
+      "silver": 3.9
+    },
+    {
+      "month": "1992-01",
+      "copper": 2139.0,
+      "gold": 354.0,
+      "silver": 4.1
+    },
+    {
+      "month": "1992-02",
+      "copper": 2206.0,
+      "gold": 354.0,
+      "silver": 4.1
+    },
+    {
+      "month": "1992-03",
+      "copper": 2227.0,
+      "gold": 344.0,
+      "silver": 4.1
+    },
+    {
+      "month": "1992-04",
+      "copper": 2215.0,
+      "gold": 339.0,
+      "silver": 4.1
+    },
+    {
+      "month": "1992-05",
+      "copper": 2217.0,
+      "gold": 337.0,
+      "silver": 4.1
+    },
+    {
+      "month": "1992-06",
+      "copper": 2299.0,
+      "gold": 341.0,
+      "silver": 4.1
+    },
+    {
+      "month": "1992-07",
+      "copper": 2520.0,
+      "gold": 353.0,
+      "silver": 4.0
+    },
+    {
+      "month": "1992-08",
+      "copper": 2522.0,
+      "gold": 343.0,
+      "silver": 3.8
+    },
+    {
+      "month": "1992-09",
+      "copper": 2414.0,
+      "gold": 345.0,
+      "silver": 3.8
+    },
+    {
+      "month": "1992-10",
+      "copper": 2249.0,
+      "gold": 344.0,
+      "silver": 3.8
+    },
+    {
+      "month": "1992-11",
+      "copper": 2158.0,
+      "gold": 335.0,
+      "silver": 3.8
+    },
+    {
+      "month": "1992-12",
+      "copper": 2207.0,
+      "gold": 335.0,
+      "silver": 3.7
+    },
+    {
+      "month": "1993-01",
+      "copper": 2257.0,
+      "gold": 329.0,
+      "silver": 3.7
+    },
+    {
+      "month": "1993-02",
+      "copper": 2213.0,
+      "gold": 329.0,
+      "silver": 3.7
+    },
+    {
+      "month": "1993-03",
+      "copper": 2153.0,
+      "gold": 330.0,
+      "silver": 3.6
+    },
+    {
+      "month": "1993-04",
+      "copper": 1950.0,
+      "gold": 342.0,
+      "silver": 4.0
+    },
+    {
+      "month": "1993-05",
+      "copper": 1795.0,
+      "gold": 367.0,
+      "silver": 4.5
+    },
+    {
+      "month": "1993-06",
+      "copper": 1853.0,
+      "gold": 372.0,
+      "silver": 4.4
+    },
+    {
+      "month": "1993-07",
+      "copper": 1927.0,
+      "gold": 392.0,
+      "silver": 5.0
+    },
+    {
+      "month": "1993-08",
+      "copper": 1947.0,
+      "gold": 379.0,
+      "silver": 4.8
+    },
+    {
+      "month": "1993-09",
+      "copper": 1862.0,
+      "gold": 355.0,
+      "silver": 4.2
+    },
+    {
+      "month": "1993-10",
+      "copper": 1646.0,
+      "gold": 364.0,
+      "silver": 4.3
+    },
+    {
+      "month": "1993-11",
+      "copper": 1630.0,
+      "gold": 374.0,
+      "silver": 4.5
+    },
+    {
+      "month": "1993-12",
+      "copper": 1724.0,
+      "gold": 383.0,
+      "silver": 5.0
+    },
+    {
+      "month": "1994-01",
+      "copper": 1805.0,
+      "gold": 387.0,
+      "silver": 5.1
+    },
+    {
+      "month": "1994-02",
+      "copper": 1866.0,
+      "gold": 382.0,
+      "silver": 5.2
+    },
+    {
+      "month": "1994-03",
+      "copper": 1915.0,
+      "gold": 384.0,
+      "silver": 5.4
+    },
+    {
+      "month": "1994-04",
+      "copper": 1882.0,
+      "gold": 377.0,
+      "silver": 5.4
+    },
+    {
+      "month": "1994-05",
+      "copper": 2151.0,
+      "gold": 381.0,
+      "silver": 5.4
+    },
+    {
+      "month": "1994-06",
+      "copper": 2364.0,
+      "gold": 386.0,
+      "silver": 5.4
+    },
+    {
+      "month": "1994-07",
+      "copper": 2458.0,
+      "gold": 385.0,
+      "silver": 5.3
+    },
+    {
+      "month": "1994-08",
+      "copper": 2406.0,
+      "gold": 380.0,
+      "silver": 5.2
+    },
+    {
+      "month": "1994-09",
+      "copper": 2506.0,
+      "gold": 392.0,
+      "silver": 5.5
+    },
+    {
+      "month": "1994-10",
+      "copper": 2548.0,
+      "gold": 390.0,
+      "silver": 5.5
+    },
+    {
+      "month": "1994-11",
+      "copper": 2802.0,
+      "gold": 384.0,
+      "silver": 5.2
+    },
+    {
+      "month": "1994-12",
+      "copper": 2985.0,
+      "gold": 379.0,
+      "silver": 4.8
+    },
+    {
+      "month": "1995-01",
+      "copper": 3009.0,
+      "gold": 379.0,
+      "silver": 4.8
+    },
+    {
+      "month": "1995-02",
+      "copper": 2878.0,
+      "gold": 377.0,
+      "silver": 4.7
+    },
+    {
+      "month": "1995-03",
+      "copper": 2924.0,
+      "gold": 382.0,
+      "silver": 4.6
+    },
+    {
+      "month": "1995-04",
+      "copper": 2904.0,
+      "gold": 391.0,
+      "silver": 5.5
+    },
+    {
+      "month": "1995-05",
+      "copper": 2773.0,
+      "gold": 385.0,
+      "silver": 5.6
+    },
+    {
+      "month": "1995-06",
+      "copper": 2995.0,
+      "gold": 388.0,
+      "silver": 5.4
+    },
+    {
+      "month": "1995-07",
+      "copper": 3076.0,
+      "gold": 386.0,
+      "silver": 5.2
+    },
+    {
+      "month": "1995-08",
+      "copper": 3037.0,
+      "gold": 384.0,
+      "silver": 5.4
+    },
+    {
+      "month": "1995-09",
+      "copper": 2916.0,
+      "gold": 383.0,
+      "silver": 5.4
+    },
+    {
+      "month": "1995-10",
+      "copper": 2814.0,
+      "gold": 383.0,
+      "silver": 5.4
+    },
+    {
+      "month": "1995-11",
+      "copper": 2977.0,
+      "gold": 385.0,
+      "silver": 5.3
+    },
+    {
+      "month": "1995-12",
+      "copper": 2926.0,
+      "gold": 387.0,
+      "silver": 5.2
+    },
+    {
+      "month": "1996-01",
+      "copper": 2616.0,
+      "gold": 399.0,
+      "silver": 5.5
+    },
+    {
+      "month": "1996-02",
+      "copper": 2538.0,
+      "gold": 405.0,
+      "silver": 5.7
+    },
+    {
+      "month": "1996-03",
+      "copper": 2561.0,
+      "gold": 396.0,
+      "silver": 5.5
+    },
+    {
+      "month": "1996-04",
+      "copper": 2596.0,
+      "gold": 393.0,
+      "silver": 5.4
+    },
+    {
+      "month": "1996-05",
+      "copper": 2658.0,
+      "gold": 392.0,
+      "silver": 5.4
+    },
+    {
+      "month": "1996-06",
+      "copper": 2173.0,
+      "gold": 385.0,
+      "silver": 5.2
+    },
+    {
+      "month": "1996-07",
+      "copper": 1986.0,
+      "gold": 383.0,
+      "silver": 5.1
+    },
+    {
+      "month": "1996-08",
+      "copper": 2009.0,
+      "gold": 387.0,
+      "silver": 5.1
+    },
+    {
+      "month": "1996-09",
+      "copper": 1941.0,
+      "gold": 383.0,
+      "silver": 5.0
+    },
+    {
+      "month": "1996-10",
+      "copper": 1961.0,
+      "gold": 381.0,
+      "silver": 4.9
+    },
+    {
+      "month": "1996-11",
+      "copper": 2231.0,
+      "gold": 378.0,
+      "silver": 4.8
+    },
+    {
+      "month": "1996-12",
+      "copper": 2268.0,
+      "gold": 369.0,
+      "silver": 4.8
+    },
+    {
+      "month": "1997-01",
+      "copper": 2435.0,
+      "gold": 355.0,
+      "silver": 4.8
+    },
+    {
+      "month": "1997-02",
+      "copper": 2406.0,
+      "gold": 347.0,
+      "silver": 5.1
+    },
+    {
+      "month": "1997-03",
+      "copper": 2421.0,
+      "gold": 352.0,
+      "silver": 5.2
+    },
+    {
+      "month": "1997-04",
+      "copper": 2391.0,
+      "gold": 344.0,
+      "silver": 4.8
+    },
+    {
+      "month": "1997-05",
+      "copper": 2514.0,
+      "gold": 344.0,
+      "silver": 4.7
+    },
+    {
+      "month": "1997-06",
+      "copper": 2613.0,
+      "gold": 341.0,
+      "silver": 4.8
+    },
+    {
+      "month": "1997-07",
+      "copper": 2450.0,
+      "gold": 324.0,
+      "silver": 4.4
+    },
+    {
+      "month": "1997-08",
+      "copper": 2251.0,
+      "gold": 324.0,
+      "silver": 4.5
+    },
+    {
+      "month": "1997-09",
+      "copper": 2107.0,
+      "gold": 323.0,
+      "silver": 4.7
+    },
+    {
+      "month": "1997-10",
+      "copper": 2052.0,
+      "gold": 325.0,
+      "silver": 5.0
+    },
+    {
+      "month": "1997-11",
+      "copper": 1917.0,
+      "gold": 306.0,
+      "silver": 5.1
+    },
+    {
+      "month": "1997-12",
+      "copper": 1762.0,
+      "gold": 289.0,
+      "silver": 5.8
+    },
+    {
+      "month": "1998-01",
+      "copper": 1688.0,
+      "gold": 289.0,
+      "silver": 5.9
+    },
+    {
+      "month": "1998-02",
+      "copper": 1665.0,
+      "gold": 297.0,
+      "silver": 6.8
+    },
+    {
+      "month": "1998-03",
+      "copper": 1748.0,
+      "gold": 296.0,
+      "silver": 6.2
+    },
+    {
+      "month": "1998-04",
+      "copper": 1801.0,
+      "gold": 308.0,
+      "silver": 6.3
+    },
+    {
+      "month": "1998-05",
+      "copper": 1733.0,
+      "gold": 299.0,
+      "silver": 5.6
+    },
+    {
+      "month": "1998-06",
+      "copper": 1661.0,
+      "gold": 292.0,
+      "silver": 5.3
+    },
+    {
+      "month": "1998-07",
+      "copper": 1651.0,
+      "gold": 293.0,
+      "silver": 5.5
+    },
+    {
+      "month": "1998-08",
+      "copper": 1621.0,
+      "gold": 284.0,
+      "silver": 5.2
+    },
+    {
+      "month": "1998-09",
+      "copper": 1648.0,
+      "gold": 289.0,
+      "silver": 5.0
+    },
+    {
+      "month": "1998-10",
+      "copper": 1586.0,
+      "gold": 296.0,
+      "silver": 5.0
+    },
+    {
+      "month": "1998-11",
+      "copper": 1574.0,
+      "gold": 294.0,
+      "silver": 5.0
+    },
+    {
+      "month": "1998-12",
+      "copper": 1474.0,
+      "gold": 292.0,
+      "silver": 4.9
+    },
+    {
+      "month": "1999-01",
+      "copper": 1431.0,
+      "gold": 287.0,
+      "silver": 5.1
+    },
+    {
+      "month": "1999-02",
+      "copper": 1411.0,
+      "gold": 287.0,
+      "silver": 5.5
+    },
+    {
+      "month": "1999-03",
+      "copper": 1378.0,
+      "gold": 286.0,
+      "silver": 5.2
+    },
+    {
+      "month": "1999-04",
+      "copper": 1466.0,
+      "gold": 283.0,
+      "silver": 5.1
+    },
+    {
+      "month": "1999-05",
+      "copper": 1511.0,
+      "gold": 276.0,
+      "silver": 5.3
+    },
+    {
+      "month": "1999-06",
+      "copper": 1422.0,
+      "gold": 261.0,
+      "silver": 5.0
+    },
+    {
+      "month": "1999-07",
+      "copper": 1640.0,
+      "gold": 256.0,
+      "silver": 5.2
+    },
+    {
+      "month": "1999-08",
+      "copper": 1648.0,
+      "gold": 257.0,
+      "silver": 5.3
+    },
+    {
+      "month": "1999-09",
+      "copper": 1750.0,
+      "gold": 265.0,
+      "silver": 5.2
+    },
+    {
+      "month": "1999-10",
+      "copper": 1724.0,
+      "gold": 311.0,
+      "silver": 5.4
+    },
+    {
+      "month": "1999-11",
+      "copper": 1728.0,
+      "gold": 293.0,
+      "silver": 5.2
+    },
+    {
+      "month": "1999-12",
+      "copper": 1765.0,
+      "gold": 283.0,
+      "silver": 5.2
+    },
+    {
+      "month": "2000-01",
+      "copper": 1844.0,
+      "gold": 284.0,
+      "silver": 5.2
+    },
+    {
+      "month": "2000-02",
+      "copper": 1801.0,
+      "gold": 300.0,
+      "silver": 5.2
+    },
+    {
+      "month": "2000-03",
+      "copper": 1739.0,
+      "gold": 286.0,
+      "silver": 5.1
+    },
+    {
+      "month": "2000-04",
+      "copper": 1679.0,
+      "gold": 280.0,
+      "silver": 5.1
+    },
+    {
+      "month": "2000-05",
+      "copper": 1786.0,
+      "gold": 275.0,
+      "silver": 5.0
+    },
+    {
+      "month": "2000-06",
+      "copper": 1753.0,
+      "gold": 286.0,
+      "silver": 5.0
+    },
+    {
+      "month": "2000-07",
+      "copper": 1799.0,
+      "gold": 282.0,
+      "silver": 5.0
+    },
+    {
+      "month": "2000-08",
+      "copper": 1856.0,
+      "gold": 274.0,
+      "silver": 4.9
+    },
+    {
+      "month": "2000-09",
+      "copper": 1960.0,
+      "gold": 274.0,
+      "silver": 4.9
+    },
+    {
+      "month": "2000-10",
+      "copper": 1899.0,
+      "gold": 270.0,
+      "silver": 4.8
+    },
+    {
+      "month": "2000-11",
+      "copper": 1795.0,
+      "gold": 266.0,
+      "silver": 4.7
+    },
+    {
+      "month": "2000-12",
+      "copper": 1851.0,
+      "gold": 271.0,
+      "silver": 4.6
+    },
+    {
+      "month": "2001-01",
+      "copper": 1788.0,
+      "gold": 265.0,
+      "silver": 4.7
+    },
+    {
+      "month": "2001-02",
+      "copper": 1766.0,
+      "gold": 262.0,
+      "silver": 4.6
+    },
+    {
+      "month": "2001-03",
+      "copper": 1739.0,
+      "gold": 263.0,
+      "silver": 4.4
+    },
+    {
+      "month": "2001-04",
+      "copper": 1664.0,
+      "gold": 260.0,
+      "silver": 4.4
+    },
+    {
+      "month": "2001-05",
+      "copper": 1682.0,
+      "gold": 272.0,
+      "silver": 4.4
+    },
+    {
+      "month": "2001-06",
+      "copper": 1608.0,
+      "gold": 270.0,
+      "silver": 4.4
+    },
+    {
+      "month": "2001-07",
+      "copper": 1525.0,
+      "gold": 268.0,
+      "silver": 4.3
+    },
+    {
+      "month": "2001-08",
+      "copper": 1464.0,
+      "gold": 272.0,
+      "silver": 4.2
+    },
+    {
+      "month": "2001-09",
+      "copper": 1426.0,
+      "gold": 283.0,
+      "silver": 4.4
+    },
+    {
+      "month": "2001-10",
+      "copper": 1377.0,
+      "gold": 283.0,
+      "silver": 4.4
+    },
+    {
+      "month": "2001-11",
+      "copper": 1428.0,
+      "gold": 276.0,
+      "silver": 4.1
+    },
+    {
+      "month": "2001-12",
+      "copper": 1472.0,
+      "gold": 276.0,
+      "silver": 4.4
+    },
+    {
+      "month": "2002-01",
+      "copper": 1504.0,
+      "gold": 282.0,
+      "silver": 4.5
+    },
+    {
+      "month": "2002-02",
+      "copper": 1562.0,
+      "gold": 296.0,
+      "silver": 4.4
+    },
+    {
+      "month": "2002-03",
+      "copper": 1605.0,
+      "gold": 294.0,
+      "silver": 4.5
+    },
+    {
+      "month": "2002-04",
+      "copper": 1590.0,
+      "gold": 303.0,
+      "silver": 4.6
+    },
+    {
+      "month": "2002-05",
+      "copper": 1596.0,
+      "gold": 314.0,
+      "silver": 4.7
+    },
+    {
+      "month": "2002-06",
+      "copper": 1648.0,
+      "gold": 321.0,
+      "silver": 4.9
+    },
+    {
+      "month": "2002-07",
+      "copper": 1589.0,
+      "gold": 313.0,
+      "silver": 4.9
+    },
+    {
+      "month": "2002-08",
+      "copper": 1480.0,
+      "gold": 310.0,
+      "silver": 4.5
+    },
+    {
+      "month": "2002-09",
+      "copper": 1479.0,
+      "gold": 319.0,
+      "silver": 4.6
+    },
+    {
+      "month": "2002-10",
+      "copper": 1484.0,
+      "gold": 317.0,
+      "silver": 4.4
+    },
+    {
+      "month": "2002-11",
+      "copper": 1582.0,
+      "gold": 319.0,
+      "silver": 4.5
+    },
+    {
+      "month": "2002-12",
+      "copper": 1596.0,
+      "gold": 332.0,
+      "silver": 4.6
+    },
+    {
+      "month": "2003-01",
+      "copper": 1648.0,
+      "gold": 357.0,
+      "silver": 4.8
+    },
+    {
+      "month": "2003-02",
+      "copper": 1684.0,
+      "gold": 359.0,
+      "silver": 4.7
+    },
+    {
+      "month": "2003-03",
+      "copper": 1659.0,
+      "gold": 341.0,
+      "silver": 4.5
+    },
+    {
+      "month": "2003-04",
+      "copper": 1587.0,
+      "gold": 328.0,
+      "silver": 4.5
+    },
+    {
+      "month": "2003-05",
+      "copper": 1648.0,
+      "gold": 356.0,
+      "silver": 4.7
+    },
+    {
+      "month": "2003-06",
+      "copper": 1687.0,
+      "gold": 356.0,
+      "silver": 4.5
+    },
+    {
+      "month": "2003-07",
+      "copper": 1710.0,
+      "gold": 351.0,
+      "silver": 4.8
+    },
+    {
+      "month": "2003-08",
+      "copper": 1760.0,
+      "gold": 360.0,
+      "silver": 5.0
+    },
+    {
+      "month": "2003-09",
+      "copper": 1790.0,
+      "gold": 379.0,
+      "silver": 5.2
+    },
+    {
+      "month": "2003-10",
+      "copper": 1921.0,
+      "gold": 379.0,
+      "silver": 5.0
+    },
+    {
+      "month": "2003-11",
+      "copper": 2055.0,
+      "gold": 390.0,
+      "silver": 5.2
+    },
+    {
+      "month": "2003-12",
+      "copper": 2201.0,
+      "gold": 407.0,
+      "silver": 5.6
+    },
+    {
+      "month": "2004-01",
+      "copper": 2424.0,
+      "gold": 414.0,
+      "silver": 6.3
+    },
+    {
+      "month": "2004-02",
+      "copper": 2760.0,
+      "gold": 405.0,
+      "silver": 6.4
+    },
+    {
+      "month": "2004-03",
+      "copper": 3009.0,
+      "gold": 407.0,
+      "silver": 7.2
+    },
+    {
+      "month": "2004-04",
+      "copper": 2949.0,
+      "gold": 403.0,
+      "silver": 7.1
+    },
+    {
+      "month": "2004-05",
+      "copper": 2734.0,
+      "gold": 384.0,
+      "silver": 5.9
+    },
+    {
+      "month": "2004-06",
+      "copper": 2687.0,
+      "gold": 392.0,
+      "silver": 5.9
+    },
+    {
+      "month": "2004-07",
+      "copper": 2808.0,
+      "gold": 398.0,
+      "silver": 6.3
+    },
+    {
+      "month": "2004-08",
+      "copper": 2846.0,
+      "gold": 401.0,
+      "silver": 6.7
+    },
+    {
+      "month": "2004-09",
+      "copper": 2895.0,
+      "gold": 405.0,
+      "silver": 6.4
+    },
+    {
+      "month": "2004-10",
+      "copper": 3012.0,
+      "gold": 420.0,
+      "silver": 7.1
+    },
+    {
+      "month": "2004-11",
+      "copper": 3123.0,
+      "gold": 439.0,
+      "silver": 7.5
+    },
+    {
+      "month": "2004-12",
+      "copper": 3145.0,
+      "gold": 442.0,
+      "silver": 7.1
+    },
+    {
+      "month": "2005-01",
+      "copper": 3170.0,
+      "gold": 424.0,
+      "silver": 6.6
+    },
+    {
+      "month": "2005-02",
+      "copper": 3254.0,
+      "gold": 423.0,
+      "silver": 7.0
+    },
+    {
+      "month": "2005-03",
+      "copper": 3379.0,
+      "gold": 434.0,
+      "silver": 7.2
+    },
+    {
+      "month": "2005-04",
+      "copper": 3394.0,
+      "gold": 429.0,
+      "silver": 7.1
+    },
+    {
+      "month": "2005-05",
+      "copper": 3249.0,
+      "gold": 422.0,
+      "silver": 7.0
+    },
+    {
+      "month": "2005-06",
+      "copper": 3524.0,
+      "gold": 431.0,
+      "silver": 7.3
+    },
+    {
+      "month": "2005-07",
+      "copper": 3614.0,
+      "gold": 424.0,
+      "silver": 7.0
+    },
+    {
+      "month": "2005-08",
+      "copper": 3798.0,
+      "gold": 438.0,
+      "silver": 7.0
+    },
+    {
+      "month": "2005-09",
+      "copper": 3858.0,
+      "gold": 456.0,
+      "silver": 7.2
+    },
+    {
+      "month": "2005-10",
+      "copper": 4060.0,
+      "gold": 470.0,
+      "silver": 7.7
+    },
+    {
+      "month": "2005-11",
+      "copper": 4269.0,
+      "gold": 477.0,
+      "silver": 7.9
+    },
+    {
+      "month": "2005-12",
+      "copper": 4577.0,
+      "gold": 510.0,
+      "silver": 8.6
+    },
+    {
+      "month": "2006-01",
+      "copper": 4734.0,
+      "gold": 550.0,
+      "silver": 9.1
+    },
+    {
+      "month": "2006-02",
+      "copper": 4982.0,
+      "gold": 555.0,
+      "silver": 9.5
+    },
+    {
+      "month": "2006-03",
+      "copper": 5103.0,
+      "gold": 557.0,
+      "silver": 10.4
+    },
+    {
+      "month": "2006-04",
+      "copper": 6388.0,
+      "gold": 611.0,
+      "silver": 12.6
+    },
+    {
+      "month": "2006-05",
+      "copper": 8046.0,
+      "gold": 675.0,
+      "silver": 13.4
+    },
+    {
+      "month": "2006-06",
+      "copper": 7198.0,
+      "gold": 596.0,
+      "silver": 10.8
+    },
+    {
+      "month": "2006-07",
+      "copper": 7712.0,
+      "gold": 634.0,
+      "silver": 11.2
+    },
+    {
+      "month": "2006-08",
+      "copper": 7696.0,
+      "gold": 633.0,
+      "silver": 12.2
+    },
+    {
+      "month": "2006-09",
+      "copper": 7602.0,
+      "gold": 598.0,
+      "silver": 11.7
+    },
+    {
+      "month": "2006-10",
+      "copper": 7500.0,
+      "gold": 586.0,
+      "silver": 11.6
+    },
+    {
+      "month": "2006-11",
+      "copper": 7029.0,
+      "gold": 628.0,
+      "silver": 12.9
+    },
+    {
+      "month": "2006-12",
+      "copper": 6675.0,
+      "gold": 630.0,
+      "silver": 13.3
+    },
+    {
+      "month": "2007-01",
+      "copper": 5670.0,
+      "gold": 631.0,
+      "silver": 12.8
+    },
+    {
+      "month": "2007-02",
+      "copper": 5676.0,
+      "gold": 665.0,
+      "silver": 13.9
+    },
+    {
+      "month": "2007-03",
+      "copper": 6452.0,
+      "gold": 655.0,
+      "silver": 13.2
+    },
+    {
+      "month": "2007-04",
+      "copper": 7766.0,
+      "gold": 679.0,
+      "silver": 13.7
+    },
+    {
+      "month": "2007-05",
+      "copper": 7681.0,
+      "gold": 667.0,
+      "silver": 13.1
+    },
+    {
+      "month": "2007-06",
+      "copper": 7474.0,
+      "gold": 656.0,
+      "silver": 13.1
+    },
+    {
+      "month": "2007-07",
+      "copper": 7973.0,
+      "gold": 665.0,
+      "silver": 12.9
+    },
+    {
+      "month": "2007-08",
+      "copper": 7514.0,
+      "gold": 665.0,
+      "silver": 12.3
+    },
+    {
+      "month": "2007-09",
+      "copper": 7649.0,
+      "gold": 713.0,
+      "silver": 12.8
+    },
+    {
+      "month": "2007-10",
+      "copper": 8008.0,
+      "gold": 755.0,
+      "silver": 13.7
+    },
+    {
+      "month": "2007-11",
+      "copper": 6967.0,
+      "gold": 806.0,
+      "silver": 14.7
+    },
+    {
+      "month": "2007-12",
+      "copper": 6588.0,
+      "gold": 803.0,
+      "silver": 14.3
+    },
+    {
+      "month": "2008-01",
+      "copper": 7061.0,
+      "gold": 890.0,
+      "silver": 15.9
+    },
+    {
+      "month": "2008-02",
+      "copper": 7888.0,
+      "gold": 922.0,
+      "silver": 17.6
+    },
+    {
+      "month": "2008-03",
+      "copper": 8439.0,
+      "gold": 968.0,
+      "silver": 19.3
+    },
+    {
+      "month": "2008-04",
+      "copper": 8685.0,
+      "gold": 910.0,
+      "silver": 17.5
+    },
+    {
+      "month": "2008-05",
+      "copper": 8383.0,
+      "gold": 889.0,
+      "silver": 17.1
+    },
+    {
+      "month": "2008-06",
+      "copper": 8261.0,
+      "gold": 889.0,
+      "silver": 17.0
+    },
+    {
+      "month": "2008-07",
+      "copper": 8414.0,
+      "gold": 940.0,
+      "silver": 18.0
+    },
+    {
+      "month": "2008-08",
+      "copper": 7635.0,
+      "gold": 839.0,
+      "silver": 14.6
+    },
+    {
+      "month": "2008-09",
+      "copper": 6991.0,
+      "gold": 830.0,
+      "silver": 12.4
+    },
+    {
+      "month": "2008-10",
+      "copper": 4926.0,
+      "gold": 807.0,
+      "silver": 10.4
+    },
+    {
+      "month": "2008-11",
+      "copper": 3717.0,
+      "gold": 761.0,
+      "silver": 9.9
+    },
+    {
+      "month": "2008-12",
+      "copper": 3072.0,
+      "gold": 816.0,
+      "silver": 10.3
+    },
+    {
+      "month": "2009-01",
+      "copper": 3221.0,
+      "gold": 859.0,
+      "silver": 11.3
+    },
+    {
+      "month": "2009-02",
+      "copper": 3315.0,
+      "gold": 943.0,
+      "silver": 13.4
+    },
+    {
+      "month": "2009-03",
+      "copper": 3750.0,
+      "gold": 924.0,
+      "silver": 13.1
+    },
+    {
+      "month": "2009-04",
+      "copper": 4407.0,
+      "gold": 890.0,
+      "silver": 12.5
+    },
+    {
+      "month": "2009-05",
+      "copper": 4569.0,
+      "gold": 929.0,
+      "silver": 14.0
+    },
+    {
+      "month": "2009-06",
+      "copper": 5014.0,
+      "gold": 946.0,
+      "silver": 14.7
+    },
+    {
+      "month": "2009-07",
+      "copper": 5216.0,
+      "gold": 934.0,
+      "silver": 13.4
+    },
+    {
+      "month": "2009-08",
+      "copper": 6165.0,
+      "gold": 949.0,
+      "silver": 14.4
+    },
+    {
+      "month": "2009-09",
+      "copper": 6196.0,
+      "gold": 997.0,
+      "silver": 16.4
+    },
+    {
+      "month": "2009-10",
+      "copper": 6288.0,
+      "gold": 1043.0,
+      "silver": 17.2
+    },
+    {
+      "month": "2009-11",
+      "copper": 6676.0,
+      "gold": 1127.0,
+      "silver": 17.8
+    },
+    {
+      "month": "2009-12",
+      "copper": 6982.0,
+      "gold": 1135.0,
+      "silver": 17.6
+    },
+    {
+      "month": "2010-01",
+      "copper": 7386.0,
+      "gold": 1118.0,
+      "silver": 17.7
+    },
+    {
+      "month": "2010-02",
+      "copper": 6848.0,
+      "gold": 1095.0,
+      "silver": 15.9
+    },
+    {
+      "month": "2010-03",
+      "copper": 7463.0,
+      "gold": 1113.0,
+      "silver": 17.1
+    },
+    {
+      "month": "2010-04",
+      "copper": 7745.0,
+      "gold": 1149.0,
+      "silver": 18.1
+    },
+    {
+      "month": "2010-05",
+      "copper": 6838.0,
+      "gold": 1205.0,
+      "silver": 18.4
+    },
+    {
+      "month": "2010-06",
+      "copper": 6499.0,
+      "gold": 1233.0,
+      "silver": 18.5
+    },
+    {
+      "month": "2010-07",
+      "copper": 6735.0,
+      "gold": 1193.0,
+      "silver": 18.0
+    },
+    {
+      "month": "2010-08",
+      "copper": 7284.0,
+      "gold": 1216.0,
+      "silver": 18.4
+    },
+    {
+      "month": "2010-09",
+      "copper": 7709.0,
+      "gold": 1271.0,
+      "silver": 20.5
+    },
+    {
+      "month": "2010-10",
+      "copper": 8292.0,
+      "gold": 1342.0,
+      "silver": 23.4
+    },
+    {
+      "month": "2010-11",
+      "copper": 8470.0,
+      "gold": 1370.0,
+      "silver": 26.5
+    },
+    {
+      "month": "2010-12",
+      "copper": 9147.0,
+      "gold": 1391.0,
+      "silver": 29.3
+    },
+    {
+      "month": "2011-01",
+      "copper": 9556.0,
+      "gold": 1360.0,
+      "silver": 28.5
+    },
+    {
+      "month": "2011-02",
+      "copper": 9868.0,
+      "gold": 1375.0,
+      "silver": 30.8
+    },
+    {
+      "month": "2011-03",
+      "copper": 9503.0,
+      "gold": 1423.0,
+      "silver": 35.8
+    },
+    {
+      "month": "2011-04",
+      "copper": 9493.0,
+      "gold": 1481.0,
+      "silver": 42.7
+    },
+    {
+      "month": "2011-05",
+      "copper": 8960.0,
+      "gold": 1513.0,
+      "silver": 37.3
+    },
+    {
+      "month": "2011-06",
+      "copper": 9067.0,
+      "gold": 1529.0,
+      "silver": 35.8
+    },
+    {
+      "month": "2011-07",
+      "copper": 9650.0,
+      "gold": 1573.0,
+      "silver": 37.9
+    },
+    {
+      "month": "2011-08",
+      "copper": 9001.0,
+      "gold": 1759.0,
+      "silver": 40.3
+    },
+    {
+      "month": "2011-09",
+      "copper": 8300.0,
+      "gold": 1772.0,
+      "silver": 38.2
+    },
+    {
+      "month": "2011-10",
+      "copper": 7394.0,
+      "gold": 1666.0,
+      "silver": 32.0
+    },
+    {
+      "month": "2011-11",
+      "copper": 7581.0,
+      "gold": 1739.0,
+      "silver": 33.1
+    },
+    {
+      "month": "2011-12",
+      "copper": 7565.0,
+      "gold": 1640.0,
+      "silver": 30.3
+    },
+    {
+      "month": "2012-01",
+      "copper": 8040.0,
+      "gold": 1654.0,
+      "silver": 30.7
+    },
+    {
+      "month": "2012-02",
+      "copper": 8441.0,
+      "gold": 1745.0,
+      "silver": 34.1
+    },
+    {
+      "month": "2012-03",
+      "copper": 8471.0,
+      "gold": 1676.0,
+      "silver": 33.0
+    },
+    {
+      "month": "2012-04",
+      "copper": 8289.0,
+      "gold": 1649.0,
+      "silver": 31.5
+    },
+    {
+      "month": "2012-05",
+      "copper": 7956.0,
+      "gold": 1589.0,
+      "silver": 28.7
+    },
+    {
+      "month": "2012-06",
+      "copper": 7423.0,
+      "gold": 1599.0,
+      "silver": 28.0
+    },
+    {
+      "month": "2012-07",
+      "copper": 7584.0,
+      "gold": 1594.0,
+      "silver": 27.4
+    },
+    {
+      "month": "2012-08",
+      "copper": 7516.0,
+      "gold": 1630.0,
+      "silver": 28.8
+    },
+    {
+      "month": "2012-09",
+      "copper": 8088.0,
+      "gold": 1745.0,
+      "silver": 33.6
+    },
+    {
+      "month": "2012-10",
+      "copper": 8062.0,
+      "gold": 1747.0,
+      "silver": 33.2
+    },
+    {
+      "month": "2012-11",
+      "copper": 7711.0,
+      "gold": 1722.0,
+      "silver": 32.8
+    },
+    {
+      "month": "2012-12",
+      "copper": 7966.0,
+      "gold": 1685.0,
+      "silver": 31.9
+    },
+    {
+      "month": "2013-01",
+      "copper": 8047.0,
+      "gold": 1672.0,
+      "silver": 31.1
+    },
+    {
+      "month": "2013-02",
+      "copper": 8061.0,
+      "gold": 1628.0,
+      "silver": 30.3
+    },
+    {
+      "month": "2013-03",
+      "copper": 7646.0,
+      "gold": 1593.0,
+      "silver": 28.8
+    },
+    {
+      "month": "2013-04",
+      "copper": 7234.0,
+      "gold": 1488.0,
+      "silver": 25.4
+    },
+    {
+      "month": "2013-05",
+      "copper": 7249.0,
+      "gold": 1414.0,
+      "silver": 23.0
+    },
+    {
+      "month": "2013-06",
+      "copper": 7000.0,
+      "gold": 1343.0,
+      "silver": 21.1
+    },
+    {
+      "month": "2013-07",
+      "copper": 6907.0,
+      "gold": 1286.0,
+      "silver": 19.7
+    },
+    {
+      "month": "2013-08",
+      "copper": 7193.0,
+      "gold": 1352.0,
+      "silver": 21.9
+    },
+    {
+      "month": "2013-09",
+      "copper": 7159.0,
+      "gold": 1349.0,
+      "silver": 22.6
+    },
+    {
+      "month": "2013-10",
+      "copper": 7203.0,
+      "gold": 1317.0,
+      "silver": 21.9
+    },
+    {
+      "month": "2013-11",
+      "copper": 7071.0,
+      "gold": 1276.0,
+      "silver": 20.8
+    },
+    {
+      "month": "2013-12",
+      "copper": 7215.0,
+      "gold": 1222.0,
+      "silver": 19.7
+    },
+    {
+      "month": "2014-01",
+      "copper": 7291.0,
+      "gold": 1244.0,
+      "silver": 19.9
+    },
+    {
+      "month": "2014-02",
+      "copper": 7149.0,
+      "gold": 1300.0,
+      "silver": 20.8
+    },
+    {
+      "month": "2014-03",
+      "copper": 6650.0,
+      "gold": 1336.0,
+      "silver": 20.7
+    },
+    {
+      "month": "2014-04",
+      "copper": 6674.0,
+      "gold": 1298.0,
+      "silver": 19.7
+    },
+    {
+      "month": "2014-05",
+      "copper": 6891.0,
+      "gold": 1289.0,
+      "silver": 19.3
+    },
+    {
+      "month": "2014-06",
+      "copper": 6821.0,
+      "gold": 1279.0,
+      "silver": 19.9
+    },
+    {
+      "month": "2014-07",
+      "copper": 7113.0,
+      "gold": 1311.0,
+      "silver": 20.9
+    },
+    {
+      "month": "2014-08",
+      "copper": 7002.0,
+      "gold": 1295.0,
+      "silver": 19.7
+    },
+    {
+      "month": "2014-09",
+      "copper": 6872.0,
+      "gold": 1237.0,
+      "silver": 18.4
+    },
+    {
+      "month": "2014-10",
+      "copper": 6737.0,
+      "gold": 1222.0,
+      "silver": 17.2
+    },
+    {
+      "month": "2014-11",
+      "copper": 6713.0,
+      "gold": 1175.0,
+      "silver": 16.0
+    },
+    {
+      "month": "2014-12",
+      "copper": 6446.0,
+      "gold": 1201.0,
+      "silver": 16.3
+    },
+    {
+      "month": "2015-01",
+      "copper": 5831.0,
+      "gold": 1251.0,
+      "silver": 17.2
+    },
+    {
+      "month": "2015-02",
+      "copper": 5729.0,
+      "gold": 1227.0,
+      "silver": 16.8
+    },
+    {
+      "month": "2015-03",
+      "copper": 5940.0,
+      "gold": 1179.0,
+      "silver": 16.2
+    },
+    {
+      "month": "2015-04",
+      "copper": 6042.0,
+      "gold": 1199.0,
+      "silver": 16.3
+    },
+    {
+      "month": "2015-05",
+      "copper": 6295.0,
+      "gold": 1199.0,
+      "silver": 16.8
+    },
+    {
+      "month": "2015-06",
+      "copper": 5833.0,
+      "gold": 1182.0,
+      "silver": 16.1
+    },
+    {
+      "month": "2015-07",
+      "copper": 5457.0,
+      "gold": 1128.0,
+      "silver": 15.1
+    },
+    {
+      "month": "2015-08",
+      "copper": 5127.0,
+      "gold": 1118.0,
+      "silver": 14.9
+    },
+    {
+      "month": "2015-09",
+      "copper": 5217.0,
+      "gold": 1125.0,
+      "silver": 14.8
+    },
+    {
+      "month": "2015-10",
+      "copper": 5216.0,
+      "gold": 1159.0,
+      "silver": 15.8
+    },
+    {
+      "month": "2015-11",
+      "copper": 4800.0,
+      "gold": 1086.0,
+      "silver": 14.5
+    },
+    {
+      "month": "2015-12",
+      "copper": 4639.0,
+      "gold": 1076.0,
+      "silver": 14.1
+    },
+    {
+      "month": "2016-01",
+      "copper": 4472.0,
+      "gold": 1098.0,
+      "silver": 14.1
+    },
+    {
+      "month": "2016-02",
+      "copper": 4599.0,
+      "gold": 1200.0,
+      "silver": 15.2
+    },
+    {
+      "month": "2016-03",
+      "copper": 4954.0,
+      "gold": 1245.0,
+      "silver": 15.5
+    },
+    {
+      "month": "2016-04",
+      "copper": 4873.0,
+      "gold": 1242.0,
+      "silver": 16.4
+    },
+    {
+      "month": "2016-05",
+      "copper": 4695.0,
+      "gold": 1261.0,
+      "silver": 16.9
+    },
+    {
+      "month": "2016-06",
+      "copper": 4642.0,
+      "gold": 1276.0,
+      "silver": 17.3
+    },
+    {
+      "month": "2016-07",
+      "copper": 4865.0,
+      "gold": 1337.0,
+      "silver": 20.0
+    },
+    {
+      "month": "2016-08",
+      "copper": 4752.0,
+      "gold": 1340.0,
+      "silver": 19.6
+    },
+    {
+      "month": "2016-09",
+      "copper": 4722.0,
+      "gold": 1327.0,
+      "silver": 19.4
+    },
+    {
+      "month": "2016-10",
+      "copper": 4731.0,
+      "gold": 1267.0,
+      "silver": 17.7
+    },
+    {
+      "month": "2016-11",
+      "copper": 5451.0,
+      "gold": 1238.0,
+      "silver": 17.4
+    },
+    {
+      "month": "2016-12",
+      "copper": 5660.0,
+      "gold": 1157.0,
+      "silver": 16.4
+    },
+    {
+      "month": "2017-01",
+      "copper": 5755.0,
+      "gold": 1192.0,
+      "silver": 16.9
+    },
+    {
+      "month": "2017-02",
+      "copper": 5941.0,
+      "gold": 1234.0,
+      "silver": 17.9
+    },
+    {
+      "month": "2017-03",
+      "copper": 5825.0,
+      "gold": 1231.0,
+      "silver": 17.6
+    },
+    {
+      "month": "2017-04",
+      "copper": 5684.0,
+      "gold": 1267.0,
+      "silver": 18.0
+    },
+    {
+      "month": "2017-05",
+      "copper": 5600.0,
+      "gold": 1246.0,
+      "silver": 16.7
+    },
+    {
+      "month": "2017-06",
+      "copper": 5720.0,
+      "gold": 1260.0,
+      "silver": 16.9
+    },
+    {
+      "month": "2017-07",
+      "copper": 5985.0,
+      "gold": 1237.0,
+      "silver": 16.2
+    },
+    {
+      "month": "2017-08",
+      "copper": 6486.0,
+      "gold": 1283.0,
+      "silver": 17.0
+    },
+    {
+      "month": "2017-09",
+      "copper": 6577.0,
+      "gold": 1314.0,
+      "silver": 17.4
+    },
+    {
+      "month": "2017-10",
+      "copper": 6808.0,
+      "gold": 1280.0,
+      "silver": 16.9
+    },
+    {
+      "month": "2017-11",
+      "copper": 6827.0,
+      "gold": 1282.0,
+      "silver": 17.0
+    },
+    {
+      "month": "2017-12",
+      "copper": 6834.0,
+      "gold": 1264.0,
+      "silver": 16.2
+    },
+    {
+      "month": "2018-01",
+      "copper": 7066.0,
+      "gold": 1331.0,
+      "silver": 17.1
+    },
+    {
+      "month": "2018-02",
+      "copper": 7007.0,
+      "gold": 1331.0,
+      "silver": 16.6
+    },
+    {
+      "month": "2018-03",
+      "copper": 6799.0,
+      "gold": 1325.0,
+      "silver": 16.5
+    },
+    {
+      "month": "2018-04",
+      "copper": 6852.0,
+      "gold": 1335.0,
+      "silver": 16.6
+    },
+    {
+      "month": "2018-05",
+      "copper": 6825.0,
+      "gold": 1303.0,
+      "silver": 16.5
+    },
+    {
+      "month": "2018-06",
+      "copper": 6966.0,
+      "gold": 1282.0,
+      "silver": 16.5
+    },
+    {
+      "month": "2018-07",
+      "copper": 6251.0,
+      "gold": 1238.0,
+      "silver": 15.7
+    },
+    {
+      "month": "2018-08",
+      "copper": 6051.0,
+      "gold": 1202.0,
+      "silver": 15.0
+    },
+    {
+      "month": "2018-09",
+      "copper": 6051.0,
+      "gold": 1198.0,
+      "silver": 14.3
+    },
+    {
+      "month": "2018-10",
+      "copper": 6220.0,
+      "gold": 1215.0,
+      "silver": 14.6
+    },
+    {
+      "month": "2018-11",
+      "copper": 6196.0,
+      "gold": 1221.0,
+      "silver": 14.4
+    },
+    {
+      "month": "2018-12",
+      "copper": 6075.0,
+      "gold": 1250.0,
+      "silver": 14.8
+    },
+    {
+      "month": "2019-01",
+      "copper": 5939.0,
+      "gold": 1292.0,
+      "silver": 15.6
+    },
+    {
+      "month": "2019-02",
+      "copper": 6300.0,
+      "gold": 1320.0,
+      "silver": 15.8
+    },
+    {
+      "month": "2019-03",
+      "copper": 6439.0,
+      "gold": 1301.0,
+      "silver": 15.3
+    },
+    {
+      "month": "2019-04",
+      "copper": 6438.0,
+      "gold": 1286.0,
+      "silver": 15.1
+    },
+    {
+      "month": "2019-05",
+      "copper": 6018.0,
+      "gold": 1284.0,
+      "silver": 14.7
+    },
+    {
+      "month": "2019-06",
+      "copper": 5882.0,
+      "gold": 1359.0,
+      "silver": 15.0
+    },
+    {
+      "month": "2019-07",
+      "copper": 5941.0,
+      "gold": 1413.0,
+      "silver": 15.8
+    },
+    {
+      "month": "2019-08",
+      "copper": 5709.0,
+      "gold": 1500.0,
+      "silver": 17.2
+    },
+    {
+      "month": "2019-09",
+      "copper": 5759.0,
+      "gold": 1511.0,
+      "silver": 18.2
+    },
+    {
+      "month": "2019-10",
+      "copper": 5757.0,
+      "gold": 1495.0,
+      "silver": 17.6
+    },
+    {
+      "month": "2019-11",
+      "copper": 5860.0,
+      "gold": 1471.0,
+      "silver": 17.2
+    },
+    {
+      "month": "2019-12",
+      "copper": 6077.0,
+      "gold": 1479.0,
+      "silver": 17.1
+    },
+    {
+      "month": "2020-01",
+      "copper": 6031.0,
+      "gold": 1561.0,
+      "silver": 18.0
+    },
+    {
+      "month": "2020-02",
+      "copper": 5688.0,
+      "gold": 1597.0,
+      "silver": 17.9
+    },
+    {
+      "month": "2020-03",
+      "copper": 5183.0,
+      "gold": 1592.0,
+      "silver": 14.9
+    },
+    {
+      "month": "2020-04",
+      "copper": 5058.0,
+      "gold": 1683.0,
+      "silver": 15.1
+    },
+    {
+      "month": "2020-05",
+      "copper": 5240.0,
+      "gold": 1716.0,
+      "silver": 16.3
+    },
+    {
+      "month": "2020-06",
+      "copper": 5755.0,
+      "gold": 1732.0,
+      "silver": 17.7
+    },
+    {
+      "month": "2020-07",
+      "copper": 6372.0,
+      "gold": 1847.0,
+      "silver": 20.6
+    },
+    {
+      "month": "2020-08",
+      "copper": 6499.0,
+      "gold": 1969.0,
+      "silver": 27.0
+    },
+    {
+      "month": "2020-09",
+      "copper": 6705.0,
+      "gold": 1922.0,
+      "silver": 25.7
+    },
+    {
+      "month": "2020-10",
+      "copper": 6714.0,
+      "gold": 1900.0,
+      "silver": 24.2
+    },
+    {
+      "month": "2020-11",
+      "copper": 7069.0,
+      "gold": 1866.0,
+      "silver": 24.1
+    },
+    {
+      "month": "2020-12",
+      "copper": 7772.0,
+      "gold": 1858.0,
+      "silver": 25.0
+    },
+    {
+      "month": "2021-01",
+      "copper": 7972.0,
+      "gold": 1867.0,
+      "silver": 25.9
+    },
+    {
+      "month": "2021-02",
+      "copper": 8471.0,
+      "gold": 1808.0,
+      "silver": 27.3
+    },
+    {
+      "month": "2021-03",
+      "copper": 8988.0,
+      "gold": 1718.0,
+      "silver": 25.6
+    },
+    {
+      "month": "2021-04",
+      "copper": 9325.0,
+      "gold": 1760.0,
+      "silver": 25.7
+    },
+    {
+      "month": "2021-05",
+      "copper": 10162.0,
+      "gold": 1850.0,
+      "silver": 27.5
+    },
+    {
+      "month": "2021-06",
+      "copper": 9632.0,
+      "gold": 1835.0,
+      "silver": 27.0
+    },
+    {
+      "month": "2021-07",
+      "copper": 9451.0,
+      "gold": 1808.0,
+      "silver": 25.7
+    },
+    {
+      "month": "2021-08",
+      "copper": 9370.0,
+      "gold": 1785.0,
+      "silver": 24.0
+    },
+    {
+      "month": "2021-09",
+      "copper": 9325.0,
+      "gold": 1775.0,
+      "silver": 23.2
+    },
+    {
+      "month": "2021-10",
+      "copper": 9829.0,
+      "gold": 1777.0,
+      "silver": 23.4
+    },
+    {
+      "month": "2021-11",
+      "copper": 9729.0,
+      "gold": 1822.0,
+      "silver": 24.2
+    },
+    {
+      "month": "2021-12",
+      "copper": 9551.0,
+      "gold": 1790.0,
+      "silver": 22.5
+    },
+    {
+      "month": "2022-01",
+      "copper": 9782.0,
+      "gold": 1816.0,
+      "silver": 23.2
+    },
+    {
+      "month": "2022-02",
+      "copper": 9943.0,
+      "gold": 1856.0,
+      "silver": 23.5
+    },
+    {
+      "month": "2022-03",
+      "copper": 10231.0,
+      "gold": 1948.0,
+      "silver": 25.3
+    },
+    {
+      "month": "2022-04",
+      "copper": 10161.0,
+      "gold": 1937.0,
+      "silver": 24.5
+    },
+    {
+      "month": "2022-05",
+      "copper": 9377.0,
+      "gold": 1849.0,
+      "silver": 21.9
+    },
+    {
+      "month": "2022-06",
+      "copper": 9024.0,
+      "gold": 1837.0,
+      "silver": 21.6
+    },
+    {
+      "month": "2022-07",
+      "copper": 7545.0,
+      "gold": 1733.0,
+      "silver": 19.1
+    },
+    {
+      "month": "2022-08",
+      "copper": 7982.0,
+      "gold": 1765.0,
+      "silver": 19.7
+    },
+    {
+      "month": "2022-09",
+      "copper": 7746.0,
+      "gold": 1681.0,
+      "silver": 18.9
+    },
+    {
+      "month": "2022-10",
+      "copper": 7651.0,
+      "gold": 1664.0,
+      "silver": 19.4
+    },
+    {
+      "month": "2022-11",
+      "copper": 8050.0,
+      "gold": 1725.0,
+      "silver": 21.0
+    },
+    {
+      "month": "2022-12",
+      "copper": 8375.0,
+      "gold": 1798.0,
+      "silver": 23.3
+    },
+    {
+      "month": "2023-01",
+      "copper": 9038.0,
+      "gold": 1898.0,
+      "silver": 23.7
+    },
+    {
+      "month": "2023-02",
+      "copper": 8937.0,
+      "gold": 1855.0,
+      "silver": 21.9
+    },
+    {
+      "month": "2023-03",
+      "copper": 8856.0,
+      "gold": 1913.0,
+      "silver": 22.0
+    },
+    {
+      "month": "2023-04",
+      "copper": 8809.0,
+      "gold": 2000.0,
+      "silver": 25.0
+    },
+    {
+      "month": "2023-05",
+      "copper": 8217.0,
+      "gold": 1992.0,
+      "silver": 24.3
+    },
+    {
+      "month": "2023-06",
+      "copper": 8397.0,
+      "gold": 1943.0,
+      "silver": 23.4
+    },
+    {
+      "month": "2023-07",
+      "copper": 8477.0,
+      "gold": 1951.0,
+      "silver": 24.3
+    },
+    {
+      "month": "2023-08",
+      "copper": 8349.0,
+      "gold": 1919.0,
+      "silver": 23.4
+    },
+    {
+      "month": "2023-09",
+      "copper": 8277.0,
+      "gold": 1916.0,
+      "silver": 23.1
+    },
+    {
+      "month": "2023-10",
+      "copper": 7937.0,
+      "gold": 1916.0,
+      "silver": 22.4
+    },
+    {
+      "month": "2023-11",
+      "copper": 8190.0,
+      "gold": 1984.0,
+      "silver": 23.5
+    },
+    {
+      "month": "2023-12",
+      "copper": 8400.0,
+      "gold": 2026.0,
+      "silver": 23.9
+    },
+    {
+      "month": "2024-01",
+      "copper": 8339.0,
+      "gold": 2034.0,
+      "silver": 22.9
+    },
+    {
+      "month": "2024-02",
+      "copper": 8305.0,
+      "gold": 2023.0,
+      "silver": 22.7
+    },
+    {
+      "month": "2024-03",
+      "copper": 8689.0,
+      "gold": 2158.0,
+      "silver": 24.5
+    },
+    {
+      "month": "2024-04",
+      "copper": 9464.0,
+      "gold": 2331.0,
+      "silver": 27.5
+    },
+    {
+      "month": "2024-05",
+      "copper": 10139.0,
+      "gold": 2351.0,
+      "silver": 29.4
+    },
+    {
+      "month": "2024-06",
+      "copper": 9648.0,
+      "gold": 2326.0,
+      "silver": 29.6
+    },
+    {
+      "month": "2024-07",
+      "copper": 9385.0,
+      "gold": 2398.0,
+      "silver": 29.8
+    },
+    {
+      "month": "2024-08",
+      "copper": 8972.0,
+      "gold": 2470.0,
+      "silver": 28.5
+    },
+    {
+      "month": "2024-09",
+      "copper": 9237.0,
+      "gold": 2571.0,
+      "silver": 30.1
+    },
+    {
+      "month": "2024-10",
+      "copper": 9534.0,
+      "gold": 2690.0,
+      "silver": 32.4
+    },
+    {
+      "month": "2024-11",
+      "copper": 9076.0,
+      "gold": 2651.0,
+      "silver": 31.1
+    },
+    {
+      "month": "2024-12",
+      "copper": 8916.0,
+      "gold": 2648.0,
+      "silver": 30.8
+    },
+    {
+      "month": "2025-01",
+      "copper": 8991.0,
+      "gold": 2710.0,
+      "silver": 30.4
+    },
+    {
+      "month": "2025-02",
+      "copper": 9331.0,
+      "gold": 2895.0,
+      "silver": 32.2
+    },
+    {
+      "month": "2025-03",
+      "copper": 9740.0,
+      "gold": 2983.0,
+      "silver": 33.2
+    },
+    {
+      "month": "2025-04",
+      "copper": 9177.0,
+      "gold": 3218.0,
+      "silver": 32.2
+    },
+    {
+      "month": "2025-05",
+      "copper": 9533.0,
+      "gold": 3309.0,
+      "silver": 32.8
+    },
+    {
+      "month": "2025-06",
+      "copper": 9835.0,
+      "gold": 3353.0,
+      "silver": 36.0
+    },
+    {
+      "month": "2025-07",
+      "copper": 9771.0,
+      "gold": 3340.0,
+      "silver": 37.7
+    },
+    {
+      "month": "2025-08",
+      "copper": 9670.0,
+      "gold": 3368.0,
+      "silver": 38.2
+    },
+    {
+      "month": "2025-09",
+      "copper": 9984.0,
+      "gold": 3668.0,
+      "silver": 42.8
+    },
+    {
+      "month": "2025-10",
+      "copper": 10740.0,
+      "gold": 4058.0,
+      "silver": 49.4
+    },
+    {
+      "month": "2025-11",
+      "copper": 10812.0,
+      "gold": 4087.0,
+      "silver": 50.4
+    },
+    {
+      "month": "2025-12",
+      "copper": 11785.0,
+      "gold": 4309.0,
+      "silver": 62.3
+    },
+    {
+      "month": "2026-01",
+      "copper": 13012.0,
+      "gold": 4753.0,
+      "silver": 92.1
+    },
+    {
+      "month": "2026-02",
+      "copper": 12951.0,
+      "gold": 5020.0,
+      "silver": 81.9
+    },
+    {
+      "month": "2026-03",
+      "copper": 12529.0,
+      "gold": 4856.0,
+      "silver": 77.9
+    },
+    {
+      "month": "2026-04",
+      "copper": 12951.0,
+      "gold": 4721.0,
+      "silver": 75.9
+    },
+    {
+      "month": "2026-05",
+      "copper": 13543.0,
+      "gold": 4587.0,
+      "silver": 78.0
+    },
+    {
+      "month": "2026-06",
+      "copper": 13552.0,
+      "gold": 4228.0,
+      "silver": 66.7
+    },
+    {
+      "month": "2026-07",
+      "copper": 13543.0,
+      "gold": 4073.0,
+      "silver": 58.8
+    },
+    {
+      "month": "2026-08",
+      "copper": 14326.0,
+      "gold": 4411.0,
+      "silver": 65.4
+    },
+    {
+      "month": "2026-09",
+      "copper": 14474.0,
+      "gold": 4319.0,
+      "silver": 64.6
+    }
+  ]
+}

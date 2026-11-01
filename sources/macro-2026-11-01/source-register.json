@@ -1,0 +1,42 @@
+[
+  {
+    "id": "ECB01",
+    "url": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+    "retrieved": "2026-11-01",
+    "file": "ecb-policy-rates.md",
+    "note": "Deposit facility rate 2.50%, effective 2026-09-16. Policy rate, not a government bond yield.",
+    "sha256": "8cb18400dd41ce8bf26f27a88fc409fc3909fcc890672d3a7c197b67bd9282bf"
+  },
+  {
+    "id": "FR01",
+    "url": "https://www.insee.fr/en/statistiques/9057140",
+    "retrieved": "2026-11-01",
+    "file": "insee-france-debt-q2-2026.md",
+    "note": "Q2 2026 Maastricht general government debt: EUR 3595.5 billion, 119.0% of GDP. Released 2026-09-29; subject to revision.",
+    "sha256": "63ef150cd288a57c7ce9d4aef2e961cbb205158c46ef3e2394e55021c112fa99"
+  },
+  {
+    "id": "US01",
+    "url": "https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/",
+    "retrieved": "2026-11-01",
+    "file": "treasury-debt-to-the-penny.md",
+    "note": "2026-10-29 total public debt outstanding USD 40593637262883.48; held by public USD 32712190190967.42; intragovernmental USD 7881447071916.06. Stock, not annual deficit or debt/GDP.",
+    "sha256": "ad6e93b894ddc2dd85f62d30585c176b8b427e2c893345388a6fa69665a9ad6b"
+  },
+  {
+    "id": "WBENERGY26",
+    "url": "https://www.worldbank.org/en/news/press-release/2026/10/28/commodity-markets-outlook-october-2026",
+    "retrieved": "2026-11-01",
+    "file": "world-bank-energy-outlook-october-2026.md",
+    "note": "Published 2026-10-28. Energy-price and Brent figures are conditional forecasts; adverse case combines multiple risks, not Iran alone.",
+    "sha256": "4804b47a45427d3e3048a8adc23a7df1a955ac2f694c7a3c09e855e9ca38bb08"
+  },
+  {
+    "id": "IEAOIL26",
+    "url": "https://www.iea.org/reports/oil-market-report-october-2026",
+    "retrieved": "2026-11-01",
+    "file": "iea-oil-market-report-october-2026.md",
+    "note": "Published 2026-10-14. Public report text only; reported market conditions and oil-demand/supply forecasts must be distinguished. No claim of live November battlefield status.",
+    "sha256": "9d9305c0bde40e4cd931b1fa91318a4448e70f027686573c5cdd67c4f005c201"
+  }
+]

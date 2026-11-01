@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "status": "awaiting_prior_run_exports",
+  "prior_run_ids": [],
+  "findings": [],
+  "external_evidence_added": [],
+  "scenario_assumptions_added": [],
+  "perspectives_to_preserve": [],
+  "note": "No prior-run results have been imported. Simulated claims must remain distinguishable from external evidence."
+}

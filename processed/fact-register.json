@@ -1,0 +1,124 @@
+[
+  {
+    "id": "S01",
+    "statement": "Silver mine production was 846.6 Moz in 2025.",
+    "source_id": "SI26",
+    "locator": "PDF p.11 / printed p.9",
+    "status": "historical estimate",
+    "value": 846.6,
+    "unit": "Moz",
+    "period": "2025"
+  },
+  {
+    "id": "S02",
+    "statement": "Silver industrial demand was 657.4 Moz in 2025; total demand was 1130.6 Moz.",
+    "source_id": "SI26",
+    "locator": "PDF p.11 / printed p.9",
+    "status": "historical estimate"
+  },
+  {
+    "id": "S03",
+    "statement": "Silver photovoltaic demand was 186.6 Moz in 2025. The report forecasts 151.0 Moz for 2026.",
+    "source_id": "SI26",
+    "locator": "PDF p.11 / printed p.9",
+    "status": "mixed historical estimate and report forecast"
+  },
+  {
+    "id": "S04",
+    "statement": "The 2025 silver market balance was -40.3 Moz. After subtracting net ETP investment of 278.1 Moz, the balance less ETPs was -318.4 Moz.",
+    "source_id": "SI26",
+    "locator": "PDF p.11 / printed p.9",
+    "status": "historical estimate"
+  },
+  {
+    "id": "S05",
+    "statement": "The 2026 headline silver market balance forecast was -46.3 Moz; balance less ETPs was -76.3 Moz.",
+    "source_id": "SI26",
+    "locator": "PDF p.11 / printed p.9",
+    "status": "forecast as of report publication"
+  },
+  {
+    "id": "S06",
+    "statement": "Silver recycling was estimated at 197.6 Moz in 2025 and forecast at 211.3 Moz for 2026.",
+    "source_id": "SI26",
+    "locator": "PDF p.11 / printed p.9",
+    "status": "mixed historical estimate and report forecast"
+  },
+  {
+    "id": "G01",
+    "statement": "Q2 2026 gold mine production was estimated at 965.6 tonnes; recycling at 326.1 tonnes; net producer hedging at -22.8 tonnes.",
+    "source_id": "WGC26",
+    "locator": "public summary table and supply chapter",
+    "status": "historical estimate"
+  },
+  {
+    "id": "G02",
+    "statement": "Q2 2026 gold total demand including OTC and other was 1268.9 tonnes; technology demand was 80.4 tonnes.",
+    "source_id": "WGC26",
+    "locator": "public summary table",
+    "status": "historical estimate"
+  },
+  {
+    "id": "G03",
+    "statement": "Q2 2026 net gold demand from central banks and other institutions was estimated at 288.9 tonnes, compared with 177.9 tonnes in Q2 2025.",
+    "source_id": "WGC26",
+    "locator": "central-banks chapter table",
+    "status": "historical estimate"
+  },
+  {
+    "id": "U01",
+    "statement": "USGS estimated world silver mine production at 26000 metric tonnes in 2025. Most silver was obtained as a byproduct of lead-zinc, copper and gold mining.",
+    "source_id": "USGS26",
+    "locator": "PDF p.177 / printed p.173",
+    "status": "government estimate"
+  },
+  {
+    "id": "U02",
+    "statement": "USGS estimated world gold mine production at 3300 metric tonnes and copper mine production at 23000 thousand metric tonnes in 2025.",
+    "source_id": "USGS26",
+    "locator": "PDF pp.95 and 77 / printed pp.91 and 73",
+    "status": "government estimate"
+  },
+  {
+    "id": "A01",
+    "statement": "Global data-centre electricity use was estimated at 415 TWh in 2024. The IEA Base Case projects around 945 TWh in 2030 and 1200 TWh in 2035.",
+    "source_id": "IEAAI25",
+    "locator": "PDF p.14",
+    "status": "estimate and conditional Base Case projections"
+  },
+  {
+    "id": "C01",
+    "statement": "In STEPS, copper demand increases by over 25%, adding around 7 million tonnes by 2040.",
+    "source_id": "IEACM26",
+    "locator": "PDF p.114",
+    "status": "conditional scenario projection"
+  },
+  {
+    "id": "I01",
+    "statement": "In Gold We Trust 2026 was authored by Ronald-Peter Stoeferle and Mark J. Valek; Sound Money Capital AG is responsible for content, with Incrementum co-branding.",
+    "source_id": "IGWT26",
+    "locator": "PDF pp.1 and 3",
+    "status": "publication metadata"
+  },
+  {
+    "id": "I02",
+    "statement": "The IGWT silver chapter distinguishes industrial-demand pressure from investment demand and cites a balance including ETP investment. Its positive mining-equity conclusions are author investment views.",
+    "source_id": "IGWT26",
+    "locator": "PDF p.368",
+    "status": "author interpretation, not an observed future outcome"
+  },
+  {
+    "id": "P01",
+    "statement": "World Bank monthly reference prices are available for gold, silver and copper from January 1960 through September 2026 in the archived workbook.",
+    "source_id": "WB01",
+    "locator": "Monthly Prices worksheet",
+    "status": "historical reference dataset"
+  },
+  {
+    "id": "R01",
+    "statement": "DFII10 is a daily 10-year inflation-indexed Treasury market yield quoted in percent. The archived series runs from 2003-01-02 to 2026-10-29.",
+    "source_id": "FRED01",
+    "locator": "series metadata and CSV",
+    "status": "historical market yield dataset"
+  }
+]

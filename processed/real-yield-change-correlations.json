@@ -1,0 +1,30 @@
+{
+  "source_ids": [
+    "WB01",
+    "FRED01"
+  ],
+  "method": "Pearson correlation: monthly simple metal price change vs change in monthly mean DFII10 yield, in percentage points. Descriptive; not causal; no trading backtest.",
+  "results": [
+    {
+      "metal": "gold",
+      "months": 284,
+      "first": "2003-02",
+      "last": "2026-09",
+      "correlation": -0.457203168509759
+    },
+    {
+      "metal": "silver",
+      "months": 284,
+      "first": "2003-02",
+      "last": "2026-09",
+      "correlation": -0.31546247552875273
+    },
+    {
+      "metal": "copper",
+      "months": 284,
+      "first": "2003-02",
+      "last": "2026-09",
+      "correlation": -0.12743697854326136
+    }
+  ]
+}

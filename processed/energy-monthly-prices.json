@@ -1,0 +1,6432 @@
+{
+  "source_id": "WB01",
+  "source_file": "raw/world-bank-monthly-2026-10.xlsx",
+  "source_sheet": "Monthly Prices",
+  "source_updated": "Updated on October 02, 2026",
+  "retrieved": "2026-11-01",
+  "units": {
+    "brent_usd_per_barrel": "($/bbl)",
+    "wti_usd_per_barrel": "($/bbl)",
+    "us_gas_usd_per_mmbtu": "($/mmbtu)",
+    "europe_gas_usd_per_mmbtu": "($/mmbtu)",
+    "japan_lng_usd_per_mmbtu": "($/mmbtu)"
+  },
+  "missing_observations": {
+    "brent_usd_per_barrel": 0,
+    "wti_usd_per_barrel": 264,
+    "us_gas_usd_per_mmbtu": 0,
+    "europe_gas_usd_per_mmbtu": 0,
+    "japan_lng_usd_per_mmbtu": 204
+  },
+  "observations": [
+    {
+      "month": "1960-01",
+      "brent_usd_per_barrel": 1.6,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.14,
+      "europe_gas_usd_per_mmbtu": 0.4,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1960-02",
+      "brent_usd_per_barrel": 1.6,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.14,
+      "europe_gas_usd_per_mmbtu": 0.4,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1960-03",
+      "brent_usd_per_barrel": 1.6,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.14,
+      "europe_gas_usd_per_mmbtu": 0.4,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1960-04",
+      "brent_usd_per_barrel": 1.6,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.14,
+      "europe_gas_usd_per_mmbtu": 0.4,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1960-05",
+      "brent_usd_per_barrel": 1.6,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.14,
+      "europe_gas_usd_per_mmbtu": 0.4,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1960-06",
+      "brent_usd_per_barrel": 1.6,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.14,
+      "europe_gas_usd_per_mmbtu": 0.4,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1960-07",
+      "brent_usd_per_barrel": 1.6,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.14,
+      "europe_gas_usd_per_mmbtu": 0.4,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1960-08",
+      "brent_usd_per_barrel": 1.6,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.14,
+      "europe_gas_usd_per_mmbtu": 0.4,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1960-09",
+      "brent_usd_per_barrel": 1.6,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.14,
+      "europe_gas_usd_per_mmbtu": 0.4,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1960-10",
+      "brent_usd_per_barrel": 1.6,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.14,
+      "europe_gas_usd_per_mmbtu": 0.4,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1960-11",
+      "brent_usd_per_barrel": 1.6,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.14,
+      "europe_gas_usd_per_mmbtu": 0.4,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1960-12",
+      "brent_usd_per_barrel": 1.6,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.14,
+      "europe_gas_usd_per_mmbtu": 0.4,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1961-01",
+      "brent_usd_per_barrel": 1.6,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.15,
+      "europe_gas_usd_per_mmbtu": 0.4,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1961-02",
+      "brent_usd_per_barrel": 1.6,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.15,
+      "europe_gas_usd_per_mmbtu": 0.4,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1961-03",
+      "brent_usd_per_barrel": 1.6,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.15,
+      "europe_gas_usd_per_mmbtu": 0.4,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1961-04",
+      "brent_usd_per_barrel": 1.6,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.15,
+      "europe_gas_usd_per_mmbtu": 0.4,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1961-05",
+      "brent_usd_per_barrel": 1.6,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.15,
+      "europe_gas_usd_per_mmbtu": 0.4,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1961-06",
+      "brent_usd_per_barrel": 1.6,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.15,
+      "europe_gas_usd_per_mmbtu": 0.4,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1961-07",
+      "brent_usd_per_barrel": 1.6,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.15,
+      "europe_gas_usd_per_mmbtu": 0.4,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1961-08",
+      "brent_usd_per_barrel": 1.6,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.15,
+      "europe_gas_usd_per_mmbtu": 0.4,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1961-09",
+      "brent_usd_per_barrel": 1.6,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.15,
+      "europe_gas_usd_per_mmbtu": 0.4,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1961-10",
+      "brent_usd_per_barrel": 1.6,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.15,
+      "europe_gas_usd_per_mmbtu": 0.4,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1961-11",
+      "brent_usd_per_barrel": 1.6,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.15,
+      "europe_gas_usd_per_mmbtu": 0.4,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1961-12",
+      "brent_usd_per_barrel": 1.6,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.15,
+      "europe_gas_usd_per_mmbtu": 0.4,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1962-01",
+      "brent_usd_per_barrel": 1.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.4,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1962-02",
+      "brent_usd_per_barrel": 1.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.4,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1962-03",
+      "brent_usd_per_barrel": 1.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.4,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1962-04",
+      "brent_usd_per_barrel": 1.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.4,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1962-05",
+      "brent_usd_per_barrel": 1.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.4,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1962-06",
+      "brent_usd_per_barrel": 1.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.4,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1962-07",
+      "brent_usd_per_barrel": 1.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.4,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1962-08",
+      "brent_usd_per_barrel": 1.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.4,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1962-09",
+      "brent_usd_per_barrel": 1.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.4,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1962-10",
+      "brent_usd_per_barrel": 1.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.4,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1962-11",
+      "brent_usd_per_barrel": 1.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.4,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1962-12",
+      "brent_usd_per_barrel": 1.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.4,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1963-01",
+      "brent_usd_per_barrel": 1.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.39,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1963-02",
+      "brent_usd_per_barrel": 1.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.39,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1963-03",
+      "brent_usd_per_barrel": 1.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.39,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1963-04",
+      "brent_usd_per_barrel": 1.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.39,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1963-05",
+      "brent_usd_per_barrel": 1.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.39,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1963-06",
+      "brent_usd_per_barrel": 1.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.39,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1963-07",
+      "brent_usd_per_barrel": 1.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.39,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1963-08",
+      "brent_usd_per_barrel": 1.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.39,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1963-09",
+      "brent_usd_per_barrel": 1.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.39,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1963-10",
+      "brent_usd_per_barrel": 1.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.39,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1963-11",
+      "brent_usd_per_barrel": 1.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.39,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1963-12",
+      "brent_usd_per_barrel": 1.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.39,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1964-01",
+      "brent_usd_per_barrel": 1.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.15,
+      "europe_gas_usd_per_mmbtu": 0.38,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1964-02",
+      "brent_usd_per_barrel": 1.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.15,
+      "europe_gas_usd_per_mmbtu": 0.38,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1964-03",
+      "brent_usd_per_barrel": 1.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.15,
+      "europe_gas_usd_per_mmbtu": 0.38,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1964-04",
+      "brent_usd_per_barrel": 1.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.15,
+      "europe_gas_usd_per_mmbtu": 0.38,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1964-05",
+      "brent_usd_per_barrel": 1.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.15,
+      "europe_gas_usd_per_mmbtu": 0.38,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1964-06",
+      "brent_usd_per_barrel": 1.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.15,
+      "europe_gas_usd_per_mmbtu": 0.38,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1964-07",
+      "brent_usd_per_barrel": 1.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.15,
+      "europe_gas_usd_per_mmbtu": 0.38,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1964-08",
+      "brent_usd_per_barrel": 1.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.15,
+      "europe_gas_usd_per_mmbtu": 0.38,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1964-09",
+      "brent_usd_per_barrel": 1.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.15,
+      "europe_gas_usd_per_mmbtu": 0.38,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1964-10",
+      "brent_usd_per_barrel": 1.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.15,
+      "europe_gas_usd_per_mmbtu": 0.38,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1964-11",
+      "brent_usd_per_barrel": 1.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.15,
+      "europe_gas_usd_per_mmbtu": 0.38,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1964-12",
+      "brent_usd_per_barrel": 1.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.15,
+      "europe_gas_usd_per_mmbtu": 0.38,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1965-01",
+      "brent_usd_per_barrel": 1.4,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.41,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1965-02",
+      "brent_usd_per_barrel": 1.4,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.41,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1965-03",
+      "brent_usd_per_barrel": 1.4,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.41,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1965-04",
+      "brent_usd_per_barrel": 1.4,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.41,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1965-05",
+      "brent_usd_per_barrel": 1.4,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.41,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1965-06",
+      "brent_usd_per_barrel": 1.4,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.41,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1965-07",
+      "brent_usd_per_barrel": 1.4,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.41,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1965-08",
+      "brent_usd_per_barrel": 1.4,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.41,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1965-09",
+      "brent_usd_per_barrel": 1.4,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.41,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1965-10",
+      "brent_usd_per_barrel": 1.4,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.41,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1965-11",
+      "brent_usd_per_barrel": 1.4,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.41,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1965-12",
+      "brent_usd_per_barrel": 1.4,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.41,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1966-01",
+      "brent_usd_per_barrel": 1.4,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.42,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1966-02",
+      "brent_usd_per_barrel": 1.4,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.42,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1966-03",
+      "brent_usd_per_barrel": 1.4,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.42,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1966-04",
+      "brent_usd_per_barrel": 1.4,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.42,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1966-05",
+      "brent_usd_per_barrel": 1.4,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.42,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1966-06",
+      "brent_usd_per_barrel": 1.4,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.42,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1966-07",
+      "brent_usd_per_barrel": 1.4,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.42,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1966-08",
+      "brent_usd_per_barrel": 1.4,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.42,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1966-09",
+      "brent_usd_per_barrel": 1.4,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.42,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1966-10",
+      "brent_usd_per_barrel": 1.4,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.42,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1966-11",
+      "brent_usd_per_barrel": 1.4,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.42,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1966-12",
+      "brent_usd_per_barrel": 1.4,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.42,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1967-01",
+      "brent_usd_per_barrel": 1.3,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.46,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1967-02",
+      "brent_usd_per_barrel": 1.3,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.46,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1967-03",
+      "brent_usd_per_barrel": 1.3,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.46,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1967-04",
+      "brent_usd_per_barrel": 1.3,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.46,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1967-05",
+      "brent_usd_per_barrel": 1.3,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.46,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1967-06",
+      "brent_usd_per_barrel": 1.3,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.46,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1967-07",
+      "brent_usd_per_barrel": 1.3,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.46,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1967-08",
+      "brent_usd_per_barrel": 1.3,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.46,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1967-09",
+      "brent_usd_per_barrel": 1.3,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.46,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1967-10",
+      "brent_usd_per_barrel": 1.3,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.46,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1967-11",
+      "brent_usd_per_barrel": 1.3,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.46,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1967-12",
+      "brent_usd_per_barrel": 1.3,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.46,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1968-01",
+      "brent_usd_per_barrel": 1.3,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.45,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1968-02",
+      "brent_usd_per_barrel": 1.3,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.45,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1968-03",
+      "brent_usd_per_barrel": 1.3,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.45,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1968-04",
+      "brent_usd_per_barrel": 1.3,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.45,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1968-05",
+      "brent_usd_per_barrel": 1.3,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.45,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1968-06",
+      "brent_usd_per_barrel": 1.3,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.45,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1968-07",
+      "brent_usd_per_barrel": 1.3,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.45,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1968-08",
+      "brent_usd_per_barrel": 1.3,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.45,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1968-09",
+      "brent_usd_per_barrel": 1.3,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.45,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1968-10",
+      "brent_usd_per_barrel": 1.3,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.45,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1968-11",
+      "brent_usd_per_barrel": 1.3,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.45,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1968-12",
+      "brent_usd_per_barrel": 1.3,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.16,
+      "europe_gas_usd_per_mmbtu": 0.45,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1969-01",
+      "brent_usd_per_barrel": 1.3,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.17,
+      "europe_gas_usd_per_mmbtu": 0.45,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1969-02",
+      "brent_usd_per_barrel": 1.3,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.17,
+      "europe_gas_usd_per_mmbtu": 0.45,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1969-03",
+      "brent_usd_per_barrel": 1.3,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.17,
+      "europe_gas_usd_per_mmbtu": 0.45,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1969-04",
+      "brent_usd_per_barrel": 1.3,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.17,
+      "europe_gas_usd_per_mmbtu": 0.45,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1969-05",
+      "brent_usd_per_barrel": 1.3,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.17,
+      "europe_gas_usd_per_mmbtu": 0.45,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1969-06",
+      "brent_usd_per_barrel": 1.3,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.17,
+      "europe_gas_usd_per_mmbtu": 0.45,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1969-07",
+      "brent_usd_per_barrel": 1.3,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.17,
+      "europe_gas_usd_per_mmbtu": 0.45,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1969-08",
+      "brent_usd_per_barrel": 1.3,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.17,
+      "europe_gas_usd_per_mmbtu": 0.45,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1969-09",
+      "brent_usd_per_barrel": 1.3,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.17,
+      "europe_gas_usd_per_mmbtu": 0.45,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1969-10",
+      "brent_usd_per_barrel": 1.3,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.17,
+      "europe_gas_usd_per_mmbtu": 0.45,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1969-11",
+      "brent_usd_per_barrel": 1.3,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.17,
+      "europe_gas_usd_per_mmbtu": 0.45,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1969-12",
+      "brent_usd_per_barrel": 1.3,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.17,
+      "europe_gas_usd_per_mmbtu": 0.45,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1970-01",
+      "brent_usd_per_barrel": 1.2,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.17,
+      "europe_gas_usd_per_mmbtu": 0.45,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1970-02",
+      "brent_usd_per_barrel": 1.2,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.17,
+      "europe_gas_usd_per_mmbtu": 0.45,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1970-03",
+      "brent_usd_per_barrel": 1.2,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.17,
+      "europe_gas_usd_per_mmbtu": 0.45,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1970-04",
+      "brent_usd_per_barrel": 1.2,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.17,
+      "europe_gas_usd_per_mmbtu": 0.45,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1970-05",
+      "brent_usd_per_barrel": 1.2,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.17,
+      "europe_gas_usd_per_mmbtu": 0.45,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1970-06",
+      "brent_usd_per_barrel": 1.2,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.17,
+      "europe_gas_usd_per_mmbtu": 0.45,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1970-07",
+      "brent_usd_per_barrel": 1.2,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.17,
+      "europe_gas_usd_per_mmbtu": 0.45,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1970-08",
+      "brent_usd_per_barrel": 1.2,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.17,
+      "europe_gas_usd_per_mmbtu": 0.45,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1970-09",
+      "brent_usd_per_barrel": 1.2,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.17,
+      "europe_gas_usd_per_mmbtu": 0.45,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1970-10",
+      "brent_usd_per_barrel": 1.2,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.17,
+      "europe_gas_usd_per_mmbtu": 0.45,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1970-11",
+      "brent_usd_per_barrel": 1.2,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.17,
+      "europe_gas_usd_per_mmbtu": 0.45,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1970-12",
+      "brent_usd_per_barrel": 1.2,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.17,
+      "europe_gas_usd_per_mmbtu": 0.45,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1971-01",
+      "brent_usd_per_barrel": 1.6,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.18,
+      "europe_gas_usd_per_mmbtu": 0.5,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1971-02",
+      "brent_usd_per_barrel": 1.6,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.18,
+      "europe_gas_usd_per_mmbtu": 0.5,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1971-03",
+      "brent_usd_per_barrel": 1.6,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.18,
+      "europe_gas_usd_per_mmbtu": 0.5,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1971-04",
+      "brent_usd_per_barrel": 1.6,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.18,
+      "europe_gas_usd_per_mmbtu": 0.5,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1971-05",
+      "brent_usd_per_barrel": 1.6,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.18,
+      "europe_gas_usd_per_mmbtu": 0.5,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1971-06",
+      "brent_usd_per_barrel": 1.6,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.18,
+      "europe_gas_usd_per_mmbtu": 0.5,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1971-07",
+      "brent_usd_per_barrel": 1.7,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.18,
+      "europe_gas_usd_per_mmbtu": 0.5,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1971-08",
+      "brent_usd_per_barrel": 1.7,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.18,
+      "europe_gas_usd_per_mmbtu": 0.5,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1971-09",
+      "brent_usd_per_barrel": 1.7,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.18,
+      "europe_gas_usd_per_mmbtu": 0.5,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1971-10",
+      "brent_usd_per_barrel": 1.7,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.18,
+      "europe_gas_usd_per_mmbtu": 0.5,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1971-11",
+      "brent_usd_per_barrel": 1.7,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.18,
+      "europe_gas_usd_per_mmbtu": 0.5,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1971-12",
+      "brent_usd_per_barrel": 1.7,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.18,
+      "europe_gas_usd_per_mmbtu": 0.5,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1972-01",
+      "brent_usd_per_barrel": 1.8,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.19,
+      "europe_gas_usd_per_mmbtu": 0.54,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1972-02",
+      "brent_usd_per_barrel": 1.8,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.19,
+      "europe_gas_usd_per_mmbtu": 0.54,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1972-03",
+      "brent_usd_per_barrel": 1.8,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.19,
+      "europe_gas_usd_per_mmbtu": 0.54,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1972-04",
+      "brent_usd_per_barrel": 1.8,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.19,
+      "europe_gas_usd_per_mmbtu": 0.54,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1972-05",
+      "brent_usd_per_barrel": 1.8,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.19,
+      "europe_gas_usd_per_mmbtu": 0.54,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1972-06",
+      "brent_usd_per_barrel": 1.8,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.19,
+      "europe_gas_usd_per_mmbtu": 0.54,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1972-07",
+      "brent_usd_per_barrel": 1.9,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.19,
+      "europe_gas_usd_per_mmbtu": 0.54,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1972-08",
+      "brent_usd_per_barrel": 1.9,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.19,
+      "europe_gas_usd_per_mmbtu": 0.54,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1972-09",
+      "brent_usd_per_barrel": 1.9,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.19,
+      "europe_gas_usd_per_mmbtu": 0.54,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1972-10",
+      "brent_usd_per_barrel": 1.9,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.19,
+      "europe_gas_usd_per_mmbtu": 0.54,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1972-11",
+      "brent_usd_per_barrel": 1.9,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.19,
+      "europe_gas_usd_per_mmbtu": 0.54,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1972-12",
+      "brent_usd_per_barrel": 1.9,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.19,
+      "europe_gas_usd_per_mmbtu": 0.54,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1973-01",
+      "brent_usd_per_barrel": 2.1,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.21,
+      "europe_gas_usd_per_mmbtu": 0.69,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1973-02",
+      "brent_usd_per_barrel": 2.1,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.21,
+      "europe_gas_usd_per_mmbtu": 0.69,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1973-03",
+      "brent_usd_per_barrel": 2.1,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.21,
+      "europe_gas_usd_per_mmbtu": 0.69,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1973-04",
+      "brent_usd_per_barrel": 2.4,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.21,
+      "europe_gas_usd_per_mmbtu": 0.69,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1973-05",
+      "brent_usd_per_barrel": 2.4,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.21,
+      "europe_gas_usd_per_mmbtu": 0.69,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1973-06",
+      "brent_usd_per_barrel": 2.4,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.21,
+      "europe_gas_usd_per_mmbtu": 0.69,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1973-07",
+      "brent_usd_per_barrel": 2.7,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.21,
+      "europe_gas_usd_per_mmbtu": 0.69,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1973-08",
+      "brent_usd_per_barrel": 2.7,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.21,
+      "europe_gas_usd_per_mmbtu": 0.69,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1973-09",
+      "brent_usd_per_barrel": 2.7,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.21,
+      "europe_gas_usd_per_mmbtu": 0.69,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1973-10",
+      "brent_usd_per_barrel": 4.1,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.21,
+      "europe_gas_usd_per_mmbtu": 0.69,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1973-11",
+      "brent_usd_per_barrel": 4.1,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.21,
+      "europe_gas_usd_per_mmbtu": 0.69,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1973-12",
+      "brent_usd_per_barrel": 4.1,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.21,
+      "europe_gas_usd_per_mmbtu": 0.69,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1974-01",
+      "brent_usd_per_barrel": 13.0,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.29,
+      "europe_gas_usd_per_mmbtu": 1.73,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1974-02",
+      "brent_usd_per_barrel": 13.0,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.29,
+      "europe_gas_usd_per_mmbtu": 1.73,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1974-03",
+      "brent_usd_per_barrel": 13.0,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.29,
+      "europe_gas_usd_per_mmbtu": 1.73,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1974-04",
+      "brent_usd_per_barrel": 10.6,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.29,
+      "europe_gas_usd_per_mmbtu": 1.73,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1974-05",
+      "brent_usd_per_barrel": 10.6,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.29,
+      "europe_gas_usd_per_mmbtu": 1.73,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1974-06",
+      "brent_usd_per_barrel": 10.6,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.29,
+      "europe_gas_usd_per_mmbtu": 1.73,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1974-07",
+      "brent_usd_per_barrel": 10.0,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.29,
+      "europe_gas_usd_per_mmbtu": 1.73,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1974-08",
+      "brent_usd_per_barrel": 10.0,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.29,
+      "europe_gas_usd_per_mmbtu": 1.73,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1974-09",
+      "brent_usd_per_barrel": 10.0,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.29,
+      "europe_gas_usd_per_mmbtu": 1.73,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1974-10",
+      "brent_usd_per_barrel": 10.3,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.29,
+      "europe_gas_usd_per_mmbtu": 1.73,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1974-11",
+      "brent_usd_per_barrel": 10.3,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.29,
+      "europe_gas_usd_per_mmbtu": 1.73,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1974-12",
+      "brent_usd_per_barrel": 10.3,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.29,
+      "europe_gas_usd_per_mmbtu": 1.73,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1975-01",
+      "brent_usd_per_barrel": 10.4,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.43,
+      "europe_gas_usd_per_mmbtu": 1.68,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1975-02",
+      "brent_usd_per_barrel": 10.4,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.43,
+      "europe_gas_usd_per_mmbtu": 1.68,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1975-03",
+      "brent_usd_per_barrel": 10.4,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.43,
+      "europe_gas_usd_per_mmbtu": 1.68,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1975-04",
+      "brent_usd_per_barrel": 10.4,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.43,
+      "europe_gas_usd_per_mmbtu": 1.68,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1975-05",
+      "brent_usd_per_barrel": 10.4,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.43,
+      "europe_gas_usd_per_mmbtu": 1.68,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1975-06",
+      "brent_usd_per_barrel": 10.4,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.43,
+      "europe_gas_usd_per_mmbtu": 1.68,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1975-07",
+      "brent_usd_per_barrel": 10.4,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.43,
+      "europe_gas_usd_per_mmbtu": 1.68,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1975-08",
+      "brent_usd_per_barrel": 10.4,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.43,
+      "europe_gas_usd_per_mmbtu": 1.68,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1975-09",
+      "brent_usd_per_barrel": 10.4,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.43,
+      "europe_gas_usd_per_mmbtu": 1.68,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1975-10",
+      "brent_usd_per_barrel": 10.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.43,
+      "europe_gas_usd_per_mmbtu": 1.68,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1975-11",
+      "brent_usd_per_barrel": 10.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.43,
+      "europe_gas_usd_per_mmbtu": 1.68,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1975-12",
+      "brent_usd_per_barrel": 10.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.43,
+      "europe_gas_usd_per_mmbtu": 1.68,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1976-01",
+      "brent_usd_per_barrel": 11.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.54,
+      "europe_gas_usd_per_mmbtu": 1.74,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1976-02",
+      "brent_usd_per_barrel": 11.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.54,
+      "europe_gas_usd_per_mmbtu": 1.74,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1976-03",
+      "brent_usd_per_barrel": 11.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.54,
+      "europe_gas_usd_per_mmbtu": 1.74,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1976-04",
+      "brent_usd_per_barrel": 11.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.55,
+      "europe_gas_usd_per_mmbtu": 1.74,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1976-05",
+      "brent_usd_per_barrel": 11.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.55,
+      "europe_gas_usd_per_mmbtu": 1.74,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1976-06",
+      "brent_usd_per_barrel": 11.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.58,
+      "europe_gas_usd_per_mmbtu": 1.74,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1976-07",
+      "brent_usd_per_barrel": 11.6,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.58,
+      "europe_gas_usd_per_mmbtu": 1.74,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1976-08",
+      "brent_usd_per_barrel": 11.6,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.6,
+      "europe_gas_usd_per_mmbtu": 1.74,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1976-09",
+      "brent_usd_per_barrel": 11.6,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.6,
+      "europe_gas_usd_per_mmbtu": 1.74,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1976-10",
+      "brent_usd_per_barrel": 11.9,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.62,
+      "europe_gas_usd_per_mmbtu": 1.74,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1976-11",
+      "brent_usd_per_barrel": 11.9,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.63,
+      "europe_gas_usd_per_mmbtu": 1.74,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1976-12",
+      "brent_usd_per_barrel": 11.9,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.64,
+      "europe_gas_usd_per_mmbtu": 1.74,
+      "japan_lng_usd_per_mmbtu": null
+    },
+    {
+      "month": "1977-01",
+      "brent_usd_per_barrel": 12.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.67,
+      "europe_gas_usd_per_mmbtu": 1.79,
+      "japan_lng_usd_per_mmbtu": 2.77
+    },
+    {
+      "month": "1977-02",
+      "brent_usd_per_barrel": 12.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.71,
+      "europe_gas_usd_per_mmbtu": 1.79,
+      "japan_lng_usd_per_mmbtu": 2.77
+    },
+    {
+      "month": "1977-03",
+      "brent_usd_per_barrel": 12.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.75,
+      "europe_gas_usd_per_mmbtu": 1.79,
+      "japan_lng_usd_per_mmbtu": 2.77
+    },
+    {
+      "month": "1977-04",
+      "brent_usd_per_barrel": 12.4,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.77,
+      "europe_gas_usd_per_mmbtu": 1.79,
+      "japan_lng_usd_per_mmbtu": 2.77
+    },
+    {
+      "month": "1977-05",
+      "brent_usd_per_barrel": 12.4,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.77,
+      "europe_gas_usd_per_mmbtu": 1.79,
+      "japan_lng_usd_per_mmbtu": 2.77
+    },
+    {
+      "month": "1977-06",
+      "brent_usd_per_barrel": 12.4,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.82,
+      "europe_gas_usd_per_mmbtu": 1.79,
+      "japan_lng_usd_per_mmbtu": 2.77
+    },
+    {
+      "month": "1977-07",
+      "brent_usd_per_barrel": 12.6,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.83,
+      "europe_gas_usd_per_mmbtu": 1.79,
+      "japan_lng_usd_per_mmbtu": 2.77
+    },
+    {
+      "month": "1977-08",
+      "brent_usd_per_barrel": 12.6,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.82,
+      "europe_gas_usd_per_mmbtu": 1.79,
+      "japan_lng_usd_per_mmbtu": 2.77
+    },
+    {
+      "month": "1977-09",
+      "brent_usd_per_barrel": 12.6,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.83,
+      "europe_gas_usd_per_mmbtu": 1.79,
+      "japan_lng_usd_per_mmbtu": 2.77
+    },
+    {
+      "month": "1977-10",
+      "brent_usd_per_barrel": 12.7,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.84,
+      "europe_gas_usd_per_mmbtu": 1.79,
+      "japan_lng_usd_per_mmbtu": 2.77
+    },
+    {
+      "month": "1977-11",
+      "brent_usd_per_barrel": 12.7,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.83,
+      "europe_gas_usd_per_mmbtu": 1.79,
+      "japan_lng_usd_per_mmbtu": 2.77
+    },
+    {
+      "month": "1977-12",
+      "brent_usd_per_barrel": 12.7,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.84,
+      "europe_gas_usd_per_mmbtu": 1.79,
+      "japan_lng_usd_per_mmbtu": 2.77
+    },
+    {
+      "month": "1978-01",
+      "brent_usd_per_barrel": 12.7,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.87,
+      "europe_gas_usd_per_mmbtu": 2.3,
+      "japan_lng_usd_per_mmbtu": 3.04
+    },
+    {
+      "month": "1978-02",
+      "brent_usd_per_barrel": 12.7,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.88,
+      "europe_gas_usd_per_mmbtu": 2.3,
+      "japan_lng_usd_per_mmbtu": 3.04
+    },
+    {
+      "month": "1978-03",
+      "brent_usd_per_barrel": 12.7,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.89,
+      "europe_gas_usd_per_mmbtu": 2.3,
+      "japan_lng_usd_per_mmbtu": 3.04
+    },
+    {
+      "month": "1978-04",
+      "brent_usd_per_barrel": 12.7,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.88,
+      "europe_gas_usd_per_mmbtu": 2.3,
+      "japan_lng_usd_per_mmbtu": 3.04
+    },
+    {
+      "month": "1978-05",
+      "brent_usd_per_barrel": 12.7,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.91,
+      "europe_gas_usd_per_mmbtu": 2.3,
+      "japan_lng_usd_per_mmbtu": 3.04
+    },
+    {
+      "month": "1978-06",
+      "brent_usd_per_barrel": 12.7,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.91,
+      "europe_gas_usd_per_mmbtu": 2.3,
+      "japan_lng_usd_per_mmbtu": 3.04
+    },
+    {
+      "month": "1978-07",
+      "brent_usd_per_barrel": 12.8,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.89,
+      "europe_gas_usd_per_mmbtu": 2.3,
+      "japan_lng_usd_per_mmbtu": 3.04
+    },
+    {
+      "month": "1978-08",
+      "brent_usd_per_barrel": 12.8,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.91,
+      "europe_gas_usd_per_mmbtu": 2.3,
+      "japan_lng_usd_per_mmbtu": 3.04
+    },
+    {
+      "month": "1978-09",
+      "brent_usd_per_barrel": 12.8,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.92,
+      "europe_gas_usd_per_mmbtu": 2.3,
+      "japan_lng_usd_per_mmbtu": 3.04
+    },
+    {
+      "month": "1978-10",
+      "brent_usd_per_barrel": 12.9,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.92,
+      "europe_gas_usd_per_mmbtu": 2.3,
+      "japan_lng_usd_per_mmbtu": 3.04
+    },
+    {
+      "month": "1978-11",
+      "brent_usd_per_barrel": 13.2,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.93,
+      "europe_gas_usd_per_mmbtu": 2.3,
+      "japan_lng_usd_per_mmbtu": 3.04
+    },
+    {
+      "month": "1978-12",
+      "brent_usd_per_barrel": 14.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 0.96,
+      "europe_gas_usd_per_mmbtu": 2.3,
+      "japan_lng_usd_per_mmbtu": 3.04
+    },
+    {
+      "month": "1979-01",
+      "brent_usd_per_barrel": 19.0,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 1.02,
+      "europe_gas_usd_per_mmbtu": 3.26,
+      "japan_lng_usd_per_mmbtu": 3.69
+    },
+    {
+      "month": "1979-02",
+      "brent_usd_per_barrel": 22.0,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 1.05,
+      "europe_gas_usd_per_mmbtu": 3.26,
+      "japan_lng_usd_per_mmbtu": 3.69
+    },
+    {
+      "month": "1979-03",
+      "brent_usd_per_barrel": 23.3,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 1.1,
+      "europe_gas_usd_per_mmbtu": 3.26,
+      "japan_lng_usd_per_mmbtu": 3.69
+    },
+    {
+      "month": "1979-04",
+      "brent_usd_per_barrel": 23.6,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 1.11,
+      "europe_gas_usd_per_mmbtu": 3.26,
+      "japan_lng_usd_per_mmbtu": 3.69
+    },
+    {
+      "month": "1979-05",
+      "brent_usd_per_barrel": 32.8,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 1.15,
+      "europe_gas_usd_per_mmbtu": 3.26,
+      "japan_lng_usd_per_mmbtu": 3.69
+    },
+    {
+      "month": "1979-06",
+      "brent_usd_per_barrel": 36.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 1.17,
+      "europe_gas_usd_per_mmbtu": 3.26,
+      "japan_lng_usd_per_mmbtu": 3.69
+    },
+    {
+      "month": "1979-07",
+      "brent_usd_per_barrel": 35.0,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 1.2,
+      "europe_gas_usd_per_mmbtu": 3.26,
+      "japan_lng_usd_per_mmbtu": 3.69
+    },
+    {
+      "month": "1979-08",
+      "brent_usd_per_barrel": 35.8,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 1.24,
+      "europe_gas_usd_per_mmbtu": 3.26,
+      "japan_lng_usd_per_mmbtu": 3.69
+    },
+    {
+      "month": "1979-09",
+      "brent_usd_per_barrel": 36.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 1.24,
+      "europe_gas_usd_per_mmbtu": 3.26,
+      "japan_lng_usd_per_mmbtu": 3.69
+    },
+    {
+      "month": "1979-10",
+      "brent_usd_per_barrel": 38.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 1.28,
+      "europe_gas_usd_per_mmbtu": 3.26,
+      "japan_lng_usd_per_mmbtu": 3.69
+    },
+    {
+      "month": "1979-11",
+      "brent_usd_per_barrel": 42.0,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 1.29,
+      "europe_gas_usd_per_mmbtu": 3.26,
+      "japan_lng_usd_per_mmbtu": 3.69
+    },
+    {
+      "month": "1979-12",
+      "brent_usd_per_barrel": 40.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 1.31,
+      "europe_gas_usd_per_mmbtu": 3.26,
+      "japan_lng_usd_per_mmbtu": 3.69
+    },
+    {
+      "month": "1980-01",
+      "brent_usd_per_barrel": 40.0,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 1.37,
+      "europe_gas_usd_per_mmbtu": 4.22,
+      "japan_lng_usd_per_mmbtu": 5.7
+    },
+    {
+      "month": "1980-02",
+      "brent_usd_per_barrel": 38.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 1.42,
+      "europe_gas_usd_per_mmbtu": 4.22,
+      "japan_lng_usd_per_mmbtu": 5.7
+    },
+    {
+      "month": "1980-03",
+      "brent_usd_per_barrel": 38.3,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 1.46,
+      "europe_gas_usd_per_mmbtu": 4.22,
+      "japan_lng_usd_per_mmbtu": 5.7
+    },
+    {
+      "month": "1980-04",
+      "brent_usd_per_barrel": 38.2,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 1.51,
+      "europe_gas_usd_per_mmbtu": 4.22,
+      "japan_lng_usd_per_mmbtu": 5.7
+    },
+    {
+      "month": "1980-05",
+      "brent_usd_per_barrel": 38.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 1.56,
+      "europe_gas_usd_per_mmbtu": 4.22,
+      "japan_lng_usd_per_mmbtu": 5.7
+    },
+    {
+      "month": "1980-06",
+      "brent_usd_per_barrel": 38.0,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 1.57,
+      "europe_gas_usd_per_mmbtu": 4.22,
+      "japan_lng_usd_per_mmbtu": 5.7
+    },
+    {
+      "month": "1980-07",
+      "brent_usd_per_barrel": 37.4,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 1.64,
+      "europe_gas_usd_per_mmbtu": 4.22,
+      "japan_lng_usd_per_mmbtu": 5.7
+    },
+    {
+      "month": "1980-08",
+      "brent_usd_per_barrel": 33.6,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 1.64,
+      "europe_gas_usd_per_mmbtu": 4.22,
+      "japan_lng_usd_per_mmbtu": 5.7
+    },
+    {
+      "month": "1980-09",
+      "brent_usd_per_barrel": 33.4,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 1.69,
+      "europe_gas_usd_per_mmbtu": 4.22,
+      "japan_lng_usd_per_mmbtu": 5.7
+    },
+    {
+      "month": "1980-10",
+      "brent_usd_per_barrel": 37.9,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 1.71,
+      "europe_gas_usd_per_mmbtu": 4.22,
+      "japan_lng_usd_per_mmbtu": 5.7
+    },
+    {
+      "month": "1980-11",
+      "brent_usd_per_barrel": 40.8,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 1.76,
+      "europe_gas_usd_per_mmbtu": 4.22,
+      "japan_lng_usd_per_mmbtu": 5.7
+    },
+    {
+      "month": "1980-12",
+      "brent_usd_per_barrel": 40.2,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 1.74,
+      "europe_gas_usd_per_mmbtu": 4.22,
+      "japan_lng_usd_per_mmbtu": 5.7
+    },
+    {
+      "month": "1981-01",
+      "brent_usd_per_barrel": 40.3,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 1.77,
+      "europe_gas_usd_per_mmbtu": 4.6,
+      "japan_lng_usd_per_mmbtu": 6.03
+    },
+    {
+      "month": "1981-02",
+      "brent_usd_per_barrel": 38.7,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 1.81,
+      "europe_gas_usd_per_mmbtu": 4.6,
+      "japan_lng_usd_per_mmbtu": 6.03
+    },
+    {
+      "month": "1981-03",
+      "brent_usd_per_barrel": 38.3,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 1.86,
+      "europe_gas_usd_per_mmbtu": 4.6,
+      "japan_lng_usd_per_mmbtu": 6.03
+    },
+    {
+      "month": "1981-04",
+      "brent_usd_per_barrel": 37.2,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 1.93,
+      "europe_gas_usd_per_mmbtu": 4.6,
+      "japan_lng_usd_per_mmbtu": 6.03
+    },
+    {
+      "month": "1981-05",
+      "brent_usd_per_barrel": 35.2,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 1.95,
+      "europe_gas_usd_per_mmbtu": 4.6,
+      "japan_lng_usd_per_mmbtu": 6.03
+    },
+    {
+      "month": "1981-06",
+      "brent_usd_per_barrel": 33.3,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 1.95,
+      "europe_gas_usd_per_mmbtu": 4.6,
+      "japan_lng_usd_per_mmbtu": 6.03
+    },
+    {
+      "month": "1981-07",
+      "brent_usd_per_barrel": 35.1,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 2.01,
+      "europe_gas_usd_per_mmbtu": 4.6,
+      "japan_lng_usd_per_mmbtu": 6.03
+    },
+    {
+      "month": "1981-08",
+      "brent_usd_per_barrel": 35.8,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 2.02,
+      "europe_gas_usd_per_mmbtu": 4.6,
+      "japan_lng_usd_per_mmbtu": 6.03
+    },
+    {
+      "month": "1981-09",
+      "brent_usd_per_barrel": 35.9,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 2.08,
+      "europe_gas_usd_per_mmbtu": 4.6,
+      "japan_lng_usd_per_mmbtu": 6.03
+    },
+    {
+      "month": "1981-10",
+      "brent_usd_per_barrel": 36.5,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 2.11,
+      "europe_gas_usd_per_mmbtu": 4.6,
+      "japan_lng_usd_per_mmbtu": 6.03
+    },
+    {
+      "month": "1981-11",
+      "brent_usd_per_barrel": 37.1,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 2.15,
+      "europe_gas_usd_per_mmbtu": 4.6,
+      "japan_lng_usd_per_mmbtu": 6.03
+    },
+    {
+      "month": "1981-12",
+      "brent_usd_per_barrel": 36.7,
+      "wti_usd_per_barrel": null,
+      "us_gas_usd_per_mmbtu": 2.16,
+      "europe_gas_usd_per_mmbtu": 4.6,
+      "japan_lng_usd_per_mmbtu": 6.03
+    },
+    {
+      "month": "1982-01",
+      "brent_usd_per_barrel": 35.8,
+      "wti_usd_per_barrel": 35.3,
+      "us_gas_usd_per_mmbtu": 2.23,
+      "europe_gas_usd_per_mmbtu": 4.45,
+      "japan_lng_usd_per_mmbtu": 6.05
+    },
+    {
+      "month": "1982-02",
+      "brent_usd_per_barrel": 31.6,
+      "wti_usd_per_barrel": 34.8,
+      "us_gas_usd_per_mmbtu": 2.3,
+      "europe_gas_usd_per_mmbtu": 4.45,
+      "japan_lng_usd_per_mmbtu": 6.05
+    },
+    {
+      "month": "1982-03",
+      "brent_usd_per_barrel": 29.3,
+      "wti_usd_per_barrel": 32.6,
+      "us_gas_usd_per_mmbtu": 2.35,
+      "europe_gas_usd_per_mmbtu": 4.45,
+      "japan_lng_usd_per_mmbtu": 6.05
+    },
+    {
+      "month": "1982-04",
+      "brent_usd_per_barrel": 33.1,
+      "wti_usd_per_barrel": 30.7,
+      "us_gas_usd_per_mmbtu": 2.4,
+      "europe_gas_usd_per_mmbtu": 4.45,
+      "japan_lng_usd_per_mmbtu": 6.05
+    },
+    {
+      "month": "1982-05",
+      "brent_usd_per_barrel": 35.2,
+      "wti_usd_per_barrel": 30.6,
+      "us_gas_usd_per_mmbtu": 2.45,
+      "europe_gas_usd_per_mmbtu": 4.45,
+      "japan_lng_usd_per_mmbtu": 6.05
+    },
+    {
+      "month": "1982-06",
+      "brent_usd_per_barrel": 34.6,
+      "wti_usd_per_barrel": 31.1,
+      "us_gas_usd_per_mmbtu": 2.45,
+      "europe_gas_usd_per_mmbtu": 4.45,
+      "japan_lng_usd_per_mmbtu": 6.05
+    },
+    {
+      "month": "1982-07",
+      "brent_usd_per_barrel": 33.7,
+      "wti_usd_per_barrel": 33.4,
+      "us_gas_usd_per_mmbtu": 2.47,
+      "europe_gas_usd_per_mmbtu": 4.45,
+      "japan_lng_usd_per_mmbtu": 6.05
+    },
+    {
+      "month": "1982-08",
+      "brent_usd_per_barrel": 32.8,
+      "wti_usd_per_barrel": 33.2,
+      "us_gas_usd_per_mmbtu": 2.53,
+      "europe_gas_usd_per_mmbtu": 4.45,
+      "japan_lng_usd_per_mmbtu": 6.05
+    },
+    {
+      "month": "1982-09",
+      "brent_usd_per_barrel": 34.3,
+      "wti_usd_per_barrel": 33.1,
+      "us_gas_usd_per_mmbtu": 2.56,
+      "europe_gas_usd_per_mmbtu": 4.45,
+      "japan_lng_usd_per_mmbtu": 6.05
+    },
+    {
+      "month": "1982-10",
+      "brent_usd_per_barrel": 35.0,
+      "wti_usd_per_barrel": 33.0,
+      "us_gas_usd_per_mmbtu": 2.6,
+      "europe_gas_usd_per_mmbtu": 4.45,
+      "japan_lng_usd_per_mmbtu": 6.05
+    },
+    {
+      "month": "1982-11",
+      "brent_usd_per_barrel": 33.8,
+      "wti_usd_per_barrel": 33.0,
+      "us_gas_usd_per_mmbtu": 2.62,
+      "europe_gas_usd_per_mmbtu": 4.45,
+      "japan_lng_usd_per_mmbtu": 6.05
+    },
+    {
+      "month": "1982-12",
+      "brent_usd_per_barrel": 31.8,
+      "wti_usd_per_barrel": 32.6,
+      "us_gas_usd_per_mmbtu": 2.62,
+      "europe_gas_usd_per_mmbtu": 4.45,
+      "japan_lng_usd_per_mmbtu": 6.05
+    },
+    {
+      "month": "1983-01",
+      "brent_usd_per_barrel": 30.9,
+      "wti_usd_per_barrel": 31.1,
+      "us_gas_usd_per_mmbtu": 2.66,
+      "europe_gas_usd_per_mmbtu": 4.05,
+      "japan_lng_usd_per_mmbtu": 5.55
+    },
+    {
+      "month": "1983-02",
+      "brent_usd_per_barrel": 29.1,
+      "wti_usd_per_barrel": 29.2,
+      "us_gas_usd_per_mmbtu": 2.66,
+      "europe_gas_usd_per_mmbtu": 4.05,
+      "japan_lng_usd_per_mmbtu": 5.55
+    },
+    {
+      "month": "1983-03",
+      "brent_usd_per_barrel": 28.2,
+      "wti_usd_per_barrel": 28.7,
+      "us_gas_usd_per_mmbtu": 2.58,
+      "europe_gas_usd_per_mmbtu": 4.05,
+      "japan_lng_usd_per_mmbtu": 5.55
+    },
+    {
+      "month": "1983-04",
+      "brent_usd_per_barrel": 29.8,
+      "wti_usd_per_barrel": 30.6,
+      "us_gas_usd_per_mmbtu": 2.53,
+      "europe_gas_usd_per_mmbtu": 4.05,
+      "japan_lng_usd_per_mmbtu": 5.55
+    },
+    {
+      "month": "1983-05",
+      "brent_usd_per_barrel": 29.6,
+      "wti_usd_per_barrel": 30.0,
+      "us_gas_usd_per_mmbtu": 2.53,
+      "europe_gas_usd_per_mmbtu": 4.05,
+      "japan_lng_usd_per_mmbtu": 5.55
+    },
+    {
+      "month": "1983-06",
+      "brent_usd_per_barrel": 30.2,
+      "wti_usd_per_barrel": 31.0,
+      "us_gas_usd_per_mmbtu": 2.59,
+      "europe_gas_usd_per_mmbtu": 4.05,
+      "japan_lng_usd_per_mmbtu": 5.55
+    },
+    {
+      "month": "1983-07",
+      "brent_usd_per_barrel": 30.8,
+      "wti_usd_per_barrel": 31.6,
+      "us_gas_usd_per_mmbtu": 2.52,
+      "europe_gas_usd_per_mmbtu": 4.05,
+      "japan_lng_usd_per_mmbtu": 5.55
+    },
+    {
+      "month": "1983-08",
+      "brent_usd_per_barrel": 31.1,
+      "wti_usd_per_barrel": 32.0,
+      "us_gas_usd_per_mmbtu": 2.58,
+      "europe_gas_usd_per_mmbtu": 4.05,
+      "japan_lng_usd_per_mmbtu": 5.55
+    },
+    {
+      "month": "1983-09",
+      "brent_usd_per_barrel": 30.4,
+      "wti_usd_per_barrel": 31.3,
+      "us_gas_usd_per_mmbtu": 2.67,
+      "europe_gas_usd_per_mmbtu": 4.05,
+      "japan_lng_usd_per_mmbtu": 5.55
+    },
+    {
+      "month": "1983-10",
+      "brent_usd_per_barrel": 29.9,
+      "wti_usd_per_barrel": 30.4,
+      "us_gas_usd_per_mmbtu": 2.58,
+      "europe_gas_usd_per_mmbtu": 4.05,
+      "japan_lng_usd_per_mmbtu": 5.55
+    },
+    {
+      "month": "1983-11",
+      "brent_usd_per_barrel": 29.2,
+      "wti_usd_per_barrel": 30.0,
+      "us_gas_usd_per_mmbtu": 2.6,
+      "europe_gas_usd_per_mmbtu": 4.05,
+      "japan_lng_usd_per_mmbtu": 5.55
+    },
+    {
+      "month": "1983-12",
+      "brent_usd_per_barrel": 29.0,
+      "wti_usd_per_barrel": 29.2,
+      "us_gas_usd_per_mmbtu": 2.61,
+      "europe_gas_usd_per_mmbtu": 4.05,
+      "japan_lng_usd_per_mmbtu": 5.55
+    },
+    {
+      "month": "1984-01",
+      "brent_usd_per_barrel": 29.6,
+      "wti_usd_per_barrel": 29.8,
+      "us_gas_usd_per_mmbtu": 2.67,
+      "europe_gas_usd_per_mmbtu": 3.76,
+      "japan_lng_usd_per_mmbtu": 5.24
+    },
+    {
+      "month": "1984-02",
+      "brent_usd_per_barrel": 29.9,
+      "wti_usd_per_barrel": 30.1,
+      "us_gas_usd_per_mmbtu": 2.71,
+      "europe_gas_usd_per_mmbtu": 3.76,
+      "japan_lng_usd_per_mmbtu": 5.24
+    },
+    {
+      "month": "1984-03",
+      "brent_usd_per_barrel": 30.1,
+      "wti_usd_per_barrel": 30.7,
+      "us_gas_usd_per_mmbtu": 2.67,
+      "europe_gas_usd_per_mmbtu": 3.76,
+      "japan_lng_usd_per_mmbtu": 5.24
+    },
+    {
+      "month": "1984-04",
+      "brent_usd_per_barrel": 30.1,
+      "wti_usd_per_barrel": 30.6,
+      "us_gas_usd_per_mmbtu": 2.64,
+      "europe_gas_usd_per_mmbtu": 3.76,
+      "japan_lng_usd_per_mmbtu": 5.24
+    },
+    {
+      "month": "1984-05",
+      "brent_usd_per_barrel": 29.9,
+      "wti_usd_per_barrel": 30.5,
+      "us_gas_usd_per_mmbtu": 2.67,
+      "europe_gas_usd_per_mmbtu": 3.76,
+      "japan_lng_usd_per_mmbtu": 5.24
+    },
+    {
+      "month": "1984-06",
+      "brent_usd_per_barrel": 29.2,
+      "wti_usd_per_barrel": 30.0,
+      "us_gas_usd_per_mmbtu": 2.7,
+      "europe_gas_usd_per_mmbtu": 3.76,
+      "japan_lng_usd_per_mmbtu": 5.24
+    },
+    {
+      "month": "1984-07",
+      "brent_usd_per_barrel": 27.9,
+      "wti_usd_per_barrel": 28.8,
+      "us_gas_usd_per_mmbtu": 2.68,
+      "europe_gas_usd_per_mmbtu": 3.76,
+      "japan_lng_usd_per_mmbtu": 5.24
+    },
+    {
+      "month": "1984-08",
+      "brent_usd_per_barrel": 28.1,
+      "wti_usd_per_barrel": 29.2,
+      "us_gas_usd_per_mmbtu": 2.69,
+      "europe_gas_usd_per_mmbtu": 3.76,
+      "japan_lng_usd_per_mmbtu": 5.24
+    },
+    {
+      "month": "1984-09",
+      "brent_usd_per_barrel": 28.4,
+      "wti_usd_per_barrel": 29.3,
+      "us_gas_usd_per_mmbtu": 2.62,
+      "europe_gas_usd_per_mmbtu": 3.76,
+      "japan_lng_usd_per_mmbtu": 5.24
+    },
+    {
+      "month": "1984-10",
+      "brent_usd_per_barrel": 27.8,
+      "wti_usd_per_barrel": 28.6,
+      "us_gas_usd_per_mmbtu": 2.63,
+      "europe_gas_usd_per_mmbtu": 3.76,
+      "japan_lng_usd_per_mmbtu": 5.24
+    },
+    {
+      "month": "1984-11",
+      "brent_usd_per_barrel": 27.7,
+      "wti_usd_per_barrel": 28.2,
+      "us_gas_usd_per_mmbtu": 2.61,
+      "europe_gas_usd_per_mmbtu": 3.76,
+      "japan_lng_usd_per_mmbtu": 5.24
+    },
+    {
+      "month": "1984-12",
+      "brent_usd_per_barrel": 27.0,
+      "wti_usd_per_barrel": 26.7,
+      "us_gas_usd_per_mmbtu": 2.57,
+      "europe_gas_usd_per_mmbtu": 3.76,
+      "japan_lng_usd_per_mmbtu": 5.24
+    },
+    {
+      "month": "1985-01",
+      "brent_usd_per_barrel": 27.0,
+      "wti_usd_per_barrel": 25.7,
+      "us_gas_usd_per_mmbtu": 2.64,
+      "europe_gas_usd_per_mmbtu": 3.65,
+      "japan_lng_usd_per_mmbtu": 5.23
+    },
+    {
+      "month": "1985-02",
+      "brent_usd_per_barrel": 28.2,
+      "wti_usd_per_barrel": 27.4,
+      "us_gas_usd_per_mmbtu": 2.71,
+      "europe_gas_usd_per_mmbtu": 3.65,
+      "japan_lng_usd_per_mmbtu": 5.23
+    },
+    {
+      "month": "1985-03",
+      "brent_usd_per_barrel": 28.1,
+      "wti_usd_per_barrel": 28.3,
+      "us_gas_usd_per_mmbtu": 2.62,
+      "europe_gas_usd_per_mmbtu": 3.65,
+      "japan_lng_usd_per_mmbtu": 5.23
+    },
+    {
+      "month": "1985-04",
+      "brent_usd_per_barrel": 27.9,
+      "wti_usd_per_barrel": 28.9,
+      "us_gas_usd_per_mmbtu": 2.64,
+      "europe_gas_usd_per_mmbtu": 3.65,
+      "japan_lng_usd_per_mmbtu": 5.23
+    },
+    {
+      "month": "1985-05",
+      "brent_usd_per_barrel": 26.7,
+      "wti_usd_per_barrel": 27.7,
+      "us_gas_usd_per_mmbtu": 2.53,
+      "europe_gas_usd_per_mmbtu": 3.65,
+      "japan_lng_usd_per_mmbtu": 5.23
+    },
+    {
+      "month": "1985-06",
+      "brent_usd_per_barrel": 26.5,
+      "wti_usd_per_barrel": 27.2,
+      "us_gas_usd_per_mmbtu": 2.58,
+      "europe_gas_usd_per_mmbtu": 3.65,
+      "japan_lng_usd_per_mmbtu": 5.23
+    },
+    {
+      "month": "1985-07",
+      "brent_usd_per_barrel": 26.6,
+      "wti_usd_per_barrel": 26.9,
+      "us_gas_usd_per_mmbtu": 2.51,
+      "europe_gas_usd_per_mmbtu": 3.65,
+      "japan_lng_usd_per_mmbtu": 5.23
+    },
+    {
+      "month": "1985-08",
+      "brent_usd_per_barrel": 27.2,
+      "wti_usd_per_barrel": 27.6,
+      "us_gas_usd_per_mmbtu": 2.47,
+      "europe_gas_usd_per_mmbtu": 3.65,
+      "japan_lng_usd_per_mmbtu": 5.23
+    },
+    {
+      "month": "1985-09",
+      "brent_usd_per_barrel": 27.2,
+      "wti_usd_per_barrel": 27.7,
+      "us_gas_usd_per_mmbtu": 2.42,
+      "europe_gas_usd_per_mmbtu": 3.65,
+      "japan_lng_usd_per_mmbtu": 5.23
+    },
+    {
+      "month": "1985-10",
+      "brent_usd_per_barrel": 27.9,
+      "wti_usd_per_barrel": 28.9,
+      "us_gas_usd_per_mmbtu": 2.37,
+      "europe_gas_usd_per_mmbtu": 3.65,
+      "japan_lng_usd_per_mmbtu": 5.23
+    },
+    {
+      "month": "1985-11",
+      "brent_usd_per_barrel": 29.1,
+      "wti_usd_per_barrel": 29.9,
+      "us_gas_usd_per_mmbtu": 2.36,
+      "europe_gas_usd_per_mmbtu": 3.65,
+      "japan_lng_usd_per_mmbtu": 5.23
+    },
+    {
+      "month": "1985-12",
+      "brent_usd_per_barrel": 25.9,
+      "wti_usd_per_barrel": 27.4,
+      "us_gas_usd_per_mmbtu": 2.28,
+      "europe_gas_usd_per_mmbtu": 3.65,
+      "japan_lng_usd_per_mmbtu": 5.23
+    },
+    {
+      "month": "1986-01",
+      "brent_usd_per_barrel": 25.8,
+      "wti_usd_per_barrel": 22.9,
+      "us_gas_usd_per_mmbtu": 2.28,
+      "europe_gas_usd_per_mmbtu": 3.65,
+      "japan_lng_usd_per_mmbtu": 4.1
+    },
+    {
+      "month": "1986-02",
+      "brent_usd_per_barrel": 17.6,
+      "wti_usd_per_barrel": 15.4,
+      "us_gas_usd_per_mmbtu": 2.26,
+      "europe_gas_usd_per_mmbtu": 3.65,
+      "japan_lng_usd_per_mmbtu": 4.1
+    },
+    {
+      "month": "1986-03",
+      "brent_usd_per_barrel": 13.9,
+      "wti_usd_per_barrel": 12.7,
+      "us_gas_usd_per_mmbtu": 2.16,
+      "europe_gas_usd_per_mmbtu": 3.65,
+      "japan_lng_usd_per_mmbtu": 4.1
+    },
+    {
+      "month": "1986-04",
+      "brent_usd_per_barrel": 12.5,
+      "wti_usd_per_barrel": 12.9,
+      "us_gas_usd_per_mmbtu": 2.1,
+      "europe_gas_usd_per_mmbtu": 3.65,
+      "japan_lng_usd_per_mmbtu": 4.1
+    },
+    {
+      "month": "1986-05",
+      "brent_usd_per_barrel": 14.2,
+      "wti_usd_per_barrel": 15.5,
+      "us_gas_usd_per_mmbtu": 1.96,
+      "europe_gas_usd_per_mmbtu": 3.65,
+      "japan_lng_usd_per_mmbtu": 4.1
+    },
+    {
+      "month": "1986-06",
+      "brent_usd_per_barrel": 11.9,
+      "wti_usd_per_barrel": 13.5,
+      "us_gas_usd_per_mmbtu": 1.85,
+      "europe_gas_usd_per_mmbtu": 3.65,
+      "japan_lng_usd_per_mmbtu": 4.1
+    },
+    {
+      "month": "1986-07",
+      "brent_usd_per_barrel": 9.5,
+      "wti_usd_per_barrel": 11.6,
+      "us_gas_usd_per_mmbtu": 1.8,
+      "europe_gas_usd_per_mmbtu": 3.65,
+      "japan_lng_usd_per_mmbtu": 4.1
+    },
+    {
+      "month": "1986-08",
+      "brent_usd_per_barrel": 13.7,
+      "wti_usd_per_barrel": 15.3,
+      "us_gas_usd_per_mmbtu": 1.77,
+      "europe_gas_usd_per_mmbtu": 3.65,
+      "japan_lng_usd_per_mmbtu": 4.1
+    },
+    {
+      "month": "1986-09",
+      "brent_usd_per_barrel": 14.2,
+      "wti_usd_per_barrel": 15.0,
+      "us_gas_usd_per_mmbtu": 1.78,
+      "europe_gas_usd_per_mmbtu": 3.65,
+      "japan_lng_usd_per_mmbtu": 4.1
+    },
+    {
+      "month": "1986-10",
+      "brent_usd_per_barrel": 13.8,
+      "wti_usd_per_barrel": 14.9,
+      "us_gas_usd_per_mmbtu": 1.73,
+      "europe_gas_usd_per_mmbtu": 3.65,
+      "japan_lng_usd_per_mmbtu": 4.1
+    },
+    {
+      "month": "1986-11",
+      "brent_usd_per_barrel": 14.6,
+      "wti_usd_per_barrel": 15.3,
+      "us_gas_usd_per_mmbtu": 1.77,
+      "europe_gas_usd_per_mmbtu": 3.65,
+      "japan_lng_usd_per_mmbtu": 4.1
+    },
+    {
+      "month": "1986-12",
+      "brent_usd_per_barrel": 15.9,
+      "wti_usd_per_barrel": 16.3,
+      "us_gas_usd_per_mmbtu": 1.76,
+      "europe_gas_usd_per_mmbtu": 3.65,
+      "japan_lng_usd_per_mmbtu": 4.1
+    },
+    {
+      "month": "1987-01",
+      "brent_usd_per_barrel": 18.4,
+      "wti_usd_per_barrel": 18.6,
+      "us_gas_usd_per_mmbtu": 1.74,
+      "europe_gas_usd_per_mmbtu": 2.59,
+      "japan_lng_usd_per_mmbtu": 3.35
+    },
+    {
+      "month": "1987-02",
+      "brent_usd_per_barrel": 17.3,
+      "wti_usd_per_barrel": 17.8,
+      "us_gas_usd_per_mmbtu": 1.73,
+      "europe_gas_usd_per_mmbtu": 2.59,
+      "japan_lng_usd_per_mmbtu": 3.35
+    },
+    {
+      "month": "1987-03",
+      "brent_usd_per_barrel": 17.9,
+      "wti_usd_per_barrel": 18.5,
+      "us_gas_usd_per_mmbtu": 1.73,
+      "europe_gas_usd_per_mmbtu": 2.59,
+      "japan_lng_usd_per_mmbtu": 3.35
+    },
+    {
+      "month": "1987-04",
+      "brent_usd_per_barrel": 18.1,
+      "wti_usd_per_barrel": 18.7,
+      "us_gas_usd_per_mmbtu": 1.69,
+      "europe_gas_usd_per_mmbtu": 2.59,
+      "japan_lng_usd_per_mmbtu": 3.35
+    },
+    {
+      "month": "1987-05",
+      "brent_usd_per_barrel": 18.8,
+      "wti_usd_per_barrel": 19.4,
+      "us_gas_usd_per_mmbtu": 1.65,
+      "europe_gas_usd_per_mmbtu": 2.59,
+      "japan_lng_usd_per_mmbtu": 3.35
+    },
+    {
+      "month": "1987-06",
+      "brent_usd_per_barrel": 18.9,
+      "wti_usd_per_barrel": 20.1,
+      "us_gas_usd_per_mmbtu": 1.65,
+      "europe_gas_usd_per_mmbtu": 2.59,
+      "japan_lng_usd_per_mmbtu": 3.35
+    },
+    {
+      "month": "1987-07",
+      "brent_usd_per_barrel": 19.8,
+      "wti_usd_per_barrel": 21.3,
+      "us_gas_usd_per_mmbtu": 1.66,
+      "europe_gas_usd_per_mmbtu": 2.59,
+      "japan_lng_usd_per_mmbtu": 3.35
+    },
+    {
+      "month": "1987-08",
+      "brent_usd_per_barrel": 19.0,
+      "wti_usd_per_barrel": 20.2,
+      "us_gas_usd_per_mmbtu": 1.63,
+      "europe_gas_usd_per_mmbtu": 2.59,
+      "japan_lng_usd_per_mmbtu": 3.35
+    },
+    {
+      "month": "1987-09",
+      "brent_usd_per_barrel": 18.4,
+      "wti_usd_per_barrel": 19.5,
+      "us_gas_usd_per_mmbtu": 1.56,
+      "europe_gas_usd_per_mmbtu": 2.59,
+      "japan_lng_usd_per_mmbtu": 3.35
+    },
+    {
+      "month": "1987-10",
+      "brent_usd_per_barrel": 18.8,
+      "wti_usd_per_barrel": 19.9,
+      "us_gas_usd_per_mmbtu": 1.57,
+      "europe_gas_usd_per_mmbtu": 2.59,
+      "japan_lng_usd_per_mmbtu": 3.35
+    },
+    {
+      "month": "1987-11",
+      "brent_usd_per_barrel": 17.8,
+      "wti_usd_per_barrel": 18.9,
+      "us_gas_usd_per_mmbtu": 1.64,
+      "europe_gas_usd_per_mmbtu": 2.59,
+      "japan_lng_usd_per_mmbtu": 3.35
+    },
+    {
+      "month": "1987-12",
+      "brent_usd_per_barrel": 17.1,
+      "wti_usd_per_barrel": 17.3,
+      "us_gas_usd_per_mmbtu": 1.7,
+      "europe_gas_usd_per_mmbtu": 2.59,
+      "japan_lng_usd_per_mmbtu": 3.35
+    },
+    {
+      "month": "1988-01",
+      "brent_usd_per_barrel": 16.9,
+      "wti_usd_per_barrel": 17.2,
+      "us_gas_usd_per_mmbtu": 1.96,
+      "europe_gas_usd_per_mmbtu": 2.36,
+      "japan_lng_usd_per_mmbtu": 3.34
+    },
+    {
+      "month": "1988-02",
+      "brent_usd_per_barrel": 15.8,
+      "wti_usd_per_barrel": 16.8,
+      "us_gas_usd_per_mmbtu": 1.84,
+      "europe_gas_usd_per_mmbtu": 2.36,
+      "japan_lng_usd_per_mmbtu": 3.34
+    },
+    {
+      "month": "1988-03",
+      "brent_usd_per_barrel": 14.8,
+      "wti_usd_per_barrel": 16.2,
+      "us_gas_usd_per_mmbtu": 1.7,
+      "europe_gas_usd_per_mmbtu": 2.36,
+      "japan_lng_usd_per_mmbtu": 3.34
+    },
+    {
+      "month": "1988-04",
+      "brent_usd_per_barrel": 16.6,
+      "wti_usd_per_barrel": 17.9,
+      "us_gas_usd_per_mmbtu": 1.59,
+      "europe_gas_usd_per_mmbtu": 2.36,
+      "japan_lng_usd_per_mmbtu": 3.34
+    },
+    {
+      "month": "1988-05",
+      "brent_usd_per_barrel": 16.4,
+      "wti_usd_per_barrel": 17.4,
+      "us_gas_usd_per_mmbtu": 1.52,
+      "europe_gas_usd_per_mmbtu": 2.36,
+      "japan_lng_usd_per_mmbtu": 3.34
+    },
+    {
+      "month": "1988-06",
+      "brent_usd_per_barrel": 15.6,
+      "wti_usd_per_barrel": 16.7,
+      "us_gas_usd_per_mmbtu": 1.53,
+      "europe_gas_usd_per_mmbtu": 2.36,
+      "japan_lng_usd_per_mmbtu": 3.34
+    },
+    {
+      "month": "1988-07",
+      "brent_usd_per_barrel": 14.9,
+      "wti_usd_per_barrel": 15.5,
+      "us_gas_usd_per_mmbtu": 1.56,
+      "europe_gas_usd_per_mmbtu": 2.36,
+      "japan_lng_usd_per_mmbtu": 3.34
+    },
+    {
+      "month": "1988-08",
+      "brent_usd_per_barrel": 15.0,
+      "wti_usd_per_barrel": 15.6,
+      "us_gas_usd_per_mmbtu": 1.62,
+      "europe_gas_usd_per_mmbtu": 2.36,
+      "japan_lng_usd_per_mmbtu": 3.34
+    },
+    {
+      "month": "1988-09",
+      "brent_usd_per_barrel": 13.3,
+      "wti_usd_per_barrel": 14.5,
+      "us_gas_usd_per_mmbtu": 1.53,
+      "europe_gas_usd_per_mmbtu": 2.36,
+      "japan_lng_usd_per_mmbtu": 3.34
+    },
+    {
+      "month": "1988-10",
+      "brent_usd_per_barrel": 12.5,
+      "wti_usd_per_barrel": 13.8,
+      "us_gas_usd_per_mmbtu": 1.68,
+      "europe_gas_usd_per_mmbtu": 2.36,
+      "japan_lng_usd_per_mmbtu": 3.34
+    },
+    {
+      "month": "1988-11",
+      "brent_usd_per_barrel": 13.0,
+      "wti_usd_per_barrel": 14.0,
+      "us_gas_usd_per_mmbtu": 1.76,
+      "europe_gas_usd_per_mmbtu": 2.36,
+      "japan_lng_usd_per_mmbtu": 3.34
+    },
+    {
+      "month": "1988-12",
+      "brent_usd_per_barrel": 15.2,
+      "wti_usd_per_barrel": 16.3,
+      "us_gas_usd_per_mmbtu": 1.89,
+      "europe_gas_usd_per_mmbtu": 2.36,
+      "japan_lng_usd_per_mmbtu": 3.34
+    },
+    {
+      "month": "1989-01",
+      "brent_usd_per_barrel": 17.0,
+      "wti_usd_per_barrel": 18.0,
+      "us_gas_usd_per_mmbtu": 1.78,
+      "europe_gas_usd_per_mmbtu": 2.09,
+      "japan_lng_usd_per_mmbtu": 3.28
+    },
+    {
+      "month": "1989-02",
+      "brent_usd_per_barrel": 16.7,
+      "wti_usd_per_barrel": 17.8,
+      "us_gas_usd_per_mmbtu": 1.71,
+      "europe_gas_usd_per_mmbtu": 2.09,
+      "japan_lng_usd_per_mmbtu": 3.28
+    },
+    {
+      "month": "1989-03",
+      "brent_usd_per_barrel": 18.7,
+      "wti_usd_per_barrel": 19.5,
+      "us_gas_usd_per_mmbtu": 1.49,
+      "europe_gas_usd_per_mmbtu": 2.09,
+      "japan_lng_usd_per_mmbtu": 3.28
+    },
+    {
+      "month": "1989-04",
+      "brent_usd_per_barrel": 19.8,
+      "wti_usd_per_barrel": 21.0,
+      "us_gas_usd_per_mmbtu": 1.53,
+      "europe_gas_usd_per_mmbtu": 2.09,
+      "japan_lng_usd_per_mmbtu": 3.28
+    },
+    {
+      "month": "1989-05",
+      "brent_usd_per_barrel": 18.4,
+      "wti_usd_per_barrel": 20.1,
+      "us_gas_usd_per_mmbtu": 1.66,
+      "europe_gas_usd_per_mmbtu": 2.09,
+      "japan_lng_usd_per_mmbtu": 3.28
+    },
+    {
+      "month": "1989-06",
+      "brent_usd_per_barrel": 17.5,
+      "wti_usd_per_barrel": 20.0,
+      "us_gas_usd_per_mmbtu": 1.7,
+      "europe_gas_usd_per_mmbtu": 2.09,
+      "japan_lng_usd_per_mmbtu": 3.28
+    },
+    {
+      "month": "1989-07",
+      "brent_usd_per_barrel": 17.8,
+      "wti_usd_per_barrel": 19.8,
+      "us_gas_usd_per_mmbtu": 1.64,
+      "europe_gas_usd_per_mmbtu": 2.09,
+      "japan_lng_usd_per_mmbtu": 3.28
+    },
+    {
+      "month": "1989-08",
+      "brent_usd_per_barrel": 17.1,
+      "wti_usd_per_barrel": 18.6,
+      "us_gas_usd_per_mmbtu": 1.58,
+      "europe_gas_usd_per_mmbtu": 2.09,
+      "japan_lng_usd_per_mmbtu": 3.28
+    },
+    {
+      "month": "1989-09",
+      "brent_usd_per_barrel": 17.8,
+      "wti_usd_per_barrel": 19.6,
+      "us_gas_usd_per_mmbtu": 1.53,
+      "europe_gas_usd_per_mmbtu": 2.09,
+      "japan_lng_usd_per_mmbtu": 3.28
+    },
+    {
+      "month": "1989-10",
+      "brent_usd_per_barrel": 19.0,
+      "wti_usd_per_barrel": 20.1,
+      "us_gas_usd_per_mmbtu": 1.6,
+      "europe_gas_usd_per_mmbtu": 2.09,
+      "japan_lng_usd_per_mmbtu": 3.28
+    },
+    {
+      "month": "1989-11",
+      "brent_usd_per_barrel": 19.2,
+      "wti_usd_per_barrel": 19.8,
+      "us_gas_usd_per_mmbtu": 1.9,
+      "europe_gas_usd_per_mmbtu": 2.09,
+      "japan_lng_usd_per_mmbtu": 3.28
+    },
+    {
+      "month": "1989-12",
+      "brent_usd_per_barrel": 19.9,
+      "wti_usd_per_barrel": 21.1,
+      "us_gas_usd_per_mmbtu": 2.24,
+      "europe_gas_usd_per_mmbtu": 2.09,
+      "japan_lng_usd_per_mmbtu": 3.28
+    },
+    {
+      "month": "1990-01",
+      "brent_usd_per_barrel": 21.0,
+      "wti_usd_per_barrel": 22.7,
+      "us_gas_usd_per_mmbtu": 2.39,
+      "europe_gas_usd_per_mmbtu": 2.82,
+      "japan_lng_usd_per_mmbtu": 3.64
+    },
+    {
+      "month": "1990-02",
+      "brent_usd_per_barrel": 19.9,
+      "wti_usd_per_barrel": 22.1,
+      "us_gas_usd_per_mmbtu": 1.9,
+      "europe_gas_usd_per_mmbtu": 2.82,
+      "japan_lng_usd_per_mmbtu": 3.64
+    },
+    {
+      "month": "1990-03",
+      "brent_usd_per_barrel": 18.5,
+      "wti_usd_per_barrel": 20.4,
+      "us_gas_usd_per_mmbtu": 1.55,
+      "europe_gas_usd_per_mmbtu": 2.82,
+      "japan_lng_usd_per_mmbtu": 3.64
+    },
+    {
+      "month": "1990-04",
+      "brent_usd_per_barrel": 16.8,
+      "wti_usd_per_barrel": 18.6,
+      "us_gas_usd_per_mmbtu": 1.49,
+      "europe_gas_usd_per_mmbtu": 2.82,
+      "japan_lng_usd_per_mmbtu": 3.64
+    },
+    {
+      "month": "1990-05",
+      "brent_usd_per_barrel": 16.7,
+      "wti_usd_per_barrel": 18.5,
+      "us_gas_usd_per_mmbtu": 1.47,
+      "europe_gas_usd_per_mmbtu": 2.82,
+      "japan_lng_usd_per_mmbtu": 3.64
+    },
+    {
+      "month": "1990-06",
+      "brent_usd_per_barrel": 15.7,
+      "wti_usd_per_barrel": 16.9,
+      "us_gas_usd_per_mmbtu": 1.47,
+      "europe_gas_usd_per_mmbtu": 2.82,
+      "japan_lng_usd_per_mmbtu": 3.64
+    },
+    {
+      "month": "1990-07",
+      "brent_usd_per_barrel": 17.6,
+      "wti_usd_per_barrel": 18.7,
+      "us_gas_usd_per_mmbtu": 1.41,
+      "europe_gas_usd_per_mmbtu": 2.82,
+      "japan_lng_usd_per_mmbtu": 3.64
+    },
+    {
+      "month": "1990-08",
+      "brent_usd_per_barrel": 27.1,
+      "wti_usd_per_barrel": 27.2,
+      "us_gas_usd_per_mmbtu": 1.36,
+      "europe_gas_usd_per_mmbtu": 2.82,
+      "japan_lng_usd_per_mmbtu": 3.64
+    },
+    {
+      "month": "1990-09",
+      "brent_usd_per_barrel": 34.1,
+      "wti_usd_per_barrel": 33.7,
+      "us_gas_usd_per_mmbtu": 1.44,
+      "europe_gas_usd_per_mmbtu": 2.82,
+      "japan_lng_usd_per_mmbtu": 3.64
+    },
+    {
+      "month": "1990-10",
+      "brent_usd_per_barrel": 36.1,
+      "wti_usd_per_barrel": 35.9,
+      "us_gas_usd_per_mmbtu": 1.69,
+      "europe_gas_usd_per_mmbtu": 2.82,
+      "japan_lng_usd_per_mmbtu": 3.64
+    },
+    {
+      "month": "1990-11",
+      "brent_usd_per_barrel": 33.0,
+      "wti_usd_per_barrel": 32.3,
+      "us_gas_usd_per_mmbtu": 2.1,
+      "europe_gas_usd_per_mmbtu": 2.82,
+      "japan_lng_usd_per_mmbtu": 3.64
+    },
+    {
+      "month": "1990-12",
+      "brent_usd_per_barrel": 28.0,
+      "wti_usd_per_barrel": 27.2,
+      "us_gas_usd_per_mmbtu": 2.11,
+      "europe_gas_usd_per_mmbtu": 2.82,
+      "japan_lng_usd_per_mmbtu": 3.64
+    },
+    {
+      "month": "1991-01",
+      "brent_usd_per_barrel": 23.7,
+      "wti_usd_per_barrel": 24.7,
+      "us_gas_usd_per_mmbtu": 1.67,
+      "europe_gas_usd_per_mmbtu": 3.44,
+      "japan_lng_usd_per_mmbtu": 3.99
+    },
+    {
+      "month": "1991-02",
+      "brent_usd_per_barrel": 19.4,
+      "wti_usd_per_barrel": 20.6,
+      "us_gas_usd_per_mmbtu": 1.36,
+      "europe_gas_usd_per_mmbtu": 3.41,
+      "japan_lng_usd_per_mmbtu": 3.99
+    },
+    {
+      "month": "1991-03",
+      "brent_usd_per_barrel": 19.5,
+      "wti_usd_per_barrel": 19.9,
+      "us_gas_usd_per_mmbtu": 1.34,
+      "europe_gas_usd_per_mmbtu": 3.33,
+      "japan_lng_usd_per_mmbtu": 3.99
+    },
+    {
+      "month": "1991-04",
+      "brent_usd_per_barrel": 19.3,
+      "wti_usd_per_barrel": 20.8,
+      "us_gas_usd_per_mmbtu": 1.33,
+      "europe_gas_usd_per_mmbtu": 3.47,
+      "japan_lng_usd_per_mmbtu": 3.99
+    },
+    {
+      "month": "1991-05",
+      "brent_usd_per_barrel": 19.3,
+      "wti_usd_per_barrel": 21.3,
+      "us_gas_usd_per_mmbtu": 1.31,
+      "europe_gas_usd_per_mmbtu": 3.37,
+      "japan_lng_usd_per_mmbtu": 3.99
+    },
+    {
+      "month": "1991-06",
+      "brent_usd_per_barrel": 18.2,
+      "wti_usd_per_barrel": 20.2,
+      "us_gas_usd_per_mmbtu": 1.2,
+      "europe_gas_usd_per_mmbtu": 3.29,
+      "japan_lng_usd_per_mmbtu": 3.99
+    },
+    {
+      "month": "1991-07",
+      "brent_usd_per_barrel": 19.5,
+      "wti_usd_per_barrel": 21.5,
+      "us_gas_usd_per_mmbtu": 1.19,
+      "europe_gas_usd_per_mmbtu": 3.0,
+      "japan_lng_usd_per_mmbtu": 3.99
+    },
+    {
+      "month": "1991-08",
+      "brent_usd_per_barrel": 19.8,
+      "wti_usd_per_barrel": 21.7,
+      "us_gas_usd_per_mmbtu": 1.31,
+      "europe_gas_usd_per_mmbtu": 2.98,
+      "japan_lng_usd_per_mmbtu": 3.99
+    },
+    {
+      "month": "1991-09",
+      "brent_usd_per_barrel": 20.5,
+      "wti_usd_per_barrel": 21.9,
+      "us_gas_usd_per_mmbtu": 1.63,
+      "europe_gas_usd_per_mmbtu": 2.97,
+      "japan_lng_usd_per_mmbtu": 3.99
+    },
+    {
+      "month": "1991-10",
+      "brent_usd_per_barrel": 22.2,
+      "wti_usd_per_barrel": 23.3,
+      "us_gas_usd_per_mmbtu": 1.77,
+      "europe_gas_usd_per_mmbtu": 2.71,
+      "japan_lng_usd_per_mmbtu": 3.99
+    },
+    {
+      "month": "1991-11",
+      "brent_usd_per_barrel": 21.3,
+      "wti_usd_per_barrel": 22.6,
+      "us_gas_usd_per_mmbtu": 1.81,
+      "europe_gas_usd_per_mmbtu": 2.7,
+      "japan_lng_usd_per_mmbtu": 3.99
+    },
+    {
+      "month": "1991-12",
+      "brent_usd_per_barrel": 18.4,
+      "wti_usd_per_barrel": 19.6,
+      "us_gas_usd_per_mmbtu": 1.92,
+      "europe_gas_usd_per_mmbtu": 2.7,
+      "japan_lng_usd_per_mmbtu": 3.99
+    },
+    {
+      "month": "1992-01",
+      "brent_usd_per_barrel": 18.2,
+      "wti_usd_per_barrel": 18.8,
+      "us_gas_usd_per_mmbtu": 1.28,
+      "europe_gas_usd_per_mmbtu": 2.57,
+      "japan_lng_usd_per_mmbtu": 3.6
+    },
+    {
+      "month": "1992-02",
+      "brent_usd_per_barrel": 18.1,
+      "wti_usd_per_barrel": 19.0,
+      "us_gas_usd_per_mmbtu": 1.21,
+      "europe_gas_usd_per_mmbtu": 2.5,
+      "japan_lng_usd_per_mmbtu": 3.51
+    },
+    {
+      "month": "1992-03",
+      "brent_usd_per_barrel": 17.6,
+      "wti_usd_per_barrel": 19.0,
+      "us_gas_usd_per_mmbtu": 1.28,
+      "europe_gas_usd_per_mmbtu": 2.58,
+      "japan_lng_usd_per_mmbtu": 3.59
+    },
+    {
+      "month": "1992-04",
+      "brent_usd_per_barrel": 19.0,
+      "wti_usd_per_barrel": 20.3,
+      "us_gas_usd_per_mmbtu": 1.47,
+      "europe_gas_usd_per_mmbtu": 2.47,
+      "japan_lng_usd_per_mmbtu": 3.53
+    },
+    {
+      "month": "1992-05",
+      "brent_usd_per_barrel": 19.9,
+      "wti_usd_per_barrel": 21.0,
+      "us_gas_usd_per_mmbtu": 1.59,
+      "europe_gas_usd_per_mmbtu": 2.49,
+      "japan_lng_usd_per_mmbtu": 3.47
+    },
+    {
+      "month": "1992-06",
+      "brent_usd_per_barrel": 21.2,
+      "wti_usd_per_barrel": 22.4,
+      "us_gas_usd_per_mmbtu": 1.56,
+      "europe_gas_usd_per_mmbtu": 2.5,
+      "japan_lng_usd_per_mmbtu": 3.49
+    },
+    {
+      "month": "1992-07",
+      "brent_usd_per_barrel": 20.3,
+      "wti_usd_per_barrel": 21.8,
+      "us_gas_usd_per_mmbtu": 1.75,
+      "europe_gas_usd_per_mmbtu": 2.55,
+      "japan_lng_usd_per_mmbtu": 3.61
+    },
+    {
+      "month": "1992-08",
+      "brent_usd_per_barrel": 19.8,
+      "wti_usd_per_barrel": 21.3,
+      "us_gas_usd_per_mmbtu": 1.97,
+      "europe_gas_usd_per_mmbtu": 2.56,
+      "japan_lng_usd_per_mmbtu": 3.65
+    },
+    {
+      "month": "1992-09",
+      "brent_usd_per_barrel": 20.3,
+      "wti_usd_per_barrel": 21.9,
+      "us_gas_usd_per_mmbtu": 2.33,
+      "europe_gas_usd_per_mmbtu": 2.57,
+      "japan_lng_usd_per_mmbtu": 3.63
+    },
+    {
+      "month": "1992-10",
+      "brent_usd_per_barrel": 20.3,
+      "wti_usd_per_barrel": 21.7,
+      "us_gas_usd_per_mmbtu": 2.42,
+      "europe_gas_usd_per_mmbtu": 2.63,
+      "japan_lng_usd_per_mmbtu": 3.7
+    },
+    {
+      "month": "1992-11",
+      "brent_usd_per_barrel": 19.2,
+      "wti_usd_per_barrel": 20.4,
+      "us_gas_usd_per_mmbtu": 2.24,
+      "europe_gas_usd_per_mmbtu": 2.64,
+      "japan_lng_usd_per_mmbtu": 3.65
+    },
+    {
+      "month": "1992-12",
+      "brent_usd_per_barrel": 18.2,
+      "wti_usd_per_barrel": 19.4,
+      "us_gas_usd_per_mmbtu": 2.16,
+      "europe_gas_usd_per_mmbtu": 2.64,
+      "japan_lng_usd_per_mmbtu": 3.71
+    },
+    {
+      "month": "1993-01",
+      "brent_usd_per_barrel": 17.4,
+      "wti_usd_per_barrel": 19.1,
+      "us_gas_usd_per_mmbtu": 1.88,
+      "europe_gas_usd_per_mmbtu": 2.76,
+      "japan_lng_usd_per_mmbtu": 3.64
+    },
+    {
+      "month": "1993-02",
+      "brent_usd_per_barrel": 18.5,
+      "wti_usd_per_barrel": 20.1,
+      "us_gas_usd_per_mmbtu": 1.69,
+      "europe_gas_usd_per_mmbtu": 2.74,
+      "japan_lng_usd_per_mmbtu": 3.61
+    },
+    {
+      "month": "1993-03",
+      "brent_usd_per_barrel": 18.8,
+      "wti_usd_per_barrel": 20.4,
+      "us_gas_usd_per_mmbtu": 2.18,
+      "europe_gas_usd_per_mmbtu": 2.75,
+      "japan_lng_usd_per_mmbtu": 3.59
+    },
+    {
+      "month": "1993-04",
+      "brent_usd_per_barrel": 18.7,
+      "wti_usd_per_barrel": 20.3,
+      "us_gas_usd_per_mmbtu": 2.35,
+      "europe_gas_usd_per_mmbtu": 2.68,
+      "japan_lng_usd_per_mmbtu": 3.62
+    },
+    {
+      "month": "1993-05",
+      "brent_usd_per_barrel": 18.5,
+      "wti_usd_per_barrel": 20.0,
+      "us_gas_usd_per_mmbtu": 2.17,
+      "europe_gas_usd_per_mmbtu": 2.68,
+      "japan_lng_usd_per_mmbtu": 3.57
+    },
+    {
+      "month": "1993-06",
+      "brent_usd_per_barrel": 17.7,
+      "wti_usd_per_barrel": 19.2,
+      "us_gas_usd_per_mmbtu": 1.97,
+      "europe_gas_usd_per_mmbtu": 2.68,
+      "japan_lng_usd_per_mmbtu": 3.54
+    },
+    {
+      "month": "1993-07",
+      "brent_usd_per_barrel": 16.8,
+      "wti_usd_per_barrel": 17.9,
+      "us_gas_usd_per_mmbtu": 2.06,
+      "europe_gas_usd_per_mmbtu": 2.66,
+      "japan_lng_usd_per_mmbtu": 3.54
+    },
+    {
+      "month": "1993-08",
+      "brent_usd_per_barrel": 16.7,
+      "wti_usd_per_barrel": 18.0,
+      "us_gas_usd_per_mmbtu": 2.26,
+      "europe_gas_usd_per_mmbtu": 2.65,
+      "japan_lng_usd_per_mmbtu": 3.49
+    },
+    {
+      "month": "1993-09",
+      "brent_usd_per_barrel": 16.0,
+      "wti_usd_per_barrel": 17.5,
+      "us_gas_usd_per_mmbtu": 2.27,
+      "europe_gas_usd_per_mmbtu": 2.62,
+      "japan_lng_usd_per_mmbtu": 3.48
+    },
+    {
+      "month": "1993-10",
+      "brent_usd_per_barrel": 16.6,
+      "wti_usd_per_barrel": 18.2,
+      "us_gas_usd_per_mmbtu": 2.02,
+      "europe_gas_usd_per_mmbtu": 2.62,
+      "japan_lng_usd_per_mmbtu": 3.39
+    },
+    {
+      "month": "1993-11",
+      "brent_usd_per_barrel": 15.2,
+      "wti_usd_per_barrel": 16.8,
+      "us_gas_usd_per_mmbtu": 2.26,
+      "europe_gas_usd_per_mmbtu": 2.62,
+      "japan_lng_usd_per_mmbtu": 3.36
+    },
+    {
+      "month": "1993-12",
+      "brent_usd_per_barrel": 13.6,
+      "wti_usd_per_barrel": 15.6,
+      "us_gas_usd_per_mmbtu": 2.34,
+      "europe_gas_usd_per_mmbtu": 2.6,
+      "japan_lng_usd_per_mmbtu": 3.25
+    },
+    {
+      "month": "1994-01",
+      "brent_usd_per_barrel": 14.3,
+      "wti_usd_per_barrel": 15.0,
+      "us_gas_usd_per_mmbtu": 2.34,
+      "europe_gas_usd_per_mmbtu": 2.47,
+      "japan_lng_usd_per_mmbtu": 3.12
+    },
+    {
+      "month": "1994-02",
+      "brent_usd_per_barrel": 13.8,
+      "wti_usd_per_barrel": 14.8,
+      "us_gas_usd_per_mmbtu": 2.71,
+      "europe_gas_usd_per_mmbtu": 2.36,
+      "japan_lng_usd_per_mmbtu": 3.19
+    },
+    {
+      "month": "1994-03",
+      "brent_usd_per_barrel": 14.0,
+      "wti_usd_per_barrel": 14.7,
+      "us_gas_usd_per_mmbtu": 2.21,
+      "europe_gas_usd_per_mmbtu": 2.36,
+      "japan_lng_usd_per_mmbtu": 3.15
+    },
+    {
+      "month": "1994-04",
+      "brent_usd_per_barrel": 15.2,
+      "wti_usd_per_barrel": 16.3,
+      "us_gas_usd_per_mmbtu": 2.04,
+      "europe_gas_usd_per_mmbtu": 2.36,
+      "japan_lng_usd_per_mmbtu": 3.07
+    },
+    {
+      "month": "1994-05",
+      "brent_usd_per_barrel": 16.2,
+      "wti_usd_per_barrel": 17.9,
+      "us_gas_usd_per_mmbtu": 1.92,
+      "europe_gas_usd_per_mmbtu": 2.36,
+      "japan_lng_usd_per_mmbtu": 3.06
+    },
+    {
+      "month": "1994-06",
+      "brent_usd_per_barrel": 16.8,
+      "wti_usd_per_barrel": 19.1,
+      "us_gas_usd_per_mmbtu": 1.9,
+      "europe_gas_usd_per_mmbtu": 2.36,
+      "japan_lng_usd_per_mmbtu": 3.1
+    },
+    {
+      "month": "1994-07",
+      "brent_usd_per_barrel": 17.6,
+      "wti_usd_per_barrel": 19.7,
+      "us_gas_usd_per_mmbtu": 1.96,
+      "europe_gas_usd_per_mmbtu": 2.42,
+      "japan_lng_usd_per_mmbtu": 3.14
+    },
+    {
+      "month": "1994-08",
+      "brent_usd_per_barrel": 16.8,
+      "wti_usd_per_barrel": 18.4,
+      "us_gas_usd_per_mmbtu": 1.66,
+      "europe_gas_usd_per_mmbtu": 2.46,
+      "japan_lng_usd_per_mmbtu": 3.24
+    },
+    {
+      "month": "1994-09",
+      "brent_usd_per_barrel": 15.9,
+      "wti_usd_per_barrel": 17.5,
+      "us_gas_usd_per_mmbtu": 1.49,
+      "europe_gas_usd_per_mmbtu": 2.48,
+      "japan_lng_usd_per_mmbtu": 3.28
+    },
+    {
+      "month": "1994-10",
+      "brent_usd_per_barrel": 16.4,
+      "wti_usd_per_barrel": 17.7,
+      "us_gas_usd_per_mmbtu": 1.51,
+      "europe_gas_usd_per_mmbtu": 2.56,
+      "japan_lng_usd_per_mmbtu": 3.26
+    },
+    {
+      "month": "1994-11",
+      "brent_usd_per_barrel": 17.2,
+      "wti_usd_per_barrel": 18.1,
+      "us_gas_usd_per_mmbtu": 1.58,
+      "europe_gas_usd_per_mmbtu": 2.57,
+      "japan_lng_usd_per_mmbtu": 3.26
+    },
+    {
+      "month": "1994-12",
+      "brent_usd_per_barrel": 16.0,
+      "wti_usd_per_barrel": 17.2,
+      "us_gas_usd_per_mmbtu": 1.72,
+      "europe_gas_usd_per_mmbtu": 2.56,
+      "japan_lng_usd_per_mmbtu": 3.29
+    },
+    {
+      "month": "1995-01",
+      "brent_usd_per_barrel": 16.6,
+      "wti_usd_per_barrel": 18.0,
+      "us_gas_usd_per_mmbtu": 1.51,
+      "europe_gas_usd_per_mmbtu": 2.66,
+      "japan_lng_usd_per_mmbtu": 3.36
+    },
+    {
+      "month": "1995-02",
+      "brent_usd_per_barrel": 17.1,
+      "wti_usd_per_barrel": 18.5,
+      "us_gas_usd_per_mmbtu": 1.58,
+      "europe_gas_usd_per_mmbtu": 2.66,
+      "japan_lng_usd_per_mmbtu": 3.4
+    },
+    {
+      "month": "1995-03",
+      "brent_usd_per_barrel": 17.0,
+      "wti_usd_per_barrel": 18.5,
+      "us_gas_usd_per_mmbtu": 1.54,
+      "europe_gas_usd_per_mmbtu": 2.65,
+      "japan_lng_usd_per_mmbtu": 3.46
+    },
+    {
+      "month": "1995-04",
+      "brent_usd_per_barrel": 18.7,
+      "wti_usd_per_barrel": 19.9,
+      "us_gas_usd_per_mmbtu": 1.62,
+      "europe_gas_usd_per_mmbtu": 2.71,
+      "japan_lng_usd_per_mmbtu": 3.45
+    },
+    {
+      "month": "1995-05",
+      "brent_usd_per_barrel": 18.4,
+      "wti_usd_per_barrel": 19.6,
+      "us_gas_usd_per_mmbtu": 1.64,
+      "europe_gas_usd_per_mmbtu": 2.71,
+      "japan_lng_usd_per_mmbtu": 3.53
+    },
+    {
+      "month": "1995-06",
+      "brent_usd_per_barrel": 17.4,
+      "wti_usd_per_barrel": 18.5,
+      "us_gas_usd_per_mmbtu": 1.62,
+      "europe_gas_usd_per_mmbtu": 2.73,
+      "japan_lng_usd_per_mmbtu": 3.56
+    },
+    {
+      "month": "1995-07",
+      "brent_usd_per_barrel": 15.9,
+      "wti_usd_per_barrel": 17.4,
+      "us_gas_usd_per_mmbtu": 1.44,
+      "europe_gas_usd_per_mmbtu": 2.8,
+      "japan_lng_usd_per_mmbtu": 3.48
+    },
+    {
+      "month": "1995-08",
+      "brent_usd_per_barrel": 16.1,
+      "wti_usd_per_barrel": 18.0,
+      "us_gas_usd_per_mmbtu": 1.56,
+      "europe_gas_usd_per_mmbtu": 2.8,
+      "japan_lng_usd_per_mmbtu": 3.46
+    },
+    {
+      "month": "1995-09",
+      "brent_usd_per_barrel": 16.8,
+      "wti_usd_per_barrel": 18.0,
+      "us_gas_usd_per_mmbtu": 1.64,
+      "europe_gas_usd_per_mmbtu": 2.78,
+      "japan_lng_usd_per_mmbtu": 3.46
+    },
+    {
+      "month": "1995-10",
+      "brent_usd_per_barrel": 16.1,
+      "wti_usd_per_barrel": 17.3,
+      "us_gas_usd_per_mmbtu": 1.77,
+      "europe_gas_usd_per_mmbtu": 2.75,
+      "japan_lng_usd_per_mmbtu": 3.45
+    },
+    {
+      "month": "1995-11",
+      "brent_usd_per_barrel": 16.9,
+      "wti_usd_per_barrel": 17.8,
+      "us_gas_usd_per_mmbtu": 2.04,
+      "europe_gas_usd_per_mmbtu": 2.75,
+      "japan_lng_usd_per_mmbtu": 3.41
+    },
+    {
+      "month": "1995-12",
+      "brent_usd_per_barrel": 18.0,
+      "wti_usd_per_barrel": 18.8,
+      "us_gas_usd_per_mmbtu": 2.71,
+      "europe_gas_usd_per_mmbtu": 2.73,
+      "japan_lng_usd_per_mmbtu": 3.37
+    },
+    {
+      "month": "1996-01",
+      "brent_usd_per_barrel": 17.9,
+      "wti_usd_per_barrel": 18.9,
+      "us_gas_usd_per_mmbtu": 2.93,
+      "europe_gas_usd_per_mmbtu": 2.75,
+      "japan_lng_usd_per_mmbtu": 3.43
+    },
+    {
+      "month": "1996-02",
+      "brent_usd_per_barrel": 18.0,
+      "wti_usd_per_barrel": 19.1,
+      "us_gas_usd_per_mmbtu": 4.4,
+      "europe_gas_usd_per_mmbtu": 2.77,
+      "japan_lng_usd_per_mmbtu": 3.48
+    },
+    {
+      "month": "1996-03",
+      "brent_usd_per_barrel": 20.0,
+      "wti_usd_per_barrel": 21.2,
+      "us_gas_usd_per_mmbtu": 2.95,
+      "europe_gas_usd_per_mmbtu": 2.67,
+      "japan_lng_usd_per_mmbtu": 3.47
+    },
+    {
+      "month": "1996-04",
+      "brent_usd_per_barrel": 21.0,
+      "wti_usd_per_barrel": 23.2,
+      "us_gas_usd_per_mmbtu": 2.23,
+      "europe_gas_usd_per_mmbtu": 3.1,
+      "japan_lng_usd_per_mmbtu": 3.56
+    },
+    {
+      "month": "1996-05",
+      "brent_usd_per_barrel": 19.1,
+      "wti_usd_per_barrel": 21.1,
+      "us_gas_usd_per_mmbtu": 2.24,
+      "europe_gas_usd_per_mmbtu": 2.81,
+      "japan_lng_usd_per_mmbtu": 3.6
+    },
+    {
+      "month": "1996-06",
+      "brent_usd_per_barrel": 18.3,
+      "wti_usd_per_barrel": 20.3,
+      "us_gas_usd_per_mmbtu": 2.49,
+      "europe_gas_usd_per_mmbtu": 2.81,
+      "japan_lng_usd_per_mmbtu": 3.6
+    },
+    {
+      "month": "1996-07",
+      "brent_usd_per_barrel": 19.6,
+      "wti_usd_per_barrel": 21.4,
+      "us_gas_usd_per_mmbtu": 2.48,
+      "europe_gas_usd_per_mmbtu": 2.78,
+      "japan_lng_usd_per_mmbtu": 3.61
+    },
+    {
+      "month": "1996-08",
+      "brent_usd_per_barrel": 20.6,
+      "wti_usd_per_barrel": 22.0,
+      "us_gas_usd_per_mmbtu": 2.03,
+      "europe_gas_usd_per_mmbtu": 2.79,
+      "japan_lng_usd_per_mmbtu": 3.68
+    },
+    {
+      "month": "1996-09",
+      "brent_usd_per_barrel": 22.6,
+      "wti_usd_per_barrel": 23.9,
+      "us_gas_usd_per_mmbtu": 1.84,
+      "europe_gas_usd_per_mmbtu": 2.79,
+      "japan_lng_usd_per_mmbtu": 3.68
+    },
+    {
+      "month": "1996-10",
+      "brent_usd_per_barrel": 24.2,
+      "wti_usd_per_barrel": 24.9,
+      "us_gas_usd_per_mmbtu": 2.37,
+      "europe_gas_usd_per_mmbtu": 2.94,
+      "japan_lng_usd_per_mmbtu": 3.79
+    },
+    {
+      "month": "1996-11",
+      "brent_usd_per_barrel": 22.6,
+      "wti_usd_per_barrel": 23.7,
+      "us_gas_usd_per_mmbtu": 3.03,
+      "europe_gas_usd_per_mmbtu": 2.96,
+      "japan_lng_usd_per_mmbtu": 4.03
+    },
+    {
+      "month": "1996-12",
+      "brent_usd_per_barrel": 23.9,
+      "wti_usd_per_barrel": 25.3,
+      "us_gas_usd_per_mmbtu": 3.82,
+      "europe_gas_usd_per_mmbtu": 2.96,
+      "japan_lng_usd_per_mmbtu": 4.08
+    },
+    {
+      "month": "1997-01",
+      "brent_usd_per_barrel": 23.5,
+      "wti_usd_per_barrel": 24.9,
+      "us_gas_usd_per_mmbtu": 3.31,
+      "europe_gas_usd_per_mmbtu": 2.89,
+      "japan_lng_usd_per_mmbtu": 4.13
+    },
+    {
+      "month": "1997-02",
+      "brent_usd_per_barrel": 20.8,
+      "wti_usd_per_barrel": 21.8,
+      "us_gas_usd_per_mmbtu": 2.22,
+      "europe_gas_usd_per_mmbtu": 2.89,
+      "japan_lng_usd_per_mmbtu": 4.22
+    },
+    {
+      "month": "1997-03",
+      "brent_usd_per_barrel": 19.2,
+      "wti_usd_per_barrel": 20.7,
+      "us_gas_usd_per_mmbtu": 1.89,
+      "europe_gas_usd_per_mmbtu": 2.83,
+      "japan_lng_usd_per_mmbtu": 4.25
+    },
+    {
+      "month": "1997-04",
+      "brent_usd_per_barrel": 17.5,
+      "wti_usd_per_barrel": 19.4,
+      "us_gas_usd_per_mmbtu": 2.03,
+      "europe_gas_usd_per_mmbtu": 2.77,
+      "japan_lng_usd_per_mmbtu": 4.07
+    },
+    {
+      "month": "1997-05",
+      "brent_usd_per_barrel": 19.1,
+      "wti_usd_per_barrel": 20.5,
+      "us_gas_usd_per_mmbtu": 2.24,
+      "europe_gas_usd_per_mmbtu": 2.74,
+      "japan_lng_usd_per_mmbtu": 4.03
+    },
+    {
+      "month": "1997-06",
+      "brent_usd_per_barrel": 17.6,
+      "wti_usd_per_barrel": 18.9,
+      "us_gas_usd_per_mmbtu": 2.2,
+      "europe_gas_usd_per_mmbtu": 2.76,
+      "japan_lng_usd_per_mmbtu": 4.03
+    },
+    {
+      "month": "1997-07",
+      "brent_usd_per_barrel": 18.4,
+      "wti_usd_per_barrel": 19.3,
+      "us_gas_usd_per_mmbtu": 2.19,
+      "europe_gas_usd_per_mmbtu": 2.67,
+      "japan_lng_usd_per_mmbtu": 3.89
+    },
+    {
+      "month": "1997-08",
+      "brent_usd_per_barrel": 18.7,
+      "wti_usd_per_barrel": 19.6,
+      "us_gas_usd_per_mmbtu": 2.47,
+      "europe_gas_usd_per_mmbtu": 2.67,
+      "japan_lng_usd_per_mmbtu": 3.69
+    },
+    {
+      "month": "1997-09",
+      "brent_usd_per_barrel": 18.5,
+      "wti_usd_per_barrel": 19.6,
+      "us_gas_usd_per_mmbtu": 2.84,
+      "europe_gas_usd_per_mmbtu": 2.7,
+      "japan_lng_usd_per_mmbtu": 3.69
+    },
+    {
+      "month": "1997-10",
+      "brent_usd_per_barrel": 19.9,
+      "wti_usd_per_barrel": 21.2,
+      "us_gas_usd_per_mmbtu": 3.04,
+      "europe_gas_usd_per_mmbtu": 2.63,
+      "japan_lng_usd_per_mmbtu": 3.62
+    },
+    {
+      "month": "1997-11",
+      "brent_usd_per_barrel": 19.0,
+      "wti_usd_per_barrel": 19.9,
+      "us_gas_usd_per_mmbtu": 3.02,
+      "europe_gas_usd_per_mmbtu": 2.66,
+      "japan_lng_usd_per_mmbtu": 3.68
+    },
+    {
+      "month": "1997-12",
+      "brent_usd_per_barrel": 17.0,
+      "wti_usd_per_barrel": 18.1,
+      "us_gas_usd_per_mmbtu": 2.33,
+      "europe_gas_usd_per_mmbtu": 2.65,
+      "japan_lng_usd_per_mmbtu": 3.6
+    },
+    {
+      "month": "1998-01",
+      "brent_usd_per_barrel": 15.1,
+      "wti_usd_per_barrel": 16.5,
+      "us_gas_usd_per_mmbtu": 2.1,
+      "europe_gas_usd_per_mmbtu": 2.65,
+      "japan_lng_usd_per_mmbtu": 3.54
+    },
+    {
+      "month": "1998-02",
+      "brent_usd_per_barrel": 14.1,
+      "wti_usd_per_barrel": 15.8,
+      "us_gas_usd_per_mmbtu": 2.22,
+      "europe_gas_usd_per_mmbtu": 2.63,
+      "japan_lng_usd_per_mmbtu": 3.43
+    },
+    {
+      "month": "1998-03",
+      "brent_usd_per_barrel": 13.1,
+      "wti_usd_per_barrel": 14.8,
+      "us_gas_usd_per_mmbtu": 2.23,
+      "europe_gas_usd_per_mmbtu": 2.61,
+      "japan_lng_usd_per_mmbtu": 3.44
+    },
+    {
+      "month": "1998-04",
+      "brent_usd_per_barrel": 13.4,
+      "wti_usd_per_barrel": 15.3,
+      "us_gas_usd_per_mmbtu": 2.42,
+      "europe_gas_usd_per_mmbtu": 2.54,
+      "japan_lng_usd_per_mmbtu": 3.19
+    },
+    {
+      "month": "1998-05",
+      "brent_usd_per_barrel": 14.4,
+      "wti_usd_per_barrel": 14.9,
+      "us_gas_usd_per_mmbtu": 2.14,
+      "europe_gas_usd_per_mmbtu": 2.51,
+      "japan_lng_usd_per_mmbtu": 3.0
+    },
+    {
+      "month": "1998-06",
+      "brent_usd_per_barrel": 12.1,
+      "wti_usd_per_barrel": 13.7,
+      "us_gas_usd_per_mmbtu": 2.17,
+      "europe_gas_usd_per_mmbtu": 2.5,
+      "japan_lng_usd_per_mmbtu": 3.0
+    },
+    {
+      "month": "1998-07",
+      "brent_usd_per_barrel": 12.0,
+      "wti_usd_per_barrel": 14.1,
+      "us_gas_usd_per_mmbtu": 2.17,
+      "europe_gas_usd_per_mmbtu": 2.4,
+      "japan_lng_usd_per_mmbtu": 2.84
+    },
+    {
+      "month": "1998-08",
+      "brent_usd_per_barrel": 11.9,
+      "wti_usd_per_barrel": 13.4,
+      "us_gas_usd_per_mmbtu": 1.85,
+      "europe_gas_usd_per_mmbtu": 2.37,
+      "japan_lng_usd_per_mmbtu": 2.79
+    },
+    {
+      "month": "1998-09",
+      "brent_usd_per_barrel": 13.4,
+      "wti_usd_per_barrel": 15.0,
+      "us_gas_usd_per_mmbtu": 2.01,
+      "europe_gas_usd_per_mmbtu": 2.33,
+      "japan_lng_usd_per_mmbtu": 2.74
+    },
+    {
+      "month": "1998-10",
+      "brent_usd_per_barrel": 12.6,
+      "wti_usd_per_barrel": 14.4,
+      "us_gas_usd_per_mmbtu": 1.89,
+      "europe_gas_usd_per_mmbtu": 2.17,
+      "japan_lng_usd_per_mmbtu": 2.76
+    },
+    {
+      "month": "1998-11",
+      "brent_usd_per_barrel": 10.9,
+      "wti_usd_per_barrel": 13.0,
+      "us_gas_usd_per_mmbtu": 2.1,
+      "europe_gas_usd_per_mmbtu": 2.15,
+      "japan_lng_usd_per_mmbtu": 2.78
+    },
+    {
+      "month": "1998-12",
+      "brent_usd_per_barrel": 9.8,
+      "wti_usd_per_barrel": 11.3,
+      "us_gas_usd_per_mmbtu": 1.74,
+      "europe_gas_usd_per_mmbtu": 2.13,
+      "japan_lng_usd_per_mmbtu": 2.72
+    },
+    {
+      "month": "1999-01",
+      "brent_usd_per_barrel": 11.1,
+      "wti_usd_per_barrel": 12.5,
+      "us_gas_usd_per_mmbtu": 1.86,
+      "europe_gas_usd_per_mmbtu": 2.02,
+      "japan_lng_usd_per_mmbtu": 2.77
+    },
+    {
+      "month": "1999-02",
+      "brent_usd_per_barrel": 10.2,
+      "wti_usd_per_barrel": 12.0,
+      "us_gas_usd_per_mmbtu": 1.77,
+      "europe_gas_usd_per_mmbtu": 2.01,
+      "japan_lng_usd_per_mmbtu": 2.78
+    },
+    {
+      "month": "1999-03",
+      "brent_usd_per_barrel": 12.5,
+      "wti_usd_per_barrel": 14.7,
+      "us_gas_usd_per_mmbtu": 1.79,
+      "europe_gas_usd_per_mmbtu": 1.95,
+      "japan_lng_usd_per_mmbtu": 2.78
+    },
+    {
+      "month": "1999-04",
+      "brent_usd_per_barrel": 15.3,
+      "wti_usd_per_barrel": 17.3,
+      "us_gas_usd_per_mmbtu": 2.15,
+      "europe_gas_usd_per_mmbtu": 1.87,
+      "japan_lng_usd_per_mmbtu": 2.76
+    },
+    {
+      "month": "1999-05",
+      "brent_usd_per_barrel": 15.1,
+      "wti_usd_per_barrel": 17.8,
+      "us_gas_usd_per_mmbtu": 2.25,
+      "europe_gas_usd_per_mmbtu": 1.89,
+      "japan_lng_usd_per_mmbtu": 2.88
+    },
+    {
+      "month": "1999-06",
+      "brent_usd_per_barrel": 15.8,
+      "wti_usd_per_barrel": 17.9,
+      "us_gas_usd_per_mmbtu": 2.3,
+      "europe_gas_usd_per_mmbtu": 1.91,
+      "japan_lng_usd_per_mmbtu": 2.93
+    },
+    {
+      "month": "1999-07",
+      "brent_usd_per_barrel": 19.0,
+      "wti_usd_per_barrel": 20.1,
+      "us_gas_usd_per_mmbtu": 2.31,
+      "europe_gas_usd_per_mmbtu": 2.0,
+      "japan_lng_usd_per_mmbtu": 2.99
+    },
+    {
+      "month": "1999-08",
+      "brent_usd_per_barrel": 20.2,
+      "wti_usd_per_barrel": 21.3,
+      "us_gas_usd_per_mmbtu": 2.79,
+      "europe_gas_usd_per_mmbtu": 2.08,
+      "japan_lng_usd_per_mmbtu": 3.17
+    },
+    {
+      "month": "1999-09",
+      "brent_usd_per_barrel": 22.4,
+      "wti_usd_per_barrel": 23.9,
+      "us_gas_usd_per_mmbtu": 2.54,
+      "europe_gas_usd_per_mmbtu": 2.2,
+      "japan_lng_usd_per_mmbtu": 3.35
+    },
+    {
+      "month": "1999-10",
+      "brent_usd_per_barrel": 22.0,
+      "wti_usd_per_barrel": 22.6,
+      "us_gas_usd_per_mmbtu": 2.72,
+      "europe_gas_usd_per_mmbtu": 2.47,
+      "japan_lng_usd_per_mmbtu": 3.57
+    },
+    {
+      "month": "1999-11",
+      "brent_usd_per_barrel": 24.6,
+      "wti_usd_per_barrel": 24.9,
+      "us_gas_usd_per_mmbtu": 2.36,
+      "europe_gas_usd_per_mmbtu": 2.51,
+      "japan_lng_usd_per_mmbtu": 3.73
+    },
+    {
+      "month": "1999-12",
+      "brent_usd_per_barrel": 25.6,
+      "wti_usd_per_barrel": 26.1,
+      "us_gas_usd_per_mmbtu": 2.36,
+      "europe_gas_usd_per_mmbtu": 2.66,
+      "japan_lng_usd_per_mmbtu": 3.94
+    },
+    {
+      "month": "2000-01",
+      "brent_usd_per_barrel": 25.4,
+      "wti_usd_per_barrel": 27.3,
+      "us_gas_usd_per_mmbtu": 2.42,
+      "europe_gas_usd_per_mmbtu": 3.36,
+      "japan_lng_usd_per_mmbtu": 4.15
+    },
+    {
+      "month": "2000-02",
+      "brent_usd_per_barrel": 27.7,
+      "wti_usd_per_barrel": 29.3,
+      "us_gas_usd_per_mmbtu": 2.65,
+      "europe_gas_usd_per_mmbtu": 3.46,
+      "japan_lng_usd_per_mmbtu": 4.21
+    },
+    {
+      "month": "2000-03",
+      "brent_usd_per_barrel": 27.5,
+      "wti_usd_per_barrel": 29.9,
+      "us_gas_usd_per_mmbtu": 2.79,
+      "europe_gas_usd_per_mmbtu": 3.51,
+      "japan_lng_usd_per_mmbtu": 4.46
+    },
+    {
+      "month": "2000-04",
+      "brent_usd_per_barrel": 22.5,
+      "wti_usd_per_barrel": 25.8,
+      "us_gas_usd_per_mmbtu": 3.03,
+      "europe_gas_usd_per_mmbtu": 3.68,
+      "japan_lng_usd_per_mmbtu": 4.64
+    },
+    {
+      "month": "2000-05",
+      "brent_usd_per_barrel": 27.3,
+      "wti_usd_per_barrel": 28.8,
+      "us_gas_usd_per_mmbtu": 3.58,
+      "europe_gas_usd_per_mmbtu": 3.55,
+      "japan_lng_usd_per_mmbtu": 4.53
+    },
+    {
+      "month": "2000-06",
+      "brent_usd_per_barrel": 29.7,
+      "wti_usd_per_barrel": 31.9,
+      "us_gas_usd_per_mmbtu": 4.28,
+      "europe_gas_usd_per_mmbtu": 3.6,
+      "japan_lng_usd_per_mmbtu": 4.74
+    },
+    {
+      "month": "2000-07",
+      "brent_usd_per_barrel": 28.5,
+      "wti_usd_per_barrel": 30.0,
+      "us_gas_usd_per_mmbtu": 3.96,
+      "europe_gas_usd_per_mmbtu": 3.96,
+      "japan_lng_usd_per_mmbtu": 4.86
+    },
+    {
+      "month": "2000-08",
+      "brent_usd_per_barrel": 29.4,
+      "wti_usd_per_barrel": 31.3,
+      "us_gas_usd_per_mmbtu": 4.41,
+      "europe_gas_usd_per_mmbtu": 4.01,
+      "japan_lng_usd_per_mmbtu": 4.84
+    },
+    {
+      "month": "2000-09",
+      "brent_usd_per_barrel": 32.6,
+      "wti_usd_per_barrel": 33.9,
+      "us_gas_usd_per_mmbtu": 5.06,
+      "europe_gas_usd_per_mmbtu": 4.03,
+      "japan_lng_usd_per_mmbtu": 4.9
+    },
+    {
+      "month": "2000-10",
+      "brent_usd_per_barrel": 30.9,
+      "wti_usd_per_barrel": 33.0,
+      "us_gas_usd_per_mmbtu": 5.02,
+      "europe_gas_usd_per_mmbtu": 4.31,
+      "japan_lng_usd_per_mmbtu": 5.04
+    },
+    {
+      "month": "2000-11",
+      "brent_usd_per_barrel": 32.5,
+      "wti_usd_per_barrel": 34.4,
+      "us_gas_usd_per_mmbtu": 5.55,
+      "europe_gas_usd_per_mmbtu": 4.39,
+      "japan_lng_usd_per_mmbtu": 5.13
+    },
+    {
+      "month": "2000-12",
+      "brent_usd_per_barrel": 25.1,
+      "wti_usd_per_barrel": 28.4,
+      "us_gas_usd_per_mmbtu": 8.95,
+      "europe_gas_usd_per_mmbtu": 4.44,
+      "japan_lng_usd_per_mmbtu": 5.05
+    },
+    {
+      "month": "2001-01",
+      "brent_usd_per_barrel": 25.6,
+      "wti_usd_per_barrel": 29.6,
+      "us_gas_usd_per_mmbtu": 8.17,
+      "europe_gas_usd_per_mmbtu": 4.65,
+      "japan_lng_usd_per_mmbtu": 4.88
+    },
+    {
+      "month": "2001-02",
+      "brent_usd_per_barrel": 27.4,
+      "wti_usd_per_barrel": 29.6,
+      "us_gas_usd_per_mmbtu": 5.63,
+      "europe_gas_usd_per_mmbtu": 4.59,
+      "japan_lng_usd_per_mmbtu": 4.8
+    },
+    {
+      "month": "2001-03",
+      "brent_usd_per_barrel": 24.4,
+      "wti_usd_per_barrel": 27.2,
+      "us_gas_usd_per_mmbtu": 5.16,
+      "europe_gas_usd_per_mmbtu": 4.57,
+      "japan_lng_usd_per_mmbtu": 4.87
+    },
+    {
+      "month": "2001-04",
+      "brent_usd_per_barrel": 25.6,
+      "wti_usd_per_barrel": 27.4,
+      "us_gas_usd_per_mmbtu": 5.17,
+      "europe_gas_usd_per_mmbtu": 4.48,
+      "japan_lng_usd_per_mmbtu": 4.73
+    },
+    {
+      "month": "2001-05",
+      "brent_usd_per_barrel": 28.5,
+      "wti_usd_per_barrel": 28.6,
+      "us_gas_usd_per_mmbtu": 4.21,
+      "europe_gas_usd_per_mmbtu": 4.36,
+      "japan_lng_usd_per_mmbtu": 4.66
+    },
+    {
+      "month": "2001-06",
+      "brent_usd_per_barrel": 27.7,
+      "wti_usd_per_barrel": 27.6,
+      "us_gas_usd_per_mmbtu": 3.71,
+      "europe_gas_usd_per_mmbtu": 4.33,
+      "japan_lng_usd_per_mmbtu": 4.69
+    },
+    {
+      "month": "2001-07",
+      "brent_usd_per_barrel": 24.5,
+      "wti_usd_per_barrel": 26.4,
+      "us_gas_usd_per_mmbtu": 3.1,
+      "europe_gas_usd_per_mmbtu": 3.75,
+      "japan_lng_usd_per_mmbtu": 4.66
+    },
+    {
+      "month": "2001-08",
+      "brent_usd_per_barrel": 25.7,
+      "wti_usd_per_barrel": 27.4,
+      "us_gas_usd_per_mmbtu": 2.95,
+      "europe_gas_usd_per_mmbtu": 3.79,
+      "japan_lng_usd_per_mmbtu": 4.54
+    },
+    {
+      "month": "2001-09",
+      "brent_usd_per_barrel": 25.5,
+      "wti_usd_per_barrel": 26.1,
+      "us_gas_usd_per_mmbtu": 2.15,
+      "europe_gas_usd_per_mmbtu": 3.79,
+      "japan_lng_usd_per_mmbtu": 4.54
+    },
+    {
+      "month": "2001-10",
+      "brent_usd_per_barrel": 20.5,
+      "wti_usd_per_barrel": 22.2,
+      "us_gas_usd_per_mmbtu": 2.45,
+      "europe_gas_usd_per_mmbtu": 3.52,
+      "japan_lng_usd_per_mmbtu": 4.59
+    },
+    {
+      "month": "2001-11",
+      "brent_usd_per_barrel": 18.9,
+      "wti_usd_per_barrel": 19.6,
+      "us_gas_usd_per_mmbtu": 2.36,
+      "europe_gas_usd_per_mmbtu": 3.46,
+      "japan_lng_usd_per_mmbtu": 4.38
+    },
+    {
+      "month": "2001-12",
+      "brent_usd_per_barrel": 18.6,
+      "wti_usd_per_barrel": 19.3,
+      "us_gas_usd_per_mmbtu": 2.41,
+      "europe_gas_usd_per_mmbtu": 3.4,
+      "japan_lng_usd_per_mmbtu": 4.27
+    },
+    {
+      "month": "2002-01",
+      "brent_usd_per_barrel": 19.5,
+      "wti_usd_per_barrel": 19.7,
+      "us_gas_usd_per_mmbtu": 2.25,
+      "europe_gas_usd_per_mmbtu": 3.06,
+      "japan_lng_usd_per_mmbtu": 4.21
+    },
+    {
+      "month": "2002-02",
+      "brent_usd_per_barrel": 20.3,
+      "wti_usd_per_barrel": 20.7,
+      "us_gas_usd_per_mmbtu": 2.31,
+      "europe_gas_usd_per_mmbtu": 3.03,
+      "japan_lng_usd_per_mmbtu": 4.12
+    },
+    {
+      "month": "2002-03",
+      "brent_usd_per_barrel": 23.7,
+      "wti_usd_per_barrel": 24.4,
+      "us_gas_usd_per_mmbtu": 3.03,
+      "europe_gas_usd_per_mmbtu": 2.97,
+      "japan_lng_usd_per_mmbtu": 3.99
+    },
+    {
+      "month": "2002-04",
+      "brent_usd_per_barrel": 25.7,
+      "wti_usd_per_barrel": 26.2,
+      "us_gas_usd_per_mmbtu": 3.42,
+      "europe_gas_usd_per_mmbtu": 2.81,
+      "japan_lng_usd_per_mmbtu": 3.96
+    },
+    {
+      "month": "2002-05",
+      "brent_usd_per_barrel": 25.4,
+      "wti_usd_per_barrel": 27.0,
+      "us_gas_usd_per_mmbtu": 3.49,
+      "europe_gas_usd_per_mmbtu": 2.83,
+      "japan_lng_usd_per_mmbtu": 4.01
+    },
+    {
+      "month": "2002-06",
+      "brent_usd_per_barrel": 24.1,
+      "wti_usd_per_barrel": 25.5,
+      "us_gas_usd_per_mmbtu": 3.22,
+      "europe_gas_usd_per_mmbtu": 2.9,
+      "japan_lng_usd_per_mmbtu": 4.06
+    },
+    {
+      "month": "2002-07",
+      "brent_usd_per_barrel": 25.8,
+      "wti_usd_per_barrel": 26.9,
+      "us_gas_usd_per_mmbtu": 2.98,
+      "europe_gas_usd_per_mmbtu": 2.95,
+      "japan_lng_usd_per_mmbtu": 4.56
+    },
+    {
+      "month": "2002-08",
+      "brent_usd_per_barrel": 26.6,
+      "wti_usd_per_barrel": 28.4,
+      "us_gas_usd_per_mmbtu": 3.09,
+      "europe_gas_usd_per_mmbtu": 3.01,
+      "japan_lng_usd_per_mmbtu": 4.35
+    },
+    {
+      "month": "2002-09",
+      "brent_usd_per_barrel": 28.3,
+      "wti_usd_per_barrel": 29.7,
+      "us_gas_usd_per_mmbtu": 3.57,
+      "europe_gas_usd_per_mmbtu": 3.08,
+      "japan_lng_usd_per_mmbtu": 4.46
+    },
+    {
+      "month": "2002-10",
+      "brent_usd_per_barrel": 27.5,
+      "wti_usd_per_barrel": 28.9,
+      "us_gas_usd_per_mmbtu": 4.12,
+      "europe_gas_usd_per_mmbtu": 3.28,
+      "japan_lng_usd_per_mmbtu": 4.54
+    },
+    {
+      "month": "2002-11",
+      "brent_usd_per_barrel": 24.2,
+      "wti_usd_per_barrel": 26.3,
+      "us_gas_usd_per_mmbtu": 4.04,
+      "europe_gas_usd_per_mmbtu": 3.34,
+      "japan_lng_usd_per_mmbtu": 4.56
+    },
+    {
+      "month": "2002-12",
+      "brent_usd_per_barrel": 28.5,
+      "wti_usd_per_barrel": 29.4,
+      "us_gas_usd_per_mmbtu": 4.74,
+      "europe_gas_usd_per_mmbtu": 3.36,
+      "japan_lng_usd_per_mmbtu": 4.56
+    },
+    {
+      "month": "2003-01",
+      "brent_usd_per_barrel": 31.2,
+      "wti_usd_per_barrel": 32.9,
+      "us_gas_usd_per_mmbtu": 5.41,
+      "europe_gas_usd_per_mmbtu": 3.61,
+      "japan_lng_usd_per_mmbtu": 4.69
+    },
+    {
+      "month": "2003-02",
+      "brent_usd_per_barrel": 32.6,
+      "wti_usd_per_barrel": 35.8,
+      "us_gas_usd_per_mmbtu": 7.77,
+      "europe_gas_usd_per_mmbtu": 3.67,
+      "japan_lng_usd_per_mmbtu": 4.8
+    },
+    {
+      "month": "2003-03",
+      "brent_usd_per_barrel": 30.3,
+      "wti_usd_per_barrel": 33.3,
+      "us_gas_usd_per_mmbtu": 5.95,
+      "europe_gas_usd_per_mmbtu": 3.74,
+      "japan_lng_usd_per_mmbtu": 4.78
+    },
+    {
+      "month": "2003-04",
+      "brent_usd_per_barrel": 25.0,
+      "wti_usd_per_barrel": 28.2,
+      "us_gas_usd_per_mmbtu": 5.29,
+      "europe_gas_usd_per_mmbtu": 4.03,
+      "japan_lng_usd_per_mmbtu": 4.78
+    },
+    {
+      "month": "2003-05",
+      "brent_usd_per_barrel": 25.8,
+      "wti_usd_per_barrel": 28.1,
+      "us_gas_usd_per_mmbtu": 5.84,
+      "europe_gas_usd_per_mmbtu": 4.04,
+      "japan_lng_usd_per_mmbtu": 4.74
+    },
+    {
+      "month": "2003-06",
+      "brent_usd_per_barrel": 27.5,
+      "wti_usd_per_barrel": 30.7,
+      "us_gas_usd_per_mmbtu": 5.77,
+      "europe_gas_usd_per_mmbtu": 4.05,
+      "japan_lng_usd_per_mmbtu": 4.77
+    },
+    {
+      "month": "2003-07",
+      "brent_usd_per_barrel": 28.4,
+      "wti_usd_per_barrel": 30.7,
+      "us_gas_usd_per_mmbtu": 5.01,
+      "europe_gas_usd_per_mmbtu": 4.04,
+      "japan_lng_usd_per_mmbtu": 4.75
+    },
+    {
+      "month": "2003-08",
+      "brent_usd_per_barrel": 29.8,
+      "wti_usd_per_barrel": 31.6,
+      "us_gas_usd_per_mmbtu": 4.97,
+      "europe_gas_usd_per_mmbtu": 3.98,
+      "japan_lng_usd_per_mmbtu": 4.67
+    },
+    {
+      "month": "2003-09",
+      "brent_usd_per_barrel": 27.1,
+      "wti_usd_per_barrel": 28.3,
+      "us_gas_usd_per_mmbtu": 4.61,
+      "europe_gas_usd_per_mmbtu": 3.97,
+      "japan_lng_usd_per_mmbtu": 4.7
+    },
+    {
+      "month": "2003-10",
+      "brent_usd_per_barrel": 29.6,
+      "wti_usd_per_barrel": 30.3,
+      "us_gas_usd_per_mmbtu": 4.64,
+      "europe_gas_usd_per_mmbtu": 3.88,
+      "japan_lng_usd_per_mmbtu": 4.62
+    },
+    {
+      "month": "2003-11",
+      "brent_usd_per_barrel": 28.8,
+      "wti_usd_per_barrel": 31.1,
+      "us_gas_usd_per_mmbtu": 4.53,
+      "europe_gas_usd_per_mmbtu": 3.9,
+      "japan_lng_usd_per_mmbtu": 4.72
+    },
+    {
+      "month": "2003-12",
+      "brent_usd_per_barrel": 29.9,
+      "wti_usd_per_barrel": 32.1,
+      "us_gas_usd_per_mmbtu": 6.13,
+      "europe_gas_usd_per_mmbtu": 3.97,
+      "japan_lng_usd_per_mmbtu": 4.75
+    },
+    {
+      "month": "2004-01",
+      "brent_usd_per_barrel": 31.2,
+      "wti_usd_per_barrel": 34.2,
+      "us_gas_usd_per_mmbtu": 6.09,
+      "europe_gas_usd_per_mmbtu": 3.87,
+      "japan_lng_usd_per_mmbtu": 4.75
+    },
+    {
+      "month": "2004-02",
+      "brent_usd_per_barrel": 30.9,
+      "wti_usd_per_barrel": 34.7,
+      "us_gas_usd_per_mmbtu": 5.38,
+      "europe_gas_usd_per_mmbtu": 3.89,
+      "japan_lng_usd_per_mmbtu": 4.81
+    },
+    {
+      "month": "2004-03",
+      "brent_usd_per_barrel": 33.8,
+      "wti_usd_per_barrel": 36.7,
+      "us_gas_usd_per_mmbtu": 5.4,
+      "europe_gas_usd_per_mmbtu": 3.86,
+      "japan_lng_usd_per_mmbtu": 4.88
+    },
+    {
+      "month": "2004-04",
+      "brent_usd_per_barrel": 33.4,
+      "wti_usd_per_barrel": 36.7,
+      "us_gas_usd_per_mmbtu": 5.72,
+      "europe_gas_usd_per_mmbtu": 3.92,
+      "japan_lng_usd_per_mmbtu": 4.91
+    },
+    {
+      "month": "2004-05",
+      "brent_usd_per_barrel": 37.9,
+      "wti_usd_per_barrel": 40.3,
+      "us_gas_usd_per_mmbtu": 6.34,
+      "europe_gas_usd_per_mmbtu": 3.95,
+      "japan_lng_usd_per_mmbtu": 4.91
+    },
+    {
+      "month": "2004-06",
+      "brent_usd_per_barrel": 35.2,
+      "wti_usd_per_barrel": 38.0,
+      "us_gas_usd_per_mmbtu": 6.27,
+      "europe_gas_usd_per_mmbtu": 4.01,
+      "japan_lng_usd_per_mmbtu": 5.04
+    },
+    {
+      "month": "2004-07",
+      "brent_usd_per_barrel": 38.4,
+      "wti_usd_per_barrel": 40.8,
+      "us_gas_usd_per_mmbtu": 5.93,
+      "europe_gas_usd_per_mmbtu": 4.28,
+      "japan_lng_usd_per_mmbtu": 5.07
+    },
+    {
+      "month": "2004-08",
+      "brent_usd_per_barrel": 43.0,
+      "wti_usd_per_barrel": 44.9,
+      "us_gas_usd_per_mmbtu": 5.4,
+      "europe_gas_usd_per_mmbtu": 4.34,
+      "japan_lng_usd_per_mmbtu": 5.16
+    },
+    {
+      "month": "2004-09",
+      "brent_usd_per_barrel": 43.4,
+      "wti_usd_per_barrel": 45.9,
+      "us_gas_usd_per_mmbtu": 5.14,
+      "europe_gas_usd_per_mmbtu": 4.41,
+      "japan_lng_usd_per_mmbtu": 5.43
+    },
+    {
+      "month": "2004-10",
+      "brent_usd_per_barrel": 49.8,
+      "wti_usd_per_barrel": 53.2,
+      "us_gas_usd_per_mmbtu": 6.41,
+      "europe_gas_usd_per_mmbtu": 4.83,
+      "japan_lng_usd_per_mmbtu": 5.55
+    },
+    {
+      "month": "2004-11",
+      "brent_usd_per_barrel": 43.1,
+      "wti_usd_per_barrel": 48.4,
+      "us_gas_usd_per_mmbtu": 6.09,
+      "europe_gas_usd_per_mmbtu": 4.96,
+      "japan_lng_usd_per_mmbtu": 5.45
+    },
+    {
+      "month": "2004-12",
+      "brent_usd_per_barrel": 39.6,
+      "wti_usd_per_barrel": 43.2,
+      "us_gas_usd_per_mmbtu": 6.58,
+      "europe_gas_usd_per_mmbtu": 5.01,
+      "japan_lng_usd_per_mmbtu": 5.57
+    },
+    {
+      "month": "2005-01",
+      "brent_usd_per_barrel": 44.3,
+      "wti_usd_per_barrel": 46.8,
+      "us_gas_usd_per_mmbtu": 6.15,
+      "europe_gas_usd_per_mmbtu": 5.46,
+      "japan_lng_usd_per_mmbtu": 5.42
+    },
+    {
+      "month": "2005-02",
+      "brent_usd_per_barrel": 45.6,
+      "wti_usd_per_barrel": 48.0,
+      "us_gas_usd_per_mmbtu": 6.14,
+      "europe_gas_usd_per_mmbtu": 5.49,
+      "japan_lng_usd_per_mmbtu": 5.58
+    },
+    {
+      "month": "2005-03",
+      "brent_usd_per_barrel": 53.1,
+      "wti_usd_per_barrel": 54.2,
+      "us_gas_usd_per_mmbtu": 6.97,
+      "europe_gas_usd_per_mmbtu": 5.52,
+      "japan_lng_usd_per_mmbtu": 5.59
+    },
+    {
+      "month": "2005-04",
+      "brent_usd_per_barrel": 51.9,
+      "wti_usd_per_barrel": 53.0,
+      "us_gas_usd_per_mmbtu": 7.15,
+      "europe_gas_usd_per_mmbtu": 5.86,
+      "japan_lng_usd_per_mmbtu": 5.67
+    },
+    {
+      "month": "2005-05",
+      "brent_usd_per_barrel": 48.7,
+      "wti_usd_per_barrel": 49.8,
+      "us_gas_usd_per_mmbtu": 6.47,
+      "europe_gas_usd_per_mmbtu": 5.89,
+      "japan_lng_usd_per_mmbtu": 5.74
+    },
+    {
+      "month": "2005-06",
+      "brent_usd_per_barrel": 54.3,
+      "wti_usd_per_barrel": 56.4,
+      "us_gas_usd_per_mmbtu": 7.19,
+      "europe_gas_usd_per_mmbtu": 5.91,
+      "japan_lng_usd_per_mmbtu": 5.68
+    },
+    {
+      "month": "2005-07",
+      "brent_usd_per_barrel": 57.6,
+      "wti_usd_per_barrel": 58.7,
+      "us_gas_usd_per_mmbtu": 7.63,
+      "europe_gas_usd_per_mmbtu": 6.42,
+      "japan_lng_usd_per_mmbtu": 6.03
+    },
+    {
+      "month": "2005-08",
+      "brent_usd_per_barrel": 64.1,
+      "wti_usd_per_barrel": 65.0,
+      "us_gas_usd_per_mmbtu": 9.63,
+      "europe_gas_usd_per_mmbtu": 6.56,
+      "japan_lng_usd_per_mmbtu": 6.2
+    },
+    {
+      "month": "2005-09",
+      "brent_usd_per_barrel": 63.0,
+      "wti_usd_per_barrel": 65.5,
+      "us_gas_usd_per_mmbtu": 12.88,
+      "europe_gas_usd_per_mmbtu": 6.58,
+      "japan_lng_usd_per_mmbtu": 6.39
+    },
+    {
+      "month": "2005-10",
+      "brent_usd_per_barrel": 58.5,
+      "wti_usd_per_barrel": 62.4,
+      "us_gas_usd_per_mmbtu": 13.52,
+      "europe_gas_usd_per_mmbtu": 7.28,
+      "japan_lng_usd_per_mmbtu": 6.48
+    },
+    {
+      "month": "2005-11",
+      "brent_usd_per_barrel": 55.5,
+      "wti_usd_per_barrel": 58.3,
+      "us_gas_usd_per_mmbtu": 10.43,
+      "europe_gas_usd_per_mmbtu": 7.46,
+      "japan_lng_usd_per_mmbtu": 6.61
+    },
+    {
+      "month": "2005-12",
+      "brent_usd_per_barrel": 56.7,
+      "wti_usd_per_barrel": 59.4,
+      "us_gas_usd_per_mmbtu": 12.83,
+      "europe_gas_usd_per_mmbtu": 7.49,
+      "japan_lng_usd_per_mmbtu": 6.49
+    },
+    {
+      "month": "2006-01",
+      "brent_usd_per_barrel": 63.6,
+      "wti_usd_per_barrel": 65.5,
+      "us_gas_usd_per_mmbtu": 8.66,
+      "europe_gas_usd_per_mmbtu": 7.96,
+      "japan_lng_usd_per_mmbtu": 6.53
+    },
+    {
+      "month": "2006-02",
+      "brent_usd_per_barrel": 59.9,
+      "wti_usd_per_barrel": 61.6,
+      "us_gas_usd_per_mmbtu": 7.49,
+      "europe_gas_usd_per_mmbtu": 7.95,
+      "japan_lng_usd_per_mmbtu": 7.04
+    },
+    {
+      "month": "2006-03",
+      "brent_usd_per_barrel": 62.3,
+      "wti_usd_per_barrel": 62.9,
+      "us_gas_usd_per_mmbtu": 6.9,
+      "europe_gas_usd_per_mmbtu": 7.99,
+      "japan_lng_usd_per_mmbtu": 6.88
+    },
+    {
+      "month": "2006-04",
+      "brent_usd_per_barrel": 70.4,
+      "wti_usd_per_barrel": 69.4,
+      "us_gas_usd_per_mmbtu": 7.09,
+      "europe_gas_usd_per_mmbtu": 8.24,
+      "japan_lng_usd_per_mmbtu": 6.93
+    },
+    {
+      "month": "2006-05",
+      "brent_usd_per_barrel": 70.2,
+      "wti_usd_per_barrel": 70.9,
+      "us_gas_usd_per_mmbtu": 6.2,
+      "europe_gas_usd_per_mmbtu": 8.28,
+      "japan_lng_usd_per_mmbtu": 6.92
+    },
+    {
+      "month": "2006-06",
+      "brent_usd_per_barrel": 68.9,
+      "wti_usd_per_barrel": 70.9,
+      "us_gas_usd_per_mmbtu": 6.19,
+      "europe_gas_usd_per_mmbtu": 8.29,
+      "japan_lng_usd_per_mmbtu": 7.1
+    },
+    {
+      "month": "2006-07",
+      "brent_usd_per_barrel": 73.9,
+      "wti_usd_per_barrel": 74.4,
+      "us_gas_usd_per_mmbtu": 6.25,
+      "europe_gas_usd_per_mmbtu": 8.58,
+      "japan_lng_usd_per_mmbtu": 6.86
+    },
+    {
+      "month": "2006-08",
+      "brent_usd_per_barrel": 73.6,
+      "wti_usd_per_barrel": 73.0,
+      "us_gas_usd_per_mmbtu": 7.0,
+      "europe_gas_usd_per_mmbtu": 8.71,
+      "japan_lng_usd_per_mmbtu": 7.23
+    },
+    {
+      "month": "2006-09",
+      "brent_usd_per_barrel": 62.8,
+      "wti_usd_per_barrel": 63.8,
+      "us_gas_usd_per_mmbtu": 4.86,
+      "europe_gas_usd_per_mmbtu": 8.77,
+      "japan_lng_usd_per_mmbtu": 7.65
+    },
+    {
+      "month": "2006-10",
+      "brent_usd_per_barrel": 58.4,
+      "wti_usd_per_barrel": 58.9,
+      "us_gas_usd_per_mmbtu": 5.96,
+      "europe_gas_usd_per_mmbtu": 8.97,
+      "japan_lng_usd_per_mmbtu": 7.2
+    },
+    {
+      "month": "2006-11",
+      "brent_usd_per_barrel": 58.5,
+      "wti_usd_per_barrel": 59.1,
+      "us_gas_usd_per_mmbtu": 7.45,
+      "europe_gas_usd_per_mmbtu": 8.99,
+      "japan_lng_usd_per_mmbtu": 7.21
+    },
+    {
+      "month": "2006-12",
+      "brent_usd_per_barrel": 62.3,
+      "wti_usd_per_barrel": 62.0,
+      "us_gas_usd_per_mmbtu": 6.58,
+      "europe_gas_usd_per_mmbtu": 8.92,
+      "japan_lng_usd_per_mmbtu": 7.35
+    },
+    {
+      "month": "2007-01",
+      "brent_usd_per_barrel": 54.3,
+      "wti_usd_per_barrel": 54.2,
+      "us_gas_usd_per_mmbtu": 6.58,
+      "europe_gas_usd_per_mmbtu": 8.59,
+      "japan_lng_usd_per_mmbtu": 7.11
+    },
+    {
+      "month": "2007-02",
+      "brent_usd_per_barrel": 57.8,
+      "wti_usd_per_barrel": 59.3,
+      "us_gas_usd_per_mmbtu": 7.97,
+      "europe_gas_usd_per_mmbtu": 8.56,
+      "japan_lng_usd_per_mmbtu": 6.89
+    },
+    {
+      "month": "2007-03",
+      "brent_usd_per_barrel": 62.1,
+      "wti_usd_per_barrel": 60.6,
+      "us_gas_usd_per_mmbtu": 7.12,
+      "europe_gas_usd_per_mmbtu": 8.37,
+      "japan_lng_usd_per_mmbtu": 6.86
+    },
+    {
+      "month": "2007-04",
+      "brent_usd_per_barrel": 67.4,
+      "wti_usd_per_barrel": 63.9,
+      "us_gas_usd_per_mmbtu": 7.59,
+      "europe_gas_usd_per_mmbtu": 8.0,
+      "japan_lng_usd_per_mmbtu": 7.09
+    },
+    {
+      "month": "2007-05",
+      "brent_usd_per_barrel": 67.5,
+      "wti_usd_per_barrel": 63.5,
+      "us_gas_usd_per_mmbtu": 7.61,
+      "europe_gas_usd_per_mmbtu": 7.98,
+      "japan_lng_usd_per_mmbtu": 7.22
+    },
+    {
+      "month": "2007-06",
+      "brent_usd_per_barrel": 71.3,
+      "wti_usd_per_barrel": 67.5,
+      "us_gas_usd_per_mmbtu": 7.3,
+      "europe_gas_usd_per_mmbtu": 8.03,
+      "japan_lng_usd_per_mmbtu": 7.11
+    },
+    {
+      "month": "2007-07",
+      "brent_usd_per_barrel": 77.2,
+      "wti_usd_per_barrel": 74.1,
+      "us_gas_usd_per_mmbtu": 6.22,
+      "europe_gas_usd_per_mmbtu": 8.13,
+      "japan_lng_usd_per_mmbtu": 7.26
+    },
+    {
+      "month": "2007-08",
+      "brent_usd_per_barrel": 70.8,
+      "wti_usd_per_barrel": 72.4,
+      "us_gas_usd_per_mmbtu": 6.2,
+      "europe_gas_usd_per_mmbtu": 8.34,
+      "japan_lng_usd_per_mmbtu": 7.7
+    },
+    {
+      "month": "2007-09",
+      "brent_usd_per_barrel": 77.1,
+      "wti_usd_per_barrel": 79.9,
+      "us_gas_usd_per_mmbtu": 6.1,
+      "europe_gas_usd_per_mmbtu": 8.54,
+      "japan_lng_usd_per_mmbtu": 8.09
+    },
+    {
+      "month": "2007-10",
+      "brent_usd_per_barrel": 82.9,
+      "wti_usd_per_barrel": 85.9,
+      "us_gas_usd_per_mmbtu": 6.8,
+      "europe_gas_usd_per_mmbtu": 9.16,
+      "japan_lng_usd_per_mmbtu": 8.55
+    },
+    {
+      "month": "2007-11",
+      "brent_usd_per_barrel": 92.5,
+      "wti_usd_per_barrel": 94.8,
+      "us_gas_usd_per_mmbtu": 7.14,
+      "europe_gas_usd_per_mmbtu": 9.47,
+      "japan_lng_usd_per_mmbtu": 9.14
+    },
+    {
+      "month": "2007-12",
+      "brent_usd_per_barrel": 91.5,
+      "wti_usd_per_barrel": 91.4,
+      "us_gas_usd_per_mmbtu": 7.15,
+      "europe_gas_usd_per_mmbtu": 9.49,
+      "japan_lng_usd_per_mmbtu": 9.18
+    },
+    {
+      "month": "2008-01",
+      "brent_usd_per_barrel": 91.9,
+      "wti_usd_per_barrel": 93.0,
+      "us_gas_usd_per_mmbtu": 8.0,
+      "europe_gas_usd_per_mmbtu": 10.7,
+      "japan_lng_usd_per_mmbtu": 9.94
+    },
+    {
+      "month": "2008-02",
+      "brent_usd_per_barrel": 94.8,
+      "wti_usd_per_barrel": 95.4,
+      "us_gas_usd_per_mmbtu": 8.55,
+      "europe_gas_usd_per_mmbtu": 10.84,
+      "japan_lng_usd_per_mmbtu": 10.46
+    },
+    {
+      "month": "2008-03",
+      "brent_usd_per_barrel": 103.3,
+      "wti_usd_per_barrel": 105.5,
+      "us_gas_usd_per_mmbtu": 9.4,
+      "europe_gas_usd_per_mmbtu": 11.04,
+      "japan_lng_usd_per_mmbtu": 10.96
+    },
+    {
+      "month": "2008-04",
+      "brent_usd_per_barrel": 110.2,
+      "wti_usd_per_barrel": 112.6,
+      "us_gas_usd_per_mmbtu": 10.13,
+      "europe_gas_usd_per_mmbtu": 12.19,
+      "japan_lng_usd_per_mmbtu": 11.42
+    },
+    {
+      "month": "2008-05",
+      "brent_usd_per_barrel": 123.9,
+      "wti_usd_per_barrel": 125.0,
+      "us_gas_usd_per_mmbtu": 11.23,
+      "europe_gas_usd_per_mmbtu": 12.38,
+      "japan_lng_usd_per_mmbtu": 11.63
+    },
+    {
+      "month": "2008-06",
+      "brent_usd_per_barrel": 133.0,
+      "wti_usd_per_barrel": 133.9,
+      "us_gas_usd_per_mmbtu": 12.68,
+      "europe_gas_usd_per_mmbtu": 12.63,
+      "japan_lng_usd_per_mmbtu": 12.07
+    },
+    {
+      "month": "2008-07",
+      "brent_usd_per_barrel": 133.9,
+      "wti_usd_per_barrel": 133.4,
+      "us_gas_usd_per_mmbtu": 11.15,
+      "europe_gas_usd_per_mmbtu": 14.37,
+      "japan_lng_usd_per_mmbtu": 12.35
+    },
+    {
+      "month": "2008-08",
+      "brent_usd_per_barrel": 113.8,
+      "wti_usd_per_barrel": 116.6,
+      "us_gas_usd_per_mmbtu": 8.25,
+      "europe_gas_usd_per_mmbtu": 14.64,
+      "japan_lng_usd_per_mmbtu": 13.25
+    },
+    {
+      "month": "2008-09",
+      "brent_usd_per_barrel": 99.1,
+      "wti_usd_per_barrel": 103.9,
+      "us_gas_usd_per_mmbtu": 7.69,
+      "europe_gas_usd_per_mmbtu": 14.85,
+      "japan_lng_usd_per_mmbtu": 14.39
+    },
+    {
+      "month": "2008-10",
+      "brent_usd_per_barrel": 72.8,
+      "wti_usd_per_barrel": 76.6,
+      "us_gas_usd_per_mmbtu": 6.73,
+      "europe_gas_usd_per_mmbtu": 15.93,
+      "japan_lng_usd_per_mmbtu": 15.01
+    },
+    {
+      "month": "2008-11",
+      "brent_usd_per_barrel": 53.2,
+      "wti_usd_per_barrel": 57.3,
+      "us_gas_usd_per_mmbtu": 6.67,
+      "europe_gas_usd_per_mmbtu": 15.81,
+      "japan_lng_usd_per_mmbtu": 15.06
+    },
+    {
+      "month": "2008-12",
+      "brent_usd_per_barrel": 41.6,
+      "wti_usd_per_barrel": 41.4,
+      "us_gas_usd_per_mmbtu": 5.79,
+      "europe_gas_usd_per_mmbtu": 15.5,
+      "japan_lng_usd_per_mmbtu": 13.78
+    },
+    {
+      "month": "2009-01",
+      "brent_usd_per_barrel": 44.9,
+      "wti_usd_per_barrel": 41.7,
+      "us_gas_usd_per_mmbtu": 5.24,
+      "europe_gas_usd_per_mmbtu": 13.89,
+      "japan_lng_usd_per_mmbtu": 12.71
+    },
+    {
+      "month": "2009-02",
+      "brent_usd_per_barrel": 43.2,
+      "wti_usd_per_barrel": 39.2,
+      "us_gas_usd_per_mmbtu": 4.52,
+      "europe_gas_usd_per_mmbtu": 11.04,
+      "japan_lng_usd_per_mmbtu": 10.52
+    },
+    {
+      "month": "2009-03",
+      "brent_usd_per_barrel": 46.8,
+      "wti_usd_per_barrel": 47.5,
+      "us_gas_usd_per_mmbtu": 3.95,
+      "europe_gas_usd_per_mmbtu": 10.9,
+      "japan_lng_usd_per_mmbtu": 9.48
+    },
+    {
+      "month": "2009-04",
+      "brent_usd_per_barrel": 50.8,
+      "wti_usd_per_barrel": 49.8,
+      "us_gas_usd_per_mmbtu": 3.5,
+      "europe_gas_usd_per_mmbtu": 8.51,
+      "japan_lng_usd_per_mmbtu": 8.12
+    },
+    {
+      "month": "2009-05",
+      "brent_usd_per_barrel": 57.9,
+      "wti_usd_per_barrel": 59.1,
+      "us_gas_usd_per_mmbtu": 3.81,
+      "europe_gas_usd_per_mmbtu": 8.09,
+      "japan_lng_usd_per_mmbtu": 7.5
+    },
+    {
+      "month": "2009-06",
+      "brent_usd_per_barrel": 68.6,
+      "wti_usd_per_barrel": 69.6,
+      "us_gas_usd_per_mmbtu": 3.8,
+      "europe_gas_usd_per_mmbtu": 7.95,
+      "japan_lng_usd_per_mmbtu": 7.18
+    },
+    {
+      "month": "2009-07",
+      "brent_usd_per_barrel": 64.9,
+      "wti_usd_per_barrel": 64.1,
+      "us_gas_usd_per_mmbtu": 3.39,
+      "europe_gas_usd_per_mmbtu": 6.67,
+      "japan_lng_usd_per_mmbtu": 7.55
+    },
+    {
+      "month": "2009-08",
+      "brent_usd_per_barrel": 72.5,
+      "wti_usd_per_barrel": 71.1,
+      "us_gas_usd_per_mmbtu": 3.15,
+      "europe_gas_usd_per_mmbtu": 6.92,
+      "japan_lng_usd_per_mmbtu": 7.76
+    },
+    {
+      "month": "2009-09",
+      "brent_usd_per_barrel": 67.7,
+      "wti_usd_per_barrel": 69.4,
+      "us_gas_usd_per_mmbtu": 2.96,
+      "europe_gas_usd_per_mmbtu": 7.13,
+      "japan_lng_usd_per_mmbtu": 8.42
+    },
+    {
+      "month": "2009-10",
+      "brent_usd_per_barrel": 73.2,
+      "wti_usd_per_barrel": 75.8,
+      "us_gas_usd_per_mmbtu": 4.02,
+      "europe_gas_usd_per_mmbtu": 7.6,
+      "japan_lng_usd_per_mmbtu": 9.1
+    },
+    {
+      "month": "2009-11",
+      "brent_usd_per_barrel": 77.0,
+      "wti_usd_per_barrel": 78.0,
+      "us_gas_usd_per_mmbtu": 3.69,
+      "europe_gas_usd_per_mmbtu": 7.81,
+      "japan_lng_usd_per_mmbtu": 9.13
+    },
+    {
+      "month": "2009-12",
+      "brent_usd_per_barrel": 74.7,
+      "wti_usd_per_barrel": 74.5,
+      "us_gas_usd_per_mmbtu": 5.37,
+      "europe_gas_usd_per_mmbtu": 8.01,
+      "japan_lng_usd_per_mmbtu": 9.76
+    },
+    {
+      "month": "2010-01",
+      "brent_usd_per_barrel": 76.4,
+      "wti_usd_per_barrel": 78.4,
+      "us_gas_usd_per_mmbtu": 5.81,
+      "europe_gas_usd_per_mmbtu": 8.8,
+      "japan_lng_usd_per_mmbtu": 10.02
+    },
+    {
+      "month": "2010-02",
+      "brent_usd_per_barrel": 74.3,
+      "wti_usd_per_barrel": 76.4,
+      "us_gas_usd_per_mmbtu": 5.34,
+      "europe_gas_usd_per_mmbtu": 8.8,
+      "japan_lng_usd_per_mmbtu": 10.52
+    },
+    {
+      "month": "2010-03",
+      "brent_usd_per_barrel": 79.3,
+      "wti_usd_per_barrel": 81.3,
+      "us_gas_usd_per_mmbtu": 4.29,
+      "europe_gas_usd_per_mmbtu": 8.93,
+      "japan_lng_usd_per_mmbtu": 10.42
+    },
+    {
+      "month": "2010-04",
+      "brent_usd_per_barrel": 85.0,
+      "wti_usd_per_barrel": 84.5,
+      "us_gas_usd_per_mmbtu": 4.01,
+      "europe_gas_usd_per_mmbtu": 7.52,
+      "japan_lng_usd_per_mmbtu": 10.98
+    },
+    {
+      "month": "2010-05",
+      "brent_usd_per_barrel": 76.3,
+      "wti_usd_per_barrel": 73.7,
+      "us_gas_usd_per_mmbtu": 4.16,
+      "europe_gas_usd_per_mmbtu": 7.27,
+      "japan_lng_usd_per_mmbtu": 11.39
+    },
+    {
+      "month": "2010-06",
+      "brent_usd_per_barrel": 74.8,
+      "wti_usd_per_barrel": 75.4,
+      "us_gas_usd_per_mmbtu": 4.79,
+      "europe_gas_usd_per_mmbtu": 7.74,
+      "japan_lng_usd_per_mmbtu": 10.48
+    },
+    {
+      "month": "2010-07",
+      "brent_usd_per_barrel": 74.7,
+      "wti_usd_per_barrel": 76.4,
+      "us_gas_usd_per_mmbtu": 4.63,
+      "europe_gas_usd_per_mmbtu": 8.04,
+      "japan_lng_usd_per_mmbtu": 11.32
+    },
+    {
+      "month": "2010-08",
+      "brent_usd_per_barrel": 76.7,
+      "wti_usd_per_barrel": 76.6,
+      "us_gas_usd_per_mmbtu": 4.31,
+      "europe_gas_usd_per_mmbtu": 8.45,
+      "japan_lng_usd_per_mmbtu": 11.3
+    },
+    {
+      "month": "2010-09",
+      "brent_usd_per_barrel": 77.8,
+      "wti_usd_per_barrel": 75.3,
+      "us_gas_usd_per_mmbtu": 3.9,
+      "europe_gas_usd_per_mmbtu": 8.28,
+      "japan_lng_usd_per_mmbtu": 11.03
+    },
+    {
+      "month": "2010-10",
+      "brent_usd_per_barrel": 82.9,
+      "wti_usd_per_barrel": 81.9,
+      "us_gas_usd_per_mmbtu": 3.43,
+      "europe_gas_usd_per_mmbtu": 8.29,
+      "japan_lng_usd_per_mmbtu": 11.13
+    },
+    {
+      "month": "2010-11",
+      "brent_usd_per_barrel": 85.7,
+      "wti_usd_per_barrel": 84.2,
+      "us_gas_usd_per_mmbtu": 3.73,
+      "europe_gas_usd_per_mmbtu": 8.59,
+      "japan_lng_usd_per_mmbtu": 10.84
+    },
+    {
+      "month": "2010-12",
+      "brent_usd_per_barrel": 91.8,
+      "wti_usd_per_barrel": 89.1,
+      "us_gas_usd_per_mmbtu": 4.24,
+      "europe_gas_usd_per_mmbtu": 8.74,
+      "japan_lng_usd_per_mmbtu": 10.75
+    },
+    {
+      "month": "2011-01",
+      "brent_usd_per_barrel": 96.3,
+      "wti_usd_per_barrel": 89.4,
+      "us_gas_usd_per_mmbtu": 4.49,
+      "europe_gas_usd_per_mmbtu": 9.61,
+      "japan_lng_usd_per_mmbtu": 11.45
+    },
+    {
+      "month": "2011-02",
+      "brent_usd_per_barrel": 104.0,
+      "wti_usd_per_barrel": 89.5,
+      "us_gas_usd_per_mmbtu": 4.07,
+      "europe_gas_usd_per_mmbtu": 9.36,
+      "japan_lng_usd_per_mmbtu": 12.02
+    },
+    {
+      "month": "2011-03",
+      "brent_usd_per_barrel": 114.4,
+      "wti_usd_per_barrel": 102.9,
+      "us_gas_usd_per_mmbtu": 3.97,
+      "europe_gas_usd_per_mmbtu": 9.37,
+      "japan_lng_usd_per_mmbtu": 12.5
+    },
+    {
+      "month": "2011-04",
+      "brent_usd_per_barrel": 123.1,
+      "wti_usd_per_barrel": 110.0,
+      "us_gas_usd_per_mmbtu": 4.24,
+      "europe_gas_usd_per_mmbtu": 10.36,
+      "japan_lng_usd_per_mmbtu": 12.99
+    },
+    {
+      "month": "2011-05",
+      "brent_usd_per_barrel": 114.5,
+      "wti_usd_per_barrel": 101.3,
+      "us_gas_usd_per_mmbtu": 4.31,
+      "europe_gas_usd_per_mmbtu": 10.3,
+      "japan_lng_usd_per_mmbtu": 13.61
+    },
+    {
+      "month": "2011-06",
+      "brent_usd_per_barrel": 113.8,
+      "wti_usd_per_barrel": 96.3,
+      "us_gas_usd_per_mmbtu": 4.55,
+      "europe_gas_usd_per_mmbtu": 10.26,
+      "japan_lng_usd_per_mmbtu": 14.52
+    },
+    {
+      "month": "2011-07",
+      "brent_usd_per_barrel": 116.5,
+      "wti_usd_per_barrel": 97.3,
+      "us_gas_usd_per_mmbtu": 4.41,
+      "europe_gas_usd_per_mmbtu": 10.99,
+      "japan_lng_usd_per_mmbtu": 16.22
+    },
+    {
+      "month": "2011-08",
+      "brent_usd_per_barrel": 110.1,
+      "wti_usd_per_barrel": 86.3,
+      "us_gas_usd_per_mmbtu": 4.05,
+      "europe_gas_usd_per_mmbtu": 10.81,
+      "japan_lng_usd_per_mmbtu": 16.55
+    },
+    {
+      "month": "2011-09",
+      "brent_usd_per_barrel": 110.9,
+      "wti_usd_per_barrel": 85.6,
+      "us_gas_usd_per_mmbtu": 3.9,
+      "europe_gas_usd_per_mmbtu": 10.85,
+      "japan_lng_usd_per_mmbtu": 16.27
+    },
+    {
+      "month": "2011-10",
+      "brent_usd_per_barrel": 109.5,
+      "wti_usd_per_barrel": 86.4,
+      "us_gas_usd_per_mmbtu": 3.57,
+      "europe_gas_usd_per_mmbtu": 11.42,
+      "japan_lng_usd_per_mmbtu": 16.48
+    },
+    {
+      "month": "2011-11",
+      "brent_usd_per_barrel": 110.5,
+      "wti_usd_per_barrel": 97.1,
+      "us_gas_usd_per_mmbtu": 3.24,
+      "europe_gas_usd_per_mmbtu": 11.32,
+      "japan_lng_usd_per_mmbtu": 16.78
+    },
+    {
+      "month": "2011-12",
+      "brent_usd_per_barrel": 107.9,
+      "wti_usd_per_barrel": 98.6,
+      "us_gas_usd_per_mmbtu": 3.16,
+      "europe_gas_usd_per_mmbtu": 11.53,
+      "japan_lng_usd_per_mmbtu": 16.48
+    },
+    {
+      "month": "2012-01",
+      "brent_usd_per_barrel": 111.2,
+      "wti_usd_per_barrel": 100.3,
+      "us_gas_usd_per_mmbtu": 2.68,
+      "europe_gas_usd_per_mmbtu": 11.45,
+      "japan_lng_usd_per_mmbtu": 16.71
+    },
+    {
+      "month": "2012-02",
+      "brent_usd_per_barrel": 119.7,
+      "wti_usd_per_barrel": 102.2,
+      "us_gas_usd_per_mmbtu": 2.52,
+      "europe_gas_usd_per_mmbtu": 11.12,
+      "japan_lng_usd_per_mmbtu": 16.03
+    },
+    {
+      "month": "2012-03",
+      "brent_usd_per_barrel": 124.9,
+      "wti_usd_per_barrel": 106.2,
+      "us_gas_usd_per_mmbtu": 2.17,
+      "europe_gas_usd_per_mmbtu": 11.97,
+      "japan_lng_usd_per_mmbtu": 16.34
+    },
+    {
+      "month": "2012-04",
+      "brent_usd_per_barrel": 120.5,
+      "wti_usd_per_barrel": 103.3,
+      "us_gas_usd_per_mmbtu": 1.95,
+      "europe_gas_usd_per_mmbtu": 11.42,
+      "japan_lng_usd_per_mmbtu": 16.85
+    },
+    {
+      "month": "2012-05",
+      "brent_usd_per_barrel": 110.5,
+      "wti_usd_per_barrel": 94.7,
+      "us_gas_usd_per_mmbtu": 2.44,
+      "europe_gas_usd_per_mmbtu": 11.64,
+      "japan_lng_usd_per_mmbtu": 17.12
+    },
+    {
+      "month": "2012-06",
+      "brent_usd_per_barrel": 95.6,
+      "wti_usd_per_barrel": 82.4,
+      "us_gas_usd_per_mmbtu": 2.46,
+      "europe_gas_usd_per_mmbtu": 11.49,
+      "japan_lng_usd_per_mmbtu": 17.2
+    },
+    {
+      "month": "2012-07",
+      "brent_usd_per_barrel": 103.1,
+      "wti_usd_per_barrel": 87.9,
+      "us_gas_usd_per_mmbtu": 2.95,
+      "europe_gas_usd_per_mmbtu": 11.13,
+      "japan_lng_usd_per_mmbtu": 18.11
+    },
+    {
+      "month": "2012-08",
+      "brent_usd_per_barrel": 113.3,
+      "wti_usd_per_barrel": 94.1,
+      "us_gas_usd_per_mmbtu": 2.84,
+      "europe_gas_usd_per_mmbtu": 11.18,
+      "japan_lng_usd_per_mmbtu": 17.74
+    },
+    {
+      "month": "2012-09",
+      "brent_usd_per_barrel": 113.4,
+      "wti_usd_per_barrel": 94.5,
+      "us_gas_usd_per_mmbtu": 2.84,
+      "europe_gas_usd_per_mmbtu": 11.08,
+      "japan_lng_usd_per_mmbtu": 16.83
+    },
+    {
+      "month": "2012-10",
+      "brent_usd_per_barrel": 112.0,
+      "wti_usd_per_barrel": 89.5,
+      "us_gas_usd_per_mmbtu": 3.32,
+      "europe_gas_usd_per_mmbtu": 11.58,
+      "japan_lng_usd_per_mmbtu": 15.3
+    },
+    {
+      "month": "2012-11",
+      "brent_usd_per_barrel": 109.7,
+      "wti_usd_per_barrel": 86.7,
+      "us_gas_usd_per_mmbtu": 3.54,
+      "europe_gas_usd_per_mmbtu": 11.83,
+      "japan_lng_usd_per_mmbtu": 15.0
+    },
+    {
+      "month": "2012-12",
+      "brent_usd_per_barrel": 109.7,
+      "wti_usd_per_barrel": 88.2,
+      "us_gas_usd_per_mmbtu": 3.34,
+      "europe_gas_usd_per_mmbtu": 11.79,
+      "japan_lng_usd_per_mmbtu": 15.41
+    },
+    {
+      "month": "2013-01",
+      "brent_usd_per_barrel": 113.0,
+      "wti_usd_per_barrel": 94.7,
+      "us_gas_usd_per_mmbtu": 3.33,
+      "europe_gas_usd_per_mmbtu": 11.87,
+      "japan_lng_usd_per_mmbtu": 15.89
+    },
+    {
+      "month": "2013-02",
+      "brent_usd_per_barrel": 116.5,
+      "wti_usd_per_barrel": 95.3,
+      "us_gas_usd_per_mmbtu": 3.33,
+      "europe_gas_usd_per_mmbtu": 11.77,
+      "japan_lng_usd_per_mmbtu": 16.47
+    },
+    {
+      "month": "2013-03",
+      "brent_usd_per_barrel": 109.2,
+      "wti_usd_per_barrel": 92.9,
+      "us_gas_usd_per_mmbtu": 3.81,
+      "europe_gas_usd_per_mmbtu": 11.87,
+      "japan_lng_usd_per_mmbtu": 16.27
+    },
+    {
+      "month": "2013-04",
+      "brent_usd_per_barrel": 102.9,
+      "wti_usd_per_barrel": 92.0,
+      "us_gas_usd_per_mmbtu": 4.17,
+      "europe_gas_usd_per_mmbtu": 12.88,
+      "japan_lng_usd_per_mmbtu": 16.2
+    },
+    {
+      "month": "2013-05",
+      "brent_usd_per_barrel": 103.0,
+      "wti_usd_per_barrel": 94.8,
+      "us_gas_usd_per_mmbtu": 4.04,
+      "europe_gas_usd_per_mmbtu": 12.29,
+      "japan_lng_usd_per_mmbtu": 16.22
+    },
+    {
+      "month": "2013-06",
+      "brent_usd_per_barrel": 103.1,
+      "wti_usd_per_barrel": 95.8,
+      "us_gas_usd_per_mmbtu": 3.83,
+      "europe_gas_usd_per_mmbtu": 11.92,
+      "japan_lng_usd_per_mmbtu": 16.61
+    },
+    {
+      "month": "2013-07",
+      "brent_usd_per_barrel": 107.7,
+      "wti_usd_per_barrel": 104.7,
+      "us_gas_usd_per_mmbtu": 3.62,
+      "europe_gas_usd_per_mmbtu": 11.6,
+      "japan_lng_usd_per_mmbtu": 16.17
+    },
+    {
+      "month": "2013-08",
+      "brent_usd_per_barrel": 111.0,
+      "wti_usd_per_barrel": 106.5,
+      "us_gas_usd_per_mmbtu": 3.43,
+      "europe_gas_usd_per_mmbtu": 11.64,
+      "japan_lng_usd_per_mmbtu": 15.6
+    },
+    {
+      "month": "2013-09",
+      "brent_usd_per_barrel": 111.6,
+      "wti_usd_per_barrel": 106.2,
+      "us_gas_usd_per_mmbtu": 3.62,
+      "europe_gas_usd_per_mmbtu": 11.25,
+      "japan_lng_usd_per_mmbtu": 14.96
+    },
+    {
+      "month": "2013-10",
+      "brent_usd_per_barrel": 109.5,
+      "wti_usd_per_barrel": 100.5,
+      "us_gas_usd_per_mmbtu": 3.67,
+      "europe_gas_usd_per_mmbtu": 11.37,
+      "japan_lng_usd_per_mmbtu": 15.3
+    },
+    {
+      "month": "2013-11",
+      "brent_usd_per_barrel": 108.1,
+      "wti_usd_per_barrel": 93.9,
+      "us_gas_usd_per_mmbtu": 3.62,
+      "europe_gas_usd_per_mmbtu": 11.42,
+      "japan_lng_usd_per_mmbtu": 15.4
+    },
+    {
+      "month": "2013-12",
+      "brent_usd_per_barrel": 110.7,
+      "wti_usd_per_barrel": 97.9,
+      "us_gas_usd_per_mmbtu": 4.24,
+      "europe_gas_usd_per_mmbtu": 11.55,
+      "japan_lng_usd_per_mmbtu": 16.38
+    },
+    {
+      "month": "2014-01",
+      "brent_usd_per_barrel": 107.4,
+      "wti_usd_per_barrel": 94.9,
+      "us_gas_usd_per_mmbtu": 4.7,
+      "europe_gas_usd_per_mmbtu": 11.59,
+      "japan_lng_usd_per_mmbtu": 16.67
+    },
+    {
+      "month": "2014-02",
+      "brent_usd_per_barrel": 108.8,
+      "wti_usd_per_barrel": 100.7,
+      "us_gas_usd_per_mmbtu": 5.97,
+      "europe_gas_usd_per_mmbtu": 11.3,
+      "japan_lng_usd_per_mmbtu": 16.76
+    },
+    {
+      "month": "2014-03",
+      "brent_usd_per_barrel": 107.4,
+      "wti_usd_per_barrel": 100.6,
+      "us_gas_usd_per_mmbtu": 4.88,
+      "europe_gas_usd_per_mmbtu": 10.88,
+      "japan_lng_usd_per_mmbtu": 16.55
+    },
+    {
+      "month": "2014-04",
+      "brent_usd_per_barrel": 107.8,
+      "wti_usd_per_barrel": 102.1,
+      "us_gas_usd_per_mmbtu": 4.63,
+      "europe_gas_usd_per_mmbtu": 10.73,
+      "japan_lng_usd_per_mmbtu": 16.79
+    },
+    {
+      "month": "2014-05",
+      "brent_usd_per_barrel": 109.7,
+      "wti_usd_per_barrel": 101.9,
+      "us_gas_usd_per_mmbtu": 4.56,
+      "europe_gas_usd_per_mmbtu": 10.2,
+      "japan_lng_usd_per_mmbtu": 16.32
+    },
+    {
+      "month": "2014-06",
+      "brent_usd_per_barrel": 111.9,
+      "wti_usd_per_barrel": 105.2,
+      "us_gas_usd_per_mmbtu": 4.57,
+      "europe_gas_usd_per_mmbtu": 9.77,
+      "japan_lng_usd_per_mmbtu": 16.13
+    },
+    {
+      "month": "2014-07",
+      "brent_usd_per_barrel": 107.0,
+      "wti_usd_per_barrel": 102.9,
+      "us_gas_usd_per_mmbtu": 4.01,
+      "europe_gas_usd_per_mmbtu": 9.27,
+      "japan_lng_usd_per_mmbtu": 15.21
+    },
+    {
+      "month": "2014-08",
+      "brent_usd_per_barrel": 101.9,
+      "wti_usd_per_barrel": 96.4,
+      "us_gas_usd_per_mmbtu": 3.88,
+      "europe_gas_usd_per_mmbtu": 9.14,
+      "japan_lng_usd_per_mmbtu": 15.74
+    },
+    {
+      "month": "2014-09",
+      "brent_usd_per_barrel": 97.3,
+      "wti_usd_per_barrel": 93.2,
+      "us_gas_usd_per_mmbtu": 3.92,
+      "europe_gas_usd_per_mmbtu": 9.24,
+      "japan_lng_usd_per_mmbtu": 15.16
+    },
+    {
+      "month": "2014-10",
+      "brent_usd_per_barrel": 87.3,
+      "wti_usd_per_barrel": 84.4,
+      "us_gas_usd_per_mmbtu": 3.77,
+      "europe_gas_usd_per_mmbtu": 9.77,
+      "japan_lng_usd_per_mmbtu": 15.89
+    },
+    {
+      "month": "2014-11",
+      "brent_usd_per_barrel": 78.4,
+      "wti_usd_per_barrel": 75.8,
+      "us_gas_usd_per_mmbtu": 4.1,
+      "europe_gas_usd_per_mmbtu": 8.9,
+      "japan_lng_usd_per_mmbtu": 15.59
+    },
+    {
+      "month": "2014-12",
+      "brent_usd_per_barrel": 62.3,
+      "wti_usd_per_barrel": 59.3,
+      "us_gas_usd_per_mmbtu": 3.43,
+      "europe_gas_usd_per_mmbtu": 9.83,
+      "japan_lng_usd_per_mmbtu": 15.62
+    },
+    {
+      "month": "2015-01",
+      "brent_usd_per_barrel": 48.1,
+      "wti_usd_per_barrel": 47.3,
+      "us_gas_usd_per_mmbtu": 2.97,
+      "europe_gas_usd_per_mmbtu": 9.25,
+      "japan_lng_usd_per_mmbtu": 16.19
+    },
+    {
+      "month": "2015-02",
+      "brent_usd_per_barrel": 57.9,
+      "wti_usd_per_barrel": 50.6,
+      "us_gas_usd_per_mmbtu": 2.85,
+      "europe_gas_usd_per_mmbtu": 8.27,
+      "japan_lng_usd_per_mmbtu": 14.2
+    },
+    {
+      "month": "2015-03",
+      "brent_usd_per_barrel": 55.8,
+      "wti_usd_per_barrel": 47.8,
+      "us_gas_usd_per_mmbtu": 2.8,
+      "europe_gas_usd_per_mmbtu": 8.27,
+      "japan_lng_usd_per_mmbtu": 13.04
+    },
+    {
+      "month": "2015-04",
+      "brent_usd_per_barrel": 59.4,
+      "wti_usd_per_barrel": 54.4,
+      "us_gas_usd_per_mmbtu": 2.58,
+      "europe_gas_usd_per_mmbtu": 6.77,
+      "japan_lng_usd_per_mmbtu": 10.94
+    },
+    {
+      "month": "2015-05",
+      "brent_usd_per_barrel": 64.6,
+      "wti_usd_per_barrel": 59.3,
+      "us_gas_usd_per_mmbtu": 2.84,
+      "europe_gas_usd_per_mmbtu": 6.68,
+      "japan_lng_usd_per_mmbtu": 9.34
+    },
+    {
+      "month": "2015-06",
+      "brent_usd_per_barrel": 62.3,
+      "wti_usd_per_barrel": 59.8,
+      "us_gas_usd_per_mmbtu": 2.77,
+      "europe_gas_usd_per_mmbtu": 6.67,
+      "japan_lng_usd_per_mmbtu": 9.19
+    },
+    {
+      "month": "2015-07",
+      "brent_usd_per_barrel": 55.9,
+      "wti_usd_per_barrel": 50.9,
+      "us_gas_usd_per_mmbtu": 2.83,
+      "europe_gas_usd_per_mmbtu": 6.69,
+      "japan_lng_usd_per_mmbtu": 9.5
+    },
+    {
+      "month": "2015-08",
+      "brent_usd_per_barrel": 47.0,
+      "wti_usd_per_barrel": 42.9,
+      "us_gas_usd_per_mmbtu": 2.76,
+      "europe_gas_usd_per_mmbtu": 6.35,
+      "japan_lng_usd_per_mmbtu": 9.82
+    },
+    {
+      "month": "2015-09",
+      "brent_usd_per_barrel": 47.2,
+      "wti_usd_per_barrel": 45.5,
+      "us_gas_usd_per_mmbtu": 2.65,
+      "europe_gas_usd_per_mmbtu": 6.28,
+      "japan_lng_usd_per_mmbtu": 10.31
+    },
+    {
+      "month": "2015-10",
+      "brent_usd_per_barrel": 48.1,
+      "wti_usd_per_barrel": 46.2,
+      "us_gas_usd_per_mmbtu": 2.32,
+      "europe_gas_usd_per_mmbtu": 6.03,
+      "japan_lng_usd_per_mmbtu": 10.11
+    },
+    {
+      "month": "2015-11",
+      "brent_usd_per_barrel": 44.4,
+      "wti_usd_per_barrel": 42.7,
+      "us_gas_usd_per_mmbtu": 2.08,
+      "europe_gas_usd_per_mmbtu": 5.5,
+      "japan_lng_usd_per_mmbtu": 9.52
+    },
+    {
+      "month": "2015-12",
+      "brent_usd_per_barrel": 37.7,
+      "wti_usd_per_barrel": 37.2,
+      "us_gas_usd_per_mmbtu": 1.92,
+      "europe_gas_usd_per_mmbtu": 5.09,
+      "japan_lng_usd_per_mmbtu": 9.08
+    },
+    {
+      "month": "2016-01",
+      "brent_usd_per_barrel": 30.8,
+      "wti_usd_per_barrel": 31.5,
+      "us_gas_usd_per_mmbtu": 2.27,
+      "europe_gas_usd_per_mmbtu": 4.4,
+      "japan_lng_usd_per_mmbtu": 8.4
+    },
+    {
+      "month": "2016-02",
+      "brent_usd_per_barrel": 33.2,
+      "wti_usd_per_barrel": 30.4,
+      "us_gas_usd_per_mmbtu": 1.96,
+      "europe_gas_usd_per_mmbtu": 3.97,
+      "japan_lng_usd_per_mmbtu": 8.56
+    },
+    {
+      "month": "2016-03",
+      "brent_usd_per_barrel": 39.1,
+      "wti_usd_per_barrel": 37.8,
+      "us_gas_usd_per_mmbtu": 1.7,
+      "europe_gas_usd_per_mmbtu": 3.91,
+      "japan_lng_usd_per_mmbtu": 7.74
+    },
+    {
+      "month": "2016-04",
+      "brent_usd_per_barrel": 42.3,
+      "wti_usd_per_barrel": 41.0,
+      "us_gas_usd_per_mmbtu": 1.9,
+      "europe_gas_usd_per_mmbtu": 3.97,
+      "japan_lng_usd_per_mmbtu": 6.82
+    },
+    {
+      "month": "2016-05",
+      "brent_usd_per_barrel": 47.1,
+      "wti_usd_per_barrel": 46.7,
+      "us_gas_usd_per_mmbtu": 1.92,
+      "europe_gas_usd_per_mmbtu": 4.33,
+      "japan_lng_usd_per_mmbtu": 6.27
+    },
+    {
+      "month": "2016-06",
+      "brent_usd_per_barrel": 48.5,
+      "wti_usd_per_barrel": 48.8,
+      "us_gas_usd_per_mmbtu": 2.57,
+      "europe_gas_usd_per_mmbtu": 4.76,
+      "japan_lng_usd_per_mmbtu": 6.4
+    },
+    {
+      "month": "2016-07",
+      "brent_usd_per_barrel": 45.1,
+      "wti_usd_per_barrel": 44.7,
+      "us_gas_usd_per_mmbtu": 2.79,
+      "europe_gas_usd_per_mmbtu": 4.67,
+      "japan_lng_usd_per_mmbtu": 6.76
+    },
+    {
+      "month": "2016-08",
+      "brent_usd_per_barrel": 46.1,
+      "wti_usd_per_barrel": 44.8,
+      "us_gas_usd_per_mmbtu": 2.79,
+      "europe_gas_usd_per_mmbtu": 4.05,
+      "japan_lng_usd_per_mmbtu": 7.14
+    },
+    {
+      "month": "2016-09",
+      "brent_usd_per_barrel": 46.2,
+      "wti_usd_per_barrel": 45.2,
+      "us_gas_usd_per_mmbtu": 2.97,
+      "europe_gas_usd_per_mmbtu": 4.25,
+      "japan_lng_usd_per_mmbtu": 7.54
+    },
+    {
+      "month": "2016-10",
+      "brent_usd_per_barrel": 49.7,
+      "wti_usd_per_barrel": 49.9,
+      "us_gas_usd_per_mmbtu": 2.95,
+      "europe_gas_usd_per_mmbtu": 5.34,
+      "japan_lng_usd_per_mmbtu": 7.65
+    },
+    {
+      "month": "2016-11",
+      "brent_usd_per_barrel": 46.4,
+      "wti_usd_per_barrel": 45.6,
+      "us_gas_usd_per_mmbtu": 2.5,
+      "europe_gas_usd_per_mmbtu": 5.69,
+      "japan_lng_usd_per_mmbtu": 7.59
+    },
+    {
+      "month": "2016-12",
+      "brent_usd_per_barrel": 54.1,
+      "wti_usd_per_barrel": 52.0,
+      "us_gas_usd_per_mmbtu": 3.58,
+      "europe_gas_usd_per_mmbtu": 5.42,
+      "japan_lng_usd_per_mmbtu": 7.59
+    },
+    {
+      "month": "2017-01",
+      "brent_usd_per_barrel": 54.9,
+      "wti_usd_per_barrel": 52.5,
+      "us_gas_usd_per_mmbtu": 3.26,
+      "europe_gas_usd_per_mmbtu": 6.14,
+      "japan_lng_usd_per_mmbtu": 8.04
+    },
+    {
+      "month": "2017-02",
+      "brent_usd_per_barrel": 55.5,
+      "wti_usd_per_barrel": 53.4,
+      "us_gas_usd_per_mmbtu": 2.82,
+      "europe_gas_usd_per_mmbtu": 6.05,
+      "japan_lng_usd_per_mmbtu": 8.41
+    },
+    {
+      "month": "2017-03",
+      "brent_usd_per_barrel": 52.0,
+      "wti_usd_per_barrel": 49.6,
+      "us_gas_usd_per_mmbtu": 2.89,
+      "europe_gas_usd_per_mmbtu": 5.0,
+      "japan_lng_usd_per_mmbtu": 8.25
+    },
+    {
+      "month": "2017-04",
+      "brent_usd_per_barrel": 53.0,
+      "wti_usd_per_barrel": 51.1,
+      "us_gas_usd_per_mmbtu": 3.08,
+      "europe_gas_usd_per_mmbtu": 5.01,
+      "japan_lng_usd_per_mmbtu": 8.76
+    },
+    {
+      "month": "2017-05",
+      "brent_usd_per_barrel": 50.9,
+      "wti_usd_per_barrel": 48.5,
+      "us_gas_usd_per_mmbtu": 3.12,
+      "europe_gas_usd_per_mmbtu": 5.06,
+      "japan_lng_usd_per_mmbtu": 9.1
+    },
+    {
+      "month": "2017-06",
+      "brent_usd_per_barrel": 46.9,
+      "wti_usd_per_barrel": 45.2,
+      "us_gas_usd_per_mmbtu": 2.94,
+      "europe_gas_usd_per_mmbtu": 4.89,
+      "japan_lng_usd_per_mmbtu": 8.88
+    },
+    {
+      "month": "2017-07",
+      "brent_usd_per_barrel": 48.7,
+      "wti_usd_per_barrel": 46.7,
+      "us_gas_usd_per_mmbtu": 2.96,
+      "europe_gas_usd_per_mmbtu": 5.0,
+      "japan_lng_usd_per_mmbtu": 8.86
+    },
+    {
+      "month": "2017-08",
+      "brent_usd_per_barrel": 51.4,
+      "wti_usd_per_barrel": 48.0,
+      "us_gas_usd_per_mmbtu": 2.88,
+      "europe_gas_usd_per_mmbtu": 5.48,
+      "japan_lng_usd_per_mmbtu": 8.92
+    },
+    {
+      "month": "2017-09",
+      "brent_usd_per_barrel": 55.2,
+      "wti_usd_per_barrel": 49.8,
+      "us_gas_usd_per_mmbtu": 2.96,
+      "europe_gas_usd_per_mmbtu": 5.96,
+      "japan_lng_usd_per_mmbtu": 8.64
+    },
+    {
+      "month": "2017-10",
+      "brent_usd_per_barrel": 57.6,
+      "wti_usd_per_barrel": 51.6,
+      "us_gas_usd_per_mmbtu": 2.86,
+      "europe_gas_usd_per_mmbtu": 6.18,
+      "japan_lng_usd_per_mmbtu": 8.31
+    },
+    {
+      "month": "2017-11",
+      "brent_usd_per_barrel": 62.6,
+      "wti_usd_per_barrel": 56.7,
+      "us_gas_usd_per_mmbtu": 2.99,
+      "europe_gas_usd_per_mmbtu": 6.69,
+      "japan_lng_usd_per_mmbtu": 8.45
+    },
+    {
+      "month": "2017-12",
+      "brent_usd_per_barrel": 64.2,
+      "wti_usd_per_barrel": 57.9,
+      "us_gas_usd_per_mmbtu": 2.76,
+      "europe_gas_usd_per_mmbtu": 7.14,
+      "japan_lng_usd_per_mmbtu": 8.65
+    },
+    {
+      "month": "2018-01",
+      "brent_usd_per_barrel": 69.0,
+      "wti_usd_per_barrel": 63.7,
+      "us_gas_usd_per_mmbtu": 3.86,
+      "europe_gas_usd_per_mmbtu": 6.66,
+      "japan_lng_usd_per_mmbtu": 9.34
+    },
+    {
+      "month": "2018-02",
+      "brent_usd_per_barrel": 65.4,
+      "wti_usd_per_barrel": 62.2,
+      "us_gas_usd_per_mmbtu": 2.67,
+      "europe_gas_usd_per_mmbtu": 6.72,
+      "japan_lng_usd_per_mmbtu": 9.83
+    },
+    {
+      "month": "2018-03",
+      "brent_usd_per_barrel": 66.5,
+      "wti_usd_per_barrel": 62.8,
+      "us_gas_usd_per_mmbtu": 2.7,
+      "europe_gas_usd_per_mmbtu": 6.7,
+      "japan_lng_usd_per_mmbtu": 10.11
+    },
+    {
+      "month": "2018-04",
+      "brent_usd_per_barrel": 71.6,
+      "wti_usd_per_barrel": 66.3,
+      "us_gas_usd_per_mmbtu": 2.78,
+      "europe_gas_usd_per_mmbtu": 6.93,
+      "japan_lng_usd_per_mmbtu": 10.09
+    },
+    {
+      "month": "2018-05",
+      "brent_usd_per_barrel": 76.7,
+      "wti_usd_per_barrel": 70.0,
+      "us_gas_usd_per_mmbtu": 2.8,
+      "europe_gas_usd_per_mmbtu": 7.49,
+      "japan_lng_usd_per_mmbtu": 10.25
+    },
+    {
+      "month": "2018-06",
+      "brent_usd_per_barrel": 75.2,
+      "wti_usd_per_barrel": 67.5,
+      "us_gas_usd_per_mmbtu": 2.95,
+      "europe_gas_usd_per_mmbtu": 7.45,
+      "japan_lng_usd_per_mmbtu": 10.44
+    },
+    {
+      "month": "2018-07",
+      "brent_usd_per_barrel": 74.4,
+      "wti_usd_per_barrel": 70.8,
+      "us_gas_usd_per_mmbtu": 2.83,
+      "europe_gas_usd_per_mmbtu": 7.6,
+      "japan_lng_usd_per_mmbtu": 10.44
+    },
+    {
+      "month": "2018-08",
+      "brent_usd_per_barrel": 73.1,
+      "wti_usd_per_barrel": 68.0,
+      "us_gas_usd_per_mmbtu": 2.96,
+      "europe_gas_usd_per_mmbtu": 8.08,
+      "japan_lng_usd_per_mmbtu": 10.88
+    },
+    {
+      "month": "2018-09",
+      "brent_usd_per_barrel": 78.9,
+      "wti_usd_per_barrel": 70.2,
+      "us_gas_usd_per_mmbtu": 2.98,
+      "europe_gas_usd_per_mmbtu": 9.52,
+      "japan_lng_usd_per_mmbtu": 11.3
+    },
+    {
+      "month": "2018-10",
+      "brent_usd_per_barrel": 80.5,
+      "wti_usd_per_barrel": 70.8,
+      "us_gas_usd_per_mmbtu": 3.28,
+      "europe_gas_usd_per_mmbtu": 8.79,
+      "japan_lng_usd_per_mmbtu": 11.66
+    },
+    {
+      "month": "2018-11",
+      "brent_usd_per_barrel": 65.2,
+      "wti_usd_per_barrel": 56.7,
+      "us_gas_usd_per_mmbtu": 4.13,
+      "europe_gas_usd_per_mmbtu": 8.27,
+      "japan_lng_usd_per_mmbtu": 11.7
+    },
+    {
+      "month": "2018-12",
+      "brent_usd_per_barrel": 56.5,
+      "wti_usd_per_barrel": 49.0,
+      "us_gas_usd_per_mmbtu": 3.98,
+      "europe_gas_usd_per_mmbtu": 7.98,
+      "japan_lng_usd_per_mmbtu": 12.0
+    },
+    {
+      "month": "2019-01",
+      "brent_usd_per_barrel": 59.3,
+      "wti_usd_per_barrel": 51.5,
+      "us_gas_usd_per_mmbtu": 3.08,
+      "europe_gas_usd_per_mmbtu": 7.26,
+      "japan_lng_usd_per_mmbtu": 12.01
+    },
+    {
+      "month": "2019-02",
+      "brent_usd_per_barrel": 64.1,
+      "wti_usd_per_barrel": 55.0,
+      "us_gas_usd_per_mmbtu": 2.72,
+      "europe_gas_usd_per_mmbtu": 6.01,
+      "japan_lng_usd_per_mmbtu": 11.81
+    },
+    {
+      "month": "2019-03",
+      "brent_usd_per_barrel": 66.4,
+      "wti_usd_per_barrel": 58.2,
+      "us_gas_usd_per_mmbtu": 2.94,
+      "europe_gas_usd_per_mmbtu": 5.18,
+      "japan_lng_usd_per_mmbtu": 11.29
+    },
+    {
+      "month": "2019-04",
+      "brent_usd_per_barrel": 71.2,
+      "wti_usd_per_barrel": 63.9,
+      "us_gas_usd_per_mmbtu": 2.65,
+      "europe_gas_usd_per_mmbtu": 4.92,
+      "japan_lng_usd_per_mmbtu": 10.27
+    },
+    {
+      "month": "2019-05",
+      "brent_usd_per_barrel": 70.5,
+      "wti_usd_per_barrel": 60.8,
+      "us_gas_usd_per_mmbtu": 2.63,
+      "europe_gas_usd_per_mmbtu": 4.34,
+      "japan_lng_usd_per_mmbtu": 10.15
+    },
+    {
+      "month": "2019-06",
+      "brent_usd_per_barrel": 63.3,
+      "wti_usd_per_barrel": 54.7,
+      "us_gas_usd_per_mmbtu": 2.4,
+      "europe_gas_usd_per_mmbtu": 3.59,
+      "japan_lng_usd_per_mmbtu": 10.04
+    },
+    {
+      "month": "2019-07",
+      "brent_usd_per_barrel": 64.0,
+      "wti_usd_per_barrel": 57.5,
+      "us_gas_usd_per_mmbtu": 2.36,
+      "europe_gas_usd_per_mmbtu": 3.62,
+      "japan_lng_usd_per_mmbtu": 10.13
+    },
+    {
+      "month": "2019-08",
+      "brent_usd_per_barrel": 59.3,
+      "wti_usd_per_barrel": 54.8,
+      "us_gas_usd_per_mmbtu": 2.22,
+      "europe_gas_usd_per_mmbtu": 3.68,
+      "japan_lng_usd_per_mmbtu": 10.86
+    },
+    {
+      "month": "2019-09",
+      "brent_usd_per_barrel": 62.3,
+      "wti_usd_per_barrel": 57.0,
+      "us_gas_usd_per_mmbtu": 2.58,
+      "europe_gas_usd_per_mmbtu": 4.21,
+      "japan_lng_usd_per_mmbtu": 10.14
+    },
+    {
+      "month": "2019-10",
+      "brent_usd_per_barrel": 59.4,
+      "wti_usd_per_barrel": 54.0,
+      "us_gas_usd_per_mmbtu": 2.33,
+      "europe_gas_usd_per_mmbtu": 5.06,
+      "japan_lng_usd_per_mmbtu": 9.98
+    },
+    {
+      "month": "2019-11",
+      "brent_usd_per_barrel": 62.7,
+      "wti_usd_per_barrel": 57.1,
+      "us_gas_usd_per_mmbtu": 2.65,
+      "europe_gas_usd_per_mmbtu": 5.15,
+      "japan_lng_usd_per_mmbtu": 10.04
+    },
+    {
+      "month": "2019-12",
+      "brent_usd_per_barrel": 65.9,
+      "wti_usd_per_barrel": 59.8,
+      "us_gas_usd_per_mmbtu": 2.24,
+      "europe_gas_usd_per_mmbtu": 4.62,
+      "japan_lng_usd_per_mmbtu": 10.06
+    },
+    {
+      "month": "2020-01",
+      "brent_usd_per_barrel": 63.6,
+      "wti_usd_per_barrel": 57.5,
+      "us_gas_usd_per_mmbtu": 2.03,
+      "europe_gas_usd_per_mmbtu": 3.63,
+      "japan_lng_usd_per_mmbtu": 9.89
+    },
+    {
+      "month": "2020-02",
+      "brent_usd_per_barrel": 55.0,
+      "wti_usd_per_barrel": 50.5,
+      "us_gas_usd_per_mmbtu": 1.92,
+      "europe_gas_usd_per_mmbtu": 2.91,
+      "japan_lng_usd_per_mmbtu": 9.89
+    },
+    {
+      "month": "2020-03",
+      "brent_usd_per_barrel": 33.0,
+      "wti_usd_per_barrel": 29.9,
+      "us_gas_usd_per_mmbtu": 1.79,
+      "europe_gas_usd_per_mmbtu": 2.72,
+      "japan_lng_usd_per_mmbtu": 10.21
+    },
+    {
+      "month": "2020-04",
+      "brent_usd_per_barrel": 23.3,
+      "wti_usd_per_barrel": 16.5,
+      "us_gas_usd_per_mmbtu": 1.74,
+      "europe_gas_usd_per_mmbtu": 2.12,
+      "japan_lng_usd_per_mmbtu": 10.01
+    },
+    {
+      "month": "2020-05",
+      "brent_usd_per_barrel": 31.0,
+      "wti_usd_per_barrel": 28.6,
+      "us_gas_usd_per_mmbtu": 1.75,
+      "europe_gas_usd_per_mmbtu": 1.58,
+      "japan_lng_usd_per_mmbtu": 10.08
+    },
+    {
+      "month": "2020-06",
+      "brent_usd_per_barrel": 39.9,
+      "wti_usd_per_barrel": 38.3,
+      "us_gas_usd_per_mmbtu": 1.61,
+      "europe_gas_usd_per_mmbtu": 1.75,
+      "japan_lng_usd_per_mmbtu": 8.97
+    },
+    {
+      "month": "2020-07",
+      "brent_usd_per_barrel": 42.8,
+      "wti_usd_per_barrel": 40.8,
+      "us_gas_usd_per_mmbtu": 1.74,
+      "europe_gas_usd_per_mmbtu": 1.8,
+      "japan_lng_usd_per_mmbtu": 7.79
+    },
+    {
+      "month": "2020-08",
+      "brent_usd_per_barrel": 44.3,
+      "wti_usd_per_barrel": 42.4,
+      "us_gas_usd_per_mmbtu": 2.3,
+      "europe_gas_usd_per_mmbtu": 2.86,
+      "japan_lng_usd_per_mmbtu": 6.34
+    },
+    {
+      "month": "2020-09",
+      "brent_usd_per_barrel": 41.1,
+      "wti_usd_per_barrel": 39.6,
+      "us_gas_usd_per_mmbtu": 1.92,
+      "europe_gas_usd_per_mmbtu": 3.95,
+      "japan_lng_usd_per_mmbtu": 5.88
+    },
+    {
+      "month": "2020-10",
+      "brent_usd_per_barrel": 40.5,
+      "wti_usd_per_barrel": 39.5,
+      "us_gas_usd_per_mmbtu": 2.25,
+      "europe_gas_usd_per_mmbtu": 4.89,
+      "japan_lng_usd_per_mmbtu": 6.18
+    },
+    {
+      "month": "2020-11",
+      "brent_usd_per_barrel": 43.2,
+      "wti_usd_per_barrel": 41.1,
+      "us_gas_usd_per_mmbtu": 2.59,
+      "europe_gas_usd_per_mmbtu": 4.84,
+      "japan_lng_usd_per_mmbtu": 6.86
+    },
+    {
+      "month": "2020-12",
+      "brent_usd_per_barrel": 49.9,
+      "wti_usd_per_barrel": 47.1,
+      "us_gas_usd_per_mmbtu": 2.54,
+      "europe_gas_usd_per_mmbtu": 5.86,
+      "japan_lng_usd_per_mmbtu": 7.66
+    },
+    {
+      "month": "2021-01",
+      "brent_usd_per_barrel": 54.6,
+      "wti_usd_per_barrel": 52.1,
+      "us_gas_usd_per_mmbtu": 2.67,
+      "europe_gas_usd_per_mmbtu": 7.27,
+      "japan_lng_usd_per_mmbtu": 9.0
+    },
+    {
+      "month": "2021-02",
+      "brent_usd_per_barrel": 62.0,
+      "wti_usd_per_barrel": 59.1,
+      "us_gas_usd_per_mmbtu": 5.07,
+      "europe_gas_usd_per_mmbtu": 6.16,
+      "japan_lng_usd_per_mmbtu": 9.88
+    },
+    {
+      "month": "2021-03",
+      "brent_usd_per_barrel": 65.2,
+      "wti_usd_per_barrel": 62.4,
+      "us_gas_usd_per_mmbtu": 2.56,
+      "europe_gas_usd_per_mmbtu": 6.13,
+      "japan_lng_usd_per_mmbtu": 7.9
+    },
+    {
+      "month": "2021-04",
+      "brent_usd_per_barrel": 64.8,
+      "wti_usd_per_barrel": 61.7,
+      "us_gas_usd_per_mmbtu": 2.61,
+      "europe_gas_usd_per_mmbtu": 7.15,
+      "japan_lng_usd_per_mmbtu": 8.28
+    },
+    {
+      "month": "2021-05",
+      "brent_usd_per_barrel": 68.0,
+      "wti_usd_per_barrel": 65.2,
+      "us_gas_usd_per_mmbtu": 2.89,
+      "europe_gas_usd_per_mmbtu": 8.91,
+      "japan_lng_usd_per_mmbtu": 8.92
+    },
+    {
+      "month": "2021-06",
+      "brent_usd_per_barrel": 73.1,
+      "wti_usd_per_barrel": 71.4,
+      "us_gas_usd_per_mmbtu": 3.23,
+      "europe_gas_usd_per_mmbtu": 10.3,
+      "japan_lng_usd_per_mmbtu": 9.62
+    },
+    {
+      "month": "2021-07",
+      "brent_usd_per_barrel": 74.4,
+      "wti_usd_per_barrel": 72.5,
+      "us_gas_usd_per_mmbtu": 3.8,
+      "europe_gas_usd_per_mmbtu": 12.51,
+      "japan_lng_usd_per_mmbtu": 10.36
+    },
+    {
+      "month": "2021-08",
+      "brent_usd_per_barrel": 70.0,
+      "wti_usd_per_barrel": 67.7,
+      "us_gas_usd_per_mmbtu": 4.05,
+      "europe_gas_usd_per_mmbtu": 15.43,
+      "japan_lng_usd_per_mmbtu": 10.8
+    },
+    {
+      "month": "2021-09",
+      "brent_usd_per_barrel": 74.6,
+      "wti_usd_per_barrel": 71.6,
+      "us_gas_usd_per_mmbtu": 5.11,
+      "europe_gas_usd_per_mmbtu": 22.84,
+      "japan_lng_usd_per_mmbtu": 11.44
+    },
+    {
+      "month": "2021-10",
+      "brent_usd_per_barrel": 83.7,
+      "wti_usd_per_barrel": 81.3,
+      "us_gas_usd_per_mmbtu": 5.48,
+      "europe_gas_usd_per_mmbtu": 31.05,
+      "japan_lng_usd_per_mmbtu": 12.38
+    },
+    {
+      "month": "2021-11",
+      "brent_usd_per_barrel": 80.8,
+      "wti_usd_per_barrel": 79.2,
+      "us_gas_usd_per_mmbtu": 5.02,
+      "europe_gas_usd_per_mmbtu": 27.62,
+      "japan_lng_usd_per_mmbtu": 15.25
+    },
+    {
+      "month": "2021-12",
+      "brent_usd_per_barrel": 74.3,
+      "wti_usd_per_barrel": 71.5,
+      "us_gas_usd_per_mmbtu": 3.73,
+      "europe_gas_usd_per_mmbtu": 38.03,
+      "japan_lng_usd_per_mmbtu": 15.32
+    },
+    {
+      "month": "2022-01",
+      "brent_usd_per_barrel": 85.5,
+      "wti_usd_per_barrel": 83.1,
+      "us_gas_usd_per_mmbtu": 4.33,
+      "europe_gas_usd_per_mmbtu": 28.26,
+      "japan_lng_usd_per_mmbtu": 14.69
+    },
+    {
+      "month": "2022-02",
+      "brent_usd_per_barrel": 95.8,
+      "wti_usd_per_barrel": 91.7,
+      "us_gas_usd_per_mmbtu": 4.66,
+      "europe_gas_usd_per_mmbtu": 27.23,
+      "japan_lng_usd_per_mmbtu": 17.0
+    },
+    {
+      "month": "2022-03",
+      "brent_usd_per_barrel": 115.6,
+      "wti_usd_per_barrel": 108.5,
+      "us_gas_usd_per_mmbtu": 4.88,
+      "europe_gas_usd_per_mmbtu": 42.39,
+      "japan_lng_usd_per_mmbtu": 15.11
+    },
+    {
+      "month": "2022-04",
+      "brent_usd_per_barrel": 105.8,
+      "wti_usd_per_barrel": 101.8,
+      "us_gas_usd_per_mmbtu": 6.53,
+      "europe_gas_usd_per_mmbtu": 32.2,
+      "japan_lng_usd_per_mmbtu": 16.29
+    },
+    {
+      "month": "2022-05",
+      "brent_usd_per_barrel": 112.4,
+      "wti_usd_per_barrel": 109.6,
+      "us_gas_usd_per_mmbtu": 8.14,
+      "europe_gas_usd_per_mmbtu": 29.17,
+      "japan_lng_usd_per_mmbtu": 16.68
+    },
+    {
+      "month": "2022-06",
+      "brent_usd_per_barrel": 120.1,
+      "wti_usd_per_barrel": 114.6,
+      "us_gas_usd_per_mmbtu": 7.67,
+      "europe_gas_usd_per_mmbtu": 33.56,
+      "japan_lng_usd_per_mmbtu": 15.53
+    },
+    {
+      "month": "2022-07",
+      "brent_usd_per_barrel": 108.9,
+      "wti_usd_per_barrel": 99.9,
+      "us_gas_usd_per_mmbtu": 7.26,
+      "europe_gas_usd_per_mmbtu": 51.33,
+      "japan_lng_usd_per_mmbtu": 18.88
+    },
+    {
+      "month": "2022-08",
+      "brent_usd_per_barrel": 98.6,
+      "wti_usd_per_barrel": 91.6,
+      "us_gas_usd_per_mmbtu": 8.79,
+      "europe_gas_usd_per_mmbtu": 70.04,
+      "japan_lng_usd_per_mmbtu": 21.21
+    },
+    {
+      "month": "2022-09",
+      "brent_usd_per_barrel": 90.2,
+      "wti_usd_per_barrel": 83.9,
+      "us_gas_usd_per_mmbtu": 7.76,
+      "europe_gas_usd_per_mmbtu": 59.1,
+      "japan_lng_usd_per_mmbtu": 23.73
+    },
+    {
+      "month": "2022-10",
+      "brent_usd_per_barrel": 93.1,
+      "wti_usd_per_barrel": 87.3,
+      "us_gas_usd_per_mmbtu": 5.62,
+      "europe_gas_usd_per_mmbtu": 39.02,
+      "japan_lng_usd_per_mmbtu": 21.84
+    },
+    {
+      "month": "2022-11",
+      "brent_usd_per_barrel": 91.1,
+      "wti_usd_per_barrel": 84.8,
+      "us_gas_usd_per_mmbtu": 5.28,
+      "europe_gas_usd_per_mmbtu": 35.72,
+      "japan_lng_usd_per_mmbtu": 19.59
+    },
+    {
+      "month": "2022-12",
+      "brent_usd_per_barrel": 80.9,
+      "wti_usd_per_barrel": 76.5,
+      "us_gas_usd_per_mmbtu": 5.5,
+      "europe_gas_usd_per_mmbtu": 36.04,
+      "japan_lng_usd_per_mmbtu": 20.58
+    },
+    {
+      "month": "2023-01",
+      "brent_usd_per_barrel": 83.1,
+      "wti_usd_per_barrel": 78.1,
+      "us_gas_usd_per_mmbtu": 3.27,
+      "europe_gas_usd_per_mmbtu": 20.18,
+      "japan_lng_usd_per_mmbtu": 20.19
+    },
+    {
+      "month": "2023-02",
+      "brent_usd_per_barrel": 82.7,
+      "wti_usd_per_barrel": 76.8,
+      "us_gas_usd_per_mmbtu": 2.38,
+      "europe_gas_usd_per_mmbtu": 16.54,
+      "japan_lng_usd_per_mmbtu": 18.42
+    },
+    {
+      "month": "2023-03",
+      "brent_usd_per_barrel": 78.5,
+      "wti_usd_per_barrel": 73.4,
+      "us_gas_usd_per_mmbtu": 2.3,
+      "europe_gas_usd_per_mmbtu": 13.81,
+      "japan_lng_usd_per_mmbtu": 16.03
+    },
+    {
+      "month": "2023-04",
+      "brent_usd_per_barrel": 84.1,
+      "wti_usd_per_barrel": 79.4,
+      "us_gas_usd_per_mmbtu": 2.16,
+      "europe_gas_usd_per_mmbtu": 13.52,
+      "japan_lng_usd_per_mmbtu": 14.37
+    },
+    {
+      "month": "2023-05",
+      "brent_usd_per_barrel": 75.7,
+      "wti_usd_per_barrel": 71.6,
+      "us_gas_usd_per_mmbtu": 2.15,
+      "europe_gas_usd_per_mmbtu": 10.11,
+      "japan_lng_usd_per_mmbtu": 13.43
+    },
+    {
+      "month": "2023-06",
+      "brent_usd_per_barrel": 74.9,
+      "wti_usd_per_barrel": 70.2,
+      "us_gas_usd_per_mmbtu": 2.18,
+      "europe_gas_usd_per_mmbtu": 10.35,
+      "japan_lng_usd_per_mmbtu": 12.68
+    },
+    {
+      "month": "2023-07",
+      "brent_usd_per_barrel": 80.1,
+      "wti_usd_per_barrel": 76.4,
+      "us_gas_usd_per_mmbtu": 2.55,
+      "europe_gas_usd_per_mmbtu": 9.55,
+      "japan_lng_usd_per_mmbtu": 12.99
+    },
+    {
+      "month": "2023-08",
+      "brent_usd_per_barrel": 86.2,
+      "wti_usd_per_barrel": 81.4,
+      "us_gas_usd_per_mmbtu": 2.58,
+      "europe_gas_usd_per_mmbtu": 11.19,
+      "japan_lng_usd_per_mmbtu": 12.54
+    },
+    {
+      "month": "2023-09",
+      "brent_usd_per_barrel": 94.0,
+      "wti_usd_per_barrel": 89.6,
+      "us_gas_usd_per_mmbtu": 2.64,
+      "europe_gas_usd_per_mmbtu": 11.55,
+      "japan_lng_usd_per_mmbtu": 12.21
+    },
+    {
+      "month": "2023-10",
+      "brent_usd_per_barrel": 91.1,
+      "wti_usd_per_barrel": 85.6,
+      "us_gas_usd_per_mmbtu": 2.99,
+      "europe_gas_usd_per_mmbtu": 14.57,
+      "japan_lng_usd_per_mmbtu": 12.62
+    },
+    {
+      "month": "2023-11",
+      "brent_usd_per_barrel": 83.2,
+      "wti_usd_per_barrel": 77.4,
+      "us_gas_usd_per_mmbtu": 2.71,
+      "europe_gas_usd_per_mmbtu": 14.49,
+      "japan_lng_usd_per_mmbtu": 12.72
+    },
+    {
+      "month": "2023-12",
+      "brent_usd_per_barrel": 77.9,
+      "wti_usd_per_barrel": 72.1,
+      "us_gas_usd_per_mmbtu": 2.53,
+      "europe_gas_usd_per_mmbtu": 11.51,
+      "japan_lng_usd_per_mmbtu": 14.44
+    },
+    {
+      "month": "2024-01",
+      "brent_usd_per_barrel": 80.2,
+      "wti_usd_per_barrel": 73.9,
+      "us_gas_usd_per_mmbtu": 3.18,
+      "europe_gas_usd_per_mmbtu": 9.56,
+      "japan_lng_usd_per_mmbtu": 14.34
+    },
+    {
+      "month": "2024-02",
+      "brent_usd_per_barrel": 83.8,
+      "wti_usd_per_barrel": 76.7,
+      "us_gas_usd_per_mmbtu": 1.72,
+      "europe_gas_usd_per_mmbtu": 8.15,
+      "japan_lng_usd_per_mmbtu": 13.64
+    },
+    {
+      "month": "2024-03",
+      "brent_usd_per_barrel": 85.4,
+      "wti_usd_per_barrel": 80.5,
+      "us_gas_usd_per_mmbtu": 1.5,
+      "europe_gas_usd_per_mmbtu": 8.55,
+      "japan_lng_usd_per_mmbtu": 13.19
+    },
+    {
+      "month": "2024-04",
+      "brent_usd_per_barrel": 90.1,
+      "wti_usd_per_barrel": 84.6,
+      "us_gas_usd_per_mmbtu": 1.6,
+      "europe_gas_usd_per_mmbtu": 9.09,
+      "japan_lng_usd_per_mmbtu": 11.88
+    },
+    {
+      "month": "2024-05",
+      "brent_usd_per_barrel": 82.0,
+      "wti_usd_per_barrel": 78.8,
+      "us_gas_usd_per_mmbtu": 2.13,
+      "europe_gas_usd_per_mmbtu": 10.12,
+      "japan_lng_usd_per_mmbtu": 12.16
+    },
+    {
+      "month": "2024-06",
+      "brent_usd_per_barrel": 82.6,
+      "wti_usd_per_barrel": 78.9,
+      "us_gas_usd_per_mmbtu": 2.51,
+      "europe_gas_usd_per_mmbtu": 10.87,
+      "japan_lng_usd_per_mmbtu": 12.13
+    },
+    {
+      "month": "2024-07",
+      "brent_usd_per_barrel": 85.3,
+      "wti_usd_per_barrel": 80.5,
+      "us_gas_usd_per_mmbtu": 2.08,
+      "europe_gas_usd_per_mmbtu": 10.35,
+      "japan_lng_usd_per_mmbtu": 12.49
+    },
+    {
+      "month": "2024-08",
+      "brent_usd_per_barrel": 80.9,
+      "wti_usd_per_barrel": 75.6,
+      "us_gas_usd_per_mmbtu": 1.99,
+      "europe_gas_usd_per_mmbtu": 12.37,
+      "japan_lng_usd_per_mmbtu": 13.32
+    },
+    {
+      "month": "2024-09",
+      "brent_usd_per_barrel": 74.3,
+      "wti_usd_per_barrel": 69.6,
+      "us_gas_usd_per_mmbtu": 2.25,
+      "europe_gas_usd_per_mmbtu": 11.78,
+      "japan_lng_usd_per_mmbtu": 12.97
+    },
+    {
+      "month": "2024-10",
+      "brent_usd_per_barrel": 75.7,
+      "wti_usd_per_barrel": 71.6,
+      "us_gas_usd_per_mmbtu": 2.21,
+      "europe_gas_usd_per_mmbtu": 12.92,
+      "japan_lng_usd_per_mmbtu": 12.54
+    },
+    {
+      "month": "2024-11",
+      "brent_usd_per_barrel": 74.4,
+      "wti_usd_per_barrel": 69.7,
+      "us_gas_usd_per_mmbtu": 2.1,
+      "europe_gas_usd_per_mmbtu": 13.93,
+      "japan_lng_usd_per_mmbtu": 12.82
+    },
+    {
+      "month": "2024-12",
+      "brent_usd_per_barrel": 73.8,
+      "wti_usd_per_barrel": 69.8,
+      "us_gas_usd_per_mmbtu": 3.02,
+      "europe_gas_usd_per_mmbtu": 13.86,
+      "japan_lng_usd_per_mmbtu": 12.64
+    },
+    {
+      "month": "2025-01",
+      "brent_usd_per_barrel": 79.2,
+      "wti_usd_per_barrel": 75.1,
+      "us_gas_usd_per_mmbtu": 4.1,
+      "europe_gas_usd_per_mmbtu": 14.66,
+      "japan_lng_usd_per_mmbtu": 13.19
+    },
+    {
+      "month": "2025-02",
+      "brent_usd_per_barrel": 75.2,
+      "wti_usd_per_barrel": 71.3,
+      "us_gas_usd_per_mmbtu": 4.22,
+      "europe_gas_usd_per_mmbtu": 15.34,
+      "japan_lng_usd_per_mmbtu": 12.78
+    },
+    {
+      "month": "2025-03",
+      "brent_usd_per_barrel": 72.6,
+      "wti_usd_per_barrel": 67.8,
+      "us_gas_usd_per_mmbtu": 4.13,
+      "europe_gas_usd_per_mmbtu": 13.24,
+      "japan_lng_usd_per_mmbtu": 12.55
+    },
+    {
+      "month": "2025-04",
+      "brent_usd_per_barrel": 67.7,
+      "wti_usd_per_barrel": 63.1,
+      "us_gas_usd_per_mmbtu": 3.4,
+      "europe_gas_usd_per_mmbtu": 11.59,
+      "japan_lng_usd_per_mmbtu": 12.68
+    },
+    {
+      "month": "2025-05",
+      "brent_usd_per_barrel": 64.2,
+      "wti_usd_per_barrel": 61.0,
+      "us_gas_usd_per_mmbtu": 3.12,
+      "europe_gas_usd_per_mmbtu": 11.66,
+      "japan_lng_usd_per_mmbtu": 12.32
+    },
+    {
+      "month": "2025-06",
+      "brent_usd_per_barrel": 71.5,
+      "wti_usd_per_barrel": 67.5,
+      "us_gas_usd_per_mmbtu": 3.02,
+      "europe_gas_usd_per_mmbtu": 12.37,
+      "japan_lng_usd_per_mmbtu": 12.17
+    },
+    {
+      "month": "2025-07",
+      "brent_usd_per_barrel": 71.0,
+      "wti_usd_per_barrel": 67.4,
+      "us_gas_usd_per_mmbtu": 3.19,
+      "europe_gas_usd_per_mmbtu": 11.62,
+      "japan_lng_usd_per_mmbtu": 11.91
+    },
+    {
+      "month": "2025-08",
+      "brent_usd_per_barrel": 68.2,
+      "wti_usd_per_barrel": 64.1,
+      "us_gas_usd_per_mmbtu": 2.91,
+      "europe_gas_usd_per_mmbtu": 11.15,
+      "japan_lng_usd_per_mmbtu": 11.79
+    },
+    {
+      "month": "2025-09",
+      "brent_usd_per_barrel": 68.0,
+      "wti_usd_per_barrel": 63.7,
+      "us_gas_usd_per_mmbtu": 2.97,
+      "europe_gas_usd_per_mmbtu": 11.12,
+      "japan_lng_usd_per_mmbtu": 11.47
+    },
+    {
+      "month": "2025-10",
+      "brent_usd_per_barrel": 64.7,
+      "wti_usd_per_barrel": 60.2,
+      "us_gas_usd_per_mmbtu": 3.2,
+      "europe_gas_usd_per_mmbtu": 10.89,
+      "japan_lng_usd_per_mmbtu": 11.1
+    },
+    {
+      "month": "2025-11",
+      "brent_usd_per_barrel": 63.6,
+      "wti_usd_per_barrel": 59.6,
+      "us_gas_usd_per_mmbtu": 3.79,
+      "europe_gas_usd_per_mmbtu": 10.42,
+      "japan_lng_usd_per_mmbtu": 11.15
+    },
+    {
+      "month": "2025-12",
+      "brent_usd_per_barrel": 62.7,
+      "wti_usd_per_barrel": 57.9,
+      "us_gas_usd_per_mmbtu": 4.25,
+      "europe_gas_usd_per_mmbtu": 9.48,
+      "japan_lng_usd_per_mmbtu": 11.32
+    },
+    {
+      "month": "2026-01",
+      "brent_usd_per_barrel": 66.8,
+      "wti_usd_per_barrel": 60.3,
+      "us_gas_usd_per_mmbtu": 7.58,
+      "europe_gas_usd_per_mmbtu": 11.76,
+      "japan_lng_usd_per_mmbtu": 11.49
+    },
+    {
+      "month": "2026-02",
+      "brent_usd_per_barrel": 71.1,
+      "wti_usd_per_barrel": 64.6,
+      "us_gas_usd_per_mmbtu": 3.61,
+      "europe_gas_usd_per_mmbtu": 11.24,
+      "japan_lng_usd_per_mmbtu": 11.32
+    },
+    {
+      "month": "2026-03",
+      "brent_usd_per_barrel": 103.7,
+      "wti_usd_per_barrel": 91.2,
+      "us_gas_usd_per_mmbtu": 3.06,
+      "europe_gas_usd_per_mmbtu": 17.91,
+      "japan_lng_usd_per_mmbtu": 11.42
+    },
+    {
+      "month": "2026-04",
+      "brent_usd_per_barrel": 120.4,
+      "wti_usd_per_barrel": 98.6,
+      "us_gas_usd_per_mmbtu": 2.77,
+      "europe_gas_usd_per_mmbtu": 15.41,
+      "japan_lng_usd_per_mmbtu": 15.65
+    },
+    {
+      "month": "2026-05",
+      "brent_usd_per_barrel": 107.5,
+      "wti_usd_per_barrel": 99.1,
+      "us_gas_usd_per_mmbtu": 2.93,
+      "europe_gas_usd_per_mmbtu": 16.17,
+      "japan_lng_usd_per_mmbtu": 12.88
+    },
+    {
+      "month": "2026-06",
+      "brent_usd_per_barrel": 85.4,
+      "wti_usd_per_barrel": 81.9,
+      "us_gas_usd_per_mmbtu": 3.15,
+      "europe_gas_usd_per_mmbtu": 15.17,
+      "japan_lng_usd_per_mmbtu": 11.79
+    },
+    {
+      "month": "2026-07",
+      "brent_usd_per_barrel": 83.4,
+      "wti_usd_per_barrel": 79.4,
+      "us_gas_usd_per_mmbtu": 2.89,
+      "europe_gas_usd_per_mmbtu": 18.06,
+      "japan_lng_usd_per_mmbtu": 13.85
+    },
+    {
+      "month": "2026-08",
+      "brent_usd_per_barrel": 90.9,
+      "wti_usd_per_barrel": 82.7,
+      "us_gas_usd_per_mmbtu": 2.77,
+      "europe_gas_usd_per_mmbtu": 21.11,
+      "japan_lng_usd_per_mmbtu": 15.27
+    },
+    {
+      "month": "2026-09",
+      "brent_usd_per_barrel": 116.8,
+      "wti_usd_per_barrel": 96.9,
+      "us_gas_usd_per_mmbtu": 2.95,
+      "europe_gas_usd_per_mmbtu": 25.42,
+      "japan_lng_usd_per_mmbtu": 14.25
+    }
+  ],
+  "warning": "Monthly average reference prices ending September 2026; not daily spot, current November prices, electricity prices, diesel prices or tanker freight. Missing early observations preserved."
+}

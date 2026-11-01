@@ -1,0 +1,19 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+!.env.example
+*.part
+*.crdownload
+
+# Local research archive: source documents and complete reproductions.
+/raw/
+/processed/*.fulltext.txt
+/processed/*.pages.json
+/processed/*.clean.md
+/qa/*.png
+/sources/*.md
+!/sources/README.md
+/sources/macro-2026-11-01/*.md
