@@ -1,49 +1,56 @@
 # Counterloom
 
-Counterloom verbindet Recherche, unterschiedliche Perspektiven und iterative Simulationen, um mögliche Entwicklungen zu untersuchen. Der erste Forschungsstrang nutzt MiroFish für Gold, Silber und Kupfer.
+**Recherche. Simulation. Nachvollziehbare Erkenntnisse.**
 
-Repository: [treno-solutions/counter-loom](https://github.com/treno-solutions/counter-loom).
+Counterloom ist ein Forschungsprojekt von [Treno Solutions](https://github.com/treno-solutions). Wir bereiten recherchierte Grundlagen und Seeds für Simulationen vor, werten deren Ergebnisse aus und stellen die dokumentierten Arbeiten als Quellen für weitere Untersuchungen bereit.
 
-## Öffentlicher Bestand und lokales Archiv
+Im Mittelpunkt steht ein nachvollziehbarer Forschungsprozess: von der ursprünglichen Frage über die verwendeten Daten und Annahmen bis zu den Befunden und ihren Grenzen. Counterloom ist themenübergreifend angelegt. Unterschiedliche Perspektiven, konkurrierende Erklärungen und alternative Szenarien sind Teil der Untersuchung.
 
-Dieses Repository enthält Seeds, Vorlagen, kuratierte Evidenz, strukturierte Daten und die Ablage für Simulationsergebnisse. Heruntergeladene Originalberichte, vollständige Textextraktionen, Webseitenkopien und Abbildungen bleiben im lokalen Recherchearchiv. Sie werden nicht mit Git veröffentlicht. Bezugsquellen und Prüfsummen bleiben dokumentiert. Details: [Daten und Quellenrechte](DATA_POLICY.md).
+## Unser Vorgehen
 
-## Zentrale Arbeitsvorlage
+1. **Fragestellung entwickeln.** Untersuchungsziel, Ausgangslage, Zeithorizont und Grenzen festlegen.
+2. **Recherche aufbereiten.** Quellen prüfen, konkrete Akteure und Beziehungen erfassen, Datenstände dokumentieren und Widersprüche sichtbar machen.
+3. **Simulation vorbereiten.** Einen Research Seed erstellen, Szenarien und Annahmen benennen und den Simulationsauftrag separat formulieren.
+4. **Ergebnisse auswerten.** Ausgaben mit den Eingaben und externen Quellen abgleichen, unterschiedliche Positionen untersuchen und Unsicherheiten festhalten.
+5. **Erkenntnisse bereitstellen und weiterentwickeln.** Ausgewertete Arbeiten mit Quellen, Versionen und Belegstellen veröffentlichen. Befunde früherer Läufe können neue Fragen und Varianten begründen.
 
-[Regeln, Mindestanforderungen und kopierbare Vorlage für Seeds und Recherche](SIMULATION_TEMPLATE.md). Für neue Läufe und iterative Erweiterungen hier beginnen. Die Vorlage enthält auch die Startprüfung und Vorgaben zur Übernahme früherer Ergebnisse.
+Jeder Durchlauf erhält eine eigene Dokumentation. So bleibt erkennbar, welche Eingaben tatsächlich verwendet wurden und wie sich die Untersuchung zwischen den Läufen verändert hat.
 
-## Simulationsläufe und Ergebnisse
+## Was eine Quelle hier nachvollziehbar macht
 
-- [Erste Simulation: vorbereitete Ergebnisablage](runs/001-first-simulation/README.md)
-- [Übersicht und Ablageanleitung](runs/README.md)
-- [Vorlage für weitere Läufe](runs/_template/README.md)
+Beobachtete Daten, externe Prognosen, eigene Berechnungen, Szenarioannahmen und simulierte Befunde werden ausdrücklich gekennzeichnet. Zu einer veröffentlichten Auswertung gehören die Forschungsfrage, die verwendeten Eingaben, bekannte Ausführungsparameter, Belegstellen und eine Einordnung der Aussagekraft.
 
-Originalexporte des ersten Laufs nach `runs/001-first-simulation/exports/` kopieren. Auswertung und Quellenabgleich kommen nach `analysis/`. In `run.json` die tatsächlichen Kennungen, Eingaben und Parameter anhand des Exports ergänzen. Der vorbereitete Ordner enthält noch keine Simulationsergebnisse.
+Simulationsergebnisse beschreiben Entwicklungen unter den jeweiligen Bedingungen. Sie werden als simulierte Befunde zitiert. Abweichende Ergebnisse und Minderheitspositionen bleiben erhalten; eine Wiederholung in späteren Läufen gilt nicht als unabhängige Bestätigung.
 
-## Recherche für Folgeläufe
+Beim Bezug auf eine Arbeit aus Counterloom bitte Dateipfad, Version oder Commit sowie gegebenenfalls Laufkennung und Belegstelle angeben. Externe Originalquellen zusätzlich direkt zitieren. Bedingungen zur Weiterverwendung stehen unter [Daten und Quellenrechte](DATA_POLICY.md).
 
-- [Iteratives Vorgehen und Diversität](notes/iterative-run-design.md)
-- [Iran-Krieg und Energie-Szenarien](notes/iran-energy-scenarios.md)
-- [Historische Energiepreise](notes/energy-data.md)
+## Einstieg in die Arbeit
 
-- [Rechercheübersicht mit Originalstudien und Datensätzen](RESEARCH.md)
-- [Originaler englischer Research Seed, Kapitel 1–17](precious-metals-research-seed.md)
-- [Kompaktes Recherchepaket für den nächsten Lauf](mirofish/precious-metals-evidence-pack.md)
-- [Historische Preisauswertung](mirofish/historical-price-evidence.md)
-- [Separater Prompt für den Folgelauf](mirofish/next-run-prompt.md)
-- [Quellenverzeichnis](sources/README.md)
+| Dokument | Zweck |
+|---|---|
+| [Seed- und Recherchestandard](SIMULATION_TEMPLATE.md) | Regeln, Mindestanforderungen, kopierbare Vorlage und Startprüfung |
+| [Simulationsläufe](runs/README.md) | Dokumentierte Läufe, jeweiliger Status und Ergebnisablage |
+| [Vorlage für neue Läufe](runs/_template/README.md) | Eingaben, Konfiguration, Exporte und Auswertung vorbereiten |
+| [Iteration und Diversität](notes/iterative-run-design.md) | Frühere Befunde übernehmen und unterschiedliche Perspektiven erhalten |
+| [Recherchebestand](RESEARCH.md) | Übersicht über die bisher aufbereiteten Untersuchungsmaterialien |
+| [Quellenverzeichnis](sources/README.md) | Herkunft, Datenstände und Nachweise der vorhandenen Recherche |
 
-## Ordner
+## Aufbau des Repositorys
 
 | Pfad | Inhalt |
 |---|---|
-| `runs/` | Eingaben, Originalexporte und eigene Auswertung je Lauf |
-| `raw/` | Unveränderte heruntergeladene Studien und Rohdaten |
-| `processed/` | Textextraktionen und strukturierte Forschungsdaten |
-| `mirofish/` | Aufbereitete Recherche und Prompt für spätere Uploads |
-| `sources/` | Quellen, Abrufstände und Dateinachweise |
-| `notes/` | Recherchebefunde und Datenkonflikte |
-| `qa/` | Extraktionsprüfungen und Zahlenabgleiche |
-| `tools/` | Reproduzierbare Verarbeitung der Forschungsdaten |
+| `runs/` | Eingaben, Ausführungsnachweise, Originalexporte und Auswertungen je Lauf |
+| `processed/` | Strukturierte Forschungsdaten und abgeleitete Kennzahlen |
+| `sources/` | Quellenregister, Abrufstände und Dateinachweise |
+| `notes/` | Methodische Überlegungen, Recherchebefunde und offene Fragen |
+| `qa/` | Dokumentierte Daten- und Verarbeitungsprüfungen |
+| `tools/` | Skripte zur Aufbereitung und Verarbeitung der Forschungsdaten |
+| `mirofish/` | Für MiroFish vorbereitete Eingaben des bisherigen Untersuchungsbestands |
 
-`file-manifest.json` beschreibt nur den Recherchebestand. Je Lauf werden die Eingaben separat mit Prüfsummen dokumentiert; Ergebnisse werden dadurch nicht mit Forschungsquellen vermischt. Ein erneuter Rechercheaufbau aktualisiert RESEARCH.md und lässt diese Repository-Übersicht und die Laufablagen bestehen.
+Die Arbeitsweise ist unabhängig vom Untersuchungsthema angelegt. Bei jedem Lauf wird dokumentiert, welches Simulationswerkzeug tatsächlich eingesetzt wurde.
+
+## Veröffentlichungsstand
+
+Das Repository enthält derzeit Arbeitsstandards, vorbereitete Seeds, Recherchematerial und Vorlagen für die Ergebnisauswertung. Ausgewertete Simulationsergebnisse wurden noch nicht veröffentlicht. Der jeweilige Bearbeitungsstand wird in den [Laufübersichten](runs/README.md) ausgewiesen.
+
+Heruntergeladene Originalberichte, vollständige Textextraktionen, Webseitenkopien und Abbildungen gehören zum ergänzenden Recherchearchiv und werden nicht automatisch mitveröffentlicht. Quellenregister und Prüfsummen dokumentieren auch diese Bestände. `file-manifest.json` beschreibt das Recherchearchiv; die tatsächlich verwendeten Eingaben werden zusätzlich je Lauf nachgewiesen. Details: [Daten und Quellenrechte](DATA_POLICY.md).
