@@ -99,3 +99,17 @@ Die Staatsansicht trennt Steuern, Ausgaben, Saldo, Rückgriff auf vorhandenes Ge
 Zwei V2-Fehler sind behoben: nicht finanzierbare Kaufwünsche treiben die Einstellung nicht mehr an; unbezahlte Arbeits-/Energieinputs erzeugen keine Produktion. Arbeitsverhältnisse und tatsächlich erfolgte Lohnzahlungen werden in der Übersicht getrennt. Das stellt keine vollständige Absatz-/Personalplanung dar.
 
 Der Audit bestätigt die Bankbuchungen, findet aber weiterhin einen langfristig unvollständigen Wirtschaftskreislauf: einbehaltene Firmenmittel, Lager- und Personalregeln, Rückstände, Staatsfinanzierung und Auslandsrückflüsse brauchen eigenständige Erweiterungen. Ein korrekter Bankpfad macht die Gesamtwirtschaft nicht automatisch plausibel oder empirisch gültig.
+
+### Konsumhistorie je Haushalt
+
+Am Kaufzeitpunkt werden pro Haushalt Konsumwunsch, durch Guthaben finanzierbares Budget, tatsächliche Käufe, Arbeitgeber, Einkommen, gezahlte Steuern, Transfers und seit der letzten Kaufrunde verfügbare Ausschüttungen festgehalten. Der Monatsabschluss übernimmt diese Werte unverändert in die Historie und den JSON-Export. Spätere Ausschüttungen und Personalentscheidungen überschreiben die damaligen Entscheidungsgrundlagen nicht.
+
+Die Differenz zwischen Wunsch und Käufen wird centgenau zerlegt:
+
+- Geldmangel: Wunsch minus finanziertes Budget.
+- Warenmangel: Wert ganzer, aus dem zugeteilten Budget bezahlbarer Einheiten minus tatsächliche Käufe.
+- Restbeträge: finanziertes Budget minus Wert dieser ganzen Einheiten, getrennt für die beiden Warenbudgets.
+
+Alle sechs Haushaltsdiagramme haben dieselbe Euro-Skala ab null und denselben Zeitbereich der abgeschlossenen Monate. Eine gemeinsame Monatsauswahl zeigt historische Beträge, Vormonatsänderungen und Kaufplan-Eingaben. Szenario- und Leitzinsänderungen werden im Monat ihres Wirksamwerdens markiert; die spätere Anpassung des variablen Betriebskredits erhält eine eigene Markierung. Arbeitsplatzwechsel werden durch Vergleich der Arbeitgeber an aufeinanderfolgenden Kaufzeitpunkten erkannt. Eine Entlassungsentscheidung beim Abschluss erscheint damit erst in der nächsten Kaufrunde als wirksamer Wechsel. Die Ereigniszeile dokumentiert zeitliche Abfolgen; sie schreibt einem Ereignis keine isolierte Kausalwirkung zu.
+
+Haushalte haben im aktuellen Modell keine eigenen Kredite. Zinsänderungen beeinflussen ihren Konsum gegebenenfalls über Betriebe, Staatsfinanzierung und Ausschüttungen. Ein unmittelbarer Konsumrückgang wird nicht erzwungen. Vor dieser Ergänzung begonnene Läufe enthalten keine Haushalts-Konsumhistorie und müssen neu gestartet werden.

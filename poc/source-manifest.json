@@ -26,13 +26,13 @@
   },
   {
     "path": "poc/README.md",
-    "bytes": 11577,
-    "sha256": "3357dece87e006bb64368d933a0f53e95ba60d95d386db836c485efdc661ac22"
+    "bytes": 11950,
+    "sha256": "044365c9567965ad0fe44080ff2aa1ea653c5f192bfbacdcd530692da6296c67"
   },
   {
     "path": "poc/WORLD_MODEL.md",
-    "bytes": 17099,
-    "sha256": "27e7efdbb262f5e0f48ef1bdfe41c295f1e19575a1a7bbc506e3aef25e854f96"
+    "bytes": 18971,
+    "sha256": "fd42c84fc11c683fdad095d69ea71e31b6f8cb0fc9d9b842842ef4338ee32100"
   },
   {
     "path": "poc/banking.py",
@@ -106,8 +106,8 @@
   },
   {
     "path": "poc/src/App.tsx",
-    "bytes": 28391,
-    "sha256": "c46337c5b0001163fcc449aa7c47bac9ae4cd6c8174cccacbc610f8312b036a7"
+    "bytes": 27876,
+    "sha256": "27e9e5b96a77d00d566969ec0ab8d6b5e7816d092bc89f50f581b9ffd4fe7220"
   },
   {
     "path": "poc/src/BankView.tsx",
@@ -118,6 +118,11 @@
     "path": "poc/src/CompanyView.tsx",
     "bytes": 5139,
     "sha256": "ca170189ccf7e768e3cd8d576ced70db14cbe7725bd03da9eea1b37639f974e1"
+  },
+  {
+    "path": "poc/src/ConsumptionHistory.tsx",
+    "bytes": 7877,
+    "sha256": "d1079d25d1cb448dc2469c80afd9570c4710c35b9505d54fbf4eb22fa98fd34f"
   },
   {
     "path": "poc/src/ForeignView.tsx",
@@ -156,13 +161,13 @@
   },
   {
     "path": "poc/src/styles.css",
-    "bytes": 58636,
-    "sha256": "3dca8a57b0252f0aa5715a1c72512b9d409515400bc72bcd8b0f22d6a665e0b1"
+    "bytes": 62918,
+    "sha256": "285008efcbb0c8d6e3a01f9de356264ae3fe59b7e0c4b8dc858631555bf1a52a"
   },
   {
     "path": "poc/src/world-schema.ts",
-    "bytes": 13387,
-    "sha256": "3f6a6fa53e92fa4104d00c35418f90de30ad89b81e5102f1255fab6ec9d8f463"
+    "bytes": 14395,
+    "sha256": "87f628966f0f06bb6a8c7e9559869e61bf590e4aaa06d09b57015cf47db68019"
   },
   {
     "path": "poc/systems.py",
@@ -173,6 +178,11 @@
     "path": "poc/test_banking.py",
     "bytes": 7460,
     "sha256": "475623defea74c0e1486d17bf20420de9b5e3b8037270cd61bf2d9064588dca9"
+  },
+  {
+    "path": "poc/test_consumption_history.py",
+    "bytes": 3463,
+    "sha256": "12b8c78dceee4eb29e625673fff01cf2b87ad851e2e335b37174703951da9e38"
   },
   {
     "path": "poc/test_engine.py",
@@ -221,7 +231,7 @@
   },
   {
     "path": "poc/world.py",
-    "bytes": 25725,
-    "sha256": "668a40b28132e579748b75967460d9173344c3b5316671289d0fc6eac7612482"
+    "bytes": 26751,
+    "sha256": "b02984268203ccc5b663b4597c4f11591ef788670f8ea4723150a2087c26e43d"
   }
 ]

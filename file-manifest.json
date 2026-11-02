@@ -106,8 +106,8 @@
   },
   {
     "path": "poc/source-manifest.json",
-    "bytes": 6451,
-    "sha256": "d53fe67fef70b632a2dfce36fad53fad5c93c6f95c4d3b5a8f4205abfc0be6e6"
+    "bytes": 6762,
+    "sha256": "29a071f335f119de830b25c4e7c1e51a431506d3d4c2e657cd7494d0cc2de189"
   },
   {
     "path": "processed/energy-monthly-prices.csv",
@@ -318,6 +318,11 @@
     "path": "qa/concordia-pilot-workflow-test.json",
     "bytes": 407,
     "sha256": "51bbc2dae563ab5f8ac80624d1b9c4dabd116267850585d82f146adcd0ae4b1c"
+  },
+  {
+    "path": "qa/consumption-history-verification-2026-11-02.md",
+    "bytes": 2911,
+    "sha256": "cd03b98b77cf99c12d7c488444b8c4b47f1b3897d5d965d7e3bc955d6889bef4"
   },
   {
     "path": "qa/conversion-and-validation.md",

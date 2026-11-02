@@ -36,6 +36,7 @@ class World:
         self.obligations = []
         self.notices = []
         self.history = []
+        self.household_month = []
         self.pending = []
         self.active = []
         self.essential_budget_cents = essential_budget_cents
@@ -253,6 +254,7 @@ class World:
             self.month+=1
             self.month_open={k:n['cash_cents'] for k,n in self.nodes.items()}
             self._reset_metrics()
+            self.household_month = []
             self.foreign.begin_month(self)
             self.monetary.begin_month(self)
             self.treasury.begin_month(self)
@@ -273,10 +275,18 @@ class World:
                 h['metrics']['consumption_plan']=plan['desired_budget']
                 h['metrics']['consumption_budget']=plan['funded_budget']
                 before_cash=h['cash_cents']
+                prior_dividend=h['dividend_carry']
                 h['dividend_carry']=0
                 self.buy(h['id'],'alltag',plan['alltag_budget'])
                 self.buy(h['id'],'werkstatt',plan['werkstatt_budget'])
                 paid=before_cash-h['cash_cents']
+                purchasable=sum(plan[f'{key}_budget']//self.nodes[key]['price']*self.nodes[key]['price'] for key in ('alltag','werkstatt'))
+                self.household_month.append(dict(id=h['id'],employer=h['employer'],
+                    desired_cents=plan['desired_budget'],funded_cents=plan['funded_budget'],paid_cents=paid,
+                    funding_gap_cents=plan['desired_budget']-plan['funded_budget'],
+                    stock_gap_cents=purchasable-paid,unit_remainder_cents=plan['funded_budget']-purchasable,
+                    income_cents=h['metrics']['income'],tax_cents=h['metrics']['tax'],
+                    transfers_cents=h['metrics']['transfers'],prior_dividend_cents=prior_dividend,cash_before_cents=before_cash))
                 h['metrics']['consumption_paid']=paid
                 h['metrics']['reserve_used']=max(0,paid-max(0,h['metrics']['income']-h['metrics']['tax']))
                 if plan['funded_budget']<self.essential_budget_cents:
@@ -286,7 +296,7 @@ class World:
         self.check()
         if self.phase==4:
             self.monetary.close(self)
-            self.history.append(dict(month=self.month, consumption_cents=sum(t['amount_cents'] for t in self.journal if t['month']==self.month and t['kind']=='consumption'), employment=sum(h['employer'] is not None for h in self.households()), household_cash_cents=sum(h['cash_cents'] for h in self.households()), government_cash_cents=self.nodes['staat']['cash_cents'],cash_by_sector={s:sum(n['cash_cents'] for n in self.nodes.values() if n['sector']==s) for s in RULES}))
+            self.history.append(dict(month=self.month, consumption_percent=self.propensity,essential_budget_cents=self.essential_budget_cents, households=sorted(deepcopy(self.household_month),key=lambda h:h['id']), consumption_cents=sum(t['amount_cents'] for t in self.journal if t['month']==self.month and t['kind']=='consumption'), employment=sum(h['employer'] is not None for h in self.households()), household_cash_cents=sum(h['cash_cents'] for h in self.households()), government_cash_cents=self.nodes['staat']['cash_cents'],cash_by_sector={s:sum(n['cash_cents'] for n in self.nodes.values() if n['sector']==s) for s in RULES}))
         return self.snapshot()
 
     def queue(self,event):
