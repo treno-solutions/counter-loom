@@ -94,3 +94,8 @@ Ein angefragter Maschinenkredit führt getrennt durch Gutschrift, Lieferung/Zahl
 ## Modell v4 · begrenzter Lernlauf und Unternehmen
 
 Das [V4-Konzept](poc/COMPANY_MODEL.md) begrenzt die aktuelle Umsetzung auf 24 Monate mit bestehenden Akteuren und festen Preisen/Löhnen. Die Unternehmen planen finanzierbare Nachfrage und Lager, produzieren nach Bedarf mit bezahlten Inputs, bewerten Waren zu Herstellungskosten, passen Stellen verzögert an und verteilen begrenzt Gewinne an ihre Haushaltseigentümer. Unternehmensansicht und Firmenkonto zeigen Plan, tatsächliche Vorgänge und Ergebnis getrennt. Die [unabhängige Prüfung](qa/company-v4-plausibility.md) und der [technische Prüfstand](qa/company-v4-verification-2026-11-02.json) ergänzen die unveränderten historischen Berichte. Keine Behauptung eines langfristigen Gleichgewichts oder empirischer Prognosegüte.
+
+
+## Modell v5 · Außenwirtschaft mit Warenexporten
+
+Das [Außenhandelskonzept](poc/FOREIGN_MODEL.md) ergänzt den bestehenden Außenanschluss um einen budgetbegrenzten Warenkunden. Nur vorhandenes Anfangsguthaben finanziert seine Bestellungen. Tatsächliche Exportverkäufe verringern Firmenlager und erhöhen Firmenkonten; zugehörige Liefernachweise zeigen Menge, Kosten und Zahlungs-ID. Systemkarte und Auslandsansicht trennen Energiezahlungen, Warenlieferung und Exporterlös. Die [V5-Prüfung](qa/foreign-v5-plausibility.md) ergänzt unverändert erhaltene ältere Belege.

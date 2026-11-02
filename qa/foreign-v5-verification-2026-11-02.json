@@ -1,0 +1,91 @@
+{
+  "checked_on": "2026-11-02",
+  "model": "illustrative_circular_flow_v5",
+  "base_revision": "e8a37b7",
+  "scope": "Foreign budget, paid goods exports and local graphical verification; no empirical or workshop validation",
+  "source_files": [
+    {
+      "path": "poc/world.py",
+      "sha256": "3160a7d79e6a5205c528598b2c51464a838e0b12310584f176b2b9724bf15172"
+    },
+    {
+      "path": "poc/foreign.py",
+      "sha256": "476d7f69784634fafae7c07a195ee5092b472018e29e0e6532f9a7a9025a41b3"
+    },
+    {
+      "path": "poc/firms.py",
+      "sha256": "8daf7a8e723e00a138a140ceac8c6f214679a16225996efa2fa6bf15110ae475"
+    },
+    {
+      "path": "poc/banking.py",
+      "sha256": "6d0492716552d59723bb5c6be87e1e78ce3ec18c69fa72e0360af8d51f13e7f8"
+    },
+    {
+      "path": "poc/systems.py",
+      "sha256": "3491c16a89d11d2cf54c637ced9a8a9f143e032b30ec26f883fb3218780bccb0"
+    },
+    {
+      "path": "poc/src/App.tsx",
+      "sha256": "684c59608d42f6784040fcdb7541551ceb271dc9fbd6a5f1064a1490cef4fcf0"
+    },
+    {
+      "path": "poc/src/ForeignView.tsx",
+      "sha256": "e2647527ef52acf2aea69925acd190b9408048db4a6e3eba9d43a3f6cfe61516"
+    },
+    {
+      "path": "poc/src/AccountingViews.tsx",
+      "sha256": "5b4c52b057ebff13db367772c56506e26404d5bb588f9f2d8f839ab823472d2b"
+    },
+    {
+      "path": "poc/src/world-schema.ts",
+      "sha256": "b4b65270c58e4392d70cdeb94da6908534ea8d181a415eff4e9ac52b456b67bb"
+    }
+  ],
+  "automated_checks": {
+    "unittest_passed": 49,
+    "typescript_and_production_build": "passed",
+    "strict_frontend_schema_snapshots_passed": 847,
+    "altered_export_quantity_rejected": true,
+    "http_json_export_links_deliveries_to_full_journal": true
+  },
+  "independent_audit": {
+    "report": "qa/foreign-v5-plausibility.md",
+    "worlds": 7,
+    "world_months": 168,
+    "phases": 840,
+    "reconstructed_postings": 8144,
+    "isolated_foreign_cases": 9
+  },
+  "browser_checks": {
+    "browser": "BrowserOS neo",
+    "desktop_foreign_hierarchy": "passed",
+    "separate_money_and_goods_routes": "passed",
+    "root_map_export_revenue_path": "passed",
+    "payment_ids_match_delivery_receipts": "passed",
+    "mobile_width_390_no_document_overflow": "passed",
+    "mobile_diagram_scroll_with_hint": "passed",
+    "local_font_loading": "passed",
+    "real_autoplay_stops_after_month_24_without_error": "passed",
+    "completed_start_and_step_buttons_disabled": true,
+    "normal_preview_model_v5_ten_real_phase_steps": "passed",
+    "normal_preview_url": "http://127.0.0.1:5173/",
+    "month_2": {
+      "energy_imports_cents": 60300,
+      "paid_exports_cents": 55000,
+      "export_units": {
+        "alltag": 4,
+        "werkstatt": 1
+      },
+      "net_domestic_trade_inflow_cents": -5300,
+      "foreign_cash_cents": 77300,
+      "domestic_cash_cents": 14522700
+    }
+  },
+  "limits": [
+    "One aggregate foreign account within the illustrative single-bank balance sheet; no cross-border settlement or exchange rates.",
+    "Fixed foreign demand, proportional sub-budgets and domestic purchase priority are scenario assumptions.",
+    "Foreign goods are treated as used; no foreign production/inventory model.",
+    "No automatic trade balance, empirical calibration, long-term macroeconomic stability or workshop effectiveness established.",
+    "The existing state buffer, fixed prices and no depreciation remain bounded model conditions."
+  ]
+}

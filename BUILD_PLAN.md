@@ -2,7 +2,7 @@
 
 Version 0.1 · 2. November 2026 · Status: dokumentierter Arbeitsplan. System Dynamics ist der bevorzugte Modellierungsansatz; Framework, Bezugsraum und konkrete erste Lernmodule sind noch nicht ausgewählt. Keine neue Simulation durch diesen Plan gestartet.
 
-Aktueller begrenzter Umfang: [POC 02 · laufender Kreislauf](poc/WORLD_MODEL.md), mit dem vorherigen [Haushaltsversuch](POC.md) als dokumentiertem Ausgangspunkt. Der POC begrenzt die Umsetzung auf einen sichtbaren algorithmischen Durchstich; der folgende Bauplan bleibt der Erweiterungsrahmen. Verbindliche aktuelle Begrenzung: [24-Monats-Lernlauf und Unternehmenssystem v4](poc/COMPANY_MODEL.md), mit festen Preisen/Löhnen und bestehenden Akteuren. Zuerst nachvollziehbare Unternehmensreaktionen prüfen; keine Erweiterung zur vollständigen Weltwirtschaft.
+Aktueller begrenzter Umfang: [POC 02 · laufender Kreislauf](poc/WORLD_MODEL.md), mit dem vorherigen [Haushaltsversuch](POC.md) als dokumentiertem Ausgangspunkt. Der POC begrenzt die Umsetzung auf einen sichtbaren algorithmischen Durchstich; der folgende Bauplan bleibt der Erweiterungsrahmen. Verbindliche aktuelle Begrenzung: [24-Monats-Lernlauf und Unternehmenssystem v4](poc/COMPANY_MODEL.md), mit festen Preisen/Löhnen und bestehenden Akteuren. Der [begrenzte Außenhandel v5](poc/FOREIGN_MODEL.md) ergänzt tatsächlich bezahlte Warenexporte ohne neue Akteure. Zuerst nachvollziehbare Unternehmensreaktionen prüfen; keine Erweiterung zur vollständigen Weltwirtschaft.
 
 ## 1 · Ziel und vollständiger Zusammenhang
 

@@ -1,13 +1,13 @@
 [
   {
     "path": "BUILD_PLAN.md",
-    "bytes": 19512,
-    "sha256": "943aa7527bcfbf259df20bbbc9392e5e3b5fa5db8106669f7db515d9b4fb73d2"
+    "bytes": 19629,
+    "sha256": "de459de394a6c61f7cb0e7261d9055750c4a42ce485afe5aea92b6da686de9ec"
   },
   {
     "path": "POC.md",
-    "bytes": 11191,
-    "sha256": "bdef94300124c6aded4008fc3ab7baa901c41a422aca4a9a048b1b0066c979bb"
+    "bytes": 11771,
+    "sha256": "89677fbffab2f0ea7050a32bd8ea1b2e3a6ed019824887ba4903f9c64013753a"
   },
   {
     "path": "RESEARCH.md",
@@ -106,8 +106,8 @@
   },
   {
     "path": "poc/source-manifest.json",
-    "bytes": 4722,
-    "sha256": "3cde731b600ca00615ae03be9940830e2a0c87b81332f413051cfbe4db8aabe4"
+    "bytes": 5299,
+    "sha256": "f00e99a73db9adc1703fbecf02fcf5acb4faceabff20fd3bbc18bf26e23ca05f"
   },
   {
     "path": "processed/energy-monthly-prices.csv",
@@ -333,6 +333,21 @@
     "path": "qa/fiscal-and-household-v2-2026-11-02.json",
     "bytes": 4049,
     "sha256": "6c38c04a8d88f97f0f8d73d59f2d5ddfb649ab3800802d5151179201198989f1"
+  },
+  {
+    "path": "qa/foreign-v5-plausibility.json",
+    "bytes": 309576,
+    "sha256": "7b531cbd2c77c7d31418fa5406ceff2a4e7e72e5f3665275a2dd545779d63abc"
+  },
+  {
+    "path": "qa/foreign-v5-plausibility.md",
+    "bytes": 9479,
+    "sha256": "437a1fbbe7fdb4b104a277e48fd7c198c53a32cf6485e69f84ffe07df48601d7"
+  },
+  {
+    "path": "qa/foreign-v5-verification-2026-11-02.json",
+    "bytes": 3394,
+    "sha256": "66e921fe70b1c2ee19f84f7d85d091a33d40182cf50f58b98e840078861c074f"
   },
   {
     "path": "qa/framework-review-validation.json",
@@ -751,8 +766,8 @@
   },
   {
     "path": "tools/assemble_evidence.py",
-    "bytes": 34756,
-    "sha256": "05ba92ddbbabc45c6cb091ee32ca412bd49b51dfcb3482f074af360d531375e8"
+    "bytes": 34794,
+    "sha256": "861f14eecd9d745524415b786a03eec96e25eb22fc8aa2df9a7ec47d620fc826"
   },
   {
     "path": "tools/check_bank_plausibility.py",
@@ -768,6 +783,11 @@
     "path": "tools/check_concordia_pilot_workflow.py",
     "bytes": 3036,
     "sha256": "c63285186c769bd90227f29b7832814b09a96492a056f81a720524153da24662"
+  },
+  {
+    "path": "tools/check_foreign_plausibility.py",
+    "bytes": 21083,
+    "sha256": "277f67b2187e0ebe1c0246e3ff2bcdac6324132f06d345df92dcbedd0ad0cc20"
   },
   {
     "path": "tools/prepare_research.py",

@@ -1,13 +1,13 @@
-# Begrenzter Lernlauf und Unternehmenssystem · Modell v4
+# Begrenzter Lernlauf und Unternehmenssystem · Grundlage v4, erweitert v5
 
-Stand: 2. November 2026 · Implementiertes Konzept für Modell v4. Alle Parameter sind eigene illustrative Annahmen; keine empirische Kalibrierung oder Prognose.
+Stand: 2. November 2026 · Die Unternehmensregeln aus v4 bleiben in v5 bestehen. Der [Außenhandelsanschluss v5](FOREIGN_MODEL.md) ergänzt tatsächliche Auslandsbestellungen und Warenexporte. Alle Parameter sind eigene illustrative Annahmen; keine empirische Kalibrierung oder Prognose.
 
 ## Verbindliche Grenze dieser Version
 
-- Sechs Haushalte, zwei Unternehmen, eine Bank, Staat und der bereits vorhandene vereinfachte Energie-Außenanschluss. Keine weiteren Akteure oder Systemarten.
+- Sechs Haushalte, zwei Unternehmen, eine Bank, Staat und der bestehende vereinfachte Außenanschluss für Energieimporte und Warenexporte. Keine weiteren Akteure oder Systemarten.
 - **24 Monate pro Lernlauf.** Die globale Zeit wird anschließend angehalten; ein neuer Lauf beginnt mit denselben dokumentierten Startbedingungen. Keine Aussagen über eine langfristig stabile Volkswirtschaft.
 - Preise, Löhne, Technologien und Steuersätze bleiben im Lauf fest. Energiepreis und Konsumquote sind die vorhandenen äußeren Eingriffe; eine Rücknahme des Konsumschocks erlaubt einen gezielten Erholungsfall.
-- Staat nutzt weiterhin seinen vorgegebenen Anfangspuffer und feste Regeln für Löhne, Transfers und Beschaffung. Anleihen-/Staatskreditpolitik und Auslandsrückflüsse bleiben sichtbar begrenzte Außenbedingungen. Energiezahlungen senken das Inlandsguthaben; das separate Auslandskonto bleibt nur in der Kontrollsumme aller Kundenkonten enthalten. Diese Kontrollsumme darf nicht als verfügbare inländische Geldmenge gelesen werden.
+- Staat nutzt weiterhin seinen vorgegebenen Anfangspuffer und feste Regeln für Löhne, Transfers und Beschaffung. Anleihen-/Staatskreditpolitik bleibt eine begrenzte Außenbedingung. Energiezahlungen senken das Inlandsguthaben, tatsächlich bezahlte Warenexporte erhöhen es. Das separate Auslandskonto bleibt in der Kontrollsumme aller Kundenkonten enthalten. Diese Kontrollsumme darf nicht als verfügbare inländische Geldmenge gelesen werden.
 - Der bestehende einzelne Maschinenkredit bleibt enthalten. Kein Ausbau zu einem allgemeinen Kreditmarkt, weiteren Anlageklassen, Inflation, Steuersystem, LLM-Personas oder neuer Grafikplattform.
 - Fertig, wenn Konten/Bankbilanz und Waren-/Kostenbestände stimmen, die dokumentierten Regeln in Baseline und ausgewählten Eingriffen nachvollziehbar reagieren und ein Lernender die Wirkung über die Systemansichten erklären kann. Die technische Prüfung ersetzt den noch ausstehenden Verständlichkeitstest nicht.
 

@@ -1,16 +1,20 @@
-# Laufende Modellwirtschaft · aktuelle Fassung v4
+# Laufende Modellwirtschaft · aktuelle Fassung v5
 
-Die aktuelle Systemgrenze und Unternehmenslogik stehen im [verbindlichen V4-Konzept](COMPANY_MODEL.md), die Geld-/Kreditbuchungen im [Bankkonzept](BANKING_MODEL.md). Ein Lernlauf endet nach **24 Monaten**. Preise, Löhne und Akteure bleiben fest; keine langfristige Gleichgewichts- oder Prognosebehauptung.
+Die aktuelle Unternehmenslogik steht im [Unternehmenskonzept](COMPANY_MODEL.md), die Geld-/Kreditbuchungen im [Bankkonzept](BANKING_MODEL.md). V5 ergänzt den [Außenhandelsanschluss](FOREIGN_MODEL.md): das vorhandene Auslandskonto kauft tatsächliche Waren und führt dadurch Geld ins Inland zurück. Ein Lernlauf bleibt auf **24 Monate** mit denselben elf Akteuren und festen Preisen/Löhnen begrenzt.
 
-V4 ersetzt die früheren Produktions-, Personal- und Gewinnregeln: geglättete finanzierbare Nachfrage, Lagerpuffer, durch bezahlte Inputs begrenzte Produktion, gleitende Lagerkosten, verzögerte tragfähige Stellenplanung und tatsächliche begrenzte Eigentümerausschüttung. Energie kostet 5 € je Alltags- beziehungsweise 9 € je Werkstatteinheit, beim Energieschock doppelt so viel. Ein Lohn verursacht auch bei ungenutzter Kapazität Aufwand. Die sechs Haushalte sind zu gleichen Teilen Eigentümer. Ausschüttungen sind für den folgenden Kaufplan verfügbar und in diesem begrenzten Steuerrahmen nicht zusätzlich besteuert.
+Das Ausland beginnt mit 0 €. Es wünscht monatlich 6 Alltagsgüter / 2 Werkstattgüter im Wert von 900 €. Nur Anfangsguthaben des Monats finanziert den anteiligen Kaufplan. Öffentliche Aufträge und Haushalte kaufen zuerst; verbleibende freie Ware kann gegen tatsächliche Zahlung exportiert werden. Energieeingänge desselben Monats erhöhen das vorab festgelegte Kaufbudget nicht. Einzelne Exportlieferungen sind durch Zahlungsbeleg, Stückzahl, Lagerabgang und Warenkosten nachprüfbar. Diese Parameter und Reihenfolge sind illustrative Annahmen.
 
-Die Reihenfolge bleibt Produktion/Löhne → Steuern/Transfers → Käufe → Investitionen → Abschluss. Kreditlieferung erfolgt vor dem Unternehmensabschluss. Umsatz entsteht ausschließlich durch tatsächliche Verkäufe; Kreditgutschrift, Tilgung und Maschinenkauf werden getrennt geführt. Rückstände und die endlichen Staats-/Auslandsbedingungen werden weiterhin sichtbar, ohne allgemeine Insolvenz- oder Rückstandsabwicklung.
+Die Reihenfolge bleibt Produktion/Löhne → Steuern/Transfers → Käufe einschließlich Exporten → Investitionen → Abschluss. Der erste Monat hat Energieimporte ohne finanzierbare Exportbestellung. Spätere Exporterlöse fließen in Unternehmensumsatz, Warenkosten und Absatzplanung ein. Der Außenhandelssaldo wird nicht vorgegeben. Inland und Ausland verschieben vorhandene Einlagen; nur die getrennten Bank-/Kreditvorgänge verändern die Summe aller Kundeneinlagen.
 
-[Unabhängige V4-Prüfung](../qa/company-v4-plausibility.md). Technisch korrekte Buchungen belegen keine empirische oder pädagogische Gültigkeit.
+[Unabhängige V5-Prüfung](../qa/foreign-v5-plausibility.md). Rückstände, endlicher Staatskassenpuffer, fehlende Abschreibung und feste Preise bleiben bekannte Grenzen. Kein langfristiger Gleichgewichts-, Prognose- oder Workshop-Wirksamkeitsnachweis.
+
+## Unternehmensentwicklung v4
+
+V4 ersetzte die früheren Produktions-, Personal- und Gewinnregeln: geglättete finanzierbare Nachfrage, Lagerpuffer, durch bezahlte Inputs begrenzte Produktion, gleitende Lagerkosten, verzögerte tragfähige Stellenplanung und tatsächliche begrenzte Eigentümerausschüttung. Energie kostet 5 € je Alltags- beziehungsweise 9 € je Werkstatteinheit, beim Energieschock doppelt so viel. Ein Lohn verursacht auch bei ungenutzter Kapazität Aufwand. Die sechs Haushalte sind zu gleichen Teilen Eigentümer. Ausschüttungen sind für den folgenden Kaufplan verfügbar und in diesem begrenzten Steuerrahmen nicht zusätzlich besteuert. Kreditlieferung erfolgt vor dem Unternehmensabschluss; Kreditgutschrift, Tilgung und Maschinenkauf bleiben getrennte Vorgänge.
 
 ## Historische Entwicklung bis v3
 
-Die folgenden Abschnitte dokumentieren die früheren Fassungen. Insbesondere die dort genannte 240-Monats-Grenze sowie alte Energie-, Personal- und Produktionsregeln sind durch V4 ersetzt. Archivierte Prüfberichte bleiben unverändert.
+Die folgenden Abschnitte dokumentieren die früheren Fassungen. Insbesondere die dort genannte 240-Monats-Grenze sowie alte Energie-, Personal- und Produktionsregeln sind durch V4/V5 ersetzt. Aussagen über fehlende Auslandsrückflüsse beschreiben den Stand bis V4. Archivierte Prüfberichte bleiben unverändert.
 
 ### Laufender Wirtschaftskreislauf · POC 02
 
