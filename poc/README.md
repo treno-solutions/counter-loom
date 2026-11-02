@@ -18,11 +18,11 @@ Die Ansicht öffnet sich unter **http://127.0.0.1:5173/**. Die lokale Schnittste
 
 ## Verwenden
 
-1. Jährlichen Zinssatz eingeben oder eine Variante wählen, dann **Verlauf berechnen**. Neue freie Eingaben werden tatsächlich durch den Python-Kern berechnet; es werden keine Beispielkurven ausgewählt.
-2. Vertragslage wechseln: variabler Kredit, Festzinskredit oder verzinste Einlage.
-3. Monat auswählen oder den Verlauf abspielen. Dies ist die Wiedergabe eines berechneten Laufs und erzeugt keine neuen Modellentscheidungen.
-4. Eine Box auswählen, um die zugehörige Regel und die aktuellen Werte zu sehen. Die Detailansicht vergleicht mit dem unveränderten 2-%-Verlauf.
-5. **Annahmen und Grenzen** öffnen. Die drei Fälle und alle Verhaltensregeln sind hypothetisch. Die Grafik ist kein empirischer Nachweis.
+1. Drei bebilderte Haushalte und ihre Ausgangslage kennenlernen. Zu Beginn gilt überall der Ausgangszins von 2 %; die Änderung ist noch nicht ausgelöst.
+2. Eine Vermutung bilden und **Zinsen auf 6 % erhöhen** wählen. Alle drei Fälle werden neu berechnet und zeigen direkt Monat 3, in dem der neue Vertragszins erstmals wirkt.
+3. **Zeig mir, warum** bei einem Haushalt wählen. Die Geldansicht erklärt Einkommen, Alltagskosten, Zinsen, Überschuss beziehungsweise Fehlbetrag und den separaten Geldtopf für eine spätere Anlage.
+4. Die sechs Monate einzeln ansehen oder abspielen. **Zur Ausgangslage** stellt den unveränderten Vergleich wieder dar.
+5. Optional **Anderen Zins ausprobieren** öffnen. Freie Eingaben werden erst mit dem grünen Knopf angewandt. **Rechnung und Modellgrenzen** enthält die Periodentabelle und vollständigen Annahmen.
 
 Eine geänderte Eingabe wird als noch nicht berechnet gekennzeichnet. Bei einem Fehler verschwindet die Ergebnisansicht; es gibt keine Ersatzdaten. Für Berechnung, Auswahl und Wiedergabe werden keine LLMs verwendet.
 
@@ -36,7 +36,7 @@ npm start
 
 Die gebaute Ansicht und API sind dann gemeinsam unter **http://127.0.0.1:8765/** erreichbar. Kein Vite-Prozess nötig. Die lokale API ist ein kleiner POC-Server, keine Produktionsbereitstellung.
 
-`npm test` führt die unabhängige Decimal-Gegenrechnung, Reproduktions-/Ereignisprüfungen und HTTP-Eingabe-/Fehlerprüfungen aus. `npm run build` prüft TypeScript und erstellt die Webansicht. Visuelle und interaktive Browserprüfungen sind im [Prüfprotokoll](../qa/poc-verification-2026-11-02.json) dokumentiert; sie werden nicht automatisch von `npm test` ausgeführt.
+`npm test` führt die unabhängige Decimal-Gegenrechnung, Reproduktions-/Ereignisprüfungen und HTTP-Eingabe-/Fehlerprüfungen aus. `npm run build` prüft TypeScript und erstellt die Webansicht. Visuelle und interaktive Browserprüfungen sind im [ersten Prüfprotokoll](../qa/poc-verification-2026-11-02.json) und im [Prüfprotokoll der geführten Ansicht](../qa/poc-guided-view-2026-11-02.json) dokumentiert; sie werden nicht automatisch von `npm test` ausgeführt.
 
 ## Aufbau
 

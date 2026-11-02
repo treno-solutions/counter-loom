@@ -1,6 +1,6 @@
 # POC 01 · Ein Ereignis, unterschiedliche Haushalte, sichtbare Folgen
 
-Version 0.2 · 2. November 2026 · Status: lokaler POC implementiert und technisch geprüft; Verständlichkeit im Workshop noch nicht geprüft. Der [Bauplan](BUILD_PLAN.md) bleibt der Erweiterungsrahmen.
+Version 0.3 · 2. November 2026 · Status: lokaler POC implementiert und technisch geprüft; Verständlichkeit im Workshop noch nicht geprüft. Der [Bauplan](BUILD_PLAN.md) bleibt der Erweiterungsrahmen.
 
 ## Eine Frage
 
@@ -65,3 +65,9 @@ Nach dem sichtbaren algorithmischen Durchstich kann eine einzelne Persona ihren 
 - **Offen:** Vollständige Zustandswiederherstellung zwischen Prozessen. Für diesen POC reicht zunächst ein neuer kurzer Lauf aus gespeicherten Eingaben; echtes Fortsetzen wird damit nicht behauptet.
 
 Nächster Schritt: Den lokalen POC anhand einer Vorhersagefrage und einer anschließenden Erklärung der Unterschiede testen. Erst danach den nächsten Mechanismus oder eine begrenzte Persona-Entscheidung auswählen.
+
+## Geführte Haushaltsansicht und verbleibende Lücke
+
+Die überarbeitete Ansicht beginnt mit drei bebilderten fiktiven Haushalten. Eine Vorhersagefrage geht dem Auslösen der Zinsänderung voraus. Danach zeigen alle drei Karten den monatlichen Unterschied; die ausgewählte Detailansicht führt vom Einkommen über Kosten und Zinsen bis zum verbleibenden Betrag. Freie Parameter und technische Tabellen sind nachgeordnet. [Prüfstand der Ansicht](qa/poc-guided-view-2026-11-02.json).
+
+Diese Verbesserung der Bedienung macht aus dem Rechenfall keine Volkswirtschaftssimulation. Einkommen und Alltagskosten sind weiterhin vorgegeben; Unternehmen, Beschäftigung und Konsumnachfrage wirken nicht aufeinander zurück. Die Haushaltsansicht kann später als Detailansicht dienen. Als nächster begrenzter Modellschritt ist ein tatsächlich verbundener Wirtschaftskreislauf zu definieren und fachlich zu prüfen. Ein solcher Kreislauf ist hier noch nicht implementiert.

@@ -1,8 +1,8 @@
 [
   {
     "path": "poc/README.md",
-    "bytes": 4256,
-    "sha256": "11b05111816eaa02f139622d7d02a1a6cb5c23958ad669f519089354682e9264"
+    "bytes": 4486,
+    "sha256": "169a75ce32843a0d151f818109233c1d8ab9dbb51b6dde5ee1623f889b55a214"
   },
   {
     "path": "poc/engine.py",
@@ -51,8 +51,8 @@
   },
   {
     "path": "poc/src/App.tsx",
-    "bytes": 19022,
-    "sha256": "e970e57a4cb2b6210e556f52b429a020aba7249c66dc082a8244f55f2d20810d"
+    "bytes": 20704,
+    "sha256": "9862ac71089f362668682348411e73de1683250969f737c8c607089860bdbede"
   },
   {
     "path": "poc/src/main.tsx",
@@ -66,8 +66,8 @@
   },
   {
     "path": "poc/src/styles.css",
-    "bytes": 16534,
-    "sha256": "33f6e9c17008937468b0b2c0071e2d47fd43829b5641459deed62ab2b442d2dc"
+    "bytes": 17392,
+    "sha256": "55485aeee27321a9480a6320ec45e6245c54b2ed0771c77a8eff54d78a92b3cd"
   },
   {
     "path": "poc/test_engine.py",

@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-02",
+  "scope": "Guided household UI revision; economic core unchanged",
+  "build": "Strict TypeScript and Vite production build; passed",
+  "existing_engine_tests": {
+    "passed": 6,
+    "failed": 0
+  },
+  "browser": "BrowserOS neo",
+  "checks": [
+    "initial baseline: monthly headroom 200 / 200 / 400; change not yet triggered",
+    "6% trigger: jumps to month 3; monthly headroom 0 / 200 / 600 and differences -200 / 0 / +200",
+    "select household: money explanation changes with case",
+    "6% deposit month 6: available account 3600, separate earmarked pot 600",
+    "free 3.7% input: monthly interest 185, headroom 115, month 3 available account 1215",
+    "dirty input clearly marked before apply",
+    "playback reaches month 4 and pause works",
+    "reset restores baseline cards and hides playback",
+    "expanded model table contains all six periods",
+    "20% variable month 6: available account 0, arrears 1600, unpaid this month 700",
+    "desktop full-page screenshot visually reviewed; 390px viewport screenshot reviewed; no horizontal overflow or clipped controls in 390px DOM check"
+  ],
+  "limitations": [
+    "No user comprehension study; understandable operation is not yet validated",
+    "Still a household contractual calculator, not a functioning macroeconomic simulation",
+    "Employment, company revenue, consumption and feedback are not implemented",
+    "No LLM decisions or new empirical behavior rules"
+  ]
+}

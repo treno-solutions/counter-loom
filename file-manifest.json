@@ -6,8 +6,8 @@
   },
   {
     "path": "POC.md",
-    "bytes": 7347,
-    "sha256": "ed754e5e9d6a95b64b198cf84b3336155b5eaded00538bd49ce69d065c8209f0"
+    "bytes": 8312,
+    "sha256": "a5b656f07e6b2ea3e2db51ac4b45003b1b4ce2ffa804e4e31d7256037309c52d"
   },
   {
     "path": "RESEARCH.md",
@@ -107,7 +107,7 @@
   {
     "path": "poc/source-manifest.json",
     "bytes": 2413,
-    "sha256": "ff71eb6eb05ef562dcfdafb8fb2753ebde88f594f90497e8d82a8e70a5eb104b"
+    "sha256": "662aa216f267670a346a10eaf16d3facbe7d18f7032817a0cb0f7bafdef6a0ba"
   },
   {
     "path": "processed/energy-monthly-prices.csv",
@@ -303,6 +303,11 @@
     "path": "qa/permissionless-package-validation.json",
     "bytes": 3344,
     "sha256": "7df055269990fd4f5eacc1de3c559d2016867db385cd0efe7257ff0593ef5eb1"
+  },
+  {
+    "path": "qa/poc-guided-view-2026-11-02.json",
+    "bytes": 1467,
+    "sha256": "00151327afdac0bd4ce28eb01f725e0a1f46efbf3d6ab038465f3f352bd3d13d"
   },
   {
     "path": "qa/poc-verification-2026-11-02.json",
