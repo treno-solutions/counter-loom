@@ -1,8 +1,8 @@
 [
   {
     "path": "RESEARCH.md",
-    "bytes": 3646,
-    "sha256": "5e77ed55639352cb924b236c69bee1a6096d70d413cc2a09381b40e102496658"
+    "bytes": 3773,
+    "sha256": "9cc33949b7d19570dcd7a775e59cc6a4c4d5de0bc90c34675a54981057963038"
   },
   {
     "path": "mirofish/historical-price-evidence.md",
@@ -88,6 +88,11 @@
     "path": "notes/social-financial-world/model-plan.md",
     "bytes": 7068,
     "sha256": "19610cc045ba29c032175c4f3e25518202f56f373dc9eb125979f60e13f6f629"
+  },
+  {
+    "path": "notes/social-financial-world/scenario-catalogue.md",
+    "bytes": 6322,
+    "sha256": "8d365013139066a582187ef6d5e7513dc695d85475f865d4b258559674472af9"
   },
   {
     "path": "processed/energy-monthly-prices.csv",
@@ -461,8 +466,8 @@
   },
   {
     "path": "research/README.md",
-    "bytes": 4370,
-    "sha256": "668759062daa7ec44db8c833421a31baebf91ae3a49a82d7e8583f97854749c8"
+    "bytes": 4524,
+    "sha256": "b23e10d61ae6dc79df80906dcb6be69ce271a426504ef7ab99f1b9efd89b2dcc"
   },
   {
     "path": "research/assessment-protocol.md",
@@ -476,8 +481,8 @@
   },
   {
     "path": "research/decisions/0002-world-state-and-shocks.md",
-    "bytes": 9306,
-    "sha256": "10b718343a85005ed1399bb781b2d5be3908f305adc0dd7f502d1bb3628fe297"
+    "bytes": 9598,
+    "sha256": "1164c9a9cb3f4dea6d664b501182e9ee057b26f97ab4f51bcd41b2d40d4393f6"
   },
   {
     "path": "research/frameworks/README.md",

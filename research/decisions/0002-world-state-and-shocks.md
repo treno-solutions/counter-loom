@@ -33,6 +33,8 @@ Ein LLM ist bereits ein neuronales Netz. Neuronale Architektur allein macht Agen
 
 ## Ereignisse und Schockkanäle
 
+Der [Szenarienkatalog](../../notes/social-financial-world/scenario-catalogue.md) umfasst persönliche Ereignisse sowie Krisen, Boom, längere günstige Phasen, Niedrigzins und Erholung. Diese positive wie negative Dynamik gehört zum Ziel; der Katalog ist noch keine kalibrierte Simulation.
+
 Eine Kriegsmeldung verändert zunächst verfügbare Information. Energiepreisänderungen, Einkommensausfälle oder Wechselkursbewegungen werden als gesonderte beobachtete oder hypothetische Pfade zugeführt. Ein Krieg erzwingt nicht per Definition steigende Goldpreise oder Panik. Wirkung und Dauer sind Szenarioparameter, keine vom LLM erfindbaren Weltfakten.
 
 Eine Zentralbankentscheidung wird mit expliziter Übertragung modelliert: etwa auf Einlagenrendite, variable Kreditzinsen oder auslaufende Zinsbindungen. Nicht jeder Haushalt wird sofort gleich belastet. Reine Nachrichtenwirkung und veränderte finanzielle Möglichkeiten können getrennte Vergleichsbedingungen bilden.

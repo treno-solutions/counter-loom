@@ -32,6 +32,7 @@ Diese Dokumentation ist die Grundlage vor weiteren Framework-Piloten. TinyTroupe
 | [Bewertungsvorlage](frameworks/_template.md) | Nachvollziehbare Dokumentation jedes weiteren Kandidaten |
 | [Literatur und soziale Modelle](../notes/social-financial-world/literature.md) | Empirische Grundlagen und etablierte Modellansätze |
 | [Modellkonzept](../notes/social-financial-world/model-plan.md) | Vorhandene Systeme verbinden, kein vorgefertigter Reaktionsverlauf |
+| [Szenarienkatalog](../notes/social-financial-world/scenario-catalogue.md) | Jobverlust, Krieg, Krise, Boom, günstige Jahre und Zinsphasen über Zeit |
 | [Erster Versuch: Artefakte](../runs/001-first-simulation/README.md) | Bericht, Statusbeobachtungen und archivierte Eingaben |
 
 ## Aussagegrenzen
