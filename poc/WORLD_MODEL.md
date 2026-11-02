@@ -1,4 +1,6 @@
-# Laufende Modellwirtschaft · aktuelle Fassung v9
+# Laufende Modellwirtschaft · aktuelle Fassung v10
+
+V10 ergänzt [proportionale Arbeitszeit und Betriebszustände](BUSINESS_MODEL.md). Der Vollzeitlohnsatz bleibt fest; private Lohnzahlung und Arbeits-/Anlagenkapazität folgen der geplanten, tatsächlich bezahlten Arbeitszeit. Eine begrenzte Verlustbrücke, Stilllegung und zweistufiger Wiederanlauf ersetzen die reine Vollzeitstellen-Schwelle. Zustände und Quoten werden historisch exportiert.
 
 V9 ersetzt die Wiederauffüllung der Anfangskasse durch eine [begrenzte Staatsreserve](FISCAL_MODEL.md). Die Oberfläche zeigt Kasse, Haushaltssaldo, Staatsschuld, Zinszahlungen und tatsächliche öffentliche Lohnrückstände getrennt. Der normale Lauf ist offen; Energie- und Konsumeingriffe können zurückgenommen und später erneut angewandt werden. Diagramme zeigen die letzten 36 Monate, der Export behält den gesamten Lauf. Die früheren 24 Monate sind weiterhin mögliche feste Beobachtungsfenster für Vergleiche.
 
@@ -50,7 +52,7 @@ Jedes System besitzt Kennung, Bestände, Eingänge, Ausgänge, Regeln und ein Mo
 
 Alle Zahlen und Verhaltensschwellen sind **eigene illustrative Testannahmen**, keine Forschungsergebnisse über Anleger oder reale Länder. Kein LLM und keine zufällige Psychologie.
 
-- Je Haushalt 3.000 € verfügbare Zahlungsmittel; Bruttolohn 2.400 € pro Beschäftigtem, Einkommensteuer 30 %. Unbeschäftigte erhalten, soweit finanzierbar, 1.000 € Transfer.
+- Je Haushalt 3.000 € verfügbare Zahlungsmittel; Vollzeit-Bruttolohn 2.400 € pro Vertrag (betriebliche Auszahlung seit V10 proportional zur Arbeitszeit), Einkommensteuer 30 %. Unbeschäftigte erhalten, soweit finanzierbar, 1.000 € Transfer.
 - Unternehmen je 24.000 € Zahlungsmittel und 12.000 € bestehende Verbindlichkeit gegenüber dem Finanzsektor. Einfache jährliche Kreditzinsen 2 %, keine Tilgung dieser Altbestände. Ein zusätzlicher, begrenzter Maschinenkredit mit eigenem Zinssatz und Tilgung ist im [Bankkonzept](BANKING_MODEL.md) definiert.
 - Staat 80.000 € und Ausland 0 € Kundeneinlagen. Der Finanzsektor besitzt 10.000 € Eigenkapital, das nicht zum Kundengeld addiert wird. Anfangseinlagen aller Nichtbanken: 146.000 €. Die einfache Bankbilanz ergänzt 132.000 € feste Reserveposition und 24.000 € bestehende Kreditforderungen. Siehe [Bankgrenze und Buchungen](BANKING_MODEL.md); keine Behauptung einer realen Geldmengenstatistik.
 - Haushalt plant den größeren Betrag aus 1.000 € Grundbedarfsbudget und 95 % seines laufenden Nettoeinkommens. Beim Konsumeingriff sinkt der einkommensabhängige Anteil auf 65 %; der Grundbedarfsplan bleibt bestehen. Das gesamte finanzierbare Kaufbudget ist durch den vorhandenen Kontostand begrenzt. Damit kann auch ohne neues Einkommen aus früher angespartem Geld gekauft werden. Die 1.000 € sind eine eigene illustrative Testannahme, keine empirische Bedarfsgrenze. Kaufbudget 55 % Alltagsgüter, Rest Werkstattprodukte. Nicht konsumiertes Geld bleibt auf dem Konto; kein Wertpapiermarkt.
@@ -120,8 +122,10 @@ Haushalte haben im aktuellen Modell keine eigenen Kredite. Zinsänderungen beein
 
 ## Einlaufphase und lange Beobachtung
 
-Die Anfangswerte sind keine eingeregelte Gleichgewichtswirtschaft. Leere Lager, vorgegebene Absatzerwartungen und anfangs zwei Arbeitsverhältnisse je Betrieb können bereits ohne äußeren Eingriff einen Einschwingeffekt verursachen: Die Werkstatt reduziert nach zwei Abschlussprüfungen eine Stelle, danach können Warenengpässe entstehen. Alle Haushalte erhalten gleiche Unternehmens-/Bankgewinnanteile; deren Veränderung kann Kaufbudgets gleichzeitig bewegen. Die gleichzeitigen Knicke in frühen Haushaltsverläufen sind deshalb kein unabhängiger Nachweis einer Krise oder eines externen Schocks.
+Die Anfangswerte sind keine eingeregelte Gleichgewichtswirtschaft. Leere Lager, vorgegebene Absatzerwartungen und anfangs zwei Arbeitsverhältnisse je Betrieb können bereits ohne äußeren Eingriff einen Einschwingeffekt verursachen: Im V9-Basislauf reduzierte die Werkstatt nach zwei Abschlussprüfungen eine Stelle; danach entstanden zeitweise Warenengpässe. V10 kann stattdessen zunächst Arbeitszeit anpassen und hat dadurch einen anderen Basispfad. Alle Haushalte erhalten gleiche Unternehmens-/Bankgewinnanteile; deren Veränderung kann Kaufbudgets gleichzeitig bewegen. Die gleichzeitigen Knicke in frühen Haushaltsverläufen sind deshalb kein unabhängiger Nachweis einer Krise oder eines externen Schocks.
 
 Der normale Lauf stoppt nicht automatisch nach Monat 24. Auch nach längerer Beobachtung sind Änderungen und Rücknahmen der Energie- und Konsumannahmen sowie Leitzinsänderungen möglich. Eine gegenläufige gleichzeitige Vormerkung desselben Bereichs wird abgewiesen. Die Anzeige rollt über 36 Abschlüsse; alle älteren Monate und Ereignisse bleiben exportierbar.
 
 Lange Läufe dienen zum Prüfen von Regeln und Belastungsgrenzen. Sie sind keine kalibrierte Langfristprognose. Fehlende Abschreibung, fehlende Insolvenz-/Lohnrückstandsabwicklung, feste Nominallöhne, keine Demografie und keine veränderte Technologie bleiben relevant. Bei auffälligen Stillständen ist zwischen einer Liquiditäts-/Absatzgrenze und einem Widerspruch der Implementierung zu ihren eigenen Regeln zu unterscheiden. Ein positiver Kontostand, eine bestehende Stelle und eine tatsächliche Zahlung sind verschiedene Größen.
+
+Seit V10 können Personal- und Anfangsverläufe von den beschriebenen V9-Knicken abweichen. Die Regeln und ursprünglichen Audits bleiben ihrer Version zugeordnet; ein veränderter Basispfad ist kein isolierter Effekt eines äußeren Ereignisses.

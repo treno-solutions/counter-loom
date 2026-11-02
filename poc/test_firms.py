@@ -55,12 +55,15 @@ class FirmTests(unittest.TestCase):
         self.assertGreater(r['profit_before_tax_cents'],0)
         self.assertEqual(r['distribution_cents'],0)
 
-    def test_staff_signal_requires_two_closes_and_does_not_remove_job_immediately(self):
+    def test_no_demand_and_exhausted_loss_budget_mothballs_from_next_month(self):
         w=World();n=w.nodes['alltag'];n['company']['forecast_milli']=0
         for _ in range(5):w.step()
-        self.assertEqual(len(n['employees']),2)
-        for _ in range(5):w.step()
-        self.assertEqual(len(n['employees']),1)
+        self.assertEqual(n['company']['plan']['staff'],2)
+        self.assertEqual(len(n['employees']),0)
+        self.assertEqual(n['company']['next_status'],'mothballed')
+        w.step()
+        self.assertEqual(n['company']['status'],'mothballed')
+        self.assertEqual(n['metrics']['wages'],0)
         self.assertEqual(w.nodes['h2']['employer'],None)
 
     def test_recovery_only_after_shock_and_completed_world_rejects_mutations(self):
@@ -80,11 +83,11 @@ class FirmTests(unittest.TestCase):
         for _ in range(5):w.step()
         for key in ('alltag','werkstatt'):
             n=w.nodes[key];r=n['company']['result']
-            self.assertGreaterEqual(r['reserve_cents'],2*len(n['employees'])*240000)
+            self.assertGreaterEqual(r['reserve_cents'],2*len(n['employees'])*(240000*n['company']['next_work_bps']//10000))
         n=w.nodes['alltag'];r=n['company']['result']
         due=w.banking.due(w,2)
         self.assertEqual(due['total_cents'],10600)
-        self.assertGreaterEqual(r['reserve_cents'],960000+10600)
+        self.assertGreaterEqual(r['reserve_cents'],2*len(n['employees'])*(240000*n['company']['next_work_bps']//10000)+10600)
 
     def test_late_credit_request_is_allowed_before_final_close(self):
         w=World(horizon_months=24)

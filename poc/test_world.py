@@ -61,7 +61,7 @@ class WorldTests(unittest.TestCase):
         self.assertEqual(w.nodes['alltag']['capital'],1)
         self.assertEqual(w.nodes['alltag']['metrics']['produced_units'],produced)
         w.step()
-        self.assertEqual(w.nodes['alltag']['company']['plan']['capacity_units'],76)
+        self.assertEqual(w.nodes['alltag']['company']['plan']['capacity_units'],76*w.nodes['alltag']['company']['work_bps']//10000)
         self.assertLessEqual(w.nodes['alltag']['metrics']['produced_units'],76)
 
     def test_pending_event_waits_until_next_month_and_feedback_differs(self):
@@ -74,8 +74,8 @@ class WorldTests(unittest.TestCase):
         base.step();shock.step();self.assertEqual(shock.propensity,65)
         for _ in range(49):base.step();shock.step()
         self.assertLess(shock.history[3]['consumption_cents'],base.history[3]['consumption_cents'])
-        self.assertTrue(any('Stelle' in n['text'] for n in shock.notices))
-        self.assertNotEqual([x['employment'] for x in base.history],[x['employment'] for x in shock.history])
+        self.assertTrue(any('Arbeitszeit' in n['text'] for n in shock.notices))
+        self.assertNotEqual([[f['work_bps'] for f in x['market']['firms']] for x in base.history],[[f['work_bps'] for f in x['market']['firms']] for x in shock.history])
 
     def test_reconstruction_reproducible_without_llms(self):
         first,second=World(),World()
@@ -142,7 +142,7 @@ class LongRunTests(unittest.TestCase):
         self.assertEqual(len(w.journal),before)
 
     def test_actual_unemployment_transfer_not_wage_taxed(self):
-        w=World();w.queue('demand');found=False
+        w=World();w.nodes['alltag']['employees'].remove('h2');w.nodes['h2']['employer']=None;found=False
         for _ in range(100):
             w.step()
             if w.phase==1:

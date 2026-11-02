@@ -117,3 +117,7 @@ Die [Preisregel](poc/PRICES_MODEL.md) ergänzt eine teilweise, verzögerte Weite
 ## Modell v9 · Liquiditätspolitik und offene Beobachtung
 
 Die [Staatsfinanzierung](poc/FISCAL_MODEL.md) nutzt vorhandenes Guthaben oberhalb eines begrenzten Ausgabenpuffers statt jeden Fehlbetrag auf die Anfangskasse aufzufüllen. Kasse, Haushaltssaldo, Schuld, Zinslast und tatsächliche offene Löhne sind getrennt nachvollziehbar. Der normale Lauf endet nicht mehr automatisch nach 24 Monaten. Energie- und Konsumeingriffe sind wiederholbar, ihre Normalisierung ebenfalls; die letzten 36 Monate werden angezeigt und die volle Vergangenheit bleibt im Export. Längere Läufe prüfen Grenzen der gewählten Regeln; sie beseitigen weder die künstliche Einlaufphase noch fehlende Abschreibung, Insolvenz- und Rückstandsabwicklung. [V9-Prüfung](qa/fiscal-policy-v9-plausibility.md).
+
+## Modell v10 · Arbeitszeit und Betriebszustand
+
+Das [Betriebsmodell](poc/BUSINESS_MODEL.md) trennt Verträge, Arbeitszeit, bezahlten Lohn, technische Kapazität und finanzielle Tragfähigkeit. Der Folgeplan kann anteilige Arbeit, eine begrenzte Verlustbrücke, Stilllegung oder Wiederanlauf nach zwei Prüfungen vorsehen. Firmenansichten zeigen Zustand, Quotenverlauf, Liquidität, Verlusttoleranz und konkrete Gründe. Der offene Wirtschaftslauf und die bisherigen Geld-/Warenbrücken bleiben erhalten; veränderte V9/V10-Ergebnisse folgen anderen Regeln und sind kein Prognosebeweis. [V10-Prüfung](qa/company-v10-plausibility.md).

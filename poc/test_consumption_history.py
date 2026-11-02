@@ -15,8 +15,11 @@ class ConsumptionHistoryTests(unittest.TestCase):
             journal=sum(t['amount_cents'] for t in w.journal if t['kind']=='consumption' and t['source']==h['id'])
             self.assertEqual(h['paid_cents'],journal)
             self.assertEqual(h['desired_cents'],h['paid_cents']+h['funding_gap_cents']+h['stock_gap_cents']+h['unit_remainder_cents'])
-        self.finish(w);self.finish(w)
-        self.assertGreater(sum(h['stock_gap_cents'] for h in w.history[-1]['households']),0)
+        shortage=World();shortage.step();shortage.step()
+        seller=shortage.nodes['werkstatt']
+        shortage.buy('staat','werkstatt',seller['inventory']*seller['price'],'procurement')
+        for _ in range(3):shortage.step()
+        self.assertGreater(sum(h['stock_gap_cents'] for h in shortage.history[-1]['households']),0)
         self.assertGreater(sum(h['unit_remainder_cents'] for h in m['households']),0)
 
     def test_missing_money_is_distinct_from_missing_stock(self):

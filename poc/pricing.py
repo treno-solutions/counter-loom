@@ -39,7 +39,10 @@ class Pricing:
                 **deepcopy(self.quotes[key]),produced_units=m['produced_units'],sold_units=m['sold_units'],sales_cents=m['sales'],
                 profit_before_tax_cents=r.get('profit_before_tax_cents',m['sales']-m['cost_of_sales']-m['idle_cost']-m['unpaid_wages']-m['interest_expense']),
                 staff=p.get('staff',len(n['employees'])),next_staff=len(n['employees']),desired_staff=r.get('desired_staff',len(n['employees'])),
-                staff_reason=r.get('staff_reason','Personalprüfung beim Monatsabschluss.')))
+                staff_reason=r.get('staff_reason','Personalprüfung beim Monatsabschluss.'),
+                work_bps=c['work_bps'],next_work_bps=c['next_work_bps'],status=c['status'],next_status=c['next_status'],
+                cash_cents=n['cash_cents'],loss_used_cents=c['loss_used_cents'],loss_budget_cents=c['loss_budget_cents'],
+                bridge_months=c['bridge_months'],restart_signal=c['restart_signal'],reserve_cents=r.get('reserve_cents',0)))
         return dict(basket_cost_cents=cost,base_basket_cost_cents=base,price_index_bps=cost*10000//base,
             purchasing_power_bps=base*10000//cost,firms=firms)
 

@@ -104,7 +104,7 @@ class Banking:
         loan.delivery_month = world.month
         loan.status = 'delivered'
         loan.message = 'Maschine bezahlt und geliefert. Ab nächstem Monat wirkt die Kapazität und beginnt der Schuldendienst.'
-        world.notice(f'Kreditfinanzierte Maschine geliefert: {loan.amount_cents/100:.2f} € gehen an die Werkstatt, ab Folgemonat +4 Einheiten Kapazität.', loan.borrower)
+        world.notice(f'Kreditfinanzierte Maschine geliefert: {loan.amount_cents/100:.2f} € gehen an die Werkstatt, ab Folgemonat +4 Einheiten Vollzeitkapazität, bei Teilzeit anteilig.', loan.borrower)
 
     def due(self,world,month=None):
         loan=self.loan

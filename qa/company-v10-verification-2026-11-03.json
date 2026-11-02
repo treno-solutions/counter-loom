@@ -1,0 +1,119 @@
+{
+  "checked_on": "2026-11-03",
+  "classification": "illustrative_circular_flow_v10",
+  "python_tests_passed": 112,
+  "production_build": "passed",
+  "production_schema_snapshots_passed": 847,
+  "impossible_work_share_rejected": true,
+  "independent_worlds": 13,
+  "independent_world_months": 1176,
+  "independent_phase_states": 5880,
+  "independent_journal_postings": 47252,
+  "independent_isolated_cases": 11,
+  "browser_checks": [
+    "Company hierarchy opens four-state business view",
+    "Actual and planned work shares, contracts/FTE and proportional wages render",
+    "Demand shock: month6 work62.5percent, two contracts, wage1500EUR per contract, next65.28percent",
+    "Work-history chart distinguishes actual and planned quota",
+    "Desktop and390CSS-pixel layout: no document overflow",
+    "No calculation alert during observed steps"
+  ],
+  "source_files": [
+    {
+      "path": "poc/BUSINESS_MODEL.md",
+      "bytes": 8361,
+      "sha256": "65d1c9fa03ac7f1d15f2c5ebf9459db95c10c2f37d288afc7fcfa0846a008c77"
+    },
+    {
+      "path": "poc/COMPANY_MODEL.md",
+      "bytes": 9744,
+      "sha256": "c9273aa94d8e16db4ca6713f647a3fcc0d5cc9e6ef7cba8f580b71f8b9807b9e"
+    },
+    {
+      "path": "poc/PRICES_MODEL.md",
+      "bytes": 6908,
+      "sha256": "da6caaa1feb9eee70ce1491fb17faee4f76647fa902cf79f8202c3522acc442b"
+    },
+    {
+      "path": "poc/README.md",
+      "bytes": 14594,
+      "sha256": "9f1115a3a1b456d556e4f81ee768593eefb6e6802b18ccd7083c68cf98db2dc6"
+    },
+    {
+      "path": "poc/WORLD_MODEL.md",
+      "bytes": 22512,
+      "sha256": "a728f903a914663276d660091b9efc106645817e022f9aecc2431562a1e68ad3"
+    },
+    {
+      "path": "poc/banking.py",
+      "bytes": 10901,
+      "sha256": "8872f8340d6ff26b6f9e390075a7ce26224995ed7b993b7186cb0888f346e12a"
+    },
+    {
+      "path": "poc/firms.py",
+      "bytes": 3774,
+      "sha256": "a43217e430fd40d674ea36a7c8d58f6fd020a108269c294b05c9d0db74040cb6"
+    },
+    {
+      "path": "poc/pricing.py",
+      "bytes": 3506,
+      "sha256": "6347b2b58428460da65e129136c7b6eebc15e4049edfc01fd5ade959f3975388"
+    },
+    {
+      "path": "poc/src/App.tsx",
+      "bytes": 29098,
+      "sha256": "48001de42a3b3af8ff2786762f31f087bf22e7179619f091d855fb4ea030f6e0"
+    },
+    {
+      "path": "poc/src/BusinessOperation.tsx",
+      "bytes": 6536,
+      "sha256": "9ebf9523b64df47236c71778117c45c2003ade1dfbf3d1d6089ccc46ef1e7299"
+    },
+    {
+      "path": "poc/src/CompanyView.tsx",
+      "bytes": 6107,
+      "sha256": "69b3bc93f4c9158a313dc59f0e1eccc715ec422eccedd3037450cdd67707c397"
+    },
+    {
+      "path": "poc/src/PriceTransmission.tsx",
+      "bytes": 6946,
+      "sha256": "d9577eb360b95b0022315a2f14415f06afc3a8fe2588732e3b5e0e595e4ce165"
+    },
+    {
+      "path": "poc/src/styles.css",
+      "bytes": 72404,
+      "sha256": "0364af94f761f2d3fead24833cb7ac3ca4aebd20564618bb7cb8f82a62b4be49"
+    },
+    {
+      "path": "poc/src/world-schema.ts",
+      "bytes": 19087,
+      "sha256": "c475e1eb0e2412ebfefd15566d4348916dd1f43873cbb1c520b2e3d96531b694"
+    },
+    {
+      "path": "poc/test_business_operation.py",
+      "bytes": 6112,
+      "sha256": "cde77f040317095b1af9c03a6b79a126e9fbdf5f8cd216b308b43e00ae122e90"
+    },
+    {
+      "path": "poc/test_consumption_history.py",
+      "bytes": 3666,
+      "sha256": "7b5920425f27f187c899f6345c652b287414615e69831f7ab6234b3dc30836ed"
+    },
+    {
+      "path": "poc/test_firms.py",
+      "bytes": 6283,
+      "sha256": "a1c8a414dc9f9f9a5664ed6dc8ac3d5d1351040aa4f6a2b948420ab9b8db182b"
+    },
+    {
+      "path": "poc/test_world.py",
+      "bytes": 10848,
+      "sha256": "6d6e7b7c658e391469b99fb2754ec975caa9b30d28c17cf5b0eccfc03df55bbc"
+    },
+    {
+      "path": "poc/world.py",
+      "bytes": 33975,
+      "sha256": "9d5507553b5685918f365f6d1d47373d03bc7eea2bcad3b14c4a79e141ad74e5"
+    }
+  ],
+  "limits": "Illustrative adaptation, not calibrated economics. No top-up for reduced working time, no general arrears settlement or insolvency, no guarantee of recovery."
+}

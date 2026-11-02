@@ -10,13 +10,13 @@ from treasury import Treasury
 from rates import MonetaryPolicy
 from pricing import Pricing, BASE_PRICES
 from foreign import ForeignTrade
-from firms import initial_company, plan as company_plan, staffing, forecast
+from firms import initial_company, plan as company_plan, staffing, forecast, outlook, work_target, MIN_WORK_BPS, WORK_STEP_BPS, MAX_BRIDGE_MONTHS, RESTART_CLOSES
 from systems import HouseholdInput, HouseholdSystem, GovernmentSystem, FinanceSystem
 
 PHASES = ['Produktion & Löhne', 'Steuern & Transfers', 'Konsum & Aufträge', 'Investitionen', 'Monatsabschluss']
 RULES = {
  'households': 'Kaufplan: mindestens 1.000 € monatlicher Grundbedarf als illustrative Annahme, darüber 95 % des Nettoeinkommens (nach Konsumeingriff 65 %). Der Grundbedarfsplan kann aus vorhandenem Kontoguthaben finanziert werden. Käufe sind durch Geld, Lager und ganze Gütereinheiten begrenzt; unerfüllte Kaufpläne sind keine gebuchten Ausgaben oder Schulden.',
- 'firms': 'Betriebe planen Absatz und Lagerpuffer, begrenzen Produktion durch Personal, Geld und Energie und passen Stellen erst nach zwei Monaten an. Lager wird zu Herstellungskosten bewertet. Positive Gewinne werden versteuert und bei ausreichendem Betriebspuffer teilweise an die sechs Haushaltseigentümer ausgeschüttet. Feste Preise und Löhne; illustrative Regeln.',
+ 'firms': 'Betriebe planen Absatz, Lager und Arbeitszeit. Der Vollzeitlohnsatz bleibt fest; tatsächliche Löhne und Kapazität folgen der Arbeitszeit. Eine begrenzte Verlustbrücke nutzt vorhandene Liquidität. Stilllegung beendet die Arbeit, erhält aber Lager, Anlagen und Schuld. Wiederanlauf benötigt zwei tragfähige Prüfungen und einen finanzierten Betriebspuffer. Lager bleibt zu Herstellungskosten bewertet. Ausschüttungen sind bei Rückständen oder ohne tragfähigen Weiterbetrieb gesperrt. Illustrative Regeln.',
  'government': 'Zwei öffentliche Stellen zu je 2.400 € brutto, bis zu 1.000 € Transfer je unbeschäftigtem Haushalt und bis zu 1.200 € Beschaffung je Betrieb. Vorhandene Kasse finanziert Ausgaben. Beim Abschluss schützt ein begrenzter Staatskredit bis 50.000 € bei Bedarf eine Reserve für einen Monat geplanter Ausgaben einschließlich neuer Monatszinsen. Neue Kreditbeträge erhalten den Leitzins plus einen Modellaufschlag; der vereinbarte Zins bleibt je Betrag fest und fällt ab Folgemonat an. Guthaben oberhalb des Reserveziels kann Schuld tilgen. Die Reserve ist nicht gesperrt; bei Kreditgrenze oder fehlendem Bankkapital darf die Kasse auch unter das Ziel fallen. Kredit ist Finanzierung, keine Steuereinnahme.',
  'bank': 'Eine Bank führt die Guthaben aller Nichtbanken. Eigenkapital und Kundeneinlagen sind getrennt. Ein begrenzter Maschinenkredit für acht Werkstatteinheiten schafft eine Einlage und eine Kreditforderung; Tilgung baut beide ab. Zinsen sind Bankertrag. Ein begrenzter Staatskredit sichert bei Bedarf eine Reserve für einen Monat geplanter Staatsausgaben; darüber wird vorhandene Kasse genutzt. Tatsächlich vereinnahmte Firmen- und Staatszinsen werden am Monatsende an Haushalte ausgeschüttet.',
  'external': 'Ein vereinfachtes Auslandskonto erhält Energiezahlungen und kauft inländische Waren: monatlich bis zu sechs Alltags- und zwei Werkstatteinheiten. Nur Guthaben vom Monatsbeginn finanziert Bestellungen. Bezahlung und Lagerabgang erfolgen gemeinsam; fehlendes Geld oder Ware begrenzt den Rückfluss. Keine Wechselkurse oder vollständige Auslandswirtschaft.'
@@ -152,7 +152,7 @@ class World:
                 n['company']['plan']=p
                 n['metrics']['production_plan']=p['production_units']
             for worker in n['employees']:
-                paid=self.pay(node_id,worker,GovernmentSystem.wage_per_job,'wage','Lohn',True)
+                paid=self.pay(node_id,worker,GovernmentSystem.wage_per_job if node_id=='staat' else n['company']['plan']['wage_per_worker_cents'],'wage','Lohn',True)
                 self.nodes[worker]['metrics']['income']+=paid
                 n['metrics']['wages']+=paid
                 n['metrics']['operating_costs']+=paid
@@ -167,8 +167,8 @@ class World:
                     charged=self.banking.loan.interest_charged_cents
                     self.banking.service(self)
                     m['interest_expense']+=self.banking.loan.interest_charged_cents-charged
-                labor_capacity=m['wages']*n['productivity']//240000
-                if labor_capacity: labor_capacity+=n['capital']*4
+                # One common floor for combined labour/machine capacity, matching the plan.
+                labor_capacity=(len(n['employees'])*n['productivity']+n['capital']*4)*m['wages']//max(1,len(n['employees'])*240000)
                 units=min(p['production_units'],labor_capacity,n['cash_cents']//p['energy_unit_cents'])
                 energy=self.pay(node_id,'ausland',units*p['energy_unit_cents'],'energy','Energie für Produktion')
                 m['operating_costs']+=energy
@@ -199,7 +199,7 @@ class World:
                 n['capital']+=1
                 n['metrics']['investment']+=machine_cost
                 n['company']['last_investment_month']=self.month
-                self.notice('Alltag & Versorgung kauft nach anhaltendem Engpass eine Anlage: ab nächstem Monat +4 Einheiten Kapazität.',node_id)
+                self.notice('Alltag & Versorgung kauft nach anhaltendem Engpass eine Anlage: ab nächstem Monat +4 Einheiten Vollzeitkapazität, bei Teilzeit anteilig.',node_id)
         elif self.phase == 4 and n['sector']=='firms':
             self.close_company(n)
         elif self.phase == 4 and node_id=='bank':
@@ -223,35 +223,77 @@ class World:
         profit=m['sales']-m['cost_of_sales']-m['idle_cost']-m['unpaid_wages']-m['interest_expense']
         tax_due=max(0,profit)*20//100
         tax=self.pay(n['id'],'staat',tax_due,'profit_tax','Gewinnsteuer',True)
-        desired,reserve=staffing(n,self.energy_multiplier,self.machine_due(n['id'],True))
-        staff=len(n['employees']);direction=1 if desired>staff else -1 if desired<staff else 0
-        old=c['staff_signal']
-        c['staff_signal']=old+direction if direction and old*direction>0 else direction
-        reason='Personal unverändert; Bedarf und finanzierbare Stellen werden monatlich geprüft.'
-        if abs(c['staff_signal'])>=2:
-            if direction<0 and staff:
-                worker=n['employees'].pop();self.nodes[worker]['employer']=None
-                reason='Eine Stelle entfällt nach zwei Monaten mit geringerem tragfähigem Personalbedarf.'
-                c['staff_signal']=0
-            elif direction>0:
-                candidates=[h for h in self.households() if h['employer'] is None]
-                if candidates and n['cash_cents']>=reserve:
-                    worker=candidates[0];n['employees'].append(worker['id']);worker['employer']=n['id']
-                    reason='Eine Stelle entsteht nach zwei Monaten Mehrbedarf und mit finanziertem Betriebspuffer.'
-                    c['staff_signal']=0
-                else:reason='Mehrbedarf besteht; freie Arbeitskraft oder Betriebspuffer fehlt.'
-        if len(n['employees'])!=staff:self.notice(n['name']+': '+reason+' Gilt ab nächstem Monat.',n['id'])
+        desired,_=staffing(n,self.energy_multiplier,self.machine_due(n['id'],True))
+        staff=len(n['employees']);c['profitable_months']=c['profitable_months']+1 if profit>0 else 0
+        c['loss_used_cents']+=max(0,-profit)
+        debt=self.machine_due(n['id'],True)
+        candidate=next((h for h in self.households() if h['employer'] is None),None)
+        if c['status']=='mothballed':
+            work=work_target(n,1);option=outlook(n,self.energy_multiplier,1,work,debt)
+            if c['profitable_months']>=2 and n['cash_cents']>=option['reserve_cents']:c['loss_used_cents']=0
+            demand_ok=c['forecast_milli']>=1000
+            margin_ok=option['projected_gap_cents']==0 and demand_ok
+            cash_ok=n['cash_cents']>=option['reserve_cents']
+            c['restart_signal']=c['restart_signal']+1 if margin_ok and cash_ok else 0
+            ready=c['restart_signal']>=RESTART_CLOSES and candidate is not None
+            if ready:
+                n['employees'].append(candidate['id']);candidate['employer']=n['id']
+                c['next_status']='restarting';c['next_work_bps']=work;c['staff_signal']=0;c['bridge_months']=0
+                reason='Wiederanlauf nach zwei tragfähigen Prüfungen: eine Arbeitskraft und vorfinanzierter Betriebspuffer; Produktion ab Folgemonat.'
+            else:
+                c['next_status']='mothballed';c['next_work_bps']=0
+                reason='Stillgelegt: Wiederanlauf benötigt Nachfrage, einen Plan ohne neue Finanzierungslücke, zwei finanzierte Lohnrunden und zwei bestätigte Abschlüsse sowie freie Arbeitskraft.'
+        else:
+            c['restart_signal']=0
+            direction=1 if desired>staff else -1 if desired<staff else 0
+            old=c['staff_signal'];c['staff_signal']=old+direction if direction and old*direction>0 else direction
+            if abs(c['staff_signal'])>=2:
+                if direction<0 and staff>1:
+                    worker=n['employees'].pop();self.nodes[worker]['employer']=None;c['staff_signal']=0
+                elif direction>0 and candidate is not None:
+                    trial_target=work_target(n,staff+1)
+                    trial_work=max(MIN_WORK_BPS,min(c['work_bps']+WORK_STEP_BPS,max(c['work_bps']-WORK_STEP_BPS,trial_target)))
+                    trial=outlook(n,self.energy_multiplier,staff+1,trial_work,debt)
+                    if c['profitable_months']>=2 and n['cash_cents']>=trial['reserve_cents']:c['loss_used_cents']=0
+                    trial_bridge=c['bridge_months']<MAX_BRIDGE_MONTHS and trial['projected_gap_cents']<=max(0,c['loss_budget_cents']-c['loss_used_cents'])
+                    if n['cash_cents']>=trial['reserve_cents'] and (trial['projected_gap_cents']==0 or trial_bridge):
+                        n['employees'].append(candidate['id']);candidate['employer']=n['id'];c['staff_signal']=0
+            target=work_target(n,len(n['employees']))
+            work=max(MIN_WORK_BPS,min(c['work_bps']+WORK_STEP_BPS,max(c['work_bps']-WORK_STEP_BPS,target)))
+            option=outlook(n,self.energy_multiplier,len(n['employees']),work,debt)
+            demand_ok=c['forecast_milli']>=1000;margin_ok=option['projected_gap_cents']==0 and demand_ok
+            cash_ok=n['cash_cents']>=option['required_cash_cents']
+            if c['profitable_months']>=2 and n['cash_cents']>=option['reserve_cents']:c['loss_used_cents']=0
+            room=max(0,c['loss_budget_cents']-c['loss_used_cents'])
+            bridge_ok=cash_ok and c['bridge_months']<MAX_BRIDGE_MONTHS and option['projected_gap_cents']<=room
+            if not cash_ok or not margin_ok and not bridge_ok:
+                for worker in n['employees']:self.nodes[worker]['employer']=None
+                n['employees']=[];c['next_status']='mothballed';c['next_work_bps']=0;c['restart_signal']=0;c['staff_signal']=0
+                reason='Stilllegung ab Folgemonat: Vorfinanzierung fehlt oder die begrenzte Verlustbrücke reicht nicht. Lager, Anlagen und Schuld bleiben bestehen.'
+            elif not margin_ok:
+                c['next_status']='buffered';c['next_work_bps']=work;c['bridge_months']+=1
+                reason='Befristeter Weiterbetrieb aus vorhandener Liquidität: erwartete Finanzierungslücke innerhalb von Verlustbudget und höchstens drei Brückenmonaten.'
+            else:
+                c['next_status']='operating';c['next_work_bps']=work;c['bridge_months']=0
+                reason='Tragfähiger Betriebsplan; Arbeitszeit folgt Produktionsbedarf mit höchstens 25 Prozentpunkten Änderung pro Monat.'
+        reserve=option['reserve_cents']
+        if len(n['employees'])!=staff or c['next_status']!=c['status'] or c['next_work_bps']!=c['work_bps']:
+            self.notice(n['name']+': '+reason+' Gilt ab nächstem Monat.',n['id'])
         arrears=any(o['source']==n['id'] for o in self.obligations)
         if n['id']=='alltag':arrears=arrears or bool(self.banking.loan.overdue_interest_cents or self.banking.loan.overdue_principal_cents)
         after_tax=profit-tax_due
-        payout=0 if arrears else min(max(0,after_tax)//2,max(0,n['cash_cents']-reserve))
+        payout=0 if arrears or c['next_status']!='operating' else min(max(0,after_tax)//2,max(0,n['cash_cents']-reserve))
         for h,share in zip(self.households(),FinanceSystem.dividends(payout,6)):
             paid=self.pay(n['id'],h['id'],share,'company_dividend','Gewinnausschüttung')
             h['dividend_carry']+=paid
         c['result']=dict(funded_orders_units=orders,profit_before_tax_cents=profit,tax_due_cents=tax_due,tax_paid_cents=tax,
                          after_tax_cents=after_tax,distribution_cents=payout,retained_result_cents=after_tax-payout,
                          reserve_cents=reserve,desired_staff=desired,next_staff=len(n['employees']),staff_reason=reason,
-                         distribution_reason='Keine Ausschüttung bei Rückständen.' if arrears else 'Bis zu 50 % des positiven Ergebnisses; Betriebspuffer bleibt auf dem Konto.')
+                         next_status=c['next_status'],next_work_bps=c['next_work_bps'],projected_gap_cents=option['projected_gap_cents'],
+                         expected_receipts_cents=option['expected_receipts_cents'],required_cash_cents=option['required_cash_cents'],
+                         demand_ok=demand_ok,margin_ok=margin_ok,cash_ok=cash_ok,restart_ready=c['restart_signal']>=RESTART_CLOSES,
+                         loss_this_month_cents=max(0,-profit),
+                         distribution_reason='Keine Ausschüttung bei Rückständen oder ohne regulär tragfähigen Weiterbetrieb.' if arrears or c['next_status']!='operating' else 'Bis zu 50 % des positiven Ergebnisses; Betriebspuffer bleibt auf dem Konto.')
 
     def households(self):
         return [self.nodes[f'h{i}'] for i in range(1,7)]
@@ -264,6 +306,10 @@ class World:
             self.month+=1
             self.month_open={k:n['cash_cents'] for k,n in self.nodes.items()}
             self._reset_metrics()
+            for firm_id in ('alltag','werkstatt'):
+                company=self.nodes[firm_id]['company']
+                company['status']=company['next_status']
+                company['work_bps']=company['next_work_bps']
             self.household_month = []
             self.monetary.begin_month(self)
             self.treasury.begin_month(self)
@@ -352,7 +398,7 @@ class World:
     def snapshot(self,export=False):
         self.check()
         tx=[t for t in self.journal if t['month']==self.month]
-        result=dict(world_id=self.id, revision=self.revision, month=self.month, phase=self.phase, phase_label=PHASES[self.phase] if self.phase>=0 else 'Bereit zum Start', nodes=deepcopy(list(self.nodes.values())), transactions=deepcopy(tx), notices=deepcopy(self.notices[-35:]), history=deepcopy(self.history[-36:]), pending=list(self.pending), active=deepcopy(self.active), rules=RULES, audit=dict(total_money_cents=self.banking.initial_deposits, current_money_cents=self.banking.balance(self)['customer_deposits_cents'], transaction_count=len(self.journal), open_obligations_cents=sum(x['amount_cents'] for x in self.obligations)+self.treasury.overdue_interest_cents+self.banking.loan.overdue_interest_cents+self.banking.loan.overdue_principal_cents, loan_principal_cents=self.nodes['bank']['loan_assets'], llm_calls=0), month_open=dict(self.month_open), initial_balances=dict(self.initial), parameters=dict(energy_multiplier=self.energy_multiplier,consumption_percent=self.propensity,essential_budget_cents=self.essential_budget_cents), classification='illustrative_circular_flow_v9',horizon_months=self.horizon_months,completed=self.horizon_months is not None and self.month>=self.horizon_months and self.phase==4,banking=self.banking.snapshot(self),foreign_trade=self.foreign.snapshot(self),public_finance=self.treasury.snapshot(self),monetary_policy=self.monetary.snapshot(self),pricing=self.pricing.snapshot(self))
+        result=dict(world_id=self.id, revision=self.revision, month=self.month, phase=self.phase, phase_label=PHASES[self.phase] if self.phase>=0 else 'Bereit zum Start', nodes=deepcopy(list(self.nodes.values())), transactions=deepcopy(tx), notices=deepcopy(self.notices[-35:]), history=deepcopy(self.history[-36:]), pending=list(self.pending), active=deepcopy(self.active), rules=RULES, audit=dict(total_money_cents=self.banking.initial_deposits, current_money_cents=self.banking.balance(self)['customer_deposits_cents'], transaction_count=len(self.journal), open_obligations_cents=sum(x['amount_cents'] for x in self.obligations)+self.treasury.overdue_interest_cents+self.banking.loan.overdue_interest_cents+self.banking.loan.overdue_principal_cents, loan_principal_cents=self.nodes['bank']['loan_assets'], llm_calls=0), month_open=dict(self.month_open), initial_balances=dict(self.initial), parameters=dict(energy_multiplier=self.energy_multiplier,consumption_percent=self.propensity,essential_budget_cents=self.essential_budget_cents), classification='illustrative_circular_flow_v10',horizon_months=self.horizon_months,completed=self.horizon_months is not None and self.month>=self.horizon_months and self.phase==4,banking=self.banking.snapshot(self),foreign_trade=self.foreign.snapshot(self),public_finance=self.treasury.snapshot(self),monetary_policy=self.monetary.snapshot(self),pricing=self.pricing.snapshot(self))
         if export:
             result.update(full_journal=deepcopy(self.journal),initial_balances=dict(self.initial),open_obligations=deepcopy(self.obligations),all_history=deepcopy(self.history),all_notices=deepcopy(self.notices),model_document='poc/WORLD_MODEL.md')
         return result

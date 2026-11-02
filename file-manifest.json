@@ -1,13 +1,13 @@
 [
   {
     "path": "BUILD_PLAN.md",
-    "bytes": 20024,
-    "sha256": "11bf8b3e39358a938a5f0ee3c73869d71fc0f147133a508233bd27125bdb6dcb"
+    "bytes": 20101,
+    "sha256": "92cab129746e5c3204e014624f405a2e9c8bc0eedd6c7741eb117ccca5911ccc"
   },
   {
     "path": "POC.md",
-    "bytes": 14497,
-    "sha256": "24b6e8a9b79cfd76b953641c76a1ea8d26bd7f963a1e9fbc25eaf3e11056bd51"
+    "bytes": 15134,
+    "sha256": "648477504c7666f3962a9bab38a41f625c60e88ec64334045f8b08061f0cb1f0"
   },
   {
     "path": "RESEARCH.md",
@@ -106,8 +106,8 @@
   },
   {
     "path": "poc/source-manifest.json",
-    "bytes": 7640,
-    "sha256": "fd1e42f0b541b47dbe9073a13f1d76144f8ea98cebd3dda2dd404b5732a3846c"
+    "bytes": 8095,
+    "sha256": "c70804326c80c3e2a5a94cfe8c8b1f07cea57362cc675be6f4ea7942491d7b0a"
   },
   {
     "path": "processed/energy-monthly-prices.csv",
@@ -293,6 +293,21 @@
     "path": "qa/circular-flow-v1-limitations-2026-11-02.json",
     "bytes": 1428,
     "sha256": "89046950c4964122f553d40044182f84f462c2a8daa27362087715e51e8fa7cc"
+  },
+  {
+    "path": "qa/company-v10-plausibility.json",
+    "bytes": 3241215,
+    "sha256": "acea194460b038a62406ad4d937bf07be286c6d2bf35601f8a9794e09816ba82"
+  },
+  {
+    "path": "qa/company-v10-plausibility.md",
+    "bytes": 10902,
+    "sha256": "e05d6c86e358594a594ea2d54d46db2b4bc4f105aadb2de758620fe41ef0cc7d"
+  },
+  {
+    "path": "qa/company-v10-verification-2026-11-03.json",
+    "bytes": 4001,
+    "sha256": "838d80dad9a880408e8097340d04e61437465140031d5cfb93c9f47512ac4a05"
   },
   {
     "path": "qa/company-v4-plausibility.json",
