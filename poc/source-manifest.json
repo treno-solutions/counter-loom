@@ -11,18 +11,18 @@
   },
   {
     "path": "poc/FISCAL_MODEL.md",
-    "bytes": 5499,
-    "sha256": "1caddb7d62fc3d783f6f4be8764db5578edb5740de9d49fc99875bca547b28fc"
+    "bytes": 5489,
+    "sha256": "370029ef394da213ae0270dd63bd598f83d3bac31a7f3c749a7af0327423cd25"
   },
   {
     "path": "poc/FOREIGN_MODEL.md",
-    "bytes": 5167,
-    "sha256": "67657abef98f3924f12bca61e4bd418c19db735a46d09a402913fd7c51f4c7d4"
+    "bytes": 5157,
+    "sha256": "688f54ee7703a56bb016837e63dc4787ae9d9d45bc9922afbdd779417a07bb0c"
   },
   {
     "path": "poc/README.md",
-    "bytes": 10816,
-    "sha256": "e33bf657b20966c6140ed3f16ea1f422ac58e118636e3a9e1bd8935a14a57e74"
+    "bytes": 10774,
+    "sha256": "5de2d63d0bc6656473673e007801b16ee42a52bd7d20e72de4b65df9721aa8ff"
   },
   {
     "path": "poc/WORLD_MODEL.md",
@@ -51,8 +51,8 @@
   },
   {
     "path": "poc/index.html",
-    "bytes": 483,
-    "sha256": "1315acf0b969c8538ec9f25eea621cbad174d45b374c136bf975bb403f0ccf6f"
+    "bytes": 511,
+    "sha256": "9360320dd084d67c89b9b3d690c2c325080dab3034873360d77c484387fe53a3"
   },
   {
     "path": "poc/package-lock.json",
@@ -91,38 +91,38 @@
   },
   {
     "path": "poc/src/AccountingViews.tsx",
-    "bytes": 9143,
-    "sha256": "34c613fb63eb0383101d231b1dded832a0f385ccc5378b63e949ee670e0940dd"
+    "bytes": 9215,
+    "sha256": "341603f2dda84fb9f7650a24451baf97a96774fe26634d91736bed0a4610d991"
   },
   {
     "path": "poc/src/App.tsx",
-    "bytes": 27860,
-    "sha256": "c28932a819cf144cfc1a85f93397a3bf64385f75be3c13155568727d5fcf9c91"
+    "bytes": 27884,
+    "sha256": "cbb7b47cefdf530862da3e2070da0c4ad913d943ba22d8d6d63da42cbfe5e0ee"
   },
   {
     "path": "poc/src/BankView.tsx",
-    "bytes": 13618,
-    "sha256": "7449f1327b7d0515be58758336b653b72015b2f44d9fb41b7b61ede216f85002"
+    "bytes": 13603,
+    "sha256": "8b788887beb35030b225c60db8072dc4fa45cb993a25a455cab98dd1d76b36dd"
   },
   {
     "path": "poc/src/CompanyView.tsx",
-    "bytes": 4888,
-    "sha256": "18f8d6a57cf3d29b02e66e08fed41a315d61bd1947bca041f12df08d70204d7a"
+    "bytes": 5015,
+    "sha256": "dfc1cc709768f7e385c591fad33dae598b8b1c87acfc059e74e62d9b8b430ab2"
   },
   {
     "path": "poc/src/ForeignView.tsx",
-    "bytes": 7526,
-    "sha256": "e2647527ef52acf2aea69925acd190b9408048db4a6e3eba9d43a3f6cfe61516"
+    "bytes": 7516,
+    "sha256": "28c1be0602946f797f988f84602e4662a0e5779efd4e7b2379a2e92858c439f8"
   },
   {
     "path": "poc/src/GovernmentFinance.tsx",
-    "bytes": 8118,
-    "sha256": "dfc5844856e5180d1f6afb11e2a93b9947d5f4a2d5f7d569e7fb70b14b03f06b"
+    "bytes": 8121,
+    "sha256": "0d9347852d74261265ec581273a813ada618dcfa886e17c96acde07efc5f867a"
   },
   {
     "path": "poc/src/HouseholdApp.tsx",
-    "bytes": 20704,
-    "sha256": "9862ac71089f362668682348411e73de1683250969f737c8c607089860bdbede"
+    "bytes": 20656,
+    "sha256": "b47d158936b31f7ca41870a3440ab55c0312106027e4d57be0f98d421c198e46"
   },
   {
     "path": "poc/src/household.css",

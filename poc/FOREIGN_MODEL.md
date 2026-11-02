@@ -29,7 +29,7 @@ Finanzierbare Auslandswünsche fließen wie andere finanzierbare Bestellungen in
 
 ## Sichtbarkeit und Fertigkriterien
 
-Die Übersicht zeigt die tatsächlichen Energiezahlungen und Exporterlöse als getrennte Zahlungswege. Unter **Ausland → In das System hineingehen** stehen Energie-/Warenlieferungen und Zahlungen mit entgegengesetzten Pfeilen, der beschränkte Kaufplan pro Betrieb, konkrete Liefernachweise und der Saldo. Inland- und Auslandsguthaben bleiben getrennt; Änderungen eines noch offenen Monats sind als solche gekennzeichnet.
+Die Übersicht zeigt die tatsächlichen Energiezahlungen und Exporterlöse als getrennte Zahlungswege. Unter **Ausland → Details öffnen** stehen Energie-/Warenlieferungen und Zahlungen mit entgegengesetzten Pfeilen, der beschränkte Kaufplan pro Betrieb, konkrete Liefernachweise und der Saldo. Inland- und Auslandsguthaben bleiben getrennt; Änderungen eines noch offenen Monats sind als solche gekennzeichnet.
 
 Fertigkriterien: vollständige Zahlungs- und Warengegenbuchung; Budgetgrenze vor aktuellem Energieeingang; keine Exporte bei fehlendem Geld oder frei verfügbarer Ware; Schutz reservierter Maschinen; Exportabsatz in der Firmenplanung; sichtbarer Geldrückfluss und Liefermenge; Vergleichsläufe ohne Auslandsbestellungen, mit Standardbestellungen und mit Energie-/Nachfrageschock sowie Maschinenkredit. Alte V3-/V4-Prüfbelege bleiben unverändert und beziehen sich auf ihre alten Kernhashes.
 
