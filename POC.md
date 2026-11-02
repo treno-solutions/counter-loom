@@ -104,3 +104,8 @@ Das [Außenhandelskonzept](poc/FOREIGN_MODEL.md) ergänzt den bestehenden Außen
 ## Modell v6 · Staatsfinanzierung mit Zinsen
 
 Das [Staatskreditkonzept](poc/FISCAL_MODEL.md) ergänzt einen begrenzten Geschäftsbankkredit für tatsächliche Kassenfehlbeträge. Zwischenkredite und spätere Steuern werden beim Abschluss abgeglichen; bestehende Schuld verursacht im Folgemonat Zinsen, Überschüsse tilgen. Staatsschuld und Bankforderung, tatsächliche Kasse, Kredite, Zinsen und Tilgung sind getrennt sichtbar. Die [V6-Prüfung](qa/fiscal-v6-plausibility.md) ergänzt die bisherigen unveränderten Belege. Keine Zentralbankfinanzierung, kein Anleihemarkt und kein Nachweis langfristiger fiskalischer Tragfähigkeit.
+
+
+## Modell v7 · Leitzins und Vertragsbindung
+
+Der [Modell-Leitzins](poc/RATES_MODEL.md) ist ab der nächsten Monatsgrenze veränderbar. Der variable Betriebskredit nutzt den Vormonatsleitzins, der feste Betriebskredit bleibt bei 2 %. Neue Maschinen- und Staatskredite binden ihr Zinsangebot erst bei tatsächlicher Gutschrift. Staatskreditbeträge behalten ihre eigenen festen Sätze und werden bei Tilgung nach Alter reduziert. Bankansicht und Szenariosteuerung zeigen Konditionen, monatliche Zinsforderungen und die zeitliche Übertragung. Die [V7-Prüfung](qa/rates-v7-plausibility.md) ergänzt unveränderte ältere Ergebnisse; kein empirischer Nachweis einer geldpolitischen Übertragungsstärke.

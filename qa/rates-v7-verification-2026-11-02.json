@@ -1,0 +1,122 @@
+{
+  "checked_on": "2026-11-02",
+  "model": "illustrative_circular_flow_v7",
+  "base_revision": "1addb5a",
+  "scope": "Illustrative policy input and credit repricing/locking rules with local UI verification; no empirical monetary-policy or workshop validation",
+  "source_files": [
+    {
+      "path": "poc/world.py",
+      "sha256": "668a40b28132e579748b75967460d9173344c3b5316671289d0fc6eac7612482"
+    },
+    {
+      "path": "poc/rates.py",
+      "sha256": "0745b1a6b640b9e0310af67863d79762e5581b4a8bdf70d52e545fb86965d4c1"
+    },
+    {
+      "path": "poc/banking.py",
+      "sha256": "f93868f356419afe2831e0371e4cb2c4e436790bd45fd28b07d1d6d54568dbdc"
+    },
+    {
+      "path": "poc/treasury.py",
+      "sha256": "cdb83591fe47e4d27a1918c372f590fea56ada64cdd1cb2edea341e9d6a509a9"
+    },
+    {
+      "path": "poc/firms.py",
+      "sha256": "c77d79f5491a9e5d6f044a7edcef7e12189f5cbcbf3b4b5683c79ff4845932e5"
+    },
+    {
+      "path": "poc/foreign.py",
+      "sha256": "476d7f69784634fafae7c07a195ee5092b472018e29e0e6532f9a7a9025a41b3"
+    },
+    {
+      "path": "poc/systems.py",
+      "sha256": "3491c16a89d11d2cf54c637ced9a8a9f143e032b30ec26f883fb3218780bccb0"
+    },
+    {
+      "path": "poc/server.py",
+      "sha256": "f13ae474d48ecd4bbaa00b3212c86b80b7f07086bafa7557d2b41ad17b88e195"
+    },
+    {
+      "path": "poc/src/App.tsx",
+      "sha256": "c46337c5b0001163fcc449aa7c47bac9ae4cd6c8174cccacbc610f8312b036a7"
+    },
+    {
+      "path": "poc/src/RatesView.tsx",
+      "sha256": "8b20534baf0b6647528c6c0ffaabe92052f5eb8d2aab760d492283661431bb60"
+    },
+    {
+      "path": "poc/src/BankView.tsx",
+      "sha256": "19f2373fdbf7895f129877d069e81e7eb0abb0d455a9f6b36a8188d4695ce0a2"
+    },
+    {
+      "path": "poc/src/CompanyView.tsx",
+      "sha256": "ca170189ccf7e768e3cd8d576ced70db14cbe7725bd03da9eea1b37639f974e1"
+    },
+    {
+      "path": "poc/src/GovernmentFinance.tsx",
+      "sha256": "9582ac3c69763a408d65accfa50eeb6b5819c08cc959980c3c9e7a949d5d1003"
+    },
+    {
+      "path": "poc/src/world-schema.ts",
+      "sha256": "3f6a6fa53e92fa4104d00c35418f90de30ad89b81e5102f1255fab6ec9d8f463"
+    },
+    {
+      "path": "poc/src/styles.css",
+      "sha256": "3dca8a57b0252f0aa5715a1c72512b9d409515400bc72bcd8b0f22d6a665e0b1"
+    }
+  ],
+  "automated_checks": {
+    "unittest_passed": 72,
+    "typescript_and_production_build": "passed",
+    "strict_frontend_schema_snapshots_passed": 1089,
+    "inconsistent_corporate_contract_rate_rejected": true,
+    "http_rate_endpoint_and_exported_contract_history": "passed"
+  },
+  "independent_audit": {
+    "report": "qa/rates-v7-plausibility.md",
+    "worlds": 9,
+    "world_months": 216,
+    "phases": 1080,
+    "reconstructed_postings": 11326,
+    "isolated_rate_cases": 11,
+    "isolated_postings": 208,
+    "unchanged_policy_reproduces_v6_baseline": true
+  },
+  "browser_checks": {
+    "browser": "BrowserOS neo",
+    "normal_preview_url": "http://127.0.0.1:5173/",
+    "rate_input_from_scenario_panel": "passed",
+    "bank_rate_diagram_and_contract_cards": "passed",
+    "percentage_point_spreads_labeled": "passed",
+    "policy_change_only_at_next_month": "passed",
+    "variable_contract_reprices_one_month_after_policy": "passed",
+    "fixed_corporate_and_existing_machine_rates_preserved": "passed",
+    "state_tranches_show_old_and_new_fixed_rates": "passed",
+    "mobile_width_390_no_document_overflow": "passed",
+    "mobile_diagram_scroll_with_hint": "passed",
+    "local_font_loading": "passed",
+    "real_autoplay_with_rate_hike_stops_after_month_24_without_error": "passed",
+    "completed_start_and_step_buttons_disabled": true,
+    "example": {
+      "queued_after_month": 1,
+      "new_policy_rate_bps": 400,
+      "policy_effective_month": 2,
+      "variable_effective_month": 3,
+      "variable_monthly_interest_cents_before": 2000,
+      "variable_monthly_interest_cents_after": 4000,
+      "fixed_corporate_annual_rate_bps": 200,
+      "fixed_corporate_monthly_interest_cents": 2000,
+      "existing_machine_locked_rate_bps": 600,
+      "new_machine_offer_bps": 800,
+      "old_state_tranche_bps": 300,
+      "new_state_tranche_bps": 500
+    }
+  },
+  "limits": [
+    "Policy input, spreads and one-month reference lag are explicit scenario assumptions, not current central-bank or market data.",
+    "No new central-bank balance sheet, deposit-interest model or general credit market.",
+    "Fixed state draws use separate cohorts, FIFO repayment and aggregated cent rounding; weighted rate is display-only.",
+    "No particular consumption response, empirical pass-through strength, solvency or macroeconomic stability established.",
+    "A waiting credit request does not guarantee delivery or lock a rate."
+  ]
+}

@@ -13,6 +13,9 @@ class Treasury:
             raise ValueError('Staatskreditparameter müssen nichtnegative ganze Zahlen sein.')
         self.credit_limit_cents=credit_limit_cents
         self.annual_rate_bps=annual_rate_bps
+        self.spread_bps=annual_rate_bps-world.monetary.initial_rate_bps
+        self.tranches=[]
+        self.month_interest_basis=[]
         self.outstanding_cents=0
         self.credit_created_cents=0
         self.principal_repaid_cents=0
@@ -31,7 +34,12 @@ class Treasury:
     def begin_month(self,world):
         self.opening_principal_cents=self.outstanding_cents
         self.opening_interest_arrears_cents=self.overdue_interest_cents
-        self.month_interest_charge_cents=self.opening_principal_cents*self.annual_rate_bps//120000
+        basis=[dict(tranche_id=t['tranche_id'],principal_cents=t['outstanding_cents'],annual_rate_bps=t['annual_rate_bps'],interest_cents=t['outstanding_cents']*t['annual_rate_bps']//120000) for t in self.tranches if t['outstanding_cents']]
+        self.month_interest_charge_cents=sum(x['principal_cents']*x['annual_rate_bps'] for x in basis)//120000
+        remainder=self.month_interest_charge_cents-sum(x['interest_cents'] for x in basis)
+        ranking=sorted(basis,key=lambda x:(-(x['principal_cents']*x['annual_rate_bps']%120000),x['tranche_id']))
+        for item in ranking[:remainder]:item['interest_cents']+=1
+        self.month_interest_basis=basis
         self.unfunded_financing_cents=0
 
     def issue(self,world,amount):
@@ -44,6 +52,7 @@ class Treasury:
         state['government_loan_cents']+=paid
         bank['loan_assets']+=paid
         self.outstanding_cents+=paid
+        self.tranches.append(dict(tranche_id=len(self.tranches)+1,transaction_id=len(world.journal)+1,issue_month=world.month,original_cents=paid,outstanding_cents=paid,annual_rate_bps=world.monetary.state_offer(world),policy_rate_at_issue_bps=world.monetary.rate_bps,spread_bps=self.spread_bps))
         self.credit_created_cents+=paid
         world.banking.created+=paid
         world.record('bank','staat',paid,'government_credit','Staatskredit gutgeschrieben',source_before,target_before,before,'loan_creation')
@@ -80,6 +89,9 @@ class Treasury:
         state['cash_cents']-=paid
         state['government_loan_cents']-=paid
         bank['loan_assets']-=paid
+        remaining=paid
+        for tranche in self.tranches:
+            take=min(remaining,tranche['outstanding_cents']);tranche['outstanding_cents']-=take;remaining-=take
         self.outstanding_cents-=paid
         self.principal_repaid_cents+=paid
         world.banking.repaid+=paid
@@ -99,7 +111,7 @@ class Treasury:
             interest_paid_cents=interest,cash_deficit_cents=primary+interest-taxes,
             credit_cents=credit,principal_repaid_cents=repaid,opening_cash_cents=world.month_open['staat'],
             closing_cash_cents=world.nodes['staat']['cash_cents'],opening_principal_cents=self.opening_principal_cents,
-            closing_principal_cents=self.outstanding_cents,unfunded_financing_cents=self.unfunded_financing_cents)
+            closing_principal_cents=self.outstanding_cents,unfunded_financing_cents=self.unfunded_financing_cents,interest_basis=deepcopy(self.month_interest_basis),new_interest_charge_cents=self.month_interest_charge_cents)
 
     def close(self,world):
         if self.last_close_month==world.month:return
@@ -120,13 +132,16 @@ class Treasury:
         self.history.append(self.monthly(world))
 
     def check(self,world):
+        assert sum(t['outstanding_cents'] for t in self.tranches)==self.outstanding_cents
+        assert all(0<=t['outstanding_cents']<=t['original_cents'] for t in self.tranches)
+        assert sum(x['interest_cents'] for x in self.month_interest_basis)==self.month_interest_charge_cents
         assert 0<=self.outstanding_cents<=self.credit_limit_cents
         assert world.nodes['staat']['government_loan_cents']==self.outstanding_cents
         assert self.outstanding_cents==self.credit_created_cents-self.principal_repaid_cents
         assert self.overdue_interest_cents==self.interest_charged_cents-self.interest_paid_cents>=0
 
     def snapshot(self,world):
-        return dict(credit_limit_cents=self.credit_limit_cents,annual_rate_bps=self.annual_rate_bps,
+        return dict(credit_limit_cents=self.credit_limit_cents,annual_rate_bps=world.monetary.state_offer(world),spread_bps=self.spread_bps,tranches=deepcopy(self.tranches),weighted_rate_bps=sum(t['outstanding_cents']*t['annual_rate_bps'] for t in self.tranches)//self.outstanding_cents if self.outstanding_cents else None,
             outstanding_cents=self.outstanding_cents,remaining_credit_cents=self.credit_limit_cents-self.outstanding_cents,
             credit_created_cents=self.credit_created_cents,principal_repaid_cents=self.principal_repaid_cents,
             interest_charged_cents=self.interest_charged_cents,interest_paid_cents=self.interest_paid_cents,

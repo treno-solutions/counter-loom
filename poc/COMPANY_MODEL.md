@@ -1,6 +1,6 @@
-# Begrenzter Lernlauf und Unternehmenssystem · Grundlage v4, erweitert bis v6
+# Begrenzter Lernlauf und Unternehmenssystem · Grundlage v4, erweitert bis v7
 
-Stand: 2. November 2026 · Die Unternehmensregeln aus v4 bleiben in v6 bestehen. Der [begrenzte Staatskredit](FISCAL_MODEL.md) ergänzt die Finanzierungsseite. Der [Außenhandelsanschluss v5](FOREIGN_MODEL.md) ergänzt tatsächliche Auslandsbestellungen und Warenexporte. Alle Parameter sind eigene illustrative Annahmen; keine empirische Kalibrierung oder Prognose.
+Stand: 2. November 2026 · Die Unternehmensregeln aus v4 bleiben in v7 bestehen. Die [Leitzinsregeln](RATES_MODEL.md) ergänzen einen variablen und einen festen Betriebskredit. Der [begrenzte Staatskredit](FISCAL_MODEL.md) ergänzt die Finanzierungsseite. Der [Außenhandelsanschluss v5](FOREIGN_MODEL.md) ergänzt tatsächliche Auslandsbestellungen und Warenexporte. Alle Parameter sind eigene illustrative Annahmen; keine empirische Kalibrierung oder Prognose.
 
 ## Verbindliche Grenze dieser Version
 
@@ -31,7 +31,7 @@ Vereinfachtes Ergebnis vor Steuer: `Umsatz − Kosten verkaufter Ware − Leerla
 
 ### Personal
 
-Der nächste dauerhafte Personalbedarf richtet sich nach der geglätteten Absatzerwartung und Produktivität, mit Abzug vorhandener Anlagenkapazität. Ein zusätzlicher einmaliger Lageraufbau erzeugt keinen dauerhaften Personalbedarf.
+Der nächste dauerhafte Personalbedarf richtet sich nach der geglätteten Absatzerwartung und Produktivität, mit Abzug vorhandener Anlagenkapazität. Ein zusätzlicher einmaliger Lageraufbau erzeugt keinen dauerhaften Personalbedarf. Für die folgende Personal-/Liquiditätsplanung wird der bereits bekannte Vertragszins des nächsten Monats verwendet; die aktuelle Produktionsrunde verwendet den aktuell wirksamen Satz.
 
 Zusätzlich begrenzt die erwartete Selbstfinanzierung die Zielstellenzahl: erwarteter Umsatz abzüglich erwarteter Energie und Schuldendienst muss die festen Löhne tragen können. Ein niedrigerer oder höherer Bedarf muss zwei Monatsabschlüsse in derselben Richtung bestehen. Zielstellen sind auf vier je Betrieb begrenzt. Pro Betrieb und Monat wird höchstens eine Stelle verändert. Neueinstellungen benötigen eine verfügbare Person und liquide Mittel für zwei geplante Lohnrunden plus Energie/Schuldendienst. Änderungen gelten ab der folgenden Lohnphase. Zahlungsengpässe, tatsächliche Lohnzahlung und formales Arbeitsverhältnis bleiben getrennt.
 

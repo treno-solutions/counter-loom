@@ -1,13 +1,13 @@
 [
   {
     "path": "BUILD_PLAN.md",
-    "bytes": 19762,
-    "sha256": "0a4b92fcb3f6a5f64f4b344a163ceb92e285c05d8aaf74c8fbd28d209169f34f"
+    "bytes": 19866,
+    "sha256": "2d0b91ad6a5fd49368e966a45fe4eec3aa433cb63604f1301bcf92615f47fbbe"
   },
   {
     "path": "POC.md",
-    "bytes": 12408,
-    "sha256": "d6fdbed7752b94285bf992920477cefc8cb09bea76461493aa82081e65f3e422"
+    "bytes": 13112,
+    "sha256": "96dec33f26e9a075ffb699feeb25f4dfa5de66556d451db966f94ddbe58fa348"
   },
   {
     "path": "RESEARCH.md",
@@ -106,8 +106,8 @@
   },
   {
     "path": "poc/source-manifest.json",
-    "bytes": 5882,
-    "sha256": "afb770fec510eeb118d1159fc9afd707956b961073019737a640dc2bf8ee35af"
+    "bytes": 6451,
+    "sha256": "d53fe67fef70b632a2dfce36fad53fad5c93c6f95c4d3b5a8f4205abfc0be6e6"
   },
   {
     "path": "processed/energy-monthly-prices.csv",
@@ -398,6 +398,21 @@
     "path": "qa/price-data-validation.json",
     "bytes": 468,
     "sha256": "83d457c6513423ab44246f263803bb686d97dee071a4f4850bf19a58fd978f0e"
+  },
+  {
+    "path": "qa/rates-v7-plausibility.json",
+    "bytes": 1068212,
+    "sha256": "8173ce7cff86736ffa7cb08fc0c43540dc72a17864a8640fef3cab3c8278cba2"
+  },
+  {
+    "path": "qa/rates-v7-plausibility.md",
+    "bytes": 11798,
+    "sha256": "c29f04756826bef4902a522a17d5edf84e3577f375602c384a913c04e3feb59d"
+  },
+  {
+    "path": "qa/rates-v7-verification-2026-11-02.json",
+    "bytes": 4694,
+    "sha256": "c76be5b69ff1b4296814b00a7e2bd7883c21ad3f0a103be0b276c17c61f7ad19"
   },
   {
     "path": "qa/research-structure-validation.json",
@@ -781,8 +796,8 @@
   },
   {
     "path": "tools/assemble_evidence.py",
-    "bytes": 34831,
-    "sha256": "39f6aa385db851f741c9ca7820a9da5fbd9b47f932f34fad2001a3ca92e11466"
+    "bytes": 34867,
+    "sha256": "921885f48c2591ab8768e2b6528340bd335ff0d328b7edfd967287fdf06ca830"
   },
   {
     "path": "tools/check_bank_plausibility.py",
@@ -808,6 +823,11 @@
     "path": "tools/check_foreign_plausibility.py",
     "bytes": 21083,
     "sha256": "277f67b2187e0ebe1c0246e3ff2bcdac6324132f06d345df92dcbedd0ad0cc20"
+  },
+  {
+    "path": "tools/check_rates_plausibility.py",
+    "bytes": 36008,
+    "sha256": "a24351f25f2f28e9c9404831f070bb2d9cb8d9ab7a7ffceafa9920aa15e5c933"
   },
   {
     "path": "tools/prepare_research.py",

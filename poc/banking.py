@@ -10,6 +10,8 @@ class MachineLoan:
     amount_cents: int = 120000
     outstanding_cents: int = 0
     annual_rate_bps: int = 600
+    policy_rate_at_issue_bps: int | None = None
+    spread_bps: int = 400
     monthly_principal_cents: int = 10000
     term_months: int = 12
     borrower: str = 'alltag'
@@ -65,6 +67,8 @@ class Banking:
         if supplier['inventory'] - supplier.get('reserved_units', 0) < loan.units:
             loan.message = 'Anfrage wartet auf acht verfügbare Werkstatteinheiten für die Maschine.'
             return True
+        loan.annual_rate_bps=world.monetary.machine_offer()
+        loan.policy_rate_at_issue_bps=world.monetary.rate_bps
         before = self.balance(world)
         source_before = world.nodes['bank']['cash_cents']
         target_before = borrower['cash_cents']
@@ -159,6 +163,8 @@ class Banking:
 
     def snapshot(self, world):
         events = [t for t in world.journal if t['kind'] in ('machine_credit', 'machine_purchase', 'machine_interest', 'machine_principal')]
-        return dict(balance=self.balance(world), loan=asdict(self.loan), events=events, initial_deposits_cents=self.initial_deposits,
+        loan_data=asdict(self.loan)
+        if self.loan.issue_month is None:loan_data['annual_rate_bps']=world.monetary.machine_offer()
+        return dict(balance=self.balance(world), loan=loan_data, events=events, initial_deposits_cents=self.initial_deposits,
                     credit_created_cents=self.created, principal_repaid_cents=self.repaid, interest_received_cents=self.interest_received,
                     distributed_cents=self.distributed, expected_deposits_cents=self.initial_deposits+self.created-self.repaid-self.interest_received+self.distributed)

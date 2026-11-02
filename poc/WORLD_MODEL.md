@@ -1,6 +1,12 @@
-# Laufende Modellwirtschaft · aktuelle Fassung v6
+# Laufende Modellwirtschaft · aktuelle Fassung v7
 
-V6 ergänzt die [Staatsfinanzierung](FISCAL_MODEL.md): monatliche Kassenfehlbeträge werden vorrangig durch einen Staatskredit der bestehenden Geschäftsbank finanziert. Obergrenze 50.000 €, Jahreszins 3 %, Zinsbasis bestehende Schuld am Monatsbeginn. Überschüsse tilgen; untermonatliche Kredite werden beim Abschluss angerechnet. Kreditgutschriften sind Finanzierung und keine Steuereinnahme. Die Bankforderung und die Staatsschuld werden gemeinsam gebucht; Zinsen sind Bankertrag und fließen in die bestehenden tatsächlichen Ausschüttungen ein. Keine Zentralbankfinanzierung oder Anleihemärkte.
+V7 ergänzt die [Leitzins- und Vertragsregeln](RATES_MODEL.md). Eine vorgemerkte Leitzinsänderung wirkt am folgenden Monatsbeginn. Der variable Alltagskredit übernimmt den Vormonatsleitzins; der feste Werkstattkredit behält 2 %. Neue Maschinenkredite und Staatskreditbeträge binden bei Gutschrift den Leitzins plus ihren jeweiligen Modellaufschlag. Alte Festzinsen und Zinsrückstände werden nicht rückwirkend verändert. Die Staatszinsbasis wird pro festem Kreditbetrag dokumentiert.
+
+Die [V7-Prüfung](../qa/rates-v7-plausibility.md) ergänzt die unveränderten älteren Belege. Der Modell-Leitzins ist eine externe Vorgabe, keine zusätzliche Zentralbankbilanz. Alle Anfangswerte und Übertragungsregeln sind eigene illustrative Annahmen.
+
+## Staatsfinanzierung aus v6
+
+V6 ergänzt die [Staatsfinanzierung](FISCAL_MODEL.md): monatliche Kassenfehlbeträge werden vorrangig durch einen Staatskredit der bestehenden Geschäftsbank finanziert. Obergrenze 50.000 €, anfänglicher Jahreszins 3 % bei 2 % Modell-Leitzins, Zinsbasis bestehende Schuld am Monatsbeginn. Überschüsse tilgen; untermonatliche Kredite werden beim Abschluss angerechnet. Kreditgutschriften sind Finanzierung und keine Steuereinnahme. Die Bankforderung und die Staatsschuld werden gemeinsam gebucht; Zinsen sind Bankertrag und fließen in die bestehenden tatsächlichen Ausschüttungen ein. Keine Zentralbankfinanzierung oder Anleihemärkte.
 
 Die [V6-Prüfung](../qa/fiscal-v6-plausibility.md) ergänzt die unveränderten Belege älterer Fassungen. Elf Akteure, 24 Monate, feste Preise/Löhne bleiben erhalten. Die aktuelle staatliche Finanzierung ersetzt den früheren ausschließlichen Verbrauch der Staatskasse.
 

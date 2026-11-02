@@ -21,7 +21,7 @@ def plan(firm, energy_multiplier, debt_service=0):
     needed=max(0,demand+target-opening)
     energy_unit=(500 if firm['id']=='alltag' else 900)*energy_multiplier
     wages=len(firm['employees'])*WAGE
-    interest=firm['loan']*2//1200
+    interest=firm['loan']*firm['loan_rate_bps']//120000
     funded=max(0,firm['cash_cents']-wages-interest-debt_service)//energy_unit
     return dict(demand_units=demand,target_units=target,opening_units=firm['inventory'],
                 opening_value_cents=firm['company']['inventory_value_cents'],capacity_units=capacity,
@@ -33,10 +33,10 @@ def staffing(firm, energy_multiplier, debt_service=0):
     demand=demand_units(firm['company'])
     energy=(500 if firm['id']=='alltag' else 900)*energy_multiplier
     needed=ceil(max(0,demand-firm['capital']*4)/firm['productivity'])
-    affordable=max(0,demand*(firm['price']-energy)-firm['loan']*2//1200-debt_service)//WAGE
+    affordable=max(0,demand*(firm['price']-energy)-firm['loan']*firm['loan_next_rate_bps']//120000-debt_service)//WAGE
     desired=min(4,needed,affordable)
     # Two future wage rounds, expected energy and debt service retained as working cash.
-    reserve=2*max(desired,len(firm['employees']))*WAGE+demand*energy+firm['loan']*2//1200+debt_service
+    reserve=2*max(desired,len(firm['employees']))*WAGE+demand*energy+firm['loan']*firm['loan_next_rate_bps']//120000+debt_service
     return desired,reserve
 
 def forecast(company, funded_orders):
