@@ -1,0 +1,59 @@
+{
+  "date": "2026-11-02",
+  "scope": "Local technical POC; fictional contractual cases, not validated investor behavior or macroeconomics",
+  "core": "BPTK-Py 3.5.0; original tools/probe_bptk_hybrid.py unchanged; Python adapter and React/Tailwind UI",
+  "automated": {
+    "command": "npm test --prefix poc",
+    "passed": 6,
+    "failed": 0,
+    "independent_decimal_rows": 90,
+    "rates": [
+      0,
+      0.02,
+      0.06,
+      0.2,
+      0.037
+    ],
+    "checks": [
+      "independent monthly balances",
+      "reproducible rows and events across independent runs",
+      "fixed contract financial states unchanged",
+      "targeted repricing events",
+      "nonnegative available cash and explicit arrears",
+      "custom 3.7% HTTP request reaches solver: month 3 variable interest 185, cash 1215",
+      "HTTP errors 400, 403, 404, 413, 415"
+    ],
+    "build": "npm run build --prefix poc passed: strict TypeScript and Vite production build"
+  },
+  "browser": {
+    "tool": "BrowserOS neo",
+    "viewports_css_px": [
+      1040,
+      390,
+      320
+    ],
+    "observations": [
+      "initial real API result rendered",
+      "6% month 3: variable interest 300, headroom and earmark 0; fixed interest 100, headroom 200, earmark 100",
+      "6% deposit month 6 cash 3600; baseline difference 800; cumulative earmark 600",
+      "editing input preserves last computed rate and marks uncomputed change",
+      "4% recalculation returns new run ID and computed-rate label",
+      "playback advances and pause works",
+      "simulated request rejection clears computed view and shows error; restored fetch and recalculation recover",
+      "clickable flow explanations, case selection and month selection work",
+      "desktop and mobile screenshots visually inspected; final 320px DOM check: no horizontal overflow or clipped flow nodes",
+      "production build served on same local API port and rendered actual result"
+    ],
+    "console": "no errors or warnings observed during interactive checks",
+    "failure_injection": "Temporary fetch rejection in owned browser page only, restored afterwards"
+  },
+  "llm_calls": 0,
+  "network": "No external model or data service required for simulation; assets bundled locally",
+  "limits": [
+    "No pedagogical study or user comprehension test yet",
+    "No empirical personas, full banking ledger, rate-transmission calibration, inflation or market-price simulation",
+    "Investment earmark is a separate cash pot, not a securities purchase",
+    "No security audit or public deployment",
+    "Full cross-process state restoration and LLM decisions not implemented"
+  ]
+}

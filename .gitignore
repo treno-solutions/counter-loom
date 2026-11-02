@@ -18,3 +18,10 @@ __pycache__/
 /sources/*.md
 !/sources/README.md
 /sources/macro-2026-11-01/*.md
+
+# Local POC dependencies, build and runtime files.
+/poc/node_modules/
+/poc/dist/
+/poc/.venv/
+/poc/.runtime/
+/poc/bptk_py.log

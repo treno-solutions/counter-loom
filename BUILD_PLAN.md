@@ -2,7 +2,7 @@
 
 Version 0.1 · 2. November 2026 · Status: dokumentierter Arbeitsplan. System Dynamics ist der bevorzugte Modellierungsansatz; Framework, Bezugsraum und konkrete erste Lernmodule sind noch nicht ausgewählt. Keine neue Simulation durch diesen Plan gestartet.
 
-Aktueller nächster Umfang: [POC 01](POC.md). Der POC begrenzt die Umsetzung auf einen sichtbaren algorithmischen Durchstich; der folgende Bauplan bleibt der Erweiterungsrahmen.
+Aktueller begrenzter Umfang: [POC 01](POC.md). Der POC begrenzt die Umsetzung auf einen sichtbaren algorithmischen Durchstich; der folgende Bauplan bleibt der Erweiterungsrahmen.
 
 ## 1 · Ziel und vollständiger Zusammenhang
 
@@ -111,7 +111,7 @@ Etappen B–F bilden einen ersten vollständigen Ausschnitt vom äußeren Ereign
 
 ## 8 · Erster technischer Prüfauftrag
 
-**Nächste konkrete Arbeit: BPTK-Py an einer festen Version untersuchen, noch ohne LLM.** Zu prüfen sind Bestände/Flüsse, Module, individuelle Zustände, Ereignisse/Verzögerungen, Rohdatenexport, Zeitschrittbetrieb, Wiederherstellung, reproduzierbarer Ablauf und Anschluss einer externen Entscheidung. Die Herstellerdokumentation nennt System Dynamics, agentenbasierte und hybride Modelle; die Agenten-API beschreibt zustandsabhängige Ereignisbehandlung. Dies sind bisher Dokumentationsbefunde, keine eigenen Tests.
+**Technischer Stand: BPTK-Py 3.5.0 ist geprüft und im lokalen [POC](poc/README.md) angebunden, ohne LLM.** Zu prüfen sind Bestände/Flüsse, Module, individuelle Zustände, Ereignisse/Verzögerungen, Rohdatenexport, Zeitschrittbetrieb, Wiederherstellung, reproduzierbarer Ablauf und Anschluss einer externen Entscheidung. Die Herstellerdokumentation nennt System Dynamics, agentenbasierte und hybride Modelle; die Agenten-API beschreibt zustandsabhängige Ereignisbehandlung. Der [technische Screen](research/frameworks/bptk-py.md) und das [POC-Prüfprotokoll](qa/poc-verification-2026-11-02.json) unterscheiden geprüfte Fähigkeiten von offenen Punkten. Vollständige Zustandswiederherstellung und eine generative Entscheidung sind noch nicht umgesetzt.
 
 Das Werkzeug liefert keine fertige, empirisch gültige VWL. Eigene Lernmodule brauchen weiter dokumentierte Beziehungen und Parameter. Bestehende Modelle und Unterrichtsvorbilder zuerst auf Wiederverwendung prüfen. BeforeIT/JMAB bleiben wirtschaftliche Referenz- oder spätere Erweiterungskandidaten. EconAgent bleibt wegen des alten technischen Stands vorwiegend methodische Referenz. Die vorhandenen Concordia-/TinyTroupe-Belege bleiben erhalten; sie erzwingen keinen weiteren Einsatz.
 
@@ -133,7 +133,7 @@ Für den ersten generativen Vergleich ist als vorläufige Größenordnung ein Au
 Der Systemumfang und die Priorität sparsamer LLM-Aufrufe beruhen auf dem festgehaltenen Projektziel. Die Etappen, Schnittstellen und Prüfgrenzen sind eigene Planungsvorschläge.
 
 - [Anforderungen](research/requirements.md), [Prüfprotokoll](research/assessment-protocol.md), [Systementscheidung 0004](research/decisions/0004-reduced-hybrid-learning-model.md).
-- [BPTK-Py: offizielle Übersicht](https://bptk.transentis.com/), [hybride Modelle](https://bptk.transentis.com/quickstart/hybrid/hybrid.html), [Agenten und Ereignisbehandlung](https://bptk.transentis.com/api/api_agent.html). Dokumentation am 2. November 2026 geprüft; kein eigener Runtime-Test. Die Bibliothek enthält auch dokumentierte Beer-Game-Beispiele als Unterrichts-/System-Dynamics-Vorbild, keine fertige Anlegersimulation.
+- [BPTK-Py: offizielle Übersicht](https://bptk.transentis.com/), [hybride Modelle](https://bptk.transentis.com/quickstart/hybrid/hybrid.html), [Agenten und Ereignisbehandlung](https://bptk.transentis.com/api/api_agent.html). Dokumentation und eigener begrenzter Runtime-Test am 2. November 2026 geprüft; siehe [Prüfstand](research/frameworks/bptk-py.md). Die Bibliothek enthält auch dokumentierte Beer-Game-Beispiele als Unterrichts-/System-Dynamics-Vorbild, keine fertige Anlegersimulation.
 - [Minsky: Godley Tables](https://minsky.sourceforge.io/manual/Ravel/node221.html). Ausgewählter offizieller Handbuchabschnitt zu Finanzflüssen geprüft; keine Integration oder Produktauswahl.
 - [EZB: geldpolitische Transmission](https://www.ecb.europa.eu/mopo/intro/transmission/html/index.de.html). Quelle für Übertragungskanäle und unsichere Verzögerungen; kein vollständig determiniertes Kausalgesetz für einen einzelnen Haushalt.
 - Bestehende wirtschaftliche Referenzen: [Quellenstand zur Makrowelt](sources/macroeconomic-world-2026-11-02.json). Nicht als bereits ausgeführte oder automatisch passende Alternativen behandeln.

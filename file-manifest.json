@@ -1,13 +1,13 @@
 [
   {
     "path": "BUILD_PLAN.md",
-    "bytes": 18832,
-    "sha256": "b0de4f8aeb6c31f29c5ba34730fc205fb6f3d19413d754f83f71229a4e3d4e41"
+    "bytes": 19131,
+    "sha256": "35deb4194895e8d6bade5111d38ec8e6923754a728adacdd41672202470309a5"
   },
   {
     "path": "POC.md",
-    "bytes": 7179,
-    "sha256": "463964a1711d6f0e5b0f97fd69d0db5214bb67af32837a542e8e5f55970ed0ff"
+    "bytes": 7347,
+    "sha256": "ed754e5e9d6a95b64b198cf84b3336155b5eaded00538bd49ce69d065c8209f0"
   },
   {
     "path": "RESEARCH.md",
@@ -103,6 +103,11 @@
     "path": "notes/social-financial-world/scenario-catalogue.md",
     "bytes": 6322,
     "sha256": "8d365013139066a582187ef6d5e7513dc695d85475f865d4b258559674472af9"
+  },
+  {
+    "path": "poc/source-manifest.json",
+    "bytes": 2413,
+    "sha256": "ff71eb6eb05ef562dcfdafb8fb2753ebde88f594f90497e8d82a8e70a5eb104b"
   },
   {
     "path": "processed/energy-monthly-prices.csv",
@@ -298,6 +303,11 @@
     "path": "qa/permissionless-package-validation.json",
     "bytes": 3344,
     "sha256": "7df055269990fd4f5eacc1de3c559d2016867db385cd0efe7257ff0593ef5eb1"
+  },
+  {
+    "path": "qa/poc-verification-2026-11-02.json",
+    "bytes": 2629,
+    "sha256": "2ce8fc0349c058ec63d82a998786f79e876f4c1672a2eb7904fbf4c7e9b87e34"
   },
   {
     "path": "qa/price-data-validation.json",
@@ -526,8 +536,8 @@
   },
   {
     "path": "research/frameworks/bptk-py.md",
-    "bytes": 2874,
-    "sha256": "94bff13e4d65af9780ef70ed2a74b85144fe9c3978eae387e942b3610f9429f5"
+    "bytes": 3055,
+    "sha256": "f5ad7398c49244281d9af865b91c56a73b1e3757176a4d38827d80de563e55fb"
   },
   {
     "path": "research/frameworks/concordia.md",
@@ -681,8 +691,8 @@
   },
   {
     "path": "tools/assemble_evidence.py",
-    "bytes": 34656,
-    "sha256": "aec32e31e65e120bf893e1872d69d7e39e94333d5a4fc8389da3f1742464e692"
+    "bytes": 34683,
+    "sha256": "883e57e5cbde52b3579e4f1ffbcfffdba05c4f4d46f6e594cdc65bf61ca3afaf"
   },
   {
     "path": "tools/check_concordia_pilot_workflow.py",

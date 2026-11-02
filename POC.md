@@ -1,6 +1,6 @@
 # POC 01 · Ein Ereignis, unterschiedliche Haushalte, sichtbare Folgen
 
-Version 0.1 · 2. November 2026 · Status: vorgeschlagener begrenzter POC. Technische Kernprüfung vorhanden; Frontend und HTTP-Anbindung sind noch nicht gebaut. Der [Bauplan](BUILD_PLAN.md) bleibt der Erweiterungsrahmen.
+Version 0.2 · 2. November 2026 · Status: lokaler POC implementiert und technisch geprüft; Verständlichkeit im Workshop noch nicht geprüft. Der [Bauplan](BUILD_PLAN.md) bleibt der Erweiterungsrahmen.
 
 ## Eine Frage
 
@@ -27,7 +27,7 @@ Eine einzelne lokale Webansicht im Counterloom-Projekt, mit React und Tailwind s
 - Einnahmen, notwendige Ausgaben, Zinseffekt, verfügbares Geld und Vormerkung in einer kompakten Detailansicht nachvollziehen.
 - Kennzeichnung als fiktiver Technik-/Lerntest; keine vermeintlich realistische Bevölkerung oder autonomen Entscheidungen zeigen.
 
-Der erste UI-Aufbau kann die schon berechneten Ergebnisse wiedergeben. Das ist Replay, keine freie Neuberechnung. Für den vollständigen POC soll ein Start mit geänderten erlaubten Eingaben den Python-Kern neu ausführen und dessen Ergebnis zurückgeben. Grafische Auswahl und Wiedergabe berechnen keine Wirtschaft in React nach und lösen keine LLM-Anfragen aus.
+Die implementierte Ansicht berechnet erlaubte freie Eingaben über die lokale Schnittstelle im Python-Kern neu. Die anschließende Zeitsteuerung ist Replay dieses Ergebnisses. Grafische Auswahl und Wiedergabe berechnen keine Wirtschaft in React nach und lösen keine LLM-Anfragen aus.
 
 ## Kleinste technische Aufteilung
 
@@ -60,7 +60,8 @@ Nach dem sichtbaren algorithmischen Durchstich kann eine einzelne Persona ihren 
 
 - **Vorhanden:** BPTK-Py 3.5.0 in getrennter Prüfumgebung; 36 ausgewählte Originaltests bestanden. [Prüfbeleg](research/frameworks/evidence/bptk-upstream-tests-2026-11-02.json).
 - **Vorhanden:** Eigener Offline-Test mit nativen SD-, Agenten- und Ereignisbausteinen. 54 Perioden-/Fall-Datensätze über drei Varianten, zusätzliche Extremwertprüfung, unabhängiger Wiederaufbau identisch; null LLM-Aufrufe. [Daten und Grenzen](qa/bptk-technical-screen-2026-11-02.json), [Prüfskript](tools/probe_bptk_hybrid.py).
-- **Offen:** UI-Konzept im vorgegebenen Stil, lokale Schnittstelle, Frontendimplementierung, visuelle Prüfung und eine verständliche Erklärung direkt in der Ansicht.
+- **Implementiert und technisch geprüft:** React-/Tailwind-Ansicht, lokale Schnittstelle, freie Neuberechnung, Vergleich, Replay, sichtbare Annahmen und Fehleranzeige. [Startanleitung](poc/README.md), [Prüfprotokoll](qa/poc-verification-2026-11-02.json). Keine öffentliche Bereitstellung.
+- **Offen:** Qualitativer Verständlichkeitstest mit einer Person und ein abgegrenzter Nachweis des Lernnutzens. Die Browserprüfung ersetzt diese nicht.
 - **Offen:** Vollständige Zustandswiederherstellung zwischen Prozessen. Für diesen POC reicht zunächst ein neuer kurzer Lauf aus gespeicherten Eingaben; echtes Fortsetzen wird damit nicht behauptet.
 
-Umsetzungsreihenfolge: Ergebnisformat und Ansichtsskizze → Replay der vorhandenen Daten → schmale Neuberechnung → die obigen Prüfungen. Erweiterungswünsche währenddessen separat sammeln, statt den POC zu vergrößern.
+Nächster Schritt: Den lokalen POC anhand einer Vorhersagefrage und einer anschließenden Erklärung der Unterschiede testen. Erst danach den nächsten Mechanismus oder eine begrenzte Persona-Entscheidung auswählen.

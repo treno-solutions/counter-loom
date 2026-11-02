@@ -1,0 +1,87 @@
+[
+  {
+    "path": "poc/README.md",
+    "bytes": 4256,
+    "sha256": "11b05111816eaa02f139622d7d02a1a6cb5c23958ad669f519089354682e9264"
+  },
+  {
+    "path": "poc/engine.py",
+    "bytes": 4428,
+    "sha256": "1616d7b31cc6d43332b1f63918a2f531194309795f9d4559f1c5475fca944818"
+  },
+  {
+    "path": "poc/index.html",
+    "bytes": 483,
+    "sha256": "1315acf0b969c8538ec9f25eea621cbad174d45b374c136bf975bb403f0ccf6f"
+  },
+  {
+    "path": "poc/package-lock.json",
+    "bytes": 61860,
+    "sha256": "65dd2063d3f247cf8d57f4f9cfc3c0540fe461a2be123aff379d9f13737f11b3"
+  },
+  {
+    "path": "poc/package.json",
+    "bytes": 734,
+    "sha256": "57132746301337b0db12f37553002f41e3e2a39a3c22fb850c0686d769c27cbf"
+  },
+  {
+    "path": "poc/public/favicon.svg",
+    "bytes": 277,
+    "sha256": "3feb50f740a316d709bf3fea184b4ee2eea29b235c77bd2d2510756a41a9f43e"
+  },
+  {
+    "path": "poc/requirements.txt",
+    "bytes": 15,
+    "sha256": "214dbe5cdcb2b53a6d339a69a898fb7228f7f1946f5d9ce220d51c5f5f56f7f1"
+  },
+  {
+    "path": "poc/scripts/dev.mjs",
+    "bytes": 738,
+    "sha256": "f3b26be315baac30c03061e0bc228bfd7c875149197611ceb9819d483d9863a3"
+  },
+  {
+    "path": "poc/scripts/python.mjs",
+    "bytes": 992,
+    "sha256": "27660de705bd5dbad9919d986b028abed6c760829cab1a4e273095403fbf3417"
+  },
+  {
+    "path": "poc/server.py",
+    "bytes": 3371,
+    "sha256": "94db60e544bfda104dca36960482a5914f512c4bbb48b331aaa4a9758356a8e6"
+  },
+  {
+    "path": "poc/src/App.tsx",
+    "bytes": 19022,
+    "sha256": "e970e57a4cb2b6210e556f52b429a020aba7249c66dc082a8244f55f2d20810d"
+  },
+  {
+    "path": "poc/src/main.tsx",
+    "bytes": 375,
+    "sha256": "aa8ed87d5500cae835b36d93c4d5cfd9a07e8f6c271bd38b426affa6e22cfb27"
+  },
+  {
+    "path": "poc/src/schema.ts",
+    "bytes": 2151,
+    "sha256": "979c789507bac6181038f2fbcd14633638abfe7f5adbecf54ae8b1ff816d9b12"
+  },
+  {
+    "path": "poc/src/styles.css",
+    "bytes": 16534,
+    "sha256": "33f6e9c17008937468b0b2c0071e2d47fd43829b5641459deed62ab2b442d2dc"
+  },
+  {
+    "path": "poc/test_engine.py",
+    "bytes": 5501,
+    "sha256": "280d8d74df0e274011c7cee7d9ce3036ba4bdf3430aaaf3768c5be2eb046b1db"
+  },
+  {
+    "path": "poc/tsconfig.json",
+    "bytes": 489,
+    "sha256": "8e3c08dd91eb1911acae353f84e59276a3158ae2cab09caa53e4dab1f06e6988"
+  },
+  {
+    "path": "poc/vite.config.ts",
+    "bytes": 252,
+    "sha256": "ea5d49e864cb87e66ac6ac907f277e3dd432484b5146ff99177f575753346e0c"
+  }
+]

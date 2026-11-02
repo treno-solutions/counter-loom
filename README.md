@@ -6,7 +6,7 @@ Counterloom ist ein Forschungsprojekt von [Treno Solutions](https://github.com/t
 
 Menschen interpretieren dieselbe Nachricht unterschiedlich: Lebenslage, Erfahrungen, Sicherheitsbedürfnis und Vertrauen prägen ihre Sicht. Unser aktueller Forschungsfokus ist eine kleine soziale Finanzwelt, in der solche Unterschiede und gegenseitiger Einfluss sichtbar werden. Teilnehmer sollen fremde Perspektiven verstehen und die eigenen Reaktionen reflektieren können.
 
-Der [Bauplan](BUILD_PLAN.md) konsolidiert das Ziel als reduziertes Lernmodell: verbundene Systeme von der schematischen Weltwirtschaft bis zur persönlichen Investmententscheidung, bevorzugt mit System Dynamics, algorithmischen Routinen und gezielten LLM-Entscheidungen. Die Umsetzung beginnt mit einem kleinen überprüfbaren Zusammenhang; Darstellung und Framework sind noch offen.
+Der [Bauplan](BUILD_PLAN.md) konsolidiert das Ziel als reduziertes Lernmodell: verbundene Systeme von der schematischen Weltwirtschaft bis zur persönlichen Investmententscheidung, bevorzugt mit System Dynamics, algorithmischen Routinen und gezielten LLM-Entscheidungen. Ein erster lokaler POC mit BPTK-Py und einer schematischen React-/Tailwind-Ansicht ist umgesetzt: drei fiktive Vertragslagen, sechs Monate, veränderlicher Zins. [Startanleitung](poc/README.md) und [Prüfstand](qa/poc-verification-2026-11-02.json). Er prüft die technische Kette, noch keine realistische Modellgesellschaft oder Workshop-Wirkung.
 
 ## Was wir untersuchen
 
@@ -35,7 +35,8 @@ Wir erfinden keine eigene Simulationsplattform, bevor vorhandene Ansätze geprü
 
 | Einstieg | Inhalt |
 |---|---|
-| [Begrenzter POC](POC.md) | Ein sichtbarer algorithmischer Durchstich und klare Erfolgskriterien |
+| [Begrenzter POC](POC.md) | Lokale Lernansicht, Systemgrenze und Erfolgskriterien |
+| [POC starten](poc/README.md) | Einrichtung, Bedienung und technische Prüfung |
 | [Bauplan](BUILD_PLAN.md) | Architektur, Etappen, Prüfungen und nächste konkrete Arbeit |
 | [Forschungsprogramm](research/README.md) | Ziel, Abgrenzung und Reihenfolge der Arbeit |
 | [Anforderungen](research/requirements.md) | Benötigte Fähigkeiten mit Herkunft und prüfbaren Nachweisen |

@@ -257,7 +257,7 @@ manifest=[]
 for p in sorted(R.rglob('*')):
  rel=p.relative_to(R)
  research_dirs={'raw','processed','sources','mirofish','notes','qa','research'}
- research_files={'RESEARCH.md','BUILD_PLAN.md','POC.md','tools/prepare_research.py','tools/assemble_evidence.py','tools/probe_framework_boundaries.py','tools/run_concordia_pilot.py','tools/check_concordia_pilot_workflow.py','tools/run_tinytroupe_pilot.py','tools/probe_bptk_hybrid.py'}
+ research_files={'poc/source-manifest.json','RESEARCH.md','BUILD_PLAN.md','POC.md','tools/prepare_research.py','tools/assemble_evidence.py','tools/probe_framework_boundaries.py','tools/run_concordia_pilot.py','tools/check_concordia_pilot_workflow.py','tools/run_tinytroupe_pilot.py','tools/probe_bptk_hybrid.py'}
  if p.is_file() and (rel.parts[0] in research_dirs or str(rel) in research_files):manifest.append({'path':str(rel),'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()})
 dump('file-manifest.json',manifest)
 print('Assembled',len(sources),'sources;',len(facts),'facts;',len(entities),'entities;',len(rels),'relationships;',len(manifest),'files.')
