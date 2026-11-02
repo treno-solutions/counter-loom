@@ -1,0 +1,28 @@
+[
+  {
+    "name": "TinyTroupe",
+    "repository": "https://github.com/microsoft/TinyTroupe",
+    "commit": "7ce8be378a37ee73f9745d6781452712318afa04",
+    "package_version_from_source": "0.8.1",
+    "license": "MIT",
+    "license_url": "https://github.com/microsoft/TinyTroupe/blob/7ce8be378a37ee73f9745d6781452712318afa04/LICENSE",
+    "checked_on": "2026-11-02",
+    "review_stage": "documentation_reviewed_with_offline_technical_checks",
+    "autonomous_persona_pilot": false,
+    "llm_calls": 0,
+    "assessment": "research/frameworks/tinytroupe.md"
+  },
+  {
+    "name": "Concordia",
+    "repository": "https://github.com/google-deepmind/concordia",
+    "commit": "f1d3ae6da20b32f686cefc13458cafc695c3b6a2",
+    "package_version_from_source": "2.4.0",
+    "license": "Apache-2.0",
+    "license_url": "https://github.com/google-deepmind/concordia/blob/f1d3ae6da20b32f686cefc13458cafc695c3b6a2/LICENSE",
+    "checked_on": "2026-11-02",
+    "review_stage": "documentation_reviewed_with_offline_technical_checks",
+    "autonomous_persona_pilot": false,
+    "llm_calls": 0,
+    "assessment": "research/frameworks/concordia.md"
+  }
+]

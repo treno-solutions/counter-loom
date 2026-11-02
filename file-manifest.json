@@ -1,8 +1,8 @@
 [
   {
     "path": "RESEARCH.md",
-    "bytes": 3104,
-    "sha256": "c9350fe1ec790c03de6baade41fccac350d1d38d405c887081a1f6bf9fd44b92"
+    "bytes": 3204,
+    "sha256": "426dc50b41b2554100b4da2809a3f739ab8a06f4499ca9fc47783b0375ed087e"
   },
   {
     "path": "mirofish/historical-price-evidence.md",
@@ -86,8 +86,8 @@
   },
   {
     "path": "notes/social-financial-world/model-plan.md",
-    "bytes": 6524,
-    "sha256": "85a2d8a99e9577e789412ffe989b8ca8161b85a77c651bb073ff020a511df1c3"
+    "bytes": 6729,
+    "sha256": "0ac3f55e1e023366493730820401de91c9e2796869e004dae0fa630e06aae2f3"
   },
   {
     "path": "processed/energy-monthly-prices.csv",
@@ -243,6 +243,11 @@
     "path": "qa/conversion-report.json",
     "bytes": 3164,
     "sha256": "f90e0cd95ee1417089575882e539fab7ec4e31ba24ea138b6fcaedfcd8fed749"
+  },
+  {
+    "path": "qa/framework-review-validation.json",
+    "bytes": 366,
+    "sha256": "d634916f390c805ee3e633ec197135aa7c99fb4c6e4f95855b47b3deb78125dd"
   },
   {
     "path": "qa/in-gold-we-trust-2026-de-page-368.png",
@@ -436,8 +441,8 @@
   },
   {
     "path": "research/README.md",
-    "bytes": 3539,
-    "sha256": "d1a19da190aff2f0d07a9dc01921e1334e8751d10e3bd4261dba13720b028b11"
+    "bytes": 3641,
+    "sha256": "8ed149f79b42e704ba966f9ca0d8910895a40ae9676d7b10852f684f50b09b65"
   },
   {
     "path": "research/assessment-protocol.md",
@@ -451,8 +456,8 @@
   },
   {
     "path": "research/frameworks/README.md",
-    "bytes": 2246,
-    "sha256": "63ffcf6b8c142e27cf2f3955be4ac81c94e316c6c103cd527b275de129c2e3da"
+    "bytes": 2982,
+    "sha256": "0b61c0fcdb00220158bb41b1a2659a3485df2339e636009d64ed92085afaacfc"
   },
   {
     "path": "research/frameworks/_template.md",
@@ -460,9 +465,29 @@
     "sha256": "d70e46147a8f465a9984d4b96c7289be266aefa782e5aef95297548d39d10b35"
   },
   {
+    "path": "research/frameworks/concordia.md",
+    "bytes": 5419,
+    "sha256": "cb8f8dd7507f4709632142877022ec85f3ae2620b1efff6410dd5ac861c57fd5"
+  },
+  {
+    "path": "research/frameworks/evidence/boundary-checks-2026-11-02.json",
+    "bytes": 2821,
+    "sha256": "d606ffb5e2d1059efb7a21d3e7a7d14deba33bae5a0c9337d5c73b3f4ee28f76"
+  },
+  {
+    "path": "research/frameworks/evidence/concordia-upstream-tests-2026-11-02.json",
+    "bytes": 1804,
+    "sha256": "13d7f16dccdbc46a3a22ac3cf31639c82573d05d34436656bf31cfc589d60cc2"
+  },
+  {
     "path": "research/frameworks/mirofish.md",
     "bytes": 7693,
     "sha256": "eec38a8d82a431ccb05b0d435d8368e843bf32ec57541b1166aefeaff469682b"
+  },
+  {
+    "path": "research/frameworks/tinytroupe.md",
+    "bytes": 5595,
+    "sha256": "a7a9991c15b714c5b0a2eb253d1e7a3af3c6e272f08f84247b93acd3a068bd4a"
   },
   {
     "path": "research/requirements.md",
@@ -473,6 +498,11 @@
     "path": "sources/README.md",
     "bytes": 6448,
     "sha256": "6944c6fe49945f2119b7a95954f210e4f301f4ac08df21382f3d00dbc8dc5add"
+  },
+  {
+    "path": "sources/framework-review-2026-11-02.json",
+    "bytes": 1132,
+    "sha256": "384129b7d11b740b0e83daea9da664cd05cca0df347cd64da1155681941f92d4"
   },
   {
     "path": "sources/fred-dfii10.md",
@@ -551,12 +581,17 @@
   },
   {
     "path": "tools/assemble_evidence.py",
-    "bytes": 34459,
-    "sha256": "3151557397440d13cdc0719790420484fd2ff39e853f290d9f2d9f930917a7ff"
+    "bytes": 34497,
+    "sha256": "1e25dd146187fce364c370c486a56f5bc478cb0c856fda526f4bbd79611ccd1b"
   },
   {
     "path": "tools/prepare_research.py",
     "bytes": 8371,
     "sha256": "940f11d4e23bf3c8c2e8991e14240642f0e604305bd6248dfc588890df35df54"
+  },
+  {
+    "path": "tools/probe_framework_boundaries.py",
+    "bytes": 7888,
+    "sha256": "3e95f4866692e14cc68fb66ce1e7f07e2e58cccf1d100162541ba031d2d07e96"
   }
 ]

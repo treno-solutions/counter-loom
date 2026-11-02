@@ -24,7 +24,7 @@ Diese Bewertung ist auf den dokumentierten Anwendungsfall begrenzt. Sie ersetzt 
 
 ## Recherche vor Plattformwahl
 
-Wir erfinden keine eigene Simulationsplattform, bevor vorhandene Ansätze geprüft sind. Der nächste Schritt ist ein nachvollziehbarer Marktvergleich auf Basis gemeinsamer Anforderungen. Die bereits recherchierten Frameworks sind Kandidaten; keines davon wurde für diesen Zweck praktisch bestätigt oder ausgewählt.
+Wir erfinden keine eigene Simulationsplattform, bevor vorhandene Ansätze geprüft sind. Der nächste Schritt ist ein nachvollziehbarer Marktvergleich auf Basis gemeinsamer Anforderungen. Die recherchierten Frameworks bleiben Kandidaten. TinyTroupe und Concordia wurden inzwischen am Quellcode und an technischen Bausteinen geprüft; ein Verhaltenstest und eine endgültige Auswahl stehen aus.
 
 | Einstieg | Inhalt |
 |---|---|
@@ -44,7 +44,7 @@ Veröffentlichte Arbeiten sollen Forschungsfrage, tatsächliche Eingaben, bekann
 
 ## Bestand und Arbeitsstand
 
-Die Forschungsrichtung, der erste Methodenversuch und die Prüfanforderungen sind dokumentiert. Weitere Framework-Piloten und eine pädagogische Validierung stehen aus. Bestehende Seeds und thematische Recherchen werden erhalten; sie gelten nicht automatisch als Eingaben einer neuen Simulation.
+Die Forschungsrichtung, der erste Methodenversuch und die Prüfanforderungen sind dokumentiert. Erste technische Prüfungen zu TinyTroupe und Concordia liegen vor. Generative Verhaltenstests und eine pädagogische Validierung stehen aus. Bestehende Seeds und thematische Recherchen werden erhalten; sie gelten nicht automatisch als Eingaben einer neuen Simulation.
 
 `research/` enthält Forschungsentscheidungen und Frameworkbewertungen; `sources/` die Quellenregister; `notes/` Literatur und methodische Ausarbeitungen; `runs/` Eingaben und verfügbare Ergebnisartefakte. `processed/`, `qa/`, `tools/` und `mirofish/` erhalten den bisherigen Forschungsbestand.
 

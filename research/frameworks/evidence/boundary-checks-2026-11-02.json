@@ -1,0 +1,83 @@
+{
+  "checked_on": "2026-11-02",
+  "classification": "technical_screen_not_persona_pilot",
+  "llm_calls": 0,
+  "paid_model_cost": 0,
+  "frameworks": {
+    "tinytroupe": {
+      "commit": "7ce8be378a37ee73f9745d6781452712318afa04",
+      "method": "isolated AST-extracted source methods; decorators removed; test doubles used; framework not installed"
+    },
+    "concordia": {
+      "commit": "f1d3ae6da20b32f686cefc13458cafc695c3b6a2",
+      "method": "installed framework; real ForumState class; no model"
+    }
+  },
+  "source_sha256": {
+    "tinytroupe/environment/tiny_world.py": "492a14663bc81ae2f8107c6fe245d3d7d9fbcdb75642dcc1faf3fe154e4d64c2",
+    "tinytroupe/environment/tiny_social_network.py": "1001784505df6753d298f420df8b72a286a20412575d0ef71579465971237ff2"
+  },
+  "results": [
+    {
+      "id": "T01",
+      "finding": "Declared contacts mark non-neighbors inaccessible",
+      "observed": true,
+      "scope": "isolated source methods with doubles"
+    },
+    {
+      "id": "T02",
+      "finding": "Explicit TALK target outside declared contacts receives message",
+      "observed": true,
+      "requirement": "R03",
+      "requirement_satisfied": false
+    },
+    {
+      "id": "T03",
+      "finding": "Default untargeted TALK broadcasts to whole world, not only relations",
+      "observed": true,
+      "requirement": "R03",
+      "requirement_satisfied": false
+    },
+    {
+      "id": "T04",
+      "finding": "Allowed REACH_OUT also issues denial to source after calling base handler",
+      "observed": true,
+      "requirement": "R08",
+      "requirement_satisfied": false
+    },
+    {
+      "id": "T05",
+      "finding": "TinySocialNetwork._step rejects keyword arguments used by TinyWorld.run",
+      "observed": true,
+      "requirement": "R07",
+      "requirement_satisfied": false
+    },
+    {
+      "id": "C01",
+      "finding": "Single forum exposes public posts to its players; group boundaries need separate forums or routing",
+      "observed": true,
+      "requirement": "R03",
+      "scope": "real Concordia class, offline"
+    },
+    {
+      "id": "C02",
+      "finding": "Direct-message notification reaches its recipient, not an unrelated player",
+      "observed": true,
+      "requirement": "R03",
+      "requirement_satisfied": true
+    },
+    {
+      "id": "C03",
+      "finding": "Forum posts and direct-message threads survive JSON state round trip",
+      "observed": true,
+      "requirement": "R04",
+      "requirement_satisfied": true,
+      "scope": "forum state, not a full human-memory validation"
+    }
+  ],
+  "limits": [
+    "No autonomous persona conversations executed.",
+    "No opinion change, causal social influence or teaching outcomes tested.",
+    "TinyTroupe checks omit wrappers and full runtime; findings need full-runtime confirmation before fixes."
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "checked_on": "2026-11-02",
+  "passed": true,
+  "local_links_checked": 192,
+  "private_indicators": [],
+  "broken_links": [],
+  "source_checkouts_excluded_from_publication": true,
+  "technical_boundary_checks": 8,
+  "concordia_selected_upstream_tests": 140,
+  "llm_calls": 0,
+  "limits": "Technical evidence only; no persona influence or workshop validation."
+}

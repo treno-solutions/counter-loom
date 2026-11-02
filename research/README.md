@@ -18,7 +18,7 @@ Menschen unterscheiden sich in Lebenslage, Erfahrung und eher beständigen Bedü
 4. **Vergleichbar prüfen:** [Prüfprotokoll](assessment-protocol.md) verwenden; kleine Tests vor langen Läufen.
 5. **Für den Workshop validieren:** Modellplausibilität und tatsächlichen Lernerfolg getrennt untersuchen.
 
-Diese Dokumentation ist die Grundlage vor weiteren Framework-Piloten. Noch kein anderes Framework wurde praktisch getestet oder ausgewählt. Die bereits gesammelten Projektbeschreibungen sind eine Vorauswahl.
+Diese Dokumentation ist die Grundlage vor weiteren Framework-Piloten. TinyTroupe und Concordia wurden inzwischen am Quellcode und an technischen Bausteinen geprüft; siehe [Frameworkübersicht](frameworks/README.md). Noch kein autonomer Persona-Pilot ist ausgeführt und keine Plattform endgültig ausgewählt.
 
 ## Einstieg
 

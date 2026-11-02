@@ -11,7 +11,7 @@ Status: Entwurf, 2. November 2026. Dieser Plan ist kein ausgeführtes oder valid
 | [AgentSociety](https://github.com/tsinghua-fib-lab/AgentSociety) | Forschungsumgebung für soziale Agenten; aktuelle Version 2 und ursprünglicher Simulator sind zu unterscheiden | Umfangreichere Alternative. Nicht allein wegen der möglichen Größe auswählen. Passende Version und benötigte Module prüfen. |
 | [OASIS](https://github.com/camel-ai/oasis) / MiroFish | Simulierte soziale Plattformen mit Agentenaktionen | Vorhandene Interaktion wiederverwenden, falls Zustandsänderungen und Gedächtnis nachweisbar sind. Kein weiterer langer Lauf nur für einen Bericht. |
 
-TinyTroupe verwendet MIT, Concordia Apache-2.0. AgentSociety nennt Apache-2.0 mit Ausnahme des Ordners `packages/agentsociety/commercial`. Die Ausnahmen, Abhängigkeiten und Modellanbieter sind vor einer tatsächlichen Integration gesondert zu prüfen. Geprüft wurden Dokumentation und Lizenzdateien, keine Installation.
+TinyTroupe verwendet MIT, Concordia Apache-2.0. AgentSociety nennt Apache-2.0 mit Ausnahme des Ordners `packages/agentsociety/commercial`. Die Ausnahmen, Abhängigkeiten und Modellanbieter sind vor einer tatsächlichen Integration gesondert zu prüfen. Die ursprüngliche Einordnung beruhte auf Dokumentation und Lizenzdateien. Die spätere [vertiefte Prüfung](../../research/frameworks/README.md) enthält auch eine lokale Concordia-Installation und technische Tests. Ein Einflussnachweis mit generativen Personen steht aus.
 
 ## Modellgerüst
 

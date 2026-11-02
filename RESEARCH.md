@@ -13,7 +13,7 @@ Stand: 2. November 2026. Zentrale Orientierung: [Forschungsprogramm](research/RE
 - [Praxisevidenz zu MiroFish](notes/mirofish-practical-evidence-2026-11-01.md).
 - [Recherche zu Personas, Gedächtnis und simulierten Konten](notes/persona-research-and-paper-trading-projects-2026-11-02.md). Der dortige Handelsschwerpunkt ist für das präzisierte Lernziel nicht erforderlich.
 
-Die Literaturauswahl beruht überwiegend auf frei verfügbaren Zusammenfassungen und ausgewählten Dokumentationsabschnitten. Sie ist noch keine vollständige systematische Literaturübersicht oder Kalibrierung. Noch kein alternatives Framework wurde praktisch getestet.
+Die Literaturauswahl beruht überwiegend auf frei verfügbaren Zusammenfassungen und ausgewählten Dokumentationsabschnitten. Sie ist noch keine vollständige systematische Literaturübersicht oder Kalibrierung. TinyTroupe und Concordia sind inzwischen [vertieft technisch geprüft](research/frameworks/README.md). Es wurde noch kein autonomer Persona-Pilot ausgeführt.
 
 ## Ausgangsbewertung: MiroFish
 
