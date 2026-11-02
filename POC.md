@@ -1,3 +1,11 @@
+# POC · laufender Kreislauf und vorheriger Haushaltsversuch
+
+Stand: 2. November 2026. **Aktueller POC 02:** [laufende kleine Modellwirtschaft](poc/WORLD_MODEL.md), [Startanleitung](poc/README.md), [Prüfprotokoll](qa/world-poc-verification-2026-11-02.json). Systemübersicht, Sektor und Einzelsystem teilen dieselbe Zeit und denselben Zustand. Die kleine Wirtschaft verwendet eigene illustrative Regeln; sie ist keine validierte Makrosimulation.
+
+Der nachfolgende POC 01 dokumentiert den vorherigen begrenzten Vertragsvergleich. Er bleibt über eine gesonderte Ansicht verfügbar. Sein fehlender Wirtschaftskreislauf war die entscheidende Grenze; POC 02 erweitert den Modellkern um tatsächliche Gegenparteien und wiederkehrende Zahlungs-/Gütervorgänge.
+
+---
+
 # POC 01 · Ein Ereignis, unterschiedliche Haushalte, sichtbare Folgen
 
 Version 0.3 · 2. November 2026 · Status: lokaler POC implementiert und technisch geprüft; Verständlichkeit im Workshop noch nicht geprüft. Der [Bauplan](BUILD_PLAN.md) bleibt der Erweiterungsrahmen.

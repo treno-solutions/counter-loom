@@ -1,10 +1,10 @@
-# Counterloom POC · lokale 2D-Lernansicht
+# Counterloom POC · laufender Wirtschaftskreislauf
 
-Eine React-/Tailwind-Seite zeigt einen kleinen, algorithmisch berechneten Verlauf aus BPTK-Py. Der POC ist lokal ausführbar; es gibt keine bereitgestellte öffentliche Instanz. [Umfang und Grenzen](../POC.md).
+Eine lokale React-/Tailwind-Ansicht zeigt eine kleine, monatlich laufende Modellwirtschaft. Jeder Schritt wird über eine lokale Python-Schnittstelle mit dem bereits geprüften BPTK-Agentenscheduler neu ausgeführt. [Modellkonzept, Regeln und Systemgrenze](WORLD_MODEL.md). Keine öffentliche Instanz, keine kalibrierte Volkswirtschaft.
 
 ## Einrichten
 
-Voraussetzungen: Node.js >=20.19 beziehungsweise >=22.12, npm und Python >=3.13. Die Frontend-Abhängigkeiten sind durch `package-lock.json` gebunden; BPTK-Py ist auf 3.5.0 festgelegt. Mit installiertem `uv` vom Repository-Stamm aus:
+Voraussetzungen: Node.js >=20.19 beziehungsweise >=22.12, npm und Python >=3.13. Frontend-Abhängigkeiten sind durch `package-lock.json` gebunden; BPTK-Py ist auf 3.5.0 festgelegt. Mit installiertem `uv` vom Repository-Stamm aus:
 
 ```sh
 uv venv --python 3.13 poc/.venv
@@ -14,17 +14,21 @@ npm ci
 npm run dev
 ```
 
-Die Ansicht öffnet sich unter **http://127.0.0.1:5173/**. Die lokale Schnittstelle läuft auf Port 8765. Beide Prozesse binden ausschließlich an die lokale Loopback-Adresse. Beenden mit Strg+C. Für andere Umgebungen kann `COUNTERLOOM_PYTHON` auf einen Python-Interpreter mit installiertem BPTK-Py zeigen. Die Launcher erkennen außerdem die bereits vorhandene private BPTK-Prüfumgebung; sie ist für einen frischen Clone nicht erforderlich.
+Die Ansicht ist unter **http://127.0.0.1:5173/** erreichbar. Der Launcher wartet auf die lokale Python-Schnittstelle (Port 8765), bevor er die Webansicht startet. Beide binden ausschließlich an die Loopback-Adresse. Beenden mit Strg+C. `COUNTERLOOM_PYTHON` kann einen anderen Interpreter mit installiertem BPTK-Py auswählen. Eine vorhandene private BPTK-Prüfumgebung wird ebenfalls erkannt; sie ist für einen frischen Clone nicht erforderlich.
 
-## Verwenden
+## Beobachten und bedienen
 
-1. Drei bebilderte Haushalte und ihre Ausgangslage kennenlernen. Zu Beginn gilt überall der Ausgangszins von 2 %; die Änderung ist noch nicht ausgelöst.
-2. Eine Vermutung bilden und **Zinsen auf 6 % erhöhen** wählen. Alle drei Fälle werden neu berechnet und zeigen direkt Monat 3, in dem der neue Vertragszins erstmals wirkt.
-3. **Zeig mir, warum** bei einem Haushalt wählen. Die Geldansicht erklärt Einkommen, Alltagskosten, Zinsen, Überschuss beziehungsweise Fehlbetrag und den separaten Geldtopf für eine spätere Anlage.
-4. Die sechs Monate einzeln ansehen oder abspielen. **Zur Ausgangslage** stellt den unveränderten Vergleich wieder dar.
-5. Optional **Anderen Zins ausprobieren** öffnen. Freie Eingaben werden erst mit dem grünen Knopf angewandt. **Rechnung und Modellgrenzen** enthält die Periodentabelle und vollständigen Annahmen.
+1. **Wirtschaft starten**. Produktion, Löhne, Steuern, Konsum, mögliche Investitionen und Monatsabschlüsse laufen ohne weiteren Eingriff weiter. Ein Monat hat fünf Phasen. **Pausieren** stoppt weitere Schritte; ein bereits angefragter Schritt kann noch abschließen. **Eine Phase weiter** führt im pausierten Zustand einen tatsächlichen weiteren Rechenschritt aus.
+2. Die Systemkarte zeigt Haushalte, Unternehmen, Staat, Finanzsektor und einen vereinfachten Energie-Außenanschluss. Kontostände sind Bestände. Verbindungssummen zeigen tatsächlich verbuchte Zahlungen des laufenden Monats. Bewegte Marker kennzeichnen die aktuelle Buchungsphase; sie zählen keine zusätzlichen Zahlungen.
+3. Kleine Kurven zeigen abgeschlossene Monatsbestände und den aktuellen Stand. Jede Box hat eine eigene Skala; die Kurven sind kein Vergleich absoluter Größen zwischen Sektoren. Veränderungen innerhalb eines Monats bewegen den letzten Punkt. Der Konsumverlauf zählt nur abgeschlossene Monate.
+4. Ein System anklicken: Erklärung, Kontensumme und Buchungen erscheinen im Inspektor. Auf schmaleren Ansichten wird dorthin gesprungen; **Zur Systemkarte** führt zurück. Die Karte ist auf kleinen Bildschirmen seitlich verschiebbar.
+5. **In das System hineingehen** zeigt seine Mitglieder. Ein Haushalt oder Betrieb öffnet Konten, Eingänge, Ausgänge und Regeln. Der Navigationspfad führt zurück; Zeit und Modellzustand bleiben über alle Ebenen identisch.
+6. Optional **Ereignis auslösen**: Energieimporte verteuern oder Konsumanteil reduzieren. Ein vorgemerkter Eingriff wirkt erst beim nächsten Monatsbeginn. Beschäftigungsänderungen folgen den dokumentierten Schwellen, keinem vorgegebenen Ereignisdrehbuch.
+7. **Lauf mit Buchungen exportieren** erzeugt JSON mit Anfangskonten, vollständigem Zahlungsjournal, aktuellen Zuständen, Annahmen, wirksamen Eingriffen und Monatsgeschichte. **Neu starten** erzeugt den identischen Anfangszustand als neuen Lauf.
 
-Eine geänderte Eingabe wird als noch nicht berechnet gekennzeichnet. Bei einem Fehler verschwindet die Ergebnisansicht; es gibt keine Ersatzdaten. Für Berechnung, Auswahl und Wiedergabe werden keine LLMs verwendet.
+Läufe leben im Arbeitsspeicher des lokalen Servers. Die Berechnung schreitet durch Anfragen des geöffneten Browsers voran; es gibt keinen unabhängigen Hintergrunddienst nach dem Schließen. Maximal 240 Monate pro Lauf, bis zu 64 gleichzeitig gespeicherte Läufe. Serverneustart verliert die laufenden Welten; ein JSON-Export ist kein implementierter Wiederherstellungspunkt. Bei Fehlern hält die Ansicht an und zeigt den letzten bestätigten Zustand ausdrücklich weiter.
+
+Der frühere Haushaltsversuch bleibt unter **http://127.0.0.1:5173/?view=household** verfügbar. Er ist ein separater, fiktiver Vertragsvergleich, keine Detailberechnung der neuen Welt.
 
 ## Prüfen und gebaute Ansicht starten
 
@@ -34,21 +38,18 @@ npm run build
 npm start
 ```
 
-Die gebaute Ansicht und API sind dann gemeinsam unter **http://127.0.0.1:8765/** erreichbar. Kein Vite-Prozess nötig. Die lokale API ist ein kleiner POC-Server, keine Produktionsbereitstellung.
+Die gebaute Ansicht und API sind gemeinsam unter **http://127.0.0.1:8765/** erreichbar. Dies ist ein lokaler POC-Server, keine Produktionsbereitstellung.
 
-`npm test` führt die unabhängige Decimal-Gegenrechnung, Reproduktions-/Ereignisprüfungen und HTTP-Eingabe-/Fehlerprüfungen aus. `npm run build` prüft TypeScript und erstellt die Webansicht. Visuelle und interaktive Browserprüfungen sind im [ersten Prüfprotokoll](../qa/poc-verification-2026-11-02.json) und im [Prüfprotokoll der geführten Ansicht](../qa/poc-guided-view-2026-11-02.json) dokumentiert; sie werden nicht automatisch von `npm test` ausgeführt.
+Tests prüfen unter anderem unabhängige Ledger-Rekonstruktion, identische Gegenbuchungen, Geld-/Lagerbestände, Systemregeln ohne laufende Welt, Investitionslieferung und spätere Kapazität, steuerfreie Transfers, reproduzierbare Verläufe, Wirkung an Monatsgrenzen, echte HTTP-Schritte, Wiederholschutz und die 240-Monats-Grenze. Die früheren sechs Tests des Haushaltsversuchs bleiben enthalten. Browserprüfungen sind separat im [Prüfprotokoll](../qa/world-poc-verification-2026-11-02.json) dokumentiert.
 
-## Aufbau
+## Aufbau und Grenzen
 
-- `src/`: React-Ansicht, Tailwind-Einstieg, eigene Styles und Zod-Prüfung der API-Antwort.
-- `engine.py`: Adapter um den [bereits geprüften BPTK-Durchstich](../tools/probe_bptk_hybrid.py). BPTK berechnet die wirtschaftlichen Größen; React stellt sie dar.
-- `server.py`: lokale, begrenzte JSON-Schnittstelle und Auslieferung der gebauten Ansicht.
-- `test_engine.py`: unabhängige Rechen- und HTTP-Prüfungen.
+- `systems.py`: explizite Systemeingänge und geplante Ausgänge; Regeln ohne Oberfläche oder globale Welt ausführbar.
+- `world.py`: Konten, Lager, Gegenparteien, Journal, globale Zeit und native BPTK-Systemagenten. Centgenaue Buchungen sind die maßgebliche Quelle für die Grafik.
+- `server.py`: begrenzte lokale JSON-Schnittstelle; Revisionen verhindern doppelte Ausführung desselben Schritts.
+- `src/App.tsx`, `src/world-schema.ts`: gemeinsame laufende Welt mit Systemnavigation und Prüfung der Antworten.
+- `test_world.py`: Rechen-, System- und Schnittstellentests. `engine.py`, `test_engine.py` und `src/HouseholdApp.tsx` erhalten POC 01.
 
-Die Oberfläche orientiert sich an der vorhandenen internen Gestaltungsreferenz. Private Produktquellen, Designpakete und Fontdateien wurden nicht kopiert. Die verwendeten IBM-Plex-Sans-Dateien kommen aus dem öffentlichen Paket `@fontsource/ibm-plex-sans`; dessen Font-Lizenz liegt im Paket. Lucide-Symbole und weitere Abhängigkeiten behalten ihre jeweiligen Lizenzen. Die Gestaltung und Anbindung dieses POC sind neu erstellt.
+Alle Beträge, Kaufbudgets und Verhaltensschwellen sind eigene illustrative Szenarioannahmen. Positive operative Zahlungsüberschüsse sind keine vollständige handelsrechtliche Gewinnrechnung. Vereinfachte Abrechnungskonten sind keine vollständigen Zentralbank-/Bankeinlagenbilanzen. Es gibt keine neuen Kredite, Geldschöpfung, Tilgung, Inflation, Abschreibung, Wertpapiermärkte oder LLM-Entscheidungen. Staat und Ausland sind bewusst begrenzt; ein dauerhaftes Gleichgewicht wird nicht zugesichert. Kontenkonsistenz ist kein Nachweis empirischer oder pädagogischer Gültigkeit.
 
-## Fachliche Grenzen
-
-Die Zinsänderung ist direkt auf die variablen Verträge angewandt, kein Modell einer EZB-Leitzinsübertragung. Einlagensumme/Restschuld bleiben konstant, es gibt keine Tilgung. Bankbilanzen, Inflation und Marktpreise sind nicht enthalten. Der Anlagebetrag wird nur in einen separaten Geldtopf umgebucht; es findet kein Wertpapierkauf statt. `review_due` ist ein technischer Ereignisstatus und keine Persona-Abwägung. Die erste Entscheidung über den Anlagebetrag folgt einer festen Regel.
-
-Eine spätere LLM-Entscheidung und der Nachweis eines Workshop-Lerneffekts sind gesonderte nächste Schritte. Dieser POC implementiert keinen vollständigen volkswirtschaftlichen Kreislauf.
+Die Oberfläche folgt einer internen Gestaltungsreferenz. Private Produktquellen, Designpakete oder Fontdateien wurden nicht kopiert. Die verwendeten IBM-Plex-Sans-Dateien stammen aus dem öffentlichen Paket `@fontsource/ibm-plex-sans`; dessen Font-Lizenz liegt im Paket. Lucide-Symbole und weitere Abhängigkeiten behalten ihre jeweiligen Lizenzen.

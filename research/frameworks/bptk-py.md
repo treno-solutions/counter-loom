@@ -19,3 +19,8 @@ Die unterschiedliche Zinsbetroffenheit ist absichtlich konstruiert. Sie ist kein
 System Dynamics und ereignisabhängige Zustände lassen sich mit der Bibliothek technisch verbinden. Sie liefert Mechanismen, kein fertiges validiertes ökonomisches oder psychologisches Modell. Besonders zu prüfen bleiben Schema der wirtschaftlichen Vorgänge, Quellen/Einheiten, Schnittstelle zur Oberfläche, vollständige Zustandswiederherstellung sowie spätere generative Anbindung.
 
 Der [begrenzte lokale POC](../../POC.md) nutzt diese Prüfung als Ausgangsbasis. Der technische Screen legt das spätere erste Lernmodul oder die gesamte Produktdarstellung nicht fest. Die React-/Tailwind-Ansicht mit lokaler HTTP-Neuberechnung ist implementiert und technisch geprüft: [Einrichtung](../../poc/README.md), [Prüfprotokoll](../../qa/poc-verification-2026-11-02.json). Eine öffentliche Instanz und Workshop-Validierung liegen nicht vor.
+
+
+## Erweiterung zum laufenden Kreislauf
+
+Der zweite lokale POC verwendet native BPTK-Systemagenten und den Scheduler für fünf wiederkehrende Monatsphasen. Das eigene centgenaue Journal verbindet Haushalte, Betriebe, Staat, Finanzsektor und einen sichtbaren Außenanschluss. Systemregeln sind separat ohne UI ausführbar. [Regeln und Grenzen](../../poc/WORLD_MODEL.md), [Prüfprotokoll](../../qa/world-poc-verification-2026-11-02.json). Dies ist ein eigener illustrativer Modellkern auf dem Framework, keine Übernahme oder Validierung eines fertigen Makromodells.

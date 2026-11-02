@@ -2,7 +2,7 @@
 
 Version 0.1 · 2. November 2026 · Status: dokumentierter Arbeitsplan. System Dynamics ist der bevorzugte Modellierungsansatz; Framework, Bezugsraum und konkrete erste Lernmodule sind noch nicht ausgewählt. Keine neue Simulation durch diesen Plan gestartet.
 
-Aktueller begrenzter Umfang: [POC 01](POC.md). Der POC begrenzt die Umsetzung auf einen sichtbaren algorithmischen Durchstich; der folgende Bauplan bleibt der Erweiterungsrahmen.
+Aktueller begrenzter Umfang: [POC 02 · laufender Kreislauf](poc/WORLD_MODEL.md), mit dem vorherigen [Haushaltsversuch](POC.md) als dokumentiertem Ausgangspunkt. Der POC begrenzt die Umsetzung auf einen sichtbaren algorithmischen Durchstich; der folgende Bauplan bleibt der Erweiterungsrahmen.
 
 ## 1 · Ziel und vollständiger Zusammenhang
 

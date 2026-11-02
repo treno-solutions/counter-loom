@@ -10,6 +10,7 @@ RUNTIME = HERE / '.runtime'
 RUNTIME.mkdir(exist_ok=True)
 os.chdir(RUNTIME)
 from engine import simulate_request
+from world import world_request
 
 
 class Handler(SimpleHTTPRequestHandler):
@@ -42,7 +43,9 @@ class Handler(SimpleHTTPRequestHandler):
         return self.send_json(404, {'error': 'Nicht gefunden.'})
 
     def do_POST(self):
-        if urlsplit(self.path).path != '/api/simulate':
+        route = urlsplit(self.path).path
+        world_routes = {'/api/world': 'create', '/api/world/step': 'step', '/api/world/event': 'event', '/api/world/export': 'export'}
+        if route != '/api/simulate' and route not in world_routes:
             return self.send_json(404, {'error': 'Endpunkt nicht gefunden.'})
         origin = self.headers.get('Origin')
         if origin and origin not in {'http://127.0.0.1:5173', 'http://localhost:5173', 'http://127.0.0.1:8765', 'http://localhost:8765'}:
@@ -54,8 +57,10 @@ class Handler(SimpleHTTPRequestHandler):
             if not 0 < size <= 4096:
                 return self.send_json(413, {'error': 'Ungültige Größe der Anfrage.'})
             payload = json.loads(self.rfile.read(size))
-            result = simulate_request(payload)
-        except (ValueError, UnicodeDecodeError):
+            result = world_request(world_routes[route], payload) if route in world_routes else simulate_request(payload)
+        except (ValueError, UnicodeDecodeError) as error:
+            if route in world_routes:
+                return self.send_json(400, {'error': str(error)})
             return self.send_json(400, {'error': 'Ungültige Eingabe. Erlaubt ist ein jährlicher Zinssatz von 0 bis 20 %.'})
         except Exception:
             return self.send_json(500, {'error': 'Die Berechnung ist fehlgeschlagen. Es wurde kein Ersatzresultat erzeugt.'})

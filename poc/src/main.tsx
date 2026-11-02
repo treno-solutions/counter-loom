@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import '@fontsource/ibm-plex-sans/latin-400.css';
 import '@fontsource/ibm-plex-sans/latin-500.css';
 import '@fontsource/ibm-plex-sans/latin-600.css';
-import App from './App';
+import WorldApp from './App';
 import './styles.css';
-
-ReactDOM.createRoot(document.getElementById('root')!).render(<React.StrictMode><App /></React.StrictMode>);
+const HouseholdApp=lazy(async()=>{await import('./household.css');return import('./HouseholdApp');});
+ReactDOM.createRoot(document.getElementById('root')!).render(<React.StrictMode><Suspense fallback={<p>Ansicht wird geladen …</p>}>{new URLSearchParams(location.search).get('view')==='household'?<HouseholdApp/>:<WorldApp/>}</Suspense></React.StrictMode>);

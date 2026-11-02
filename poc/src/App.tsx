@@ -1,140 +1,99 @@
 import { useEffect, useRef, useState } from 'react';
-import { ArrowDown, Check, ChevronDown, ChevronRight, CircleHelp, Coins, Home, Landmark, Layers3, LoaderCircle, Pause, Play, RotateCcw, ShieldCheck, Wallet, X } from 'lucide-react';
-import { ResultSchema, type CaseId, type Result, type Row } from './schema';
+import { Activity, ArrowDownLeft, ArrowRight, ArrowUpRight, Building2, Check, ChevronRight, CircleHelp, Download, Factory, Globe2, Home, Landmark, Layers3, LoaderCircle, Pause, Play, RotateCcw, ShieldCheck, Users, Wallet, X, Zap } from 'lucide-react';
+import { WorldSchema, type World, type WorldNode, type SectorId } from './world-schema';
 
-const euros = (value: number) => new Intl.NumberFormat('de-DE', {style: 'currency', currency: 'EUR', maximumFractionDigits: 0}).format(value);
-const percent = (value: number) => new Intl.NumberFormat('de-DE', {style: 'percent', maximumFractionDigits: 2}).format(value);
-const signed = (value: number) => `${value > 0 ? '+' : ''}${euros(value)}`;
-const ids: CaseId[] = ['variable_loan', 'fixed_loan', 'deposit'];
-const households = {
-  variable_loan: {name: 'Ein Kredit, der sich verändert', short: 'Variabler Kredit', situation: 'Dieser Haushalt schuldet der Bank 60.000 €. Steigt der Vertragszins, steigt auch seine monatliche Zinszahlung.', icon: Landmark, theme: 'peach'},
-  fixed_loan: {name: 'Ein Kredit mit festem Zins', short: 'Festzinskredit', situation: 'Dieser Haushalt schuldet der Bank ebenfalls 60.000 €. Sein Vertrag garantiert für unseren Zeitraum einen Zins von 2 %.', icon: ShieldCheck, theme: 'lavender'},
-  deposit: {name: 'Geld auf einem verzinsten Konto', short: 'Verzinstes Guthaben', situation: 'Dieser Haushalt hat stattdessen 60.000 € auf einem separaten Konto. Ändert sich dessen Zins, ändern sich seine Zinseinnahmen.', icon: Coins, theme: 'mint'},
-};
-const lookup = (rows: Row[], id: CaseId, month: number) => rows.find(row => row.case === id && row.period === month)!;
+const money=(c:number)=>new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR',maximumFractionDigits:c%100 ? 2:0}).format(c/100);
+const compact=(c:number)=>new Intl.NumberFormat('de-DE',{notation:'compact',maximumFractionDigits:1}).format(c/100)+' €';
+const sectors:SectorId[]=['households','firms','government','bank','external'];
+const info={households:{name:'Haushalte',icon:Users,subtitle:'Arbeiten · kaufen · sparen',color:'#6687a5'},firms:{name:'Unternehmen',icon:Factory,subtitle:'Produzieren · beschäftigen · investieren',color:'#b58c54'},government:{name:'Staat',icon:Landmark,subtitle:'Steuern · Löhne · öffentliche Aufträge',color:'#8b7ca6'},bank:{name:'Finanzsektor',icon:Building2,subtitle:'Bestehende Kredite · Zinsausschüttung',color:'#6e9672'},external:{name:'Außenwelt',icon:Globe2,subtitle:'Vereinfachter Energieimport',color:'#8d9498'}};
+const phases=['Produktion & Löhne','Steuern & Transfers','Konsum & Aufträge','Investitionen','Monatsabschluss'];
+const aggregate=(w:World,s:SectorId)=>w.nodes.filter(n=>n.sector===s);
+const stock=(w:World,s:SectorId)=>aggregate(w,s).reduce((sum,n)=>sum+n.cash_cents,0);
+const employment=(w:World)=>w.nodes.filter(n=>n.sector==='households'&&n.employer).length;
+const nodeName=(w:World,id:string)=>w.nodes.find(n=>n.id===id)?.name??id;
+const nodeSector=(w:World,id:string)=>w.nodes.find(n=>n.id===id)!.sector;
+const paths=[
+ {id:'wage',from:'firms',to:'households',kind:'wage',name:'Löhne',d:'M 730 85 C 620 10 380 10 270 85',x:500,y:27},
+ {id:'consumption',from:'households',to:'firms',kind:'consumption',name:'Konsum',d:'M 270 180 C 390 245 610 245 730 180',x:500,y:226},
+ {id:'tax',from:'households',to:'government',kind:'income_tax',name:'Steuern',d:'M 86 195 L 86 375',x:53,y:292},
+ {id:'statepay',from:'government',to:'households',kind:'wage',name:'Öffentliche Löhne',d:'M 224 375 L 224 195',x:274,y:292},
+ {id:'transfer',from:'government',to:'households',kind:'transfer',name:'Transfers',d:'M 180 375 L 180 195',x:155,y:332},
+ {id:'procure',from:'government',to:'firms',kind:'procurement',name:'Aufträge',d:'M 270 407 C 440 377 590 267 730 192',x:496,y:348},
+ {id:'profit',from:'firms',to:'government',kind:'profit_tax',name:'Überschusssteuer',d:'M 730 160 C 530 257 430 325 270 386',x:473,y:285},
+ {id:'interest',from:'firms',to:'bank',kind:'interest',name:'Kreditzinsen',d:'M 910 195 L 910 375',x:948,y:292},
+ {id:'dividend',from:'bank',to:'households',kind:'dividend',name:'Ausschüttung',d:'M 730 425 C 625 385 375 260 270 185',x:636,y:334},
+ {id:'energy',from:'firms',to:'external',kind:'energy',name:'Energieimporte',d:'M 820 195 C 770 280 700 535 616 554',x:741,y:529},
+];
+const positions:Record<SectorId,{x:number,y:number}>={households:{x:4,y:11},firms:{x:73,y:11},government:{x:4,y:59},bank:{x:73,y:59},external:{x:38.5,y:83}};
 
-// Decorative, fictional households. No demographic or psychological properties are inferred.
-function HouseholdPicture({theme}: {theme: string}) {
-  return <svg className={`household-picture ${theme}`} viewBox="0 0 300 148" aria-hidden="true">
-    <ellipse cx="150" cy="137" rx="123" ry="8" fill="currentColor" opacity=".08"/>
-    <path d="M156 55 210 15 264 55V130H156Z" fill="white" opacity=".8"/>
-    <path d="m148 56 62-46 62 46" fill="none" stroke="currentColor" strokeWidth="5" strokeLinecap="round" opacity=".35"/>
-    <rect x="199" y="88" width="24" height="42" rx="3" fill="currentColor" opacity=".13"/>
-    <rect x="177" y="58" width="19" height="20" rx="3" fill="currentColor" opacity=".13"/>
-    <rect x="228" y="58" width="19" height="20" rx="3" fill="currentColor" opacity=".13"/>
-    <path d="M55 132V104Q55 78 80 78Q105 78 105 104V132" fill="currentColor" opacity=".85"/>
-    <circle cx="80" cy="58" r="20" fill="#e5b592"/>
-    <path d="M60 58Q55 31 80 34Q104 31 101 58L93 48 67 48Z" fill="#393c40"/>
-    <path d="M99 132V110Q99 85 122 85Q145 85 145 110V132" fill="currentColor" opacity=".45"/>
-    <circle cx="122" cy="65" r="18" fill="#bd8a69"/>
-    <path d="M104 66V54Q104 41 122 42Q142 40 141 65L132 55 111 54Z" fill="#393c40"/>
-    <path d="M43 132h114" stroke="currentColor" strokeWidth="3" strokeLinecap="round" opacity=".3"/>
-    <circle cx="264" cy="117" r="12" fill="currentColor" opacity=".2"/><path d="M264 117v17" stroke="currentColor" strokeWidth="3" opacity=".3"/>
-  </svg>;
+function BalanceTrend({world,sector}:{world:World;sector:SectorId}){
+ const values=[aggregate(world,sector).reduce((sum,n)=>sum+(world.initial_balances[n.id]??0),0),...world.history.map(h=>h.cash_by_sector[sector])];
+ if(world.history.at(-1)?.month!==world.month)values.push(stock(world,sector));
+ const series=values.slice(-18),low=Math.min(...series),span=Math.max(1,Math.max(...series)-low);
+ const points=series.map((v,i)=>`${4+i/Math.max(1,series.length-1)*88},${23-(v-low)/span*18}`).join(' ');
+ return <svg className="node-trend" viewBox="0 0 96 28" role="img" aria-label={`Kontenverlauf ${info[sector].name}`}><title>Kontenbestand: Monatsabschlüsse und aktueller Stand. Eigene Skala je System. {series.slice(-4).map(money).join(' → ')}</title><line x1="3" x2="93" y1="25" y2="25" stroke="#e2e9da"/><polyline points={points} fill="none" stroke={info[sector].color} strokeWidth="2" strokeLinejoin="round"/></svg>;
 }
 
-function outcome(row: Row, baseline: Row, started: boolean) {
-  if (!started) return 'So sieht der Monat vor der Änderung aus.';
-  const delta = row.monthly_headroom - baseline.monthly_headroom;
-  if (row.period < 3) return 'Noch gilt der alte Zins. Es hat sich nichts verändert.';
-  if (row.case === 'fixed_loan') return 'Der Vertragszins bleibt fest bei 2 %. Die Zinszahlung ändert sich nicht.';
-  if (Math.abs(delta) < .005) return 'Der Zins bleibt gleich. Auch der Spielraum bleibt gleich.';
-  return row.case === 'deposit'
-    ? `Die Bank zahlt ${euros(Math.abs(delta))} ${delta > 0 ? 'mehr' : 'weniger'} Zinsen im Monat.`
-    : `An die Bank gehen ${euros(Math.abs(delta))} ${delta < 0 ? 'mehr' : 'weniger'} Zinsen im Monat.`;
+function SystemMap({world,running,onSelect,selected}:{world:World;running:boolean;onSelect:(s:SectorId)=>void;selected:SectorId}){
+ const svg=useRef<SVGSVGElement>(null);
+ useEffect(()=>{if(running)svg.current?.unpauseAnimations();else svg.current?.pauseAnimations();},[running,world.revision]);
+ return <div className={`system-map ${running?'running':'paused'}`}>
+   <div className="map-grid"/>
+   <svg ref={svg} className="flow-map" viewBox="0 0 1000 650" aria-label="Zahlungswege zwischen den Systemen. Beschriftungen zeigen die bisher verbuchten Beträge dieses Monats.">
+    <defs><marker id="flow-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="context-stroke"/></marker></defs>
+    {paths.map(p=>{const tx=world.transactions.filter(t=>nodeSector(world,t.source)===p.from&&nodeSector(world,t.target)===p.to&&t.kind===p.kind),amount=tx.reduce((sum,t)=>sum+t.amount_cents,0),active=tx.some(t=>t.phase===world.phase);return <g key={p.id} className={`${active?'active-flow':''} ${amount?'has-booking':''}`}><path id={`path-${p.id}`} d={p.d} className="flow-track" markerEnd="url(#flow-arrow)"/><g transform={`translate(${p.x},${p.y})`} className="flow-label"><rect x="-61" y="-14" width="122" height="36" rx="6"/><text textAnchor="middle" y="0">{p.name}</text><text textAnchor="middle" className="flow-amount" y="15">{amount?compact(amount):'—'}</text></g>{active&&<circle r="4" fill={info[p.from as SectorId].color}><animateMotion dur="1.5s" repeatCount="indefinite" path={p.d}/></circle>}</g>})}
+   </svg>
+   {sectors.map(s=>{const data=info[s],Icon=data.icon,nodes=aggregate(world,s),balance=stock(world,s),position=positions[s];return <button key={s} className={`system-node node-${s} ${selected===s?'selected':''}`} style={{left:`${position.x}%`,top:`${position.y}%`}} onClick={()=>onSelect(s)} aria-label={`${data.name} untersuchen`} aria-pressed={selected===s}>
+    <span className="system-node-title"><span className="sector-icon" style={{color:data.color}}><Icon size={20}/></span><strong>{data.name}</strong><ChevronRight size={16}/></span><small>{data.subtitle}</small><span className="node-stock">{money(balance)}<span>Kontenbestand</span></span><span className="node-foot">{s==='households'?`${employment(world)} von 6 beschäftigt`:s==='firms'?`${nodes.reduce((a,n)=>a+(n.inventory??0),0)} Einheiten auf Lager`:s==='government'?'Öffentlicher Dienst & Beschaffung':s==='bank'?'24.000 € bestehende Kreditforderungen':'Zahlungen bleiben an der Außengrenze'}</span><BalanceTrend world={world} sector={s}/>
+   </button>})}
+   <div className="map-key"><span/><span>Markierung: Buchungen der aktuellen Phase · Beträge: laufender Monat</span></div>
+ </div>;
 }
 
-function MoneyJourney({row, baseline}: {row: Row; baseline: Row}) {
-  const [explain, setExplain] = useState(false);
-  const delta = row.monthly_headroom - baseline.monthly_headroom;
-  const deposit = row.case === 'deposit';
-  return <div className="money-journey">
-    <div className="money-source"><span className="money-icon"><Wallet size={23}/></span><div><span>Kommt jeden Monat rein</span><strong>{euros(row.income)}</strong><small>Einkommen</small></div></div>
-    <div className="journey-arrow" aria-hidden="true"><span/><ArrowDown size={19}/></div>
-    <div className="payment-row">
-      <div className="payment-block"><Home size={20}/><span>Für den Alltag</span><strong>− {euros(row.essential_expenses)}</strong><small>Wohnen, Essen und weitere notwendige Ausgaben</small></div>
-      <div className={`payment-block bank-payment ${delta < 0 ? 'costlier' : delta > 0 ? 'better' : ''}`}><Landmark size={20}/><span>{deposit ? 'Von der Bank' : 'An die Bank'}</span><strong>{deposit ? '+' : '−'} {euros(deposit ? row.interest_income : row.interest_cost)}</strong><small>{deposit ? 'Zinsen für das Guthaben' : 'Zinsen für den Kredit'} · {percent(row.contract_rate)} im Jahr</small>{row.period >= 3 && <em>{row.case === 'fixed_loan' ? 'Bleibt fest bei 2 %' : Math.abs(delta) < .005 ? 'Unverändert' : `${signed(delta)} für den Haushalt`}</em>}</div>
-    </div>
-    <div className="journey-arrow" aria-hidden="true"><span/><ArrowDown size={19}/></div>
-    <div className={`money-remainder ${row.monthly_headroom < 0 ? 'shortfall' : ''}`}><div><span>{row.monthly_headroom < 0 ? 'Diesen Monat fehlt' : 'Nach diesen Kosten bleibt'}</span><strong>{euros(Math.abs(row.monthly_headroom))}</strong></div><p>{row.monthly_headroom < 0 ? 'Die laufenden Einnahmen reichen nicht für alle notwendigen Zahlungen.' : 'Dieser Betrag kann auf dem verfügbaren Konto bleiben oder für spätere Pläne zurückgelegt werden.'}</p></div>
-    <div className="saving-explainer"><span className="saving-icon"><Coins size={22}/></span><div><strong>{euros(row.planned_allocation)} für eine spätere Anlage zurückgelegt</strong><p>{row.planned_allocation >= 100 ? 'Der Wunschbetrag von 100 € passt in den monatlichen Überschuss.' : row.planned_allocation > 0 ? 'Für die gewünschten 100 € reicht der Überschuss nicht ganz.' : 'Aus diesem Monat bleibt kein Überschuss für den gewünschten Anlagebetrag.'}</p><button className="inline-button" onClick={() => setExplain(!explain)} aria-expanded={explain}>Warum gerade dieser Betrag? <ChevronDown size={14}/></button>{explain && <p className="rule-note">Unsere einfache Regel: höchstens 100 € pro Monat aus dem positiven Überschuss in einen separaten Geldtopf verschieben. Der restliche Überschuss bleibt auf dem verfügbaren Konto. Das ist eine Modellregel, keine persönliche Entscheidung. Es werden keine Wertpapiere gekauft.</p>}</div></div>
-    {row.monthly_headroom < 0 && <div className="gap-note" role="status">{row.cash_open > 0 ? `Für notwendige Zahlungen wird auch auf das verfügbare Geld zu Monatsbeginn (${euros(row.cash_open)}) zurückgegriffen. ` : 'Das verfügbare Konto ist bereits aufgebraucht. '}{row.payment_gap > 0 ? `${euros(row.payment_gap)} können diesen Monat nicht bezahlt werden und bleiben als Verpflichtung offen.` : 'Die Zahlungen können diesen Monat noch vollständig gedeckt werden.'}</div>}
-    <div className="account-summary"><div><span>Verfügbares Konto am Monatsende</span><strong>{euros(row.cash_close)}</strong><small>Ohne den separaten Anlage-Geldtopf</small></div><div><span>Insgesamt für spätere Anlage zurückgelegt</span><strong>{euros(row.earmarked_close)}</strong><small>Seit Beginn der sechs Monate</small></div>{row.arrears_close > 0 && <div className="arrears"><span>Insgesamt noch offen</span><strong>{euros(row.arrears_close)}</strong><small>Nicht gedeckte Verpflichtungen</small></div>}</div>
-  </div>;
+function Ledger({world,ids}:{world:World;ids:string[]}){
+ const entries=world.transactions.filter(t=>ids.includes(t.source)||ids.includes(t.target));
+ return <div className="ledger"><div className="ledger-heading"><h3>Buchungen · Monat {world.month}</h3><span>{entries.length} Vorgänge</span></div>{entries.length===0?<p className="quiet">In diesem Monat noch keine Buchungen.</p>:entries.slice().reverse().slice(0,18).map(t=><div className="ledger-row" key={t.id}><span className={`ledger-direction ${ids.includes(t.source)?'out':'in'}`}>{ids.includes(t.source)?<ArrowUpRight size={15}/>:<ArrowDownLeft size={15}/>}</span><div><strong>{t.label}</strong><small>{nodeName(world,t.source)} → {nodeName(world,t.target)}</small></div><span>{ids.includes(t.source)&&!ids.includes(t.target)?'−':ids.includes(t.target)&&!ids.includes(t.source)?'+':''}{money(t.amount_cents)}</span></div>)}{entries.length>18&&<p className="quiet">Die letzten 18 Vorgänge. Der Export enthält das vollständige Journal.</p>}</div>;
 }
 
-export default function App() {
-  const [draft, setDraft] = useState(6);
-  const [result, setResult] = useState<Result | null>(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState('');
-  const [started, setStarted] = useState(false);
-  const [period, setPeriod] = useState(1);
-  const [caseId, setCaseId] = useState<CaseId>('variable_loan');
-  const [playing, setPlaying] = useState(false);
-  const [customOpen, setCustomOpen] = useState(false);
-  const [detailsOpen, setDetailsOpen] = useState(false);
-  const controller = useRef<AbortController | null>(null);
-  const detailRef = useRef<HTMLElement>(null);
-  const householdsRef = useRef<HTMLElement>(null);
-  async function calculate(rate: number, launch: boolean) {
-    if (!Number.isFinite(rate) || rate < 0 || rate > 20) {setError('Bitte einen jährlichen Zinssatz zwischen 0 und 20 % eingeben.'); return;}
-    controller.current?.abort();
-    const abort = new AbortController(); controller.current = abort;
-    setLoading(true); setError(''); setPlaying(false);
-    try {
-      const response = await fetch('/api/simulate', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({annual_rate_after: rate/100}), signal: abort.signal});
-      const data: unknown = await response.json();
-      if (!response.ok) throw new Error(typeof data === 'object' && data !== null && 'error' in data && typeof data.error === 'string' ? data.error : 'Die Berechnung ist fehlgeschlagen.');
-      const parsed = ResultSchema.safeParse(data);
-      if (!parsed.success) throw new Error('Die Antwort enthält keinen vollständigen, gültigen Verlauf.');
-      setResult(parsed.data); setStarted(launch); setPeriod(launch ? 3 : 1);
-      if (launch) window.requestAnimationFrame(() => householdsRef.current?.scrollIntoView({behavior: 'instant', block: 'start'}));
-    } catch (failure) {
-      if (abort.signal.aborted) return;
-      setResult(null); setError(failure instanceof Error ? failure.message : 'Der Rechenkern ist nicht erreichbar.');
-    } finally {if (!abort.signal.aborted) setLoading(false);}
-  }
-  useEffect(() => {void calculate(2, false); return () => controller.current?.abort();}, []);
-  useEffect(() => {
-    if (!playing) return;
-    const timer = window.setInterval(() => setPeriod(previous => {const next = Math.min(6, previous+1); if (next === 6) setPlaying(false); return next;}), 2000);
-    return () => window.clearInterval(timer);
-  }, [playing]);
-  const rows = result ? started ? result.rows : result.baseline : [];
-  const row = result ? lookup(rows, caseId, period) : undefined;
-  const baseline = result ? lookup(result.baseline, caseId, period) : undefined;
-  const dirty = started && result !== null && Math.abs(draft/100-result.request.annual_rate_after) > .000001;
-  const valid = Number.isFinite(draft) && draft >= 0 && draft <= 20;
-  const action = draft > 2 ? `Zinsen auf ${percent(draft/100)} erhöhen` : draft < 2 ? `Zinsen auf ${percent(draft/100)} senken` : 'Zins bei 2 % belassen';
-  function reset() {setPlaying(false); setStarted(false); setPeriod(1);}
-  function choose(id: CaseId) {setCaseId(id); detailRef.current?.scrollIntoView({behavior: 'instant', block: 'start'});}
-  return <div className="app">
-    <header className="topbar"><a href="#" className="brand" aria-label="Counterloom Start"><Layers3 size={24}/><span>counterloom<span className="brand-dot">.</span></span></a><span className="header-context">Eine kleine Lernwelt</span><span className="poc-pill">Fiktives Beispiel</span></header>
-    <main>
-      <div className="intro-heading"><span className="eyebrow">GELD IM ALLTAG VERSTEHEN</span><h1>Was machen höhere Zinsen<br/>mit unserem Alltag?</h1><p>Drei Haushalte. Das gleiche Einkommen. Aber eine andere Beziehung zur Bank.<br className="desktop-break"/> Finde heraus, wer nach einer Zinsänderung mehr oder weniger übrig hat.</p></div>
-      <section className="starting-point" aria-label="Gemeinsame Ausgangslage"><span className="step-number">1</span><div><h2>Lerne die drei Haushalte kennen</h2><p>Alle haben monatlich <strong>2.400 € Einkommen</strong> und <strong>2.100 € Alltagskosten</strong>. Zu Beginn liegen <strong>1.000 € auf dem verfügbaren Konto</strong>. Sie möchten jeden Monat bis zu <strong>100 € für eine spätere Anlage</strong> zurücklegen.</p></div></section>
-      {error && <div className="error-banner" role="alert"><X size={20}/><div><strong>Der Verlauf konnte nicht berechnet werden.</strong><p>{error} Bitte erneut versuchen.</p><button className="text-button" onClick={() => void calculate(valid ? draft : 6, true)}>Erneut versuchen</button></div></div>}
-      {!result && !error && <div className="loading-state" role="status"><LoaderCircle className="spin"/>Die Haushalte werden vorbereitet …</div>}
-      {result && row && baseline && <div className={loading ? 'results is-loading' : 'results'} aria-busy={loading}>
-        <section className="households" ref={householdsRef} aria-label="Drei Haushalte vergleichen">{ids.map(id => {
-          const info=households[id], current=lookup(rows,id,period), control=lookup(result.baseline,id,period), delta=current.monthly_headroom-control.monthly_headroom, Icon=info.icon;
-          return <article className={`household-card ${info.theme} ${caseId===id ? 'selected' : ''}`} key={id}>
-            <div className="card-scene"><span className="contract-tag"><Icon size={14}/>{info.short}</span><HouseholdPicture theme={info.theme}/></div>
-            <div className="household-body"><h3>{info.name}</h3><p className="situation">{info.situation}</p><div className="household-outcome" aria-live="polite"><span>{current.monthly_headroom < 0 ? 'Fehlt nach laufenden Kosten / Monat' : 'Übrig nach laufenden Kosten / Monat'}</span><div><strong>{euros(Math.abs(current.monthly_headroom))}</strong>{started && <span className={`delta ${delta<0?'negative':delta>0?'positive':'neutral'}`}>{Math.abs(delta)<.005 ? 'Unverändert' : `${signed(delta)} zum Vergleich`}</span>}</div><div className="budget-track" aria-hidden="true"><span style={{width:`${Math.min(100,Math.max(0,current.monthly_headroom)/600*100)}%`}}/></div><p>{outcome(current,control,started)}</p></div><button className="inspect-button" aria-label={`Geldfluss: ${info.short}`} onClick={() => choose(id)} aria-pressed={caseId===id}>{caseId===id ? <Check size={16}/> : <CircleHelp size={16}/>} {caseId===id ? 'Diesen Haushalt siehst du unten' : 'Zeig mir, warum'}<ChevronRight size={16}/></button></div>
-          </article>;
-        })}</section>
-      <section className="experiment" aria-labelledby="experiment-title">
-        <div className="experiment-main"><span className="step-number">2</span><div><h2 id="experiment-title">{started ? 'Die Änderung ist ausgelöst' : 'Was glaubst du: Wer hat danach weniger übrig?'}</h2><p>{started && result ? `Ab Monat 3 gilt ${percent(result.request.annual_rate_after)} statt 2 % für die veränderlichen Verträge. Der feste Kredit bleibt bei 2 %.` : `Bisher gelten 2 % Zins im Jahr. ${valid ? draft > 2 ? 'Erhöhe' : draft < 2 ? 'Senke' : 'Belasse' : 'Verändere'} den Zins für die veränderlichen Verträge ab Monat 3${valid ? ` auf ${percent(draft/100)}` : ''} — und schau, was passiert.`}</p></div><button className="primary-button" disabled={loading || !valid} onClick={() => void calculate(draft, true)}>{loading ? <LoaderCircle size={19} className="spin"/> : <Play size={17} fill="currentColor"/>}{loading ? 'Wird berechnet …' : started && !dirty ? 'Änderung noch einmal zeigen' : action}</button></div>
-        <div className="experiment-tools"><button className="text-button" aria-expanded={customOpen} onClick={() => setCustomOpen(!customOpen)}>Anderen Zins ausprobieren <ChevronDown size={14}/></button>{started && <button className="text-button" onClick={reset}><RotateCcw size={14}/>Zur Ausgangslage</button>}</div>
-        {customOpen && <div className="custom-controls"><label htmlFor="rate">Neuer jährlicher Vertragszins</label><div className="rate-field"><input id="rate" type="number" min="0" max="20" step=".1" value={Number.isNaN(draft) ? '' : draft} onChange={e => setDraft(e.target.valueAsNumber)}/><span>%</span></div><div className="presets">{[0,2,6].map(value => <button key={value} aria-pressed={draft===value} onClick={() => setDraft(value)}>{value} %</button>)}</div><p>{dirty ? 'Noch nicht angewandt. Oben die Änderung auslösen; bis dahin siehst du den letzten berechneten Verlauf.' : 'Erlaubt: 0 bis 20 %. Der neue Wert wird erst mit dem grünen Knopf angewandt.'}</p></div>}
-      </section>
-        <section className="time-panel" aria-label="Zeitverlauf"><div className="time-caption"><span className="time-dot"/><div><strong>{started ? `Monat ${period} von 6` : 'Ausgangslage · Monat 1'}</strong><span>{!started ? 'Löse oben die Zinsänderung aus, um die Folgen zu sehen.' : period<3 ? 'Noch vor der Änderung' : period===3 ? 'Der neue Zins wirkt jetzt zum ersten Mal.' : 'So entwickeln sich die Konten im weiteren Verlauf.'}</span></div></div>{started && <div className="timeline-controls"><div className="months">{[1,2,3,4,5,6].map(month=><button key={month} aria-label={`Monat ${month} ansehen`} aria-pressed={period===month} onClick={()=>{setPlaying(false);setPeriod(month);}} className={period===month?'active':''}>{month}<small>{month===3?'Änderung':'Monat'}</small></button>)}</div><button className="play-button" onClick={()=>{if(period===6)setPeriod(1);setPlaying(!playing);}} aria-label={playing?'Verlauf pausieren':'Monate abspielen'}>{playing?<Pause size={17}/>:<Play size={17}/>} {playing?'Pause':'Abspielen'}</button></div>}</section>
-        <section className="household-detail" ref={detailRef} aria-labelledby="detail-title"><div className="detail-heading"><span className="step-number">3</span><div><span className="eyebrow">SCHAU AUF DAS GELD · MONAT {period}</span><h2 id="detail-title">{households[caseId].name}</h2><p>{outcome(row,baseline,started)} Die Rechnung zeigt dir, warum.</p></div></div><div className="detail-layout"><aside className={`detail-person ${households[caseId].theme}`}><HouseholdPicture theme={households[caseId].theme}/><h3>Ein Monat in diesem Haushalt</h3><p>Verfolge das Einkommen über die Kosten bis zu dem Betrag, der noch für eigene Pläne bleibt.</p><div className="comparison-note"><span>Ohne Zinsänderung wären es</span><strong>{euros(baseline.monthly_headroom)} pro Monat</strong><small>Der Vergleich behält durchgehend 2 % bei.</small></div></aside><MoneyJourney key={`${caseId}-${result.meta.run_id}`} row={row} baseline={baseline}/></div></section>
-        {started && period>=3 && <div className="reflection"><CircleHelp size={25}/><div><h2>{result.request.annual_rate_after > .02 ? 'Gleiche Nachricht. Unterschiedliche Folgen.' : 'Was hat sich zwischen den Haushalten verändert?'}</h2><p>Passt das Ergebnis zu deiner Vermutung? Welcher Haushalt hat weniger Spielraum, welcher mehr — und welche Vertragsbedingung erklärt den Unterschied?</p></div></div>}
-        <section className="model-details"><button className="details-toggle" onClick={()=>setDetailsOpen(!detailsOpen)} aria-expanded={detailsOpen}><span><CircleHelp size={17}/>Rechnung und Modellgrenzen</span><ChevronDown size={18}/></button>{detailsOpen && <div className="details-content"><h3>Ein vereinfachtes Beispiel</h3><p>Die Haushalte sind erfunden. Ihr Verhalten folgt einer festen Regel. Der veränderte Zins ist direkt der Vertragszins — es wird keine automatische Übertragung eines Zentralbankzinses auf alle Kredite behauptet. Kreditbetrag und Einlage bleiben konstant; Tilgung, Steuern, Inflation und Gebühren sind nicht enthalten. Die 60.000 € Einlage sind vom verfügbaren Konto getrennt.</p><ul>{result.assumptions.map(text=><li key={text}>{text}</li>)}</ul><h3>Sechs Monate für diesen Haushalt</h3><div className="table-scroll"><table><caption>Beträge in Euro. Zinskosten sind negativ, Zinseinnahmen positiv.</caption><thead><tr><th>Monat</th><th>Zinseffekt</th><th>Überschuss / Fehlbetrag</th><th>Für Anlage zurückgelegt</th><th>Verfügbares Konto</th><th>Offene Verpflichtungen</th></tr></thead><tbody>{rows.filter(r=>r.case===caseId).map(r=><tr key={r.period}><th>{r.period}</th><td>{euros(r.interest_income-r.interest_cost)}</td><td>{euros(r.monthly_headroom)}</td><td>{euros(r.planned_allocation)}</td><td>{euros(r.cash_close)}</td><td>{euros(r.arrears_close)}</td></tr>)}</tbody></table></div><p className="run-meta">Lauf {result.meta.run_id} · BPTK-Py {result.meta.version} · {result.meta.elapsed_ms} ms · 0 LLM-Aufrufe. Monat auswählen und Abspielen geben den berechneten Verlauf wieder.</p></div>}</section>
-      </div>}
-      <footer><Layers3 size={15}/><span>Counterloom · Ein reduziertes Lernmodell von Treno Solutions</span><span>Fiktive Haushalte · feste Rechenregeln · keine Anlageberatung</span></footer>
-    </main>
-  </div>;
+function EntityView({world,node}:{world:World;node:WorldNode}){
+ const incoming=world.transactions.filter(t=>t.target===node.id).reduce((s,t)=>s+t.amount_cents,0),outgoing=world.transactions.filter(t=>t.source===node.id).reduce((s,t)=>s+t.amount_cents,0);
+ return <div className="entity-view"><div className="entity-metrics"><div><Wallet/><span>Verfügbares Konto</span><strong>{money(node.cash_cents)}</strong></div><div><ArrowDownLeft/><span>Eingänge diesen Monat</span><strong>{money(incoming)}</strong></div><div><ArrowUpRight/><span>Ausgänge diesen Monat</span><strong>{money(outgoing)}</strong></div></div><div className="entity-description"><h2>{node.name}</h2>{node.sector==='households'?<p>{node.employer?`Arbeitsplatz: ${nodeName(world,node.employer)}. Neue Bruttolöhne kommen aus dem Konto dieses Arbeitgebers.`:'Zurzeit ohne Beschäftigung. Ein Transfer hängt vom verfügbaren Staatskonto ab.'} Nicht ausgegebenes Einkommen bleibt auf diesem Konto.</p>:node.sector==='firms'?<p>{node.employees?.length} Beschäftigte · {node.inventory} Einheiten auf Lager · {node.capital} zusätzliche Anlagen · {money(node.loan??0)} bestehende Kreditschuld. Eine Änderung der Beschäftigung beim Monatsabschluss gilt für die nächste Lohnrunde.</p>:<p>{world.rules[node.sector]}</p>}</div><div className="ports"><div><span>EINGÄNGE</span>{[...new Set(world.transactions.filter(t=>t.target===node.id).map(t=>t.source))].map(id=><p key={id}><ArrowRight size={14}/>{nodeName(world,id)}</p>)}</div><div className="port-center"><Layers3/><strong>{node.name}</strong><span>Bestände + Regeln</span></div><div><span>AUSGÄNGE</span>{[...new Set(world.transactions.filter(t=>t.source===node.id).map(t=>t.target))].map(id=><p key={id}><ArrowRight size={14}/>{nodeName(world,id)}</p>)}</div></div><div className="entity-bottom"><div className="rule-box"><CircleHelp size={20}/><h3>So arbeitet dieses System</h3><p>{world.rules[node.sector]}</p></div><Ledger world={world} ids={[node.id]}/></div></div>;
+}
+
+export default function App(){
+ const [world,setWorld]=useState<World|null>(null),[running,setRunning]=useState(false),[busy,setBusy]=useState(false),[error,setError]=useState(''),[speed,setSpeed]=useState(1),[selected,setSelected]=useState<SectorId>('households'),[level,setLevel]=useState<SectorId|null>(null),[entity,setEntity]=useState<string|null>(null),[eventsOpen,setEventsOpen]=useState(false),[rulesOpen,setRulesOpen]=useState(false);
+ const inspectorRef=useRef<HTMLElement>(null),locationRef=useRef<HTMLDivElement>(null),firstNavigation=useRef(true);
+ const worldRef=useRef<World|null>(null),requestBusy=useRef(false),mounted=useRef(true);
+ async function request(action:'create'|'step'|'event',event?:string){
+  if(requestBusy.current)return;
+  requestBusy.current=true;setBusy(true);setError('');
+  try{const w=worldRef.current;const path=action==='create'?'/api/world':`/api/world/${action}`;const body=action==='create'?{}:{world_id:w?.world_id,revision:w?.revision,...(event?{event}:{})};const response=await fetch(path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});const data:unknown=await response.json().catch(()=>{throw new Error('Der lokale Rechenkern ist nicht erreichbar. Bitte die Welt erneut starten.');});if(!response.ok)throw new Error(typeof data==='object'&&data&&'error'in data?String(data.error):'Berechnung fehlgeschlagen.');const parsed=WorldSchema.parse(data);if(mounted.current){worldRef.current=parsed;setWorld(parsed);}}
+  catch(e){if(mounted.current){setRunning(false);setError(e instanceof Error?e.message:'Der Rechenkern ist nicht erreichbar.');}}
+  finally{requestBusy.current=false;if(mounted.current)setBusy(false);}
+ }
+ useEffect(()=>{mounted.current=true;void request('create');return()=>{mounted.current=false;};},[]);
+ useEffect(()=>{if(!running||busy||!world||error)return;const timer=window.setTimeout(()=>void request('step'),1800/speed);return()=>window.clearTimeout(timer);},[running,busy,world,speed,error]);
+ useEffect(()=>{if(firstNavigation.current){firstNavigation.current=false;return;}locationRef.current?.scrollIntoView({behavior:'instant',block:'start'});},[level,entity]);
+ const selectedNodes=world?aggregate(world,selected):[],balance=world?stock(world,selected):0;
+ const selectedIds=selectedNodes.map(n=>n.id);
+ const chosenNode=world?.nodes.find(n=>n.id===entity);
+ const latest=world?.history.at(-1);
+ async function download(){if(!world)return;try{const r=await fetch('/api/world/export',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({world_id:world.world_id})});if(!r.ok)throw Error('Export nicht verfügbar.');const data=await r.json();const url=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:'application/json'}));const link=document.createElement('a');link.href=url;link.download=`counterloom-world-month-${data.month}.json`;link.click();URL.revokeObjectURL(url);}catch(e){setRunning(false);setError(e instanceof Error?e.message:'Export fehlgeschlagen.');}}
+ function enter(s:SectorId){setLevel(s);setEntity(null);}
+ return <div className="world-app"><header className="world-header"><a className="world-brand" href="/"><Layers3 size={23}/>counterloom<span>.</span></a><span className="header-label">Lebendige Systeme</span><span className="model-badge">Experimentelle Modellwirtschaft</span></header>
+ <main className="world-main"><div className="world-heading"><div><span className="overline">EINE KLEINE WIRTSCHAFT IM LAUF</span><h1>Alles ist miteinander verbunden.</h1><p>Starte die Welt. Verfolge Löhne, Einkäufe und Steuern. Öffne ein System, um hineinzusehen.</p></div><button className="subtle-button" onClick={()=>setRulesOpen(!rulesOpen)} aria-expanded={rulesOpen}><CircleHelp size={16}/>Modell & Grenzen</button></div>
+ <section className="world-toolbar" aria-label="Simulation steuern"><button className="world-primary" disabled={!world||(!running&&busy)||!!error} onClick={()=>setRunning(!running)}>{running?<Pause size={17}/>:<Play size={17} fill="currentColor"/>}{running?'Pausieren':world?.revision?'Weiterlaufen lassen':'Wirtschaft starten'}</button><button className="step-button" disabled={!world||running||busy||!!error} onClick={()=>void request('step')}><ChevronRight size={17}/>Eine Phase weiter</button><div className="clock"><span className={`live-dot ${running?'live':''}`}/><div><strong>{world?.month?`Monat ${world.month}`:'Ausgangslage'}</strong><span>{busy?'Wird berechnet …':world?.phase_label??'Welt wird vorbereitet …'}</span></div></div><div className="world-speed" role="group" aria-label="Geschwindigkeit">{[1,2,4].map(v=><button key={v} aria-pressed={speed===v} onClick={()=>setSpeed(v)}>{v}×</button>)}</div><button className="subtle-button restart" disabled={busy} onClick={()=>{setRunning(false);setLevel(null);setEntity(null);void request('create');}} aria-label="Welt neu starten"><RotateCcw size={16}/><span>Neu starten</span></button></section>
+ <div className="phase-strip">{phases.map((p,i)=><span key={p} className={world?.phase===i?'current':''}><small>{i+1}</small>{p}</span>)}</div>
+ {error&&<div className="world-error" role="alert"><X size={18}/><div><strong>Die Berechnung ist angehalten.</strong><p>{error}</p><span>Der letzte bestätigte Zustand bleibt sichtbar. „Neu starten“ erzeugt eine neue Welt.</span></div></div>}
+ {rulesOpen&&<section className="world-rules"><h2>Ein sichtbarer Kreislauf, bewusst klein</h2><p>Sechs fiktive Haushalte, zwei Betriebe, Staat und Finanzsektor. Das Ausland ist ein vereinfachtes Konto für Energieimporte. Jeder Schritt wird im Python-Kern mit dem BPTK-Agentenscheduler neu ausgeführt. Es wird kein fertiger Verlauf abgespielt. Alle Beträge und Reaktionen sind illustrative Modellannahmen, keine Prognosen.</p><p>Ein Monat hat fünf Phasen. Konten sind Bestände, Verbindungen zeigen die bereits gebuchten Zahlungen des laufenden Monats. Nicht konsumiertes Geld bleibt bei den Haushalten. Kreditforderungen sind von Zahlungsmitteln getrennt; neue Kredite, Tilgung, Inflation und Wertpapierhandel sind nicht enthalten. Der Staat nutzt einen endlichen Anfangspuffer. Es wird kein dauerhaftes Gleichgewicht zugesichert. 240 Monate technische Laufgrenze, Speicherung nur im Arbeitsspeicher.</p><a href="?view=household">Früheren Haushaltsversuch öffnen <ArrowRight size={14}/></a></section>}
+ {!world?<div className="world-loading"><LoaderCircle className="spin"/>Die Systeme werden verbunden …</div>:<>
+ <div className="world-stats"><div><span>Beschäftigung</span><strong>{employment(world)} <small>/ 6 Haushalte</small></strong></div><div><span>Konsum · letzter abgeschlossener Monat</span><strong>{latest?money(latest.consumption_cents):'Noch kein Abschluss'}</strong></div><div><span>Zahlungsmittel · inklusive Außengrenze</span><strong>{money(world.audit.current_money_cents)}</strong></div><div className="audit-status"><ShieldCheck size={19}/><div><strong>Kontensumme stimmt</strong><span>{world.audit.transaction_count} verbuchte Transfers · 0 LLM-Aufrufe</span></div></div></div>
+ <div className="world-location" ref={locationRef}><nav aria-label="Systempfad"><button onClick={()=>{setLevel(null);setEntity(null);}}><Globe2 size={15}/>Wirtschaft</button>{level&&<><ChevronRight size={14}/><button onClick={()=>setEntity(null)}>{info[level].name}</button></>}{chosenNode&&<><ChevronRight size={14}/><span>{chosenNode.name}</span></>}</nav><button className={`event-toggle ${eventsOpen?'open':''}`} onClick={()=>setEventsOpen(!eventsOpen)} aria-expanded={eventsOpen}><Zap size={15}/>Ereignis auslösen</button></div>
+ {eventsOpen&&<section className="event-panel"><div><h2>Greife in die laufende Welt ein</h2><p>Der Eingriff wird beim nächsten Monatsbeginn wirksam. Die Folgen entstehen aus den Regeln und Beständen.</p></div>{[{id:'energy',name:'Energie wird teurer',note:'Importkosten je Beschäftigtem verdoppeln sich.'},{id:'demand',name:'Haushalte halten Geld zurück',note:'Konsumanteil sinkt von 95 % auf 65 % des Nettoeinkommens.'}].map(e=>{const queued=world.pending.includes(e.id),active=world.active.some(a=>a.event===e.id);return <button key={e.id} disabled={busy||queued||active||!!error} onClick={()=>void request('event',e.id)}><span>{active?<Check size={16}/>:<Zap size={16}/>}<strong>{e.name}</strong></span><small>{queued?'Vorgemerkt für den nächsten Monat':active?'Bereits wirksam':e.note}</small></button>})}</section>}
+ {(world.pending.length>0||world.active.length>0)&&<div className="active-events">{world.pending.map(e=><span key={e}>Ab nächstem Monat: {e==='energy'?'Energie ×2':'Konsumanteil 65 %'}</span>)}{world.active.map(e=><span key={e.event}>Seit Monat {e.month}: {e.event==='energy'?'Energie ×2':'Konsumanteil 65 %'}</span>)}</div>}
+ {!level?<div className="world-workspace"><section className="map-panel" aria-label="Wirtschaftskreislauf"><div className="map-heading"><div><span className="overline">ÜBERSICHT</span><h2>{running?'Die Wirtschaft läuft.':world.month?'Die Welt ist angehalten.':'Die Welt ist bereit.'}</h2></div><span className="map-hint">Ein System anklicken →</span></div><div className="map-scroll"><SystemMap world={world} running={running&&!busy} selected={selected} onSelect={s=>{setSelected(s);if(window.innerWidth<=1250)inspectorRef.current?.scrollIntoView({behavior:'instant',block:'start'});}}/></div></section><aside className="system-inspector" ref={inspectorRef}><span className="overline">AUSGEWÄHLTES SYSTEM</span><h2>{info[selected].name}</h2><p className="inspector-subtitle">{info[selected].subtitle}</p><button className="map-return" onClick={()=>locationRef.current?.scrollIntoView({behavior:'instant',block:'start'})}>← Zur Systemkarte</button><div className="inspector-balance"><Wallet size={19}/><div><strong>{money(balance)}</strong><span>Kontenbestand · {selectedNodes.length} {selectedNodes.length===1?'Konto':'Konten'}</span></div></div><button className="enter-system" onClick={()=>enter(selected)}>In das System hineingehen <ArrowRight size={16}/></button><div className="inspector-rule"><h3>Was passiert hier?</h3><p>{world.rules[selected]}</p></div><Ledger world={world} ids={selectedIds}/></aside></div>:<section className="inside-panel"><div className="inside-heading"><div><span className="overline">{chosenNode?'EINZELSYSTEM':'IM INNEREN DES SYSTEMS'}</span><h2>{chosenNode?.name??info[level].name}</h2><p>Gleiche Welt · gleiche Zeit · {running?'läuft weiter':'angehalten'}</p></div><button className="subtle-button" onClick={()=>{if(entity)setEntity(null);else setLevel(null);}}>← Eine Ebene zurück</button></div>{chosenNode?<EntityView world={world} node={chosenNode}/>:<><p className="sector-rule">{world.rules[level]}</p>{level==='firms'&&<div className="internal-flow"><Factory size={19}/><span>Alltag & Versorgung</span><ArrowRight size={18}/><span>Werkstatt & Technik</span><strong>{money(world.transactions.filter(t=>t.kind==='investment').reduce((sum,t)=>sum+t.amount_cents,0))}</strong><small>Investitionszahlungen · laufender Monat</small></div>}<div className={`member-grid ${level==='households'?'household-members':''}`}>{aggregate(world,level).map(n=><button className="member-card" key={n.id} onClick={()=>setEntity(n.id)}><span className={`member-picture ${n.sector}`}><span className="building-roof"/>{n.sector==='households'?<Home size={40}/>:n.sector==='firms'?<Factory size={40}/>:<Landmark size={40}/>}<i/><i/><i/></span><strong>{n.name}</strong><span className="member-context">{n.sector==='households'?n.employer?`Arbeitet bei ${nodeName(world,n.employer)}`:'Ohne Beschäftigung':n.employees?`${n.employees.length} Beschäftigte`:'Konten und Verpflichtungen'}</span><b>{money(n.cash_cents)}</b><small>Verfügbarer Kontenbestand</small>{n.inventory!==undefined&&<span className="inventory-tag">{n.inventory} Einheiten Lager · {n.capital} Anlagen</span>}<span className="member-action">Bestände und Geldflüsse ansehen <ChevronRight size={15}/></span></button>)}</div><Ledger world={world} ids={aggregate(world,level).map(n=>n.id)}/></>}</section>}
+ <section className="world-bottom"><div className="world-feed"><div className="section-heading"><Activity size={17}/><h2>Was in der Welt passiert</h2><span>Globale Ereignisse</span></div>{world.notices.length?world.notices.slice(-6).reverse().map((n,i)=><div className="notice" key={`${n.month}-${n.phase}-${i}`}><span>M{n.month}</span><p>{n.text}</p></div>):<p className="quiet">{world.month?'Die laufenden Zahlungen siehst du auf der Karte und in den Systemen. Hier erscheinen Investitionen, Beschäftigungsänderungen und Engpässe.':'Starte die Wirtschaft. Sie verdient, kauft und zahlt auch ohne zusätzlichen Eingriff.'}</p>}</div><div className="history-panel"><div className="section-heading"><Activity size={17}/><h2>Konsum im Verlauf</h2><span>Abgeschlossene Monate</span></div><div className="history-bars">{world.history.length?world.history.slice(-18).map(h=><div key={h.month} title={`Monat ${h.month}: ${money(h.consumption_cents)}, ${h.employment} beschäftigt`}><span style={{height:`${Math.max(3,h.consumption_cents/1200000*90)}px`}}/><small>{h.month}</small></div>):<p className="quiet">Nach dem ersten Monatsabschluss erscheint der Verlauf.</p>}</div><p className="chart-note">Balkenhöhe: tatsächliche Konsumausgaben · € pro Monat</p></div></section>
+ <footer className="world-footer"><span>Fiktive Modellwirtschaft · feste, einsehbare Regeln · keine Prognose</span><button onClick={()=>void download()}><Download size={14}/>Lauf mit Buchungen exportieren</button><span>Offene Verpflichtungen: {money(world.audit.open_obligations_cents)}</span></footer>
+ </>}
+ </main></div>;
 }

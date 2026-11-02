@@ -1,0 +1,83 @@
+{
+  "date": "2026-11-02",
+  "classification": "illustrative_technical_circular_flow_poc_not_empirical_macro_model",
+  "engine": "BPTK-Py 3.5.0 native system-agent scheduler plus own integer-cent ledger and explicit standalone system rules",
+  "model": "poc/WORLD_MODEL.md",
+  "systems": {
+    "households": 6,
+    "firms": 2,
+    "government": 1,
+    "finance": 1,
+    "simplified_energy_external_account": 1
+  },
+  "automated": {
+    "command": "npm test --prefix poc",
+    "passed": 19,
+    "failed": 0,
+    "independent_ledger_reconstruction_phases": 120,
+    "stressed_boundary_phases": 1200,
+    "boundary_months": 240,
+    "initial_and_conserved_money_cents": 15600000,
+    "loan_principal_cents_separate_from_money": 2400000,
+    "checks": [
+      "reconstruct every account from the journal without relying on the model balance check",
+      "actual wage then tax phase changes both counterparties",
+      "isolated household with explicit test input",
+      "household/firm/finance rules execute without world or UI",
+      "insufficient cash creates explicit unpaid obligation, no extra money",
+      "investment pays supplier and removes 8 goods; buyer capacity increases only in following production phase",
+      "pending event waits for next month and changes subsequent consumption and employment path",
+      "actual unemployment transfer is not wage-taxed",
+      "deterministic independent world reconstruction",
+      "HTTP create/step/export",
+      "stale revision cannot execute a second step",
+      "240-month boundary refuses further step without extra posting"
+    ]
+  },
+  "build": {
+    "command": "npm run build --prefix poc",
+    "result": "passed strict TypeScript and Vite production build"
+  },
+  "browser": {
+    "tool": "BrowserOS neo",
+    "viewports_css_px": [
+      1040,
+      390,
+      320
+    ],
+    "observed": [
+      "initial world has 156000 EUR, 6 employed households, no booked transfers",
+      "start runs into month 2 without external event; salaries, purchases, taxes and closing are newly computed",
+      "first month actual consumption 8400 EUR; a real intercompany investment appears in the event feed",
+      "pause and resume; explicit single-phase step",
+      "company sector has 2 members; individual company shows same global month and current ledger",
+      "household sector has 6 members; navigation preserves the shared world",
+      "pending consumption shock queued during month 2 becomes active in month 3",
+      "5 sector cash sparklines derive from initial balances, month-end accounts and current confirmed accounts",
+      "simulated step request rejection stops execution; confirmed month, account totals and 10 prior transfers remain visible; restored request and world reset recover",
+      "reset restores initial accounts and empty transaction journal",
+      "390px and 320px: no document horizontal overflow; map intentionally scrolls inside its container",
+      "320px controls and title have no detected clipping",
+      "desktop full-page system-map screenshot visually inspected",
+      "production build on local API port creates world and executes a real phase with 10 transfers",
+      "previous household demo route still renders 3 cards",
+      "final browser console has no errors or warnings",
+      "startup launcher confirms Python health before exposing Vite"
+    ],
+    "limits": [
+      "Not an independent participant comprehension test",
+      "Small-screen map retains horizontal scrolling rather than changing the network topology",
+      "Browser checks are manual tool-driven checks, not part of the automated test command"
+    ]
+  },
+  "llm_calls": 0,
+  "limitations": [
+    "Own illustrative assumptions; no calibrated monetary-policy transmission or empirical psychology",
+    "Settlement accounts and matched loan principal are not full bank/central-bank balance sheets",
+    "No new credit, money creation, amortization, inflation, securities markets or depreciation",
+    "Government buffer finite; simplified external energy account does not recycle income; no perpetual equilibrium claim",
+    "World advances through browser requests; server sessions are memory-only, capped at 64; no checkpoint import or service continuing after browser close",
+    "UI transition/marker animation does not create additional postings; each sector trend uses its own vertical scale",
+    "No pedagogical validation, prediction validation or security audit"
+  ]
+}

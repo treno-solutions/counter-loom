@@ -7,7 +7,7 @@
     "dev": "node scripts/dev.mjs",
     "build": "tsc --noEmit && vite build",
     "start": "node scripts/python.mjs server.py",
-    "test": "node scripts/python.mjs -m unittest discover -s . -p test_engine.py"
+    "test": "node scripts/python.mjs -m unittest discover -s . -p 'test_*.py'"
   },
   "dependencies": {
     "@fontsource/ibm-plex-sans": "^5.2.6",

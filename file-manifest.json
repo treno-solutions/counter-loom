@@ -1,13 +1,13 @@
 [
   {
     "path": "BUILD_PLAN.md",
-    "bytes": 19131,
-    "sha256": "35deb4194895e8d6bade5111d38ec8e6923754a728adacdd41672202470309a5"
+    "bytes": 19246,
+    "sha256": "c6af78307665e7fad491094e74c74006e962aa5a95252962e23e185e482ab39e"
   },
   {
     "path": "POC.md",
-    "bytes": 8312,
-    "sha256": "a5b656f07e6b2ea3e2db51ac4b45003b1b4ce2ffa804e4e31d7256037309c52d"
+    "bytes": 9075,
+    "sha256": "65945b51729ce02f28144ca357af04dfb55cde99863f64db4754d2602a12a914"
   },
   {
     "path": "RESEARCH.md",
@@ -106,8 +106,8 @@
   },
   {
     "path": "poc/source-manifest.json",
-    "bytes": 2413,
-    "sha256": "662aa216f267670a346a10eaf16d3facbe7d18f7032817a0cb0f7bafdef6a0ba"
+    "bytes": 3421,
+    "sha256": "fa2e21ebc78a1570ddc04043911f5892b9cfab31cf697ff5e02697ab7c5d92bc"
   },
   {
     "path": "processed/energy-monthly-prices.csv",
@@ -345,6 +345,11 @@
     "sha256": "fd26320cffb7911ed4ba71fd906a049d120f67c0478086ce9f6520053938eeba"
   },
   {
+    "path": "qa/world-poc-verification-2026-11-02.json",
+    "bytes": 4460,
+    "sha256": "ed1351245a5c95fc41d66552ca95b44f4209832f812585dc1da011357cc54385"
+  },
+  {
     "path": "qa/world-silver-survey-2026-page-11.png",
     "bytes": 151602,
     "sha256": "fc141cc27c6e52b6dd6efc5426cd84fb1d76f27b28b54b2276fca97b8ff0d997"
@@ -541,8 +546,8 @@
   },
   {
     "path": "research/frameworks/bptk-py.md",
-    "bytes": 3055,
-    "sha256": "f5ad7398c49244281d9af865b91c56a73b1e3757176a4d38827d80de563e55fb"
+    "bytes": 3622,
+    "sha256": "b69cfead76b6fc231edae989324224bca600d08dc034a5fb884e3ffc0e452624"
   },
   {
     "path": "research/frameworks/concordia.md",
