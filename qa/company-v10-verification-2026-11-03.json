@@ -16,7 +16,8 @@
     "Demand shock: month6 work62.5percent, two contracts, wage1500EUR per contract, next65.28percent",
     "Work-history chart distinguishes actual and planned quota",
     "Desktop and390CSS-pixel layout: no document overflow",
-    "No calculation alert during observed steps"
+    "No calculation alert during observed steps",
+    "Pending next-month plan is labelled unconfirmed; concrete quote appears only after month close"
   ],
   "source_files": [
     {
@@ -66,8 +67,8 @@
     },
     {
       "path": "poc/src/BusinessOperation.tsx",
-      "bytes": 6536,
-      "sha256": "9ebf9523b64df47236c71778117c45c2003ade1dfbf3d1d6089ccc46ef1e7299"
+      "bytes": 6631,
+      "sha256": "639857468bdb89dfbce2334133bbd018ad4e268bdd41d7120964bb11eb79dd5f"
     },
     {
       "path": "poc/src/CompanyView.tsx",

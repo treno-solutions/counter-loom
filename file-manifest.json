@@ -107,7 +107,7 @@
   {
     "path": "poc/source-manifest.json",
     "bytes": 8095,
-    "sha256": "c70804326c80c3e2a5a94cfe8c8b1f07cea57362cc675be6f4ea7942491d7b0a"
+    "sha256": "5c44a0dfdf5ffc3bdfa472ea119983b576c7c9a84e6218eb4e554903658f442e"
   },
   {
     "path": "processed/energy-monthly-prices.csv",
@@ -306,8 +306,8 @@
   },
   {
     "path": "qa/company-v10-verification-2026-11-03.json",
-    "bytes": 4001,
-    "sha256": "838d80dad9a880408e8097340d04e61437465140031d5cfb93c9f47512ac4a05"
+    "bytes": 4103,
+    "sha256": "e6c0f654db5cf37ca72d879e85f4fe36bc579f58b82a3c369739453a186e8573"
   },
   {
     "path": "qa/company-v4-plausibility.json",
