@@ -107,7 +107,7 @@
   {
     "path": "poc/source-manifest.json",
     "bytes": 4722,
-    "sha256": "461ebe4101d19403dcfc648f14e06feb69d9883fec0c553622fdbe6ddd320eb0"
+    "sha256": "3cde731b600ca00615ae03be9940830e2a0c87b81332f413051cfbe4db8aabe4"
   },
   {
     "path": "processed/energy-monthly-prices.csv",

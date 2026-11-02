@@ -11,8 +11,8 @@
   },
   {
     "path": "poc/README.md",
-    "bytes": 9494,
-    "sha256": "46261d3d891abfa82bdd5b808585f7e5f444bf4d5972ef9de095022b2e73fcb5"
+    "bytes": 9679,
+    "sha256": "b1712af2d394ddb5d11029ac334a948d80eb472e5a2daed905cb7b36f4eaeaf0"
   },
   {
     "path": "poc/WORLD_MODEL.md",
@@ -81,8 +81,8 @@
   },
   {
     "path": "poc/src/App.tsx",
-    "bytes": 26620,
-    "sha256": "2378a70582f36a219ca6fd94b8dedec699e3e242461aec069b348884d2ba5acd"
+    "bytes": 26653,
+    "sha256": "e4719fe5ccfb091c1b61c1ffb1d3c1e9583f8d310348cf324846f9024c13a16d"
   },
   {
     "path": "poc/src/BankView.tsx",
