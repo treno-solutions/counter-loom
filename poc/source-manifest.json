@@ -141,8 +141,8 @@
   },
   {
     "path": "poc/src/styles.css",
-    "bytes": 54948,
-    "sha256": "d36cccd56a6ef6ab85a6abd5f2036bc5bd1363baa6bba9e2c6fbc8d761238b89"
+    "bytes": 54932,
+    "sha256": "2cdd4154e9f254debba3f3b274676f2368e907aafdc32a5dddd90fc6525ff686"
   },
   {
     "path": "poc/src/world-schema.ts",
