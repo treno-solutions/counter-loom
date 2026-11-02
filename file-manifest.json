@@ -107,7 +107,7 @@
   {
     "path": "poc/source-manifest.json",
     "bytes": 4150,
-    "sha256": "535f9cdc6731db51422558f6e7c95eb379f65877c7e85c37e021c3d1631628d2"
+    "sha256": "0b9cd6cce3e720e1a63660fb11525d65c2150af935873f1a3cb4663735a8cb11"
   },
   {
     "path": "processed/energy-monthly-prices.csv",
@@ -263,6 +263,11 @@
     "path": "qa/bank-plausibility-review-2026-11-02.md",
     "bytes": 15461,
     "sha256": "69bf8957639a05f78166ef14a4d755528ee6866d4d41a790e46f25cc63d1c99f"
+  },
+  {
+    "path": "qa/bank-ui-integration-2026-11-02.json",
+    "bytes": 1707,
+    "sha256": "103258ab042a3295460fcc543539ed2dcc7a32c1387df3658cf63e34ed11c577"
   },
   {
     "path": "qa/banking-v3-verification-2026-11-02.json",

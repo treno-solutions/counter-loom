@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-02",
+  "scope": "UI integration of the bank into the existing system hierarchy; economic core and response contract unchanged",
+  "changes": [
+    "Removed global machine-credit promotional entry from economy overview",
+    "Bank navigation uses the same Financial sector -> enter system path as other sectors",
+    "Default bank view shows balance sheet and three credit records",
+    "Machine credit is a collapsible record; request controls, flow diagram and booking details appear only after opening it",
+    "Aligned bank-detail palette with the existing green financial-sector node",
+    "Bank assumptions moved into a native disclosure"
+  ],
+  "verification": {
+    "build": "npm run build --prefix poc passed strict TypeScript and Vite",
+    "browser": "BrowserOS neo",
+    "checks": [
+      "no bank-entry banner in root overview",
+      "financial-sector navigation preserves the shared world and global month",
+      "default bank overview has balance sheet and three credit records; request controls and machine-case details initially hidden",
+      "open machine record, request credit and advance six real phases: month2 principal100, interest6, outstanding1100 without error",
+      "closing credit details returns to the same bank overview without advancing time",
+      "desktop bank overview visually reviewed",
+      "390px and320px checks: no document overflow or clipped tested controls"
+    ],
+    "viewports_css_px": [
+      1040,
+      390,
+      320
+    ]
+  },
+  "regression_scope": "The economic model and banking API were not modified; existing numerical audits remain applicable. No additional economic test suite run for this presentation-only revision."
+}
