@@ -9,6 +9,7 @@ Stand: 2. November 2026. Zentrale Orientierung: [Forschungsprogramm](research/RE
 - [Frameworks und eigener Prüfstand](research/frameworks/README.md).
 - [Entscheidung zur Forschungsrichtung](research/decisions/0001-research-direction.md).
 - [Zielpräzisierung: Investorengesellschaft, Nichtanleger, Zustände und Schocks](research/decisions/0002-world-state-and-shocks.md).
+- [Makroökonomischer Kern: Staat, Banken, Geld, Schulden und sichtbare Modellwelt](research/decisions/0003-macroeconomic-world.md).
 - [Szenarienkatalog: persönliche Ereignisse, Krise, Boom und Zinsphasen](notes/social-financial-world/scenario-catalogue.md).
 - [Kommentierte Literatur](notes/social-financial-world/literature.md) und [Modellkonzept](notes/social-financial-world/model-plan.md).
 - [Quellenregister zu Persönlichkeit, Peer-Effekten und Agentensimulation](sources/social-financial-world-2026-11-02.json).

@@ -1,8 +1,8 @@
 [
   {
     "path": "RESEARCH.md",
-    "bytes": 3773,
-    "sha256": "9cc33949b7d19570dcd7a775e59cc6a4c4d5de0bc90c34675a54981057963038"
+    "bytes": 3906,
+    "sha256": "9b71a91ec79fb78252c94fd73f9203f19297d7209b792be626c66f935f4804b2"
   },
   {
     "path": "mirofish/historical-price-evidence.md",
@@ -466,13 +466,13 @@
   },
   {
     "path": "research/README.md",
-    "bytes": 4524,
-    "sha256": "b23e10d61ae6dc79df80906dcb6be69ce271a426504ef7ab99f1b9efd89b2dcc"
+    "bytes": 4876,
+    "sha256": "f96e1f63d3b6e727301c1460f4dcca3096add6cf276450a7cbb9e6b766975c53"
   },
   {
     "path": "research/assessment-protocol.md",
-    "bytes": 7683,
-    "sha256": "ba6f42556f5bc110488d30c00233bbe4842f9d34e7dc89f654edc304ac8545b1"
+    "bytes": 8748,
+    "sha256": "1eebfae0ecb7358ab54b7096d467ded8501261eca51471cccb593a70f99da2c6"
   },
   {
     "path": "research/decisions/0001-research-direction.md",
@@ -483,6 +483,11 @@
     "path": "research/decisions/0002-world-state-and-shocks.md",
     "bytes": 9598,
     "sha256": "1164c9a9cb3f4dea6d664b501182e9ee057b26f97ab4f51bcd41b2d40d4393f6"
+  },
+  {
+    "path": "research/decisions/0003-macroeconomic-world.md",
+    "bytes": 7499,
+    "sha256": "7961bce28655385e0788395c6158bcc30ab28edad38bcd1e7a98abfa43fa8ed7"
   },
   {
     "path": "research/frameworks/README.md",
@@ -536,8 +541,8 @@
   },
   {
     "path": "research/requirements.md",
-    "bytes": 5999,
-    "sha256": "f289bb27d51bdbf2f8eaa301dce117819cd44c9b05d46ff7b78ae004c11793df"
+    "bytes": 7538,
+    "sha256": "b1fe29c53cf309f18967a93070e469e91812b0daf014f22ff7f783eac09a32f2"
   },
   {
     "path": "sources/README.md",
@@ -598,6 +603,11 @@
     "path": "sources/macro-2026-11-01/world-bank-energy-outlook-october-2026.md",
     "bytes": 12164,
     "sha256": "4804b47a45427d3e3048a8adc23a7df1a955ac2f694c7a3c09e855e9ca38bb08"
+  },
+  {
+    "path": "sources/macroeconomic-world-2026-11-02.json",
+    "bytes": 1543,
+    "sha256": "b6442652ef7fd4df38e209f1cd9d080c37fa7c349ad406c99f1828d375c270f5"
   },
   {
     "path": "sources/silver-survey-index.md",

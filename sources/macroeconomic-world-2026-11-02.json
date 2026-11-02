@@ -1,0 +1,38 @@
+[
+  {
+    "id": "MW01",
+    "title": "Agent based-stock flow consistent macroeconomics: Towards a benchmark model",
+    "url": "https://business.columbia.edu/sites/default/files-efs/imce-uploads/Joseph_Stiglitz/Agent%20based-stock%20flow.pdf",
+    "review_scope": "Selected publisher/author-hosted search excerpt and sector flow figure; no full replication.",
+    "checked_on": "2026-11-02",
+    "own_runtime_test": false,
+    "calibration_parameters_extracted": false
+  },
+  {
+    "id": "MW02",
+    "title": "JMAB and benchmark model",
+    "url": "https://github.com/S120/jmab",
+    "review_scope": "Official README and benchmark README; no installation, license audit or maintenance conclusion.",
+    "checked_on": "2026-11-02",
+    "own_runtime_test": false,
+    "calibration_parameters_extracted": false
+  },
+  {
+    "id": "MW03",
+    "title": "BeforeIT.jl",
+    "url": "https://github.com/bancaditalia/BeforeIT.jl",
+    "review_scope": "Repository overview/README metadata; no source-code screen or own test.",
+    "checked_on": "2026-11-02",
+    "own_runtime_test": false,
+    "calibration_parameters_extracted": false
+  },
+  {
+    "id": "MW04",
+    "title": "Money creation in the modern economy",
+    "url": "https://www.bankofengland.co.uk/quarterly-bulletin/2014/q1/money-creation-in-the-modern-economy",
+    "review_scope": "Official explanatory abstract/search excerpts; monetary background, no model calibration.",
+    "checked_on": "2026-11-02",
+    "own_runtime_test": false,
+    "calibration_parameters_extracted": false
+  }
+]

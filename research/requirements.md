@@ -1,6 +1,6 @@
 # Anforderungen an eine soziale Finanzwelt
 
-Version 1.1 · 2. November 2026 · Bezugsziel: Perspektivübernahme und Selbstreflexion im Workshop.
+Version 1.2 · 2. November 2026 · Bezugsziel: Perspektivübernahme und Selbstreflexion im Workshop.
 
 Die Anforderungen beschreiben benötigte Fähigkeiten, keine vorgegebenen Reaktionen. Kein Framework erhält Punkte dafür, dass seine Personen die erwartete Meinung äußern. Die IDs verbinden Anforderungen, MiroFish-Befunde und spätere Prüfberichte.
 
@@ -47,3 +47,16 @@ Die bisherigen Versuche wurden nach Version 1.0 ausgeführt und werden nicht rü
 | R15 | Resilienz und Anpassung vergleichbar messen | Gleiche Ausgangswelt ohne/mit Schock; verpflichtungsbedingte, freiwillige und bloß sprachliche Änderungen unterscheiden; einfache zustandsbasierte Verhaltensregeln als Vergleich. |
 
 Neuronale Netze sind eine mögliche Entscheidungsarchitektur, keine Mindestanforderung und kein Realitätsnachweis. Neue Modelle erst nach Prüfung vorhandener Implementierungen und empirischer Grundlagen entwickeln.
+
+
+## Ergänzung 1.2 · Makroökonomischer Kern und Workshop-Darstellung
+
+Gilt für neu geplante Prüfungen. [Zielentscheidung 0003](decisions/0003-macroeconomic-world.md). Bestehende Gesprächspiloten werden nicht rückwirkend als Tests dieses Kerns ausgegeben.
+
+| ID | Zusätzliche Mindestanforderung | Geforderter Nachweis |
+|---|---|---|
+| R16 | Gekoppelte Sektoren über Zeit | Haushalte, Unternehmen, Banken, Staat und Zentralbank mit definierten Rollen; Außenbereich oder klare Randbedingungen. Beschäftigung, Konsum und Investitionen anhand gespeicherter Abläufe prüfen. |
+| R17 | Konsistente Bestände und Gegenbuchungen | Transaktionen, Forderungen, Verbindlichkeiten und Veränderungen abstimmen; Geldschöpfung/-tilgung und Bewertungsänderungen explizit zulassen und dokumentieren. Keine Annahme einer konstanten Geldmenge. |
+| R18 | Staatsschulden und monetäre Transmission | Gläubiger, Laufzeiten und Zinsbindung sowie definiertes Geldaggregat speichern; Zinsänderungen mit implementierten Übertragungskanälen prüfen. |
+| R19 | Sichtbare laufende Modellwelt | Grafische oder schematische Darstellung aus tatsächlichen Zuständen/Ereignissen speisen; Zeitschritt, Pause, Wiederholung und Akteurs-/Sektordetails nachvollziehbar. Darstellungsform offen. |
+| R20 | Makroökonomische Modellprüfung | Buchungsidentitäten von Verhaltensannahmen trennen; neutrale Basis, Schockvergleiche, Empfindlichkeit und geeignete empirische Vergleichsmuster dokumentieren. Kein Realitätsnachweis allein aus konsistenten Konten. |

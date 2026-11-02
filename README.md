@@ -17,6 +17,8 @@ Menschen interpretieren dieselbe Nachricht unterschiedlich: Lebenslage, Erfahrun
 - Nachvollziehbare Veränderungen von Einschätzung, Unsicherheit und Handlungsabsicht.
 - Den tatsächlichen Mehrwert von Agentensimulationen gegenüber einfacheren Methoden.
 
+Die [makroökonomische Zielarchitektur](research/decisions/0003-macroeconomic-world.md) umfasst eine laufende Wirtschaft mit Haushalten, Unternehmen, Banken, Staat und Zentralbank. Geld, Schulden, Investitionen und Auswirkungen von Ereignissen sollen rechnerisch nachvollziehbar und im Workshop sichtbar werden. Bestehende Makromodelle sind die nächste Prüfgrundlage; eine Darstellungsform ist noch nicht festgelegt.
+
 Das [präzisierte Ziel](research/decisions/0002-world-state-and-shocks.md) ist eine Modellwelt, in der Belastung, Anpassung und veränderte Beteiligung nachvollziehbar werden. Diese Welt ist noch nicht implementiert oder validiert. Der Schwerpunkt liegt auf Perspektivübernahme und Selbstreflexion. Eine Assetklasse kann als gemeinsamer Gegenstand dienen. Preisprognosen, automatischer Handel und die Optimierung von Renditen sind für das gegenwärtige Lernziel nicht erforderlich.
 
 ## Ausgangspunkt: aus einem gescheiterten Versuch lernen

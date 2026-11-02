@@ -10,6 +10,8 @@ Teilnehmer sollen unterschiedliche Reaktionen auf dieselbe Nachricht verstehen, 
 
 Menschen unterscheiden sich in Lebenslage, Erfahrung und eher beständigen Bedürfnissen. Aktuelle Zustände und Überzeugungen können sich ändern. Austausch soll überwiegend innerhalb plausibler Gruppen stattfinden; öffentliche Medien und einzelne Brückenkontakte verbinden diese Umfelder. Die Personen sollen nicht nur ihre Ausgangsmeinung wiederholen.
 
+Die [weitere Zielpräzisierung 0003](decisions/0003-macroeconomic-world.md) verlangt einen laufenden makroökonomischen Kern mit Staat, Banken, Zentralbank, Geld und Schulden. Vor generativen Erweiterungen sind bestehende Makromodelle und deren Zustands-/Buchungslogik zu prüfen. Die schematische oder räumlichere Workshop-Darstellung bleibt offen.
+
 ## Reihenfolge der Arbeit
 
 1. **Aus dem ersten Versuch lernen:** [MiroFish-Bewertung](frameworks/mirofish.md) und Quellen sichern.
