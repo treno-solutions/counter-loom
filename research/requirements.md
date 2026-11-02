@@ -1,6 +1,6 @@
 # Anforderungen an eine soziale Finanzwelt
 
-Version 1.0 · 2. November 2026 · Bezugsziel: Perspektivübernahme und Selbstreflexion im Workshop.
+Version 1.1 · 2. November 2026 · Bezugsziel: Perspektivübernahme und Selbstreflexion im Workshop.
 
 Die Anforderungen beschreiben benötigte Fähigkeiten, keine vorgegebenen Reaktionen. Kein Framework erhält Punkte dafür, dass seine Personen die erwartete Meinung äußern. Die IDs verbinden Anforderungen, MiroFish-Befunde und spätere Prüfberichte.
 
@@ -32,3 +32,18 @@ Ein lesbarer sozialer Feed, interaktive Szenarien im Workshop und eine Möglichk
 ## Noch offen
 
 Bezugsraum der Bevölkerung, empirische gemeinsame Verteilung der Merkmale, geeignete Messung von Angst und Vertrauen, Umfang einer ersten Fallauswahl, Kostenlimit sowie zulässige Modellanbieter. Diese Punkte vor einem entsprechenden Test festlegen; keine Scheingenauigkeit durch frei erfundene Bevölkerungsquoten oder Einflusskoeffizienten.
+
+
+## Ergänzung 1.1 · Modellwelt und Schocks
+
+Die bisherigen Versuche wurden nach Version 1.0 ausgeführt und werden nicht rückwirkend an neuen Kriterien als gescheitert bezeichnet. Zielpräzisierung: [Entscheidung 0002](decisions/0002-world-state-and-shocks.md).
+
+| ID | Zusätzliche Mindestanforderung | Geforderter Nachweis |
+|---|---|---|
+| R11 | Population einschließlich Nichtanlegern | Bezugsraum, Merkmalsquellen und Auswahl-/Gewichtungsverfahren dokumentieren; keine Repräsentativität aus frei gewählten Archetypen. |
+| R12 | Ökonomische Zustände über Zeit fortschreiben | Einnahmen, Ausgaben, Mittel und Verpflichtungen periodisch konsistent verbuchen; geänderte Zustände beeinflussen spätere Möglichkeiten. |
+| R13 | Schocks mit expliziten Übertragungskanälen | Informationsereignis und wirtschaftlichen Pfad trennen; zum Beispiel Zinsbindung und Kreditart statt gleicher Sofortbelastung aller. |
+| R14 | Eigenständige Entscheidungen unter verbindlichen Grenzen | Strukturierte Handlungsanträge; angenommene und abgelehnte Aktionen sowie realisierte Folgen prüfen. Kein erfundenes Geld oder vorgeschriebener Positionswechsel. |
+| R15 | Resilienz und Anpassung vergleichbar messen | Gleiche Ausgangswelt ohne/mit Schock; verpflichtungsbedingte, freiwillige und bloß sprachliche Änderungen unterscheiden; einfache zustandsbasierte Verhaltensregeln als Vergleich. |
+
+Neuronale Netze sind eine mögliche Entscheidungsarchitektur, keine Mindestanforderung und kein Realitätsnachweis. Neue Modelle erst nach Prüfung vorhandener Implementierungen und empirischer Grundlagen entwickeln.

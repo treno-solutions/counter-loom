@@ -1,0 +1,31 @@
+[
+  {
+    "id": "WS01",
+    "title": "An Agent-based Model for Financial Vulnerability",
+    "url": "https://www.financialresearch.gov/working-papers/2014/07/29/an-agent-based-model-for-financial-vulnerability/",
+    "publication_date": "2014-07-29",
+    "revision_date": "2014-09-10",
+    "review_scope": "Official page and author abstract read; model and code not executed. Institutional funding/collateral model, not household calibration.",
+    "checked_on": "2026-11-02",
+    "calibration_parameters_extracted": false,
+    "used_in_existing_simulation_runs": false
+  },
+  {
+    "id": "WS02",
+    "title": "Large Language Models as Simulated Economic Agents: What Can We Learn from Homo Silicus?",
+    "url": "https://www.nber.org/papers/w31122",
+    "review_scope": "Publisher search excerpt and metadata; direct page returned 403. No complete paper review or calibration extraction.",
+    "checked_on": "2026-11-02",
+    "calibration_parameters_extracted": false,
+    "used_in_existing_simulation_runs": false
+  },
+  {
+    "id": "WS03",
+    "title": "Simulated responses from large language models are weak proxies for human economic preferences across 74 countries",
+    "url": "https://www.nature.com/articles/s41562-026-02611-4",
+    "review_scope": "Publisher search excerpt; direct full page access failed through identity redirect. No complete paper review or calibration extraction.",
+    "checked_on": "2026-11-02",
+    "calibration_parameters_extracted": false,
+    "used_in_existing_simulation_runs": false
+  }
+]

@@ -1,6 +1,6 @@
 # Prüfprotokoll für bestehende Frameworks
 
-Version 1.0 · 2. November 2026. Grundlage: [Anforderungen R01–R10](requirements.md).
+Version 1.1 · 2. November 2026. Grundlage: [Anforderungen R01–R15](requirements.md).
 
 ## Statusmodell
 
@@ -62,3 +62,18 @@ Erst nach technischem und fachlichem Pilot im kleinen Workshop prüfen. Vorher-/
 - **Für Pilot geeignet:** Mindestfunktionen sind praktisch nachgewiesen. Das ist noch keine gesellschaftliche oder pädagogische Validierung.
 
 Jede Entscheidung enthält Belege, Grenzen, tatsächliche Kosten, offene Anforderungen und eine begründete nächste Handlung. [Vorlage](frameworks/_template.md).
+
+
+## Ergänzung 1.1 · Mehrperiodenwelt unter Schocks
+
+Gilt für neu geplante Piloten; die ausgeführten Gesprächsversuche 004/005 bleiben nach ihrem damaligen Design eingeordnet. [Zielentscheidung 0002](decisions/0002-world-state-and-shocks.md).
+
+Vor dem Start Bezugsraum und Fälle einschließlich Nichtanlegern, finanzielle Ausgangszustände, Periodenlänge, Informationskanäle, zulässige Handlungen und Abrechnungsregeln festlegen. Archetypen und Gewichte benötigen Quellen oder eine ausdrückliche Kennzeichnung als hypothetische Auswahl.
+
+Aus identischen Anfangszuständen mindestens eine Welt ohne Schock und eine mit eindeutig spezifiziertem Schock fortführen. Eine Kriegsmeldung zunächst als Informationsereignis behandeln; Energiepreise, Einkommen und weitere wirtschaftliche Folgen als gesonderte Szenariopfade ausweisen. Für Zinsänderungen Einlagen-/Kreditarten und Zinsbindungen berücksichtigen. Keine gewünschte Panik, Umschichtung oder Anpassung vorgeben.
+
+Pro Zeitschritt erhaltene Information, Zustandsauszug, Handlungsantrag, Zulässigkeitsentscheidung, realisierte Folgen und Folgezustand sichern. Beispielsweise reicht „ich brauche bald Geld“ nicht als Nachweis einer Deckungslücke. Eine Deckungslücke erfordert eine nachvollziehbare Rechnung mit den vereinbarten Regeln.
+
+Eine einfache zustandsbasierte regelgesteuerte Variante mit gleichem wirtschaftlichem Kern als Vergleich vorbereiten. Ein direkter Persona-Prompt bleibt eine günstige Vergleichsmethode für Interpretationen, ersetzt aber keine mehrperiodige Kontrolle. Wiederholungen, Modell-/Promptvariation und eine isolierte Änderung je Vergleich einplanen. Erst dann prüfen, ob generative Entscheidungen zusätzlichen nachvollziehbaren Lernstoff liefern.
+
+Neue Abbruchkriterien: inkonsistente Buchungen, verlorene Verpflichtungen, erfundene Mittel, Zugriff auf nicht erhaltene Weltinformationen, nicht reproduzierbare Zustandswiederherstellung oder fehlende Trennung von Absicht und ausgeführter Aktion. Fehlgeschlagene Pfade sichtbar erhalten. Größe und Laufzeit nicht erhöhen, solange diese Mindestfunktionen ungeprüft sind.

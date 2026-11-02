@@ -32,7 +32,7 @@ Counterloom repräsentiert die Forschungsarbeit von Treno Solutions. Das öffent
 - MiroFish ist der erste praktisch untersuchte Ausgangspunkt. Für das angestrebte Erkenntnisziel war der dokumentierte Versuch nicht geeignet; nicht pauschal auf alle Versionen und Anwendungen verallgemeinern.
 - Andere Frameworks sind recherchierte Kandidaten, keine getesteten Empfehlungen. Dokumentationsprüfung, eigener Pilot und Workshop-Validierung getrennt ausweisen.
 - Auf vorhandenen Modellen und offenen Systemen aufbauen. Keine eigene Psychologie, Einflusskoeffizienten oder Plattform entwickeln, bevor vorhandene Ansätze begründet geprüft wurden.
-- Personen, Lebenslagen und soziale Umfelder stehen im Mittelpunkt. Handel und Preisprognosen sind für den aktuellen Workshop-Zweck nicht erforderlich.
+- Personen, Lebenslagen und soziale Umfelder stehen im Mittelpunkt. Reale Finanztransaktionen und Preisprognosen sind für den Workshop-Zweck nicht erforderlich. Die Zielpräzisierung in `research/decisions/0002-world-state-and-shocks.md` verlangt jedoch persistente wirtschaftliche Zustände, äußere Schocks und prüfbare Handlungsfolgen einschließlich möglicher simulierter Bestandsänderungen. Gesprächspiloten allein prüfen dieses Ziel nicht.
 - Meinungsäußerung ist kein Einflussnachweis. Gedächtnis, tatsächlich erhaltene Kontakte und Vorher-/Nachher-Zustände mit Vergleichsbedingungen prüfen.
 - Relativ stabile Bedürfnisse nicht mit unveränderlichen Reaktionen gleichsetzen. Keine Diagnose oder Repräsentativität ohne entsprechende Evidenz behaupten.
 - Archivierte Seeds nicht nachträglich verändern. Neue Entwürfe bis zur Frameworkwahl nicht automatisch starten. Die Forschungsindizes nicht durch fachbezogene Generierungsskripte überschreiben.

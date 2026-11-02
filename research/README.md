@@ -1,12 +1,12 @@
 # Forschungsprogramm: soziale Finanzwelten für Workshops
 
-Stand: 2. November 2026 · Phase: Anforderungen und dokumentierte Ausgangsbewertung.
+Stand: 2. November 2026 · Phase: kleine Gesprächspiloten ausgewertet; Zustandswelt und Schocks als nächster Prüfgegenstand.
 
 Counterloom untersucht, welche bestehenden Modelle und offenen Frameworks eine nachvollziehbare Modellgesellschaft für Finanzbildungs-Workshops ermöglichen. Der Marktvergleich folgt einem gemeinsamen Prüfplan. Ein schönes Netzwerkbild oder ein flüssiger Ergebnisbericht belegt noch keinen sozialen Einfluss.
 
 ## Lernziel und Anwendungsfall
 
-Teilnehmer sollen unterschiedliche Reaktionen auf dieselbe Nachricht verstehen, eigene Bedürfnisse und blinde Flecken reflektieren und sich auch in zunächst fremden Perspektiven wiederfinden. Es geht um Wahrnehmung, Angst, Vertrauen, Unsicherheit und Handlungsabsicht im Umfeld einer Assetklasse. Tatsächliche Käufe, Renditeoptimierung und Marktpreisbildung sind für dieses Ziel nicht erforderlich.
+Teilnehmer sollen unterschiedliche Reaktionen auf dieselbe Nachricht verstehen, eigene Bedürfnisse und blinde Flecken reflektieren und sich auch in zunächst fremden Perspektiven wiederfinden. Es geht um Wahrnehmung, Angst, Vertrauen, Unsicherheit und Handlungsabsicht im Umfeld einer Assetklasse. Die nächste Prüfung richtet sich auf eine über mehrere Perioden fortgeschriebene Investorengruppe einschließlich Nichtanlegern, äußere Schocks und veränderte Handlungsmöglichkeiten. Simulierte Bestände und Zahlungsströme sind dafür relevant; reale Käufe, Renditeoptimierung und endogene Marktpreisbildung sind zunächst nicht erforderlich. [Zieldefinition und Architekturhypothese](decisions/0002-world-state-and-shocks.md).
 
 Menschen unterscheiden sich in Lebenslage, Erfahrung und eher beständigen Bedürfnissen. Aktuelle Zustände und Überzeugungen können sich ändern. Austausch soll überwiegend innerhalb plausibler Gruppen stattfinden; öffentliche Medien und einzelne Brückenkontakte verbinden diese Umfelder. Die Personen sollen nicht nur ihre Ausgangsmeinung wiederholen.
 

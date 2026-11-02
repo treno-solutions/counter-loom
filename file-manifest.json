@@ -1,8 +1,8 @@
 [
   {
     "path": "RESEARCH.md",
-    "bytes": 3511,
-    "sha256": "733fd220823927ddabd6995c0923696d165d644ae67de79c086bcac9351b4ccf"
+    "bytes": 3646,
+    "sha256": "5e77ed55639352cb924b236c69bee1a6096d70d413cc2a09381b40e102496658"
   },
   {
     "path": "mirofish/historical-price-evidence.md",
@@ -86,8 +86,8 @@
   },
   {
     "path": "notes/social-financial-world/model-plan.md",
-    "bytes": 6729,
-    "sha256": "0ac3f55e1e023366493730820401de91c9e2796869e004dae0fa630e06aae2f3"
+    "bytes": 7068,
+    "sha256": "19610cc045ba29c032175c4f3e25518202f56f373dc9eb125979f60e13f6f629"
   },
   {
     "path": "processed/energy-monthly-prices.csv",
@@ -461,18 +461,23 @@
   },
   {
     "path": "research/README.md",
-    "bytes": 3995,
-    "sha256": "8ccb2314cf617aa36cc8db0d878ec60c768151f1415d89e30755ed17f494a39b"
+    "bytes": 4370,
+    "sha256": "668759062daa7ec44db8c833421a31baebf91ae3a49a82d7e8583f97854749c8"
   },
   {
     "path": "research/assessment-protocol.md",
-    "bytes": 5552,
-    "sha256": "6551036423b261e99e2caf5f1fa46a70ef013323402637103d6799d30ece7753"
+    "bytes": 7683,
+    "sha256": "ba6f42556f5bc110488d30c00233bbe4842f9d34e7dc89f654edc304ac8545b1"
   },
   {
     "path": "research/decisions/0001-research-direction.md",
     "bytes": 2506,
     "sha256": "0f18c206b849e45cc0100d7c3b5ebaee3c364867aa15f9334c41d103faac1af5"
+  },
+  {
+    "path": "research/decisions/0002-world-state-and-shocks.md",
+    "bytes": 9306,
+    "sha256": "10b718343a85005ed1399bb781b2d5be3908f305adc0dd7f502d1bb3628fe297"
   },
   {
     "path": "research/frameworks/README.md",
@@ -526,8 +531,8 @@
   },
   {
     "path": "research/requirements.md",
-    "bytes": 4387,
-    "sha256": "7577eacc3a141f7d0a832771e972e348435034a637fb9d9ba9e3aa127a1048c4"
+    "bytes": 5999,
+    "sha256": "f289bb27d51bdbf2f8eaa301dce117819cd44c9b05d46ff7b78ae004c11793df"
   },
   {
     "path": "sources/README.md",
@@ -613,6 +618,11 @@
     "path": "sources/world-bank-commodity-markets.md",
     "bytes": 11135,
     "sha256": "dd607c72226a3f8fa96d9bb621d1e476910751737f0710189b852e4c898fe4d6"
+  },
+  {
+    "path": "sources/world-state-and-shocks-2026-11-02.json",
+    "bytes": 1529,
+    "sha256": "109d01294031f2abb0791597e5e8341d56f1b6ec83d33af8840cad47a727dc0c"
   },
   {
     "path": "tools/assemble_evidence.py",

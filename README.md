@@ -8,13 +8,16 @@ Menschen interpretieren dieselbe Nachricht unterschiedlich: Lebenslage, Erfahrun
 
 ## Was wir untersuchen
 
+- Eine abgegrenzte Investorengruppe einschließlich Nichtanlegern mit unterschiedlichen Lebenslagen.
+- Über Zeit fortgeschriebene finanzielle Zustände und eigenständige Entscheidungen unter realistischen Möglichkeiten.
+- Äußere Schocks wie Zinsänderungen oder geopolitische Ereignisse mit dokumentierten Übertragungskanälen.
 - Individuelle Personas mit Hintergrund und veränderlichen Überzeugungen.
 - Nachrichten und Informationen, die unterschiedliche Menschen unterschiedlich wahrnehmen.
 - Austausch in plausiblen sozialen Gruppen und über einzelne Brückenkontakte.
 - Nachvollziehbare Veränderungen von Einschätzung, Unsicherheit und Handlungsabsicht.
 - Den tatsächlichen Mehrwert von Agentensimulationen gegenüber einfacheren Methoden.
 
-Der Schwerpunkt liegt auf Perspektivübernahme und Selbstreflexion. Eine Assetklasse kann als gemeinsamer Gegenstand dienen. Preisprognosen, automatischer Handel und die Optimierung von Renditen sind für das gegenwärtige Lernziel nicht erforderlich.
+Das [präzisierte Ziel](research/decisions/0002-world-state-and-shocks.md) ist eine Modellwelt, in der Belastung, Anpassung und veränderte Beteiligung nachvollziehbar werden. Diese Welt ist noch nicht implementiert oder validiert. Der Schwerpunkt liegt auf Perspektivübernahme und Selbstreflexion. Eine Assetklasse kann als gemeinsamer Gegenstand dienen. Preisprognosen, automatischer Handel und die Optimierung von Renditen sind für das gegenwärtige Lernziel nicht erforderlich.
 
 ## Ausgangspunkt: aus einem gescheiterten Versuch lernen
 
