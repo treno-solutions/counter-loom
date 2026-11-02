@@ -10,6 +10,10 @@ Stand: 2. November 2026. Die Tabelle unterscheidet dokumentierte Fähigkeiten vo
 | [AgentSociety](https://github.com/tsinghua-fib-lab/AgentSociety) | `documentation_reviewed`; kein eigener Pilot | `unassessed`; Version 1 und 2 auseinanderhalten | Passende Version und erforderliche Komponenten bestimmen |
 | [OASIS](https://github.com/camel-ai/oasis) | Paper/Projekt recherchiert; kein isolierter eigener Test | `unassessed`; Basissystem unter MiroFish, kein unabhängiger Erfolgsnachweis | Nur als eigene technische Basis bewerten, falls dafür begründeter Bedarf besteht |
 
+## Neue Priorität: System Dynamics und reduzierte Lernmodule
+
+Gemäß [Bauplan](../../BUILD_PLAN.md) wird [BPTK-Py](https://github.com/transentis/bptk_py) als erster SD-/Hybridkandidat technisch geprüft. Stand: offizielle Dokumentation gesichtet, kein eigener Runtime-Test und keine abschließende Auswahl. [Minsky](https://minsky.sourceforge.io/manual/Ravel/node221.html) ist ein sichtbares Finanzfluss-Vorbild. [BeforeIT.jl](https://github.com/bancaditalia/BeforeIT.jl) und [JMAB](https://github.com/S120/jmab) bleiben wirtschaftliche Referenzen für spätere, fachlich nötige Erweiterungen. Die Gesprächstests oben sind keine Tests dieses neuen Modellkerns.
+
 ## Bereits recherchiert, aber anderer Schwerpunkt
 
 [MarketAgents, Trading Floor, FinMem und TradingAgents](../../notes/persona-research-and-paper-trading-projects-2026-11-02.md) wurden wegen Recherche, Gedächtnis und simuliertem Handel betrachtet. Ausgeführte Käufe sind für den präzisierten Workshop-Zweck nicht erforderlich. Diese Projekte bleiben Vergleichsmaterial, keine priorisierte Auswahl für eine Bevölkerungssimulation.

@@ -4,6 +4,8 @@ Stand: 2. November 2026. Zentrale Orientierung: [Forschungsprogramm](research/RE
 
 ## Aktueller Schwerpunkt: soziale Finanzwelt für Workshops
 
+- [Konsolidierter Bauplan: System Dynamics, verbundene Systeme und gezielte LLM-Entscheidungen](BUILD_PLAN.md).
+
 - [Anforderungen und Lernziel](research/requirements.md).
 - [Prüfprotokoll für den Marktvergleich](research/assessment-protocol.md).
 - [Frameworks und eigener Prüfstand](research/frameworks/README.md).

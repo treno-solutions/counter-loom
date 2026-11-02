@@ -6,6 +6,8 @@ Counterloom ist ein Forschungsprojekt von [Treno Solutions](https://github.com/t
 
 Menschen interpretieren dieselbe Nachricht unterschiedlich: Lebenslage, Erfahrungen, Sicherheitsbedürfnis und Vertrauen prägen ihre Sicht. Unser aktueller Forschungsfokus ist eine kleine soziale Finanzwelt, in der solche Unterschiede und gegenseitiger Einfluss sichtbar werden. Teilnehmer sollen fremde Perspektiven verstehen und die eigenen Reaktionen reflektieren können.
 
+Der [Bauplan](BUILD_PLAN.md) konsolidiert das Ziel als reduziertes Lernmodell: verbundene Systeme von der schematischen Weltwirtschaft bis zur persönlichen Investmententscheidung, bevorzugt mit System Dynamics, algorithmischen Routinen und gezielten LLM-Entscheidungen. Die Umsetzung beginnt mit einem kleinen überprüfbaren Zusammenhang; Darstellung und Framework sind noch offen.
+
 ## Was wir untersuchen
 
 - Eine abgegrenzte Investorengruppe einschließlich Nichtanlegern mit unterschiedlichen Lebenslagen.
@@ -33,6 +35,7 @@ Wir erfinden keine eigene Simulationsplattform, bevor vorhandene Ansätze geprü
 
 | Einstieg | Inhalt |
 |---|---|
+| [Bauplan](BUILD_PLAN.md) | Architektur, Etappen, Prüfungen und nächste konkrete Arbeit |
 | [Forschungsprogramm](research/README.md) | Ziel, Abgrenzung und Reihenfolge der Arbeit |
 | [Anforderungen](research/requirements.md) | Benötigte Fähigkeiten mit Herkunft und prüfbaren Nachweisen |
 | [Prüfprotokoll](research/assessment-protocol.md) | Vergleichbare kleine Tests vor weiteren großen Läufen |

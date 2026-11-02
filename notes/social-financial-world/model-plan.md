@@ -4,6 +4,8 @@ Status: Entwurf, 2. November 2026. Dieser Plan ist kein ausgeführtes oder valid
 
 Die [Zielpräzisierung 0002](../../research/decisions/0002-world-state-and-shocks.md) ergänzt diesen ursprünglichen Gesprächsplan um Nichtanleger, persistente finanzielle Zustände, Mehrperiodenabläufe und äußere Schocks. Die unten beschriebene Dialogprüfung ist ein Teiltest, kein vollständiger Test der gewünschten Modellwelt.
 
+Der aktuelle übergreifende [Bauplan](../../BUILD_PLAN.md) und [Entscheidung 0004](../../research/decisions/0004-reduced-hybrid-learning-model.md) ersetzen diesen ursprünglichen Gesprächsplan als Umsetzungsreihenfolge. Die folgenden Abschnitte bleiben als dokumentierter früherer Entwurf erhalten.
+
 ## Bestehende Ansätze statt einer neuen Plattform
 
 | Grundlage | Dokumentierter Ansatz | Eignung und offene Frage |

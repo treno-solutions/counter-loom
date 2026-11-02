@@ -1,8 +1,13 @@
 [
   {
+    "path": "BUILD_PLAN.md",
+    "bytes": 18653,
+    "sha256": "e4aeeec67f1f483b88ce9ed8e2542a8b397a8b175bdd0743368452072bf7346e"
+  },
+  {
     "path": "RESEARCH.md",
-    "bytes": 3906,
-    "sha256": "9b71a91ec79fb78252c94fd73f9203f19297d7209b792be626c66f935f4804b2"
+    "bytes": 4019,
+    "sha256": "b96683af968c1bdadd09b0cc7786c5a8de40144c67f065bfdee0566089d14677"
   },
   {
     "path": "mirofish/historical-price-evidence.md",
@@ -86,8 +91,8 @@
   },
   {
     "path": "notes/social-financial-world/model-plan.md",
-    "bytes": 7068,
-    "sha256": "19610cc045ba29c032175c4f3e25518202f56f373dc9eb125979f60e13f6f629"
+    "bytes": 7370,
+    "sha256": "0d2d357b53e837e3ca923e4fcb54c4237bbb5c08cc967662bc092765fdfeb012"
   },
   {
     "path": "notes/social-financial-world/scenario-catalogue.md",
@@ -466,13 +471,13 @@
   },
   {
     "path": "research/README.md",
-    "bytes": 4876,
-    "sha256": "f96e1f63d3b6e727301c1460f4dcca3096add6cf276450a7cbb9e6b766975c53"
+    "bytes": 5153,
+    "sha256": "998761a24bb0b90986eab535cca7a925b992efb178068c511ba63d447808f1ea"
   },
   {
     "path": "research/assessment-protocol.md",
-    "bytes": 8748,
-    "sha256": "1eebfae0ecb7358ab54b7096d467ded8501261eca51471cccb593a70f99da2c6"
+    "bytes": 9768,
+    "sha256": "b3802601d518232f0c4e2be821a2d5a9ae6cc510a146f5dd77d93171b3a04765"
   },
   {
     "path": "research/decisions/0001-research-direction.md",
@@ -490,9 +495,14 @@
     "sha256": "7961bce28655385e0788395c6158bcc30ab28edad38bcd1e7a98abfa43fa8ed7"
   },
   {
+    "path": "research/decisions/0004-reduced-hybrid-learning-model.md",
+    "bytes": 3328,
+    "sha256": "2b67f542a9896d0712a046c5d7711e55cb069d011bccb451501dc87e53893291"
+  },
+  {
     "path": "research/frameworks/README.md",
-    "bytes": 3809,
-    "sha256": "6f904aac7ea74818a1aece437fd410c8061d0940f7c55086f06a25fae8b04fe9"
+    "bytes": 4475,
+    "sha256": "8e40374e51478042769e99be6e2cf6c74908810284b2976da66065cdf08f7434"
   },
   {
     "path": "research/frameworks/_template.md",
@@ -541,8 +551,8 @@
   },
   {
     "path": "research/requirements.md",
-    "bytes": 7538,
-    "sha256": "b1fe29c53cf309f18967a93070e469e91812b0daf014f22ff7f783eac09a32f2"
+    "bytes": 9133,
+    "sha256": "23e57c213b3cfc3275d901283bc28555f89965787b9b2238bcebd852ad241cc4"
   },
   {
     "path": "sources/README.md",
@@ -558,6 +568,11 @@
     "path": "sources/fred-dfii10.md",
     "bytes": 12064,
     "sha256": "d9148ef4fc3824927f857ec4c7b94278124f67264db7372d4e37566ec4b4934a"
+  },
+  {
+    "path": "sources/hybrid-learning-model-2026-11-02.json",
+    "bytes": 1737,
+    "sha256": "389b60431e52abcceffae96e1201aff7e3035efbd9ee02e5dfd1b3495ce2269f"
   },
   {
     "path": "sources/iea-critical-minerals-2026.md",
@@ -641,8 +656,8 @@
   },
   {
     "path": "tools/assemble_evidence.py",
-    "bytes": 34602,
-    "sha256": "6133d01fa5b59ade34c6025cf70cbd8aafe11db0253b11261b3d6c2dae8d75a0"
+    "bytes": 34618,
+    "sha256": "eb00681d29340157c6fcf69b341c4544d6401cad3834b5ba7d1828a3a862b965"
   },
   {
     "path": "tools/check_concordia_pilot_workflow.py",

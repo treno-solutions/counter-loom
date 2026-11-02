@@ -1,0 +1,47 @@
+[
+  {
+    "id": "HL01",
+    "title": "BPTK-Py overview",
+    "url": "https://bptk.transentis.com/",
+    "checked_on": "2026-11-02",
+    "review_scope": "Official documentation overview: SD, ABM, hybrid models and Beer Game library examples.",
+    "own_runtime_test": false,
+    "calibration_parameters_extracted": false
+  },
+  {
+    "id": "HL02",
+    "title": "Hybrid ABM and SD models",
+    "url": "https://bptk.transentis.com/quickstart/hybrid/hybrid.html",
+    "checked_on": "2026-11-02",
+    "review_scope": "Official hybrid quickstart page inspected; no runtime execution.",
+    "own_runtime_test": false,
+    "calibration_parameters_extracted": false
+  },
+  {
+    "id": "HL03",
+    "title": "BPTK-Py Agent API",
+    "url": "https://bptk.transentis.com/api/api_agent.html",
+    "checked_on": "2026-11-02",
+    "review_scope": "Official API inspected for states, scheduled actions, event handling and serialization; no runtime test.",
+    "own_runtime_test": false,
+    "calibration_parameters_extracted": false
+  },
+  {
+    "id": "HL04",
+    "title": "Minsky Godley Tables",
+    "url": "https://minsky.sourceforge.io/manual/Ravel/node221.html",
+    "checked_on": "2026-11-02",
+    "review_scope": "Selected official manual search excerpt; no installation or integration.",
+    "own_runtime_test": false,
+    "calibration_parameters_extracted": false
+  },
+  {
+    "id": "HL05",
+    "title": "Transmission mechanism",
+    "url": "https://www.ecb.europa.eu/mopo/intro/transmission/html/index.de.html",
+    "checked_on": "2026-11-02",
+    "review_scope": "Official description of channels and long, variable, uncertain lags; no calibration extracted.",
+    "own_runtime_test": false,
+    "calibration_parameters_extracted": false
+  }
+]

@@ -1,6 +1,6 @@
 # Prüfprotokoll für bestehende Frameworks
 
-Version 1.2 · 2. November 2026. Grundlage: [Anforderungen R01–R20](requirements.md).
+Version 1.3 · 2. November 2026. Grundlage: [Anforderungen R01–R24](requirements.md).
 
 ## Statusmodell
 
@@ -84,3 +84,10 @@ Neue Abbruchkriterien: inkonsistente Buchungen, verlorene Verpflichtungen, erfun
 [Zielentscheidung 0003](decisions/0003-macroeconomic-world.md) verlangt zusätzlich den Nachweis eines über Sektoren gekoppelten Kerns. Vor einer generativen Erweiterung vorhandene Makromodelle auf Konten, Gegenbuchungen, Staatsschulden, Kredit-/Geldschöpfung, Zinsübertragung und messbare Investitionen prüfen. Wirtschaftliche Verhaltensgleichungen, institutionelle Regeln und empirische Kalibrierung getrennt erfassen. Eine makroökonomische Basis zunächst mit ihren vorhandenen Entscheidungen reproduzieren; LLM-Entscheidungen danach als begrenzte, vergleichbare Erweiterung betrachten. Kein automatischer Rechenlauf durch diese Protokolländerung.
 
 Die Oberfläche ist eine Projektion tatsächlich berechneter Zustände und Ereignisse. Schematische Sektorboxen mit aktivierten Verbindungen und räumliche Ansichten bleiben Optionen. Ursache, Periode, Größe und Empfänger jeder dargestellten Wirkung müssen überprüfbar sein; eine vorgefertigte Animation ersetzt den Modelllauf nicht.
+
+
+## Ergänzung 1.3 · Lernumfang begrenzt, Kernel zuerst algorithmisch
+
+[Entscheidung 0004](decisions/0004-reduced-hybrid-learning-model.md) priorisiert System Dynamics mit Ereignis-/Zustandsmodellen und optionalen generativen Entscheidungen. Die in Ergänzung 1.2 geforderte Prüfung einer vollständigen Makrogrundlage ist kein zwingender erster Schritt mehr. Prüfumfang und Aussagen müssen zum gewählten Lernmodul passen; ausgelassene Sektoren oder Mechanismen sichtbar benennen.
+
+Zuerst vorhandene SD-/Hybridwerkzeuge gegen einen kleinen fachlichen Durchstich prüfen. Routinen und Folgen ohne LLM testen, anschließend eine begrenzte Entscheidung anbinden. Ereignisrelevanz, aufgelaufene Änderungen und geplante Reviews getrennt prüfen, damit eingesparte Anfragen keine schleichenden Entwicklungen unsichtbar machen. Obergrenzen umfassen auch Diagnose- und Wiederholungsaufrufe. Replay benötigt keine erneuten Modellentscheidungen; echte Wiederholungen dürfen nicht unbemerkt aus einem Antwortcache kommen.

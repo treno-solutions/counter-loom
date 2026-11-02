@@ -28,6 +28,8 @@ Counterloom repräsentiert die Forschungsarbeit von Treno Solutions. Das öffent
 
 ## Aktuelle Forschungsphase
 
+- `BUILD_PLAN.md` und `research/decisions/0004-reduced-hybrid-learning-model.md` sind die aktuelle konsolidierte Richtung. Bevorzugt System Dynamics mit algorithmischem Kern und sparsamen LLM-Entscheidungen prüfen. Der erste Lernpfad erfordert keine vollständige Welt-/Volkswirtschaft. Die genannten Ereignisse sind Beispiele; Grafik und konkretes Lernmodul sind noch offen.
+
 - `research/README.md`, `research/requirements.md` und `research/assessment-protocol.md` bilden die Arbeitsgrundlage. Vor neuen Framework-Piloten zuerst die MiroFish-Befunde und die daraus abgeleiteten Anforderungen berücksichtigen.
 - MiroFish ist der erste praktisch untersuchte Ausgangspunkt. Für das angestrebte Erkenntnisziel war der dokumentierte Versuch nicht geeignet; nicht pauschal auf alle Versionen und Anwendungen verallgemeinern.
 - Andere Frameworks sind recherchierte Kandidaten, keine getesteten Empfehlungen. Dokumentationsprüfung, eigener Pilot und Workshop-Validierung getrennt ausweisen.

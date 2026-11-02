@@ -1,6 +1,6 @@
 # Anforderungen an eine soziale Finanzwelt
 
-Version 1.2 · 2. November 2026 · Bezugsziel: Perspektivübernahme und Selbstreflexion im Workshop.
+Version 1.3 · 2. November 2026 · Bezugsziel: Perspektivübernahme und Selbstreflexion im Workshop.
 
 Die Anforderungen beschreiben benötigte Fähigkeiten, keine vorgegebenen Reaktionen. Kein Framework erhält Punkte dafür, dass seine Personen die erwartete Meinung äußern. Die IDs verbinden Anforderungen, MiroFish-Befunde und spätere Prüfberichte.
 
@@ -60,3 +60,15 @@ Gilt für neu geplante Prüfungen. [Zielentscheidung 0003](decisions/0003-macroe
 | R18 | Staatsschulden und monetäre Transmission | Gläubiger, Laufzeiten und Zinsbindung sowie definiertes Geldaggregat speichern; Zinsänderungen mit implementierten Übertragungskanälen prüfen. |
 | R19 | Sichtbare laufende Modellwelt | Grafische oder schematische Darstellung aus tatsächlichen Zuständen/Ereignissen speisen; Zeitschritt, Pause, Wiederholung und Akteurs-/Sektordetails nachvollziehbar. Darstellungsform offen. |
 | R20 | Makroökonomische Modellprüfung | Buchungsidentitäten von Verhaltensannahmen trennen; neutrale Basis, Schockvergleiche, Empfindlichkeit und geeignete empirische Vergleichsmuster dokumentieren. Kein Realitätsnachweis allein aus konsistenten Konten. |
+
+
+## Ergänzung 1.3 · Reduziertes Systemmodell und sparsame Generierung
+
+Aktuelle Priorität: [Entscheidung 0004](decisions/0004-reduced-hybrid-learning-model.md) und [Bauplan](../BUILD_PLAN.md). R16–R20 beschreiben den beanspruchten fachlichen Erweiterungsrahmen. Ein erstes Lernmodul muss seinen tatsächlich abgebildeten Ausschnitt offenlegen; eine vollständige Welt- oder Volkswirtschaft ist dafür nicht erforderlich. Frühere Beispielereignisse legen keine Umsetzung fest.
+
+| ID | Zusätzliche Mindestanforderung | Geforderter Nachweis |
+|---|---|---|
+| R21 | Verbundene Systemebenen bis zur Investmententscheidung | Vom schematischen Außenrahmen über wirtschaftliche Möglichkeiten bis zum persönlichen Antrag und realisierten Ergebnis navigieren. Aggregate und Details zählen Bestände nicht doppelt. |
+| R22 | Algorithmischer Kern und gezielte generative Entscheidungen | Laufende Routinen ohne LLM ausführbar; Entscheidungsauslöser, kumulative Veränderungen, Kontextzugriff, Anfrage-/Token-/Zeitbudget und Abbruchfälle dokumentiert. |
+| R23 | Reduktion und schrittweise fachliche Verfeinerung | Systemgrenze und ausgelassene Kanäle je Lernmodul benennen; bekannte Identitäten, Verhaltensannahmen und frei gesetzte Parameter trennen. Grafischer Zoom verändert den berechneten Zustand nicht. |
+| R24 | Nachvollziehbare Abwägung als Lernergebnis | Damalige Information, finanzielle Möglichkeit, Persona, Alternativen, Antrag, Prüfung und Folge aufzeichnen. Neue Reflexionsfragen gegenüber einfachen Fallaufgaben prüfen; kein vorgegebenes „richtiges“ Investment. |
