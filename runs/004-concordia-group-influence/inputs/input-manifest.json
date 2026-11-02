@@ -1,8 +1,8 @@
 [
   {
     "path": "inputs/design.json",
-    "bytes": 1181,
-    "sha256": "d9d25e8b8fb20c779a6404a5415899cbc6bae20049edd548cb6441fa13d02de8"
+    "bytes": 1895,
+    "sha256": "4d16f3929569565077a87953adca62350b935cdb3205b6dffa3b90a0fb42508a"
   },
   {
     "path": "inputs/people.json",
@@ -16,7 +16,7 @@
   },
   {
     "path": "inputs/start-check.md",
-    "bytes": 679,
-    "sha256": "dedaf1441d110f4f0c8d8d33d84070682c486451d4bfd2fa932b697680209498"
+    "bytes": 754,
+    "sha256": "1c10749b2bda334a0e121e131940210275a342970b63ea807ece3e1a11215a19"
   }
 ]

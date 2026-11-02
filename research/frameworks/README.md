@@ -6,7 +6,7 @@ Stand: 2. November 2026. Die Tabelle unterscheidet dokumentierte Fähigkeiten vo
 |---|---|---|---|
 | [MiroFish](mirofish.md) | Erster Methodenversuch und Bericht ausgewertet; Originalartefakte nur teilweise vorhanden | `unsuitable_for_current_goal` in getesteter Konfiguration | Kein weiterer großer Lauf; nur bei gezieltem Nachweis geschlossener Lücken neu betrachten |
 | [TinyTroupe](tinytroupe.md) | `documentation_reviewed`; fünf isolierte Quellcode-Grenzprüfungen, kein Persona-Pilot | `conditional`; Probleme im Netzwerkpfad | Getrennte Gruppenräume oder begrenzte Anpassung prüfen |
-| [Concordia](concordia.md) | `documentation_reviewed`; lokal installiert, 140 ausgewählte Upstream-Tests und drei eigene Forum-Prüfungen | `conditional`; vorrangiger Kandidat für begrenzten Verhaltenstest | [Versuch 004](../../runs/004-concordia-group-influence/README.md) technisch vorbereitet; Modellanbindung fehlt |
+| [Concordia](concordia.md) | `pilot_tested`; 140 ausgewählte Upstream-Tests, drei Forum-Prüfungen und ein kleiner Personenvergleich | `conditional`; technische Machbarkeit, geringer inhaltlicher Mehrwert | [Versuch 004 auswerten](../../runs/004-concordia-group-influence/analysis/evaluation.md); keine Vergrößerung ohne zusätzlichen Nutzen |
 | [AgentSociety](https://github.com/tsinghua-fib-lab/AgentSociety) | `documentation_reviewed`; kein eigener Pilot | `unassessed`; Version 1 und 2 auseinanderhalten | Passende Version und erforderliche Komponenten bestimmen |
 | [OASIS](https://github.com/camel-ai/oasis) | Paper/Projekt recherchiert; kein isolierter eigener Test | `unassessed`; Basissystem unter MiroFish, kein unabhängiger Erfolgsnachweis | Nur als eigene technische Basis bewerten, falls dafür begründeter Bedarf besteht |
 

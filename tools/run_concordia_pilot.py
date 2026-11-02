@@ -67,6 +67,8 @@ class BoundedHTTPModel(language_model.LanguageModel):
         body={'model':self.model,'messages':[{'role':'user','content':prompt}],token_param:min(max_tokens,self.design['max_output_tokens_per_call'])}
         if os.environ.get('CONCORDIA_SEND_SAMPLING','true')=='true':
             body.update(temperature=.7,top_p=.95)
+        if self.design.get('disable_thinking'):
+            body['extra_body']={'chat_template_kwargs':{'enable_thinking':False}}
         if terminators:body['stop']=list(terminators)
         headers={'Content-Type':'application/json'}
         if self.key:headers['Authorization']='Bearer '+self.key
@@ -77,6 +79,7 @@ class BoundedHTTPModel(language_model.LanguageModel):
                 data=json.load(response)
             choice=data['choices'][0]
             text=choice['message']['content']
+            record.update(resolved_model=data.get('model'),usage=data.get('usage'),finish_reason=choice.get('finish_reason'),thinking_disabled_requested=bool(self.design.get('disable_thinking')))
             if not isinstance(text,str) or not text.strip():raise ValueError('Empty model response.')
             record.update(response=text,resolved_model=data.get('model'),usage=data.get('usage'),finish_reason=choice.get('finish_reason'))
             if choice.get('finish_reason')=='length':
@@ -138,8 +141,8 @@ def main():
     for pid,a in actors.items():
         a.set_state(copy.deepcopy(initial[pid]));assert digest(a.get_state())==digest(initial[pid])
     if args.verify_only:
-        write(ROOT/'qa/concordia-pilot-readiness.json',{'checked_on':'2026-11-02','passed':True,'people':8,'groups':2,'input_checksums':'passed','group_observation_isolation':'passed','state_round_trip':'passed','llm_calls':0,'live_run_ready':False,'missing':'functional model connection and provider budget','limits':'Technical setup only; no simulated opinions generated.'})
-        print('Technical preparation verified; no model calls. Model connection still required.');return
+        write(ROOT/'qa/concordia-pilot-readiness.json',{'checked_on':'2026-11-02','passed':True,'people':8,'groups':2,'input_checksums':'passed','group_observation_isolation':'passed','state_round_trip':'passed','llm_calls':0,'model_access_checked':False,'scope':'offline preflight only; model access and budget require separate verification','limits':'Technical setup only; no simulated opinions generated.'})
+        print('Offline preparation verified; no model calls. Model access was not checked by this command.');return
     if args.output.exists():parser.error('Output exists; choose a fresh attempt directory. No result overwrite.')
     # Validate connection configuration before creating a result directory.
     model=BoundedHTTPModel(design,args.output/'model-calls.jsonl')
@@ -184,7 +187,7 @@ def main():
             for p in people:act(p['id'],agents[p['id']],scenario['assessment_question'],condition+'/final')
             write(args.output/(condition+'-states.json'),{pid:a.get_state() for pid,a in agents.items()})
             status['conditions'].append(condition);write(args.output/'status.json',status)
-        assert model.calls==40
+        assert model.calls==design['planned_text_calls']
         status['execution_status']='completed'
     except Exception as err:
         status.update(execution_status='failed',error_type=type(err).__name__)

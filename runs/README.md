@@ -8,10 +8,8 @@ Vorbereitung und Mindestanforderungen: [zentrale Seed- und Recherchevorlage](../
 |---|---|---|
 | [001-first-simulation](001-first-simulation/README.md) | Erster MiroFish-Methodenversuch, Bericht und Prüfvermerk teilweise archiviert | Erkenntnisziel verfehlt; für aktuellen Workshop-Zweck ungeeignet |
 | [002-permissionless-finance](002-permissionless-finance/README.md) | The Future of Permissionless Finance: 2026–2040; eigenständiger Seed, Evidenz und acht offene Hypothesen | `prepared_for_import` für qualitative Erkundung; noch nicht importiert oder ausgeführt |
-
 | [003-sentiment-and-investment](003-sentiment-and-investment/README.md) | Konzept für Personas und Sentiment; noch kein ausgeführter Lauf | Zurückgestellt bis zur Frameworkprüfung |
-
-| [004-concordia-group-influence](004-concordia-group-influence/README.md) | Acht fiktive Personen, zwei Gruppen, Vergleich mit/ohne Austausch; technisch vorbereitet | Modellanbindung ausstehend; keine generativen Ergebnisse |
+| [004-concordia-group-influence](004-concordia-group-influence/README.md) | Acht fiktive Personen, zwei Gruppen, Vergleich mit/ohne Austausch | Abgeschlossen; 32 Modellantworten, geringer Mehrwert; kein kausaler Einflussnachweis |
 
 Aktuelle Reihenfolge: [MiroFish-Auswertung](../research/frameworks/mirofish.md), [Anforderungen](../research/requirements.md) und [Frameworkprüfung](../research/assessment-protocol.md) vor weiteren Piloten. Vorbereitete Seeds sind keine Startfreigabe.
 

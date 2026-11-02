@@ -7,7 +7,7 @@
   "group_observation_isolation": "passed",
   "state_round_trip": "passed",
   "llm_calls": 0,
-  "live_run_ready": false,
-  "missing": "functional model connection and provider budget",
+  "model_access_checked": false,
+  "scope": "offline preflight only; model access and budget require separate verification",
   "limits": "Technical setup only; no simulated opinions generated."
 }

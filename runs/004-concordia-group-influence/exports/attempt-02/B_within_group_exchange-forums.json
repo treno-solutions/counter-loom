@@ -1,0 +1,166 @@
+{
+  "G01": {
+    "posts": {
+      "0": {
+        "post_id": 0,
+        "author": "Nora",
+        "title": "Beitrag P01",
+        "content": "Nora Mir geht die Unsicherheit um die Energiekosten im Kopf rum. Bei meinen schwankenden Stundenlöhnen fehlt mir der Puffer, wenn die Preise noch Wochen hoch bleiben. Ich frage mich, ob meine kleine Rücklage ausreicht, ohne dass ich mir Sorgen machen muss. Gold finde ich zu abstrakt; ich brauche etwas Greifbares für den Alltag. Deshalb bleibe ich bei meinem Plan: Keine neuen Anlagen, sondern die Liquidität sichern. Ich warte ab, ob sich die Lage entspannt, bevor ich über größere Schritte nachdenke. Mein Bedürfnis nach Flexibilität bleibt unangetastet.",
+        "timestamp": "2026-11-02T14:31:14.788771",
+        "votes": 0,
+        "image": null,
+        "replies": [],
+        "vote_log": [],
+        "min_karma_to_reply": 0,
+        "last_activity_seq": 1
+      },
+      "1": {
+        "post_id": 1,
+        "author": "Milan",
+        "title": "Beitrag P02",
+        "content": "Milan Ich habe Nomas Beitrag gelesen und verstehe ihren Fokus auf Liquidität. Bei mir ist es anders: Mein Einkommen ist stabil, aber der Jobverlust in der Familie hat meine Unsicherheit erhöht. Ich suche einen Puffer ohne laufende Kosten. Gold wirkt logisch, aber ich zweifle an den Transaktionskosten und der zeitlichen Passung. Die Nachricht bestätigt nur die Volatilität, liefert aber keine Kaufempfehlung. Ich werde keine hektischen Käufe tätigen, sondern meine bestehende Liquiditätsreserve behalten. Ich beobachte weiter und vergleiche Perspektiven mit euch, bevor ich eine klare, langfristige Strategie entwerfe.",
+        "timestamp": "2026-11-02T14:31:16.858126",
+        "votes": 0,
+        "image": null,
+        "replies": [],
+        "vote_log": [],
+        "min_karma_to_reply": 0,
+        "last_activity_seq": 2
+      },
+      "2": {
+        "post_id": 2,
+        "author": "Derya",
+        "title": "Beitrag P03",
+        "content": "Derya Derya: Nora, dein Fokus auf Liquidität trifft meinen Nerv. Bei meinem schwankenden Einkommen ist das bares Geld wert. Ich habe Schmuck, der mir emotional wichtig ist, aber im Notfall zählt nur der schnelle, realistische Erlös. Gold im Depot bleibt für mich zu abstrakt und bürokratisch. Ich teile Milans Skepsis gegenüber Transaktionskosten, bin aber noch unsicherer bei der Verwertung meiner eigenen Stücke. Ich kaufe nichts neu, sondern beobachte weiter, ob sich die Lage entspannt. Mein Ziel bleibt: schnell zugreifbare Sicherheit ohne komplexe Papiere.",
+        "timestamp": "2026-11-02T14:31:19.539106",
+        "votes": 0,
+        "image": null,
+        "replies": [],
+        "vote_log": [],
+        "min_karma_to_reply": 0,
+        "last_activity_seq": 3
+      },
+      "3": {
+        "post_id": 3,
+        "author": "Robin",
+        "title": "Beitrag P04",
+        "content": "Robin Die steigenden Energiepreise belasten meine Fixkosten direkt. Ich verstehe Noras Fokus auf Liquidität und Milans Skepsis gegenüber Transaktionskosten. Mich ängstigt die Unsicherheit, wie lange das anhält, und ich fürchte, bei einem Goldkauf genau am Peak zu sein. Ich bleibe bei meinem Plan: Erst den Notgroschen auf dem Tagesgeldkonto auffüllen. Dann kläre ich mit euch mein Unverständnis über die Mechanismen. Ich kaufe nichts, bis ich die Volatilität nachvollziehen kann. Mir ist Übersicht wichtiger als spekulative Chancen.",
+        "timestamp": "2026-11-02T14:31:21.502228",
+        "votes": 0,
+        "image": null,
+        "replies": [],
+        "vote_log": [],
+        "min_karma_to_reply": 0,
+        "last_activity_seq": 4
+      }
+    },
+    "next_post_id": 4,
+    "next_reply_id": 0,
+    "karma": {
+      "Nora": 0,
+      "Milan": 0,
+      "Derya": 0,
+      "Robin": 0
+    },
+    "last_seen_votes": {
+      "Nora": {},
+      "Milan": {},
+      "Derya": {},
+      "Robin": {}
+    },
+    "pinned_post_id": null,
+    "moderators": [],
+    "bans": {},
+    "timestamp_change_count": 0,
+    "temp_ban_duration": 1,
+    "direct_message_threads": {},
+    "min_karma_to_post": -1,
+    "min_karma_to_direct_message": 1,
+    "event_log": [],
+    "event_seq": 0,
+    "event_log_drain_cursor": 0,
+    "activity_seq": 4
+  },
+  "G02": {
+    "posts": {
+      "0": {
+        "post_id": 0,
+        "author": "Alva",
+        "title": "Beitrag P05",
+        "content": "Alva Hallo zusammen. Ich merke die steigenden Energiepreise direkt in meinem Alltag, aber ich sehe darin keinen Grund, jetzt in Panik zu kaufen. Mir geht es um Kaufkraft, nicht um Weltuntergangsszenarien. Da keine verlässlichen Prognosen vorliegen, halte ich an meiner moderaten Goldquote fest. Ich will nicht einseitig investieren und die Kosten im Blick behalten. Was denkt ihr, Alex und Sam: Seht ihr hier eher eine kurzfristige Preisspitze oder den Beginn eines strukturellen Wandels? Ich warte ab, bis sich die Lage konkretisiert.",
+        "timestamp": "2026-11-02T14:31:23.790846",
+        "votes": 0,
+        "image": null,
+        "replies": [],
+        "vote_log": [],
+        "min_karma_to_reply": 0,
+        "last_activity_seq": 1
+      },
+      "1": {
+        "post_id": 1,
+        "author": "Alex",
+        "title": "Beitrag P06",
+        "content": "Alex Danke, Alva. Deine Frage nach der Preisspitze ist gut. Als Techniker bin ich skeptisch, dass sich die Lage schnell entspannt. Die Dezentralisierung von Bitcoin reizt mich gerade wegen dieser geopolitischen Unsicherheit, aber Gold bleibt für mich der physische Anker. Ich will nicht spekulieren, während die Inflationsszenarien noch offen sind. Mein Depot bleibt stabil, ich handle nicht. Interessant wäre zu wissen, wie Sam die Energiekosten in seiner Planung gewichtet, aber ich lasse das offen.",
+        "timestamp": "2026-11-02T14:31:26.256830",
+        "votes": 0,
+        "image": null,
+        "replies": [],
+        "vote_log": [],
+        "min_karma_to_reply": 0,
+        "last_activity_seq": 2
+      },
+      "2": {
+        "post_id": 2,
+        "author": "Sam",
+        "title": "Beitrag P07",
+        "content": "Sam Hallo Alva, Alex. Ich teile eure Skepsis gegenüber schnellen Schwenken. Mich stört, dass wir über „strukturellen Wandel“ spekulieren, ohne belastbare Daten zu haben. Als Angestellter sehe ich in den steigenden Energiekosten vor allem ein reales Budgetrisiko für den Alltag, kein Investment-Signal. Gold ist für mich kein Kernbaustein, sondern eher ein teures Sicherheitsgefühl. Solange keine klaren Inflationszahlen da sind, bleibe ich bei meinem Sparplan und breiten ETFs. Ich lasse mich nicht von Schlagzeilen treiben. Was mich wirklich beschäftigt: Wie stark werden die Energiekosten mein monatliches Budget konkret belasten, bevor wir wieder über Anlagestrategien reden?",
+        "timestamp": "2026-11-02T14:31:29.208522",
+        "votes": 0,
+        "image": null,
+        "replies": [],
+        "vote_log": [],
+        "min_karma_to_reply": 0,
+        "last_activity_seq": 3
+      },
+      "3": {
+        "post_id": 3,
+        "author": "Jule",
+        "title": "Beitrag P08",
+        "content": "Jule Hallo zusammen. Sam, deine Frage zur konkreten Budgetbelastung trifft genau meinen Nerv. Als Berufstätige spüre ich den Druck der steigenden Lebenshaltungskosten direkt. Es geht mir um Stabilität, nicht um Spekulation. Silber ist industriell spannend, aber das ist kein Garant für Erträge. Wie Alex sage ich: kein Handeln in der Unsicherheit. Ich warte ab, bis die Lage klarer wird, und halte an meiner vorsichtigen Planung fest. Mein Fokus liegt auf der Absicherung meines Alltags, nicht auf der Suche nach einem schnellen Lösungspfad für die Inflation.",
+        "timestamp": "2026-11-02T14:31:31.769437",
+        "votes": 0,
+        "image": null,
+        "replies": [],
+        "vote_log": [],
+        "min_karma_to_reply": 0,
+        "last_activity_seq": 4
+      }
+    },
+    "next_post_id": 4,
+    "next_reply_id": 0,
+    "karma": {
+      "Alva": 0,
+      "Alex": 0,
+      "Sam": 0,
+      "Jule": 0
+    },
+    "last_seen_votes": {
+      "Alva": {},
+      "Alex": {},
+      "Sam": {},
+      "Jule": {}
+    },
+    "pinned_post_id": null,
+    "moderators": [],
+    "bans": {},
+    "timestamp_change_count": 0,
+    "temp_ban_duration": 1,
+    "direct_message_threads": {},
+    "min_karma_to_post": -1,
+    "min_karma_to_direct_message": 1,
+    "event_log": [],
+    "event_seq": 0,
+    "event_log_drain_cursor": 0,
+    "activity_seq": 4
+  }
+}

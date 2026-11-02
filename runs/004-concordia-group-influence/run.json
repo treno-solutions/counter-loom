@@ -5,19 +5,41 @@
   "framework": "Concordia",
   "framework_commit": "f1d3ae6da20b32f686cefc13458cafc695c3b6a2",
   "protocol_version": "1.0",
-  "readiness_status": "draft",
-  "execution_status": "not_started",
-  "blocking_condition": "awaiting_model_connection",
+  "readiness_status": "executed_exploratory_pilot",
+  "execution_status": "completed",
+  "blocking_condition": null,
   "prepared_on": "2026-11-02",
-  "model": null,
-  "provider": null,
-  "llm_calls": 0,
-  "exports": [],
+  "model": "local:default",
+  "provider": "user_provided_local_litellm",
+  "llm_calls": 32,
+  "exports": [
+    "exports/attempt-01",
+    "exports/connection-probe.json",
+    "exports/attempt-02"
+  ],
   "input_manifest": "inputs/input-manifest.json",
   "notes": [
-    "Configured Ollama model listing failed during preparation. No API key configured in this task environment.",
-    "No invented conversations or simulated findings are stored."
+    "Attempt-01 stopped after one response without visible content; its artifacts are preserved.",
+    "One short connection probe succeeded with thinking disabled.",
+    "Attempt-02 completed using the user-provided model server; private credentials and endpoint are excluded.",
+    "One discussion round; 32 requests in the completed attempt, 34 including the failed request and connection probe.",
+    "No independent monetary or energy measurement; no causal influence or workshop validity established."
   ],
   "technical_preflight": "passed",
-  "technical_workflow_test": "passed_with_stub_not_generative"
+  "technical_workflow_test": "passed_with_stub_not_generative",
+  "current_attempt": "attempt-02",
+  "prior_attempts": [
+    {
+      "id": "attempt-01",
+      "status": "failed_empty_visible_response",
+      "requests": 1
+    }
+  ],
+  "total_request_attempts_including_probe_and_failure": 34,
+  "elapsed_seconds": 92.88,
+  "token_usage_successful_attempt": {
+    "prompt_tokens": 25319,
+    "completion_tokens": 5427,
+    "total_tokens": 30746
+  }
 }

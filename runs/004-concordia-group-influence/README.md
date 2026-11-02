@@ -1,38 +1,32 @@
 # 004 · Erster Concordia-Gruppenversuch
 
-Vorbereitung: 2. November 2026 · Status: **Modellanbindung ausstehend; keine generativen Ergebnisse**.
+2. November 2026 · Status: **Explorativer Personenversuch abgeschlossen; kein Einflussnachweis.**
 
-## Frage
+Acht fiktive Personen in zwei Gruppen interpretieren eine hypothetische geopolitische Eskalation mit steigenden Energiepreisen. Nach der gemeinsamen Ausgangsbefragung werden ihre gespeicherten Zustände in zwei Bedingungen wiederhergestellt:
 
-Welche Unterschiede entstehen, wenn dieselben Personen dieselbe Nachricht zunächst allein und anschließend mit beziehungsweise ohne Austausch in ihrem eigenen Gesprächskreis betrachten? Eine Veränderung ist nicht vorgeschrieben. Angst, Unsicherheit, Absicht und Lebenslage werden sprachlich getrennt erfragt.
+- A: neutrale Schlussbefragung ohne Austausch.
+- B: eine Gesprächsrunde innerhalb der jeweiligen Vierergruppe, dann dieselbe Schlussbefragung.
 
-## Begrenzter Aufbau
+## Ergebnis und Grenzen
 
-Acht ausdrücklich fiktive Personen in zwei Gruppen. Eine hypothetische Nachricht, eine gemeinsame Ausgangsbefragung, gespeicherte Zustände, danach zwei unabhängige Bedingungen:
+32 Modellantworten in 92,88 Sekunden; acht Beiträge mit 24 Zustellungen ausschließlich innerhalb der Gruppen. Gleiche Ausgangszustände beider Bedingungen technisch bestätigt. Alle acht Personen bleiben bei ihrer bisherigen Handlungsabsicht. Einige beziehen sich ausdrücklich auf erhaltene Beiträge, ohne erkennbaren Strategiewechsel. Das zeigt aufgenommene Gesprächsinhalte, keinen isolierten kausalen Einfluss.
 
-- A: dieselben Ausgangspersonen ohne neue Beiträge; abschließende neutrale Befragung.
-- B: dieselben Ausgangspersonen mit zwei Gesprächsrunden nur innerhalb ihres jeweiligen Kreises; identische Schlussbefragung.
+Der Erkenntnisgewinn bleibt klein. Bereits die Ausgangsantworten konvergieren stark auf Abwarten. Ein größerer Lauf ist damit noch nicht begründet. Siehe die [Auswertung mit Einzelbelegen](analysis/evaluation.md).
 
-Das sind insgesamt höchstens 40 Textaufrufe mit je höchstens 400 Ausgabetokens, ohne automatische Wiederholungen. Ein Anbieterzugang und gegebenenfalls ein monetäres Budget müssen vor der Ausführung feststehen. Der bereits konfigurierte Ollama-Zugang war bei der Vorbereitung nicht funktionsfähig; es wurde kein Ersatzdienst mit unbekannten Kosten gestartet.
+## Eingaben und Belege
 
-## Eingaben und Technik
+- [Fiktive Fälle und Gruppen](inputs/people.json), [Nachricht und neutrale Fragen](inputs/scenario.json), [Design](inputs/design.json), [Startprüfung](inputs/start-check.md).
+- [Unveränderter Eingabesnapshot des erfolgreichen Versuchs](exports/attempt-02/input-snapshot.json).
+- [Alle Personenantworten](exports/attempt-02/responses.json), [Modellaufrufe mit Prompts](exports/attempt-02/model-calls.jsonl), [Zustellungen](exports/attempt-02/B_within_group_exchange-deliveries.json), [Forumzustände](exports/attempt-02/B_within_group_exchange-forums.json).
+- [Ausführungsstatus und Tokenverbrauch](exports/attempt-02/status.json), [Laufmetadaten](run.json), [Artefaktprüfsummen](artifact-manifest.json).
+- [Ablaufskript](../../tools/run_concordia_pilot.py), [Offline-Workflowtest](../../tools/check_concordia_pilot_workflow.py), [Prüfergebnis](../../qa/concordia-pilot-workflow-test.json).
 
-- [Fiktive Fälle und Gruppen](inputs/people.json).
-- [Nachricht und neutrale Fragen](inputs/scenario.json).
-- [Design und Grenzen](inputs/design.json).
-- [Auswertungsplan](analysis/evaluation.md).
-- [Startprüfung](inputs/start-check.md).
-- [Ablaufskript](../../tools/run_concordia_pilot.py), [technischer Workflowtest](../../tools/check_concordia_pilot_workflow.py) und [Prüfergebnis](../../qa/concordia-pilot-workflow-test.json).
-- [Laufmetadaten](run.json).
+## Technik und Ressourcen
 
-Verwendet werden vorhandene Concordia-Agenten, Beobachtungs-/Gedächtniskomponenten und getrennte Foren. Ein dünner Ablauf koordiniert die Bedingungen; er modelliert keine eigenen psychologischen Einflusskoeffizienten. Der minimale Agentenbaustein reduziert Kosten, ist aber nicht mit der umfangreicheren Reflexionsarchitektur gleichzusetzen.
+Concordia 2.4.0, Quellstand `f1d3ae6da20b32f686cefc13458cafc695c3b6a2`; bestehendes minimales Personen-Prefab und getrennte `ForumState`-Instanzen. Der eigene Ablauf koordiniert Zustellung und Vergleich, ohne psychologische Einflusskoeffizienten. Das Gedächtnis nutzt jüngste Beobachtungen; ein konstanter Speichervektor ist keine semantische Suche. Die umfangreichere Reflexionsarchitektur wird nicht geprüft.
 
-Ein einzelner Lauf kann interessante Fälle und technische Machbarkeit zeigen. Er ist kein kausaler Nachweis realer gesellschaftlicher Reaktionen und keine pädagogische Validierung. Die Reihenfolge der Beiträge ist dokumentiert und kann selbst Ergebnisse beeinflussen.
+Modellalias `local:default`, angebunden über den vom Nutzer bereitgestellten kompatiblen Modellserver. Die Anbieter-Metadaten ordneten den Alias bei der Prüfung `openai/qwen3.8:27b-fp8` zu; Modellgewichte und interne Route wurden nicht unabhängig verifiziert. Die Aufrufprotokolle erhalten die vom Server gemeldete Modellkennung. Temperatur 0,7, top_p 0,95, maximal 400 Ausgabetokens, Denken über die Chat-Template-Einstellung deaktiviert, keine automatischen Wiederholungen. Kein festgelegter Generierungsseed; keine exakte Textreproduzierbarkeit behauptet.
 
-## Technischer Vorlauf
+Der [erste Versuch](exports/attempt-01/status.json) stoppte nach einer leeren sichtbaren Antwort. Die Ursache ist nicht belegt. Ein [kurzer Verbindungstest](exports/connection-probe.json) mit deaktiviertem Denken lieferte Text. Danach wurde die Gesprächszahl von zwei auf eine Runde reduziert. Insgesamt wurden 34 reale Anfragen einschließlich Fehlversuch und Probe ausgeführt, unter der ursprünglichen Obergrenze von 40. Jede Variante besitzt einen eigenen Eingabesnapshot; der Fehlversuch bleibt erhalten. Die gemessenen Tokens des erfolgreichen Versuchs stehen in `run.json`; der Verbrauch des Fehlversuchs ist unbekannt. Stromverbrauch und Geldkosten wurden nicht separat gemessen.
 
-Der vollständige Ablauf wurde mit der echten Concordia-Bibliothek und einem lokalen Transport-Testdouble geprüft: 40 technische Antwortaufrufe, identische Ausgangszustände der beiden Bedingungen, 48 dokumentierte Zustellungen ausschließlich innerhalb der jeweiligen Gruppe und gespeicherte Endzustände. Das Testdouble erzeugt ausdrücklich keine Personenmeinungen. Diese Daten sind keine Simulationsergebnisse; die temporären Testantworten wurden nicht im Ergebnisarchiv abgelegt.
-
-Der minimale Personenbaustein nutzt die jüngsten Beobachtungen. Der technische Speicher verwendet einen konstanten Vektor; semantische Ähnlichkeitssuche wird in diesem Pilot nicht beansprucht. Eine spätere Reflexions- oder semantische Gedächtnisvariante wäre ein eigener Vergleich.
-
-Für den Modellzugang liest das Ablaufskript nur lokal konfigurierte Umgebungsvariablen `CONCORDIA_BASE_URL`, `CONCORDIA_MODEL` und gegebenenfalls `CONCORDIA_API_KEY`. Keine Zugangsdaten in Dokumente oder Commits übernehmen. Der Transport erwartet eine kompatible Chat-Completions-Schnittstelle. Provider, tatsächliche Modellkennung, unterstützte Tokenbegrenzung und bei kostenpflichtigen Diensten ein Preis-/Budgetabgleich bleiben vor dem Start zu klären.
+Modellzugang nur über lokale Umgebungsvariablen `CONCORDIA_BASE_URL`, `CONCORDIA_MODEL` und gegebenenfalls `CONCORDIA_API_KEY`. Private Adresse und Zugangsdaten werden nicht veröffentlicht.

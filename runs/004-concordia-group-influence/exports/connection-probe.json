@@ -1,0 +1,19 @@
+{
+  "classification": "connection_probe_not_persona_result",
+  "input": "Antworte ausschließlich mit OK.",
+  "requested_output_limit": 120,
+  "thinking_disabled_requested": true,
+  "status": 200,
+  "resolved_model": "local:default",
+  "usage": {
+    "completion_tokens": 2,
+    "prompt_tokens": 19,
+    "total_tokens": 21,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "content": "OK",
+  "auxiliary_reasoning_present": false
+}

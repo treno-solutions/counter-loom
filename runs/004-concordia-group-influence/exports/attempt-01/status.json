@@ -1,0 +1,12 @@
+{
+  "execution_status": "failed",
+  "llm_calls": 1,
+  "model": "local:default",
+  "provider": "configured_openai_compatible_endpoint",
+  "endpoint_redacted": true,
+  "framework_commit": "f1d3ae6da20b32f686cefc13458cafc695c3b6a2",
+  "conditions": [],
+  "error_type": "ValueError",
+  "usage": [],
+  "elapsed_seconds": 5.33
+}

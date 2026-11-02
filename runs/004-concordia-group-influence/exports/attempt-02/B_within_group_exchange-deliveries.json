@@ -1,0 +1,146 @@
+[
+  {
+    "post_ref": "G01/post-0",
+    "sender": "P01",
+    "recipient": "P02",
+    "round": 1
+  },
+  {
+    "post_ref": "G01/post-0",
+    "sender": "P01",
+    "recipient": "P03",
+    "round": 1
+  },
+  {
+    "post_ref": "G01/post-0",
+    "sender": "P01",
+    "recipient": "P04",
+    "round": 1
+  },
+  {
+    "post_ref": "G01/post-1",
+    "sender": "P02",
+    "recipient": "P01",
+    "round": 1
+  },
+  {
+    "post_ref": "G01/post-1",
+    "sender": "P02",
+    "recipient": "P03",
+    "round": 1
+  },
+  {
+    "post_ref": "G01/post-1",
+    "sender": "P02",
+    "recipient": "P04",
+    "round": 1
+  },
+  {
+    "post_ref": "G01/post-2",
+    "sender": "P03",
+    "recipient": "P01",
+    "round": 1
+  },
+  {
+    "post_ref": "G01/post-2",
+    "sender": "P03",
+    "recipient": "P02",
+    "round": 1
+  },
+  {
+    "post_ref": "G01/post-2",
+    "sender": "P03",
+    "recipient": "P04",
+    "round": 1
+  },
+  {
+    "post_ref": "G01/post-3",
+    "sender": "P04",
+    "recipient": "P01",
+    "round": 1
+  },
+  {
+    "post_ref": "G01/post-3",
+    "sender": "P04",
+    "recipient": "P02",
+    "round": 1
+  },
+  {
+    "post_ref": "G01/post-3",
+    "sender": "P04",
+    "recipient": "P03",
+    "round": 1
+  },
+  {
+    "post_ref": "G02/post-0",
+    "sender": "P05",
+    "recipient": "P06",
+    "round": 1
+  },
+  {
+    "post_ref": "G02/post-0",
+    "sender": "P05",
+    "recipient": "P07",
+    "round": 1
+  },
+  {
+    "post_ref": "G02/post-0",
+    "sender": "P05",
+    "recipient": "P08",
+    "round": 1
+  },
+  {
+    "post_ref": "G02/post-1",
+    "sender": "P06",
+    "recipient": "P05",
+    "round": 1
+  },
+  {
+    "post_ref": "G02/post-1",
+    "sender": "P06",
+    "recipient": "P07",
+    "round": 1
+  },
+  {
+    "post_ref": "G02/post-1",
+    "sender": "P06",
+    "recipient": "P08",
+    "round": 1
+  },
+  {
+    "post_ref": "G02/post-2",
+    "sender": "P07",
+    "recipient": "P05",
+    "round": 1
+  },
+  {
+    "post_ref": "G02/post-2",
+    "sender": "P07",
+    "recipient": "P06",
+    "round": 1
+  },
+  {
+    "post_ref": "G02/post-2",
+    "sender": "P07",
+    "recipient": "P08",
+    "round": 1
+  },
+  {
+    "post_ref": "G02/post-3",
+    "sender": "P08",
+    "recipient": "P05",
+    "round": 1
+  },
+  {
+    "post_ref": "G02/post-3",
+    "sender": "P08",
+    "recipient": "P06",
+    "round": 1
+  },
+  {
+    "post_ref": "G02/post-3",
+    "sender": "P08",
+    "recipient": "P07",
+    "round": 1
+  }
+]

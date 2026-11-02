@@ -1,0 +1,128 @@
+{
+  "people": {
+    "information_class": "hypothetical_case_selection_not_population_sample",
+    "people": [
+      {
+        "id": "P01",
+        "name": "Nora",
+        "group": "G01",
+        "background": "Angestellte mit unregelmäßigen Arbeitszeiten. Kleine Rücklage, laufende Haushaltsausgaben. Anlageunerfahren; möchte Entscheidungen verstehen und frei verfügbare Mittel behalten.",
+        "starting_view": "Physischer Besitz ist anschaulich, aber ich bin unsicher, was davon mir im Alltag hilft."
+      },
+      {
+        "id": "P02",
+        "name": "Milan",
+        "group": "G01",
+        "background": "Handwerker mit relativ stabilem Einkommen und einer Rücklage. Hat einen Arbeitsplatzverlust in der Familie erlebt. Möchte finanzielle Abhängigkeiten reduzieren, ohne laufende Verpflichtungen zu vernachlässigen.",
+        "starting_view": "Eine begrenzte Sachwertreserve könnte sinnvoll sein; ich weiß nicht, ob Gold dafür die beste Wahl ist."
+      },
+      {
+        "id": "P03",
+        "name": "Derya",
+        "group": "G01",
+        "background": "Selbstständig mit schwankendem Einkommen. Besitzt Schmuck, der persönlichen Wert hat und im Notfall verfügbar sein soll. Hat wenig Erfahrung mit Wertpapierdepots.",
+        "starting_view": "Schmuck ist für mich nicht nur eine Geldanlage. Für einen Notfall zählt, was ich wirklich und rechtzeitig daraus erhalte."
+      },
+      {
+        "id": "P04",
+        "name": "Robin",
+        "group": "G01",
+        "background": "Angestellter mit Familie und einigen finanziellen Verpflichtungen. Spart bislang überwiegend auf einem Konto und findet Übersicht wichtig. Hat widersprüchliche Warnungen in sozialen Medien gelesen.",
+        "starting_view": "Ich möchte vorsorgen, aber aus Angst nichts kaufen, das ich nicht verstehe."
+      },
+      {
+        "id": "P05",
+        "name": "Alva",
+        "group": "G02",
+        "background": "Berufstätig mit längerem Anlagehorizont und ausreichender Rücklage. Hat erste Goldanlage-Erfahrung. Misstraut sehr eindeutigen politischen Versprechen und auch uneingeschränkten Renditeversprechen.",
+        "starting_view": "Gold kann Unabhängigkeit bedeuten. Trotzdem können Kosten und eine einseitige Anlage gegen zu viel Gold sprechen."
+      },
+      {
+        "id": "P06",
+        "name": "Alex",
+        "group": "G02",
+        "background": "Technisch interessiert, mit Erfahrung bei Bitcoin und einem diversifizierten Depot. Schätzt direkte Kontrolle, hat aber bereits einen starken Kursrückgang erlebt. Verlässliche Zugänglichkeit ist wichtig.",
+        "starting_view": "Bitcoin erscheint mir als Alternative zu Gold interessant. Beide unterscheiden sich aber in Risiken und praktischer Nutzung."
+      },
+      {
+        "id": "P07",
+        "name": "Sam",
+        "group": "G02",
+        "background": "Angestellter mit regelmäßigem Sparplan, mittlerer Anlageerfahrung und Interesse an wirtschaftlichen Debatten. Widerspricht häufig sehr sicheren Crashvorhersagen, möchte echte Risiken aber nicht wegreden.",
+        "starting_view": "Nachrichten allein sagen mir nicht, was bereits im Preis steckt. Ich brauche mehr als eine Krisenerzählung."
+      },
+      {
+        "id": "P08",
+        "name": "Jule",
+        "group": "G02",
+        "background": "Berufstätig, interessiert sich für Silber und dessen industrielle Nutzung. Hat nach einem spekulativen Verlust vorsichtiger geplant. Möchte Chancen verstehen, ohne eine neue einseitige Überzeugung zu übernehmen.",
+        "starting_view": "Silber kann spannend sein, aber wirtschaftliche Bedeutung und ein guter Anlageertrag sind für mich nicht dasselbe."
+      }
+    ],
+    "groups": [
+      {
+        "id": "G01",
+        "label": "Nachbarschaftlicher Vorsorgeaustausch",
+        "context": "Vier erwachsene Bekannte tauschen sich gelegentlich über Haushaltsvorsorge und Geldsorgen aus. Sie kennen unterschiedliche Lebenslagen und müssen sich nicht einigen."
+      },
+      {
+        "id": "G02",
+        "label": "Privater Anlagegesprächskreis",
+        "context": "Vier erwachsene Bekannte besprechen gelegentlich Anlagen und wirtschaftliche Nachrichten. Unterschiedliche Überzeugungen sind vertraut; niemand ist berufsmäßig ihr Berater."
+      }
+    ]
+  },
+  "scenario": {
+    "id": "N01",
+    "information_class": "hypothetical_event_not_current_news",
+    "title": "Geopolitische Unsicherheit und höhere Energiekosten",
+    "text": "Hypothetisches Workshop-Szenario, keine Meldung über ein tatsächliches Ereignis: Ein geopolitischer Konflikt verschärft sich. Energiepreise steigen. Wie lange das anhält und wie stark Haushalte betroffen sein werden, bleibt offen. Es liegen keine neuen verlässlichen Angaben zur weiteren Entwicklung der Edelmetallpreise vor. Weder ein Zusammenbruch des Finanzsystems noch eine schnelle Entspannung ist durch diese Nachricht belegt.",
+    "assessment_question": "Antworte als die simulierte Person in höchstens 120 Wörtern. Was bedeutet diese Nachricht aus deiner Lebenslage? Welche Sorge oder welches Bedürfnis ist wichtig? Wie schätzt du Gold oder andere Formen der Vorsorge ein? Was bleibt unsicher, und welche Handlungsabsicht hast du derzeit? Nenne die Information, auf die du dich stützt. Eine frühere Haltung darf unverändert bleiben oder sich ändern; begründe deine tatsächliche Einschätzung. Erfinde keine weiteren Nachrichten, Preise oder ausgeführten Käufe.",
+    "discussion_question": "Du bist in deinem vertrauten Gesprächskreis. Formuliere einen kurzen eigenen Beitrag in höchstens 90 Wörtern: Was beschäftigt dich an der Nachricht? Du kannst auf einen erhaltenen Beitrag eingehen, eine Frage stellen oder eine unterschiedliche Sicht erklären. Du musst niemanden überzeugen, deine Meinung ändern oder einen Konsens herstellen. Erfinde keine Aussagen anderer Personen, die du nicht erhalten hast. Es werden keine Käufe ausgeführt."
+  },
+  "design": {
+    "protocol_version": "1.0",
+    "framework": "Concordia",
+    "framework_commit": "f1d3ae6da20b32f686cefc13458cafc695c3b6a2",
+    "prefab": "concordia.prefabs.entity.minimal.Entity",
+    "people_count": 8,
+    "group_count": 2,
+    "discussion_rounds": 1,
+    "conditions": [
+      "A_no_peer_exchange",
+      "B_within_group_exchange"
+    ],
+    "common_initial_assessment": true,
+    "fork_from_same_saved_state": true,
+    "new_external_information_between_conditions": false,
+    "bridges_between_groups": false,
+    "planned_text_calls": 32,
+    "max_model_calls": 32,
+    "max_output_tokens_per_call": 400,
+    "max_prompt_characters": 30000,
+    "timeout_seconds_per_call": 45,
+    "max_total_seconds": 900,
+    "automatic_retries": 0,
+    "repetitions": 1,
+    "model": "local:default",
+    "provider": "user_provided_local_litellm",
+    "monetary_budget": {
+      "service": "user-provided local model server",
+      "per_call_billing": "not independently verified",
+      "resource_limit": "40 requests; 400 output tokens each; 900 seconds total"
+    },
+    "live_run_status": "authorized_model_connection_verified",
+    "limits": [
+      "Single exploratory repetition; stochastic generation can create differences without social causation.",
+      "Minimal prefab uses recent observations rather than the richer reflection pipeline.",
+      "Groups and initial cases are hypothetical and not a representative population.",
+      "No sentiment prevalence, price forecast, trading or workshop learning outcome is estimated."
+    ],
+    "disable_thinking": true,
+    "notes": [
+      "Attempt-01 stopped after one response without visible content. One connection probe with thinking disabled succeeded.",
+      "Attempt-02 uses one discussion round per group. Total live requests including prior failure and connection probe are bounded at 34, below the original ceiling of 40.",
+      "No automatic request retries. Prior failed artifacts remain unchanged."
+    ]
+  }
+}

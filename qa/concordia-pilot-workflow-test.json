@@ -2,12 +2,12 @@
   "checked_on": "2026-11-02",
   "classification": "offline_technical_test_with_stub_transport_not_simulation_results",
   "passed": true,
-  "stub_http_requests": 40,
+  "stub_http_requests": 32,
   "actual_generative_model_calls": 0,
   "conditions_start_identically": true,
-  "delivered_peer_messages": 48,
+  "delivered_peer_messages": 24,
   "cross_group_deliveries": 0,
-  "response_records": 40,
+  "response_records": 32,
   "saved_final_states": true,
   "generative_opinions_produced": false
 }

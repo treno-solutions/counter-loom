@@ -1,8 +1,8 @@
 [
   {
     "path": "RESEARCH.md",
-    "bytes": 3204,
-    "sha256": "426dc50b41b2554100b4da2809a3f739ab8a06f4499ca9fc47783b0375ed087e"
+    "bytes": 3343,
+    "sha256": "ccefa1bd0c5745dc372889e420e61bbefa3820fc51c3c22e8be41ba0b33ecfbd"
   },
   {
     "path": "mirofish/historical-price-evidence.md",
@@ -236,13 +236,13 @@
   },
   {
     "path": "qa/concordia-pilot-readiness.json",
-    "bytes": 366,
-    "sha256": "6c6595748d4ed8302eb09b81bf600703b253ecbafa81839e96990f4880090e2a"
+    "bytes": 400,
+    "sha256": "fedc34acc6b8ce9ebeb0ed3f629b602bc3726d231a9604118aa9fc400f998d9d"
   },
   {
     "path": "qa/concordia-pilot-workflow-test.json",
     "bytes": 407,
-    "sha256": "dec895657d87d689b4f7517aa57f887c9f624041787069fea1243dff72295941"
+    "sha256": "51bbc2dae563ab5f8ac80624d1b9c4dabd116267850585d82f146adcd0ae4b1c"
   },
   {
     "path": "qa/conversion-and-validation.md",
@@ -451,8 +451,8 @@
   },
   {
     "path": "research/README.md",
-    "bytes": 3811,
-    "sha256": "408d897a1624e612880ad9a0cdb2d9efbfe226876a37ee26cb9741e78a6b5c33"
+    "bytes": 3794,
+    "sha256": "dcbdcdb51d3781d38df3c618e1ec44a3fd09978dd1c71b00b1f4266c6f443772"
   },
   {
     "path": "research/assessment-protocol.md",
@@ -466,8 +466,8 @@
   },
   {
     "path": "research/frameworks/README.md",
-    "bytes": 3039,
-    "sha256": "a6aad621e7eafd17b9602ee145180f7e68f6f17d82fb0b190b54f896a3f019d3"
+    "bytes": 3063,
+    "sha256": "f35ea12de4ccfb9c9caa97030df8497559c1736d6ae4937c7bc045b0c783b8bb"
   },
   {
     "path": "research/frameworks/_template.md",
@@ -476,8 +476,8 @@
   },
   {
     "path": "research/frameworks/concordia.md",
-    "bytes": 5844,
-    "sha256": "2e28c768dc0284116df459b89f2108dac1533658ffc8507e464ce58b8391a3a2"
+    "bytes": 6218,
+    "sha256": "aca7447fc399b13b0d1799a7511ed4ea5b4a010467adc41e191d57f599950c7e"
   },
   {
     "path": "research/frameworks/evidence/boundary-checks-2026-11-02.json",
@@ -596,8 +596,8 @@
   },
   {
     "path": "tools/check_concordia_pilot_workflow.py",
-    "bytes": 2726,
-    "sha256": "b6963e6bb23a30d5a121031e7c01513149f83d1e90f3f5116cea1a6934f1e00f"
+    "bytes": 3036,
+    "sha256": "c63285186c769bd90227f29b7832814b09a96492a056f81a720524153da24662"
   },
   {
     "path": "tools/prepare_research.py",
@@ -611,7 +611,7 @@
   },
   {
     "path": "tools/run_concordia_pilot.py",
-    "bytes": 12352,
-    "sha256": "61be396253843e45f89c2c70eb51744411ddd2e839296e5cf07572e5668c3d59"
+    "bytes": 12749,
+    "sha256": "f70f73f2af3ae49369db639a55b3b7893856ddf229757ffa11c86f12d0793ff6"
   }
 ]

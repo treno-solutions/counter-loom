@@ -7,6 +7,9 @@ from http.server import BaseHTTPRequestHandler,ThreadingHTTPServer
 from threading import Thread
 import json,os,subprocess,tempfile
 from pathlib import Path
+design=json.loads(Path('runs/004-concordia-group-influence/inputs/design.json').read_text())
+expected=design['planned_text_calls']
+expected_deliveries=design['people_count']*(design['people_count']//design['group_count']-1)*design['discussion_rounds']
 count=[0]
 class Handler(BaseHTTPRequestHandler):
  def log_message(self,*args):pass
@@ -23,13 +26,13 @@ with tempfile.TemporaryDirectory(dir=parent) as tmp:
  env=dict(os.environ,CONCORDIA_BASE_URL=f'http://127.0.0.1:{server.server_port}/v1',CONCORDIA_MODEL='technical-test-double')
  run=subprocess.run(['.framework-review/venv/bin/python','tools/run_concordia_pilot.py','--output',str(out)],env=env,capture_output=True,text=True,timeout=40)
  if run.returncode: print(run.stderr[-2000:]);raise SystemExit(run.returncode)
- status=json.loads((out/'status.json').read_text());assert status['execution_status']=='completed' and count[0]==40
+ status=json.loads((out/'status.json').read_text());assert status['execution_status']=='completed' and count[0]==expected
  a=json.loads((out/'A_no_peer_exchange-starting-hashes.json').read_text());b=json.loads((out/'B_within_group_exchange-starting-hashes.json').read_text());assert a==b
- ds=json.loads((out/'B_within_group_exchange-deliveries.json').read_text());assert len(ds)==48
+ ds=json.loads((out/'B_within_group_exchange-deliveries.json').read_text());assert len(ds)==expected_deliveries
  assert all((int(d['sender'][1:])<=4)==(int(d['recipient'][1:])<=4) for d in ds)
- responses=json.loads((out/'responses.json').read_text());assert len(responses)==40
+ responses=json.loads((out/'responses.json').read_text());assert len(responses)==expected
  assert all('Keine Personenreaktion' in x['response'] for x in responses)
- result={'checked_on':'2026-11-02','classification':'offline_technical_test_with_stub_transport_not_simulation_results','passed':True,'stub_http_requests':40,'actual_generative_model_calls':0,'conditions_start_identically':True,'delivered_peer_messages':48,'cross_group_deliveries':0,'response_records':40,'saved_final_states':True,'generative_opinions_produced':False}
+ result={'checked_on':'2026-11-02','classification':'offline_technical_test_with_stub_transport_not_simulation_results','passed':True,'stub_http_requests':expected,'actual_generative_model_calls':0,'conditions_start_identically':True,'delivered_peer_messages':expected_deliveries,'cross_group_deliveries':0,'response_records':expected,'saved_final_states':True,'generative_opinions_produced':False}
  Path('qa/concordia-pilot-workflow-test.json').write_text(json.dumps(result,indent=2)+'\n')
  print(json.dumps(result))
 server.shutdown()
