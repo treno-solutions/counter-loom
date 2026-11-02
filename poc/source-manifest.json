@@ -5,24 +5,34 @@
     "sha256": "ee137f5aef65f8208ba73b4427891234a50e41a7b8aef768723cde26d6d0342d"
   },
   {
+    "path": "poc/COMPANY_MODEL.md",
+    "bytes": 8414,
+    "sha256": "555ea5a30e4b2696fa6c90a6ecba1d0632bd4a77d189814dd6659044036b2df0"
+  },
+  {
     "path": "poc/README.md",
-    "bytes": 8715,
-    "sha256": "eb17daa35feae62bba5570160652da8e45c6244a2077472adb50681d773ceb4a"
+    "bytes": 9494,
+    "sha256": "46261d3d891abfa82bdd5b808585f7e5f444bf4d5972ef9de095022b2e73fcb5"
   },
   {
     "path": "poc/WORLD_MODEL.md",
-    "bytes": 12458,
-    "sha256": "477df79ee2b8063a1d2859dae313e560dea09a5a21c2b7541dc61895800b34aa"
+    "bytes": 14314,
+    "sha256": "57a405fdce78014b1f101d79749a24962dca22c2f675c0e2e37803a23a646a32"
   },
   {
     "path": "poc/banking.py",
-    "bytes": 9110,
-    "sha256": "feddbbf398755daa04c397502b56a3c6b4bd229d15c81c872a8b2811fee6b098"
+    "bytes": 9938,
+    "sha256": "6d0492716552d59723bb5c6be87e1e78ce3ec18c69fa72e0360af8d51f13e7f8"
   },
   {
     "path": "poc/engine.py",
     "bytes": 4428,
     "sha256": "1616d7b31cc6d43332b1f63918a2f531194309795f9d4559f1c5475fca944818"
+  },
+  {
+    "path": "poc/firms.py",
+    "bytes": 2217,
+    "sha256": "8daf7a8e723e00a138a140ceac8c6f214679a16225996efa2fa6bf15110ae475"
   },
   {
     "path": "poc/index.html",
@@ -51,8 +61,8 @@
   },
   {
     "path": "poc/scripts/dev.mjs",
-    "bytes": 1355,
-    "sha256": "d04b4ee7a1e9cc797669abe83bae234c94ab20325b4c80340ec0cb9e77d3e188"
+    "bytes": 1394,
+    "sha256": "502a188d432666b3801939d82083ee89302902345659641d77f73e6cc8361302"
   },
   {
     "path": "poc/scripts/python.mjs",
@@ -61,23 +71,28 @@
   },
   {
     "path": "poc/server.py",
-    "bytes": 3808,
-    "sha256": "7f5c0ada9868bf047ccacadd45305cdec3c166837fa8d89ef5b27fe14897979f"
+    "bytes": 3934,
+    "sha256": "e4855ce5cf7b39e773181097d010276e8ec0a6e6768d57df924ff5511d562a22"
   },
   {
     "path": "poc/src/AccountingViews.tsx",
-    "bytes": 11054,
-    "sha256": "8085f79bd842310693822201d655e3a018dd8205c084842b6204390daf629595"
+    "bytes": 11549,
+    "sha256": "1868a474b54cb94f3b3b48491b24178e74cda588df3b89e830def72c963054b1"
   },
   {
     "path": "poc/src/App.tsx",
-    "bytes": 25512,
-    "sha256": "e6f6449315ed093d3fed84c17958f42d4e09332b394f5a87f47d65940ef4ec41"
+    "bytes": 26620,
+    "sha256": "2378a70582f36a219ca6fd94b8dedec699e3e242461aec069b348884d2ba5acd"
   },
   {
     "path": "poc/src/BankView.tsx",
-    "bytes": 12999,
-    "sha256": "140a1f6edc559eb4f966a3203f5efbb04c7f92bf9ed1ffcbd4f5d3f185810bc9"
+    "bytes": 13235,
+    "sha256": "433f2aae911ac2f925f0a725d751a06927e61b04796e756b58cd9d5f8801a587"
+  },
+  {
+    "path": "poc/src/CompanyView.tsx",
+    "bytes": 4888,
+    "sha256": "18f8d6a57cf3d29b02e66e08fed41a315d61bd1947bca041f12df08d70204d7a"
   },
   {
     "path": "poc/src/HouseholdApp.tsx",
@@ -101,18 +116,18 @@
   },
   {
     "path": "poc/src/styles.css",
-    "bytes": 44472,
-    "sha256": "53aa3100d2f5188c4c773b10b84a849d222b594568851c9baf05a6ef93b0858f"
+    "bytes": 46311,
+    "sha256": "28c4864c5cab220351af548b74af26d0987011e239e2303c45a6ecbdf93225db"
   },
   {
     "path": "poc/src/world-schema.ts",
-    "bytes": 5174,
-    "sha256": "60fe60fdb80b616c4f5c5c433d1ceb29733cc1747956d174b04a531941470527"
+    "bytes": 6766,
+    "sha256": "e181576f23dabf3b8fc05d3793436cd65ef7807e33bdba72e9dcc517426dbf9a"
   },
   {
     "path": "poc/systems.py",
-    "bytes": 1935,
-    "sha256": "8edb6ba806cc68d50ce153838665630b517a9e7347d60a36733395cfd8b2d9db"
+    "bytes": 1297,
+    "sha256": "3491c16a89d11d2cf54c637ced9a8a9f143e032b30ec26f883fb3218780bccb0"
   },
   {
     "path": "poc/test_banking.py",
@@ -125,9 +140,14 @@
     "sha256": "280d8d74df0e274011c7cee7d9ce3036ba4bdf3430aaaf3768c5be2eb046b1db"
   },
   {
+    "path": "poc/test_firms.py",
+    "bytes": 5532,
+    "sha256": "950bbe0dedeccd3e4da4a138b1a12e55c445ad95eb350c0353412f7215f9dfe3"
+  },
+  {
     "path": "poc/test_world.py",
-    "bytes": 11026,
-    "sha256": "c31751d2ee243a87cb7eab6194c470ceea7abed5013d34e9bf2e6d537bc6ca74"
+    "bytes": 10377,
+    "sha256": "bbbe289203e28890ad47914a0ddc8cd57f746b57f2f8527684d029713e1baa30"
   },
   {
     "path": "poc/tsconfig.json",
@@ -136,12 +156,12 @@
   },
   {
     "path": "poc/vite.config.ts",
-    "bytes": 252,
-    "sha256": "ea5d49e864cb87e66ac6ac907f277e3dd432484b5146ff99177f575753346e0c"
+    "bytes": 335,
+    "sha256": "163696f0320661fead35698e02d179332b5cddbe124169d358ff2868a18273b6"
   },
   {
     "path": "poc/world.py",
-    "bytes": 19392,
-    "sha256": "5064d9f8740c765ac76c146a3b7a6e0767d4e93da6d15623bee5d5fbebbc6cb5"
+    "bytes": 23192,
+    "sha256": "cad2648d29f5594f5574af1ce35a7d26b6ad885d91324a9634e27025799ba58e"
   }
 ]

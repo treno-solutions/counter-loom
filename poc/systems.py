@@ -22,25 +22,6 @@ class HouseholdSystem:
         budget=min(data.cash,desired)
         return {'tax_due': data.wage_income*30//100, 'alltag_budget':budget*55//100, 'werkstatt_budget':budget-budget*55//100, 'desired_budget':desired, 'funded_budget':budget}
 
-@dataclass(frozen=True)
-class FirmInput:
-    staff: int
-    productivity: int
-    capital: int
-    sales: int
-    due_costs: int
-    prior_weak_months: int
-    unmet_units: int
-    cash: int
-
-class FirmSystem:
-    @staticmethod
-    def outputs(data: FirmInput):
-        weak=data.prior_weak_months+1 if data.sales*100<data.due_costs*80 else 0
-        return {'production':data.staff*data.productivity+data.capital*4 if data.staff else 0,
-                'weak_months':weak,
-                'employment_action':'release' if weak>=2 and data.staff else 'hire' if data.unmet_units>0 and data.cash>=max(1,data.staff+1)*240000*3 else 'hold'}
-
 class GovernmentSystem:
     wage_per_job=240000
     transfer_per_unemployed=100000

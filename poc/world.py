@@ -6,12 +6,13 @@ from threading import RLock
 from uuid import uuid4
 from BPTK_Py import Model, Agent, SimultaneousScheduler
 from banking import Banking
-from systems import HouseholdInput, HouseholdSystem, FirmInput, FirmSystem, GovernmentSystem, FinanceSystem
+from firms import initial_company, plan as company_plan, staffing, forecast
+from systems import HouseholdInput, HouseholdSystem, GovernmentSystem, FinanceSystem
 
 PHASES = ['Produktion & Löhne', 'Steuern & Transfers', 'Konsum & Aufträge', 'Investitionen', 'Monatsabschluss']
 RULES = {
  'households': 'Kaufplan: mindestens 1.000 € monatlicher Grundbedarf als illustrative Annahme, darüber 95 % des Nettoeinkommens (nach Konsumeingriff 65 %). Der Grundbedarfsplan kann aus vorhandenem Kontoguthaben finanziert werden. Käufe sind durch Geld, Lager und ganze Gütereinheiten begrenzt; unerfüllte Kaufpläne sind keine gebuchten Ausgaben oder Schulden.',
- 'firms': 'Beschäftigte produzieren und erhalten bis zu 2.400 € Bruttolohn. Firmen zahlen Energie und Kreditzinsen, verkaufen vorhandene Ware und versteuern positive operative Überschüsse mit 20 %. Zwei schwache Monate können eine Stelle kosten; nicht bediente Nachfrage kann bei ausreichender Liquidität eine Einstellung auslösen.',
+ 'firms': 'Betriebe planen Absatz und Lagerpuffer, begrenzen Produktion durch Personal, Geld und Energie und passen Stellen erst nach zwei Monaten an. Lager wird zu Herstellungskosten bewertet. Positive Gewinne werden versteuert und bei ausreichendem Betriebspuffer teilweise an die sechs Haushaltseigentümer ausgeschüttet. Feste Preise und Löhne; illustrative Regeln.',
  'government': 'Zwei öffentliche Stellen zu je 2.400 € brutto, bis zu 1.000 € Transfer je unbeschäftigtem Haushalt und bis zu 1.200 € Beschaffung je Betrieb. Alle Zahlungen werden aus dem endlichen Staatskonto geleistet; Einnahmen sind tatsächlich gezahlte Steuern.',
  'bank': 'Eine Bank führt die Guthaben aller Nichtbanken. Eigenkapital und Kundeneinlagen sind getrennt. Ein begrenzter Maschinenkredit von 1.200 € schafft eine Einlage und eine Kreditforderung; Tilgung baut beide ab. Zinsen sind Bankertrag. Die tatsächlich vereinnahmten Zinsen werden am Monatsende an Haushalte ausgeschüttet.',
  'external': 'Vereinfachte Gegenpartei der Energieimporte. Erhaltene Zahlungen verbleiben im Auslandskonto. Keine Rückimporte oder weitere Auslandswirtschaft modelliert.'
@@ -45,6 +46,8 @@ class World:
         for i in range(1,7):
             employer = 'alltag' if i<3 else 'werkstatt' if i<5 else 'staat'
             self._node(f'h{i}', f'Haushalt {i}', 'households', 300000, employer=employer, dividend_carry=0)
+        for key, demand in [('alltag',60),('werkstatt',32)]:
+            self.nodes[key]['company']=initial_company(demand)
         self.initial = {k:n['cash_cents'] for k,n in self.nodes.items()}
         self.initial_money = sum(self.initial.values())
         self.month_open = deepcopy(self.initial)
@@ -62,7 +65,7 @@ class World:
 
     def _reset_metrics(self):
         for n in self.nodes.values():
-            n['metrics'] = dict(income=0, tax=0, sales=0, operating_costs=0, wages=0, interest=0, sold_units=0, unmet_units=0, produced_units=0, investment=0, transfers=0, consumption_plan=0, consumption_budget=0, consumption_paid=0, reserve_used=0, unfunded_units=0, production_plan=0)
+            n['metrics'] = dict(income=0, tax=0, sales=0, operating_costs=0, wages=0, interest=0, sold_units=0, unmet_units=0, produced_units=0, investment=0, transfers=0, consumption_plan=0, consumption_budget=0, consumption_paid=0, reserve_used=0, unfunded_units=0, production_plan=0, cost_of_sales=0, production_cost=0, idle_cost=0, interest_expense=0, unpaid_wages=0)
 
     def notice(self, text, node='world'):
         self.notices.append(dict(month=self.month, phase=self.phase, node=node, text=text))
@@ -103,6 +106,9 @@ class World:
         units = min(funded_desired, firm['inventory']-firm.get('reserved_units',0))
         if units:
             paid = self.pay(buyer, seller, units*firm['price'], kind, 'Konsum' if kind=='consumption' else 'Öffentlicher Auftrag' if kind=='procurement' else 'Anlage geliefert')
+            cost=firm['company']['inventory_value_cents']*units//firm['inventory']
+            firm['company']['inventory_value_cents']-=cost
+            firm['metrics']['cost_of_sales']+=cost
             firm['inventory'] -= units
             firm['metrics']['sales'] += paid
             firm['metrics']['sold_units'] += units
@@ -114,23 +120,38 @@ class World:
         n = self.nodes[node_id]
         if self.phase == 0 and n['sector'] in ('firms', 'government'):
             if n['sector']=='firms':
-                n['metrics']['production_plan'] = self.firm_outputs(n)['production']
+                n['company']['result']={}
+                p=company_plan(n,self.energy_multiplier,self.machine_due(node_id))
+                n['company']['plan']=p
+                n['metrics']['production_plan']=p['production_units']
             for worker in n['employees']:
-                paid = self.pay(node_id,worker,GovernmentSystem.wage_per_job,'wage','Lohn',True)
-                self.nodes[worker]['metrics']['income'] += paid
-                n['metrics']['wages'] += paid
-                n['metrics']['operating_costs'] += paid
+                paid=self.pay(node_id,worker,GovernmentSystem.wage_per_job,'wage','Lohn',True)
+                self.nodes[worker]['metrics']['income']+=paid
+                n['metrics']['wages']+=paid
+                n['metrics']['operating_costs']+=paid
             if n['sector']=='firms':
-                energy = self.pay(node_id,'ausland',len(n['employees'])*18000*self.energy_multiplier,'energy','Energieimport',True)
-                interest = self.pay(node_id,'bank',n['loan']*2//1200,'interest','Kreditzins',True)
-                n['metrics']['operating_costs'] += energy+interest
-                self.nodes['bank']['metrics']['interest'] += interest
-                if node_id=='alltag': self.banking.service(self)
-                labor_units=n['metrics']['wages']*n['productivity']//GovernmentSystem.wage_per_job
-                energy_units=energy*n['productivity']//(18000*self.energy_multiplier)
-                financed_base=min(labor_units,energy_units)
-                n['metrics']['produced_units']=financed_base+(n['capital']*4 if financed_base else 0)
-                n['inventory']+=n['metrics']['produced_units']
+                m=n['metrics'];p=n['company']['plan']
+                m['unpaid_wages']=p['wages_due_cents']-m['wages']
+                interest=self.pay(node_id,'bank',p['interest_due_cents'],'interest','Kreditzins',True)
+                m['interest_expense']=p['interest_due_cents']
+                m['operating_costs']+=interest
+                self.nodes['bank']['metrics']['interest']+=interest
+                if node_id=='alltag':
+                    charged=self.banking.loan.interest_charged_cents
+                    self.banking.service(self)
+                    m['interest_expense']+=self.banking.loan.interest_charged_cents-charged
+                labor_capacity=m['wages']*n['productivity']//240000
+                if labor_capacity: labor_capacity+=n['capital']*4
+                units=min(p['production_units'],labor_capacity,n['cash_cents']//p['energy_unit_cents'])
+                energy=self.pay(node_id,'ausland',units*p['energy_unit_cents'],'energy','Energie für Produktion')
+                m['operating_costs']+=energy
+                m['produced_units']=units
+                # Paid idle labour is an expense; productive labour is carried in stock.
+                productive_wages=m['wages']*units//max(1,labor_capacity)
+                m['production_cost']=productive_wages+energy
+                m['idle_cost']=m['wages']-productive_wages
+                n['inventory']+=units
+                n['company']['inventory_value_cents']+=m['production_cost']
         elif self.phase == 1 and n['sector']=='households':
             n['metrics']['tax'] = self.pay(node_id,'staat',self.household_outputs(n)['tax_due'],'income_tax','Einkommensteuer',True)
         elif self.phase == 1 and node_id=='staat':
@@ -144,28 +165,15 @@ class World:
                 self.buy('staat',firm,GovernmentSystem.procurement_per_firm,'procurement')
         elif self.phase == 3 and node_id=='alltag':
             if self.banking.originate(self) or self.banking.loan.status=='credited': return
-            reserve = max(1,len(n['employees']))*240000*2
-            if (n['metrics']['unmet_units']>0 or n['metrics']['produced_units']>0 and n['metrics']['sold_units']*100>=n['metrics']['produced_units']*80) and n['cash_cents']>=reserve+120000 and self.nodes['werkstatt']['inventory']-self.nodes['werkstatt'].get('reserved_units',0)>=8:
+            _,reserve=staffing(n,self.energy_multiplier,self.machine_due(node_id,True))
+            if n['company']['short_months']>=2 and self.month-n['company']['last_investment_month']>=3 and n['cash_cents']>=reserve+120000 and self.nodes['werkstatt']['inventory']-self.nodes['werkstatt'].get('reserved_units',0)>=8:
                 self.buy('alltag','werkstatt',120000,'investment')
-                n['capital'] += 1
-                n['metrics']['investment'] += 120000
-                self.notice('Alltag & Versorgung kauft eine Anlage: ab nächstem Monat +4 Einheiten Kapazität.',node_id)
+                n['capital']+=1
+                n['metrics']['investment']+=120000
+                n['company']['last_investment_month']=self.month
+                self.notice('Alltag & Versorgung kauft nach anhaltendem Engpass eine Anlage: ab nächstem Monat +4 Einheiten Kapazität.',node_id)
         elif self.phase == 4 and n['sector']=='firms':
-            profit = max(0,n['metrics']['sales']-n['metrics']['operating_costs'])
-            self.pay(node_id,'staat',profit*20//100,'profit_tax','Überschusssteuer',True)
-            # Use due costs as well as actual payments; lack of liquidity is not cheap production.
-            decision = self.firm_outputs(n)
-            n['weak_months'] = decision['weak_months']
-            if decision['employment_action']=='release':
-                worker = n['employees'].pop()
-                self.nodes[worker]['employer'] = None
-                n['weak_months']=0
-                self.notice(f'{n["name"]}: Stelle von {self.nodes[worker]["name"]} entfällt ab nächstem Monat nach zwei schwachen Umsatzmonaten.', node_id)
-            elif decision['employment_action']=='hire':
-                candidates=[h for h in self.households() if h['employer'] is None]
-                if candidates:
-                    worker=candidates[0];n['employees'].append(worker['id']);worker['employer']=node_id
-                    self.notice(f'{n["name"]}: {worker["name"]} erhält ab nächstem Monat eine Stelle.',node_id)
+            self.close_company(n)
         elif self.phase == 4 and node_id=='bank':
             interest=n['metrics']['interest']
             for h,share in zip(self.households(),FinanceSystem.dividends(interest,6)):
@@ -175,16 +183,53 @@ class World:
     def household_outputs(self,n):
         return HouseholdSystem.outputs(HouseholdInput(n['metrics']['income']-n['metrics']['transfers'],n['metrics']['transfers'],n['metrics']['tax'],n['dividend_carry'],n['cash_cents'],self.propensity,self.essential_budget_cents))
 
-    def firm_outputs(self,n):
-        due=len(n['employees'])*(240000+18000*self.energy_multiplier)+n['loan']*2//1200
-        return FirmSystem.outputs(FirmInput(len(n['employees']),n['productivity'],n['capital'],n['metrics']['sales'],due,n['weak_months'],n['metrics']['unmet_units'],n['cash_cents']))
+    def machine_due(self,node_id,next_month=False):
+        return self.banking.due(self,self.month+1 if next_month else self.month)['total_cents'] if node_id=='alltag' else 0
+
+    def close_company(self,n):
+        m=n['metrics'];c=n['company'];p=c['plan']
+        orders=m['sold_units']+m['unmet_units']
+        forecast(c,orders)
+        c['short_months']=c['short_months']+1 if m['unmet_units']>0 else 0
+        profit=m['sales']-m['cost_of_sales']-m['idle_cost']-m['unpaid_wages']-m['interest_expense']
+        tax_due=max(0,profit)*20//100
+        tax=self.pay(n['id'],'staat',tax_due,'profit_tax','Gewinnsteuer',True)
+        desired,reserve=staffing(n,self.energy_multiplier,self.machine_due(n['id'],True))
+        staff=len(n['employees']);direction=1 if desired>staff else -1 if desired<staff else 0
+        old=c['staff_signal']
+        c['staff_signal']=old+direction if direction and old*direction>0 else direction
+        reason='Personal unverändert; Bedarf und finanzierbare Stellen werden monatlich geprüft.'
+        if abs(c['staff_signal'])>=2:
+            if direction<0 and staff:
+                worker=n['employees'].pop();self.nodes[worker]['employer']=None
+                reason='Eine Stelle entfällt nach zwei Monaten mit geringerem tragfähigem Personalbedarf.'
+                c['staff_signal']=0
+            elif direction>0:
+                candidates=[h for h in self.households() if h['employer'] is None]
+                if candidates and n['cash_cents']>=reserve:
+                    worker=candidates[0];n['employees'].append(worker['id']);worker['employer']=n['id']
+                    reason='Eine Stelle entsteht nach zwei Monaten Mehrbedarf und mit finanziertem Betriebspuffer.'
+                    c['staff_signal']=0
+                else:reason='Mehrbedarf besteht; freie Arbeitskraft oder Betriebspuffer fehlt.'
+        if len(n['employees'])!=staff:self.notice(n['name']+': '+reason+' Gilt ab nächstem Monat.',n['id'])
+        arrears=any(o['source']==n['id'] for o in self.obligations)
+        if n['id']=='alltag':arrears=arrears or bool(self.banking.loan.overdue_interest_cents or self.banking.loan.overdue_principal_cents)
+        after_tax=profit-tax_due
+        payout=0 if arrears else min(max(0,after_tax)//2,max(0,n['cash_cents']-reserve))
+        for h,share in zip(self.households(),FinanceSystem.dividends(payout,6)):
+            paid=self.pay(n['id'],h['id'],share,'company_dividend','Gewinnausschüttung')
+            h['dividend_carry']+=paid
+        c['result']=dict(funded_orders_units=orders,profit_before_tax_cents=profit,tax_due_cents=tax_due,tax_paid_cents=tax,
+                         after_tax_cents=after_tax,distribution_cents=payout,retained_result_cents=after_tax-payout,
+                         reserve_cents=reserve,desired_staff=desired,next_staff=len(n['employees']),staff_reason=reason,
+                         distribution_reason='Keine Ausschüttung bei Rückständen.' if arrears else 'Bis zu 50 % des positiven Ergebnisses; Betriebspuffer bleibt auf dem Konto.')
 
     def households(self):
         return [self.nodes[f'h{i}'] for i in range(1,7)]
 
     def step(self):
-        if self.month>=240 and self.phase==4:
-            raise ValueError('Technische Laufgrenze von 240 Monaten erreicht. Bitte neu starten.')
+        if self.month>=24 and self.phase==4:
+            raise ValueError('Lernlauf mit 24 Monaten abgeschlossen. Bitte neu starten.')
         self.phase=(self.phase+1)%5
         if self.phase==0:
             self.month+=1
@@ -194,7 +239,8 @@ class World:
                 self.active.append(dict(event=event, month=self.month))
                 if event=='energy': self.energy_multiplier=2
                 if event=='demand': self.propensity=65
-                self.notice('Energieimporte kosten ab jetzt das Doppelte.' if event=='energy' else 'Haushalte planen ab jetzt 65 % statt 95 % ihres Nettoeinkommens für Konsum ein.')
+                if event=='demand_recovery': self.propensity=95
+                self.notice('Energieimporte kosten ab jetzt das Doppelte.' if event=='energy' else 'Haushalte planen ab jetzt 95 % ihres Nettoeinkommens für Konsum ein.' if event=='demand_recovery' else 'Haushalte planen ab jetzt 65 % statt 95 % ihres Nettoeinkommens für Konsum ein.')
             self.pending=[]
         if self.phase==4: self.banking.deliver(self)
         self.model.scheduler.run_step(self.model,self.revision,0,collect_data=False)
@@ -221,7 +267,9 @@ class World:
         return self.snapshot()
 
     def queue(self,event):
-        if event not in ('energy','demand') or event in self.pending or any(x['event']==event for x in self.active):
+        if self.month>=24 or event=='demand_recovery' and self.propensity!=65:
+            raise ValueError('Der Eingriff ist jetzt nicht verfügbar.')
+        if event not in ('energy','demand','demand_recovery') or event in self.pending or any(x['event']==event for x in self.active):
             raise ValueError('Dieses Ereignis ist ungültig oder bereits ausgelöst.')
         self.pending.append(event)
         self.revision+=1
@@ -233,6 +281,12 @@ class World:
         self.banking.check(self)
         assert self.nodes['bank']['loan_assets']==sum(self.nodes[f]['loan'] for f in ('alltag','werkstatt'))+self.banking.loan.outstanding_cents
         assert all(self.nodes[f]['inventory']>=self.nodes[f].get('reserved_units',0)>=0 for f in ('alltag','werkstatt'))
+        for key in ('alltag','werkstatt'):
+            n=self.nodes[key];c=n['company'];m=n['metrics']
+            assert c['inventory_value_cents']>=0
+            if c['plan']:
+                assert n['inventory']==c['plan']['opening_units']+m['produced_units']-m['sold_units']
+                assert c['inventory_value_cents']==c['plan']['opening_value_cents']+m['production_cost']-m['cost_of_sales']
         employed=[h['id'] for h in self.households() if h['employer']]
         positions=[h for n in self.nodes.values() for h in n.get('employees',[])]
         assert sorted(employed)==sorted(positions) and len(positions)==len(set(positions))
@@ -240,7 +294,7 @@ class World:
     def snapshot(self,export=False):
         self.check()
         tx=[t for t in self.journal if t['month']==self.month]
-        result=dict(world_id=self.id, revision=self.revision, month=self.month, phase=self.phase, phase_label=PHASES[self.phase] if self.phase>=0 else 'Bereit zum Start', nodes=deepcopy(list(self.nodes.values())), transactions=deepcopy(tx), notices=deepcopy(self.notices[-35:]), history=deepcopy(self.history[-36:]), pending=list(self.pending), active=deepcopy(self.active), rules=RULES, audit=dict(total_money_cents=self.banking.initial_deposits, current_money_cents=self.banking.balance(self)['customer_deposits_cents'], transaction_count=len(self.journal), open_obligations_cents=sum(x['amount_cents'] for x in self.obligations)+self.banking.loan.overdue_interest_cents+self.banking.loan.overdue_principal_cents, loan_principal_cents=self.nodes['bank']['loan_assets'], llm_calls=0), month_open=dict(self.month_open), initial_balances=dict(self.initial), parameters=dict(energy_multiplier=self.energy_multiplier,consumption_percent=self.propensity,essential_budget_cents=self.essential_budget_cents), classification='illustrative_circular_flow_v3',banking=self.banking.snapshot(self))
+        result=dict(world_id=self.id, revision=self.revision, month=self.month, phase=self.phase, phase_label=PHASES[self.phase] if self.phase>=0 else 'Bereit zum Start', nodes=deepcopy(list(self.nodes.values())), transactions=deepcopy(tx), notices=deepcopy(self.notices[-35:]), history=deepcopy(self.history[-36:]), pending=list(self.pending), active=deepcopy(self.active), rules=RULES, audit=dict(total_money_cents=self.banking.initial_deposits, current_money_cents=self.banking.balance(self)['customer_deposits_cents'], transaction_count=len(self.journal), open_obligations_cents=sum(x['amount_cents'] for x in self.obligations)+self.banking.loan.overdue_interest_cents+self.banking.loan.overdue_principal_cents, loan_principal_cents=self.nodes['bank']['loan_assets'], llm_calls=0), month_open=dict(self.month_open), initial_balances=dict(self.initial), parameters=dict(energy_multiplier=self.energy_multiplier,consumption_percent=self.propensity,essential_budget_cents=self.essential_budget_cents), classification='illustrative_circular_flow_v4',horizon_months=24,completed=self.month==24 and self.phase==4,banking=self.banking.snapshot(self))
         if export:
             result.update(full_journal=deepcopy(self.journal),initial_balances=dict(self.initial),open_obligations=deepcopy(self.obligations),all_history=deepcopy(self.history),all_notices=deepcopy(self.notices),model_document='poc/WORLD_MODEL.md')
         return result

@@ -1,13 +1,13 @@
 [
   {
     "path": "BUILD_PLAN.md",
-    "bytes": 19246,
-    "sha256": "c6af78307665e7fad491094e74c74006e962aa5a95252962e23e185e482ab39e"
+    "bytes": 19512,
+    "sha256": "943aa7527bcfbf259df20bbbc9392e5e3b5fa5db8106669f7db515d9b4fb73d2"
   },
   {
     "path": "POC.md",
-    "bytes": 10399,
-    "sha256": "e21a2aa2c1db4af1c270c96f22b48d38c27b8af125e403dcf8c984e776633d35"
+    "bytes": 11191,
+    "sha256": "bdef94300124c6aded4008fc3ab7baa901c41a422aca4a9a048b1b0066c979bb"
   },
   {
     "path": "RESEARCH.md",
@@ -106,8 +106,8 @@
   },
   {
     "path": "poc/source-manifest.json",
-    "bytes": 4150,
-    "sha256": "4fc4c01bed60921b4a3adc62ac4dd6da4b89b4f24a265bf8a3892dfed421d2c0"
+    "bytes": 4722,
+    "sha256": "461ebe4101d19403dcfc648f14e06feb69d9883fec0c553622fdbe6ddd320eb0"
   },
   {
     "path": "processed/energy-monthly-prices.csv",
@@ -293,6 +293,21 @@
     "path": "qa/circular-flow-v1-limitations-2026-11-02.json",
     "bytes": 1428,
     "sha256": "89046950c4964122f553d40044182f84f462c2a8daa27362087715e51e8fa7cc"
+  },
+  {
+    "path": "qa/company-v4-plausibility.json",
+    "bytes": 223332,
+    "sha256": "7c98abbd6f0150e02ea0ad16e7d6b743378bbdb12dcdc0c43319a02475aa9345"
+  },
+  {
+    "path": "qa/company-v4-plausibility.md",
+    "bytes": 10377,
+    "sha256": "653ccc2404e92554bca6e44bd872f6e3df8e03e778a8aeacb8225f1d3d2c1cff"
+  },
+  {
+    "path": "qa/company-v4-verification-2026-11-02.json",
+    "bytes": 2735,
+    "sha256": "ded25b3fb99bc11ba0ee1c9a075ace1ba989974c384f9e8df51ccd5073e5ca4f"
   },
   {
     "path": "qa/concordia-pilot-readiness.json",
@@ -736,13 +751,18 @@
   },
   {
     "path": "tools/assemble_evidence.py",
-    "bytes": 34718,
-    "sha256": "ab7485462cabb12a59a7506e8a6dd007591b330b6feebce590dd7c4e40a26575"
+    "bytes": 34756,
+    "sha256": "05ba92ddbbabc45c6cb091ee32ca412bd49b51dfcb3482f074af360d531375e8"
   },
   {
     "path": "tools/check_bank_plausibility.py",
     "bytes": 10761,
     "sha256": "c4ccbc4bb6c8abb5156a3015b7f5b63f987949d0b48027b06ddad11b8fd1b375"
+  },
+  {
+    "path": "tools/check_company_plausibility.py",
+    "bytes": 12206,
+    "sha256": "e5fe7f33e3b5ece7389bc2ee3dafa5c13cfe9a7627f08ea501997fdf925c66d3"
   },
   {
     "path": "tools/check_concordia_pilot_workflow.py",

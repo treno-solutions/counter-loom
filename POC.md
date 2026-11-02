@@ -89,3 +89,8 @@ Die [V1-Diagnose](qa/circular-flow-v1-limitations-2026-11-02.json) dokumentiert 
 ## Modell v3 · Bankkredit mit sichtbarer Bilanz
 
 Ein angefragter Maschinenkredit führt getrennt durch Gutschrift, Lieferung/Zahlung, Zins und Tilgung. Die [Buchungsregeln](poc/BANKING_MODEL.md) trennen Kundeneinlagen, Bankeigenkapital und Reserveposition. Der [unabhängige Audit](qa/bank-plausibility-review-2026-11-02.md) bestätigt den begrenzten Bankpfad, findet aber offene langfristige Rückkopplungen im Unternehmens-, Staats- und Außenbereich. Der [technische V3-Prüfstand](qa/banking-v3-verification-2026-11-02.json) ergänzt die Browserprüfung. Zwei Plausibilitätsfehler der Vorversion sind korrigiert: nicht finanzierbare Nachfrage und Produktion ohne finanzierte Inputs.
+
+
+## Modell v4 · begrenzter Lernlauf und Unternehmen
+
+Das [V4-Konzept](poc/COMPANY_MODEL.md) begrenzt die aktuelle Umsetzung auf 24 Monate mit bestehenden Akteuren und festen Preisen/Löhnen. Die Unternehmen planen finanzierbare Nachfrage und Lager, produzieren nach Bedarf mit bezahlten Inputs, bewerten Waren zu Herstellungskosten, passen Stellen verzögert an und verteilen begrenzt Gewinne an ihre Haushaltseigentümer. Unternehmensansicht und Firmenkonto zeigen Plan, tatsächliche Vorgänge und Ergebnis getrennt. Die [unabhängige Prüfung](qa/company-v4-plausibility.md) und der [technische Prüfstand](qa/company-v4-verification-2026-11-02.json) ergänzen die unveränderten historischen Berichte. Keine Behauptung eines langfristigen Gleichgewichts oder empirischer Prognosegüte.

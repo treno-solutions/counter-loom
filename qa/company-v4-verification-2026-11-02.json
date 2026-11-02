@@ -1,0 +1,69 @@
+{
+  "checked_on": "2026-11-02",
+  "model": "illustrative_circular_flow_v4",
+  "base_revision": "5636695",
+  "scope": "Bounded company implementation and local UI verification; no empirical or workshop validation",
+  "source_files": [
+    {
+      "path": "poc/world.py",
+      "sha256": "cad2648d29f5594f5574af1ce35a7d26b6ad885d91324a9634e27025799ba58e"
+    },
+    {
+      "path": "poc/firms.py",
+      "sha256": "8daf7a8e723e00a138a140ceac8c6f214679a16225996efa2fa6bf15110ae475"
+    },
+    {
+      "path": "poc/banking.py",
+      "sha256": "6d0492716552d59723bb5c6be87e1e78ce3ec18c69fa72e0360af8d51f13e7f8"
+    },
+    {
+      "path": "poc/systems.py",
+      "sha256": "3491c16a89d11d2cf54c637ced9a8a9f143e032b30ec26f883fb3218780bccb0"
+    },
+    {
+      "path": "poc/src/App.tsx",
+      "sha256": "2378a70582f36a219ca6fd94b8dedec699e3e242461aec069b348884d2ba5acd"
+    },
+    {
+      "path": "poc/src/CompanyView.tsx",
+      "sha256": "18f8d6a57cf3d29b02e66e08fed41a315d61bd1947bca041f12df08d70204d7a"
+    },
+    {
+      "path": "poc/src/BankView.tsx",
+      "sha256": "433f2aae911ac2f925f0a725d751a06927e61b04796e756b58cd9d5f8801a587"
+    },
+    {
+      "path": "poc/src/world-schema.ts",
+      "sha256": "e181576f23dabf3b8fc05d3793436cd65ef7807e33bdba72e9dcc517426dbf9a"
+    }
+  ],
+  "automated_checks": {
+    "unittest_passed": 41,
+    "typescript_and_production_build": "passed",
+    "strict_frontend_schema_snapshots_passed": 726,
+    "missing_company_state_rejected": true
+  },
+  "independent_company_audit": "qa/company-v4-plausibility.md",
+  "browser_checks": {
+    "browser": "BrowserOS neo",
+    "desktop_company_hierarchy_and_first_month": "passed",
+    "mobile_width_390_no_document_overflow": "passed",
+    "local_font_loading": "passed",
+    "real_autoplay_stops_after_month_24_without_error": "passed",
+    "completed_start_and_step_buttons_disabled": true,
+    "normal_preview_v4_five_real_phase_steps": "passed",
+    "normal_preview_bank_request_waits_for_goods_then_delivers_and_services": "passed",
+    "normal_preview_url": "http://127.0.0.1:5173/",
+    "domestic_and_external_accounts_separated": true,
+    "first_month_domestic_cents": 14528000,
+    "first_month_external_cents": 72000,
+    "first_month_all_customer_accounts_cents": 14600000
+  },
+  "limits": [
+    "Illustrative parameters, fixed prices and wages; 24-month scope.",
+    "Six equal household owners; no empirical wealth distribution or investor psychology.",
+    "No machine depreciation, general insolvency, arrears repayment workflow, public borrowing or external return flows.",
+    "A late machine loan can remain outstanding at the learning horizon.",
+    "Technical checks are not empirical calibration or a workshop usability study."
+  ]
+}

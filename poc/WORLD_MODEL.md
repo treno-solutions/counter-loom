@@ -1,4 +1,18 @@
-# Laufender Wirtschaftskreislauf · POC 02
+# Laufende Modellwirtschaft · aktuelle Fassung v4
+
+Die aktuelle Systemgrenze und Unternehmenslogik stehen im [verbindlichen V4-Konzept](COMPANY_MODEL.md), die Geld-/Kreditbuchungen im [Bankkonzept](BANKING_MODEL.md). Ein Lernlauf endet nach **24 Monaten**. Preise, Löhne und Akteure bleiben fest; keine langfristige Gleichgewichts- oder Prognosebehauptung.
+
+V4 ersetzt die früheren Produktions-, Personal- und Gewinnregeln: geglättete finanzierbare Nachfrage, Lagerpuffer, durch bezahlte Inputs begrenzte Produktion, gleitende Lagerkosten, verzögerte tragfähige Stellenplanung und tatsächliche begrenzte Eigentümerausschüttung. Energie kostet 5 € je Alltags- beziehungsweise 9 € je Werkstatteinheit, beim Energieschock doppelt so viel. Ein Lohn verursacht auch bei ungenutzter Kapazität Aufwand. Die sechs Haushalte sind zu gleichen Teilen Eigentümer. Ausschüttungen sind für den folgenden Kaufplan verfügbar und in diesem begrenzten Steuerrahmen nicht zusätzlich besteuert.
+
+Die Reihenfolge bleibt Produktion/Löhne → Steuern/Transfers → Käufe → Investitionen → Abschluss. Kreditlieferung erfolgt vor dem Unternehmensabschluss. Umsatz entsteht ausschließlich durch tatsächliche Verkäufe; Kreditgutschrift, Tilgung und Maschinenkauf werden getrennt geführt. Rückstände und die endlichen Staats-/Auslandsbedingungen werden weiterhin sichtbar, ohne allgemeine Insolvenz- oder Rückstandsabwicklung.
+
+[Unabhängige V4-Prüfung](../qa/company-v4-plausibility.md). Technisch korrekte Buchungen belegen keine empirische oder pädagogische Gültigkeit.
+
+## Historische Entwicklung bis v3
+
+Die folgenden Abschnitte dokumentieren die früheren Fassungen. Insbesondere die dort genannte 240-Monats-Grenze sowie alte Energie-, Personal- und Produktionsregeln sind durch V4 ersetzt. Archivierte Prüfberichte bleiben unverändert.
+
+### Laufender Wirtschaftskreislauf · POC 02
 
 Version 0.3 · Modellklassifikation `illustrative_circular_flow_v3` · 2. November 2026 · Technischer Lernversuch, keine kalibrierte Volkswirtschaft. Dieses Konzept begrenzt die folgende Implementierung. POC 01 bleibt als Haushaltsansicht erhalten.
 

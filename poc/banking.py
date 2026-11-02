@@ -44,6 +44,8 @@ class Banking:
                     assets_cents=self.reserves + loans, liabilities_and_equity_cents=deposits + equity)
 
     def request(self, world):
+        if world.month>=24 and world.phase>=3:
+            raise ValueError('Die letzte Investitionsphase dieses Lernlaufs ist vorbei. Bitte neu starten.')
         if self.loan.status != 'available':
             raise ValueError('Für diesen Lauf wurde bereits ein Maschinenkredit angefragt.')
         self.loan.status = 'requested'
@@ -97,6 +99,15 @@ class Banking:
         loan.status = 'delivered'
         loan.message = 'Maschine bezahlt und geliefert. Ab nächstem Monat wirkt die Kapazität und beginnt der Schuldendienst.'
         world.notice('Kreditfinanzierte Maschine geliefert: 1.200 € gehen an die Werkstatt, ab Folgemonat +4 Einheiten Kapazität.', loan.borrower)
+
+    def due(self,world,month=None):
+        loan=self.loan
+        month=world.month if month is None else month
+        if loan.delivery_month is None or month<=loan.delivery_month or loan.status=='repaid' or loan.last_service_month==month:
+            return dict(total_cents=0,interest_cents=0,principal_cents=0)
+        interest=loan.overdue_interest_cents+loan.outstanding_cents*loan.annual_rate_bps//120000
+        principal=max(0,min(loan.outstanding_cents,min(loan.term_months,month-loan.delivery_month)*loan.monthly_principal_cents-loan.principal_paid_cents))
+        return dict(total_cents=interest+principal,interest_cents=interest,principal_cents=principal)
 
     def service(self, world):
         loan = self.loan

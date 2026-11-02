@@ -5,6 +5,8 @@ from urllib.parse import urlsplit
 import json
 import os
 
+API_PORT=int(os.environ.get('COUNTERLOOM_API_PORT','8765'))
+WEB_PORT=int(os.environ.get('COUNTERLOOM_WEB_PORT','5173'))
 HERE = Path(__file__).resolve().parent
 RUNTIME = HERE / '.runtime'
 RUNTIME.mkdir(exist_ok=True)
@@ -48,7 +50,7 @@ class Handler(SimpleHTTPRequestHandler):
         if route != '/api/simulate' and route not in world_routes:
             return self.send_json(404, {'error': 'Endpunkt nicht gefunden.'})
         origin = self.headers.get('Origin')
-        if origin and origin not in {'http://127.0.0.1:5173', 'http://localhost:5173', 'http://127.0.0.1:8765', 'http://localhost:8765'}:
+        if origin and origin not in {f'http://{host}:{port}' for host in ('127.0.0.1','localhost') for port in (API_PORT,WEB_PORT)}:
             return self.send_json(403, {'error': 'Diese Herkunft ist für den lokalen POC nicht freigegeben.'})
         if self.headers.get_content_type() != 'application/json':
             return self.send_json(415, {'error': 'Bitte JSON senden.'})
@@ -68,8 +70,8 @@ class Handler(SimpleHTTPRequestHandler):
 
 
 if __name__ == '__main__':
-    server = ThreadingHTTPServer(('127.0.0.1', 8765), Handler)
-    print('Counterloom POC API / lokale Ansicht: http://127.0.0.1:8765', flush=True)
+    server = ThreadingHTTPServer(('127.0.0.1', API_PORT), Handler)
+    print(f'Counterloom POC API / lokale Ansicht: http://127.0.0.1:{API_PORT}', flush=True)
     try:
         server.serve_forever()
     except KeyboardInterrupt:

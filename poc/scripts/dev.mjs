@@ -20,7 +20,7 @@ for (const signal of ['SIGTERM', 'SIGINT']) process.on(signal, () => stop());
 let ready = false;
 for (let attempt = 0; attempt < 100 && !stopping; attempt++) {
   try {
-    const response = await fetch('http://127.0.0.1:8765/api/health', { signal: AbortSignal.timeout(500) });
+    const response = await fetch(`http://127.0.0.1:${process.env.COUNTERLOOM_API_PORT ?? 8765}/api/health`, { signal: AbortSignal.timeout(500) });
     if (response.ok) { ready = true; break; }
   } catch { /* API is still starting. */ }
   await new Promise(resolve => setTimeout(resolve, 100));

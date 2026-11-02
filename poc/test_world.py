@@ -52,17 +52,16 @@ class WorldTests(unittest.TestCase):
         self.assertEqual(w.obligations[-1]['amount_cents'],100)
         self.assertEqual(sum(n['cash_cents'] for n in w.nodes.values()),total)
 
-    def test_investment_has_delivery_and_later_capacity_effect(self):
-        w=World()
-        for _ in range(3):w.step()
-        stock=w.nodes['werkstatt']['inventory'];cash=w.nodes['werkstatt']['cash_cents'];produced=w.nodes['alltag']['metrics']['produced_units']
+    def test_investment_delivery_adds_capacity_not_forced_output(self):
+        w=World();w.banking.request(w)
+        for _ in range(4):w.step()
+        produced=w.nodes['alltag']['metrics']['produced_units']
         w.step()
         self.assertEqual(w.nodes['alltag']['capital'],1)
-        self.assertEqual(w.nodes['werkstatt']['inventory'],stock-8)
-        self.assertEqual(w.nodes['werkstatt']['cash_cents'],cash+120000)
         self.assertEqual(w.nodes['alltag']['metrics']['produced_units'],produced)
-        w.step();w.step()
-        self.assertEqual(w.nodes['alltag']['metrics']['produced_units'],produced+4)
+        w.step()
+        self.assertEqual(w.nodes['alltag']['company']['plan']['capacity_units'],76)
+        self.assertLessEqual(w.nodes['alltag']['metrics']['produced_units'],76)
 
     def test_pending_event_waits_until_next_month_and_feedback_differs(self):
         base,shock=World(),World()
@@ -126,18 +125,15 @@ class StandaloneSystemTests(unittest.TestCase):
         self.assertEqual(benefit['tax_due'],0)
         self.assertEqual(benefit['alltag_budget']+benefit['werkstatt_budget'],100000)
 
-    def test_firm_and_finance_rules_without_world(self):
-        from systems import FirmInput,FirmSystem,FinanceSystem
-        weak=FirmSystem.outputs(FirmInput(2,36,1,100000,500000,1,0,2400000))
-        self.assertEqual(weak['production'],76)
-        self.assertEqual(weak['employment_action'],'release')
+    def test_finance_shares_preserve_every_cent(self):
+        from systems import FinanceSystem
         self.assertEqual(sum(FinanceSystem.dividends(4000,6)),4000)
 
 class LongRunTests(unittest.TestCase):
-    def test_240_month_boundary_and_stress_conservation(self):
+    def test_24_month_boundary_and_stress_conservation(self):
         w=World();w.queue('demand');w.queue('energy')
-        for _ in range(1200):w.step()
-        self.assertEqual((w.month,w.phase),(240,4))
+        for _ in range(120):w.step()
+        self.assertEqual((w.month,w.phase),(24,4))
         self.assertEqual(sum(n['cash_cents'] for n in w.nodes.values()),15600000)
         self.assertGreaterEqual(min(n['cash_cents'] for n in w.nodes.values()),0)
         before=len(w.journal)
@@ -183,14 +179,10 @@ class HouseholdReserveRegressionTests(unittest.TestCase):
         self.assertEqual(sum(w.nodes[f]['cash_cents']-before[f] for f in ['alltag','werkstatt']),total)
         self.assertTrue(all(h['metrics']['reserve_used']==95000 for h in w.households()))
 
-    def test_month_97_income_only_freeze_is_not_preserved(self):
-        income_only=World(essential_budget_cents=0)
-        with_necessities=World(essential_budget_cents=100000)
-        for _ in range(97*5):
-            income_only.step();with_necessities.step()
-        self.assertEqual(income_only.history[-1]['consumption_cents'],0)
-        self.assertGreater(sum(h['cash_cents'] for h in income_only.households()),0)
-        self.assertGreater(with_necessities.history[-1]['consumption_cents'],0)
-        self.assertGreater(sum(h['metrics']['reserve_used'] for h in with_necessities.households()),0)
-        for w in [income_only,with_necessities]:
+    def test_reserve_regression_uses_explicit_24_month_horizon(self):
+        # Historical 97-month evidence is retained in qa; V4 intentionally bounds runs.
+        for essential in (0,100000):
+            w=World(essential_budget_cents=essential)
+            for _ in range(120):w.step()
+            self.assertTrue(w.snapshot()['completed'])
             self.assertEqual(sum(n['cash_cents'] for n in w.nodes.values()),15600000)
