@@ -12,7 +12,7 @@ Stand: 2. November 2026. Die Tabelle unterscheidet dokumentierte Fähigkeiten vo
 
 ## Neue Priorität: System Dynamics und reduzierte Lernmodule
 
-Gemäß [Bauplan](../../BUILD_PLAN.md) wird [BPTK-Py](https://github.com/transentis/bptk_py) als erster SD-/Hybridkandidat technisch geprüft. Stand: offizielle Dokumentation gesichtet, kein eigener Runtime-Test und keine abschließende Auswahl. [Minsky](https://minsky.sourceforge.io/manual/Ravel/node221.html) ist ein sichtbares Finanzfluss-Vorbild. [BeforeIT.jl](https://github.com/bancaditalia/BeforeIT.jl) und [JMAB](https://github.com/S120/jmab) bleiben wirtschaftliche Referenzen für spätere, fachlich nötige Erweiterungen. Die Gesprächstests oben sind keine Tests dieses neuen Modellkerns.
+[BPTK-Py](bptk-py.md) wurde inzwischen installiert und technisch geprüft: 36 ausgewählte Originaltests und ein eigener Offline-Durchstich mit SD-/Agenten-/Ereignisbausteinen bestanden, null LLM-Anfragen. Keine empirische oder pädagogische Validierung. Der [POC-Vorschlag](../../POC.md) begrenzt den nächsten Umfang auf eine kleine sichtbare Anwendung; eine abschließende Frameworkwahl bleibt offen. [Minsky](https://minsky.sourceforge.io/manual/Ravel/node221.html) ist ein sichtbares Finanzfluss-Vorbild. [BeforeIT.jl](https://github.com/bancaditalia/BeforeIT.jl) und [JMAB](https://github.com/S120/jmab) bleiben wirtschaftliche Referenzen für spätere, fachlich nötige Erweiterungen. Die Gesprächstests oben sind keine Tests dieses neuen Modellkerns.
 
 ## Bereits recherchiert, aber anderer Schwerpunkt
 

@@ -1,13 +1,18 @@
 [
   {
     "path": "BUILD_PLAN.md",
-    "bytes": 18653,
-    "sha256": "e4aeeec67f1f483b88ce9ed8e2542a8b397a8b175bdd0743368452072bf7346e"
+    "bytes": 18832,
+    "sha256": "b0de4f8aeb6c31f29c5ba34730fc205fb6f3d19413d754f83f71229a4e3d4e41"
+  },
+  {
+    "path": "POC.md",
+    "bytes": 7179,
+    "sha256": "463964a1711d6f0e5b0f97fd69d0db5214bb67af32837a542e8e5f55970ed0ff"
   },
   {
     "path": "RESEARCH.md",
-    "bytes": 4019,
-    "sha256": "b96683af968c1bdadd09b0cc7786c5a8de40144c67f065bfdee0566089d14677"
+    "bytes": 4085,
+    "sha256": "b30715a89b5e79fadd9ce51e5c6c8007a87b043281941a2d6bc0982ab0e10f92"
   },
   {
     "path": "mirofish/historical-price-evidence.md",
@@ -243,6 +248,16 @@
     "path": "processed/world-silver-survey-2026.pages.json",
     "bytes": 258925,
     "sha256": "5b11ab1ac2dc84d831960e9d36eb2fd8f6ff41975f4afa49e6b789e3d626aaa3"
+  },
+  {
+    "path": "qa/bptk-independent-arithmetic-check.json",
+    "bytes": 301,
+    "sha256": "0eee4406a38e2bef6ff734d5c3c3aadb256af7732856666059c800a6211d3e01"
+  },
+  {
+    "path": "qa/bptk-technical-screen-2026-11-02.json",
+    "bytes": 28019,
+    "sha256": "351457e399983e41fdb4ede5b6bf0451dd6f6e08a305e62eacba92830e4b855e"
   },
   {
     "path": "qa/concordia-pilot-readiness.json",
@@ -501,13 +516,18 @@
   },
   {
     "path": "research/frameworks/README.md",
-    "bytes": 4475,
-    "sha256": "8e40374e51478042769e99be6e2cf6c74908810284b2976da66065cdf08f7434"
+    "bytes": 4633,
+    "sha256": "28de36ea5f6597714bd5cc723558602cf3e24982f8d2a4ed9520a2f65d52739a"
   },
   {
     "path": "research/frameworks/_template.md",
     "bytes": 1338,
     "sha256": "d70e46147a8f465a9984d4b96c7289be266aefa782e5aef95297548d39d10b35"
+  },
+  {
+    "path": "research/frameworks/bptk-py.md",
+    "bytes": 2874,
+    "sha256": "94bff13e4d65af9780ef70ed2a74b85144fe9c3978eae387e942b3610f9429f5"
   },
   {
     "path": "research/frameworks/concordia.md",
@@ -518,6 +538,11 @@
     "path": "research/frameworks/evidence/boundary-checks-2026-11-02.json",
     "bytes": 2821,
     "sha256": "d606ffb5e2d1059efb7a21d3e7a7d14deba33bae5a0c9337d5c73b3f4ee28f76"
+  },
+  {
+    "path": "research/frameworks/evidence/bptk-upstream-tests-2026-11-02.json",
+    "bytes": 1566,
+    "sha256": "8f561bcec3971521df2f4bd62ce056cb55c6b16552101c74c8a18f675888163a"
   },
   {
     "path": "research/frameworks/evidence/concordia-upstream-tests-2026-11-02.json",
@@ -656,8 +681,8 @@
   },
   {
     "path": "tools/assemble_evidence.py",
-    "bytes": 34618,
-    "sha256": "eb00681d29340157c6fcf69b341c4544d6401cad3834b5ba7d1828a3a862b965"
+    "bytes": 34656,
+    "sha256": "aec32e31e65e120bf893e1872d69d7e39e94333d5a4fc8389da3f1742464e692"
   },
   {
     "path": "tools/check_concordia_pilot_workflow.py",
@@ -668,6 +693,11 @@
     "path": "tools/prepare_research.py",
     "bytes": 8371,
     "sha256": "940f11d4e23bf3c8c2e8991e14240642f0e604305bd6248dfc588890df35df54"
+  },
+  {
+    "path": "tools/probe_bptk_hybrid.py",
+    "bytes": 6676,
+    "sha256": "db1ee3f559c15d2d14d260272e4023e959136adab1b09eb4d818205eb70463d3"
   },
   {
     "path": "tools/probe_framework_boundaries.py",

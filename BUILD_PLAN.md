@@ -2,6 +2,8 @@
 
 Version 0.1 · 2. November 2026 · Status: dokumentierter Arbeitsplan. System Dynamics ist der bevorzugte Modellierungsansatz; Framework, Bezugsraum und konkrete erste Lernmodule sind noch nicht ausgewählt. Keine neue Simulation durch diesen Plan gestartet.
 
+Aktueller nächster Umfang: [POC 01](POC.md). Der POC begrenzt die Umsetzung auf einen sichtbaren algorithmischen Durchstich; der folgende Bauplan bleibt der Erweiterungsrahmen.
+
 ## 1 · Ziel und vollständiger Zusammenhang
 
 Eine reduzierte, über Zeit laufende Modellwelt macht sichtbar, wie eine Investmententscheidung mit persönlichen Bedürfnissen und wirtschaftlichen Systemen zusammenhängt. Sie dient Schülern in Finanzbildungs-Workshops: übersehene Risiken erkennen, andere Perspektiven verstehen, eigene Abwägungen reflektieren und frühere Entscheidungen unter ihrem damaligen Informationsstand nachvollziehen.

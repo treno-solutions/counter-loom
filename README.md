@@ -35,6 +35,7 @@ Wir erfinden keine eigene Simulationsplattform, bevor vorhandene Ansätze geprü
 
 | Einstieg | Inhalt |
 |---|---|
+| [Begrenzter POC](POC.md) | Ein sichtbarer algorithmischer Durchstich und klare Erfolgskriterien |
 | [Bauplan](BUILD_PLAN.md) | Architektur, Etappen, Prüfungen und nächste konkrete Arbeit |
 | [Forschungsprogramm](research/README.md) | Ziel, Abgrenzung und Reihenfolge der Arbeit |
 | [Anforderungen](research/requirements.md) | Benötigte Fähigkeiten mit Herkunft und prüfbaren Nachweisen |

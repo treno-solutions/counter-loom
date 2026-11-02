@@ -1,0 +1,45 @@
+{
+  "checked_on": "2026-11-02",
+  "classification": "selected_upstream_tests_not_economic_validation",
+  "framework": "BPTK-Py",
+  "installed_version": "3.5.0",
+  "source_commit": "840fb9b61504c5a6e463e72a73c07e0b8cff6d5e",
+  "python": "3.13.12",
+  "license_in_reviewed_source": "MIT",
+  "tested_files": [
+    "tests/unittests/test_agent.py",
+    "tests/unittests/test_event.py",
+    "tests/unittests/test_scheduler.py",
+    "tests/test_sddsl.py"
+  ],
+  "result": "36 passed",
+  "test_duration_seconds": 32.79,
+  "llm_calls": 0,
+  "reviewed_module_identity": [
+    {
+      "file": "modeling/model.py",
+      "wheel_sha256": "e45ff0a0dd1b6a0dda7109f15b7665ea31abe9db30574e9e898764c47837b1e3",
+      "matches_reviewed_checkout": true
+    },
+    {
+      "file": "modeling/agent.py",
+      "wheel_sha256": "8f425f2e3bb8fc82b44390c85a5c5bbebc0973f66722dfb2df2eeb21645972dc",
+      "matches_reviewed_checkout": true
+    },
+    {
+      "file": "modeling/simultaneousScheduler.py",
+      "wheel_sha256": "bf6e79e2cb28fd3f92751eebebcbad20c6e626a1d802df7b9ed5a223aaf69660",
+      "matches_reviewed_checkout": true
+    },
+    {
+      "file": "sddsl/stock.py",
+      "wheel_sha256": "7f814c9a52210dcf269cf23d7e3de4e6b6fd2d7ea77ce55b6ceec00b2946d49b",
+      "matches_reviewed_checkout": true
+    }
+  ],
+  "limits": [
+    "Selected tests only; not full upstream suite.",
+    "Hybrid probe used Python SD evaluation and native agent/event scheduler; Rust speed, browser execution and server integrations not tested.",
+    "No empirical calibration or pedagogy demonstrated."
+  ]
+}

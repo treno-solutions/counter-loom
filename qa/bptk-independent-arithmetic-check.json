@@ -1,0 +1,8 @@
+{
+  "checked_on": "2026-11-02",
+  "classification": "independent_decimal_reference_for_hypothetical_fixture",
+  "passed": true,
+  "rows_checked": 54,
+  "llm_calls": 0,
+  "scope": "Cash and earmarked balances for three cases, six periods and three scenarios; does not validate economic assumptions."
+}
