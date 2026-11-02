@@ -1,0 +1,14 @@
+{
+  "execution_status": "completed",
+  "classification": "generative_exploratory_pilot",
+  "framework_commit": "7ce8be378a37ee73f9745d6781452712318afa04",
+  "runner_sha256": "ade0c85dfc46bffd3ccc1e394624f5090455304fdd2c6490369ddf4f9808a0c6",
+  "completed_phases": [
+    "A_no_peer_exchange",
+    "B_within_group_exchange"
+  ],
+  "llm_requests": 20,
+  "transport_requests": 20,
+  "elapsed_seconds": 118.8,
+  "delivered_peer_messages": 4
+}

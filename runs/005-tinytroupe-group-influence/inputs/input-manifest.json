@@ -1,0 +1,17 @@
+[
+  {
+    "path": "inputs/design.json",
+    "bytes": 2053,
+    "sha256": "4634d5bfddb793cc211a7ade33c6910607c502fce05f3210afac1037706f59af"
+  },
+  {
+    "path": "inputs/people.json",
+    "bytes": 2360,
+    "sha256": "dfb04828194a1b52399244e057d09d55df4516ba23caf73ae76f830b0b9fe33e"
+  },
+  {
+    "path": "inputs/scenario.json",
+    "bytes": 1622,
+    "sha256": "bf4a74af8d176dffb230662987034f7f884d7c7541443330e204825664bb7a74"
+  }
+]

@@ -1,0 +1,45 @@
+{
+  "information_class": "hypothetical_case_selection_not_population_sample",
+  "people": [
+    {
+      "id": "P01",
+      "name": "Nora",
+      "group": "G01",
+      "background": "Angestellte mit unregelmäßigen Arbeitszeiten. Kleine Rücklage, laufende Haushaltsausgaben. Anlageunerfahren; möchte Entscheidungen verstehen und frei verfügbare Mittel behalten.",
+      "starting_view": "Physischer Besitz ist anschaulich, aber ich bin unsicher, was davon mir im Alltag hilft."
+    },
+    {
+      "id": "P03",
+      "name": "Derya",
+      "group": "G01",
+      "background": "Selbstständig mit schwankendem Einkommen. Besitzt Schmuck, der persönlichen Wert hat und im Notfall verfügbar sein soll. Hat wenig Erfahrung mit Wertpapierdepots.",
+      "starting_view": "Schmuck ist für mich nicht nur eine Geldanlage. Für einen Notfall zählt, was ich wirklich und rechtzeitig daraus erhalte."
+    },
+    {
+      "id": "P05",
+      "name": "Alva",
+      "group": "G02",
+      "background": "Berufstätig mit längerem Anlagehorizont und ausreichender Rücklage. Hat erste Goldanlage-Erfahrung. Misstraut sehr eindeutigen politischen Versprechen und auch uneingeschränkten Renditeversprechen.",
+      "starting_view": "Gold kann Unabhängigkeit bedeuten. Trotzdem können Kosten und eine einseitige Anlage gegen zu viel Gold sprechen."
+    },
+    {
+      "id": "P07",
+      "name": "Sam",
+      "group": "G02",
+      "background": "Angestellter mit regelmäßigem Sparplan, mittlerer Anlageerfahrung und Interesse an wirtschaftlichen Debatten. Widerspricht häufig sehr sicheren Crashvorhersagen, möchte echte Risiken aber nicht wegreden.",
+      "starting_view": "Nachrichten allein sagen mir nicht, was bereits im Preis steckt. Ich brauche mehr als eine Krisenerzählung."
+    }
+  ],
+  "groups": [
+    {
+      "id": "G01",
+      "label": "Nachbarschaftlicher Vorsorgeaustausch",
+      "context": "Zwei erwachsene Bekannte tauschen sich gelegentlich über Haushaltsvorsorge und Geldsorgen aus. Sie kennen unterschiedliche Lebenslagen und müssen sich nicht einigen."
+    },
+    {
+      "id": "G02",
+      "label": "Privater Anlagegesprächskreis",
+      "context": "Zwei erwachsene Bekannte besprechen gelegentlich Anlagen und wirtschaftliche Nachrichten. Unterschiedliche Überzeugungen sind vertraut; niemand ist berufsmäßig ihr Berater."
+    }
+  ]
+}

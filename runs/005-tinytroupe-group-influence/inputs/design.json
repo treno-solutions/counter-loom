@@ -1,0 +1,41 @@
+{
+  "protocol_version": "1.0",
+  "framework": "TinyTroupe",
+  "framework_commit": "7ce8be378a37ee73f9745d6781452712318afa04",
+  "people_count": 4,
+  "group_count": 2,
+  "discussion_rounds": 1,
+  "conditions": [
+    "A_no_peer_exchange",
+    "B_within_group_exchange"
+  ],
+  "baseline": "four independent direct persona prompts without framework",
+  "planned_text_calls": 20,
+  "max_model_calls": 20,
+  "max_output_tokens_per_call": 1200,
+  "max_prompt_characters": 100000,
+  "max_total_seconds": 900,
+  "per_request_timeout_seconds": 60,
+  "transport_retries": 0,
+  "repetitions": 1,
+  "temperature": 0.7,
+  "top_p": 0.95,
+  "disable_thinking_requested": true,
+  "memory_consolidation": false,
+  "continuous_semantic_retrieval": false,
+  "action_quality_checks": false,
+  "regeneration": false,
+  "action_repetition_prevention": false,
+  "single_action_per_turn": false,
+  "source_case": "004/attempt-02; original people and news copied without edits",
+  "notes": [
+    "Structured action and cognitive-state JSON needs a larger output cap than the plain-text Concordia pilot; token use must be reported separately.",
+    "User-provided existing model server only; no independently measured money or electricity cost.",
+    "No default commercial-model requests, embeddings, internet research or trading.",
+    "Framework has internal retry decorators for KeyError/TypeError; adapter wraps failures as RuntimeError and enforces a global request ceiling.",
+    "Same cases are not identical prompts across frameworks. Baseline differs in memory and instructions; no isolated causal comparison claimed.",
+    "Attempt-01 stopped after 17 started requests because the single-action adapter conflicted with the native THINK-before-TALK protocol.",
+    "Attempt-02 uses four unchanged cases P01/P03/P05/P07 from the prior selection and two groups of two; 20 requests planned, total ceiling including stopped attempt 37, under original 40. Group composition differs from run 004."
+  ],
+  "turn_protocol": "one model call returning THINK/TALK/DONE sequence"
+}

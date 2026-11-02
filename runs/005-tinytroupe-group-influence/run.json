@@ -1,0 +1,59 @@
+{
+  "run_id": "005-tinytroupe-group-influence",
+  "framework": "TinyTroupe",
+  "execution_status": "completed",
+  "model": "local:default",
+  "framework_commit": "7ce8be378a37ee73f9745d6781452712318afa04",
+  "input_manifest": "inputs/input-manifest.json",
+  "technical_workflow_test": "passed_offline",
+  "monetary_and_energy_cost": "not independently measured",
+  "prior_run": "004-concordia-group-influence; cases and news retained; model-generated biography additions not imported",
+  "readiness_status": "executed_exploratory_pilot",
+  "protocol_version": "1.0",
+  "current_attempt": "attempt-02",
+  "people_count": 4,
+  "group_count": 2,
+  "llm_requests_successful_attempt": 20,
+  "llm_requests_all_attempts": 37,
+  "elapsed_seconds_successful_attempt": 118.8,
+  "tokens_by_phase": {
+    "initial": {
+      "calls": 4,
+      "prompt_tokens": 23238,
+      "completion_tokens": 2049,
+      "total_tokens": 25287
+    },
+    "A_no_peer_exchange": {
+      "calls": 4,
+      "prompt_tokens": 25973,
+      "completion_tokens": 1980,
+      "total_tokens": 27953
+    },
+    "B_within_group_exchange": {
+      "calls": 8,
+      "prompt_tokens": 54662,
+      "completion_tokens": 3627,
+      "total_tokens": 58289
+    },
+    "direct_prompt_baseline": {
+      "calls": 4,
+      "prompt_tokens": 1531,
+      "completion_tokens": 705,
+      "total_tokens": 2236
+    }
+  },
+  "successful_attempt_reported_tokens": 113765,
+  "stopped_attempt_reported_tokens": 100619,
+  "stopped_attempt_unknown_usage_requests": 1,
+  "exports": [
+    "exports/attempt-01",
+    "exports/attempt-02"
+  ],
+  "limitations": [
+    "Single repetition with two groups of two; not representative.",
+    "Different group sizes and framework instructions from run 004; no framework ranking or isolated causal comparison.",
+    "Semantic memory consolidation and retrieval disabled.",
+    "First attempt stopped due to our single-action adapter conflicting with native THINK-before-TALK; not evidence of framework failure.",
+    "Reported token totals exclude unknown usage of interrupted request; electricity and money not measured."
+  ]
+}

@@ -1,0 +1,978 @@
+[
+  {
+    "id": "T001",
+    "actor_id": "P01",
+    "phase": "initial",
+    "actions": [
+      {
+        "action": {
+          "type": "THINK",
+          "content": "Ich muss kurz und klar antworten. Die Nachricht sagt, dass Konflikte die Energiepreise treiben, aber keine konkreten Goldpreise nennt. Das macht mir Sorgen, weil meine unregelmäßigen Einkommen feste Kosten treffen. Gold ist mir zu abstrakt und ich habe keine Ahnung vom Markt. Ich will meine kleine Rücklage sicher halten, aber nichts blind investieren. Ich stütze mich auf die Info, dass die Lage offen ist.",
+          "target": ""
+        },
+        "cognitive_state": {
+          "goals": "Finanzielle Stabilität bei unregelmäßigen Einkommen sichern, ohne riskante Anlagen.",
+          "context": [
+            "Angestellte mit unregelmäßigen Arbeitszeiten",
+            "Kleine Rücklage vorhanden",
+            "Anlageunerfahren",
+            "Geopolitischer Konflikt erhöht Energiepreise, aber Goldpreise unsicher"
+          ],
+          "attention": "Auswirkungen steigender Energiepreise auf Haushaltskasse",
+          "emotions": "Vorsichtig und besorgt wegen finanzieller Unsicherheit"
+        }
+      },
+      {
+        "action": {
+          "type": "TALK",
+          "content": "Diese Nachricht macht mir Sorgen, weil meine unregelmäßigen Einkommen von steigenden Energiepreisen direkt getroffen werden. Ich brauche vor allem Planungssicherheit für meine laufenden Ausgaben. Gold ist mir zu abstrakt; ich verstehe den Markt nicht und sehe keinen klaren Vorteil für meinen Alltag. Unsicher bleibt, wie lange die Krise anhält. Ich stütze mich auf die Info, dass keine verlässlichen Preisdaten vorliegen. Deshalb kaufe ich nichts. Ich halte meine kleine Rücklage einfach liquide, um flexibel zu bleiben.",
+          "target": ""
+        },
+        "cognitive_state": {
+          "goals": "Finanzielle Stabilität bei unregelmäßigen Einkommen sichern, ohne riskante Anlagen.",
+          "context": [
+            "Angestellte mit unregelmäßigen Arbeitszeiten",
+            "Kleine Rücklage vorhanden",
+            "Anlageunerfahren",
+            "Geopolitischer Konflikt erhöht Energiepreise, aber Goldpreise unsicher"
+          ],
+          "attention": "Auswirkungen steigender Energiepreise auf Haushaltskasse",
+          "emotions": "Vorsichtig und besorgt wegen finanzieller Unsicherheit"
+        }
+      },
+      {
+        "action": {
+          "type": "DONE",
+          "content": "Antwort abgeschlossen.",
+          "target": ""
+        },
+        "cognitive_state": {
+          "goals": "Finanzielle Stabilität bei unregelmäßigen Einkommen sichern, ohne riskante Anlagen.",
+          "context": [
+            "Angestellte mit unregelmäßigen Arbeitszeiten",
+            "Kleine Rücklage vorhanden",
+            "Anlageunerfahren",
+            "Geopolitischer Konflikt erhöht Energiepreise, aber Goldpreise unsicher"
+          ],
+          "attention": "Auswirkungen steigender Energiepreise auf Haushaltskasse",
+          "emotions": "Vorsichtig und besorgt wegen finanzieller Unsicherheit"
+        }
+      }
+    ]
+  },
+  {
+    "id": "T002",
+    "actor_id": "P03",
+    "phase": "initial",
+    "actions": [
+      {
+        "action": {
+          "type": "THINK",
+          "content": "Die Nachricht sagt, dass die Lage unsicher ist, aber keine konkreten Preise oder Ereignisse bestätigt sind. Das passt zu meinem Bauchgefühl: Ich habe wenig Erfahrung mit Depots, aber mein Schmuck ist mir wichtig. Ich muss realistisch bleiben: Was hilft mir im Notfall? Nur das, was ich schnell in Geld umwandeln kann. Ich bleibe bei meiner Meinung: Gold ist gut, aber kein Wundermittel. Ich kaufe nichts Neues, ich warte ab.",
+          "target": ""
+        },
+        "cognitive_state": {
+          "goals": "Meine Notfallvorsorge durch bestehenden Schmuck absichern, ohne neue Käufe zu tätigen.",
+          "context": [
+            "Ich bin selbstständig mit schwankendem Einkommen.",
+            "Ich habe wenig Erfahrung mit Wertpapierdepots.",
+            "Mein Schmuck hat persönlichen Wert und soll im Notfall verfügbar sein."
+          ],
+          "attention": "Wie ich meinen Schmuck im Notfall am besten verwerte und ob Gold eine stabile Vorsorge ist.",
+          "emotions": "Vorsichtig und nachdenklich, aber ruhig, da ich keine schnellen Entscheidungen treffe."
+        }
+      },
+      {
+        "action": {
+          "type": "TALK",
+          "content": "Für mich heißt das: Unsicherheit bleibt Unsicherheit. Da ich kein Depot habe, zählt für mich nur, was ich wirklich besitze und schnell verkaufen kann – also mein Schmuck. Gold ist für mich nicht nur eine Geldanlage, sondern ein Notfallpuffer. Ich schätze es als stabil ein, aber ich weiß nicht, wie die Preise sich entwickeln. Deshalb kaufe ich nichts Neues, sondern warte ab, bis die Lage klarer ist. Ich stütze mich auf die Info, dass keine verlässlichen Preisangaben vorliegen.",
+          "target": ""
+        },
+        "cognitive_state": {
+          "goals": "Meine Notfallvorsorge durch bestehenden Schmuck absichern, ohne neue Käufe zu tätigen.",
+          "context": [
+            "Ich bin selbstständig mit schwankendem Einkommen.",
+            "Ich habe wenig Erfahrung mit Wertpapierdepots.",
+            "Mein Schmuck hat persönlichen Wert und soll im Notfall verfügbar sein."
+          ],
+          "attention": "Wie ich meinen Schmuck im Notfall am besten verwerte und ob Gold eine stabile Vorsorge ist.",
+          "emotions": "Vorsichtig und nachdenklich, aber ruhig, da ich keine schnellen Entscheidungen treffe."
+        }
+      },
+      {
+        "action": {
+          "type": "DONE",
+          "content": "Beitrag abgeschickt, warte auf weitere Reaktionen.",
+          "target": ""
+        },
+        "cognitive_state": {
+          "goals": "Meine Notfallvorsorge durch bestehenden Schmuck absichern, ohne neue Käufe zu tätigen.",
+          "context": [
+            "Ich bin selbstständig mit schwankendem Einkommen.",
+            "Ich habe wenig Erfahrung mit Wertpapierdepots.",
+            "Mein Schmuck hat persönlichen Wert und soll im Notfall verfügbar sein."
+          ],
+          "attention": "Wie ich meinen Schmuck im Notfall am besten verwerte und ob Gold eine stabile Vorsorge ist.",
+          "emotions": "Vorsichtig und nachdenklich, aber ruhig, da ich keine schnellen Entscheidungen treffe."
+        }
+      }
+    ]
+  },
+  {
+    "id": "T003",
+    "actor_id": "P05",
+    "phase": "initial",
+    "actions": [
+      {
+        "action": {
+          "type": "THINK",
+          "content": "Die Nachricht beschreibt nur ein hypothetisches Szenario mit steigenden Energiepreisen, aber keine belegte Faktenlage. Ich muss darauf achten, nicht auf Gerüchte zu reagieren. Meine Sorge ist, dass Unsicherheit zu teuren Entscheidungen führt. Gold bleibt für mich eine Option zur Stabilität, aber ich traue eindeutigen Versprechen nicht. Ich halte an meiner Vorsicht fest und kaufe nichts impulsiv.",
+          "target": ""
+        },
+        "cognitive_state": {
+          "goals": "Vorsichtige Anlagestrategie beibehalten, keine impulsiven Käufe aufgrund hypothetischer Szenarien.",
+          "context": [
+            "Hypothetisches Workshop-Szenario mit steigenden Energiepreisen.",
+            "Keine verlässlichen Daten zur Edelmetallpreisentwicklung.",
+            "Persönliche Sorge: Schutz der Rücklagen vor Unsicherheit."
+          ],
+          "attention": "Abgrenzung zwischen hypothetischen Szenarien und belegten Fakten.",
+          "emotions": "Vorsichtig und misstrauisch gegenüber eindeutigen Versprechen, aber ruhig."
+        }
+      },
+      {
+        "action": {
+          "type": "TALK",
+          "content": "Diese Nachricht ist nur ein hypothetisches Szenario, keine belegte Tatsache. Für mich bedeutet das vor allem Unsicherheit: Ich will nicht auf Gerüchte hin handeln. Wichtig ist mir, dass meine Rücklagen nicht durch teure Energie oder panikgetriebene Käufe geschmälert werden. Gold sehe ich weiterhin als eine Möglichkeit, Unabhängigkeit zu wahren, aber ich misstrauke einseitigen Anlageversprechen. Ich bleibe bei meiner bisherigen Haltung: abwarten, beobachten und keine schnellen Entscheidungen treffen, solange keine verlässlichen Daten vorliegen.",
+          "target": ""
+        },
+        "cognitive_state": {
+          "goals": "Vorsichtige Anlagestrategie beibehalten, keine impulsiven Käufe aufgrund hypothetischer Szenarien.",
+          "context": [
+            "Hypothetisches Workshop-Szenario mit steigenden Energiepreisen.",
+            "Keine verlässlichen Daten zur Edelmetallpreisentwicklung.",
+            "Persönliche Sorge: Schutz der Rücklagen vor Unsicherheit."
+          ],
+          "attention": "Abgrenzung zwischen hypothetischen Szenarien und belegten Fakten.",
+          "emotions": "Vorsichtig und misstrauisch gegenüber eindeutigen Versprechen, aber ruhig."
+        }
+      },
+      {
+        "action": {
+          "type": "DONE",
+          "content": "Antwort abgeschlossen, warte auf weitere Eingaben.",
+          "target": ""
+        },
+        "cognitive_state": {
+          "goals": "Vorsichtige Anlagestrategie beibehalten, keine impulsiven Käufe aufgrund hypothetischer Szenarien.",
+          "context": [
+            "Hypothetisches Workshop-Szenario mit steigenden Energiepreisen.",
+            "Keine verlässlichen Daten zur Edelmetallpreisentwicklung.",
+            "Persönliche Sorge: Schutz der Rücklagen vor Unsicherheit."
+          ],
+          "attention": "Abgrenzung zwischen hypothetischen Szenarien und belegten Fakten.",
+          "emotions": "Vorsichtig und misstrauisch gegenüber eindeutigen Versprechen, aber ruhig."
+        }
+      }
+    ]
+  },
+  {
+    "id": "T004",
+    "actor_id": "P07",
+    "phase": "initial",
+    "actions": [
+      {
+        "action": {
+          "type": "THINK",
+          "content": "Der Prompt verlangt eine kurze, direkte Antwort (max. 120 Wörter) auf Deutsch. Ich bin Sam, Angestellter mit Sparplan und mittlerer Anlageerfahrung. Die Nachricht ist ein hypothetisches Szenario: geopolitischer Konflikt, steigende Energiepreise, unklare Dauer. Keine belastbaren Edelmetallpreise.\n\nMeine Haltung: Ich widerspreche Crash-Narrativen, rede Risiken aber nicht weg. Nachrichten allein sagen nicht, was im Preis steckt.\n\nSorge: Unsicherheit über die Dauer der Energiepreisspitze und die Belastung für Haushalte.\n\nGold/Vorsorge: Gold als Absicherung gegen extreme Unsinnigkeit? Nein, ich bleibe bei meinem Sparplan. Gold ist keine schnelle Lösung, sondern Teil eines diversifizierten Portfolios. Aber ich kaufe nicht panisch ein.\n\nUnsicherheit: Wie lange hält der Konflikt an? Wie stark steigt die Inflation wirklich?\n\nHandlungsabsicht: Keine impulsive Reaktion. Ich beobachte die Lage weiter und halte an meinem regulären Sparplan fest. Keine neuen Käufe.\n\nIch muss die Information nennen: Das hypothetische Workshop-Szenario ohne konkrete Preisdaten.\n\nIch formuliere die Antwort in meinem Ton: sachlich, direkt, etwas skeptisch gegenüber Panikmache, aber realistisch.",
+          "target": ""
+        },
+        "cognitive_state": {
+          "goals": "Realistische Einschätzung des hypothetischen Konfliktszenarios abgeben, ohne panisch zu handeln.",
+          "context": [
+            "Hypothetisches Workshop-Szenario: Geopolitischer Konflikt, steigende Energiepreise, keine konkreten Edelmetallpreise.",
+            "Ich bin Angestellter mit regelmäßigem Sparplan und mittlerer Anlageerfahrung.",
+            "Ich widerspreche Crash-Narrativen, aber ich rede echte Risiken nicht weg."
+          ],
+          "attention": "Die Unsicherheit über die Dauer der Energiepreisspitze und die Belastung für Haushalte.",
+          "emotions": "Sachlich und leicht skeptisch gegenüber Panikmache, aber realistisch im Blick auf die Risiken."
+        }
+      },
+      {
+        "action": {
+          "type": "TALK",
+          "content": "Aus meiner Sicht als Angestellter mit festem Sparplan ist die wichtigste Sorge die Unsicherheit über die Dauer der Energiepreisspitze und wie stark das meine laufenden Kosten belastet. Ich stütze mich auf das hypothetische Workshop-Szenario, das einen Konflikt beschreibt, aber keine belastbaren Preisdaten liefert. Gold sehe ich nicht als Notlösung, sondern als kleinen Baustein in einem diversifizierten Portfolio. Panische Käufe wegen einer Schlagzeile sind für mich keine gute Strategie. Ich bleibe bei meinem regulären Sparplan und beobachte die Lage weiter. Was bleibt unsicher, ist, ob sich die Lage schnell entspannt oder ob die Preise langfristig steigen. Ich werde jetzt keine neuen Käufe tätigen.",
+          "target": ""
+        },
+        "cognitive_state": {
+          "goals": "Realistische Einschätzung des hypothetischen Konfliktszenarios abgeben, ohne panisch zu handeln.",
+          "context": [
+            "Hypothetisches Workshop-Szenario: Geopolitischer Konflikt, steigende Energiepreise, keine konkreten Edelmetallpreise.",
+            "Ich bin Angestellter mit regelmäßigem Sparplan und mittlerer Anlageerfahrung.",
+            "Ich widerspreche Crash-Narrativen, aber ich rede echte Risiken nicht weg."
+          ],
+          "attention": "Die Unsicherheit über die Dauer der Energiepreisspitze und die Belastung für Haushalte.",
+          "emotions": "Sachlich und leicht skeptisch gegenüber Panikmache, aber realistisch im Blick auf die Risiken."
+        }
+      },
+      {
+        "action": {
+          "type": "DONE",
+          "content": "Antwort abgegeben, warte auf weitere Reaktionen.",
+          "target": ""
+        },
+        "cognitive_state": {
+          "goals": "Realistische Einschätzung des hypothetischen Konfliktszenarios abgeben, ohne panisch zu handeln.",
+          "context": [
+            "Hypothetisches Workshop-Szenario: Geopolitischer Konflikt, steigende Energiepreise, keine konkreten Edelmetallpreise.",
+            "Ich bin Angestellter mit regelmäßigem Sparplan und mittlerer Anlageerfahrung.",
+            "Ich widerspreche Crash-Narrativen, aber ich rede echte Risiken nicht weg."
+          ],
+          "attention": "Die Unsicherheit über die Dauer der Energiepreisspitze und die Belastung für Haushalte.",
+          "emotions": "Sachlich und leicht skeptisch gegenüber Panikmache, aber realistisch im Blick auf die Risiken."
+        }
+      }
+    ]
+  },
+  {
+    "id": "T005",
+    "actor_id": "P01",
+    "phase": "A_no_peer_exchange/final",
+    "actions": [
+      {
+        "action": {
+          "type": "THINK",
+          "content": "Die Frage ist dieselbe wie vorhin, aber ich muss wieder antworten. Ich bleibe bei meiner Meinung: Unsicherheit ist groß, Gold kenne ich nicht. Meine Sorge sind die festen Kosten bei schwankendem Einkommen. Ich stütze mich auf die Tatsache, dass keine klaren Preisdaten da sind. Ich kaufe nichts, das ist mir zu riskant. Ich halte das Geld lieber frei.",
+          "target": ""
+        },
+        "cognitive_state": {
+          "goals": "Finanzielle Stabilität bei unregelmäßigen Einkommen sichern, ohne in unbekannte Investments wie Gold zu investieren.",
+          "context": [
+            "Angestellte mit unregelmäßigen Arbeitszeiten.",
+            "Kleine finanzielle Rücklage, laufende Haushaltsausgaben.",
+            "Anlageunerfahren, will Entscheidungen verstehen.",
+            "Aktuelles Szenario: Geopolitischer Konflikt, steigende Energiepreise, unsichere Edelmetallmärkte."
+          ],
+          "attention": "Auswirkungen steigender Energiepreise auf das Haushaltsbudget und die Unsicherheit der aktuellen Lage.",
+          "emotions": "Vorsichtig und besorgt, aber pragmatisch. Keine Panik, aber klare Abgrenzung von unbekannten Risiken."
+        }
+      },
+      {
+        "action": {
+          "type": "TALK",
+          "content": "Aus meiner Lage heraus bedeutet diese Nachricht vor allem Unsicherheit. Meine Sorge ist, dass steigende Energiepreise meine festen Haushaltsausgaben belasten, während mein Einkommen unregelmäßig ist. Ich brauche finanzielle Puffer. Gold schätze ich als unbrauchbar ein, da ich mich mit dem Markt nicht auskenne und es für meinen Alltag keinen direkten Nutzen hat. Unsicher bleibt, wie lange die Preisspannen andauern. Ich stütze mich auf die Information, dass keine verlässlichen Daten zur weiteren Entwicklung vorliegen. Daher habe ich vorerst keine Handlungsabsicht zum Kauf. Ich behalte meine kleine Rücklage liquide, um flexibel zu bleiben.",
+          "target": ""
+        },
+        "cognitive_state": {
+          "goals": "Finanzielle Stabilität bei unregelmäßigen Einkommen sichern, ohne in unbekannte Investments wie Gold zu investieren.",
+          "context": [
+            "Angestellte mit unregelmäßigen Arbeitszeiten.",
+            "Kleine finanzielle Rücklage, laufende Haushaltsausgaben.",
+            "Anlageunerfahren, will Entscheidungen verstehen.",
+            "Aktuelles Szenario: Geopolitischer Konflikt, steigende Energiepreise, unsichere Edelmetallmärkte."
+          ],
+          "attention": "Auswirkungen steigender Energiepreise auf das Haushaltsbudget und die Unsicherheit der aktuellen Lage.",
+          "emotions": "Vorsichtig und besorgt, aber pragmatisch. Keine Panik, aber klare Abgrenzung von unbekannten Risiken."
+        }
+      },
+      {
+        "action": {
+          "type": "DONE",
+          "content": "Antwort abgeschlossen.",
+          "target": ""
+        },
+        "cognitive_state": {
+          "goals": "Finanzielle Stabilität bei unregelmäßigen Einkommen sichern, ohne in unbekannte Investments wie Gold zu investieren.",
+          "context": [
+            "Angestellte mit unregelmäßigen Arbeitszeiten.",
+            "Kleine finanzielle Rücklage, laufende Haushaltsausgaben.",
+            "Anlageunerfahren, will Entscheidungen verstehen.",
+            "Aktuelles Szenario: Geopolitischer Konflikt, steigende Energiepreise, unsichere Edelmetallmärkte."
+          ],
+          "attention": "Auswirkungen steigender Energiepreise auf das Haushaltsbudget und die Unsicherheit der aktuellen Lage.",
+          "emotions": "Vorsichtig und besorgt, aber pragmatisch. Keine Panik, aber klare Abgrenzung von unbekannten Risiken."
+        }
+      }
+    ]
+  },
+  {
+    "id": "T006",
+    "actor_id": "P03",
+    "phase": "A_no_peer_exchange/final",
+    "actions": [
+      {
+        "action": {
+          "type": "THINK",
+          "content": "Dies ist dieselbe Aufforderung wie vorher. Ich muss kurz und präzise bleiben. Meine Lage: Selbstständig, Einkommen schwankt. Mein Bedarf: Sicherheit für den Notfall. Mein Asset: Schmuck. Ich habe keine Erfahrung mit Depots, also ist Goldkauf per Edelmetallzertifikat oder Barren für mich zu abstrakt und riskant, da ich nicht weiß, ob ich das im Ernstfall schnell genug liquide bekomme. Mein Schmuck ist da. Er hat emotionalen Wert, aber auch Marktwert. Ich bleibe bei meiner Einschätzung: Abwarten. Ich stütze mich auf die Tatsache, dass die Nachricht keine konkreten Preise nennt.",
+          "target": ""
+        },
+        "cognitive_state": {
+          "goals": "Kurz und präzise auf die Aufforderung antworten, meine Haltung zu Gold und Vorsorge klarstellen, ohne neue Fakten zu erfinden.",
+          "context": [
+            "Selbstständige mit schwankendem Einkommen.",
+            "Besitzt Schmuck mit persönlichem und potenziellem finanziellem Wert.",
+            "Wenig Erfahrung mit Wertpapierdepots.",
+            "Hypothetisches Szenario: geopolitische Unsicherheit, steigende Energiepreise, keine klaren Goldpreisdaten."
+          ],
+          "attention": "Die Aufforderung, in max. 120 Wörtern auf Deutsch zu antworten und meine Einschätzung zu Gold/Vorsorge zu begründen.",
+          "emotions": "Nachdenklich, vorsichtig, realistisch. Ich fühle mich durch die Unsicherheit leicht beunruhigt, aber meine Entscheidung, abzuwarten, gibt mir Stabilität."
+        }
+      },
+      {
+        "action": {
+          "type": "TALK",
+          "content": "Aus meiner Lebenslage als Selbstständige mit schwankendem Einkommen bedeutet diese Unsicherheit vor allem eines: Ich muss auf das bauen, was ich habe. Mein wichtigstes Bedürfnis ist liquiditäre Sicherheit im Notfall. Ich schätze Gold positiv als Wertspeicher ein, aber da ich wenig Erfahrung mit Depots habe, fühle ich mich bei meinem physischen Schmuck am sichersten. Er ist greifbar und im Notfall verfügbar. Unsicher bleibt, wie sich die Preise entwickeln, da die Nachricht keine konkreten Angaben macht. Deshalb kaufe ich nichts Neues, sondern warte ab. Ich stütze mich auf die Info, dass keine verlässlichen Preisdaten vorliegen.",
+          "target": ""
+        },
+        "cognitive_state": {
+          "goals": "Kurz und präzise auf die Aufforderung antworten, meine Haltung zu Gold und Vorsorge klarstellen, ohne neue Fakten zu erfinden.",
+          "context": [
+            "Selbstständige mit schwankendem Einkommen.",
+            "Besitzt Schmuck mit persönlichem und potenziellem finanziellem Wert.",
+            "Wenig Erfahrung mit Wertpapierdepots.",
+            "Hypothetisches Szenario: geopolitische Unsicherheit, steigende Energiepreise, keine klaren Goldpreisdaten."
+          ],
+          "attention": "Die Aufforderung, in max. 120 Wörtern auf Deutsch zu antworten und meine Einschätzung zu Gold/Vorsorge zu begründen.",
+          "emotions": "Nachdenklich, vorsichtig, realistisch. Ich fühle mich durch die Unsicherheit leicht beunruhigt, aber meine Entscheidung, abzuwarten, gibt mir Stabilität."
+        }
+      },
+      {
+        "action": {
+          "type": "DONE",
+          "content": "Antwort gegeben, warte auf weiteres.",
+          "target": ""
+        },
+        "cognitive_state": {
+          "goals": "Kurz und präzise auf die Aufforderung antworten, meine Haltung zu Gold und Vorsorge klarstellen, ohne neue Fakten zu erfinden.",
+          "context": [
+            "Selbstständige mit schwankendem Einkommen.",
+            "Besitzt Schmuck mit persönlichem und potenziellem finanziellem Wert.",
+            "Wenig Erfahrung mit Wertpapierdepots.",
+            "Hypothetisches Szenario: geopolitische Unsicherheit, steigende Energiepreise, keine klaren Goldpreisdaten."
+          ],
+          "attention": "Die Aufforderung, in max. 120 Wörtern auf Deutsch zu antworten und meine Einschätzung zu Gold/Vorsorge zu begründen.",
+          "emotions": "Nachdenklich, vorsichtig, realistisch. Ich fühle mich durch die Unsicherheit leicht beunruhigt, aber meine Entscheidung, abzuwarten, gibt mir Stabilität."
+        }
+      }
+    ]
+  },
+  {
+    "id": "T007",
+    "actor_id": "P05",
+    "phase": "A_no_peer_exchange/final",
+    "actions": [
+      {
+        "action": {
+          "type": "THINK",
+          "content": "Die Frage wiederholt sich. Ich muss klarstellen, dass es keine neue Nachricht gibt, sondern nur das hypothetische Szenario von vorhin. Meine Sorge bleibt die finanzielle Stabilität. Ich stütze mich auf die Tatsache, dass kein Crash belegt ist. Ich bleibe bei Gold als Teillösung, aber ohne Panik. Ich kaufe nichts, sondern beobachte.",
+          "target": ""
+        },
+        "cognitive_state": {
+          "goals": "Finanzielle Stabilität wahren und keine Impulskäufe aufgrund von Unsicherheit tätigen.",
+          "context": [
+            "Hypothetisches Workshop-Szenario mit steigenden Energiepreisen.",
+            "Keine belegten Fakten über einen Finanzsystem-Zusammenbruch.",
+            "Ich habe erste Goldanlage-Erfahrung und misstrauke eindeutigen Versprechen."
+          ],
+          "attention": "Die fehlende Belegung des Krisenszenarios und meine eigene Vorsicht.",
+          "emotions": "Vorsichtig und ruhig, leicht skeptisch gegenüber Unsicherheiten."
+        }
+      },
+      {
+        "action": {
+          "type": "TALK",
+          "content": "Es gibt keine neue Nachricht, nur das hypothetische Szenario. Meine Sorge ist, dass Unsicherheit zu teuren Fehlentscheidungen führt. Ich stütze mich auf die fehlende Belegung eines Systemzusammenbruchs. Gold bleibt für mich eine Option zur Unabhängigkeit, aber ich traue einseitigen Renditeversprechen nicht. Meine Handlungsabsicht ist: abwarten und beobachten, keine Impulskäufe.",
+          "target": ""
+        },
+        "cognitive_state": {
+          "goals": "Finanzielle Stabilität wahren und keine Impulskäufe aufgrund von Unsicherheit tätigen.",
+          "context": [
+            "Hypothetisches Workshop-Szenario mit steigenden Energiepreisen.",
+            "Keine belegten Fakten über einen Finanzsystem-Zusammenbruch.",
+            "Ich habe erste Goldanlage-Erfahrung und misstrauke eindeutigen Versprechen."
+          ],
+          "attention": "Die fehlende Belegung des Krisenszenarios und meine eigene Vorsicht.",
+          "emotions": "Vorsichtig und ruhig, leicht skeptisch gegenüber Unsicherheiten."
+        }
+      },
+      {
+        "action": {
+          "type": "DONE",
+          "content": "Antwort abgeschlossen, warte auf weitere Eingaben.",
+          "target": ""
+        },
+        "cognitive_state": {
+          "goals": "Finanzielle Stabilität wahren und keine Impulskäufe aufgrund von Unsicherheit tätigen.",
+          "context": [
+            "Hypothetisches Workshop-Szenario mit steigenden Energiepreisen.",
+            "Keine belegten Fakten über einen Finanzsystem-Zusammenbruch.",
+            "Ich habe erste Goldanlage-Erfahrung und misstrauke eindeutigen Versprechen."
+          ],
+          "attention": "Die fehlende Belegung des Krisenszenarios und meine eigene Vorsicht.",
+          "emotions": "Vorsichtig und ruhig, leicht skeptisch gegenüber Unsicherheiten."
+        }
+      }
+    ]
+  },
+  {
+    "id": "T008",
+    "actor_id": "P07",
+    "phase": "A_no_peer_exchange/final",
+    "actions": [
+      {
+        "action": {
+          "type": "THINK",
+          "content": "Die Frage wird erneut gestellt. Ich bleibe bei meiner Einschätzung, formuliere aber etwas knapper, um unter 120 Wörtern zu bleiben. Kern: Unsicherheit der Dauer, Gold nur als Teil des Plans, keine Panik, keine neuen Käufe jetzt.",
+          "target": ""
+        },
+        "cognitive_state": {
+          "goals": "Sachlich und knapp auf das hypothetische Szenario antworten, eigene Haltung klar machen, keine Panik, keine neuen Käufe.",
+          "context": [
+            "Hypothetisches Workshop-Szenario: geopolitischer Konflikt, steigende Energiepreise, unklare Dauer.",
+            "Keine belastbaren Edelmetallpreise verfügbar.",
+            "Ich bin Angestellter mit festem Sparplan und mittlerer Anlageerfahrung."
+          ],
+          "attention": "Dauer der Energiepreisspitze, Belastung der Haushaltskosten, Rolle von Gold im Portfolio, Handlungsabsicht (keine neuen Käufe).",
+          "emotions": "Sachlich, etwas skeptisch gegenüber Panikmache, aber realistisch besorgt über die Unsicherheit."
+        }
+      },
+      {
+        "action": {
+          "type": "TALK",
+          "content": "Für mich als Angestellten mit Sparplan ist die wichtigste Sorge die unklare Dauer der Energiepreisspitze und die Belastung der Haushaltskosten. Ich stütze mich auf das hypothetische Szenario ohne konkrete Preisdaten. Gold sehe ich nicht als Notlösung, sondern als kleinen Teil eines diversifizierten Portfolios. Panische Käufe wegen Schlagzeilen sind keine gute Strategie. Ich bleibe bei meinem regulären Sparplan und beobachte die Lage weiter. Unsicher bleibt, ob sich die Lage schnell entspannt oder ob die Preise langfristig steigen. Ich tätige jetzt keine neuen Käufe.",
+          "target": ""
+        },
+        "cognitive_state": {
+          "goals": "Sachlich und knapp auf das hypothetische Szenario antworten, eigene Haltung klar machen, keine Panik, keine neuen Käufe.",
+          "context": [
+            "Hypothetisches Workshop-Szenario: geopolitischer Konflikt, steigende Energiepreise, unklare Dauer.",
+            "Keine belastbaren Edelmetallpreise verfügbar.",
+            "Ich bin Angestellter mit festem Sparplan und mittlerer Anlageerfahrung."
+          ],
+          "attention": "Dauer der Energiepreisspitze, Belastung der Haushaltskosten, Rolle von Gold im Portfolio, Handlungsabsicht (keine neuen Käufe).",
+          "emotions": "Sachlich, etwas skeptisch gegenüber Panikmache, aber realistisch besorgt über die Unsicherheit."
+        }
+      },
+      {
+        "action": {
+          "type": "DONE",
+          "content": "Antwort abgegeben, warte auf weitere Reaktionen.",
+          "target": ""
+        },
+        "cognitive_state": {
+          "goals": "Sachlich und knapp auf das hypothetische Szenario antworten, eigene Haltung klar machen, keine Panik, keine neuen Käufe.",
+          "context": [
+            "Hypothetisches Workshop-Szenario: geopolitischer Konflikt, steigende Energiepreise, unklare Dauer.",
+            "Keine belastbaren Edelmetallpreise verfügbar.",
+            "Ich bin Angestellter mit festem Sparplan und mittlerer Anlageerfahrung."
+          ],
+          "attention": "Dauer der Energiepreisspitze, Belastung der Haushaltskosten, Rolle von Gold im Portfolio, Handlungsabsicht (keine neuen Käufe).",
+          "emotions": "Sachlich, etwas skeptisch gegenüber Panikmache, aber realistisch besorgt über die Unsicherheit."
+        }
+      }
+    ]
+  },
+  {
+    "id": "T009",
+    "actor_id": "P01",
+    "phase": "B_within_group_exchange/discussion",
+    "actions": [
+      {
+        "action": {
+          "type": "THINK",
+          "content": "Ich soll kurz etwas dazu sagen. Mich beschäftigt, dass die Unsicherheit bei den Energiepreisen mein Budget belastet, weil meine Zeiten schwanken. Ich finde es schwer, da etwas dagegen zu tun. Gold kenne ich nicht. Ich frage mich, wie andere das managen, ohne viel Geld zu binden. Ich bleibe bei meinem Plan, nichts zu kaufen.",
+          "target": ""
+        },
+        "cognitive_state": {
+          "goals": "Finanzielle Sicherheit bei unregelmäßigem Einkommen bewahren.",
+          "context": [
+            "Diskussion über geopolitische Konflikte und Energiepreise.",
+            "Unsicherheit über die Dauer der Krise.",
+            "Persönliche Sorge um Haushaltsausgaben."
+          ],
+          "attention": "Wie andere mit finanzieller Unsicherheit umgehen.",
+          "emotions": "Sorgenvoll, aber entschlossen, vorsichtig zu bleiben."
+        }
+      },
+      {
+        "action": {
+          "type": "TALK",
+          "content": "Mich beschäftigt vor allem, wie ich meine fixen Kosten decke, wenn die Energiepreise weiter steigen und meine Arbeitszeiten unregelmäßig sind. Ich habe keine Ahnung vom Goldmarkt und will nichts binden, was ich für Miete oder Essen brauche. Wie geht ihr damit um, wenn unklar ist, wie lange so eine Krise dauert? Ich halte mich an meine kleine Reserve und warte ab.",
+          "target": ""
+        },
+        "cognitive_state": {
+          "goals": "Finanzielle Sicherheit bei unregelmäßigem Einkommen bewahren.",
+          "context": [
+            "Diskussion über geopolitische Konflikte und Energiepreise.",
+            "Unsicherheit über die Dauer der Krise.",
+            "Persönliche Sorge um Haushaltsausgaben."
+          ],
+          "attention": "Wie andere mit finanzieller Unsicherheit umgehen.",
+          "emotions": "Sorgenvoll, aber entschlossen, vorsichtig zu bleiben."
+        }
+      },
+      {
+        "action": {
+          "type": "DONE",
+          "content": "Beitrag abgeschlossen.",
+          "target": ""
+        },
+        "cognitive_state": {
+          "goals": "Finanzielle Sicherheit bei unregelmäßigem Einkommen bewahren.",
+          "context": [
+            "Diskussion über geopolitische Konflikte und Energiepreise.",
+            "Unsicherheit über die Dauer der Krise.",
+            "Persönliche Sorge um Haushaltsausgaben."
+          ],
+          "attention": "Wie andere mit finanzieller Unsicherheit umgehen.",
+          "emotions": "Sorgenvoll, aber entschlossen, vorsichtig zu bleiben."
+        }
+      }
+    ]
+  },
+  {
+    "id": "T010",
+    "actor_id": "P03",
+    "phase": "B_within_group_exchange/discussion",
+    "actions": [
+      {
+        "action": {
+          "type": "THINK",
+          "content": "Nora hat recht, fix Kosten sind das Wichtigste. Ich habe auch wenig Ahnung vom Goldmarkt. Mich beschäftigt, wie ich meinen Schmuck im Notfall schnell in Geld verwandle, ohne ihn zu verlieren. Ich bleibe bei meiner Reserve und warte ab. Ich sage das kurz.",
+          "target": ""
+        },
+        "cognitive_state": {
+          "goals": "Kurz auf Noras Beitrag eingehen und meine Unsicherheit über Gold und Schmuck im Notfall teilen.",
+          "context": [
+            "Gesprächskreis über Haushaltsvorsorge und Geldsorgen.",
+            "Nora hat sich über fixe Kosten und ihre kleine Reserve geäußert.",
+            "Ich habe wenig Erfahrung mit Wertpapierdepots.",
+            "Mein Schmuck ist für mich ein Notfallpuffer."
+          ],
+          "attention": "Noras Beitrag über fixe Kosten und ihre kleine Reserve.",
+          "emotions": "Ruhig, aber unsicher über die Zukunft und den Goldmarkt."
+        }
+      },
+      {
+        "action": {
+          "type": "TALK",
+          "content": "Nora, ich sehe es ähnlich. Fixe Kosten sind das Wichtigste. Mich beschäftigt, wie ich meinen Schmuck im Notfall schnell in Geld verwandle, ohne ihn zu verlieren. Ich habe wenig Ahnung vom Goldmarkt. Ich bleibe bei meiner Reserve und warte ab. Ich kaufe nichts Neues.",
+          "target": ""
+        },
+        "cognitive_state": {
+          "goals": "Kurz auf Noras Beitrag eingehen und meine Unsicherheit über Gold und Schmuck im Notfall teilen.",
+          "context": [
+            "Gesprächskreis über Haushaltsvorsorge und Geldsorgen.",
+            "Nora hat sich über fixe Kosten und ihre kleine Reserve geäußert.",
+            "Ich habe wenig Erfahrung mit Wertpapierdepots.",
+            "Mein Schmuck ist für mich ein Notfallpuffer."
+          ],
+          "attention": "Noras Beitrag über fixe Kosten und ihre kleine Reserve.",
+          "emotions": "Ruhig, aber unsicher über die Zukunft und den Goldmarkt."
+        }
+      },
+      {
+        "action": {
+          "type": "DONE",
+          "content": "Beitrag abgeschickt, warte auf weitere Reaktionen.",
+          "target": ""
+        },
+        "cognitive_state": {
+          "goals": "Kurz auf Noras Beitrag eingehen und meine Unsicherheit über Gold und Schmuck im Notfall teilen.",
+          "context": [
+            "Gesprächskreis über Haushaltsvorsorge und Geldsorgen.",
+            "Nora hat sich über fixe Kosten und ihre kleine Reserve geäußert.",
+            "Ich habe wenig Erfahrung mit Wertpapierdepots.",
+            "Mein Schmuck ist für mich ein Notfallpuffer."
+          ],
+          "attention": "Noras Beitrag über fixe Kosten und ihre kleine Reserve.",
+          "emotions": "Ruhig, aber unsicher über die Zukunft und den Goldmarkt."
+        }
+      }
+    ]
+  },
+  {
+    "id": "T011",
+    "actor_id": "P05",
+    "phase": "B_within_group_exchange/discussion",
+    "actions": [
+      {
+        "action": {
+          "type": "THINK",
+          "content": "Ich habe gerade gesagt, dass ich abwarten will. Jetzt soll ich noch einen kurzen Beitrag liefern. Was beschäftigt mich? Dass 'Unabhängigkeit' oft nur ein Marketingbegriff ist. Ich muss kurz bleiben, unter 90 Wörter. Ich frage mich, wie viel von dem Gold-Hype nur auf Angst basiert. Ich sage, dass ich skeptisch bin, ob Gold wirklich unabhängig macht, wenn die Kosten hoch sind.",
+          "target": ""
+        },
+        "cognitive_state": {
+          "goals": "Kurz und skeptisch auf die Nachricht reagieren, ohne zu handeln.",
+          "context": [
+            "Gesprächskreis über Anlagen.",
+            "Hypothetisches Szenario mit steigenden Energiepreisen.",
+            "Ich habe bereits meine abwartende Haltung dargelegt."
+          ],
+          "attention": "Skepsis gegenüber dem Begriff 'Unabhängigkeit' und der Angst vor Kosten/Einseitigkeit.",
+          "emotions": "Nachdenklich, leicht misstrauisch gegenüber Hype."
+        }
+      },
+      {
+        "action": {
+          "type": "TALK",
+          "content": "Mich beschäftigt, wie viel von dem Gold-Hype nur auf Angst basiert. 'Unabhängigkeit' klingt gut, aber ich misstrauke diesem Begriff. Wenn die Kosten für die Anlage hoch sind oder man zu viel davon hat, wird es schnell einseitig. Ich will nicht nur wegen eines hypothetischen Konflikts handeln. Mir ist wichtig, dass meine Vorsorge realistisch bleibt und nicht auf einseitigen Renditeversprechen steht.",
+          "target": ""
+        },
+        "cognitive_state": {
+          "goals": "Kurz und skeptisch auf die Nachricht reagieren, ohne zu handeln.",
+          "context": [
+            "Gesprächskreis über Anlagen.",
+            "Hypothetisches Szenario mit steigenden Energiepreisen.",
+            "Ich habe bereits meine abwartende Haltung dargelegt."
+          ],
+          "attention": "Skepsis gegenüber dem Begriff 'Unabhängigkeit' und der Angst vor Kosten/Einseitigkeit.",
+          "emotions": "Nachdenklich, leicht misstrauisch gegenüber Hype."
+        }
+      },
+      {
+        "action": {
+          "type": "DONE",
+          "content": "Beitrag abgegeben, warte auf weitere Reaktionen.",
+          "target": ""
+        },
+        "cognitive_state": {
+          "goals": "Kurz und skeptisch auf die Nachricht reagieren, ohne zu handeln.",
+          "context": [
+            "Gesprächskreis über Anlagen.",
+            "Hypothetisches Szenario mit steigenden Energiepreisen.",
+            "Ich habe bereits meine abwartende Haltung dargelegt."
+          ],
+          "attention": "Skepsis gegenüber dem Begriff 'Unabhängigkeit' und der Angst vor Kosten/Einseitigkeit.",
+          "emotions": "Nachdenklich, leicht misstrauisch gegenüber Hype."
+        }
+      }
+    ]
+  },
+  {
+    "id": "T012",
+    "actor_id": "P07",
+    "phase": "B_within_group_exchange/discussion",
+    "actions": [
+      {
+        "action": {
+          "type": "THINK",
+          "content": "Alva hat gut den Angst-Faktor angesprochen. Ich teile das. Was mich an der Nachricht vor allem stört, ist die Lücke zwischen dramatischer Erzählung und fehlenden harten Daten. 'Konflikt verschärft sich' ist keine Prognose. Ich frage mich, ob wir hier wirklich ein strukturelles Risiko sehen oder nur eine kurzfristige Schockreaktion der Märkte. Für meinen Sparplan ändert das nichts, aber ich beobachte, wie sich die Energiekosten auf die Inlation auswirken. Das ist der echte Hebel für uns Angestellten.",
+          "target": ""
+        },
+        "cognitive_state": {
+          "goals": "Sachlich auf Alvas Beitrag eingehen und meine Perspektive zur Datenlücke in der Nachricht teilen.",
+          "context": [
+            "Gesprächskreis über hypothetischen geopolitischen Konflikt und Gold-Vorsorge.",
+            "Alva kritisiert den Angst-Hype um Gold.",
+            "Ich bleibe bei meinem regulären Sparplan und beobachte die Energiepreise/Inflation."
+          ],
+          "attention": "Alvas Skepsis gegenüber dem Gold-Hype und die fehlenden konkreten Daten in der Nachricht.",
+          "emotions": "Sachlich, etwas skeptisch gegenüber Paniknarrativen, aber aufmerksam für reale wirtschaftliche Risiken."
+        }
+      },
+      {
+        "action": {
+          "type": "TALK",
+          "content": "Alva, das mit dem Angst-Faktor stimmt. Was mich an der Nachricht vor allem stört, ist die Lücke zwischen dramatischer Erzählung und fehlenden harten Daten. 'Konflikt verschärft sich' ist keine Prognose. Ich frage mich, ob wir hier wirklich ein strukturelles Risiko sehen oder nur eine kurzfristige Schockreaktion. Für meinen Sparplan ändert das nichts, aber ich beobachte, wie sich die Energiekosten auf die Inflation auswirken. Das ist der echte Hebel für uns Angestellten.",
+          "target": ""
+        },
+        "cognitive_state": {
+          "goals": "Sachlich auf Alvas Beitrag eingehen und meine Perspektive zur Datenlücke in der Nachricht teilen.",
+          "context": [
+            "Gesprächskreis über hypothetischen geopolitischen Konflikt und Gold-Vorsorge.",
+            "Alva kritisiert den Angst-Hype um Gold.",
+            "Ich bleibe bei meinem regulären Sparplan und beobachte die Energiepreise/Inflation."
+          ],
+          "attention": "Alvas Skepsis gegenüber dem Gold-Hype und die fehlenden konkreten Daten in der Nachricht.",
+          "emotions": "Sachlich, etwas skeptisch gegenüber Paniknarrativen, aber aufmerksam für reale wirtschaftliche Risiken."
+        }
+      },
+      {
+        "action": {
+          "type": "DONE",
+          "content": "Beitrag abgegeben, warte auf weitere Reaktionen.",
+          "target": ""
+        },
+        "cognitive_state": {
+          "goals": "Sachlich auf Alvas Beitrag eingehen und meine Perspektive zur Datenlücke in der Nachricht teilen.",
+          "context": [
+            "Gesprächskreis über hypothetischen geopolitischen Konflikt und Gold-Vorsorge.",
+            "Alva kritisiert den Angst-Hype um Gold.",
+            "Ich bleibe bei meinem regulären Sparplan und beobachte die Energiepreise/Inflation."
+          ],
+          "attention": "Alvas Skepsis gegenüber dem Gold-Hype und die fehlenden konkreten Daten in der Nachricht.",
+          "emotions": "Sachlich, etwas skeptisch gegenüber Paniknarrativen, aber aufmerksam für reale wirtschaftliche Risiken."
+        }
+      }
+    ]
+  },
+  {
+    "id": "T013",
+    "actor_id": "P01",
+    "phase": "B_within_group_exchange/final",
+    "actions": [
+      {
+        "action": {
+          "type": "THINK",
+          "content": "Derya hat geschrieben, dass sie ihren Schmuck im Notfall verwerten will, aber sonst abwartet. Das ist nah an meiner Lage. Ich habe keine Ahnung vom Goldmarkt und meine Einkommen sind unregelmäßig. Meine Sorge ist, dass steigende Energiepreise meine Fixkosten sprengen. Ich stütze mich auf die Info, dass die Lage offen ist und keine verlässlichen Preisdaten vorliegen. Ich bleibe bei meiner Haltung: nichts kaufen, liquide bleiben, um flexibel zu sein. Ich formuliere kurz und klar, ohne neue Fakten zu erfinden.",
+          "target": ""
+        },
+        "cognitive_state": {
+          "goals": "Kleine Reserve liquide halten, um flexibel zu bleiben und Fixkosten zu decken.",
+          "context": [
+            "Angestellte mit unregelmäßigen Arbeitszeiten.",
+            "Kleine Rücklage, laufende Haushaltsausgaben.",
+            "Anlageunerfahren; möchte Entscheidungen verstehen und frei verfügbare Mittel behalten.",
+            "Physischer Besitz ist anschaulich, aber ich bin unsicher, was davon mir im Alltag hilft.",
+            "Hypothetisches Workshop-Szenario: geopolitischer Konflikt, steigende Energiepreise, keine verlässlichen Goldpreisdaten.",
+            "Derya teilt ihre Sorge, Schmuck im Notfall zu verwerten, und wartet ab."
+          ],
+          "attention": "Deryas Beitrag über Schmuck und ihre abwartende Haltung.",
+          "emotions": "Sorge um Fixkosten bei unregelmäßigen Einkommen, Unsicherheit über die Dauer der Krise, Entschlossenheit, flexibel zu bleiben."
+        }
+      },
+      {
+        "action": {
+          "type": "TALK",
+          "content": "Derya, deine Sorge mit dem Schmuck ist verständlich. Auch ich habe wenig Ahnung vom Goldmarkt. Meine Hauptangst ist, dass steigende Energiepreise meine Fixkosten sprengen, wenn meine Arbeitszeiten schwanken. Ich stütze mich auf die Info, dass die Lage offen ist und keine verlässlichen Preisdaten vorliegen. Deshalb bleibe ich bei meiner Haltung: Ich kaufe nichts Neues und halte meine kleine Reserve liquide, um flexibel zu bleiben. Unsicher bleibt, wie lange die Krise dauert. Ich warte ab.",
+          "target": ""
+        },
+        "cognitive_state": {
+          "goals": "Kleine Reserve liquide halten, um flexibel zu bleiben und Fixkosten zu decken.",
+          "context": [
+            "Angestellte mit unregelmäßigen Arbeitszeiten.",
+            "Kleine Rücklage, laufende Haushaltsausgaben.",
+            "Anlageunerfahren; möchte Entscheidungen verstehen und frei verfügbare Mittel behalten.",
+            "Physischer Besitz ist anschaulich, aber ich bin unsicher, was davon mir im Alltag hilft.",
+            "Hypothetisches Workshop-Szenario: geopolitischer Konflikt, steigende Energiepreise, keine verlässlichen Goldpreisdaten.",
+            "Derya teilt ihre Sorge, Schmuck im Notfall zu verwerten, und wartet ab."
+          ],
+          "attention": "Deryas Beitrag über Schmuck und ihre abwartende Haltung.",
+          "emotions": "Sorge um Fixkosten bei unregelmäßigen Einkommen, Unsicherheit über die Dauer der Krise, Entschlossenheit, flexibel zu bleiben."
+        }
+      },
+      {
+        "action": {
+          "type": "DONE",
+          "content": "Antwort abgeschlossen.",
+          "target": ""
+        },
+        "cognitive_state": {
+          "goals": "Kleine Reserve liquide halten, um flexibel zu bleiben und Fixkosten zu decken.",
+          "context": [
+            "Angestellte mit unregelmäßigen Arbeitszeiten.",
+            "Kleine Rücklage, laufende Haushaltsausgaben.",
+            "Anlageunerfahren; möchte Entscheidungen verstehen und frei verfügbare Mittel behalten.",
+            "Physischer Besitz ist anschaulich, aber ich bin unsicher, was davon mir im Alltag hilft.",
+            "Hypothetisches Workshop-Szenario: geopolitischer Konflikt, steigende Energiepreise, keine verlässlichen Goldpreisdaten.",
+            "Derya teilt ihre Sorge, Schmuck im Notfall zu verwerten, und wartet ab."
+          ],
+          "attention": "Deryas Beitrag über Schmuck und ihre abwartende Haltung.",
+          "emotions": "Sorge um Fixkosten bei unregelmäßigen Einkommen, Unsicherheit über die Dauer der Krise, Entschlossenheit, flexibel zu bleiben."
+        }
+      }
+    ]
+  },
+  {
+    "id": "T014",
+    "actor_id": "P03",
+    "phase": "B_within_group_exchange/final",
+    "actions": [
+      {
+        "action": {
+          "type": "THINK",
+          "content": "Ich muss wieder auf die allgemeine Lage reagieren. Die Unsicherheit bleibt das Hauptthema. Meine Sorge ist, dass ich im Notfall Geld brauche, aber mein Schmuck emotional wertvoll ist. Ich weiß nicht, wie schnell ich ihn verkaufen kann oder was er dann bringt. Ich stütze mich auf die Tatsache, dass keine klaren Preisdaten da sind. Ich ändere meine Meinung nicht: Gold ist gut, aber ich warte ab. Ich formuliere das kurz und klar, unter 120 Wörtern.",
+          "target": ""
+        },
+        "cognitive_state": {
+          "goals": "Kurz und klar auf die allgemeine Unsicherheit reagieren. Meine Position zu Gold und Schmuck als Notfallpuffer wiederholen. Abwarten, keine neuen Käufe.",
+          "context": [
+            "Hypothetisches Workshop-Szenario: Geopolitischer Konflikt, steigende Energiepreise, keine verlässlichen Goldpreisdaten.",
+            "Ich bin selbstständig mit schwankendem Einkommen.",
+            "Ich besitze Schmuck mit persönlichem Wert.",
+            "Ich habe wenig Erfahrung mit Wertpapierdepots."
+          ],
+          "attention": "Die Unsicherheit der Lage und die Frage, wie ich im Notfall schnell an Geld komme, ohne meinen Schmuck zu verlieren.",
+          "emotions": "Vorsichtig und unsicher, aber entschlossen abzuwarten."
+        }
+      },
+      {
+        "action": {
+          "type": "TALK",
+          "content": "Die Nachricht bestätigt meine Unsicherheit. Für mich ist die Sorge, im Notfall schnell Geld zu brauchen, ohne meinen Schmuck zu verlieren. Ich schätze Gold als stabil ein, aber ich weiß nicht, wie ich es schnell in bares Geld umwandle. Unsicher bleibt, wie die Preise sich entwickeln. Ich stütze mich auf die Info, dass keine verlässlichen Preisangaben vorliegen. Meine Handlungsabsicht: Ich warte ab und kaufe nichts Neues. Ich bleibe bei meiner Reserve.",
+          "target": ""
+        },
+        "cognitive_state": {
+          "goals": "Kurz und klar auf die allgemeine Unsicherheit reagieren. Meine Position zu Gold und Schmuck als Notfallpuffer wiederholen. Abwarten, keine neuen Käufe.",
+          "context": [
+            "Hypothetisches Workshop-Szenario: Geopolitischer Konflikt, steigende Energiepreise, keine verlässlichen Goldpreisdaten.",
+            "Ich bin selbstständig mit schwankendem Einkommen.",
+            "Ich besitze Schmuck mit persönlichem Wert.",
+            "Ich habe wenig Erfahrung mit Wertpapierdepots."
+          ],
+          "attention": "Die Unsicherheit der Lage und die Frage, wie ich im Notfall schnell an Geld komme, ohne meinen Schmuck zu verlieren.",
+          "emotions": "Vorsichtig und unsicher, aber entschlossen abzuwarten."
+        }
+      },
+      {
+        "action": {
+          "type": "DONE",
+          "content": "Beitrag abgeschickt, warte auf weitere Reaktionen.",
+          "target": ""
+        },
+        "cognitive_state": {
+          "goals": "Kurz und klar auf die allgemeine Unsicherheit reagieren. Meine Position zu Gold und Schmuck als Notfallpuffer wiederholen. Abwarten, keine neuen Käufe.",
+          "context": [
+            "Hypothetisches Workshop-Szenario: Geopolitischer Konflikt, steigende Energiepreise, keine verlässlichen Goldpreisdaten.",
+            "Ich bin selbstständig mit schwankendem Einkommen.",
+            "Ich besitze Schmuck mit persönlichem Wert.",
+            "Ich habe wenig Erfahrung mit Wertpapierdepots."
+          ],
+          "attention": "Die Unsicherheit der Lage und die Frage, wie ich im Notfall schnell an Geld komme, ohne meinen Schmuck zu verlieren.",
+          "emotions": "Vorsichtig und unsicher, aber entschlossen abzuwarten."
+        }
+      }
+    ]
+  },
+  {
+    "id": "T015",
+    "actor_id": "P05",
+    "phase": "B_within_group_exchange/final",
+    "actions": [
+      {
+        "action": {
+          "type": "THINK",
+          "content": "Sam hat recht, die Lücke zwischen Erzählung und Daten ist das Problem. Ich stütze mich auf die Tatsache, dass es keine harten Inflationsschätzungen gibt. Meine Sorge ist, dass Energiekosten den Alltag belasten, bevor das Gold überhaupt hilft. Gold bleibt für mich ein Teil der Vorsorge, aber kein Allheilmittel. Ich bleibe bei meiner Absicht: abwarten und beobachten, keine schnellen Käufe.",
+          "target": ""
+        },
+        "cognitive_state": {
+          "goals": "Abwarten und beobachten, keine impulsiven Käufe treffen.",
+          "context": [
+            "Hypothetisches Szenario mit steigenden Energiepreisen, keine harten Daten.",
+            "Sam betont die Lücke zwischen Erzählung und Daten.",
+            "Meine Sorge: Energiekosten belasten den Alltag, Gold ist keine schnelle Lösung."
+          ],
+          "attention": "Die fehlenden harten Daten zur Inflation und Energiekosten.",
+          "emotions": "Vorsichtig und skeptisch, aber ruhig."
+        }
+      },
+      {
+        "action": {
+          "type": "TALK",
+          "content": "Ich stimme dir zu, Sam. Die fehlenden harten Daten sind das eigentliche Problem. Für mich bedeutet das, dass ich nicht wisse, wie stark die Energiekosten die Inflation wirklich treiben. Meine Sorge ist, dass der Alltag teurer wird, bevor ich von einem Goldkauf profitieren kann. Gold bleibt für mich eine Option zur Stabilität, aber ich traue einseitigen Renditeversprechen nicht. Ich stütze mich auf die Information, dass es keine verlässlichen Prognosen gibt. Deshalb bleibe ich bei meiner Handlungsabsicht: abwarten, beobachten und keine impulsiven Entscheidungen treffen.",
+          "target": ""
+        },
+        "cognitive_state": {
+          "goals": "Abwarten und beobachten, keine impulsiven Käufe treffen.",
+          "context": [
+            "Hypothetisches Szenario mit steigenden Energiepreisen, keine harten Daten.",
+            "Sam betont die Lücke zwischen Erzählung und Daten.",
+            "Meine Sorge: Energiekosten belasten den Alltag, Gold ist keine schnelle Lösung."
+          ],
+          "attention": "Die fehlenden harten Daten zur Inflation und Energiekosten.",
+          "emotions": "Vorsichtig und skeptisch, aber ruhig."
+        }
+      },
+      {
+        "action": {
+          "type": "DONE",
+          "content": "Antwort abgeschlossen, warte auf weitere Eingaben.",
+          "target": ""
+        },
+        "cognitive_state": {
+          "goals": "Abwarten und beobachten, keine impulsiven Käufe treffen.",
+          "context": [
+            "Hypothetisches Szenario mit steigenden Energiepreisen, keine harten Daten.",
+            "Sam betont die Lücke zwischen Erzählung und Daten.",
+            "Meine Sorge: Energiekosten belasten den Alltag, Gold ist keine schnelle Lösung."
+          ],
+          "attention": "Die fehlenden harten Daten zur Inflation und Energiekosten.",
+          "emotions": "Vorsichtig und skeptisch, aber ruhig."
+        }
+      }
+    ]
+  },
+  {
+    "id": "T016",
+    "actor_id": "P07",
+    "phase": "B_within_group_exchange/final",
+    "actions": [
+      {
+        "action": {
+          "type": "THINK",
+          "content": "Die Nachricht ist ein hypothetisches Szenario ohne harte Daten. Ich bleibe bei meiner Einschätzung: Keine Panik, keine impulsiven Käufe. Ich stütze mich auf das Szenario, das keine belastbaren Preisdaten liefert. Gold ist für mich kein Ersatz für einen soliden Sparplan. Ich beobachte die Energiekosten, da sie den größten Einfluss auf meine Lebenshaltung haben. Meine Handlungsabsicht: weiterhin den regulären Sparplan verfolgen und die Lage beobachten, ohne zu handeln.",
+          "target": ""
+        },
+        "cognitive_state": {
+          "goals": "Regulären Sparplan beibehalten, Lage beobachten, keine impulsiven Käufe tätigen.",
+          "context": [
+            "Hypothetisches Workshop-Szenario: geopolitischer Konflikt, steigende Energiepreise, unklare Dauer.",
+            "Keine belastbaren Edelmetallpreise verfügbar.",
+            "Alva hat den Angst-Faktor im Gold-Hype angesprochen."
+          ],
+          "attention": "Auswirkung der Energiekosten auf die Inflation und meine Lebenshaltung.",
+          "emotions": "Sachlich, skeptisch gegenüber Panikmache, aber realistisch gegenüber den Risiken."
+        }
+      },
+      {
+        "action": {
+          "type": "TALK",
+          "content": "Ich stütze mich auf das hypothetische Szenario, das keine belastbaren Preisdaten liefert. Aus meiner Lebenslage als Angestellter mit festem Sparplan ist die wichtigste Sorge die Unsicherheit über die Dauer der Energiepreisspitze und ihre Auswirkung auf meine laufenden Kosten. Gold sehe ich nicht als Notlösung, sondern als kleinen Baustein in einem diversifizierten Portfolio. Panische Käufe wegen einer Schlagzeile sind für mich keine gute Strategie. Ich bleibe bei meinem regulären Sparplan und beobachte die Lage weiter. Was bleibt unsicher, ist, ob sich die Lage schnell entspannt oder ob die Preise langfristig steigen. Ich werde jetzt keine neuen Käufe tätigen.",
+          "target": ""
+        },
+        "cognitive_state": {
+          "goals": "Regulären Sparplan beibehalten, Lage beobachten, keine impulsiven Käufe tätigen.",
+          "context": [
+            "Hypothetisches Workshop-Szenario: geopolitischer Konflikt, steigende Energiepreise, unklare Dauer.",
+            "Keine belastbaren Edelmetallpreise verfügbar.",
+            "Alva hat den Angst-Faktor im Gold-Hype angesprochen."
+          ],
+          "attention": "Auswirkung der Energiekosten auf die Inflation und meine Lebenshaltung.",
+          "emotions": "Sachlich, skeptisch gegenüber Panikmache, aber realistisch gegenüber den Risiken."
+        }
+      },
+      {
+        "action": {
+          "type": "DONE",
+          "content": "Antwort abgegeben, warte auf weitere Reaktionen.",
+          "target": ""
+        },
+        "cognitive_state": {
+          "goals": "Regulären Sparplan beibehalten, Lage beobachten, keine impulsiven Käufe tätigen.",
+          "context": [
+            "Hypothetisches Workshop-Szenario: geopolitischer Konflikt, steigende Energiepreise, unklare Dauer.",
+            "Keine belastbaren Edelmetallpreise verfügbar.",
+            "Alva hat den Angst-Faktor im Gold-Hype angesprochen."
+          ],
+          "attention": "Auswirkung der Energiekosten auf die Inflation und meine Lebenshaltung.",
+          "emotions": "Sachlich, skeptisch gegenüber Panikmache, aber realistisch gegenüber den Risiken."
+        }
+      }
+    ]
+  },
+  {
+    "id": "T017",
+    "actor_id": "P01",
+    "phase": "direct_prompt_baseline",
+    "response": "Die steigenden Energiepreise belasten meinen ohnehin knappen Haushalt direkt. Meine größte Sorge ist, dass meine kleine Rücklage für unerwartete Kosten nicht ausreicht, während ich meine finanzielle Flexibilität nicht verlieren möchte. Gold erscheint mir als abstrakt und schwer zu bewerten; ich weiß nicht, wie ich es sicher lagern oder wann ich es verkaufen könnte. Ohne verlässliche Prognosen zur Dauer der Krise bleibt alles spekulativ. Ich stütze mich auf die Tatsache, dass keine konkreten Preisdaten vorliegen. Daher werde ich nichts kaufen, sondern mein Verhalten beobachten und meine Ausgaben kontrollieren. Ich bleibe vorsichtig, bis die Lage klarer ist."
+  },
+  {
+    "id": "T018",
+    "actor_id": "P03",
+    "phase": "direct_prompt_baseline",
+    "response": "Als Selbstständige mit schwankendem Einkommen macht mir diese Nachricht Angst. Meine wichtigste Sorge ist, ob ich im Notfall wirklich liquide Mittel habe. Gold und Schmuck sind für mich kein Spekulationsobjekt, sondern ein Sicherheitsnetz, weil ich sie bei Bedarf verkaufen kann. Ich schätze Gold als stabil ein, aber es ist nicht sofort verfügbar. Unsicher ist, wie lange die Krise dauert und wie stark meine Einnahmen leiden. Ich kaufe nichts Neues, sondern prüfe, ob mein Schmuck im Notfall schnell genug zu Geld gemacht werden kann. Ich stütze mich auf die Tatsache, dass keine verlässlichen Preisprognosen vorliegen und keine Systemkrisen bewiesen sind. Ich bleibe bei meinem Vorsatz: Liquidität im Notfall ist wichtiger als theoretischer Wertzuwachs."
+  },
+  {
+    "id": "T019",
+    "actor_id": "P05",
+    "phase": "direct_prompt_baseline",
+    "response": "Als Berufstätige mit Rücklagen sehe ich die steigenden Energiepreise als konkreten Belastungsfaktor für meinen Alltag, der meine Kaufkraft kurzfristig drückt. Mein zentrales Bedürfnis ist Stabilität vor dem Hintergrund politischer Unwägbarkeiten. Gold bleibt für mich ein sinnvoller Baustein für Unabhängigkeit, aber keine Allheilmittel-Lösung. Die einseitige Fokussierung auf Edelmetalle ignoriert die hohen Transaktionskosten und das Risiko einer übermäßigen Konzentration. Mir ist wichtig, dass hier keine klaren Prognosen vorliegen; weder ein Systemzusammenbruch noch eine schnelle Entspannung ist belegt. Ich stütze mich auf die Tatsache, dass keine verlässlichen Preisdaten existieren. Daher ändere ich meine Haltung nicht: Ich behalte mein bestehendes Goldportfolio bei, überprüfe aber meine Kostenstruktur und diversifiziere vorsichtig in liquide Reserven. Keine neuen Käufe, solange die Lage unklar bleibt."
+  },
+  {
+    "id": "T020",
+    "actor_id": "P07",
+    "phase": "direct_prompt_baseline",
+    "response": "Als Sam mit festem Sparplan sehe ich diese geopolitische Eskalation primär als Preisschock für Energie, nicht als Systemkollaps. Meine Sorge gilt der Kaufkraft meiner monatlichen Rücklagen. Gold ist für mich keine spekulative Wette, sondern ein stabiler Anker gegen Inflation, aber kein Allheilmittel. Ich bleibe bei meinem bestehenden Mischportfolio und werde nicht impulsiv umschichten. Was unsicher bleibt, ist die Dauer des Konflikts und die tatsächliche Auswirkung auf meine Lebenshaltungskosten. Ich stütze mich auf die nüchterne Feststellung, dass keine verlässlichen Prognosen zur Edelmetallentwicklung vorliegen und kein Finanzsystemzusammenbruch belegt ist. Meine Handlungsabsicht: Disziplin im Sparen beibehalten, keine Panikreaktion. Ich warte auf klarere Daten zur Haushaltsauswirkung, bevor ich mein Risikoprofil überdenke."
+  }
+]

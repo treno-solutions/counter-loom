@@ -1,8 +1,8 @@
 [
   {
     "path": "RESEARCH.md",
-    "bytes": 3343,
-    "sha256": "ccefa1bd0c5745dc372889e420e61bbefa3820fc51c3c22e8be41ba0b33ecfbd"
+    "bytes": 3511,
+    "sha256": "733fd220823927ddabd6995c0923696d165d644ae67de79c086bcac9351b4ccf"
   },
   {
     "path": "mirofish/historical-price-evidence.md",
@@ -290,6 +290,16 @@
     "sha256": "686f3d30adbd78d34aa5262a01c62d936a63f27e91aef87332601fac13b7c0b7"
   },
   {
+    "path": "qa/tinytroupe-pilot-workflow-test.json",
+    "bytes": 812,
+    "sha256": "ee1b3c21352220501b91a0c2120ba32fe60231a967791b6be3b86b8a0095b0ad"
+  },
+  {
+    "path": "qa/tinytroupe-runtime-environment.json",
+    "bytes": 797,
+    "sha256": "a422bff88177f92f375dca4a683ae5293b84cb1972b2705ca2be39e994aebb54"
+  },
+  {
     "path": "qa/usgs-mcs-2026-page-177.png",
     "bytes": 197664,
     "sha256": "fd26320cffb7911ed4ba71fd906a049d120f67c0478086ce9f6520053938eeba"
@@ -451,8 +461,8 @@
   },
   {
     "path": "research/README.md",
-    "bytes": 3794,
-    "sha256": "dcbdcdb51d3781d38df3c618e1ec44a3fd09978dd1c71b00b1f4266c6f443772"
+    "bytes": 3995,
+    "sha256": "8ccb2314cf617aa36cc8db0d878ec60c768151f1415d89e30755ed17f494a39b"
   },
   {
     "path": "research/assessment-protocol.md",
@@ -466,8 +476,8 @@
   },
   {
     "path": "research/frameworks/README.md",
-    "bytes": 3063,
-    "sha256": "f35ea12de4ccfb9c9caa97030df8497559c1736d6ae4937c7bc045b0c783b8bb"
+    "bytes": 3809,
+    "sha256": "6f904aac7ea74818a1aece437fd410c8061d0940f7c55086f06a25fae8b04fe9"
   },
   {
     "path": "research/frameworks/_template.md",
@@ -490,14 +500,29 @@
     "sha256": "13d7f16dccdbc46a3a22ac3cf31639c82573d05d34436656bf31cfc589d60cc2"
   },
   {
+    "path": "research/frameworks/licenses/README.md",
+    "bytes": 1305,
+    "sha256": "07f2eb806887f3f79540bbe5e2a7f4109113972a35d837f61bbd6b7b7278fbd9"
+  },
+  {
+    "path": "research/frameworks/licenses/concordia-Apache-2.0.txt",
+    "bytes": 11359,
+    "sha256": "8c6db340475136df3c1201d458fa5755698eace76e510471ecc9d857d6083dac"
+  },
+  {
+    "path": "research/frameworks/licenses/tinytroupe-MIT.txt",
+    "bytes": 1141,
+    "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+  },
+  {
     "path": "research/frameworks/mirofish.md",
     "bytes": 7693,
     "sha256": "eec38a8d82a431ccb05b0d435d8368e843bf32ec57541b1166aefeaff469682b"
   },
   {
     "path": "research/frameworks/tinytroupe.md",
-    "bytes": 5595,
-    "sha256": "a7a9991c15b714c5b0a2eb253d1e7a3af3c6e272f08f84247b93acd3a068bd4a"
+    "bytes": 7449,
+    "sha256": "168ecd7bdf80b0b0f73e602eceefccf8bcc4a61df161979ba0b1803a329937e6"
   },
   {
     "path": "research/requirements.md",
@@ -591,8 +616,8 @@
   },
   {
     "path": "tools/assemble_evidence.py",
-    "bytes": 34570,
-    "sha256": "938b6d9aaaaf9ea624cc16c8f70f4cc39969f2aa3d194ce8ca54a97abf78b6df"
+    "bytes": 34602,
+    "sha256": "6133d01fa5b59ade34c6025cf70cbd8aafe11db0253b11261b3d6c2dae8d75a0"
   },
   {
     "path": "tools/check_concordia_pilot_workflow.py",
@@ -613,5 +638,10 @@
     "path": "tools/run_concordia_pilot.py",
     "bytes": 12749,
     "sha256": "f70f73f2af3ae49369db639a55b3b7893856ddf229757ffa11c86f12d0793ff6"
+  },
+  {
+    "path": "tools/run_tinytroupe_pilot.py",
+    "bytes": 10824,
+    "sha256": "ade0c85dfc46bffd3ccc1e394624f5090455304fdd2c6490369ddf4f9808a0c6"
   }
 ]

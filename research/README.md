@@ -18,7 +18,7 @@ Menschen unterscheiden sich in Lebenslage, Erfahrung und eher beständigen Bedü
 4. **Vergleichbar prüfen:** [Prüfprotokoll](assessment-protocol.md) verwenden; kleine Tests vor langen Läufen.
 5. **Für den Workshop validieren:** Modellplausibilität und tatsächlichen Lernerfolg getrennt untersuchen.
 
-Diese Dokumentation ist die Grundlage vor weiteren Framework-Piloten. TinyTroupe und Concordia wurden inzwischen am Quellcode und an technischen Bausteinen geprüft; siehe [Frameworkübersicht](frameworks/README.md). Der [erste begrenzte Concordia-Versuch](../runs/004-concordia-group-influence/README.md) ist abgeschlossen: 32 Modellantworten und archivierte Zustände; bislang geringer zusätzlicher Erkenntnisgewinn. Keine Plattform ist endgültig ausgewählt.
+Diese Dokumentation ist die Grundlage vor weiteren Framework-Piloten. TinyTroupe und Concordia wurden inzwischen am Quellcode und an technischen Bausteinen geprüft; siehe [Frameworkübersicht](frameworks/README.md). Der [erste begrenzte Concordia-Versuch](../runs/004-concordia-group-influence/README.md) ist abgeschlossen: 32 Modellantworten und archivierte Zustände; bislang geringer zusätzlicher Erkenntnisgewinn. Der [TinyTroupe-Vergleich mit direkten Prompts](../runs/005-tinytroupe-group-influence/README.md) ist ebenfalls abgeschlossen und zeigt bislang wenig zusätzlichen Lernstoff bei erheblich mehr Tokens. Keine Plattform ist endgültig ausgewählt.
 
 ## Einstieg
 

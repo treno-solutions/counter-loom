@@ -5,7 +5,7 @@ Stand: 2. November 2026. Die Tabelle unterscheidet dokumentierte Fähigkeiten vo
 | Projekt | Eigener Prüfstand | Einordnung für unseren Zweck | Nächster möglicher Schritt |
 |---|---|---|---|
 | [MiroFish](mirofish.md) | Erster Methodenversuch und Bericht ausgewertet; Originalartefakte nur teilweise vorhanden | `unsuitable_for_current_goal` in getesteter Konfiguration | Kein weiterer großer Lauf; nur bei gezieltem Nachweis geschlossener Lücken neu betrachten |
-| [TinyTroupe](tinytroupe.md) | `documentation_reviewed`; fünf isolierte Quellcode-Grenzprüfungen, kein Persona-Pilot | `conditional`; Probleme im Netzwerkpfad | Getrennte Gruppenräume oder begrenzte Anpassung prüfen |
+| [TinyTroupe](tinytroupe.md) | `pilot_tested`; Quellcode-Grenzprüfungen und kleiner Personenvergleich in getrennten Räumen | `conditional`; Episodenspeicher und Zustellung belegt, geringer Zusatznutzen | [Versuch 005](../../runs/005-tinytroupe-group-influence/analysis/evaluation.md); zunächst Modell-/Eingabeabhängigkeit gegenüber direkten Prompts prüfen |
 | [Concordia](concordia.md) | `pilot_tested`; 140 ausgewählte Upstream-Tests, drei Forum-Prüfungen und ein kleiner Personenvergleich | `conditional`; technische Machbarkeit, geringer inhaltlicher Mehrwert | [Versuch 004 auswerten](../../runs/004-concordia-group-influence/analysis/evaluation.md); keine Vergrößerung ohne zusätzlichen Nutzen |
 | [AgentSociety](https://github.com/tsinghua-fib-lab/AgentSociety) | `documentation_reviewed`; kein eigener Pilot | `unassessed`; Version 1 und 2 auseinanderhalten | Passende Version und erforderliche Komponenten bestimmen |
 | [OASIS](https://github.com/camel-ai/oasis) | Paper/Projekt recherchiert; kein isolierter eigener Test | `unassessed`; Basissystem unter MiroFish, kein unabhängiger Erfolgsnachweis | Nur als eigene technische Basis bewerten, falls dafür begründeter Bedarf besteht |
@@ -23,3 +23,7 @@ Vor weiteren Praxisprüfungen gelten [Anforderungen](../requirements.md), [Prüf
 Am 2. November 2026 wurden TinyTroupe und Concordia an festen Quellständen untersucht. [Technische Befunde](evidence/boundary-checks-2026-11-02.json) und [Concordia-Tests](evidence/concordia-upstream-tests-2026-11-02.json) sind archiviert. Keine Sprachmodellaufrufe, keine autonomen Persona-Gespräche und kein Nachweis von Meinungsänderung wurden dabei ausgeführt.
 
 Der technische Prüfumfang ist nicht gleich: Concordia wurde installiert und mit ausgewählten Originaltests ausgeführt; TinyTroupe nur mit isolierten Methoden und Testdoubles. Die Testzahlen sind deshalb keine vergleichbaren Qualitätsscores.
+
+## Erste Personenvergleiche
+
+[Concordia 004](../../runs/004-concordia-group-influence/analysis/evaluation.md) und [TinyTroupe 005](../../runs/005-tinytroupe-group-influence/analysis/evaluation.md) wurden anschließend mit Modellzugang ausgeführt. Beide machen Personenverläufe zugänglich; in den getesteten kleinen Konfigurationen bleibt der zusätzliche fachliche Erkenntnisgewinn gering. TinyTroupe wurde zusätzlich mit direkten Persona-Prompts verglichen. Die Versuche sind wegen unterschiedlicher Gruppengrößen und Framework-Prompts kein kontrollierter Effizienzvergleich zwischen Frameworks.

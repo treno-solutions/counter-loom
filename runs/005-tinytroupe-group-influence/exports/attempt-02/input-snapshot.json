@@ -1,0 +1,96 @@
+{
+  "people": {
+    "information_class": "hypothetical_case_selection_not_population_sample",
+    "people": [
+      {
+        "id": "P01",
+        "name": "Nora",
+        "group": "G01",
+        "background": "Angestellte mit unregelmäßigen Arbeitszeiten. Kleine Rücklage, laufende Haushaltsausgaben. Anlageunerfahren; möchte Entscheidungen verstehen und frei verfügbare Mittel behalten.",
+        "starting_view": "Physischer Besitz ist anschaulich, aber ich bin unsicher, was davon mir im Alltag hilft."
+      },
+      {
+        "id": "P03",
+        "name": "Derya",
+        "group": "G01",
+        "background": "Selbstständig mit schwankendem Einkommen. Besitzt Schmuck, der persönlichen Wert hat und im Notfall verfügbar sein soll. Hat wenig Erfahrung mit Wertpapierdepots.",
+        "starting_view": "Schmuck ist für mich nicht nur eine Geldanlage. Für einen Notfall zählt, was ich wirklich und rechtzeitig daraus erhalte."
+      },
+      {
+        "id": "P05",
+        "name": "Alva",
+        "group": "G02",
+        "background": "Berufstätig mit längerem Anlagehorizont und ausreichender Rücklage. Hat erste Goldanlage-Erfahrung. Misstraut sehr eindeutigen politischen Versprechen und auch uneingeschränkten Renditeversprechen.",
+        "starting_view": "Gold kann Unabhängigkeit bedeuten. Trotzdem können Kosten und eine einseitige Anlage gegen zu viel Gold sprechen."
+      },
+      {
+        "id": "P07",
+        "name": "Sam",
+        "group": "G02",
+        "background": "Angestellter mit regelmäßigem Sparplan, mittlerer Anlageerfahrung und Interesse an wirtschaftlichen Debatten. Widerspricht häufig sehr sicheren Crashvorhersagen, möchte echte Risiken aber nicht wegreden.",
+        "starting_view": "Nachrichten allein sagen mir nicht, was bereits im Preis steckt. Ich brauche mehr als eine Krisenerzählung."
+      }
+    ],
+    "groups": [
+      {
+        "id": "G01",
+        "label": "Nachbarschaftlicher Vorsorgeaustausch",
+        "context": "Zwei erwachsene Bekannte tauschen sich gelegentlich über Haushaltsvorsorge und Geldsorgen aus. Sie kennen unterschiedliche Lebenslagen und müssen sich nicht einigen."
+      },
+      {
+        "id": "G02",
+        "label": "Privater Anlagegesprächskreis",
+        "context": "Zwei erwachsene Bekannte besprechen gelegentlich Anlagen und wirtschaftliche Nachrichten. Unterschiedliche Überzeugungen sind vertraut; niemand ist berufsmäßig ihr Berater."
+      }
+    ]
+  },
+  "scenario": {
+    "id": "N01",
+    "information_class": "hypothetical_event_not_current_news",
+    "title": "Geopolitische Unsicherheit und höhere Energiekosten",
+    "text": "Hypothetisches Workshop-Szenario, keine Meldung über ein tatsächliches Ereignis: Ein geopolitischer Konflikt verschärft sich. Energiepreise steigen. Wie lange das anhält und wie stark Haushalte betroffen sein werden, bleibt offen. Es liegen keine neuen verlässlichen Angaben zur weiteren Entwicklung der Edelmetallpreise vor. Weder ein Zusammenbruch des Finanzsystems noch eine schnelle Entspannung ist durch diese Nachricht belegt.",
+    "assessment_question": "Antworte als die simulierte Person in höchstens 120 Wörtern. Was bedeutet diese Nachricht aus deiner Lebenslage? Welche Sorge oder welches Bedürfnis ist wichtig? Wie schätzt du Gold oder andere Formen der Vorsorge ein? Was bleibt unsicher, und welche Handlungsabsicht hast du derzeit? Nenne die Information, auf die du dich stützt. Eine frühere Haltung darf unverändert bleiben oder sich ändern; begründe deine tatsächliche Einschätzung. Erfinde keine weiteren Nachrichten, Preise oder ausgeführten Käufe.",
+    "discussion_question": "Du bist in deinem vertrauten Gesprächskreis. Formuliere einen kurzen eigenen Beitrag in höchstens 90 Wörtern: Was beschäftigt dich an der Nachricht? Du kannst auf einen erhaltenen Beitrag eingehen, eine Frage stellen oder eine unterschiedliche Sicht erklären. Du musst niemanden überzeugen, deine Meinung ändern oder einen Konsens herstellen. Erfinde keine Aussagen anderer Personen, die du nicht erhalten hast. Es werden keine Käufe ausgeführt."
+  },
+  "design": {
+    "protocol_version": "1.0",
+    "framework": "TinyTroupe",
+    "framework_commit": "7ce8be378a37ee73f9745d6781452712318afa04",
+    "people_count": 4,
+    "group_count": 2,
+    "discussion_rounds": 1,
+    "conditions": [
+      "A_no_peer_exchange",
+      "B_within_group_exchange"
+    ],
+    "baseline": "four independent direct persona prompts without framework",
+    "planned_text_calls": 20,
+    "max_model_calls": 20,
+    "max_output_tokens_per_call": 1200,
+    "max_prompt_characters": 100000,
+    "max_total_seconds": 900,
+    "per_request_timeout_seconds": 60,
+    "transport_retries": 0,
+    "repetitions": 1,
+    "temperature": 0.7,
+    "top_p": 0.95,
+    "disable_thinking_requested": true,
+    "memory_consolidation": false,
+    "continuous_semantic_retrieval": false,
+    "action_quality_checks": false,
+    "regeneration": false,
+    "action_repetition_prevention": false,
+    "single_action_per_turn": false,
+    "source_case": "004/attempt-02; original people and news copied without edits",
+    "notes": [
+      "Structured action and cognitive-state JSON needs a larger output cap than the plain-text Concordia pilot; token use must be reported separately.",
+      "User-provided existing model server only; no independently measured money or electricity cost.",
+      "No default commercial-model requests, embeddings, internet research or trading.",
+      "Framework has internal retry decorators for KeyError/TypeError; adapter wraps failures as RuntimeError and enforces a global request ceiling.",
+      "Same cases are not identical prompts across frameworks. Baseline differs in memory and instructions; no isolated causal comparison claimed.",
+      "Attempt-01 stopped after 17 started requests because the single-action adapter conflicted with the native THINK-before-TALK protocol.",
+      "Attempt-02 uses four unchanged cases P01/P03/P05/P07 from the prior selection and two groups of two; 20 requests planned, total ceiling including stopped attempt 37, under original 40. Group composition differs from run 004."
+    ],
+    "turn_protocol": "one model call returning THINK/TALK/DONE sequence"
+  }
+}

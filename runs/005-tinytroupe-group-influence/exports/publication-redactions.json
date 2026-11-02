@@ -1,0 +1,97 @@
+{
+  "classification": "publication_metadata_not_simulation_output",
+  "operation": "Replace local absolute _prompt_template_path with package-relative template name only. No prompt content, persona memory, actions or inputs changed.",
+  "originals_preserved_in_private_archive": true,
+  "starting_hashes": "Original starting-hash comparisons remain unchanged and attest equal raw states. Their raw-state digests cannot be recomputed from redacted public states; normalized public-state hashes are supplied separately.",
+  "files": [
+    {
+      "path": "exports/attempt-01/A_no_peer_exchange-states.json",
+      "fields": [
+        ".P01._prompt_template_path",
+        ".P02._prompt_template_path",
+        ".P03._prompt_template_path",
+        ".P04._prompt_template_path",
+        ".P05._prompt_template_path",
+        ".P06._prompt_template_path",
+        ".P07._prompt_template_path",
+        ".P08._prompt_template_path"
+      ],
+      "original_sha256": "a6bfef976c2b4926b744d24975ca0e7eb5d28db311054acadbb0e95a7c1421c0",
+      "published_sha256": "b98080a266e826eadcf9ead2fb13075728021fd0033a6c518eeca64f81973ecf"
+    },
+    {
+      "path": "exports/attempt-01/initial-states.json",
+      "fields": [
+        ".P01._prompt_template_path",
+        ".P02._prompt_template_path",
+        ".P03._prompt_template_path",
+        ".P04._prompt_template_path",
+        ".P05._prompt_template_path",
+        ".P06._prompt_template_path",
+        ".P07._prompt_template_path",
+        ".P08._prompt_template_path"
+      ],
+      "original_sha256": "e155fc52a0ace03b925a8f14c6bb0e08215dd3a78db6ca53cb1b73fa270d6fb1",
+      "published_sha256": "ae4128efd64d74e48eef84d026227ad2fcd2f57971c236774dee2c190ff04712"
+    },
+    {
+      "path": "exports/attempt-01/latest-states.json",
+      "fields": [
+        ".P01._prompt_template_path",
+        ".P02._prompt_template_path",
+        ".P03._prompt_template_path",
+        ".P04._prompt_template_path",
+        ".P05._prompt_template_path",
+        ".P06._prompt_template_path",
+        ".P07._prompt_template_path",
+        ".P08._prompt_template_path"
+      ],
+      "original_sha256": "a6bfef976c2b4926b744d24975ca0e7eb5d28db311054acadbb0e95a7c1421c0",
+      "published_sha256": "b98080a266e826eadcf9ead2fb13075728021fd0033a6c518eeca64f81973ecf"
+    },
+    {
+      "path": "exports/attempt-02/A_no_peer_exchange-states.json",
+      "fields": [
+        ".P01._prompt_template_path",
+        ".P03._prompt_template_path",
+        ".P05._prompt_template_path",
+        ".P07._prompt_template_path"
+      ],
+      "original_sha256": "840fbba23f3485112ace830d76cd119998cf357aa5929da8e3f091e7f92cbef5",
+      "published_sha256": "046cab44a6fe7a26dc291ad81658d34b5a7e1491a6367f4eff5b1888d8f87cf3"
+    },
+    {
+      "path": "exports/attempt-02/B_within_group_exchange-states.json",
+      "fields": [
+        ".P01._prompt_template_path",
+        ".P03._prompt_template_path",
+        ".P05._prompt_template_path",
+        ".P07._prompt_template_path"
+      ],
+      "original_sha256": "802e35ce427b6b00d261a472478b50128eebbbc9d34c208e8654508f71b3a911",
+      "published_sha256": "befba108aee20cd9a48ec64813b0207fcf288a9536a3d8c557d75534240cb7d2"
+    },
+    {
+      "path": "exports/attempt-02/initial-states.json",
+      "fields": [
+        ".P01._prompt_template_path",
+        ".P03._prompt_template_path",
+        ".P05._prompt_template_path",
+        ".P07._prompt_template_path"
+      ],
+      "original_sha256": "bdbb645d24b09dc3176e09ccc355261c816b02034df0e7ada6c301b315cfb75a",
+      "published_sha256": "b189a75804ed0b87646df1d1b3494439c62ef871963b0767eccb798946031ef2"
+    },
+    {
+      "path": "exports/attempt-02/latest-states.json",
+      "fields": [
+        ".P01._prompt_template_path",
+        ".P03._prompt_template_path",
+        ".P05._prompt_template_path",
+        ".P07._prompt_template_path"
+      ],
+      "original_sha256": "802e35ce427b6b00d261a472478b50128eebbbc9d34c208e8654508f71b3a911",
+      "published_sha256": "befba108aee20cd9a48ec64813b0207fcf288a9536a3d8c557d75534240cb7d2"
+    }
+  ]
+}

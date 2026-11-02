@@ -1,0 +1,7 @@
+{
+  "execution_status": "stopped_by_operator",
+  "reason": "Pilot adapter requested one action, conflicting with framework THINK-before-TALK protocol. Partial results are not a valid completed persona comparison.",
+  "requests_started": 17,
+  "original_status_json_left_unchanged": true,
+  "last_in_flight_request_may_have_been_processed_by_server": true
+}

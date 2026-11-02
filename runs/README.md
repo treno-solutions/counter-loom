@@ -11,6 +11,8 @@ Vorbereitung und Mindestanforderungen: [zentrale Seed- und Recherchevorlage](../
 | [003-sentiment-and-investment](003-sentiment-and-investment/README.md) | Konzept für Personas und Sentiment; noch kein ausgeführter Lauf | Zurückgestellt bis zur Frameworkprüfung |
 | [004-concordia-group-influence](004-concordia-group-influence/README.md) | Acht fiktive Personen, zwei Gruppen, Vergleich mit/ohne Austausch | Abgeschlossen; 32 Modellantworten, geringer Mehrwert; kein kausaler Einflussnachweis |
 
+| [005-tinytroupe-group-influence](005-tinytroupe-group-influence/README.md) | Vier bekannte Fälle, zwei Gruppen, Vergleich mit/ohne Austausch und direkte Prompts | Korrigierter Versuch abgeschlossen; 20 Anfragen, geringer belegter Zusatznutzen |
+
 Aktuelle Reihenfolge: [MiroFish-Auswertung](../research/frameworks/mirofish.md), [Anforderungen](../research/requirements.md) und [Frameworkprüfung](../research/assessment-protocol.md) vor weiteren Piloten. Vorbereitete Seeds sind keine Startfreigabe.
 
 ## Ergebnisse ablegen

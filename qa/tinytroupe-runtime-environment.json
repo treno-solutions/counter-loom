@@ -1,0 +1,23 @@
+{
+  "checked_on": "2026-11-02",
+  "python": "3.12.14",
+  "framework": "TinyTroupe",
+  "package_version_in_source": "0.8.1",
+  "source_commit": "7ce8be378a37ee73f9745d6781452712318afa04",
+  "license": "MIT",
+  "installation_scope": "source import with required runtime dependencies; not full declared optional/provider/notebook stack",
+  "versions": {
+    "openai": "3.42.1",
+    "llama-index-core": "0.14.25",
+    "llama-index-embeddings-openai": "0.7.0",
+    "llama-index-readers-web": "0.7.0",
+    "pydantic": "2.14.2",
+    "rich": "15.0.0",
+    "chevron": "0.14.0",
+    "tiktoken": "0.14.0",
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "scipy": "1.18.1"
+  },
+  "limitations": "No full upstream suite or dependency lock; selected installed versions recorded for interpreting this pilot."
+}
