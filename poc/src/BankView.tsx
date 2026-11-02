@@ -1,0 +1,56 @@
+import { useEffect, useRef, useState } from 'react';
+import { ArrowRight, Banknote, Check, ChevronRight, CircleHelp, Landmark, ShieldCheck } from 'lucide-react';
+import type { World } from './world-schema';
+const euro = (value: number) => new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR', maximumFractionDigits: value % 100 ? 2 : 0 }).format(value / 100);
+const signed = (value: number) => `${value > 0 ? '+' : ''}${euro(value)}`;
+const steps = [
+  { kind: 'machine_credit', title: 'Kreditguthaben entsteht', short: 'Geldschöpfung', note: 'Die Bank bucht gleichzeitig ein Kundenguthaben und eine Kreditforderung.' },
+  { kind: 'machine_purchase', title: 'Maschine wird bezahlt', short: 'Zahlung', note: 'Guthaben wandert vom Käufer zum Lieferanten. Die gesamte Einlagensumme bleibt gleich.' },
+  { kind: 'machine_interest', title: 'Zinsen werden bezahlt', short: 'Zinsen', note: 'Zinsen sind Ertrag der Bank. Sie reduzieren die Restschuld nicht. Die Bank schüttet vereinnahmte Zinsen später an Haushalte aus.' },
+  { kind: 'machine_principal', title: 'Kredit wird getilgt', short: 'Tilgung', note: 'Kundenguthaben und Kreditforderung sinken um denselben Betrag. Tilgung ist kein Bankertrag.' },
+];
+
+export default function BankView({ world, busy, running, onRequest }: { world: World; busy: boolean; running: boolean; onRequest: () => void }) {
+  const [kind, setKind] = useState('machine_credit');
+  const [eventId, setEventId] = useState<number | null>(null);
+  const [follow, setFollow] = useState(true);
+  const svg = useRef<SVGSVGElement>(null);
+  const bank = world.banking;
+  const loan = bank.loan;
+  const latest = bank.events.at(-1);
+  const event = follow ? latest : eventId !== null ? bank.events.find(e => e.id === eventId) : bank.events.filter(e => e.kind === kind).at(-1);
+  const chosenKind = event?.kind ?? kind;
+  const current = steps.find(s => s.kind === chosenKind) ?? steps[0]!;
+  const balance = bank.balance;
+  useEffect(() => { if (running) svg.current?.unpauseAnimations(); else svg.current?.pauseAnimations(); }, [running, world.revision]);
+  useEffect(() => { setKind('machine_credit'); setEventId(null); setFollow(true); }, [world.world_id]);
+  const activeNow = running && event?.month === world.month && event?.phase === world.phase;
+  const links = [
+    { kind: 'machine_credit', d: 'M 230 130 C 340 20 410 20 530 64', x: 375, y: 52, label: 'Kreditguthaben +1.200 €' },
+    { kind: 'machine_purchase', d: 'M 690 120 L 690 238', x: 741, y: 177, label: 'Maschine · 1.200 €' },
+    { kind: 'machine_interest', d: 'M 530 89 C 400 101 340 145 230 169', x: 388, y: 135, label: 'Zinsen → Bankertrag' },
+    { kind: 'machine_principal', d: 'M 530 106 C 460 242 350 256 230 204', x: 384, y: 233, label: 'Tilgung → Geldabbau' },
+  ];
+  return <section className="bank-view" aria-label="Bank und Maschinenkredit">
+    <div className="bank-intro"><span className="bank-icon"><Landmark size={27} /></span><div><h2>Eine Maschine. Ein Kredit. Sichtbare Buchungen.</h2><p>Alltag & Versorgung finanziert eine Maschine der Werkstatt. Verfolge, wie Guthaben entsteht, weiterfließt und durch Tilgung wieder abgebaut wird.</p></div></div>
+    <div className="loan-contract"><div><span>Maschinenkredit</span><strong>{euro(loan.amount_cents)}</strong><small>8 Werkstatteinheiten · eine Anlage</small></div><div><span>Jährlicher Zins</span><strong>{loan.annual_rate_bps / 100} %</strong><small>Auf die jeweilige Restschuld</small></div><div><span>Monatliche Tilgung</span><strong>{euro(loan.monthly_principal_cents)}</strong><small>{loan.term_months} Raten · ab Monat nach Lieferung</small></div><button className="world-primary" disabled={busy || loan.status !== 'available'} onClick={onRequest}>{loan.status === 'available' ? <Banknote size={18} /> : <Check size={18} />}{loan.status === 'available' ? 'Maschinenkredit anfragen' : loan.status === 'repaid' ? 'Kredit vollständig getilgt' : 'Anfrage im laufenden Modell'}</button></div>
+    <div className="loan-status" role="status"><span className={`live-dot ${loan.status === 'repaid' ? 'live' : ''}`} /><p>{loan.message}</p>{!running && loan.status !== 'repaid' && <small>Oben „Wirtschaft starten“ beziehungsweise „Eine Phase weiter“ verwenden.</small>}</div>
+    <div className="credit-stages" role="group" aria-label="Kreditvorgänge untersuchen">{steps.map((step, i) => {
+      const posted = bank.events.some(e => e.kind === step.kind);
+      return <button key={step.kind} aria-pressed={chosenKind === step.kind} className={chosenKind === step.kind ? 'selected' : ''} onClick={() => { setFollow(false); setEventId(null); setKind(step.kind); }}><span>{posted ? <Check size={14} /> : i + 1}</span><strong>{step.short}</strong><small>{posted ? 'Tatsächlich gebucht' : 'Noch nicht gebucht'}</small></button>;
+    })}</div>
+    <div className="credit-diagram-wrap"><svg ref={svg} className="credit-diagram" viewBox="0 0 860 340" role="img" aria-label="Maschinenkredit: Bank schafft Guthaben beim Käufer, Käufer bezahlt Werkstatt, Zinsen und Tilgung fließen zur Bank.">
+      <defs><marker id="credit-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 10 5 0 10z" fill="context-stroke" /></marker></defs>
+      {links.map(link => <g key={link.kind} className={chosenKind === link.kind ? 'credit-link selected' : 'credit-link'}><path d={link.d} markerEnd="url(#credit-arrow)" /><rect x={link.x - 79} y={link.y - 14} width="158" height="26" rx="5" /><text x={link.x} y={link.y + 3} textAnchor="middle">{link.label}</text>{activeNow && chosenKind === link.kind && <circle r="5" fill="#8a72ae"><animateMotion dur="1.5s" repeatCount="indefinite" path={link.d} /></circle>}</g>)}
+      <g className="credit-box"><rect x="20" y="109" width="210" height="121" rx="12" /><text x="40" y="136" className="credit-box-title">Bank</text><text x="40" y="159">Eigenkapital</text><text x="40" y="184" className="credit-box-value">{euro(balance.equity_cents)}</text><text x="40" y="212">Forderung ≠ Kundenguthaben</text></g>
+      <g className="credit-box buyer"><rect x="530" y="15" width="300" height="106" rx="12" /><text x="550" y="43" className="credit-box-title">Alltag & Versorgung</text><text x="550" y="65">Restschuld des Maschinenkredits</text><text x="550" y="94" className="credit-box-value">{euro(loan.outstanding_cents)}</text></g>
+      <g className="credit-box supplier"><rect x="530" y="238" width="300" height="85" rx="12" /><text x="550" y="265" className="credit-box-title">Werkstatt & Technik</text><text x="550" y="290">{loan.delivery_month !== null ? `Maschine in Monat ${loan.delivery_month} geliefert` : 'Lieferung nach Kreditgutschrift'}</text><text x="550" y="309">Guthaben durch echte Zahlung</text></g>
+    </svg><p className="credit-diagram-caption">Die Boxen zeigen den aktuellen Vertragsstand. Wähle unten eine Buchung für die damaligen Vorher-/Nachher-Werte.</p></div>
+    <div className="bank-event-detail"><div className="bank-event-heading"><div><span className="overline">{event ? `GEBUCHT · MONAT ${event.month} · VORGANG ${event.id}` : 'NOCH KEINE BUCHUNG'}</span><h3>{current.title}</h3></div><button className={follow ? 'following' : ''} onClick={() => setFollow(!follow)} aria-pressed={follow}>Letzter Buchung folgen {follow && <Check size={14} />}</button></div><p>{current.note}</p>{event ? <><div className="bank-effects"><div><span>Kundeneinlagen insgesamt</span><strong>{signed(event.deposit_delta_cents)}</strong></div><div><span>Kreditforderungen der Bank</span><strong>{signed(event.loan_delta_cents)}</strong></div><div><span>Eigenkapital der Bank</span><strong>{signed(event.equity_delta_cents)}</strong></div></div><div className="bank-book-rows">{[{ label: 'Kundeneinlagen', before: event.bank_before.customer_deposits_cents, after: event.bank_after.customer_deposits_cents }, { label: 'Kreditforderungen', before: event.bank_before.loan_assets_cents, after: event.bank_after.loan_assets_cents }, { label: 'Bankeigenkapital', before: event.bank_before.equity_cents, after: event.bank_after.equity_cents }].map(row => <div key={row.label}><span>{row.label}</span><strong>{euro(row.before)}</strong><ArrowRight size={15} /><strong>{euro(row.after)}</strong></div>)}</div></> : <p className="cash-empty">Dieser Vorgang wurde noch nicht ausgeführt. Es werden keine Beispielbuchungen als Ergebnis angezeigt.</p>}</div>
+    <div className="loan-progress"><div><span>Restschuld</span><strong>{euro(loan.outstanding_cents)}</strong></div><div><span>Tatsächlich getilgt</span><strong>{euro(loan.principal_paid_cents)}</strong></div><div><span>Tatsächlich bezahlte Zinsen</span><strong>{euro(loan.interest_paid_cents)}</strong></div><div><span>Fällige Rückstände</span><strong>{euro(loan.overdue_interest_cents + loan.overdue_principal_cents)}</strong></div></div>
+    {(loan.overdue_interest_cents > 0 || loan.overdue_principal_cents > 0) && <div className="loan-arrears">Unbezahlt: {euro(loan.overdue_interest_cents)} Zinsen und {euro(loan.overdue_principal_cents)} fällige Tilgung. Überfällige Tilgung ist bereits in der Restschuld enthalten.</div>}
+    <section className="bank-balance"><div className="account-heading"><ShieldCheck size={20} /><div><h3>Die Bankbilanz · aktueller Zustand</h3><p>Jede Kredit- und Zahlungsbuchung muss beide Seiten ausgleichen.</p></div></div><div className="balance-sides"><div><h4>Aktiva · Vermögenspositionen</h4><div><span>Reserveposition</span><strong>{euro(balance.reserves_cents)}</strong></div><div><span>Kreditforderungen insgesamt</span><strong>{euro(balance.loan_assets_cents)}</strong></div><small>24.000 € bestehende Kredite plus Maschinenrestschuld</small><div className="balance-total"><span>Summe</span><strong>{euro(balance.assets_cents)}</strong></div></div><div><h4>Passiva · Einlagen und Eigenkapital</h4><div><span>Kundeneinlagen</span><strong>{euro(balance.customer_deposits_cents)}</strong></div><div><span>Eigenkapital</span><strong>{euro(balance.equity_cents)}</strong></div><small>Eigenkapital wird nicht als Kundengeld gezählt.</small><div className="balance-total"><span>Summe</span><strong>{euro(balance.liabilities_and_equity_cents)}</strong></div></div></div></section>
+    <section className="bank-case-history"><h3>Tatsächliche Buchungen dieses Kredits</h3>{bank.events.length ? bank.events.slice().reverse().map(e => <button key={e.id} className={event?.id === e.id ? 'selected' : ''} onClick={() => { setFollow(false); setEventId(e.id); setKind(e.kind); }}><span>M{e.month}</span><strong>{e.label}</strong><b>{euro(e.amount_cents)}</b><ChevronRight size={15} /></button>) : <p className="cash-empty">Die Kreditanfrage beginnt den Vorgang. Die nächste Investitionsphase führt die Prüfung aus.</p>}</section>
+    <div className="bank-scope"><CircleHelp size={19} /><p>Ein vereinfachtes Einbank-System: Alle Kunden einschließlich Staat und Energie-Außenanschluss führen ihre Konten hier. 132.000 € Reserveposition und die Altbestände sind Eröffnungsannahmen. Der Kredit ist ein fest begrenzter Testfall; Bonitätsprüfung, Interbankverkehr, Wertberichtigungen und neue Staatskredite sind nicht modelliert. Unbezahlte Zinsen werden als Vertragsrückstand geführt; diese Ansicht verwendet eine zahlungsbezogene Ertragsrechnung.</p></div>
+  </section>;
+}

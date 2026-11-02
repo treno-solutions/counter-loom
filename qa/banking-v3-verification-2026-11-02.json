@@ -1,0 +1,74 @@
+{
+  "date": "2026-11-02",
+  "classification": "illustrative_circular_flow_v3",
+  "concept": "poc/BANKING_MODEL.md",
+  "automated": {
+    "command": "npm test --prefix poc",
+    "passed": 31,
+    "failed": 0,
+    "checks": [
+      "initial customer deposits146000 EUR separated from bank equity10000 EUR; assets and liabilities both156000 EUR",
+      "credit creates1200 EUR customer deposit and equal bank claim without debiting bank equity",
+      "credit and machine delivery occur in distinct phases; supplier stock reservation and payment match",
+      "12 principal payments of100 EUR; declining interest6 to0.50 EUR, total39 EUR",
+      "no payment after full amortization",
+      "independent reconstruction of every customer account, equity, claims and balance sheet over100 phases",
+      "missed, partial and catch-up instalments preserve actual principal and non-duplicated arrears",
+      "duplicate request and stale-revision protection",
+      "insufficient goods defer without money creation",
+      "unfunded government wishes do not count as effective unmet demand",
+      "zero paid labor/energy implies zero actual production",
+      "previous household, HTTP, stress and boundary checks retained"
+    ]
+  },
+  "build": {
+    "command": "npm run build --prefix poc",
+    "result": "passed TypeScript and Vite"
+  },
+  "browser": {
+    "tool": "BrowserOS neo",
+    "checks": [
+      "fresh matchingV3 backend and frontend load without schema error",
+      "request credit then4 manual phases show +1200 deposit, +1200 bank claim, zero equity change",
+      "nextphase supplier payment has zero effect on aggregate deposits",
+      "nextmonth principal100 reduces both deposits and claim100; first interest6 reduces deposits6 and raises equity6",
+      "selecting each flow reveals its actual before/after balance sheet",
+      "full65-phase UI path ends month13 with principal1200 paid, interest39, outstanding0, arrears0, 26 case postings",
+      "month13 closing balance assets156000 = deposits146000 + equity10000",
+      "subsequent autoplay reaches month14; pause works and no additional case payments appear",
+      "390px and320px have no document overflow or clipped tested controls; bank diagram intentionally scrolls within its container",
+      "desktop bank diagram visually reviewed",
+      "injected oldV2 response produces concise version-mismatch message, preserves confirmed contract and recovers after reset",
+      "production build accepts a real machine-credit request without error"
+    ],
+    "limits": [
+      "UI checks are manual tool-driven checks, not an empirical learning study"
+    ]
+  },
+  "independent_audit": "qa/bank-plausibility-review-2026-11-02.md",
+  "independent_audit_summary": {
+    "v2_worlds": 11,
+    "v3_worlds": 9,
+    "months_per_world": 240,
+    "v3_reconstructed_journal_entries": 39892,
+    "isolated_servicing_paths": 6,
+    "isolated_monthly_checks_per_path": 24,
+    "bank_contract_and_postings": "passed",
+    "whole_economy_long_run_plausibility": "not validated; unresolved company/state/external feedbacks",
+    "repeat_matches_recorded_results": true
+  },
+  "incident": {
+    "cause": "Frontend hot update expected V3 while old V2 Python service was still running",
+    "resolution": "Aligned running backend/frontend and added explicit version mismatch plus safe response validation; no schema details dumped to user",
+    "run_transition": "New model requires new world; memory-only old runs are not migrated"
+  },
+  "limitations": [
+    "One bank with fixed opening reserve position; no interbank settlement, central-bank operations or regulatory capital calibration",
+    "Single bounded machine-credit contract, not a general credit-underwriting model",
+    "Cash-based interest recognition; overdue contractual interest outside accrued-asset accounting; no write-offs",
+    "Legacy24000 EUR loans remain interest-only",
+    "Current money aggregate includes all nonbank deposits including simplified state/external account; not M1/M3",
+    "Company profit distribution, stock management, state finance and external recycling remain open; more credit alone does not solve long-run inactivity"
+  ],
+  "independent_audit_runner": "tools/check_bank_plausibility.py"
+}

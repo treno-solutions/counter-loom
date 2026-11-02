@@ -44,7 +44,7 @@ class Handler(SimpleHTTPRequestHandler):
 
     def do_POST(self):
         route = urlsplit(self.path).path
-        world_routes = {'/api/world': 'create', '/api/world/step': 'step', '/api/world/event': 'event', '/api/world/export': 'export'}
+        world_routes = {'/api/world': 'create', '/api/world/step': 'step', '/api/world/credit': 'credit', '/api/world/event': 'event', '/api/world/export': 'export'}
         if route != '/api/simulate' and route not in world_routes:
             return self.send_json(404, {'error': 'Endpunkt nicht gefunden.'})
         origin = self.headers.get('Origin')

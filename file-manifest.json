@@ -6,8 +6,8 @@
   },
   {
     "path": "POC.md",
-    "bytes": 9708,
-    "sha256": "8c4336b6d2d9651f1027719fb713c429282c5bdffe866d98b681e3085d28c6de"
+    "bytes": 10399,
+    "sha256": "e21a2aa2c1db4af1c270c96f22b48d38c27b8af125e403dcf8c984e776633d35"
   },
   {
     "path": "RESEARCH.md",
@@ -106,8 +106,8 @@
   },
   {
     "path": "poc/source-manifest.json",
-    "bytes": 3576,
-    "sha256": "a5dd55bb22b3e07ca875fb3658bb30906b5b417a7cf94c7dc218b3e26e846618"
+    "bytes": 4150,
+    "sha256": "535f9cdc6731db51422558f6e7c95eb379f65877c7e85c37e021c3d1631628d2"
   },
   {
     "path": "processed/energy-monthly-prices.csv",
@@ -253,6 +253,21 @@
     "path": "processed/world-silver-survey-2026.pages.json",
     "bytes": 258925,
     "sha256": "5b11ab1ac2dc84d831960e9d36eb2fd8f6ff41975f4afa49e6b789e3d626aaa3"
+  },
+  {
+    "path": "qa/bank-plausibility-review-2026-11-02.json",
+    "bytes": 337126,
+    "sha256": "186cf4506ba7c0f86ffc7bf282ef805e616aa6d8add059de6bfa19249d8ef65b"
+  },
+  {
+    "path": "qa/bank-plausibility-review-2026-11-02.md",
+    "bytes": 15461,
+    "sha256": "69bf8957639a05f78166ef14a4d755528ee6866d4d41a790e46f25cc63d1c99f"
+  },
+  {
+    "path": "qa/banking-v3-verification-2026-11-02.json",
+    "bytes": 4246,
+    "sha256": "2d6c330508dc7b2434d754424369aacab15506de05cc96bb3b1b7bdc6f3f5211"
   },
   {
     "path": "qa/bptk-independent-arithmetic-check.json",
@@ -711,8 +726,13 @@
   },
   {
     "path": "tools/assemble_evidence.py",
-    "bytes": 34683,
-    "sha256": "883e57e5cbde52b3579e4f1ffbcfffdba05c4f4d46f6e594cdc65bf61ca3afaf"
+    "bytes": 34718,
+    "sha256": "ab7485462cabb12a59a7506e8a6dd007591b330b6feebce590dd7c4e40a26575"
+  },
+  {
+    "path": "tools/check_bank_plausibility.py",
+    "bytes": 10761,
+    "sha256": "c4ccbc4bb6c8abb5156a3015b7f5b63f987949d0b48027b06ddad11b8fd1b375"
   },
   {
     "path": "tools/check_concordia_pilot_workflow.py",

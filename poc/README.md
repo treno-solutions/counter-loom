@@ -25,10 +25,11 @@ Die Ansicht ist unter **http://127.0.0.1:5173/** erreichbar. Der Launcher wartet
 5. **In das System hineingehen** zeigt seine Mitglieder; beim Staat öffnet sich der Haushalt mit Einnahmen, Ausgaben, Saldo und verbleibendem Anfangspuffer. Ein Haushalt oder Betrieb öffnet Konten, Eingänge, Ausgänge und Regeln. Der Navigationspfad führt zurück; Zeit und Modellzustand bleiben über alle Ebenen identisch.
 Die Übersicht zeigt unter **Das Geld wechselt die Konten** die Änderungen aller Sektoren seit Start. **Verteilung seit Start** öffnet die vollständige Gegenüberstellung. Im Einzelsystem erklärt **Woher kommt das Geld?** die Gleichung Monatsanfang + Eingänge − Ausgänge = aktuelles Konto.
 
-6. Optional **Ereignis auslösen**: Energieimporte verteuern oder Konsumanteil reduzieren. Ein vorgemerkter Eingriff wirkt erst beim nächsten Monatsbeginn. Beschäftigungsänderungen folgen den dokumentierten Schwellen, keinem vorgegebenen Ereignisdrehbuch.
-7. **Lauf mit Buchungen exportieren** erzeugt JSON mit Anfangskonten, vollständigem Zahlungsjournal, aktuellen Zuständen, Annahmen, wirksamen Eingriffen und Monatsgeschichte. **Neu starten** erzeugt den identischen Anfangszustand als neuen Lauf.
+6. **Ein Maschinenkredit … verfolgen** öffnet die Bank. **Maschinenkredit anfragen** merkt den 1.200-€-Vertrag vor. Die nächste Investitionsphase bucht Kreditguthaben und Forderung; die Abschlussphase bezahlt und liefert die Maschine. Ab dem folgenden Monat laufen Zinsen und 100 € Tilgung. Vier anwählbare Wege zeigen echte Vorher-/Nachher-Buchungen; die Bankbilanz bleibt im selben Weltzustand sichtbar. [Bankkonzept](BANKING_MODEL.md). Die 10.000 € Bankkapital werden getrennt von anfangs 146.000 € Kundeneinlagen geführt.
+7. Optional **Ereignis auslösen**: Energieimporte verteuern oder Konsumanteil reduzieren. Ein vorgemerkter Eingriff wirkt erst beim nächsten Monatsbeginn. Beschäftigungsänderungen folgen den dokumentierten Schwellen, keinem vorgegebenen Ereignisdrehbuch.
+8. **Lauf mit Buchungen exportieren** erzeugt JSON mit Anfangskonten, vollständigem Zahlungsjournal, aktuellen Zuständen, Annahmen, wirksamen Eingriffen und Monatsgeschichte. **Neu starten** erzeugt den identischen Anfangszustand als neuen Lauf.
 
-Modell v2: Der Grundbedarfsplan von 1.000 € pro Haushalt und Monat darf auch aus vorhandenem Kontoguthaben finanziert werden. Höhere einkommensabhängige Kaufpläne bleiben möglich. Geld- und Warenmangel begrenzen die tatsächlichen Käufe. Die früheren V1-Regeln und ihre Langzeitgrenzen sind [dokumentiert](../qa/circular-flow-v1-limitations-2026-11-02.json).
+Modell v3: Der Grundbedarfsplan von 1.000 € pro Haushalt und Monat darf auch aus vorhandenem Kontoguthaben finanziert werden. Höhere einkommensabhängige Kaufpläne bleiben möglich. Geld- und Warenmangel begrenzen die tatsächlichen Käufe. Die früheren V1-Regeln und ihre Langzeitgrenzen sind [dokumentiert](../qa/circular-flow-v1-limitations-2026-11-02.json).
 
 Läufe leben im Arbeitsspeicher des lokalen Servers. Die Berechnung schreitet durch Anfragen des geöffneten Browsers voran; es gibt keinen unabhängigen Hintergrunddienst nach dem Schließen. Maximal 240 Monate pro Lauf, bis zu 64 gleichzeitig gespeicherte Läufe. Serverneustart verliert die laufenden Welten; ein JSON-Export ist kein implementierter Wiederherstellungspunkt. Bei Fehlern hält die Ansicht an und zeigt den letzten bestätigten Zustand ausdrücklich weiter.
 
@@ -44,16 +45,22 @@ npm start
 
 Die gebaute Ansicht und API sind gemeinsam unter **http://127.0.0.1:8765/** erreichbar. Dies ist ein lokaler POC-Server, keine Produktionsbereitstellung.
 
-Tests prüfen unter anderem unabhängige Ledger-Rekonstruktion, identische Gegenbuchungen, Geld-/Lagerbestände, Systemregeln ohne laufende Welt, Investitionslieferung und spätere Kapazität, steuerfreie Transfers, reproduzierbare Verläufe, Wirkung an Monatsgrenzen, echte HTTP-Schritte, Wiederholschutz und die 240-Monats-Grenze. Die früheren sechs Tests des Haushaltsversuchs bleiben enthalten. Der aktuelle Stand ist im [V2-Prüfprotokoll](../qa/fiscal-and-household-v2-2026-11-02.json) dokumentiert; der [ursprüngliche Prüfstand](../qa/world-poc-verification-2026-11-02.json) bleibt erhalten.
+Tests prüfen unter anderem unabhängige Ledger-Rekonstruktion, identische Gegenbuchungen, Geld-/Lagerbestände, Systemregeln ohne laufende Welt, Investitionslieferung und spätere Kapazität, steuerfreie Transfers, reproduzierbare Verläufe, Wirkung an Monatsgrenzen, echte HTTP-Schritte, Wiederholschutz und die 240-Monats-Grenze. Die früheren sechs Tests des Haushaltsversuchs bleiben enthalten. Der [technische V3-Prüfstand](../qa/banking-v3-verification-2026-11-02.json) dokumentiert Bank-UI und Versionsabgleich. Der [unabhängige Plausibilitätsaudit](../qa/bank-plausibility-review-2026-11-02.md) trennt Bankprüfung und verbleibende Langzeitprobleme. Der frühere Stand ist im [V2-Prüfprotokoll](../qa/fiscal-and-household-v2-2026-11-02.json) dokumentiert; der [ursprüngliche Prüfstand](../qa/world-poc-verification-2026-11-02.json) bleibt erhalten.
 
 ## Aufbau und Grenzen
 
 - `systems.py`: explizite Systemeingänge und geplante Ausgänge; Regeln ohne Oberfläche oder globale Welt ausführbar.
+- `banking.py`: Einbankbilanz und begrenzter Maschinenkredit mit einzeln nachvollziehbaren Buchungen.
 - `world.py`: Konten, Lager, Gegenparteien, Journal, globale Zeit und native BPTK-Systemagenten. Centgenaue Buchungen sind die maßgebliche Quelle für die Grafik.
 - `server.py`: begrenzte lokale JSON-Schnittstelle; Revisionen verhindern doppelte Ausführung desselben Schritts.
 - `src/App.tsx`, `src/world-schema.ts`: gemeinsame laufende Welt mit Systemnavigation und Prüfung der Antworten.
 - `test_world.py`: Rechen-, System- und Schnittstellentests. `engine.py`, `test_engine.py` und `src/HouseholdApp.tsx` erhalten POC 01.
 
-Alle Beträge, Kaufbudgets und Verhaltensschwellen sind eigene illustrative Szenarioannahmen. Positive operative Zahlungsüberschüsse sind keine vollständige handelsrechtliche Gewinnrechnung. Vereinfachte Abrechnungskonten sind keine vollständigen Zentralbank-/Bankeinlagenbilanzen. Es gibt keine neuen Kredite, Geldschöpfung, Tilgung, Inflation, Abschreibung, Wertpapiermärkte oder LLM-Entscheidungen. Staat und Ausland sind bewusst begrenzt; ein dauerhaftes Gleichgewicht wird nicht zugesichert. Kontenkonsistenz ist kein Nachweis empirischer oder pädagogischer Gültigkeit.
+Alle Beträge, Kaufbudgets und Verhaltensschwellen sind eigene illustrative Szenarioannahmen. Positive operative Zahlungsüberschüsse sind keine vollständige handelsrechtliche Gewinnrechnung. Vereinfachte Abrechnungskonten sind keine vollständigen Zentralbank-/Bankeinlagenbilanzen. Ein begrenzter Maschinenkredit mit Geldschöpfung, Zinsen und Tilgung ist integriert. Weitere Neukredite, staatliche Anleihefinanzierung, Interbankverkehr, Wertberichtigungen, Inflation, Abschreibung, Wertpapiermärkte oder LLM-Entscheidungen sind nicht enthalten. Staat und Ausland sind bewusst begrenzt; ein dauerhaftes Gleichgewicht wird nicht zugesichert. Kontenkonsistenz ist kein Nachweis empirischer oder pädagogischer Gültigkeit.
 
 Die Oberfläche folgt einer internen Gestaltungsreferenz. Private Produktquellen, Designpakete oder Fontdateien wurden nicht kopiert. Die verwendeten IBM-Plex-Sans-Dateien stammen aus dem öffentlichen Paket `@fontsource/ibm-plex-sans`; dessen Font-Lizenz liegt im Paket. Lucide-Symbole und weitere Abhängigkeiten behalten ihre jeweiligen Lizenzen.
+
+
+## Weiterentwicklung der sichtbaren Vorschau
+
+Inkompatible Modell-/Antwortformatänderungen zunächst getrennt vorbereiten und Kern und Oberfläche gemeinsam prüfen. Erst danach die sichtbare Vorschau umstellen. Die Oberfläche prüft die Modellversion ausdrücklich; bei Abweichungen erscheint eine kurze Meldung und der letzte bestätigte Zustand bleibt erhalten. Ein neuer Modellstand erfordert einen neuen Lauf. Technische Schemafehler gehören nicht in die Bedienoberfläche.

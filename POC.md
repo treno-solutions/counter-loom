@@ -84,3 +84,8 @@ Diese Verbesserung der Bedienung macht aus dem Rechenfall keine Volkswirtschafts
 ## Modell v2 · Geldherkunft und Haushaltskorrektur
 
 Die [V1-Diagnose](qa/circular-flow-v1-limitations-2026-11-02.json) dokumentiert den Stillstand bei fehlendem Einkommen trotz hoher Haushaltsguthaben. Der [V2-Prüfstand](qa/fiscal-and-household-v2-2026-11-02.json) prüft den begrenzten Grundbedarfsplan aus verfügbarem Kontogeld, Gegenbuchungen und den Vergleich nach 97 Monaten. Die Staatsansicht und die sektorale Geldverteilung machen Quellen, Ausgaben und Rücklagenverbrauch sichtbar. Staatliche Kreditfinanzierung und ein Export-Rückfluss des Energie-Außenanschlusses bleiben offene, getrennt zu modellierende Systeme.
+
+
+## Modell v3 · Bankkredit mit sichtbarer Bilanz
+
+Ein angefragter Maschinenkredit führt getrennt durch Gutschrift, Lieferung/Zahlung, Zins und Tilgung. Die [Buchungsregeln](poc/BANKING_MODEL.md) trennen Kundeneinlagen, Bankeigenkapital und Reserveposition. Der [unabhängige Audit](qa/bank-plausibility-review-2026-11-02.md) bestätigt den begrenzten Bankpfad, findet aber offene langfristige Rückkopplungen im Unternehmens-, Staats- und Außenbereich. Der [technische V3-Prüfstand](qa/banking-v3-verification-2026-11-02.json) ergänzt die Browserprüfung. Zwei Plausibilitätsfehler der Vorversion sind korrigiert: nicht finanzierbare Nachfrage und Produktion ohne finanzierte Inputs.
