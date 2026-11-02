@@ -64,7 +64,7 @@ class FirmTests(unittest.TestCase):
         self.assertEqual(w.nodes['h2']['employer'],None)
 
     def test_recovery_only_after_shock_and_completed_world_rejects_mutations(self):
-        w=World()
+        w=World(horizon_months=24)
         with self.assertRaises(ValueError):w.queue('demand_recovery')
         w.queue('demand');w.step();w.queue('demand_recovery')
         for _ in range(119):w.step()
@@ -87,7 +87,7 @@ class FirmTests(unittest.TestCase):
         self.assertGreaterEqual(r['reserve_cents'],960000+10600)
 
     def test_late_credit_request_is_allowed_before_final_close(self):
-        w=World()
+        w=World(horizon_months=24)
         for _ in range(116):w.step()
         self.assertEqual((w.month,w.phase),(24,0))
         w.banking.request(w)
@@ -97,9 +97,20 @@ class FirmTests(unittest.TestCase):
         self.assertEqual(w.banking.loan.outstanding_cents,120000)
 
     def test_credit_after_last_investment_phase_is_rejected_without_mutation(self):
-        w=World()
+        w=World(horizon_months=24)
         for _ in range(119):w.step()
         self.assertEqual((w.month,w.phase),(24,3))
         before=w.snapshot()
         with self.assertRaises(ValueError):w.banking.request(w)
         self.assertEqual(before,w.snapshot())
+
+
+class OperatorConsistencyTests(unittest.TestCase):
+    def test_capital_does_not_remove_every_required_operator(self):
+        w=World();firm=w.nodes['alltag'];firm['capital']=10
+        firm['company']['forecast_milli']=40000
+        desired,_=staffing(firm,1)
+        self.assertEqual(desired,1)
+        firm['employees']=[]
+        self.assertEqual(plan(firm,1)['capacity_units'],0)
+        self.assertEqual(staffing(firm,1)[0],1)

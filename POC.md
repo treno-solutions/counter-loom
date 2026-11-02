@@ -113,3 +113,7 @@ Der [Modell-Leitzins](poc/RATES_MODEL.md) ist ab der nächsten Monatsgrenze ver�
 ## Modell v8 · Preise und Kaufkraft
 
 Die [Preisregel](poc/PRICES_MODEL.md) ergänzt eine teilweise, verzögerte Weitergabe zusätzlicher Energie-Stückkosten. Gemeinsame Monatsansichten zeigen Energiekosten, Preise, Kaufkraft, Produktion und Beschäftigung. Haushaltskurven trennen nominale Ausgaben und Warenmengen zu Startpreisen. Neue Maschinenverträge binden den dann aktuellen Preis von acht Werkstatteinheiten; bestehende Verträge behalten ihren Lieferpreis. Alle Parameter sind illustrative Annahmen, keine empirische Inflationskalibrierung. [V8-Prüfung](qa/prices-v8-plausibility.md).
+
+## Modell v9 · Liquiditätspolitik und offene Beobachtung
+
+Die [Staatsfinanzierung](poc/FISCAL_MODEL.md) nutzt vorhandenes Guthaben oberhalb eines begrenzten Ausgabenpuffers statt jeden Fehlbetrag auf die Anfangskasse aufzufüllen. Kasse, Haushaltssaldo, Schuld, Zinslast und tatsächliche offene Löhne sind getrennt nachvollziehbar. Der normale Lauf endet nicht mehr automatisch nach 24 Monaten. Energie- und Konsumeingriffe sind wiederholbar, ihre Normalisierung ebenfalls; die letzten 36 Monate werden angezeigt und die volle Vergangenheit bleibt im Export. Längere Läufe prüfen Grenzen der gewählten Regeln; sie beseitigen weder die künstliche Einlaufphase noch fehlende Abschreibung, Insolvenz- und Rückstandsabwicklung. [V9-Prüfung](qa/fiscal-policy-v9-plausibility.md).

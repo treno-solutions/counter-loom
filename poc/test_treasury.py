@@ -3,15 +3,15 @@ import unittest
 from world import World
 
 class TreasuryTests(unittest.TestCase):
-    def test_first_month_deficit_is_financed_without_debiting_bank_capital(self):
-        w=World()
+    def test_buffer_shortfall_is_financed_without_debiting_bank_capital(self):
+        w=World(government_initial_cash_cents=720000)
         for _ in range(5):w.step()
         f=w.treasury.snapshot(w);m=f['monthly']
         self.assertEqual(m['cash_deficit_cents'],241360)
         self.assertEqual(m['credit_cents'],241360)
         self.assertEqual(f['outstanding_cents'],241360)
         self.assertEqual(m['interest_paid_cents'],0)
-        self.assertEqual(w.nodes['staat']['cash_cents'],8000000)
+        self.assertEqual(w.nodes['staat']['cash_cents'],720000)
         t=next(t for t in w.journal if t['kind']=='government_credit')
         self.assertEqual(t['source_before'],t['source_after'])
         self.assertEqual(t['deposit_delta_cents'],241360)
@@ -19,7 +19,7 @@ class TreasuryTests(unittest.TestCase):
         self.assertEqual(t['equity_delta_cents'],0)
 
     def test_interest_starts_next_month_uses_opening_debt_and_charges_once(self):
-        w=World()
+        w=World(government_initial_cash_cents=720000)
         for _ in range(5):w.step()
         debt=w.treasury.outstanding_cents
         w.step()
@@ -33,7 +33,7 @@ class TreasuryTests(unittest.TestCase):
         self.assertTrue(any(t['kind']=='government_interest' for t in w.journal))
 
     def test_interim_credit_is_not_financed_twice_after_taxes(self):
-        w=World();w.pay('staat','h1',8000000,'fixture','Expliziter Testanschluss')
+        w=World(government_reserve_months=0);w.pay('staat','h1',8000000,'fixture','Expliziter Testanschluss')
         w.step()
         self.assertEqual(w.treasury.outstanding_cents,480000)
         for _ in range(4):w.step()
@@ -71,7 +71,7 @@ class TreasuryTests(unittest.TestCase):
         w.check()
 
     def test_late_tax_receipt_pays_interest_arrears_before_principal(self):
-        w=World(government_credit_limit_cents=100000)
+        w=World(government_credit_limit_cents=100000,government_reserve_months=0)
         w.month=1;w.treasury.issue(w,100000)
         w.pay('staat','h1',w.nodes['staat']['cash_cents'],'fixture','Testanschluss')
         w.month=2;w.phase=0;w.month_open={k:n['cash_cents'] for k,n in w.nodes.items()};w.treasury.begin_month(w);w.treasury.service(w)
@@ -104,7 +104,8 @@ class TreasuryTests(unittest.TestCase):
         for _ in range(5):w.step()
         self.assertEqual(w.treasury.outstanding_cents,0)
         self.assertEqual(w.nodes['staat']['cash_cents'],8000000-241360)
-        self.assertGreater(w.treasury.unfunded_financing_cents,0)
+        self.assertEqual(w.treasury.unfunded_financing_cents,0)
+        self.assertEqual(w.treasury.monthly(w)['reserve_draw_cents'],241360)
 
     def test_invalid_contract_rejected(self):
         for kwargs in ({'government_credit_limit_cents':-1},{'government_annual_rate_bps':True}):

@@ -46,7 +46,7 @@ class Banking:
                     assets_cents=self.reserves + loans, liabilities_and_equity_cents=deposits + equity)
 
     def request(self, world):
-        if world.month>=24 and world.phase>=3:
+        if world.horizon_months is not None and world.month>=world.horizon_months and world.phase>=3:
             raise ValueError('Die letzte Investitionsphase dieses Lernlaufs ist vorbei. Bitte neu starten.')
         if self.loan.status != 'available':
             raise ValueError('Für diesen Lauf wurde bereits ein Maschinenkredit angefragt.')

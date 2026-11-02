@@ -1,6 +1,6 @@
 # Leitzins und Vertragszinsen · Modell v7
 
-Stand: 2. November 2026. Eigene illustrative Vertrags-/Übertragungsregeln, keine Darstellung aktueller Zentralbankzinsen oder empirische Kalibrierung. Ergänzt die [Bankbilanz](BANKING_MODEL.md) und [Staatsfinanzierung](FISCAL_MODEL.md). Elf Akteure, 24 Monate, bestehende Produktions-/Kaufregeln und Kreditgrenzen bleiben erhalten. Keine zusätzliche Zentralbankbilanz, Einlagenverzinsung oder allgemeiner Kreditmarkt.
+Stand: 2. November 2026. Eigene illustrative Vertrags-/Übertragungsregeln, keine Darstellung aktueller Zentralbankzinsen oder empirische Kalibrierung. Ergänzt die [Bankbilanz](BANKING_MODEL.md) und [Staatsfinanzierung](FISCAL_MODEL.md). Elf Akteure und bestehende Kreditgrenzen bleiben erhalten. Seit V9 können Läufe ohne automatische Monatsgrenze weitergehen; die Zinsregeln bleiben dieselben. Keine zusätzliche Zentralbankbilanz, Einlagenverzinsung oder allgemeiner Kreditmarkt.
 
 ## Leitzinsvorgabe
 
@@ -9,7 +9,7 @@ Der Modell-Leitzins startet bei 2 %. Er kann zwischen 0 % und 10 % in Schritten 
 ## Drei Vertragsregeln
 
 - **Variabler Altvertrag:** Alltag & Versorgung, 12.000 € Anfangsschuld, zunächst 2 %, Modellaufschlag 0 Prozentpunkte. Am Monatsbeginn wird der Leitzins des Vormonats übernommen. Ein höherer Leitzins ab Monat 2 verändert daher den Vertragszins ab Monat 3. Zahlungen und Personal-/Liquiditätsplanung verwenden denselben wirksamen Vertragszins. Keine rückwirkende Neuberechnung bereits fälliger Zinsen.
-- **Fester Altvertrag:** Werkstatt & Technik, 12.000 € Anfangsschuld, 2 % über den gesamten 24-Monats-Lauf. Eine Leitzinsänderung lässt diesen Vertragszins unverändert.
+- **Fester Altvertrag:** Werkstatt & Technik, 12.000 € Anfangsschuld, 2 % über den gesamten Beobachtungslauf. Eine Leitzinsänderung lässt diesen Vertragszins unverändert.
 - **Neuverträge:** Maschinenkredit mit 4 Prozentpunkten Aufschlag, neue Staatskreditbeträge mit 1 Prozentpunkt Aufschlag. Bei 2 % Leitzins gelten damit 6 % beziehungsweise 3 %. Bei 4 % gelten für neue Abschlüsse 8 % beziehungsweise 5 %. Der maßgebliche Zeitpunkt ist die tatsächliche Kreditgutschrift, nicht die Anfrage. Eine wartende Anfrage bindet den Angebotszins nicht. Nach Gutschrift bleibt der jeweilige Vertragszins fest.
 
 Die unterschiedlichen Vertragstypen sind eine explizite Festlegung dieses Lernfalls. Bestehende Firmenkredite werden weiterhin nicht getilgt. Der eine Maschinenkredit behält Betrag, Lieferbedingungen und zwölf Tilgungsraten. Zinsen auf unterschiedliche Restschulden sind nicht ohne Berücksichtigung des Betrags vergleichbar; Angebote zeigen deshalb Betrag und erste Monatszinsen.

@@ -58,7 +58,7 @@ class ForeignTradeTests(unittest.TestCase):
 
     def test_trade_and_domestic_bridges_and_goods_across_24_month_cases(self):
         for case in ('base','none','energy','demand','both','loan'):
-            w=World(export_orders_units={'alltag':0,'werkstatt':0}) if case=='none' else World()
+            w=World(export_orders_units={'alltag':0,'werkstatt':0},horizon_months=24) if case=='none' else World(horizon_months=24)
             if case=='loan':w.banking.request(w)
             for i in range(120):
                 if i==10:

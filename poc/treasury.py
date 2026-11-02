@@ -2,15 +2,26 @@
 Contract, policy and bounds: FISCAL_MODEL.md. All money in integer cents.
 """
 from copy import deepcopy
+from systems import GovernmentSystem
 
 PRIMARY = ('wage','transfer','procurement')
 TAXES = ('income_tax','profit_tax')
 KINDS = ('government_credit','government_interest','government_principal')
 
 class Treasury:
-    def __init__(self,world,credit_limit_cents=5000000,annual_rate_bps=300):
+    def __init__(self,world,credit_limit_cents=5000000,annual_rate_bps=300,reserve_months=1):
         if any(type(v) is not int or v<0 for v in (credit_limit_cents,annual_rate_bps)):
             raise ValueError('Staatskreditparameter müssen nichtnegative ganze Zahlen sein.')
+        if type(reserve_months) is not int or not 0<=reserve_months<=6:
+            raise ValueError('Reserve muss zwischen null und sechs ganzen Ausgabenmonaten liegen.')
+        self.reserve_months=reserve_months
+        self.planned_primary_cents=0
+        self.reserve_target_cents=0
+        self.policy_cash_before_cents=None
+        self.policy_credit_need_cents=0
+        self.policy_repayment_capacity_cents=0
+        self.decision='pending'
+        self.decision_reason='Die Finanzierung wird nach den Unternehmenssteuern beim Monatsabschluss entschieden.'
         self.credit_limit_cents=credit_limit_cents
         self.annual_rate_bps=annual_rate_bps
         self.spread_bps=annual_rate_bps-world.monetary.initial_rate_bps
@@ -29,7 +40,14 @@ class Treasury:
         self.opening_interest_arrears_cents=0
         self.month_interest_charge_cents=0
         self.unfunded_financing_cents=0
-        self.message='Monatliche Kassenfehlbeträge können durch einen begrenzten Staatskredit finanziert werden.'
+        self.message='Vorhandene Kasse finanziert Ausgaben. Kredit schützt bei Bedarf eine begrenzte Liquiditätsreserve.'
+        self.plan_reserve(world)
+
+    def plan_reserve(self,world):
+        self.planned_primary_cents=(len(world.nodes['staat']['employees'])*GovernmentSystem.wage_per_job
+            +sum(h['employer'] is None for h in world.households())*GovernmentSystem.transfer_per_unemployed
+            +2*GovernmentSystem.procurement_per_firm)
+        self.reserve_target_cents=self.reserve_months*(self.planned_primary_cents+self.month_interest_charge_cents)
 
     def begin_month(self,world):
         self.opening_principal_cents=self.outstanding_cents
@@ -41,6 +59,12 @@ class Treasury:
         for item in ranking[:remainder]:item['interest_cents']+=1
         self.month_interest_basis=basis
         self.unfunded_financing_cents=0
+        self.policy_cash_before_cents=None
+        self.policy_credit_need_cents=0
+        self.policy_repayment_capacity_cents=0
+        self.decision='pending'
+        self.decision_reason='Die Finanzierung wird nach den Unternehmenssteuern beim Monatsabschluss entschieden.'
+        self.plan_reserve(world)
 
     def issue(self,world,amount):
         if type(amount) is not int or amount<0:raise ValueError('Ungültiger Staatskreditbetrag.')
@@ -107,6 +131,14 @@ class Treasury:
         credit=sum(t['amount_cents'] for t in tx if t['kind']=='government_credit')
         repaid=sum(t['amount_cents'] for t in tx if t['kind']=='government_principal')
         return dict(month=world.month,taxes_cents=taxes,primary_spending_cents=primary,
+            public_wage_arrears_cents=sum(o['amount_cents'] for o in world.obligations if o['source']=='staat' and o['kind']=='wage'),
+            budget_balance_cents=taxes-primary-interest,planned_primary_cents=self.planned_primary_cents,
+            reserve_target_cents=self.reserve_target_cents,
+            reserve_draw_cents=max(0,world.month_open['staat']-world.nodes['staat']['cash_cents']),
+            reserve_build_cents=max(0,world.nodes['staat']['cash_cents']-world.month_open['staat']),
+            policy_cash_before_cents=world.nodes['staat']['cash_cents'] if self.policy_cash_before_cents is None else self.policy_cash_before_cents,
+            policy_credit_need_cents=self.policy_credit_need_cents,policy_repayment_capacity_cents=self.policy_repayment_capacity_cents,
+            decision=self.decision,decision_reason=self.decision_reason,
             interest_due_cents=self.opening_interest_arrears_cents+self.month_interest_charge_cents,
             interest_paid_cents=interest,cash_deficit_cents=primary+interest-taxes,
             credit_cents=credit,principal_repaid_cents=repaid,opening_cash_cents=world.month_open['staat'],
@@ -117,18 +149,29 @@ class Treasury:
         if self.last_close_month==world.month:return
         self.last_close_month=world.month
         if self.overdue_interest_cents:self.pay_interest(world)
-        m=self.monthly(world)
-        adjustment=m['cash_deficit_cents']-m['credit_cents']+m['principal_repaid_cents']
-        if adjustment>0:
-            funded=self.issue(world,adjustment)
-            self.unfunded_financing_cents=adjustment-funded
-        elif adjustment<0:self.repay(world,-adjustment)
+        cash=world.nodes['staat']['cash_cents']
+        self.policy_cash_before_cents=cash
+        self.policy_credit_need_cents=max(0,self.reserve_target_cents-cash)
+        self.policy_repayment_capacity_cents=max(0,cash-self.reserve_target_cents)
+        if self.policy_credit_need_cents:
+            funded=self.issue(world,self.policy_credit_need_cents)
+            self.unfunded_financing_cents=self.policy_credit_need_cents-funded
+            if self.unfunded_financing_cents:
+                self.decision='limited'
+                self.decision_reason='Reserveziel nicht erreicht: Kreditrahmen oder Bankkapital begrenzt die Aufnahme. Verfügbares Guthaben bleibt für Zahlungen nutzbar.'
+            else:
+                self.decision='borrow'
+                self.decision_reason='Kasse liegt unter dem Reserveziel. Ein Bankkredit füllt die fehlende Liquidität auf; Staatsschuld und Bankforderung steigen gleich hoch.'
+        elif self.policy_repayment_capacity_cents and self.outstanding_cents:
+            self.repay(world,self.policy_repayment_capacity_cents)
+            self.decision='repay'
+            self.decision_reason='Kasse liegt über dem Reserveziel. Der darüber verfügbare Betrag tilgt bestehende Schuld, höchstens bis zur vollständigen Rückzahlung.'
+        else:
+            self.decision='hold'
+            self.decision_reason='Keine zusätzliche Kreditaufnahme oder Tilgung beim Abschluss: Reserveziel gedeckt oder keine Schuld vorhanden. Vorhandenes Guthaben bleibt in der Kasse.'
+        self.message=self.decision_reason
         if self.unfunded_financing_cents:
-            self.message='Kreditgrenze oder Bankkapital begrenzt die Finanzierung. Der Staat nutzt seine Kassenreserve.'
-            world.notice(f'Staat: {self.unfunded_financing_cents/100:.2f} € Kassenfehlbetrag nicht kreditfinanziert.','staat')
-        elif self.outstanding_cents:
-            self.message='Fehlbeträge werden innerhalb der Kreditgrenze finanziert; Überschüsse führen Schuld zurück. Zinsen folgen der Anfangsschuld.'
-        else:self.message='Zurzeit keine Staatsschuld. Ein Überschuss bleibt nach vollständiger Tilgung auf dem Konto.'
+            world.notice(f'Staat: {self.unfunded_financing_cents/100:.2f} € fehlen zum Liquiditätsreserveziel.','staat')
         self.history.append(self.monthly(world))
 
     def check(self,world):
@@ -141,7 +184,7 @@ class Treasury:
         assert self.overdue_interest_cents==self.interest_charged_cents-self.interest_paid_cents>=0
 
     def snapshot(self,world):
-        return dict(credit_limit_cents=self.credit_limit_cents,annual_rate_bps=world.monetary.state_offer(world),spread_bps=self.spread_bps,tranches=deepcopy(self.tranches),weighted_rate_bps=sum(t['outstanding_cents']*t['annual_rate_bps'] for t in self.tranches)//self.outstanding_cents if self.outstanding_cents else None,
+        return dict(financing_policy='liquidity_buffer',reserve_months=self.reserve_months,credit_limit_cents=self.credit_limit_cents,annual_rate_bps=world.monetary.state_offer(world),spread_bps=self.spread_bps,tranches=deepcopy(self.tranches),weighted_rate_bps=sum(t['outstanding_cents']*t['annual_rate_bps'] for t in self.tranches)//self.outstanding_cents if self.outstanding_cents else None,
             outstanding_cents=self.outstanding_cents,remaining_credit_cents=self.credit_limit_cents-self.outstanding_cents,
             credit_created_cents=self.credit_created_cents,principal_repaid_cents=self.principal_repaid_cents,
             interest_charged_cents=self.interest_charged_cents,interest_paid_cents=self.interest_paid_cents,

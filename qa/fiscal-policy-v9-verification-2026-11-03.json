@@ -1,0 +1,159 @@
+{
+  "checked_on": "2026-11-03",
+  "classification": "illustrative_circular_flow_v9",
+  "python_tests_passed": 101,
+  "production_build": "passed",
+  "production_schema_snapshots_passed": 1098,
+  "corrupt_reserve_target_rejected": true,
+  "independent_worlds": 13,
+  "independent_world_months": 1176,
+  "independent_phase_states": 5880,
+  "independent_journal_postings": 29373,
+  "independent_isolated_cases": 17,
+  "browser_checks": [
+    "Default month1: state cash 77586.40 EUR, reserve7200 EUR, no state debt",
+    "Continued through month24 to38 without completion flag or error",
+    "New energy and demand changes in month26, recovery in27, changes again in28",
+    "Fiscal history selection month3 at world month38; four charts synchronize",
+    "Rolling36-month fiscal and household windows begin at month3 by month38",
+    "Desktop and390CSS-pixel layout without document overflow"
+  ],
+  "source_files": [
+    {
+      "path": "poc/COMPANY_MODEL.md",
+      "bytes": 9808,
+      "sha256": "08b0b1b94ba0f68c07059586ea101cbbbd4d70b3d9271ae8d62554bd0135db78"
+    },
+    {
+      "path": "poc/FISCAL_MODEL.md",
+      "bytes": 7001,
+      "sha256": "08d350b3da43584f83f4519cb7a958a1618e0c730a0a308241111ad99c4a2aae"
+    },
+    {
+      "path": "poc/PRICES_MODEL.md",
+      "bytes": 6845,
+      "sha256": "09e320a6943e306df78f670bf67bcf54e04a84fee4bad9d5eaffab800fbe59bf"
+    },
+    {
+      "path": "poc/RATES_MODEL.md",
+      "bytes": 5295,
+      "sha256": "066344116f9c326e6d62d6fed245ca57a218f9f6e2ef399cd913b8982652e2a4"
+    },
+    {
+      "path": "poc/README.md",
+      "bytes": 13921,
+      "sha256": "b7cab957528a3014092dda75e4eea935e856d0eeba846a91332dd81e59aea8b5"
+    },
+    {
+      "path": "poc/WORLD_MODEL.md",
+      "bytes": 21688,
+      "sha256": "71554f88d899e837d042e1ae741f5955778d1e860db42a3cc988d86c022d73ae"
+    },
+    {
+      "path": "poc/banking.py",
+      "bytes": 10870,
+      "sha256": "ab89365a8b70c08e8d1669b7e91f4cdcd90a614ee1e6cf30cdbe59c18857eb52"
+    },
+    {
+      "path": "poc/firms.py",
+      "bytes": 2399,
+      "sha256": "4adf82b93a0bd0fb7b14e94fcaaaa7f9a8389f44120bf530eb9523e1b71394ab"
+    },
+    {
+      "path": "poc/rates.py",
+      "bytes": 5068,
+      "sha256": "9f6337cd122854eecb7b250369d268169ee3986d9284c35f31d0d62835467940"
+    },
+    {
+      "path": "poc/src/App.tsx",
+      "bytes": 28960,
+      "sha256": "2ba2f67b966d8c38dd89d7f03a653afd784b830dc635c3c2bc535445610304ea"
+    },
+    {
+      "path": "poc/src/BankView.tsx",
+      "bytes": 14440,
+      "sha256": "39c2d571013cef4419a5239942df2d370ff498c659be5bb49f08fc65f11879ec"
+    },
+    {
+      "path": "poc/src/CompanyView.tsx",
+      "bytes": 5964,
+      "sha256": "0b0dff779131a554fcc95cecefa5ccad99fb166e9aff896005346d06d06f8419"
+    },
+    {
+      "path": "poc/src/ConsumptionHistory.tsx",
+      "bytes": 9902,
+      "sha256": "258b3f7ebbf4b9e4497665f610aab379ad5176b99409af72ccb579eab5172917"
+    },
+    {
+      "path": "poc/src/GovernmentFinance.tsx",
+      "bytes": 15928,
+      "sha256": "5a3524955736b56cd0e5e0f8faa222c08055ba2b6fcf245217688d0f3307f341"
+    },
+    {
+      "path": "poc/src/PriceTransmission.tsx",
+      "bytes": 6932,
+      "sha256": "f0b2c1639fb6fe3ee5b20c67103b611ecb7d41fdc79b6062d8374c833cb7fbfe"
+    },
+    {
+      "path": "poc/src/RatesView.tsx",
+      "bytes": 7926,
+      "sha256": "6e6e8d5a960cad0512dd25eb3429c761258f99919be0d5c8693199c2d7967398"
+    },
+    {
+      "path": "poc/src/styles.css",
+      "bytes": 69705,
+      "sha256": "8f9c0a0c48411952888043aaa9d0f3cbab3044732937172a810be0a19d1178de"
+    },
+    {
+      "path": "poc/src/world-schema.ts",
+      "bytes": 17729,
+      "sha256": "f172ebf2b7b29a40071acd57d51ee45d5ea8dd39a43bb4533cd8afefd27df34b"
+    },
+    {
+      "path": "poc/test_firms.py",
+      "bytes": 6019,
+      "sha256": "f9fb85d1e5758a989f42120e9c060adffa3a4705c212683d5ba5ba2d73da1116"
+    },
+    {
+      "path": "poc/test_fiscal_policy.py",
+      "bytes": 4572,
+      "sha256": "7b9692141f8e8fbd96af1426946449929eca74abf945c8564da8b16292b02137"
+    },
+    {
+      "path": "poc/test_foreign.py",
+      "bytes": 4909,
+      "sha256": "9a524389aef5a8f7882ed290fb41fc8b7e455472710f39ca938edb695f1d95ec"
+    },
+    {
+      "path": "poc/test_open_run.py",
+      "bytes": 2935,
+      "sha256": "3106647337c6c8d30a2f5038178d2682e9ac3a7b0c55a933ffb5e9cea8d6c4b3"
+    },
+    {
+      "path": "poc/test_rates.py",
+      "bytes": 7123,
+      "sha256": "c60618a90e0bdd771c59f7211d5a91782b456e28d972aaff7fb374f50e4ce9b4"
+    },
+    {
+      "path": "poc/test_treasury.py",
+      "bytes": 6017,
+      "sha256": "38e9e04a5d15f53334125fd80ce8e26fe46eeff9354d795dcdfdf103752052c9"
+    },
+    {
+      "path": "poc/test_world.py",
+      "bytes": 10678,
+      "sha256": "a26831d902f1b38b37026a6878b2489387b93a6cf796ede39392b68abe5d3d27"
+    },
+    {
+      "path": "poc/treasury.py",
+      "bytes": 12774,
+      "sha256": "a3b7f51c34c15afc9810d8120d0a6a5d5ae770de10102e39992bbca41eac8863"
+    },
+    {
+      "path": "poc/world.py",
+      "bytes": 29311,
+      "sha256": "7d11f8a80e2044f75051a7b8f4fc67870b7caf3f8e169d881161fbef7d85258a"
+    }
+  ],
+  "limits": "Open observation does not establish empirical long-run validity. Startup transients, fixed wages, missing depreciation and wage-arrears settlement remain explicit model boundaries."
+}

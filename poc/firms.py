@@ -32,7 +32,8 @@ def plan(firm, energy_multiplier, debt_service=0):
 def staffing(firm, energy_multiplier, debt_service=0):
     demand=demand_units(firm['company'])
     energy=(500 if firm['id']=='alltag' else 900)*energy_multiplier
-    needed=ceil(max(0,demand-firm['capital']*4)/firm['productivity'])
+    # Installed machines require at least one operator when demand is positive.
+    needed=max(1,ceil(max(0,demand-firm['capital']*4)/firm['productivity'])) if demand>0 else 0
     affordable=max(0,demand*(firm['price']-energy)-firm['loan']*firm['loan_next_rate_bps']//120000-debt_service)//WAGE
     desired=min(4,needed,affordable)
     # Two future wage rounds, expected energy and debt service retained as working cash.

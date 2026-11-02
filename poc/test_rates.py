@@ -55,7 +55,7 @@ class RateTests(unittest.TestCase):
         self.assertEqual(w.banking.loan.annual_rate_bps,800)
 
     def test_new_state_tranches_keep_old_and_new_fixed_rates(self):
-        w=World();self.finish_month(w);old=w.treasury.tranches[0].copy()
+        w=World(government_initial_cash_cents=720000);self.finish_month(w);old=w.treasury.tranches[0].copy()
         w.monetary.queue(w,400);self.finish_month(w)
         self.assertEqual(w.treasury.tranches[0]['annual_rate_bps'],300)
         self.assertEqual(w.treasury.tranches[-1]['annual_rate_bps'],500)
@@ -83,7 +83,7 @@ class RateTests(unittest.TestCase):
         self.assertEqual(sum(b['interest_cents'] for b in w.treasury.month_interest_basis),1)
 
     def test_cut_is_delayed_for_variable_and_does_not_reprice_fixed_state(self):
-        w=World();self.finish_month(w);w.monetary.queue(w,0);self.finish_month(w)
+        w=World(government_initial_cash_cents=720000);self.finish_month(w);w.monetary.queue(w,0);self.finish_month(w)
         self.assertEqual(w.nodes['alltag']['loan_rate_bps'],200)
         self.assertEqual(w.treasury.tranches[0]['annual_rate_bps'],300)
         self.assertEqual(w.treasury.tranches[-1]['annual_rate_bps'],100)
@@ -99,7 +99,7 @@ class RateTests(unittest.TestCase):
         w.step();self.assertEqual(w.monetary.changes,[])
 
     def test_invalid_rates_and_final_month_do_not_mutate_state(self):
-        w=World()
+        w=World(horizon_months=24)
         for value in (-1,1001,True,2.5,'400',None):
             before=w.snapshot()
             with self.assertRaises(ValueError):w.monetary.queue(w,value)

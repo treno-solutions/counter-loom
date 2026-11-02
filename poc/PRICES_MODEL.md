@@ -4,7 +4,7 @@ Diese Erweiterung zeigt eine begrenzte Übertragung von Energiekosten auf Preise
 
 ## Systemgrenze
 
-Elf Akteure, zwei Warenarten und 24 Monate bleiben erhalten. Nominallöhne, Transfers, Steuersätze, nominaler Grundbedarfsplan und nominale öffentliche Beschaffungsbudgets bleiben fest. Keine Lohnverhandlung, allgemeine Inflationserwartung, Geldmengen-Preisgleichung, Nachfragepreisbildung, Gütersubstitution, Wechselkurse oder vollständige Zentralbank. Es gibt keine vorprogrammierten Entlassungen infolge des Energieschocks.
+Elf Akteure und zwei Warenarten bleiben erhalten. Seit V9 ist der Beobachtungslauf ohne automatische Monatsgrenze; die Preisregeln bleiben dieselben. Nominallöhne, Transfers, Steuersätze, nominaler Grundbedarfsplan und nominale öffentliche Beschaffungsbudgets bleiben fest. Keine Lohnverhandlung, allgemeine Inflationserwartung, Geldmengen-Preisgleichung, Nachfragepreisbildung, Gütersubstitution, Wechselkurse oder vollständige Zentralbank. Es gibt keine vorprogrammierten Entlassungen infolge des Energieschocks.
 
 ## Energie und Preisregel
 

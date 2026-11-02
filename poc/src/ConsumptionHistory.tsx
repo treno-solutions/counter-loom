@@ -13,7 +13,7 @@ export default function ConsumptionHistory({world}:{world:World}) {
  const name=(id:string|null)=>id?world.nodes.find(n=>n.id===id)?.name??id:'ohne Beschäftigung';
  const events=new Map<number,string[]>();
  const add=(month:number,text:string)=>events.set(month,[...(events.get(month)??[]),text]);
- for(const e of world.active) add(e.month,e.event==='energy'?'Energiekosten verdoppelt':e.event==='demand'?'Konsumquote auf 65 % gesenkt':'Konsumquote auf 95 % zurückgesetzt');
+ for(const e of world.active) add(e.month,e.event==='energy_recovery'?'Energiekosten auf Ausgangspreis zurückgesetzt':e.event==='energy'?'Energiekosten verdoppelt':e.event==='demand'?'Konsumquote auf 65 % gesenkt':'Konsumquote auf 95 % zurückgesetzt');
  for(const e of world.monetary_policy.changes) add(e.month,`Leitzins: ${rate(e.old_rate_bps)} → ${rate(e.new_rate_bps)}`);
  for(const [i,m] of world.monetary_policy.history.entries()) {
   const before=world.monetary_policy.history[i-1]?.variable_rate_bps??world.monetary_policy.initial_rate_bps;
@@ -27,15 +27,15 @@ export default function ConsumptionHistory({world}:{world:World}) {
  const wishKey=real?'desired_real_cents':'desired_cents',paidKey=real?'paid_real_cents':'paid_cents';
  const max=Math.max(100000,...months.flatMap(m=>m.households.map(h=>h[wishKey])));
  const ceiling=Math.ceil(max/50000)*50000;
- const lastMonth=latest?.month??1;
- const tickStep=lastMonth<=6?1:lastMonth<=12?2:4;
- const ticks=[...new Set([1,...Array.from({length:Math.floor(lastMonth/tickStep)},(_,i)=>(i+1)*tickStep),lastMonth])];
- const x=(month:number)=>54+(month-1)*450/Math.max(1,lastMonth-1),y=(cents:number)=>132-cents/ceiling*108;
+ const lastMonth=latest?.month??1,firstMonth=months[0]?.month??1;
+ const tickStep=(lastMonth-firstMonth)<6?1:(lastMonth-firstMonth)<12?2:4;
+ const ticks=[...new Set([firstMonth,...Array.from({length:Math.floor((lastMonth-firstMonth)/tickStep)},(_,i)=>firstMonth+(i+1)*tickStep),lastMonth])];
+ const x=(month:number)=>54+(month-firstMonth)*450/Math.max(1,lastMonth-firstMonth),y=(cents:number)=>132-cents/ceiling*108;
  const points=(id:string,key:'desired_cents'|'paid_cents'|'desired_real_cents'|'paid_real_cents')=>months.map(m=>`${x(m.month)},${y(m.households.find(h=>h.id===id)![key])}`).join(' ');
  return <section className="consumption-history" aria-labelledby="consumption-title">
-  <div className="consumption-heading"><div><div className="section-heading"><Activity size={18}/><h2 id="consumption-title">Konsum nach Haushalt</h2></div><p>Kaufpläne, bezahlte Ausgaben und gekaufte Warenmengen je abgeschlossenem Monat. Alle Haushaltsdiagramme verwenden dieselbe Skala.</p></div><div className="consumption-legend"><span><i className="wish-key"/>Konsumwunsch</span><span><i className="purchase-key"/>Tatsächliche Käufe</span><span><i className="event-key"/>Ereignis</span></div></div>
+  <div className="consumption-heading"><div><div className="section-heading"><Activity size={18}/><h2 id="consumption-title">Konsum nach Haushalt</h2></div><p>Kaufpläne, bezahlte Ausgaben und gekaufte Warenmengen je abgeschlossenem Monat. Alle Haushaltsdiagramme verwenden dieselbe Skala und zeigen die letzten 36 Abschlüsse.</p></div><div className="consumption-legend"><span><i className="wish-key"/>Konsumwunsch</span><span><i className="purchase-key"/>Tatsächliche Käufe</span><span><i className="event-key"/>Ereignis</span></div></div>
   {!selected?<p className="quiet">Nach dem ersten Monatsabschluss erscheinen die sechs Haushaltsverläufe. Ereignisse werden im Monat ihres Wirksamwerdens markiert.</p>:<>
-   <div className="consumption-month-heading"><strong>Ausgewählter Monat: {selected.month} · {latest!.month} Monate abgeschlossen</strong>{chosen!==null&&<button onClick={()=>setChosen(null)}>Aktuellsten Monat anzeigen</button>}</div>
+   <div className="consumption-month-heading"><strong>Ausgewählter Monat: {selected.month} · bisher {latest!.month} Monate abgeschlossen</strong>{chosen!==null&&<button onClick={()=>setChosen(null)}>Aktuellsten Monat anzeigen</button>}</div>
    <div className="consumption-months" role="group" aria-label="Monat für alle Haushalte auswählen">{months.map(m=><button key={m.month} aria-pressed={selected.month===m.month} aria-label={`Monat ${m.month}${events.has(m.month)?` · ${events.get(m.month)!.join('; ')}`:''}`} onClick={()=>setChosen(m.month)}><span>M{m.month}</span><i className={events.has(m.month)?'marked':''}/></button>)}</div>
    <div className="consumption-events"><strong>Ereignisse · Monat {selected.month}</strong>{events.has(selected.month)?<ul>{events.get(selected.month)!.map((e,i)=><li key={i}>{e}</li>)}</ul>:<p>Keine neue Szenario-, Zins- oder Beschäftigungsänderung in diesem Monat.</p>}</div>
    <PriceTransmission world={world} month={selected.month}/>
@@ -49,7 +49,7 @@ export default function ConsumptionHistory({world}:{world:World}) {
      <svg viewBox="0 0 528 164" role="img" aria-label={`${n.name}: Konsumwunsch und Käufe über ${months.length} Monate; ${real?'Warenmengen zu Startpreisen':'Ausgaben'}; gemeinsame Skala 0 bis ${money(ceiling)}`}>
       {[0,0.5,1].map(f=><g key={f}><line x1="54" x2="504" y1={y(ceiling*f)} y2={y(ceiling*f)} className="consumption-grid"/><text x="47" y={y(ceiling*f)+4} textAnchor="end">{Math.round(ceiling*f/100).toLocaleString('de-DE')} €</text></g>)}
       {ticks.map(m=><text key={m} x={x(m)} y="153" textAnchor="middle">M{m}</text>)}
-      {[...events.keys()].filter(m=>m<=latest!.month).map(m=><line key={m} x1={x(m)} x2={x(m)} y1="19" y2="132" className="consumption-event-line"><title>M{m}: {events.get(m)!.join('; ')}</title></line>)}
+      {[...events.keys()].filter(m=>m>=firstMonth&&m<=latest!.month).map(m=><line key={m} x1={x(m)} x2={x(m)} y1="19" y2="132" className="consumption-event-line"><title>M{m}: {events.get(m)!.join('; ')}</title></line>)}
       <line x1={x(selected.month)} x2={x(selected.month)} y1="19" y2="132" className="consumption-selection"/>
       <polyline points={points(n.id,wishKey)} className="consumption-wish"/><polyline points={points(n.id,paidKey)} className="consumption-purchases"/>
       {months.map(m=>{const row=m.households.find(h=>h.id===n.id)!;return <g key={m.month}><circle cx={x(m.month)} cy={y(row[wishKey])} r="3" className="consumption-wish-dot"/><circle cx={x(m.month)} cy={y(row[paidKey])} r="3" className="consumption-paid-dot"/><title>Monat {m.month}: Wunsch {money(row[wishKey])}, Käufe {money(row[paidKey])}</title></g>;})}

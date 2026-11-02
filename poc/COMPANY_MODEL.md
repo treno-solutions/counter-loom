@@ -1,11 +1,11 @@
-# Begrenzter Lernlauf und Unternehmenssystem · Grundlage v4, erweitert bis v8
+# Begrenzter Lernlauf und Unternehmenssystem · Grundlage v4, erweitert bis v9
 
 Stand: 2. November 2026 · Die Unternehmensregeln aus v4 gelten mit den [Preis- und Kaufkraftergänzungen v8](PRICES_MODEL.md). Die [Leitzinsregeln](RATES_MODEL.md) ergänzen einen variablen und einen festen Betriebskredit. Der [begrenzte Staatskredit](FISCAL_MODEL.md) ergänzt die Finanzierungsseite. Der [Außenhandelsanschluss v5](FOREIGN_MODEL.md) ergänzt tatsächliche Auslandsbestellungen und Warenexporte. Alle Parameter sind eigene illustrative Annahmen; keine empirische Kalibrierung oder Prognose.
 
 ## Verbindliche Grenze dieser Version
 
 - Sechs Haushalte, zwei Unternehmen, eine Bank, Staat und der bestehende vereinfachte Außenanschluss für Energieimporte und Warenexporte. Keine weiteren Akteure oder Systemarten.
-- **24 Monate pro Lernlauf.** Die globale Zeit wird anschließend angehalten; ein neuer Lauf beginnt mit denselben dokumentierten Startbedingungen. Keine Aussagen über eine langfristig stabile Volkswirtschaft.
+- **Offener Beobachtungslauf.** Seit V9 gibt es in der normalen Oberfläche keinen automatischen Stopp nach 24 Monaten. Feste Horizonte bleiben für reproduzierbare Vergleiche optional; keine Zusicherung langfristiger Stabilität.
 - Nominale Löhne, Technologien und Steuersätze bleiben fest; Preise folgen der begrenzten, verzögerten Energiekostenregel. Energiepreis und Konsumquote sind die vorhandenen äußeren Eingriffe; eine Rücknahme des Konsumschocks erlaubt einen gezielten Erholungsfall.
 - Staat nutzt weiterhin seinen vorgegebenen Anfangspuffer und feste Regeln für Löhne, Transfers und Beschaffung. Ein begrenzter Staatskredit finanziert Kassenfehlbeträge und verursacht Zinsen; Anleihemärkte und Zentralbankfinanzierung bleiben außerhalb des Umfangs. Energiezahlungen senken das Inlandsguthaben, tatsächlich bezahlte Warenexporte erhöhen es. Das separate Auslandskonto bleibt in der Kontrollsumme aller Kundenkonten enthalten. Diese Kontrollsumme darf nicht als verfügbare inländische Geldmenge gelesen werden.
 - Der bestehende einzelne Maschinenkredit bleibt enthalten. Kein Ausbau zu einem allgemeinen Kreditmarkt, weiteren Anlageklassen, allgemeiner Inflationsmodellierung, Steuersystem, LLM-Personas oder neuer Grafikplattform.
@@ -43,7 +43,7 @@ Die sechs bestehenden Haushalte besitzen in diesem Test jeweils denselben Anteil
 
 Ausschüttungen werden zusätzlich auf liquide Mittel oberhalb von zwei Lohnrunden für die größere Zahl aus aktuellen und Zielstellen, erwarteter Energie und dem nächsten Schuldendienst begrenzt. Bestehende fällige Rückstände sperren sie. Anfangspuffer und neu aufgenommenes Kreditgeld gelten nicht als ausschüttbarer Gewinn. Ein Verlust löst keine Ausschüttung aus. Im Betrieb belassene Mittel stehen für Arbeitskapital und den bestehenden Maschinenkauf bereit.
 
-Ein eigenfinanzierter Maschinenkauf erfordert zwei Monate finanzierbarer, wegen Kapazität/Ware nicht bedienter Nachfrage, ausreichenden verbleibenden Arbeitspuffer und verfügbare Werkstattware. Höchstens eine Anlage in drei Monaten. Der explizit angefragte Bankfall behält seinen bisherigen separaten Ablauf. Bei später Kreditanfrage kann am Ende des 24-Monats-Laufs eine Restschuld bestehen; sie wird ausgewiesen und exportiert, nicht automatisch erlassen.
+Ein eigenfinanzierter Maschinenkauf erfordert zwei Monate finanzierbarer, wegen Kapazität/Ware nicht bedienter Nachfrage, ausreichenden verbleibenden Arbeitspuffer und verfügbare Werkstattware. Höchstens eine Anlage in drei Monaten. Der explizit angefragte Bankfall behält seinen bisherigen separaten Ablauf. Bei später Kreditanfrage kann am Ende eines gewählten Beobachtungsfensters eine Restschuld bestehen; sie wird ausgewiesen und exportiert, nicht automatisch erlassen.
 
 ## Sichtbare Größen und Prüfungen
 
@@ -52,3 +52,7 @@ Je Betrieb: erwartete/finanzierbare Nachfrage, Ziel- und Ist-Lager, geplante/tat
 Kontrollen: Anfangslager + Produktion − Verkäufe = Endlager; Anfangskostenwert + produktive Kosten − entnommene Warenkosten = Endkostenwert; Konten und Bankbilanz nach jeder Buchung; Verkäufe nicht größer als verfügbare Ware; keine Ausschüttung aus Kreditgutschrift/Verlust oder bei fälligen Rückständen; keine Einstellung wegen bloßem Geldmangel des Käufers; Entscheidungsverzögerung; Wiederholung identischer Eingriffe; Kredit-/Zins-/Tilgungsprüfungen bleiben bestehen.
 
 Ausgewählte Läufe: Baseline ohne Eingriff, Energieanstieg, Konsumrückgang, beide Eingriffe, Konsumrückgang mit anschließender Normalisierung sowie der Maschinenkredit. Ein begründeter Rückgang oder Engpass ist zulässig. Parameter werden nicht allein so gewählt, dass ein erwünschtes Ergebnis entsteht. Der vollständige 24-Monats-Verlauf und offene Einschränkungen werden mit den tatsächlichen Eingaben dokumentiert.
+
+### Bedienpersonal bei hoher Anlagenkapazität
+
+Zusätzliche Anlagen können Arbeit ersetzen, benötigen aber weiterhin mindestens eine Bedienkraft bei positiver Absatzerwartung und finanziell tragfähiger Beschäftigung. Der Personalbedarf darf daher nicht allein durch hohe Anlagenkapazität auf null sinken, während die Produktionsregel zugleich einen aktiven Grundbetrieb verlangt. V9 korrigiert diesen Widerspruch. Absatzmangel oder fehlende Finanzierbarkeit können weiterhin zu null Stellen führen. Ein dadurch erzwungener Stillstand ist von einem Implementierungsfehler zu unterscheiden.

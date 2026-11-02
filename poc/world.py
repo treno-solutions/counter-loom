@@ -17,8 +17,8 @@ PHASES = ['Produktion & Löhne', 'Steuern & Transfers', 'Konsum & Aufträge', 'I
 RULES = {
  'households': 'Kaufplan: mindestens 1.000 € monatlicher Grundbedarf als illustrative Annahme, darüber 95 % des Nettoeinkommens (nach Konsumeingriff 65 %). Der Grundbedarfsplan kann aus vorhandenem Kontoguthaben finanziert werden. Käufe sind durch Geld, Lager und ganze Gütereinheiten begrenzt; unerfüllte Kaufpläne sind keine gebuchten Ausgaben oder Schulden.',
  'firms': 'Betriebe planen Absatz und Lagerpuffer, begrenzen Produktion durch Personal, Geld und Energie und passen Stellen erst nach zwei Monaten an. Lager wird zu Herstellungskosten bewertet. Positive Gewinne werden versteuert und bei ausreichendem Betriebspuffer teilweise an die sechs Haushaltseigentümer ausgeschüttet. Feste Preise und Löhne; illustrative Regeln.',
- 'government': 'Zwei öffentliche Stellen zu je 2.400 € brutto, bis zu 1.000 € Transfer je unbeschäftigtem Haushalt und bis zu 1.200 € Beschaffung je Betrieb. Tatsächliche Kassenfehlbeträge können durch einen Staatskredit der Bank bis 50.000 € finanziert werden. Neue Kreditbeträge erhalten den Leitzins plus einen Modellaufschlag; der vereinbarte Zins bleibt je Betrag fest und fällt ab Folgemonat an. Überschüsse tilgen Schuld; nach Ausschöpfen der Kreditgrenze bleibt die endliche Kassenreserve. Kredit ist Finanzierung, keine Steuereinnahme.',
- 'bank': 'Eine Bank führt die Guthaben aller Nichtbanken. Eigenkapital und Kundeneinlagen sind getrennt. Ein begrenzter Maschinenkredit von 1.200 € schafft eine Einlage und eine Kreditforderung; Tilgung baut beide ab. Zinsen sind Bankertrag. Ein begrenzter Staatskredit finanziert Kassenfehlbeträge innerhalb seines Rahmens. Tatsächlich vereinnahmte Firmen- und Staatszinsen werden am Monatsende an Haushalte ausgeschüttet.',
+ 'government': 'Zwei öffentliche Stellen zu je 2.400 € brutto, bis zu 1.000 € Transfer je unbeschäftigtem Haushalt und bis zu 1.200 € Beschaffung je Betrieb. Vorhandene Kasse finanziert Ausgaben. Beim Abschluss schützt ein begrenzter Staatskredit bis 50.000 € bei Bedarf eine Reserve für einen Monat geplanter Ausgaben einschließlich neuer Monatszinsen. Neue Kreditbeträge erhalten den Leitzins plus einen Modellaufschlag; der vereinbarte Zins bleibt je Betrag fest und fällt ab Folgemonat an. Guthaben oberhalb des Reserveziels kann Schuld tilgen. Die Reserve ist nicht gesperrt; bei Kreditgrenze oder fehlendem Bankkapital darf die Kasse auch unter das Ziel fallen. Kredit ist Finanzierung, keine Steuereinnahme.',
+ 'bank': 'Eine Bank führt die Guthaben aller Nichtbanken. Eigenkapital und Kundeneinlagen sind getrennt. Ein begrenzter Maschinenkredit für acht Werkstatteinheiten schafft eine Einlage und eine Kreditforderung; Tilgung baut beide ab. Zinsen sind Bankertrag. Ein begrenzter Staatskredit sichert bei Bedarf eine Reserve für einen Monat geplanter Staatsausgaben; darüber wird vorhandene Kasse genutzt. Tatsächlich vereinnahmte Firmen- und Staatszinsen werden am Monatsende an Haushalte ausgeschüttet.',
  'external': 'Ein vereinfachtes Auslandskonto erhält Energiezahlungen und kauft inländische Waren: monatlich bis zu sechs Alltags- und zwei Werkstatteinheiten. Nur Guthaben vom Monatsbeginn finanziert Bestellungen. Bezahlung und Lagerabgang erfolgen gemeinsam; fehlendes Geld oder Ware begrenzt den Rückfluss. Keine Wechselkurse oder vollständige Auslandswirtschaft.'
 }
 
@@ -27,7 +27,12 @@ class SystemAgent(Agent):
         self.model.world.act(self.properties['node_id']['value'])
 
 class World:
-    def __init__(self, essential_budget_cents=100000, export_orders_units=None, government_credit_limit_cents=5000000, government_annual_rate_bps=300, initial_policy_rate_bps=200, energy_pass_through_bps=5000):
+    def __init__(self, essential_budget_cents=100000, export_orders_units=None, government_credit_limit_cents=5000000, government_annual_rate_bps=300, initial_policy_rate_bps=200, energy_pass_through_bps=5000, government_reserve_months=1, government_initial_cash_cents=8000000, horizon_months=None):
+        if type(government_initial_cash_cents) is not int or government_initial_cash_cents<0:
+            raise ValueError('Initial state cash must be nonnegative whole cents.')
+        if horizon_months is not None and (type(horizon_months) is not int or horizon_months<1):
+            raise ValueError('Optional observation horizon must be a positive whole month.')
+        self.horizon_months=horizon_months
         self.id = uuid4().hex[:16]
         self.revision = 0
         self.month = 0
@@ -45,7 +50,7 @@ class World:
         self.propensity = 95
         self._node('alltag', 'Alltag & Versorgung', 'firms', 2400000, employees=['h1','h2'], price=10000, productivity=36, inventory=0, capital=0, loan=1200000, weak_months=0, reserved_units=0, machine_loan_cents=0)
         self._node('werkstatt', 'Werkstatt & Technik', 'firms', 2400000, employees=['h3','h4'], price=15000, productivity=20, inventory=0, capital=0, loan=1200000, weak_months=0, reserved_units=0, machine_loan_cents=0)
-        self._node('staat', 'Staat', 'government', 8000000, employees=['h5','h6'], government_loan_cents=0)
+        self._node('staat', 'Staat', 'government', government_initial_cash_cents, employees=['h5','h6'], government_loan_cents=0)
         self._node('bank', 'Finanzsektor', 'bank', 1000000, loan_assets=2400000)
         self._node('ausland', 'Ausland', 'external', 0)
         for i in range(1,7):
@@ -59,7 +64,7 @@ class World:
         self._reset_metrics()
         self.monetary = MonetaryPolicy(self,initial_policy_rate_bps)
         self.banking = Banking(self)
-        self.treasury = Treasury(self,government_credit_limit_cents,government_annual_rate_bps)
+        self.treasury = Treasury(self,government_credit_limit_cents,government_annual_rate_bps,government_reserve_months)
         self.pricing = Pricing(self,energy_pass_through_bps)
         self.foreign = ForeignTrade(export_orders_units)
         self.foreign.begin_month(self)
@@ -252,8 +257,8 @@ class World:
         return [self.nodes[f'h{i}'] for i in range(1,7)]
 
     def step(self):
-        if self.month>=24 and self.phase==4:
-            raise ValueError('Lernlauf mit 24 Monaten abgeschlossen. Bitte neu starten.')
+        if self.horizon_months is not None and self.month>=self.horizon_months and self.phase==4:
+            raise ValueError('Gewählter Beobachtungszeitraum abgeschlossen. Bitte neu starten.')
         self.phase=(self.phase+1)%5
         if self.phase==0:
             self.month+=1
@@ -265,9 +270,10 @@ class World:
             for event in self.pending:
                 self.active.append(dict(event=event, month=self.month))
                 if event=='energy': self.energy_multiplier=2
+                if event=='energy_recovery': self.energy_multiplier=1
                 if event=='demand': self.propensity=65
                 if event=='demand_recovery': self.propensity=95
-                self.notice('Energieimporte kosten ab jetzt das Doppelte.' if event=='energy' else 'Haushalte planen ab jetzt 95 % ihres Nettoeinkommens für Konsum ein.' if event=='demand_recovery' else 'Haushalte planen ab jetzt 65 % statt 95 % ihres Nettoeinkommens für Konsum ein.')
+                self.notice('Energieimporte kosten ab jetzt wieder den Ausgangspreis.' if event=='energy_recovery' else 'Energieimporte kosten ab jetzt das Doppelte.' if event=='energy' else 'Haushalte planen ab jetzt 95 % ihres Nettoeinkommens für Konsum ein.' if event=='demand_recovery' else 'Haushalte planen ab jetzt 65 % statt 95 % ihres Nettoeinkommens für Konsum ein.')
             self.pending=[]
             self.pricing.begin_month(self)
             self.foreign.begin_month(self)
@@ -311,10 +317,15 @@ class World:
         return self.snapshot()
 
     def queue(self,event):
-        if self.month>=24 or event=='demand_recovery' and self.propensity!=65:
-            raise ValueError('Der Eingriff ist jetzt nicht verfügbar.')
-        if event not in ('energy','demand','demand_recovery') or event in self.pending or any(x['event']==event for x in self.active):
-            raise ValueError('Dieses Ereignis ist ungültig oder bereits ausgelöst.')
+        if self.horizon_months is not None and self.month>=self.horizon_months:
+            raise ValueError('Der Eingriff ist im letzten Beobachtungsmonat nicht verfügbar.')
+        targets={'energy':('energy_multiplier',2),'energy_recovery':('energy_multiplier',1),
+                 'demand':('propensity',65),'demand_recovery':('propensity',95)}
+        if event not in targets or event in self.pending:
+            raise ValueError('Dieses Ereignis ist ungültig oder bereits vorgemerkt.')
+        attribute,target=targets[event]
+        if getattr(self,attribute)==target or any(targets[e][0]==attribute for e in self.pending):
+            raise ValueError('Dieser Zielwert gilt bereits oder für diesen Bereich ist schon ein Eingriff vorgemerkt.')
         self.pending.append(event)
         self.revision+=1
         return self.snapshot()
@@ -341,7 +352,7 @@ class World:
     def snapshot(self,export=False):
         self.check()
         tx=[t for t in self.journal if t['month']==self.month]
-        result=dict(world_id=self.id, revision=self.revision, month=self.month, phase=self.phase, phase_label=PHASES[self.phase] if self.phase>=0 else 'Bereit zum Start', nodes=deepcopy(list(self.nodes.values())), transactions=deepcopy(tx), notices=deepcopy(self.notices[-35:]), history=deepcopy(self.history[-36:]), pending=list(self.pending), active=deepcopy(self.active), rules=RULES, audit=dict(total_money_cents=self.banking.initial_deposits, current_money_cents=self.banking.balance(self)['customer_deposits_cents'], transaction_count=len(self.journal), open_obligations_cents=sum(x['amount_cents'] for x in self.obligations)+self.treasury.overdue_interest_cents+self.banking.loan.overdue_interest_cents+self.banking.loan.overdue_principal_cents, loan_principal_cents=self.nodes['bank']['loan_assets'], llm_calls=0), month_open=dict(self.month_open), initial_balances=dict(self.initial), parameters=dict(energy_multiplier=self.energy_multiplier,consumption_percent=self.propensity,essential_budget_cents=self.essential_budget_cents), classification='illustrative_circular_flow_v8',horizon_months=24,completed=self.month==24 and self.phase==4,banking=self.banking.snapshot(self),foreign_trade=self.foreign.snapshot(self),public_finance=self.treasury.snapshot(self),monetary_policy=self.monetary.snapshot(self),pricing=self.pricing.snapshot(self))
+        result=dict(world_id=self.id, revision=self.revision, month=self.month, phase=self.phase, phase_label=PHASES[self.phase] if self.phase>=0 else 'Bereit zum Start', nodes=deepcopy(list(self.nodes.values())), transactions=deepcopy(tx), notices=deepcopy(self.notices[-35:]), history=deepcopy(self.history[-36:]), pending=list(self.pending), active=deepcopy(self.active), rules=RULES, audit=dict(total_money_cents=self.banking.initial_deposits, current_money_cents=self.banking.balance(self)['customer_deposits_cents'], transaction_count=len(self.journal), open_obligations_cents=sum(x['amount_cents'] for x in self.obligations)+self.treasury.overdue_interest_cents+self.banking.loan.overdue_interest_cents+self.banking.loan.overdue_principal_cents, loan_principal_cents=self.nodes['bank']['loan_assets'], llm_calls=0), month_open=dict(self.month_open), initial_balances=dict(self.initial), parameters=dict(energy_multiplier=self.energy_multiplier,consumption_percent=self.propensity,essential_budget_cents=self.essential_budget_cents), classification='illustrative_circular_flow_v9',horizon_months=self.horizon_months,completed=self.horizon_months is not None and self.month>=self.horizon_months and self.phase==4,banking=self.banking.snapshot(self),foreign_trade=self.foreign.snapshot(self),public_finance=self.treasury.snapshot(self),monetary_policy=self.monetary.snapshot(self),pricing=self.pricing.snapshot(self))
         if export:
             result.update(full_journal=deepcopy(self.journal),initial_balances=dict(self.initial),open_obligations=deepcopy(self.obligations),all_history=deepcopy(self.history),all_notices=deepcopy(self.notices),model_document='poc/WORLD_MODEL.md')
         return result

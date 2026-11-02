@@ -1,33 +1,55 @@
-# Staatsfinanzierung · Grundlage v6, erweitert v7
+# Staatsfinanzierung und Liquiditätspolitik · Modell v9
 
-Stand: 2. November 2026. Eigene illustrative Annahmen; keine Kalibrierung, Rechtsbeschreibung oder Prognose realer Staatsfinanzierung. Ergänzt [Unternehmen](COMPANY_MODEL.md), [Bankbilanz](BANKING_MODEL.md) und [Außenhandel](FOREIGN_MODEL.md). Dieselben elf Akteure, feste Preise/Löhne und 24 Monate.
+Stand: 3. November 2026. Alle Beträge, Ziele und Regeln sind illustrative Annahmen. Keine Kalibrierung oder Beschreibung realer Staatsschuldenpolitik. Ergänzt [Unternehmen](COMPANY_MODEL.md), [Bankbilanz](BANKING_MODEL.md), [Preise](PRICES_MODEL.md) und [Leitzinsregeln](RATES_MODEL.md). Elf Akteure; der normale Lauf hat keine automatische Monatsgrenze.
 
-Seit v7 gelten die [Leitzins- und Vertragsregeln](RATES_MODEL.md): Jede Gutschrift bildet einen eigenen festen Staatskreditbetrag, anfangs zu 3 %. Neue Beträge erhalten den dann geltenden Leitzins plus 1 Prozentpunkt; ältere Beträge behalten ihren vereinbarten Zins.
+## Kasse, Haushalt und Schuld
 
-## Instrument und Gegenpartei
+Die Anfangskasse beträgt weiter 80.000 €. Sie wird nicht mehr am Monatsende automatisch wiederhergestellt. Der zahlungsbezogene Haushaltssaldo ist:
 
-Ein verzinster **Staatskredit bei der vorhandenen Geschäftsbank**. Keine Zentralbankfinanzierung und kein Anleihemarkt. Anfangsschuld 0 €, Kreditobergrenze 50.000 €, anfänglicher Jahreszins 3 % für neue Kreditbeträge. Diese Werte sind Parameter des Lernfalls, keine empirisch bestimmten Kredit- oder Schuldengrenzen. Anfangskasse 80.000 € bleibt die bisherige Startannahme.
+`erhaltene Steuern − bezahlte öffentliche Löhne − Transfers − Beschaffung − bezahlte Staatszinsen`.
 
-Kreditaufnahme schafft gleichzeitig Staatsguthaben, eine gleich hohe Staatsschuld und eine Kreditforderung der Bank. Bankeigenkapital wird nicht ausgezahlt. Die Bankbilanz enthält getrennt bestehende Unternehmenskredite, Maschinenkredit und Staatskredit. Die vorhandene generelle Einlagenbrücke zählt alle Kreditgutschriften und Tilgungen; sie darf nicht nur den Maschinenfall zählen.
+Kreditaufnahme ist Finanzierung, keine Steuereinnahme. Tilgung ist Finanzierung, kein laufender Staatsverbrauch. Tatsächlich unbezahlte Lohnansprüche sind eigene Verpflichtungen und werden nicht als bezahlte Ausgaben ausgegeben. Die reine Kasse sagt weder etwas über den Haushaltssaldo noch über die Staatsschuld aus.
 
-## Finanzierungsregel
+## Begrenztes Liquiditätsziel
 
-Der tatsächliche monatliche Kassenfehlbetrag ist `bezahlte öffentliche Löhne + Transfers + Beschaffung + bezahlte Staatszinsen − tatsächlich erhaltene Steuern`. Kreditgutschriften sind Finanzierung, keine Steuereinnahmen. Tilgung ist Finanzierung, kein laufender Staatsverbrauch. Unbezahlte Ansprüche werden getrennt gezeigt und nicht als bereits bezahlte Ausgaben behandelt.
+Am Monatsbeginn werden geplante Primärausgaben festgehalten: öffentliche Arbeitsverhältnisse × 2.400 € + unbeschäftigte Haushalte × 1.000 € Transfers + zweimal 1.200 € Beschaffungsbudget. Dazu kommen die neuen Monatszinsen auf die festen Anfangsrestschulden. Standardziel ist eine Ausgabenperiode:
 
-Die Politik dieses Lernfalls finanziert positive Fehlbeträge vorrangig mit Kredit und bewahrt damit die vorhandene Kasse als Reserve, solange die Kreditgrenze reicht. Kredit wird also auch vor vollständigem Verbrauch des Anfangspuffers aufgenommen. Laufende Ausgaben können bei untermonatlicher Geldlücke vorfinanziert werden; am Abschluss nach den Unternehmenssteuern wird nur noch der verbleibende Finanzierungsbedarf aufgenommen. Bereits gebuchte Zwischenkredite werden abgezogen. Zusätzliche Steuereingänge können Zwischenfinanzierung zurückführen. Dadurch wird derselbe Fehlbetrag nicht doppelt finanziert.
+`Reserveziel = 1 × (geplante Primärausgaben + neue Monatszinsen)`.
 
-Ein tatsächlicher Kassenüberschuss dient zur Tilgung vorhandener Schuld, begrenzt durch verfügbares Geld; die ältesten Kreditbeträge werden zuerst reduziert. Ist die Schuld null, bleibt der Überschuss auf dem Staatskonto. Kredite dürfen nicht über die feste Obergrenze wachsen. Bei ausgeschöpfter Grenze wird die Kassenreserve verwendet; fehlen beide Finanzierungsmöglichkeiten, bleiben Zahlungen begrenzt und fällige Löhne/Zinsen als Rückstände sichtbar. Fehlende Ware löst keinen Beschaffungskredit aus. Es gibt keine automatische allgemeine Rückstandsabwicklung.
+Anfangs entspricht das 7.200 €. Unbezahlte alte Ansprüche sind getrennt sichtbar; sie sind nicht nochmals als neue Monatszinsen im Ziel enthalten. Eine veränderte Beschäftigung kann den Transferplan und damit das nächste Monatsziel ändern. Planung ist keine Zusage, dass jede vorgesehene Beschaffung auch geliefert oder bezahlt wird.
 
-## Zinsen und Fälligkeit
+Beim Abschluss nach den Unternehmenssteuern und einer möglichen Zinsnachzahlung:
 
-Am Monatsbeginn werden bestehende Staatsschuld und Zinsrückstand eingefroren. Monatliche neue Zinsen werden aus den Anfangsrestschulden der einzelnen festen Kreditbeträge und ihren jeweiligen Zinssätzen berechnet. Erst die Gesamtsumme wird auf ganze Cents abgerundet; die [V7-Regeln](RATES_MODEL.md) beschreiben die Centzuordnung. Bei unverändert 3 % entspricht dies der bisherigen Rechnung `Anfangsschuld × 300 Basispunkte / 120.000`. Neue Kredite dieses Monats tragen erst im Folgemonat Zinsen. Neue Zinsen werden höchstens einmal pro Monat in der Produktions-/Lohnphase vor den öffentlichen Löhnen gebucht und soweit finanzierbar bezahlt. Spätere Steuereinnahmen können beim Abschluss zur Nachzahlung bestehender Zinsrückstände verwendet werden, ohne erneut Zinsen zu berechnen. Ein Zinsrückstand bleibt als eigener Anspruch bestehen und wird nicht bei jedem Aufruf neu angelegt. Auf Rückstände selbst fallen keine gesonderten Straf-/Zinseszinsen an; ein tatsächlich neu finanzierter Zinsbetrag erhöht hingegen den Kredit und damit die Zinsbasis des nächsten Monats.
+1. Liegt die tatsächliche Kasse unter dem Ziel, wird nur die fehlende Ziel-Liquidität angefragt, begrenzt durch Kreditrahmen und positives Bankkapital.
+2. Liegt die Kasse über dem Ziel und besteht Schuld, darf nur der darüber verfügbare Betrag tilgen. Älteste Kreditbeträge werden zuerst getilgt.
+3. Sonst bleibt das verbleibende Geld auf dem Konto. Ein Überschuss unterhalb des Ziels führt nicht automatisch zur Tilgung; vorhandenes Guthaben oberhalb des Ziels kann umgekehrt auch bei einem Monatsdefizit bestehende Schuld zurückführen.
 
-Zinsen sind Bankertrag, keine Tilgung. Sie senken Staatsguthaben und erhöhen Bankkapital; die Bank schüttet wie bisher tatsächlich erhaltene Monatszinsen an die Haushaltseigentümer aus. Staatliche Zinszahlungen werden dabei mitgezählt. Tilgung senkt Staatsguthaben, Staatsschuld und Bankforderung um denselben Betrag, ohne Bankertrag. Keine feste Laufzeit, keine erzwungene Gesamttilgung am Ende des Lernlaufs. Restschuld und Zinsrückstände bleiben beim Ende nach 24 Monaten im Export sichtbar.
+Die Reserve ist kein gesperrtes Konto. Laufende Ausgaben dürfen sie benutzen. Fehlende Zahlungsmittel für eine tatsächlich anstehende Zahlung können untermonatlich vorfinanziert werden; nicht verfügbare Ware löst keinen Beschaffungskredit aus. Diese Kredite sind beim Abschluss bereits in der Kasse enthalten. Der Abschluss finanziert daher nicht erneut denselben ursprünglichen Fehlbetrag.
 
-## Sichtbarkeit und Abgleich
+Die eigene Annahme von einem Ausgabenmonat ist kein empirisch bestimmter optimaler Puffer. Für kontrollierte Offline-Vergleiche sind null bis sechs ganze Ausgabenmonate und eine andere Anfangskasse möglich. Die normale Oberfläche startet mit einem Monat und 80.000 €.
 
-Unter **Staat → Details öffnen**: tatsächliche Steuern, Primärausgaben, Zinsen, Kassenfehlbetrag/Überschuss, Kreditaufnahme und Tilgung; Staatskasse und Schuld als getrennte Bestände. Pfeile zeigen Kreditgutschrift Bank→Staat sowie Zins-/Tilgungsrichtung Staat→Bank. Bei Kreditgutschrift werden Staatsguthaben und Bankforderung/Staatsschuld gemeinsam sichtbar. Verlauf zeigt Schuld und gezahlte Zinsen nach abgeschlossenen Monaten. Die Bankansicht führt den Staatskredit als eigenen Vertrag/Bestand. Es gibt keinen zusätzlichen Banner außerhalb der Systemhierarchie.
+## Kreditgrenze und echte Zahlungsgrenzen
 
-Kontrollen: jede Konten-/Bankgegenbuchung; Staatsschuld=Bankforderung; alte Schuld+Kredite−Tilgung=neue Schuld; alte Kasse+Steuern+Kredite−Primärausgaben−Zinsen−Tilgung=neue Kasse; neue Einlagen aus allen Krediten; Zinsbasis aus Monatsanfang; keine Doppelberechnung, Überfinanzierung oder unbezahlte Ausschüttung; Finanzierungsgrenze und sichtbare Rückstände; Export vollständiger Ereignisse und Monatsgeschichte. Vergleichsläufe ohne Kredit, mit Standardkredit, Energie-/Nachfrageschocks, Erholung und Maschinenkredit sowie isolierte Zins-, Zwischenkredit-, Überschuss- und Grenzfälle.
+Eine Geschäftsbank kann insgesamt höchstens 50.000 € ausstehenden Staatskredit halten. Kredit erhöht Staatsguthaben, Staatsschuld und Bankforderung gleich hoch; Bankkapital wird nicht ausgezahlt. Die Bankbilanz und die Einlagenbrücke erfassen Maschinen- und Staatskredite gemeinsam.
 
-Stabilität, fiskalische Tragfähigkeit, Inflation, Marktzinsen, Bonitätsaufschläge und reale Staatsschuldenpolitik sind hier nicht validiert. Ein korrekter Kreditpfad garantiert kein dauerhaftes wirtschaftliches Gleichgewicht.
+Ein verfehltes Reserveziel ist eine Ziellücke, nicht automatisch eine unbezahlte Rechnung. Erst fehlende Zahlungsmittel bei konkreten Zahlungen erzeugen tatsächliche offene Lohnansprüche oder Zinsrückstände. Bei ausgeschöpftem Kreditrahmen kann vorhandenes Guthaben weitere Ausgaben bezahlen. Ein bestehendes Arbeitsverhältnis bedeutet nicht zwingend vollständige Lohnzahlung. Die Oberfläche zeigt öffentliche Lohnansprüche und Zinsrückstände ausdrücklich getrennt von der Reserve-Ziellücke.
+
+Für offene Lohnansprüche besteht weiterhin keine allgemeine automatische Nachzahlungsabwicklung. Spätere Steuereinnahmen lösen deshalb nicht stillschweigend alle alten Ansprüche auf. Auch Insolvenzverfahren, Ausgabenkürzungen, Steueranpassungen, Schuldenrestrukturierung und politische Entscheidungen werden nicht automatisch ergänzt. Lange Läufe können gerade diese Modellgrenzen offenlegen.
+
+## Zinsen und Tilgung
+
+Neue Staatskreditbeträge erhalten bei Gutschrift den geltenden Modell-Leitzins plus einen Prozentpunkt und behalten diesen Festzins. Neue Zinsen fallen erst im Folgemonat an. Anfangsrestschulden und Zinsrückstände werden am Monatsbeginn festgehalten. Zinsen werden aus jedem Vertragsbetrag berechnet, die Summe wird einmal auf ganze Cents abgerundet und die Centreste werden nachvollziehbar zugeordnet; [Vertragsregeln](RATES_MODEL.md).
+
+Zinsen werden nur einmal monatlich neu belastet. Spätere Steuern können bestehende Zinsrückstände beim Abschluss bezahlen. Es gibt keinen gesonderten Strafzins auf Rückstände; kreditfinanzierte Zinszahlungen erhöhen jedoch die Restschuld. Die Bank schüttet tatsächlich erhaltene Zinsen wie bisher an Haushalte aus. Tilgung senkt Kundenguthaben, Staatsschuld und Bankforderung ohne Bankertrag. Die Schuld wird durch das Weiterlaufen nicht erlassen.
+
+## Darstellung und Export
+
+**Staat → Details öffnen** zeigt aktuelle Kasse, Reserveziel, Schuld und Kasse abzüglich Bankschuld. Letzteres ist keine vollständige Staatsvermögensbilanz. Vier Diagramme stellen Kasse mit Ziel, Haushaltssaldo, Schuld und monatliche Zinszahlungen nebeneinander dar. Jedes hat eine eigene Euro-Skala. Eine gemeinsame Monatsauswahl zeigt die Abschlussentscheidung, Kasse vor Entscheidung, angefragten Zielbedarf, Tilgungskapazität, tatsächliche Finanzierung und verbleibende Ziellücke.
+
+Die letzten 36 Abschlüsse bilden das Darstellungsfenster. Der vollständige Export enthält alle Monatsentscheidungen, Vertragsbeträge und Buchungen. Untermonatliche Zustände sind als Zwischenstände erkennbar. Kredit-, Zins- und Tilgungspfeile zeigen echte Buchungen; historische Monatsentscheidungen werden nicht nachträglich überschrieben.
+
+## Prüfung und Grenzen
+
+Konten- und Schuldbrücken: `Endkasse = Anfangskasse + Haushaltssaldo + Kredite − Tilgung`; `Endschuld = Anfangsschuld + Kredite − Tilgung`. Zusätzlich werden Zielformel, Abschlussentscheidung, Zwischenkredite, Zinsbasis, FIFO-Tilgung, Bankgegenforderung, öffentliche Rückstände und vollständiger Export geprüft. [Unabhängiger V9-Audit](../qa/fiscal-policy-v9-plausibility.md). Ältere V6–V8-Audits dokumentieren ihre jeweiligen Fassungen unverändert.
+
+Die frühere Regel bewahrte die gesamte Anfangskasse durch vorrangige Defizitfinanzierung. V9 ersetzt diese Finanzierungsentscheidung; veränderte Ergebnisse sind daher nicht unmittelbar Belege eines anderen externen Schocks. Historische Ergebnisse behalten ihre Versionszuordnung. Korrekte Buchhaltung ist keine empirische Validierung oder Garantie langfristiger Stabilität.

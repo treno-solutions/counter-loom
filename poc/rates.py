@@ -26,7 +26,7 @@ class MonetaryPolicy:
 
     def queue(self,world,rate):
         self.validate(rate)
-        if world.month>=24:raise ValueError('Im letzten Monat kann keine weitere Leitzinsänderung vorgemerkt werden.')
+        if world.horizon_months is not None and world.month>=world.horizon_months:raise ValueError('Im letzten Monat kann keine weitere Leitzinsänderung vorgemerkt werden.')
         if rate==self.rate_bps:
             if self.pending_rate_bps is None:raise ValueError('Dieser Leitzins gilt bereits.')
             self.pending_rate_bps=None

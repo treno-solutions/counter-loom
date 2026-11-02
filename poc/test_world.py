@@ -132,7 +132,7 @@ class StandaloneSystemTests(unittest.TestCase):
 
 class LongRunTests(unittest.TestCase):
     def test_24_month_boundary_and_stress_conservation(self):
-        w=World();w.queue('demand');w.queue('energy')
+        w=World(horizon_months=24);w.queue('demand');w.queue('energy')
         for _ in range(120):w.step()
         self.assertEqual((w.month,w.phase),(24,4))
         self.assertEqual(sum(n['cash_cents'] for n in w.nodes.values()),15600000+w.banking.created-w.banking.repaid)
@@ -183,7 +183,7 @@ class HouseholdReserveRegressionTests(unittest.TestCase):
     def test_reserve_regression_uses_explicit_24_month_horizon(self):
         # Historical 97-month evidence is retained in qa; V4 intentionally bounds runs.
         for essential in (0,100000):
-            w=World(essential_budget_cents=essential)
+            w=World(essential_budget_cents=essential,horizon_months=24)
             for _ in range(120):w.step()
             self.assertTrue(w.snapshot()['completed'])
             self.assertEqual(sum(n['cash_cents'] for n in w.nodes.values()),15600000+w.banking.created-w.banking.repaid)
