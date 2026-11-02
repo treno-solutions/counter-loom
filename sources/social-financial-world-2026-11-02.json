@@ -1,0 +1,128 @@
+[
+  {
+    "id": "P01",
+    "title": "Personality Differences and Investment Decision-Making",
+    "type": "empirical observational",
+    "url": "https://www.nber.org/papers/w31041",
+    "checked_on": "2026-11-02",
+    "review_scope": "Author abstract and publication metadata",
+    "calibration_parameters_extracted": false
+  },
+  {
+    "id": "P02",
+    "title": "Depression Babies: Do Macroeconomic Experiences Affect Risk-Taking?",
+    "type": "empirical observational",
+    "url": "https://www.nber.org/papers/w14813",
+    "checked_on": "2026-11-02",
+    "review_scope": "Author abstract and publication metadata",
+    "calibration_parameters_extracted": false
+  },
+  {
+    "id": "P03",
+    "title": "Social Interaction and Stock-Market Participation",
+    "type": "empirical observational",
+    "url": "https://www.nber.org/papers/w8358",
+    "checked_on": "2026-11-02",
+    "review_scope": "Author abstract and publication metadata",
+    "calibration_parameters_extracted": false
+  },
+  {
+    "id": "P04",
+    "title": "Understanding Mechanisms Underlying Peer Effects: Evidence From a Field Experiment on Financial Decisions",
+    "type": "randomized financial field experiment",
+    "url": "https://onlinelibrary.wiley.com/doi/abs/10.3982/ECTA11991",
+    "checked_on": "2026-11-02",
+    "review_scope": "Publisher abstract; no full-text effect-size extraction",
+    "calibration_parameters_extracted": false
+  },
+  {
+    "id": "P05",
+    "title": "The Spread of Behavior in an Online Social Network Experiment",
+    "type": "randomized nonfinancial network experiment",
+    "url": "https://www.science.org/doi/10.1126/science.1185231",
+    "checked_on": "2026-11-02",
+    "review_scope": "Publisher abstract; not full-text financial calibration",
+    "calibration_parameters_extracted": false
+  },
+  {
+    "id": "M01",
+    "title": "Models of Social Influence: Towards the Next Frontiers",
+    "type": "review and theoretical taxonomy",
+    "url": "https://www.jasss.org/20/4/2.html",
+    "checked_on": "2026-11-02",
+    "review_scope": "Abstract and selected full-text sections",
+    "calibration_parameters_extracted": false
+  },
+  {
+    "id": "M02",
+    "title": "Opinion Dynamics and Bounded Confidence: Models, Analysis and Simulation",
+    "type": "formal opinion dynamics",
+    "url": "https://www.jasss.org/5/3/2.html",
+    "checked_on": "2026-11-02",
+    "review_scope": "Publisher abstract; full mathematical PDF not evaluated",
+    "calibration_parameters_extracted": false
+  },
+  {
+    "id": "G01",
+    "title": "Generative Agents: Interactive Simulacra of Human Behavior",
+    "type": "generative agent architecture",
+    "url": "https://arxiv.org/abs/2304.03442v2",
+    "checked_on": "2026-11-02",
+    "review_scope": "Author abstract",
+    "calibration_parameters_extracted": false
+  },
+  {
+    "id": "G02",
+    "title": "OASIS: Open Agent Social Interaction Simulations with One Million Agents",
+    "type": "social simulation research",
+    "url": "https://arxiv.org/abs/2411.11581v5",
+    "checked_on": "2026-11-02",
+    "review_scope": "Author abstract",
+    "calibration_parameters_extracted": false
+  },
+  {
+    "id": "D01",
+    "title": "Household Finance and Consumption Survey",
+    "type": "household data source",
+    "url": "https://www.ecb.europa.eu/stats/ecb_surveys/hfcs/html/index.en.html",
+    "checked_on": "2026-11-02",
+    "review_scope": "Survey scope and data-access documentation; no microdata obtained",
+    "calibration_parameters_extracted": false
+  },
+  {
+    "id": "D02",
+    "title": "OECD/INFE Toolkit 2026",
+    "type": "measurement questionnaire",
+    "url": "https://www.oecd.org/en/publications/oecd-infe-toolkit-for-measuring-financial-literacy-inclusion-and-well-being-2026_92f2d439-en.html",
+    "checked_on": "2026-11-02",
+    "review_scope": "Publication abstract; not a population dataset",
+    "calibration_parameters_extracted": false
+  },
+  {
+    "id": "T01",
+    "title": "TinyTroupe",
+    "type": "open-source framework",
+    "url": "https://github.com/microsoft/TinyTroupe",
+    "checked_on": "2026-11-02",
+    "review_scope": "README sections on personas, generation, interaction, validation; MIT license file",
+    "calibration_parameters_extracted": false
+  },
+  {
+    "id": "T02",
+    "title": "Concordia",
+    "type": "open-source framework",
+    "url": "https://github.com/google-deepmind/concordia",
+    "checked_on": "2026-11-02",
+    "review_scope": "README architecture and Apache-2.0 license file",
+    "calibration_parameters_extracted": false
+  },
+  {
+    "id": "T03",
+    "title": "AgentSociety",
+    "type": "framework with license exception",
+    "url": "https://github.com/tsinghua-fib-lab/AgentSociety",
+    "checked_on": "2026-11-02",
+    "review_scope": "README version distinction; Apache-2.0 license; commercial folder excluded by README",
+    "calibration_parameters_extracted": false
+  }
+]

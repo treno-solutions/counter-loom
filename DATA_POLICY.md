@@ -7,7 +7,7 @@ Counterloom unterscheidet den öffentlichen Forschungsbestand vom lokalen Origin
 - Eigene Seeds, Simulationsprompts, Vorlagen und Recherchevermerke.
 - Kuratierte Evidenz und ausgewählte strukturierte Forschungsdaten mit Quellenangaben.
 - Verarbeitungsskripte, Prüfberichte und Quellenregister.
-- Ablagevorlagen für Ergebnisse; bisher noch keine importierten Ergebnisexporte.
+- Ablagevorlagen und verfügbare Artefakte des ersten Methodenversuchs: eine gerenderte Berichtsaufnahme und ein als Zusammenfassung gekennzeichneter Prüfvermerk. Vollständige Serverexporte liegen nicht vor.
 
 Die enthaltenen Quellenangaben sind bei Weiterverwendung beizubehalten. Rechte an externen Inhalten verbleiben bei den jeweiligen Rechteinhabern; eine pauschale Lizenz für alle Forschungsdaten wird hier nicht erteilt.
 

@@ -1,0 +1,62 @@
+{
+  "information_class": "Eigene Berechnung",
+  "source_ids": [
+    "PF-S01",
+    "PF-S02"
+  ],
+  "method": "Integer satoshi right shift by floor(height / 210000); no calendar mapping.",
+  "protocol_examples": [
+    {
+      "height": 840000,
+      "halving_interval": 4,
+      "subsidy_sats_per_block": 312500000,
+      "subsidy_BTC_per_block": 3.125
+    },
+    {
+      "height": 1050000,
+      "halving_interval": 5,
+      "subsidy_sats_per_block": 156250000,
+      "subsidy_BTC_per_block": 1.5625
+    },
+    {
+      "height": 1260000,
+      "halving_interval": 6,
+      "subsidy_sats_per_block": 78125000,
+      "subsidy_BTC_per_block": 0.78125
+    },
+    {
+      "height": 1470000,
+      "halving_interval": 7,
+      "subsidy_sats_per_block": 39062500,
+      "subsidy_BTC_per_block": 0.390625
+    },
+    {
+      "height": 1680000,
+      "halving_interval": 8,
+      "subsidy_sats_per_block": 19531250,
+      "subsidy_BTC_per_block": 0.1953125
+    }
+  ],
+  "scenario_example": {
+    "information_class": "Szenarioannahme",
+    "description": "Same hypothetical BTC price and fees across adjacent subsidy intervals; no observed baseline.",
+    "BTCUSD": 100000,
+    "fees_BTC_per_block": 0.25,
+    "before_height": 840000,
+    "after_height": 1050000,
+    "before_revenue_USD_per_block": 337500.0,
+    "after_revenue_USD_per_block": 181250.0,
+    "before_fee_share": 0.07407407407407407,
+    "after_fee_share": 0.13793103448275862,
+    "limit": "Revenue before costs; fee share rises without fee growth. No security conclusion."
+  },
+  "stake_proxy_example": {
+    "information_class": "Szenarioannahme",
+    "effective_stake_ETH": 100,
+    "ETHUSD_before": 2000,
+    "ETHUSD_after": 1000,
+    "market_value_USD_before": 200000,
+    "market_value_USD_after": 100000,
+    "limit": "Toy units, not network baseline; no attack cost or attack probability."
+  }
+}

@@ -1,56 +1,51 @@
 # Counterloom
 
-**Recherche. Simulation. Nachvollziehbare Erkenntnisse.**
+**Gesellschaftliche Perspektiven verstehen. Simulationen kritisch prüfen.**
 
-Counterloom ist ein Forschungsprojekt von [Treno Solutions](https://github.com/treno-solutions). Wir bereiten recherchierte Grundlagen und Seeds für Simulationen vor, werten deren Ergebnisse aus und stellen die dokumentierten Arbeiten als Quellen für weitere Untersuchungen bereit.
+Counterloom ist ein Forschungsprojekt von [Treno Solutions](https://github.com/treno-solutions). Wir untersuchen bestehende Modelle und offene Agenten-Frameworks darauf, ob sie nachvollziehbare Modellgesellschaften für Finanzbildungs-Workshops ermöglichen.
 
-Im Mittelpunkt steht ein nachvollziehbarer Forschungsprozess: von der ursprünglichen Frage über die verwendeten Daten und Annahmen bis zu den Befunden und ihren Grenzen. Counterloom ist themenübergreifend angelegt. Unterschiedliche Perspektiven, konkurrierende Erklärungen und alternative Szenarien sind Teil der Untersuchung.
+Menschen interpretieren dieselbe Nachricht unterschiedlich: Lebenslage, Erfahrungen, Sicherheitsbedürfnis und Vertrauen prägen ihre Sicht. Unser aktueller Forschungsfokus ist eine kleine soziale Finanzwelt, in der solche Unterschiede und gegenseitiger Einfluss sichtbar werden. Teilnehmer sollen fremde Perspektiven verstehen und die eigenen Reaktionen reflektieren können.
 
-## Unser Vorgehen
+## Was wir untersuchen
 
-1. **Fragestellung entwickeln.** Untersuchungsziel, Ausgangslage, Zeithorizont und Grenzen festlegen.
-2. **Recherche aufbereiten.** Quellen prüfen, konkrete Akteure und Beziehungen erfassen, Datenstände dokumentieren und Widersprüche sichtbar machen.
-3. **Simulation vorbereiten.** Einen Research Seed erstellen, Szenarien und Annahmen benennen und den Simulationsauftrag separat formulieren.
-4. **Ergebnisse auswerten.** Ausgaben mit den Eingaben und externen Quellen abgleichen, unterschiedliche Positionen untersuchen und Unsicherheiten festhalten.
-5. **Erkenntnisse bereitstellen und weiterentwickeln.** Ausgewertete Arbeiten mit Quellen, Versionen und Belegstellen veröffentlichen. Befunde früherer Läufe können neue Fragen und Varianten begründen.
+- Individuelle Personas mit Hintergrund und veränderlichen Überzeugungen.
+- Nachrichten und Informationen, die unterschiedliche Menschen unterschiedlich wahrnehmen.
+- Austausch in plausiblen sozialen Gruppen und über einzelne Brückenkontakte.
+- Nachvollziehbare Veränderungen von Einschätzung, Unsicherheit und Handlungsabsicht.
+- Den tatsächlichen Mehrwert von Agentensimulationen gegenüber einfacheren Methoden.
 
-Jeder Durchlauf erhält eine eigene Dokumentation. So bleibt erkennbar, welche Eingaben tatsächlich verwendet wurden und wie sich die Untersuchung zwischen den Läufen verändert hat.
+Der Schwerpunkt liegt auf Perspektivübernahme und Selbstreflexion. Eine Assetklasse kann als gemeinsamer Gegenstand dienen. Preisprognosen, automatischer Handel und die Optimierung von Renditen sind für das gegenwärtige Lernziel nicht erforderlich.
 
-## Was eine Quelle hier nachvollziehbar macht
+## Ausgangspunkt: aus einem gescheiterten Versuch lernen
 
-Beobachtete Daten, externe Prognosen, eigene Berechnungen, Szenarioannahmen und simulierte Befunde werden ausdrücklich gekennzeichnet. Zu einer veröffentlichten Auswertung gehören die Forschungsfrage, die verwendeten Eingaben, bekannte Ausführungsparameter, Belegstellen und eine Einordnung der Aussagekraft.
+MiroFish war unser erster praktischer Ausgangspunkt. Der ausgewertete Versuch lieferte einen ausführlichen Bericht, aber keine zugänglichen Belege für individuelle Reaktionen oder sozialen Einfluss. Nachträgliche Gespräche waren nicht nutzbar. Für das beabsichtigte Erkenntnisziel bewerten wir diesen Methodenversuch als gescheitert und MiroFish in der getesteten Konfiguration als ungeeignet.
 
-Simulationsergebnisse beschreiben Entwicklungen unter den jeweiligen Bedingungen. Sie werden als simulierte Befunde zitiert. Abweichende Ergebnisse und Minderheitspositionen bleiben erhalten; eine Wiederholung in späteren Läufen gilt nicht als unabhängige Bestätigung.
+Diese Bewertung ist auf den dokumentierten Anwendungsfall begrenzt. Sie ersetzt kein allgemeines Urteil über alle Versionen des Projekts. Befunde, mögliche Ursachen und daraus abgeleitete Anforderungen stehen in der [MiroFish-Auswertung](research/frameworks/mirofish.md).
 
-Beim Bezug auf eine Arbeit aus Counterloom bitte Dateipfad, Version oder Commit sowie gegebenenfalls Laufkennung und Belegstelle angeben. Externe Originalquellen zusätzlich direkt zitieren. Bedingungen zur Weiterverwendung stehen unter [Daten und Quellenrechte](DATA_POLICY.md).
+## Recherche vor Plattformwahl
 
-## Einstieg in die Arbeit
+Wir erfinden keine eigene Simulationsplattform, bevor vorhandene Ansätze geprüft sind. Der nächste Schritt ist ein nachvollziehbarer Marktvergleich auf Basis gemeinsamer Anforderungen. Die bereits recherchierten Frameworks sind Kandidaten; keines davon wurde für diesen Zweck praktisch bestätigt oder ausgewählt.
 
-| Dokument | Zweck |
+| Einstieg | Inhalt |
 |---|---|
-| [Seed- und Recherchestandard](SIMULATION_TEMPLATE.md) | Regeln, Mindestanforderungen, kopierbare Vorlage und Startprüfung |
-| [Simulationsläufe](runs/README.md) | Dokumentierte Läufe, jeweiliger Status und Ergebnisablage |
-| [Vorlage für neue Läufe](runs/_template/README.md) | Eingaben, Konfiguration, Exporte und Auswertung vorbereiten |
-| [Iteration und Diversität](notes/iterative-run-design.md) | Frühere Befunde übernehmen und unterschiedliche Perspektiven erhalten |
-| [Recherchebestand](RESEARCH.md) | Übersicht über die bisher aufbereiteten Untersuchungsmaterialien |
-| [Quellenverzeichnis](sources/README.md) | Herkunft, Datenstände und Nachweise der vorhandenen Recherche |
+| [Forschungsprogramm](research/README.md) | Ziel, Abgrenzung und Reihenfolge der Arbeit |
+| [Anforderungen](research/requirements.md) | Benötigte Fähigkeiten mit Herkunft und prüfbaren Nachweisen |
+| [Prüfprotokoll](research/assessment-protocol.md) | Vergleichbare kleine Tests vor weiteren großen Läufen |
+| [Frameworkübersicht](research/frameworks/README.md) | Eigene Tests, Dokumentationsprüfung und offene Fragen |
+| [Literatur](notes/social-financial-world/literature.md) | Persönlichkeit, Erfahrung, Peer-Effekte und soziale Modelle |
+| [Recherchebestand](RESEARCH.md) | Quellen, frühere Untersuchungen und archivierte Entwürfe |
+| [Laufarchiv](runs/README.md) | Ausgeführte Versuche und noch nicht gestartete Vorbereitungen |
 
-## Aufbau des Repositorys
+## Nachvollziehbarkeit und Grenzen
 
-| Pfad | Inhalt |
-|---|---|
-| `runs/` | Eingaben, Ausführungsnachweise, Originalexporte und Auswertungen je Lauf |
-| `processed/` | Strukturierte Forschungsdaten und abgeleitete Kennzahlen |
-| `sources/` | Quellenregister, Abrufstände und Dateinachweise |
-| `notes/` | Methodische Überlegungen, Recherchebefunde und offene Fragen |
-| `qa/` | Dokumentierte Daten- und Verarbeitungsprüfungen |
-| `tools/` | Skripte zur Aufbereitung und Verarbeitung der Forschungsdaten |
-| `mirofish/` | Für MiroFish vorbereitete Eingaben des bisherigen Untersuchungsbestands |
+Externe Daten, Studienbefunde, Modellannahmen, simulierte Aussagen und eigene Interpretationen bleiben getrennt. Ein Gespräch ist noch kein Einflussnachweis. Eine plausible Modellgesellschaft ist noch keine repräsentative Bevölkerung; ein überzeugender Bericht ist noch kein belegter Lernerfolg.
 
-Die Arbeitsweise ist unabhängig vom Untersuchungsthema angelegt. Bei jedem Lauf wird dokumentiert, welches Simulationswerkzeug tatsächlich eingesetzt wurde.
+Veröffentlichte Arbeiten sollen Forschungsfrage, tatsächliche Eingaben, bekannte Ausführungsparameter, Belegstellen und Grenzen erkennen lassen. Beim Zitieren bitte Dateipfad, Version oder Commit sowie gegebenenfalls Laufkennung angeben; externe Originalquellen zusätzlich direkt zitieren.
 
-## Veröffentlichungsstand
+## Bestand und Arbeitsstand
 
-Das Repository enthält derzeit Arbeitsstandards, vorbereitete Seeds, Recherchematerial und Vorlagen für die Ergebnisauswertung. Ausgewertete Simulationsergebnisse wurden noch nicht veröffentlicht. Der jeweilige Bearbeitungsstand wird in den [Laufübersichten](runs/README.md) ausgewiesen.
+Die Forschungsrichtung, der erste Methodenversuch und die Prüfanforderungen sind dokumentiert. Weitere Framework-Piloten und eine pädagogische Validierung stehen aus. Bestehende Seeds und thematische Recherchen werden erhalten; sie gelten nicht automatisch als Eingaben einer neuen Simulation.
 
-Heruntergeladene Originalberichte, vollständige Textextraktionen, Webseitenkopien und Abbildungen gehören zum ergänzenden Recherchearchiv und werden nicht automatisch mitveröffentlicht. Quellenregister und Prüfsummen dokumentieren auch diese Bestände. `file-manifest.json` beschreibt das Recherchearchiv; die tatsächlich verwendeten Eingaben werden zusätzlich je Lauf nachgewiesen. Details: [Daten und Quellenrechte](DATA_POLICY.md).
+`research/` enthält Forschungsentscheidungen und Frameworkbewertungen; `sources/` die Quellenregister; `notes/` Literatur und methodische Ausarbeitungen; `runs/` Eingaben und verfügbare Ergebnisartefakte. `processed/`, `qa/`, `tools/` und `mirofish/` erhalten den bisherigen Forschungsbestand.
+
+Originalberichte und vollständige Reproduktionen externer Quellen bleiben im ergänzenden Archiv, sofern ihre Weiterveröffentlichung nicht geklärt ist. Einzelheiten: [Daten und Quellenrechte](DATA_POLICY.md). Der [Seed- und Recherchestandard](SIMULATION_TEMPLATE.md) ergänzt das Prüfprotokoll für konkrete Läufe.

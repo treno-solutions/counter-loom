@@ -1,12 +1,17 @@
 # Simulationsläufe
 
-Jeder Lauf erhält einen eigenen Ordner. Ein Neustart mit geänderten Eingaben oder Parametern erhält eine neue Laufnummer. Die Kennung im Ordner ist unsere Ablagekennung; sie ist unabhängig von der MiroFish-ID.
+Jeder Lauf erhält einen eigenen Ordner. Ein Neustart mit geänderten Eingaben oder Parametern erhält eine neue Laufnummer. Die Kennung im Ordner ist unsere Ablagekennung; sie ist unabhängig von der jeweiligen Plattformkennung.
 
 Vorbereitung und Mindestanforderungen: [zentrale Seed- und Recherchevorlage](../SIMULATION_TEMPLATE.md). Die verwendete Vorlagenversion und den Prüfstatus im jeweiligen Lauf dokumentieren.
 
 | Ablage | Inhalt | Status |
 |---|---|---|
-| [001-first-simulation](001-first-simulation/README.md) | Erste abzulegende Simulation; Seed-Kopie und aus dem Chat rekonstruierter Prompt vorbereitet | Ergebnisse noch nicht importiert |
+| [001-first-simulation](001-first-simulation/README.md) | Erster MiroFish-Methodenversuch, Bericht und Prüfvermerk teilweise archiviert | Erkenntnisziel verfehlt; für aktuellen Workshop-Zweck ungeeignet |
+| [002-permissionless-finance](002-permissionless-finance/README.md) | The Future of Permissionless Finance: 2026–2040; eigenständiger Seed, Evidenz und acht offene Hypothesen | `prepared_for_import` für qualitative Erkundung; noch nicht importiert oder ausgeführt |
+
+| [003-sentiment-and-investment](003-sentiment-and-investment/README.md) | Konzept für Personas und Sentiment; noch kein ausgeführter Lauf | Zurückgestellt bis zur Frameworkprüfung |
+
+Aktuelle Reihenfolge: [MiroFish-Auswertung](../research/frameworks/mirofish.md), [Anforderungen](../research/requirements.md) und [Frameworkprüfung](../research/assessment-protocol.md) vor weiteren Piloten. Vorbereitete Seeds sind keine Startfreigabe.
 
 ## Ergebnisse ablegen
 

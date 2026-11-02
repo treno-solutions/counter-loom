@@ -1,32 +1,19 @@
-# Auswertung
+# Auswertung des ersten Methodenversuchs
 
-Status: Noch keine Ergebnisse importiert. Es liegen noch keine bewerteten Simulationsbefunde vor.
+Stand: 2. November 2026. **Der Versuch scheiterte am beabsichtigten Erkenntnisziel.** Der technische Lauf meldete Aktionen; das ist vom fachlichen Ergebnis zu unterscheiden.
 
-## Eingaben und Ausführung
+## Verfügbare Grundlage
 
-Nach Import ergänzen: bestätigte MiroFish-ID, verwendete Dateien, Prompt, Modell, Agentenzahl, geplante und abgeschlossene Runden je Plattform sowie Abbruch- oder Abschlussstatus.
+[Berichtsaufnahme](../exports/report-page-capture.md), [gekennzeichneter Prüfvermerk](../exports/inspection-record.json) und [Prüfsummen](../exports/artifact-manifest.json). Vollständige Serverexporte fehlen. Die archivierten Eingaben sind unverändert erhalten; ihre tatsächliche serverseitige Verwendung wurde nicht unabhängig bestätigt.
 
-## Was wurde tatsächlich erzeugt?
+## Inhaltlicher Befund
 
-Anfangsbeiträge, autonome Agentenaktionen, Interviews und vom ReportAgent formulierte Aussagen getrennt zählen und beurteilen. Die genaue Belegstelle in der jeweiligen Exportdatei angeben.
+Der Bericht ordnet monetäre, industrielle und verhaltensbezogene Wirkungswege. Er erklärt selbst, dass keine Agentenbeobachtungen abgerufen wurden. Die fünf vorgesehenen Szenarien werden nicht mit getrennten Ergebnissen verglichen. Neue Agentenentscheidungen, Einflussketten, Minderheitsbefunde und Zustandsänderungen sind im Bericht nicht belegt. Die ausführliche [Aussagenprüfung](../../../notes/report-fd221991e032-analysis.md) dokumentiert zudem teilweise stärkere Behauptungen als im Seed.
 
-## Aussagen und Belege
+## Ursachen und Grenzen
 
-| Aussage | Typ: Eingangsfakt / Anfangsbeitrag / autonome Aktion / Berichtinterpretation | Exportdatei und Belegstelle | Zugehörige Quelle oder Fakten-ID | Bewertung / Unsicherheit |
-|---|---|---|---|---|
+Eine passende Untersuchungsebene fehlte: institutionelle Marktakteure und ein weiter Zukunftshorizont standen im Mittelpunkt; der präzisierte Zweck betrifft Menschen, Lebenslagen und soziale Reaktionen. Fehlende Erinnerungs- und Aktionsbelege verhinderten eine weitergehende Prüfung. Ein eigener technischer Ursachenbeweis, gemessene Gesamtkosten und Workshop-Lerndaten liegen nicht vor. Aus den fehlenden Belegen folgt kein allgemeiner Nachweis, dass das Framework niemals Einfluss erzeugen könnte.
 
-## Gegenbefunde und unerwartete Entwicklungen
+## Konsequenz
 
-Nach Import ergänzen. Eine wiederholte Ausgangsthese ist noch kein neuer Befund. Neue Hypothesen von nachgewiesenen Zusammenhängen unterscheiden.
-
-## Zahlen und Definitionen
-
-Prüfen: Einheiten, Zeiträume, Istwerte gegenüber Prognosen, Silberbilanz mit/ohne ETPs und Preisberechnungen. Zahlen aus dem Ergebnisbericht mit den Forschungsdaten abgleichen. Simulierte Kalenderjahre nur übernehmen, wenn eine ausdrückliche Zeitzuordnung dokumentiert ist.
-
-## Grenzen dieses Laufs
-
-Nach Import ergänzen: fehlende Akteure oder Beziehungen, Duplikate, nicht verwendete Eingaben, Ausführungsfehler und nicht belegte Behauptungen.
-
-## Änderungen für den Folgelauf
-
-Änderungen an Daten, Prompt und Parametern mit Begründung festhalten. Beim Vergleich angeben, welche Änderungen gleichzeitig erfolgten und deshalb nicht einzeln als Ursache zugeordnet werden können.
+Keine weiteren großen Läufe auf dieser Grundlage. Die [Frameworkbewertung](../../../research/frameworks/mirofish.md) verknüpft jeden Befund mit den [Anforderungen](../../../research/requirements.md). Weitere Systeme werden vor einer Auswahl nach demselben [Prüfprotokoll](../../../research/assessment-protocol.md) bewertet. Frühere Reportthesen bleiben unbestätigte Hypothesen.

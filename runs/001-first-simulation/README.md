@@ -1,16 +1,17 @@
-# Erste Simulation: Ergebnisablage
+# 001 · Erster MiroFish-Methodenversuch
 
-Status: **Ergebnisse noch nicht importiert.** Der tatsächliche Abschlussstatus ist offen.
+Bewertungsstand: 2. November 2026. **Am beabsichtigten Erkenntnisziel gescheitert; für den aktuellen Workshop-Zweck in der getesteten Konfiguration ungeeignet.**
 
-- [Originalexporte hier ablegen](exports/README.md)
-- [Auswertung ergänzen](analysis/evaluation.md)
-- [Laufmetadaten](run.json)
-- [Gesicherte Eingaben und Prüfsummen](inputs/input-manifest.json)
+Der Laufstatus meldete Aktionen und einen Abschluss. Der Bericht lieferte jedoch keine zugänglichen Belege für individuelle Reaktionen oder sozialen Einfluss; nachträgliche Interviews waren nicht nutzbar. Technischer Ausführungsstatus und fachlicher Erkenntnisgewinn werden getrennt beurteilt.
 
-Der ursprüngliche Seed ist exakt kopiert. Der Prompt wurde aus dem im Chat dokumentierten Upload rekonstruiert. Die Zuordnung zu den später eingehenden Ergebnissen muss beim Import bestätigt werden.
+- [Bewertung, Ursachen und daraus abgeleitete Anforderungen](../../research/frameworks/mirofish.md).
+- [Inhaltliche Auswertung](analysis/evaluation.md).
+- [Berichtsaufnahme](exports/report-page-capture.md), als Browserdarstellung gesichert, kein vollständiger Serverexport.
+- [Prüfvermerk](exports/inspection-record.json), gekennzeichnete Zusammenfassung der Statusbeobachtungen und des Interviewfehlers.
+- [Artefaktprüfsummen](exports/artifact-manifest.json).
+- [Laufmetadaten](run.json).
+- [Unveränderte archivierte Eingaben](inputs/input-manifest.json).
 
-Der zuletzt in diesem Chat neu angelegte Lauf hatte die Kandidaten-ID `sim_30812a387855` im Projekt `proj_1a8710f2603c`. Diese Zuordnung ist in run.json als Kandidat vermerkt und noch nicht anhand eines Ergebnisexports bestätigt. Falls die ersten Ergebnisse zu einem anderen Lauf gehören, dessen Kennungen und tatsächliche Eingaben übernehmen.
+Die Berichtsseite ließ sich der Simulation `sim_30812a387855` im Projekt `proj_1a8710f2603c` zuordnen. Die tatsächlichen Servereingaben wurden nicht exportiert und nicht unabhängig gegen die archivierte Seed-Kopie und den rekonstruierten Prompt bestätigt. Später gesammelte Daten sind keine nachgewiesenen Eingaben dieses Laufs.
 
-Die später gesammelten Studien und historischen Auswertungen sind als Grundlage für Folgeläufe im Recherchebereich abgelegt. Sie werden hier nicht rückwirkend als verwendete Simulationsdaten ausgewiesen.
-
-Zum Ablageablauf siehe [Simulationsläufe](../README.md).
+Vollständige Aktionsprotokolle, Profile, Konfiguration, Erinnerungen und ein Originalstatusexport sind nicht archiviert. Zählwerte allein ersetzen diese Artefakte nicht. Der Abschlussstatus enthält Widersprüche zwischen den Statusquellen und Plattformen; siehe Prüfvermerk.

@@ -1,8 +1,8 @@
 [
   {
     "path": "RESEARCH.md",
-    "bytes": 3425,
-    "sha256": "795f5532345e9c046ccb8ad55bfd184737c0da4926a7df5aa13050c7b75dee04"
+    "bytes": 3104,
+    "sha256": "c9350fe1ec790c03de6baade41fccac350d1d38d405c887081a1f6bf9fd44b92"
   },
   {
     "path": "mirofish/historical-price-evidence.md",
@@ -18,6 +18,11 @@
     "path": "mirofish/precious-metals-evidence-pack.md",
     "bytes": 7813,
     "sha256": "ea23277b5bfe2c9ed5279a218ebb455e20aadce436f4a515bf33252387cd15a0"
+  },
+  {
+    "path": "mirofish/research-package.md",
+    "bytes": 3500,
+    "sha256": "4661059962b4de84e1987542ecc108cda7c30d974b0c1f96a8148453f3b5f0fe"
   },
   {
     "path": "notes/energy-data.md",
@@ -40,6 +45,26 @@
     "sha256": "d782ccc7ceb3d72c5cf12f817121651634194af434fea8da65b6a77a0ab104bc"
   },
   {
+    "path": "notes/mirofish-practical-evidence-2026-11-01.md",
+    "bytes": 5426,
+    "sha256": "4c09a561968028cd83afefe1460c3200bd2d313b6177fe8ae07ea12f5f2f5faa"
+  },
+  {
+    "path": "notes/persona-research-and-paper-trading-projects-2026-11-02.md",
+    "bytes": 4000,
+    "sha256": "7ef6554b405367b1e5fdcfe9e13fdab85da80402e99d9a2368185da928645b11"
+  },
+  {
+    "path": "notes/report-fd221991e032-analysis.md",
+    "bytes": 9935,
+    "sha256": "f785eae506e643ac07a662b3c7f2fcedffad20e6a43a32d8adcac0216421eeb5"
+  },
+  {
+    "path": "notes/report-fd221991e032-review.md",
+    "bytes": 6479,
+    "sha256": "015d1048b098c87985751d59c87c994727620aa236fcd14545bad66fff064ee4"
+  },
+  {
     "path": "notes/research-findings.md",
     "bytes": 3092,
     "sha256": "986487a49332a4849ec1ce9f34647289403d45c374956974fbb0f6b3ada64fb1"
@@ -48,6 +73,21 @@
     "path": "notes/run-comparison-plan.md",
     "bytes": 6637,
     "sha256": "01e8a639e1fcaa1c3e96e740084982081faa6478163df4941e898bebaf2c8c71"
+  },
+  {
+    "path": "notes/social-financial-world/README.md",
+    "bytes": 3166,
+    "sha256": "a0841b3de7d3b0152cf9900faf47e97d7b069d55db681814fc4f8274cbfedc96"
+  },
+  {
+    "path": "notes/social-financial-world/literature.md",
+    "bytes": 6780,
+    "sha256": "8589a61eb4caf45c2760c9deab7d65b00f5b7166f59ce6aa44aa63c5118db93f"
+  },
+  {
+    "path": "notes/social-financial-world/model-plan.md",
+    "bytes": 6524,
+    "sha256": "85a2d8a99e9577e789412ffe989b8ca8161b85a77c651bb073ff020a511df1c3"
   },
   {
     "path": "processed/energy-monthly-prices.csv",
@@ -215,9 +255,19 @@
     "sha256": "3f5fe8c9d56a50ffaa06c4e1a03907dcaf355752e9aba47cf92dd832ebd52dc3"
   },
   {
+    "path": "qa/permissionless-package-validation.json",
+    "bytes": 3344,
+    "sha256": "7df055269990fd4f5eacc1de3c559d2016867db385cd0efe7257ff0593ef5eb1"
+  },
+  {
     "path": "qa/price-data-validation.json",
     "bytes": 468,
     "sha256": "83d457c6513423ab44246f263803bb686d97dee071a4f4850bf19a58fd978f0e"
+  },
+  {
+    "path": "qa/research-structure-validation.json",
+    "bytes": 573,
+    "sha256": "3cc6f8a8570f32a92b4fa2a41d138ea96c0c34316927a637cf653891eabda427"
   },
   {
     "path": "qa/silver-table-reconciliation.json",
@@ -260,6 +310,111 @@
     "sha256": "4be98a91d70759285469759452e81a5b47ca3d53c7a774b4152c2e18355b589c"
   },
   {
+    "path": "raw/permissionless-finance-2026-11-01/PF-S01.browser-extract.md",
+    "bytes": 321262,
+    "sha256": "8cde81b6d9d801a0115e054390b1b4cbe310ebfc937031480d763f1c65f1415b"
+  },
+  {
+    "path": "raw/permissionless-finance-2026-11-01/PF-S02.browser-extract.md",
+    "bytes": 35667,
+    "sha256": "7b1826edc8411ece6de3b31c38c99e646acb94d294349739d6d05041a9a3f7c2"
+  },
+  {
+    "path": "raw/permissionless-finance-2026-11-01/PF-S03.browser-extract.md",
+    "bytes": 9214,
+    "sha256": "7ee3c00ae0e741bd9a2b286ea65f91239c9a5b878d513818b34d43bf8b2a04a7"
+  },
+  {
+    "path": "raw/permissionless-finance-2026-11-01/PF-S04.browser-extract.md",
+    "bytes": 50030,
+    "sha256": "b5474eef2d80a2c558ab5e79e742639ef3f2e5bbcff581bc276e93df96837d1f"
+  },
+  {
+    "path": "raw/permissionless-finance-2026-11-01/PF-S05.browser-extract.md",
+    "bytes": 54151,
+    "sha256": "26e4b0d3a39b6676dbb00049b3ddc876ff849cf131ee884c467e445c484cec5a"
+  },
+  {
+    "path": "raw/permissionless-finance-2026-11-01/PF-S06.browser-extract.md",
+    "bytes": 34231,
+    "sha256": "253da41b8bda6f8dcede3a297c34931229dc2a8893bcf77da3883791aed9cc26"
+  },
+  {
+    "path": "raw/permissionless-finance-2026-11-01/PF-S07.browser-extract.md",
+    "bytes": 24624,
+    "sha256": "9e174817759f41630885e18bf39d387ac465d6a0f8be6a36e50103d340d0c0d4"
+  },
+  {
+    "path": "raw/permissionless-finance-2026-11-01/PF-S08.browser-extract.md",
+    "bytes": 30047,
+    "sha256": "d45da352433d039f16a2009b59719aff86bb9110483e638f82a7d468dbd06bf4"
+  },
+  {
+    "path": "raw/permissionless-finance-2026-11-01/PF-S09.browser-extract.md",
+    "bytes": 5015,
+    "sha256": "5f8e19debedd51562bad5a4001c6e49aa9165bab69283f211b7b06f0a6edfe31"
+  },
+  {
+    "path": "raw/permissionless-finance-2026-11-01/PF-S10.browser-extract.md",
+    "bytes": 23187,
+    "sha256": "54a6ed983f97b16fe90f93690254f0dda93d2313599f67c2b58b36f318961a7c"
+  },
+  {
+    "path": "raw/permissionless-finance-2026-11-01/PF-S11.browser-extract.md",
+    "bytes": 8763,
+    "sha256": "fc5ccd1cd78153a0fec039f861f3b2fcf3a03d70298c5c3da8efa36fbb706d99"
+  },
+  {
+    "path": "raw/permissionless-finance-2026-11-01/PF-S12.browser-extract.md",
+    "bytes": 12753,
+    "sha256": "53159747cbba83064fd52c02452d47f36c11eb147b5370cda1c8449f2f79afcd"
+  },
+  {
+    "path": "raw/permissionless-finance-2026-11-01/PF-S13.browser-extract.md",
+    "bytes": 9942,
+    "sha256": "20a1f4cec50b16aeb8ca9ee0a2790cfa2fe192f473663fd09e63f9d4384f1514"
+  },
+  {
+    "path": "raw/permissionless-finance-2026-11-01/PF-S14.browser-extract.md",
+    "bytes": 104680,
+    "sha256": "e1697cc8d6914ffe412f70a49dbb0cd7165fe325499d962a8e65ce0ca73806d4"
+  },
+  {
+    "path": "raw/permissionless-finance-2026-11-01/PF-S15.browser-extract.md",
+    "bytes": 10608,
+    "sha256": "74a05abe62388b2443b77ea1a1eb7bf59c228e988b727e70fcf966cc8557a410"
+  },
+  {
+    "path": "raw/permissionless-finance-2026-11-01/PF-S16.browser-extract.md",
+    "bytes": 26035,
+    "sha256": "09f6879bb1b95e1f4605c88ebe37098774ffbd07333edaaf1067c147f12e6cbe"
+  },
+  {
+    "path": "raw/permissionless-finance-2026-11-01/PF-S17.browser-extract.md",
+    "bytes": 17112,
+    "sha256": "6491a72cd9ededa2e75845f4241eea1f5dffd7a0f615b56c9ab72fb276179aa1"
+  },
+  {
+    "path": "raw/permissionless-finance-2026-11-01/PF-S18.browser-extract.md",
+    "bytes": 18493,
+    "sha256": "9785f65cbeb487b4ec3ff10ba52597eff9129303349e489370aa3990f04f5acc"
+  },
+  {
+    "path": "raw/permissionless-finance-2026-11-01/PF-S19.browser-extract.md",
+    "bytes": 9856,
+    "sha256": "660ea19b9d0554bdc8e07275a335e07ba8f607c4a28434c55c6dc93bfde6750d"
+  },
+  {
+    "path": "raw/simulation-reports/report_fd221991e032/capture.json",
+    "bytes": 417,
+    "sha256": "05b332bdfad4f87c923707b48fe32219d29634b5e8ff03f8f5941e1e3eeaaad0"
+  },
+  {
+    "path": "raw/simulation-reports/report_fd221991e032/interaction-page.md",
+    "bytes": 21713,
+    "sha256": "01436ca4fa060d35d31c1fab81ad41de14b9253bb5d6c3324c2358f5fdfcb9f5"
+  },
+  {
     "path": "raw/usgs-mcs-2026.pdf",
     "bytes": 17646709,
     "sha256": "595e6e66674236dea40125a03eb1ea6b347f331c0bcf3411a1e77eba53c0d391"
@@ -280,9 +435,44 @@
     "sha256": "dc7a35277822a20498319fc6737f17b9e8f8fa93e5ce49b6a6565967ae220383"
   },
   {
+    "path": "research/README.md",
+    "bytes": 3539,
+    "sha256": "d1a19da190aff2f0d07a9dc01921e1334e8751d10e3bd4261dba13720b028b11"
+  },
+  {
+    "path": "research/assessment-protocol.md",
+    "bytes": 5552,
+    "sha256": "6551036423b261e99e2caf5f1fa46a70ef013323402637103d6799d30ece7753"
+  },
+  {
+    "path": "research/decisions/0001-research-direction.md",
+    "bytes": 2506,
+    "sha256": "0f18c206b849e45cc0100d7c3b5ebaee3c364867aa15f9334c41d103faac1af5"
+  },
+  {
+    "path": "research/frameworks/README.md",
+    "bytes": 2246,
+    "sha256": "63ffcf6b8c142e27cf2f3955be4ac81c94e316c6c103cd527b275de129c2e3da"
+  },
+  {
+    "path": "research/frameworks/_template.md",
+    "bytes": 1338,
+    "sha256": "d70e46147a8f465a9984d4b96c7289be266aefa782e5aef95297548d39d10b35"
+  },
+  {
+    "path": "research/frameworks/mirofish.md",
+    "bytes": 7693,
+    "sha256": "eec38a8d82a431ccb05b0d435d8368e843bf32ec57541b1166aefeaff469682b"
+  },
+  {
+    "path": "research/requirements.md",
+    "bytes": 4387,
+    "sha256": "7577eacc3a141f7d0a832771e972e348435034a637fb9d9ba9e3aa127a1048c4"
+  },
+  {
     "path": "sources/README.md",
-    "bytes": 5317,
-    "sha256": "3f0cdcd2a4f203c320fe7b0cca42de3f5ba790e3b48c9ad78b428d0c6863385c"
+    "bytes": 6448,
+    "sha256": "6944c6fe49945f2119b7a95954f210e4f301f4ac08df21382f3d00dbc8dc5add"
   },
   {
     "path": "sources/fred-dfii10.md",
@@ -340,6 +530,11 @@
     "sha256": "d2f104bcaa03325dd1752b5ca7db2abb80d4ab37f858291a1d0640875994bf1f"
   },
   {
+    "path": "sources/social-financial-world-2026-11-02.json",
+    "bytes": 4882,
+    "sha256": "7d404fdbcae90a84ff5cfd0702d751149fa5c1e3d537fecf1bc24678bf82518d"
+  },
+  {
     "path": "sources/source-register.json",
     "bytes": 5558,
     "sha256": "f1d75b6c775d96d756ff4faa35f021f7157918094e6ca08e8a829495a3f05e4b"
@@ -356,8 +551,8 @@
   },
   {
     "path": "tools/assemble_evidence.py",
-    "bytes": 34250,
-    "sha256": "55953d6645fea41c185f7269046faaff14e7da35dd98e37b4f5f137edff8b2d6"
+    "bytes": 34459,
+    "sha256": "3151557397440d13cdc0719790420484fd2ff39e853f290d9f2d9f930917a7ff"
   },
   {
     "path": "tools/prepare_research.py",

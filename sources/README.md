@@ -1,8 +1,22 @@
 # Quellenverzeichnis
 
+## Permissionless Finance: 2026–2040
+
+Eigenständige Recherche vom 1. November 2026: [Quellenregister mit 19 Quellen](../runs/002-permissionless-finance/inputs/source-register.json), [kuratierte Evidenz mit Fundstellen und Grenzen](../runs/002-permissionless-finance/inputs/evidence-pack.md) und [Laufübersicht](../runs/002-permissionless-finance/README.md). Technische Spezifikationen, Forschungsabstracts, Behördenmeldungen und Anbieter-/Projektangaben werden getrennt eingeordnet. Vollständige Browserextraktionen liegen ausschliesslich im lokalen, ausgeschlossenen `raw/permissionless-finance-2026-11-01/`-Archiv. Aktuelle quantitative Marktbaselines und eine empirische Modellkalibrierung fehlen.
+
+## Bisheriger Recherchebestand
+
 Recherche- und Abrufstand: 1. November 2026. Originale werden unverändert aufbewahrt. Datenjahre, Berichtsausgaben und Prognosen sind getrennt zu lesen.
 
 Die Verweise „Lokale Datei“ betreffen das lokale Recherchearchiv und funktionieren nach einem frischen Git-Clone erst, wenn die Originale von den jeweiligen Herausgebern bezogen wurden. Die Originale und vollständigen Webseitenkopien werden nicht öffentlich mitgeliefert. Siehe [Daten und Quellenrechte](../DATA_POLICY.md).
+
+## Übergreifende Forschung und Prüfbelege
+
+- [Persönlichkeit, Peer-Effekte, soziale Modelle und Frameworks](social-financial-world-2026-11-02.json).
+- [Quellenbewertung und Literaturliste](../notes/social-financial-world/literature.md).
+- [MiroFish-Testbelege und Prüfgrenzen](../research/frameworks/mirofish.md).
+
+Die nachfolgenden Quellen gehören zum historischen Edelmetallbestand.
 
 ## WB01: World Bank Commodity Price Data (Pink Sheet), October 2026 vintage
 - Herausgeber: World Bank

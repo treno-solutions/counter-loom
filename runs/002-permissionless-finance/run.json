@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "run_id": "002-permissionless-finance",
+  "title": "The Future of Permissionless Finance: 2026–2040",
+  "protocol_version": "1.0",
+  "readiness_status": "prepared_for_import",
+  "start_check_file": "inputs/start-check.md",
+  "archive_status": "prepared_inputs_no_execution",
+  "execution_status": "not_started",
+  "mirofish": {
+    "project_id": null,
+    "simulation_id": null,
+    "url": null,
+    "ids_verified_against_export": false
+  },
+  "started_at": null,
+  "finished_at": null,
+  "timestamps_timezone": "Europe/Zurich",
+  "model": {
+    "provider": null,
+    "name": null,
+    "version_or_digest": null,
+    "temperature": null,
+    "random_seed": null
+  },
+  "configuration": {
+    "agent_count": null,
+    "platforms": [],
+    "planned_rounds": null,
+    "completed_rounds_by_platform": {},
+    "simulation_time_mapping": null,
+    "export_file": null
+  },
+  "inputs": [
+    {
+      "path": "inputs/research-seed.md",
+      "role": "research_document",
+      "uploaded": false
+    },
+    {
+      "path": "inputs/evidence-pack.md",
+      "role": "research_document",
+      "uploaded": false
+    },
+    {
+      "path": "inputs/prompt.md",
+      "role": "task_prompt",
+      "submitted": false
+    }
+  ],
+  "input_manifest": "inputs/input-manifest.json",
+  "prior_run_ids": [],
+  "prior_run_findings_file": "inputs/prior-run-findings.json",
+  "exports": [],
+  "notes": [
+    "Qualitative Szenarioerkundung; keine empirische Kalibrierung.",
+    "Keine MiroFish-Verbindung, kein Import und keine Ausführung in dieser Vorbereitung.",
+    "Runden sind keine Kalenderjahre; Zeitzuordnung nur narrative Szenarioannahme.",
+    "Alle technischen Parameter bleiben unbekannt, bis sie tatsächlich geprüft werden."
+  ]
+}

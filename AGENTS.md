@@ -1,6 +1,6 @@
 # Counterloom: redaktionelle und fachliche Leitlinien
 
-Counterloom repräsentiert die Forschungsarbeit von Treno Solutions. Das öffentliche Repository dient dazu, Seeds und Recherchen für Simulationen vorzubereiten, Ergebnisse auszuwerten und nachvollziehbare Arbeiten als Quellen bereitzustellen.
+Counterloom repräsentiert die Forschungsarbeit von Treno Solutions. Das öffentliche Repository dient der Recherche und Prüfung bestehender Modelle und Agenten-Frameworks für soziale Modellgesellschaften in Finanzbildungs-Workshops. Seeds, Recherche und Ergebnisarchive unterstützen diesen Zweck.
 
 ## Positionierung
 
@@ -25,3 +25,14 @@ Counterloom repräsentiert die Forschungsarbeit von Treno Solutions. Das öffent
 - Archivierte Eingaben nicht nachträglich umschreiben, um sie an spätere Auswertungen anzupassen.
 - Originalberichte und vollständige Reproduktionen nur nach Prüfung der Nutzungsbedingungen veröffentlichen. `DATA_POLICY.md` und `.gitignore` beachten.
 - Vor einem Push veröffentlichte Dateien auf private Angaben prüfen; Dokumentverweise, strukturierte Daten und betroffene Prüfsummen kontrollieren.
+
+## Aktuelle Forschungsphase
+
+- `research/README.md`, `research/requirements.md` und `research/assessment-protocol.md` bilden die Arbeitsgrundlage. Vor neuen Framework-Piloten zuerst die MiroFish-Befunde und die daraus abgeleiteten Anforderungen berücksichtigen.
+- MiroFish ist der erste praktisch untersuchte Ausgangspunkt. Für das angestrebte Erkenntnisziel war der dokumentierte Versuch nicht geeignet; nicht pauschal auf alle Versionen und Anwendungen verallgemeinern.
+- Andere Frameworks sind recherchierte Kandidaten, keine getesteten Empfehlungen. Dokumentationsprüfung, eigener Pilot und Workshop-Validierung getrennt ausweisen.
+- Auf vorhandenen Modellen und offenen Systemen aufbauen. Keine eigene Psychologie, Einflusskoeffizienten oder Plattform entwickeln, bevor vorhandene Ansätze begründet geprüft wurden.
+- Personen, Lebenslagen und soziale Umfelder stehen im Mittelpunkt. Handel und Preisprognosen sind für den aktuellen Workshop-Zweck nicht erforderlich.
+- Meinungsäußerung ist kein Einflussnachweis. Gedächtnis, tatsächlich erhaltene Kontakte und Vorher-/Nachher-Zustände mit Vergleichsbedingungen prüfen.
+- Relativ stabile Bedürfnisse nicht mit unveränderlichen Reaktionen gleichsetzen. Keine Diagnose oder Repräsentativität ohne entsprechende Evidenz behaupten.
+- Archivierte Seeds nicht nachträglich verändern. Neue Entwürfe bis zur Frameworkwahl nicht automatisch starten. Die Forschungsindizes nicht durch fachbezogene Generierungsskripte überschreiben.

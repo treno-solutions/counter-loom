@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "version": "1.0",
+  "run_id": "002-permissionless-finance",
+  "status": "prepared_not_uploaded",
+  "actual_uploads_verified": false,
+  "scope": "All prepared input files except this manifest; not a server receipt.",
+  "files": [
+    {
+      "path": "inputs/README.md",
+      "bytes": 1520,
+      "sha256": "52e551cf6e57aada35856407f90f3d9183fdc87e757aab551ac5d3a80c4d712b"
+    },
+    {
+      "path": "inputs/SIMULATION_TEMPLATE.md",
+      "bytes": 16803,
+      "sha256": "8fe2cb0a86766a241aac2b0ea1120595a52aee15de755fe713b83fde646585e2"
+    },
+    {
+      "path": "inputs/derived-calculations.json",
+      "bytes": 1860,
+      "sha256": "3b12daf8cef82fe3f82b646957db53f4279dfd65cf60f26dd58593d1d38f68b5"
+    },
+    {
+      "path": "inputs/entities.json",
+      "bytes": 12796,
+      "sha256": "1367602707c2180570db2821f1b774ce14d8f8261d951d052fe769fbd5d54a00"
+    },
+    {
+      "path": "inputs/evidence-pack.md",
+      "bytes": 20834,
+      "sha256": "935ac6898cd133275e216a056860895430116fe4098d57936c05edb9fdf2e38b"
+    },
+    {
+      "path": "inputs/fact-register.json",
+      "bytes": 11148,
+      "sha256": "dc1140ad0e5f516a8c167eb24516942f813bb794631a4d257dac739470beccf6"
+    },
+    {
+      "path": "inputs/metrics.csv",
+      "bytes": 6692,
+      "sha256": "a1cb03e317e2fd3fd9bcf9f842dff310d759a18d5e950a7a6baf953300270da5"
+    },
+    {
+      "path": "inputs/prior-run-findings.json",
+      "bytes": 297,
+      "sha256": "504c7648e934325eb8e52e9925cb9f9942c99464c3531cab9ab07b2478fad017"
+    },
+    {
+      "path": "inputs/prior-run-findings.md",
+      "bytes": 388,
+      "sha256": "97e4c42e8edbaa9934111284b2f87cdc6c079a2a3ee75c31a46059cfe4f154c1"
+    },
+    {
+      "path": "inputs/prompt.md",
+      "bytes": 6649,
+      "sha256": "bf78d4c42cb837fb78e99867e162d90712d0d17795366497804c38f02b1d61ee"
+    },
+    {
+      "path": "inputs/relationships.json",
+      "bytes": 11608,
+      "sha256": "883852f7a75569379083410e9aaa2edbcdc9576386f2954c70361e8c96d24525"
+    },
+    {
+      "path": "inputs/research-seed.md",
+      "bytes": 33506,
+      "sha256": "4745c0c1bdc64fd37997dab2e69f5b711f66db4d90bc7eaa375cf0b163db52de"
+    },
+    {
+      "path": "inputs/scenarios.csv",
+      "bytes": 3075,
+      "sha256": "f11c3fa6edf3d5bcca221b10afa8d6237ca303e359072d7aa0eacec1dfa9eb9e"
+    },
+    {
+      "path": "inputs/source-register.json",
+      "bytes": 20528,
+      "sha256": "dbd388be90143db05e460478384145762cb571d7d59bb9ed9874deb04f6007f5"
+    },
+    {
+      "path": "inputs/start-check.md",
+      "bytes": 2313,
+      "sha256": "96648d909baf98f09101e3b18c6bf277dd7cef7ba8d991eac6336c3ed35a01f4"
+    },
+    {
+      "path": "inputs/validation-plan.md",
+      "bytes": 8425,
+      "sha256": "3f5a82269309602b9269247aaf3d46490a274f90d1ab0948f139750586b88532"
+    }
+  ]
+}

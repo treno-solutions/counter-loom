@@ -1,0 +1,64 @@
+# Prüfprotokoll für bestehende Frameworks
+
+Version 1.0 · 2. November 2026. Grundlage: [Anforderungen R01–R10](requirements.md).
+
+## Statusmodell
+
+| Status | Bedeutung |
+|---|---|
+| `candidate` | Projekt gefunden; Eignung und Betrieb nicht geprüft |
+| `documentation_reviewed` | Dokumentation/ausgewählte Quellen geprüft; Fähigkeiten noch nicht praktisch nachgewiesen |
+| `pilot_planned` | Version, Eingaben, Bedingungen, Kostenlimit und Auswertung festgelegt |
+| `pilot_tested` | Kleiner Test ausgeführt; Ergebnis und Artefakte dokumentiert |
+| `workshop_tested` | Pädagogischer Einsatz zusätzlich untersucht |
+
+Eignung wird separat als `unassessed`, `conditional`, `suitable_for_pilot` oder `unsuitable_for_current_goal` festgehalten. Ein erfolgreicher Programmstart ist keine fachliche Eignungsentscheidung. Ein öffentliches Benchmarkresultat wird nicht als eigener Test ausgegeben.
+
+## 0 · Grundlagen vor jedem neuen Framework-Piloten
+
+- MiroFish-Bewertung und Ableitung der Anforderungen sind vorhanden.
+- Version des Prüfprotokolls festgehalten.
+- Es wurde noch keine Plattform aufgrund bloßer Produktversprechen ausgewählt.
+- Für den konkreten Pilot: Lizenz, Dienstabhängigkeiten, erlaubte Daten, Budget und Datenablage geklärt.
+
+Diese Vorarbeiten sind vor weiteren Piloten verbindlich. Es gibt keine automatische Freigabe für zusätzliche Rechenläufe oder eine Eigenentwicklung.
+
+## 1 · Markt- und Literaturrecherche
+
+Projekt, Träger, Repo, Lizenz, Versionsstand und erforderliche Dienste erfassen. Dokumentation, veröffentlichte Studien, Herstellerdemonstration und unabhängige Validierung getrennt behandeln. Auf veraltete Versionen achten. Für jede Anforderung notieren: dokumentiert, praktisch bestätigt, nicht unterstützt oder unbekannt. Keine addierten Marketing-Punktwerte.
+
+## 2 · Einheitlicher kleiner Prüfgegenstand
+
+Vorgeschlagen sind zwei bis drei soziale Gruppen mit insgesamt acht bis zwölf fiktiven Personen. Vor dem Test dieselbe Fallauswahl für alle Kandidaten festschreiben. Ausreichend Unterschiede innerhalb der Gruppen vorsehen. Keine empirischen Bevölkerungsanteile behaupten. Nicht alle Personen müssen Gold besitzen oder Anlageerfahrung haben.
+
+Eine klar als hypothetisch markierte Nachricht wird zugestellt, beispielsweise ein Energiepreisanstieg unter geopolitischer Unsicherheit. Ein Gegenargument beziehungsweise eine spätere Entspannung kann als zweite Variante vorbereitet werden. Die genaue Ereignisbeschreibung und Sichtbarkeit bleiben zwischen Kandidaten gleich; der Reaktionsverlauf wird nicht vorgeschrieben.
+
+Neutrale Vorher-/Nachher-Fragen: Was bedeutet die Information? Was bleibt unsicher? Welches Bedürfnis ist betroffen? Hat sich eine Erwartung oder Absicht verändert? Warum beziehungsweise warum nicht? Keine Aufforderung, sich überzeugen zu lassen.
+
+## 3 · Technische Eingangskontrolle
+
+Prüfen: Profilerzeugung ohne stereotype Zwangskopplung, getrenntes Wissen, gezielte Zustellung, eigener Gedächtnisspeicher, gespeicherte Ausgangszustände, Abbruch-/Wiederherstellung und lesbarer Export. Erst anschließend den begrenzten Dialogtest starten. Fehler nicht durch wiederholte große Läufe verdecken.
+
+## 4 · Einfluss untersuchen
+
+A: Nachricht ohne sozialen Austausch. B: dieselbe Ausgangspopulation mit Gruppengespräch. Optional C: wie B mit wenigen Brückenkontakten. Bedingungen aus demselben gespeicherten Ausgangszustand beginnen, keine bereits beeinflusste Population wiederverwenden.
+
+Modellversion, Parameter, tatsächliche Nachrichten, Kontakte und Zufallssteuerung dokumentieren. LLM-Ausgaben können trotz gleicher Einstellungen variieren; begrenzte Wiederholungen nötig. Zunächst Unterschiede innerhalb des Modells untersuchen. Übertragung auf reale gesellschaftliche Effekte benötigt gesonderte Evidenz.
+
+## 5 · Ergebnisse und Zusatznutzen bewerten
+
+Pro Person Vorzustand, erhaltene Information, Kontaktbeleg, Nachzustand und Unsicherheit festhalten. Aussagen des Reporters getrennt bewerten. Beispiele müssen auf tatsächliche Interaktionen verweisen. Konsens, Polarisierung, Nichtänderung und zunehmende Unsicherheit sind zulässige Ergebnisse.
+
+Mit einer direkten Analyse derselben Eingaben vergleichen. Neuheit nicht allein durch längeren Text oder überraschende Erzählung bewerten. Welche zusätzliche, belegbare Frage oder Wechselwirkung wurde sichtbar? Welche Ergebnisse sind bereits im Seed angelegt? Gemessene Laufzeit, Verbrauch und Kosten zusammen mit fehlenden Messdaten berichten.
+
+## 6 · Pädagogische Prüfung
+
+Erst nach technischem und fachlichem Pilot im kleinen Workshop prüfen. Vorher-/Nachher-Aufgaben untersuchen, ob Teilnehmer mehr unterschiedliche Reaktionen erklären und eigene Bedürfnisse von Lebensumständen oder momentaner Stimmung unterscheiden können. Persönliche Reflexion freiwillig halten. Keine medizinische oder psychologische Diagnose und keine individuelle Anlageempfehlung ableiten.
+
+## Entscheidung
+
+- **Nicht geeignet:** erforderliche Erinnerungen/Belege fehlen, Isolation des Wissens scheitert oder der zusätzliche Nutzen bleibt unbelegt. Keine Vergrößerung.
+- **Bedingt geeignet:** Nutzen erkennbar, aber klar benannte Ergänzungen nötig. Aufwand gegen Alternativen abwägen.
+- **Für Pilot geeignet:** Mindestfunktionen sind praktisch nachgewiesen. Das ist noch keine gesellschaftliche oder pädagogische Validierung.
+
+Jede Entscheidung enthält Belege, Grenzen, tatsächliche Kosten, offene Anforderungen und eine begründete nächste Handlung. [Vorlage](frameworks/_template.md).

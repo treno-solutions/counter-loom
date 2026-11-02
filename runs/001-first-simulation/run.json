@@ -1,20 +1,22 @@
 {
   "schema_version": 1,
   "run_id": "001-first-simulation",
-  "title": "Erste abzulegende Edelmetall-Simulation",
-  "archive_status": "awaiting_results",
-  "execution_status": null,
+  "title": "Erster MiroFish-Methodenversuch",
+  "archive_status": "partial_archive",
+  "execution_status": "completed_reported_with_inconsistencies",
   "mirofish": {
-    "project_id": null,
-    "simulation_id": null,
-    "url": null,
+    "project_id": "proj_1a8710f2603c",
+    "simulation_id": "sim_30812a387855",
+    "url": "https://fish.treno.solutions/interaction/report_fd221991e032",
     "ids_verified_against_export": false,
     "candidate_from_chat": {
       "project_id": "proj_1a8710f2603c",
       "simulation_id": "sim_30812a387855",
       "url": "https://fish.treno.solutions/simulation/sim_30812a387855",
       "evidence": "Recorded creation in this chat; not checked against a result export."
-    }
+    },
+    "report_id": "report_fd221991e032",
+    "association_evidence_file": "exports/inspection-record.json"
   },
   "started_at": null,
   "finished_at": null,
@@ -27,24 +29,45 @@
     "random_seed": null
   },
   "configuration": {
-    "agent_count": null,
-    "platforms": [],
-    "planned_rounds": null,
-    "completed_rounds_by_platform": {},
+    "agent_count": 24,
+    "platforms": [
+      "twitter",
+      "reddit"
+    ],
+    "planned_rounds": 24,
+    "completed_rounds_by_platform": {
+      "twitter": null,
+      "reddit": 24
+    },
     "simulation_time_mapping": null,
-    "export_file": null
+    "export_file": null,
+    "round_status_note": "run-status reports Twitter round 23 with completed=false; aggregate round 24. Platform completion remains inconsistent."
   },
   "inputs": [
     "inputs/precious-metals-research-seed.md",
     "inputs/prompt.md"
   ],
   "input_manifest": "inputs/input-manifest.json",
-  "exports": [],
-  "notes": [
-    "Noch keine Ergebnisse importiert.",
-    "Die verbindlichen MiroFish-IDs bleiben bis zum Abgleich mit dem Ergebnisexport offen.",
-    "Seed lokal exakt kopiert; Prompt aus dem im Chat dokumentierten Upload rekonstruiert.",
-    "Das später erstellte Recherchepaket ist nicht als tatsächlich verwendete Eingabe dieses Laufs eingetragen."
+  "exports": [
+    "exports/report-page-capture.md",
+    "exports/inspection-record.json",
+    "exports/artifact-manifest.json"
   ],
-  "prepared_on": "2026-11-01"
+  "notes": [
+    "Page capture and transcribed inspection summary archived; no complete server export.",
+    "Report associated with simulation via observed report-page requests and read-only status endpoints.",
+    "Archived seed copy and reconstructed prompt are preserved; actual executed input identity is not confirmed.",
+    "Later research packages are not retroactively assigned as inputs.",
+    "Memory data are unavailable according to the operator; no interview answer obtained.",
+    "Method trial failed for the intended knowledge goal; runtime status is assessed separately."
+  ],
+  "prepared_on": "2026-11-01",
+  "assessment": {
+    "status": "unsuitable_for_current_workshop_goal",
+    "method_trial_outcome": "failed_for_intended_knowledge_goal",
+    "assessment_file": "../../research/frameworks/mirofish.md",
+    "assessment_date": "2026-11-02",
+    "not_equivalent_to": "proof_of_universal_framework_failure"
+  },
+  "artifact_manifest": "exports/artifact-manifest.json"
 }

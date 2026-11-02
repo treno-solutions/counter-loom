@@ -25,7 +25,7 @@ sm=['# Quellenverzeichnis','', 'Recherche- und Abrufstand: 1. November 2026. Ori
 for s in sources:
  sm.extend([f'## {s["id"]}: {s["title"]}',f'- Herausgeber: {s["publisher"]}',f'- Datum/Stand: {s["date"]}',f'- Quelle: {s["url"]}',f'- Lokale Datei: [{s["file"]}](../{s["file"]})',f'- Einordnung: {s["kind"]}. {s["coverage"]}',f'- SHA-256: `{s["sha256"]}`',''])
 sm.extend(['## Zugriffsgrenzen','', '- IMF Fiscal Monitor April 2026: Originalseite meldete Access Denied. Die ursprüngliche Seed-Aussage zu 94 %/100 % Schuldenquote ist in diesem Paket nicht neu verifiziert.', '- Gold Demand Trends: WGC-Downloads verlangten Anmeldung. Keine Zugangssperre umgangen; acht frei lesbare Kapitel einschließlich Tabellen archiviert.', '- Der Bericht Q2 2026 war auf der besuchten WGC-Übersichtsseite als neueste Ausgabe verlinkt. Keine Aussage, dass anderweitig keine neuere Ausgabe existiert.'])
-put('sources/README.md','\n'.join(sm))
+put('sources/precious-metals.md','\n'.join(sm))
 
 # Manually transcribed selected cells; verified against SI26 PDF file page 11, printed p.9.
 silver={
@@ -238,7 +238,9 @@ Die Weltbankreihe umfasst Januar 1960 bis September 2026. Gold und Silber: nomin
 
 Ein durchgehender Händlerprämien-Datensatz, ein überprüftes Netzwerk industrieller Lieferverträge, eine empirisch kalibrierte Markträumung oder ein belastbares Preisprognosemodell. Die erneute Verifikation der IMF-Schuldenzahlen scheiterte am Seitenzugriff. Diese Lücken werden nicht durch erfundene Daten ersetzt.
 '''
-put('RESEARCH.md',readme)
+# Domain output must not overwrite the curated research and source indexes.
+readme = re.sub(r'\]\((?!https?://|#)([^)]+)\)', lambda m: '](../' + m.group(1) + ')', readme)
+put('mirofish/research-package.md', readme)
 
 # Independent crosschecks on the downloaded price source and the calculation output.
 metrics=load('processed/historical-price-metrics.json')
@@ -254,7 +256,7 @@ dump('qa/package-validation.json',{'source_count':len(sources),'fact_count':len(
 manifest=[]
 for p in sorted(R.rglob('*')):
  rel=p.relative_to(R)
- research_dirs={'raw','processed','sources','mirofish','notes','qa'}
+ research_dirs={'raw','processed','sources','mirofish','notes','qa','research'}
  research_files={'RESEARCH.md','tools/prepare_research.py','tools/assemble_evidence.py'}
  if p.is_file() and (rel.parts[0] in research_dirs or str(rel) in research_files):manifest.append({'path':str(rel),'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()})
 dump('file-manifest.json',manifest)

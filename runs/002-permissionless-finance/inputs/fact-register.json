@@ -1,0 +1,275 @@
+{
+  "schema_version": 1,
+  "version": "1.0",
+  "facts": [
+    {
+      "fact_id": "PF-F01",
+      "statement": "Die geprüfte Bitcoin-Core-Version halbiert die anfängliche Subvention von 50 BTC alle 210000 Mainnet-Blöcke.",
+      "information_class": "Beobachtung",
+      "value": 210000,
+      "unit": "Blöcke",
+      "period": "Code v28.0",
+      "source_ids": [
+        "PF-S01",
+        "PF-S02"
+      ],
+      "locator": "GetBlockSubsidy; CMainParams.nSubsidyHalvingInterval",
+      "uncertainty": "Protokollregel; aktuelle Blockhöhe und gegenwärtige Subvention wurden nicht erhoben."
+    },
+    {
+      "fact_id": "PF-F02",
+      "statement": "Die maximal zulässige Coinbase-Auszahlung enthält Transaktionsgebühren plus Subvention.",
+      "information_class": "Beobachtung",
+      "value": null,
+      "unit": null,
+      "period": "Code v28.0",
+      "source_ids": [
+        "PF-S01"
+      ],
+      "locator": "ConnectBlock: blockReward",
+      "uncertainty": "Regel über Einnahmen, keine Gleichung für Sicherheit oder Minerprofit."
+    },
+    {
+      "fact_id": "PF-F03",
+      "statement": "Das ökonomische Modell verknüpft Minerwettbewerb und Angriffsanreize mit wiederkehrenden Sicherheitszahlungen.",
+      "information_class": "Autorenmeinung",
+      "value": null,
+      "unit": null,
+      "period": "Modell 2018",
+      "source_ids": [
+        "PF-S03"
+      ],
+      "locator": "Abstract: two equilibrium conditions",
+      "uncertainty": "Theoretisches Argument unter Modellannahmen; Abstract geprüft, keine vollständige Replikation."
+    },
+    {
+      "fact_id": "PF-F04",
+      "statement": "Ethereum unterscheidet Reorganisationen, widersprüchliche Finalisierung und Finalitätsverzögerungen sowie ökonomische und soziale Gegenwehr.",
+      "information_class": "Beobachtung",
+      "value": null,
+      "unit": null,
+      "period": "Seitenstand 2026-04-13",
+      "source_ids": [
+        "PF-S04"
+      ],
+      "locator": "What do attackers want?; Methods of Attack; Social layer",
+      "uncertainty": "Stake-Schwellen sind angriffsabhängig; kein einfaches Marktwert/TVL-Verhältnis."
+    },
+    {
+      "fact_id": "PF-F05",
+      "statement": "ERC-4337 spezifiziert Account Abstraction über höhere Infrastruktur mit UserOperations, Bundlern und optionalen Paymastern.",
+      "information_class": "Beobachtung",
+      "value": null,
+      "unit": null,
+      "period": "gelesene Spezifikation 2026-11-01",
+      "source_ids": [
+        "PF-S05"
+      ],
+      "locator": "Abstract; Definitions; Extension: paymasters; Security Considerations",
+      "uncertainty": "Technische Möglichkeit, keine gemessene Massenadoption oder universelle Recovery."
+    },
+    {
+      "fact_id": "PF-F06",
+      "statement": "EIP-7702 spezifiziert Code-Delegation für EOAs; Motivation nennt Batching, Sponsoring und eingeschränkte Berechtigungen.",
+      "information_class": "Beobachtung",
+      "value": null,
+      "unit": null,
+      "period": "gelesene Spezifikation 2026-11-01",
+      "source_ids": [
+        "PF-S06"
+      ],
+      "locator": "Abstract; Motivation; Security Considerations",
+      "uncertainty": "Sichere Delegationsverträge und Initialisierung bleiben notwendig; kein Beleg für jedes Wallet."
+    },
+    {
+      "fact_id": "PF-F07",
+      "statement": "EIP-1559 unterscheidet verbrannte Base Fee und Priority Fee.",
+      "information_class": "Beobachtung",
+      "value": null,
+      "unit": null,
+      "period": "Spezifikation, erstellt 2019",
+      "source_ids": [
+        "PF-S07"
+      ],
+      "locator": "Simple Summary; Abstract",
+      "uncertainty": "Historische Minerterminologie nicht als heutiges vollständiges PoS-Vergütungsmodell lesen."
+    },
+    {
+      "fact_id": "PF-F08",
+      "statement": "EIP-4844 führt Blob-Transaktionen und einen gesonderten Blob-Gas-Gebührenmechanismus ein.",
+      "information_class": "Beobachtung",
+      "value": null,
+      "unit": null,
+      "period": "Spezifikation, erstellt 2022",
+      "source_ids": [
+        "PF-S08"
+      ],
+      "locator": "Abstract; Gas accounting",
+      "uncertainty": "Keine Übernahme historischer Motivations-Gebührenvergleiche als aktuelle Istwerte."
+    },
+    {
+      "fact_id": "PF-F09",
+      "statement": "Das FBI meldete einen Diebstahl von ungefähr 1.5 Milliarden USD bei Bybit um den 21. Februar 2025.",
+      "information_class": "Historische Schätzung",
+      "value": 1500000000,
+      "unit": "USD",
+      "period": "Vorfall um 2025-02-21; Meldung 2025-02-26",
+      "source_ids": [
+        "PF-S09"
+      ],
+      "locator": "I-022625-PSA, erster Absatz",
+      "uncertainty": "Behördliche ungefähre Vorfallsumme und Attribution; keine technische Root-Cause-Prüfung oder Verlustquote."
+    },
+    {
+      "fact_id": "PF-F10",
+      "statement": "Chainalysis schätzte im Dezember 2024 rund 2.2 Milliarden USD gestohlene Mittel in 303 Hacks im Jahr 2024.",
+      "information_class": "Historische Schätzung",
+      "value": 2200000000,
+      "unit": "USD",
+      "period": "2024, Vintage 2024-12-19",
+      "source_ids": [
+        "PF-S10"
+      ],
+      "locator": "Einleitung, zweiter Absatz",
+      "uncertainty": "Vorläufige Anbieterauswertung; Nenner/Abdeckung unbekannt, keine jährliche Nutzerverlustquote; spätere Revisionen möglich."
+    },
+    {
+      "fact_id": "PF-F11",
+      "statement": "Die historische Studie findet Vorhersagezusammenhänge von Momentum und Aufmerksamkeitsproxies mit Kryptorenditen.",
+      "information_class": "Autorenmeinung",
+      "value": null,
+      "unit": null,
+      "period": "Working Paper 2018",
+      "source_ids": [
+        "PF-S11"
+      ],
+      "locator": "Abstract",
+      "uncertainty": "Kein Nachweis kausaler KI-Verdrängung; genaue Stichprobe/Modellspezifikation hier nicht repliziert."
+    },
+    {
+      "fact_id": "PF-F12",
+      "statement": "Die gelesene Developer-Report-Tabelle zeigt 25893 aktive Entwickler und 7364 Full-Time-Entwickler.",
+      "information_class": "Historische Schätzung",
+      "value": 25893,
+      "unit": "Entwickler (Anbieterdefinition)",
+      "period": "Abruf 2026-11-01; Tabelle ohne eindeutigen Periodenstempel",
+      "source_ids": [
+        "PF-S12"
+      ],
+      "locator": "Developer Type table",
+      "uncertainty": "Keine geprüfte Zeitreihe; öffentliche Repositories, Multi-Chain-Zuordnung und Definitionen begrenzen Vergleichbarkeit. Nicht als kalibrierte aktuelle Baseline verwenden."
+    },
+    {
+      "fact_id": "PF-F13",
+      "statement": "Die BIS-Studie zu grenzüberschreitenden Flüssen nennt spekulative Motive und globale Finanzierungsbedingungen als wichtige Treiber nativer Kryptoassets.",
+      "information_class": "Autorenmeinung",
+      "value": null,
+      "unit": null,
+      "period": "2017–Mitte 2024; 184 Länder",
+      "source_ids": [
+        "PF-S13"
+      ],
+      "locator": "Findings; Abstract",
+      "uncertainty": "Flussstudie, keine Zerlegung aller BTC-/ETH-Preise; keine kausale 2040-Prognose."
+    },
+    {
+      "fact_id": "PF-F14",
+      "statement": "Dieselbe Studie findet transaktionale Motive bei Stablecoins und kleinen Bitcoin-Transfers, verbunden mit hohen traditionellen Überweisungskosten.",
+      "information_class": "Autorenmeinung",
+      "value": null,
+      "unit": null,
+      "period": "2017–Mitte 2024; 184 Länder",
+      "source_ids": [
+        "PF-S13"
+      ],
+      "locator": "Findings; Abstract",
+      "uncertainty": "Wichtiger Gegenbefund zu rein spekulativer Nutzung; Länder-/Transaktionszuordnung und Selektion beachten."
+    },
+    {
+      "fact_id": "PF-F15",
+      "statement": "Die BIS bewertet tokenisierte Zentralbankreserven, Bankgeld und Staatsanleihen als mögliche Grundlage neuer Finanzinfrastruktur und kritisiert Stablecoins anhand eigener Geldkriterien.",
+      "information_class": "Autorenmeinung",
+      "value": null,
+      "unit": null,
+      "period": "2025-06-29",
+      "source_ids": [
+        "PF-S14"
+      ],
+      "locator": "Key takeaways; Box C",
+      "uncertainty": "Institutionelle Position, kein gemessener künftiger Marktanteil oder zwangsläufige Verdrängung."
+    },
+    {
+      "fact_id": "PF-F16",
+      "statement": "J.P. Morgan beschreibt Kinexys-Produkte für Zahlungen, Tokenisierung und eine private-permissioned Asset-Plattform.",
+      "information_class": "Beobachtung",
+      "value": null,
+      "unit": null,
+      "period": "Website beim Abruf 2026-11-01",
+      "source_ids": [
+        "PF-S15"
+      ],
+      "locator": "Solutions and Services; Kinexys Digital Assets Platform",
+      "uncertainty": "Beobachtetes Produktangebot laut Anbieter; keine unabhängigen Skalierungs-/Kostendaten."
+    },
+    {
+      "fact_id": "PF-F17",
+      "statement": "Circle weist auf der gelesenen Seite 70.0 Milliarden USD USDC-Umlauf und 71.4 Milliarden USD Gesamtreserven zum 29. Oktober 2026 aus.",
+      "information_class": "Historische Schätzung",
+      "value": 70000000000,
+      "unit": "USD",
+      "period": "2026-10-29",
+      "source_ids": [
+        "PF-S16"
+      ],
+      "locator": "Reserves composition; Balances",
+      "uncertainty": "Gerundete Emittentenangabe; verlinkte Attestierungen nicht geprüft. Keine Aussage über Zahlungsvolumen oder Tokenrendite."
+    },
+    {
+      "fact_id": "PF-F18",
+      "statement": "MAS beschreibt Guardian als grenzüberschreitenden Sandbox-Verbund für tokenisierte Finanzprodukte, mit Versuchen und ausgewählten Live-Anwendungen.",
+      "information_class": "Beobachtung",
+      "value": null,
+      "unit": null,
+      "period": "Seite 2025-11-12, Abruf 2026-11-01",
+      "source_ids": [
+        "PF-S17"
+      ],
+      "locator": "Einleitung; Objectives; Use Cases",
+      "uncertainty": "Programmträgerdarstellung; jede Anwendung und deren Zugangsschicht separat prüfen."
+    },
+    {
+      "fact_id": "PF-F19",
+      "statement": "Agorá wird als laufendes öffentlich-privates Projekt mit Prototyp für tokenisierte Bankeinlagen und Zentralbankreserven beschrieben.",
+      "information_class": "Beobachtung",
+      "value": null,
+      "unit": null,
+      "period": "Seitenupdate 2026-05-27",
+      "source_ids": [
+        "PF-S18"
+      ],
+      "locator": "Status; project description; prototype paragraph",
+      "uncertainty": "Prototyp demonstriert technische Möglichkeit laut Projektträger, kein Nachweis breiter Produktion."
+    },
+    {
+      "fact_id": "PF-F20",
+      "statement": "NIST SP 800-57 Part 1 Rev. 5 bietet allgemeine Leitlinien zum Management und Schutz kryptografischen Schlüsselmaterials.",
+      "information_class": "Beobachtung",
+      "value": null,
+      "unit": null,
+      "period": "Version Mai 2020",
+      "source_ids": [
+        "PF-S19"
+      ],
+      "locator": "Abstract; Keywords",
+      "uncertainty": "Normative Empfehlung; keine vergleichende Crypto-/Bankverluststatistik und keine Garantie für konkrete Recovery."
+    }
+  ],
+  "current_market_baselines": {
+    "BTCUSD": null,
+    "ETHUSD": null,
+    "hashrate_EHs": null,
+    "effective_stake_ETH": null,
+    "wallet_loss_rate": null,
+    "adjusted_stablecoin_payment_volume_USD": null
+  }
+}

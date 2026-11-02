@@ -1,0 +1,15 @@
+scenario_id,label,baseline,changed_assumption,start,duration,counterreaction,hypotheses,limits
+S0,Referenz,"belegte Ausgangswelt, offene Marktbaselines",keine zusätzliche Siegerannahme,Restjahr 2026,bis 2040,heterogene Anpassung,alle,keine Wahrscheinlichkeit
+S1,Bedeutungsverlust,S0,schwächere spekulative Nachfrage und langsame UX,2027,graduell bis 2032; Nachwirkung bis 2040,"Nischen, Kostenanpassung und Erholung",H1 H2 H3 H4 H5 H6,Bündelszenario; kein Einzeleffekt
+S2,Koexistenz,S0,segmentierte Nutzung und mehrere Architekturen,2027,bis 2040,Fragmentierung oder offene Integration,H2 H7 H8,Bündelszenario; kein Einzeleffekt
+S3,Durchbruch,S0,nachprüfbar bessere Wallets und günstige verlässliche Abwicklung,2027,Einführung bis 2030; Folgen bis 2040,neue Angriffsflächen und Konzentration,H5 H6 H8,Bündelszenario; keine Garantie von Tokenrendite
+S4a,PoW-Stress geringe Anpassung,S0; gleiche Gebühren-/Preisannahme wie S4b,geringe Miner-Kostenanpassung,blockhöhenabhängige Halbierungen,bis 2040,Minerexit oder Nischennachfrage,H3,keine festen Halbierungskalenderdaten
+S4b,PoW-Stress hohe Anpassung,wie S4a,hohe Miner-Kostenanpassung,wie S4a,bis 2040,Ertragserhalt oder stärkere Konzentration,H3,übrige Bedingungen konstant dokumentieren
+S5a,PoS-Stress konzentrierte Kontrolle,S0; gleiche schwache ETH-Bewertung und steigende Nutzungsabhängigkeit wie S5b,konzentrierte Kontroll-/Fehlerdomänen,2028,bis 2032; Folgen bis 2040,"Slashing, Austritt oder soziale Gegenwehr",H4,keine Angriffswahrscheinlichkeit kalibriert
+S5b,PoS-Stress verteilte Kontrolle,wie S5a,verteilte Kontroll-/Fehlerdomänen,2028,wie S5a,Resilienz oder teure Koordination,H4,Preis und Nutzungsrahmen unverändert
+S6a,Custody-Schock geringe Recovery,S0; gleiche hypothetische Vorfallgrösse wie S6b,geringe Recovery-/Entschädigungsfähigkeit,einmal 2028,Anpassung bis 2031,Abwanderung oder Akzeptanz von Restrisiko,H5 H6,neuer hypothetischer Vorfall; Betrag offen
+S6b,Custody-Schock starke Recovery,wie S6a,hohe Recovery-/Entschädigungsfähigkeit,wie S6a,wie S6a,Vertrauenserholung oder Kontrollkosten,H5 H6,kein nachträgliches Umschreiben historischer Hacks
+S7a,KI-Konkurrenz,S0; gleicher Finanzierungsrahmen wie S7b,KI-Wirkungsrichtung Ressourcenverdrängung,2027,bis 2035; Folgen bis 2040,Bestandsteams und spezialisierte Nachfrage,H1,Mechanismenvergleich; mehrere Folgen nicht einzeln identifiziert
+S7b,KI-Komplement,wie S7a,KI-Wirkungsrichtung Entwicklungs-/Zahlungskomplement,2027,wie S7a,Botvolumen oder echte neue Nutzung,H1 H8,keine kausale Schätzung aus Diskussion
+S8a,Institutionelle Konsortien,S0; gleiche Regulierung und Endnachfrage wie S8b,kontrollierte Architektur mit konsortialer Interoperabilität,2027,Umsetzung bis 2034; Bindung bis 2040,private Fragmentierung oder Skalierung,H7 H8,Architekturgruppe variiert; Kosten offen
+S8b,Institutionelle Hybridintegration,wie S8a,öffentliche Settlementschicht und offene Interoperabilität,2027,wie S8a,globale Erreichbarkeit oder Compliance-/Kontrollrisiken,H7 H8,konventionelle Alternative bleibt zulässig

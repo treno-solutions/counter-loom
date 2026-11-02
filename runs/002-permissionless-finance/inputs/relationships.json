@@ -1,0 +1,286 @@
+{
+  "schema_version": 1,
+  "relationships": [
+    {
+      "relationship_id": "PF-R01",
+      "subject_id": "PF-O01",
+      "relationship": "implementiert Konsensregeln für",
+      "object_id": "PF-N01",
+      "information_class": "Beobachtung",
+      "source_ids": [
+        "PF-S01",
+        "PF-S02"
+      ],
+      "locator": "GetBlockSubsidy; CMainParams",
+      "validity_period": "Version v28.0",
+      "countermechanism_or_limit": "Code allein belegt weder flächendeckende Ausführung noch wirtschaftliche Tragfähigkeit."
+    },
+    {
+      "relationship_id": "PF-R02",
+      "subject_id": "PF-O02",
+      "relationship": "weist Reserven und Umlauf aus für",
+      "object_id": "PF-T03",
+      "information_class": "Beobachtung",
+      "source_ids": [
+        "PF-S16"
+      ],
+      "locator": "Reserves composition",
+      "validity_period": "2026-10-29",
+      "countermechanism_or_limit": "Emittentenangabe; keine geprüfte aktuelle Attestierung oder Zahlungsflussmessung."
+    },
+    {
+      "relationship_id": "PF-R03",
+      "subject_id": "PF-O03",
+      "relationship": "bietet an",
+      "object_id": "PF-N03",
+      "information_class": "Beobachtung",
+      "source_ids": [
+        "PF-S15"
+      ],
+      "locator": "Solutions and Services",
+      "validity_period": "beim Abruf 2026-11-01",
+      "countermechanism_or_limit": "Angebot kein unabhängiger Marktdurchdringungsnachweis."
+    },
+    {
+      "relationship_id": "PF-R04",
+      "subject_id": "PF-O04",
+      "relationship": "beschreibt und koordiniert Programm",
+      "object_id": "PF-P01",
+      "information_class": "Beobachtung",
+      "source_ids": [
+        "PF-S17"
+      ],
+      "locator": "Einleitung; Objectives",
+      "validity_period": "Seitenstand 2025-11-12",
+      "countermechanism_or_limit": "Einzelne Anwendungen/Architekturen separat prüfen."
+    },
+    {
+      "relationship_id": "PF-R05",
+      "subject_id": "PF-O05",
+      "relationship": "führt Projekt",
+      "object_id": "PF-P02",
+      "information_class": "Beobachtung",
+      "source_ids": [
+        "PF-S18"
+      ],
+      "locator": "Project description; Status",
+      "validity_period": "Seitenstand 2026-05-27",
+      "countermechanism_or_limit": "Laufendes Projekt/Prototyp, kein flächendeckendes Produktivsystem."
+    },
+    {
+      "relationship_id": "PF-R06",
+      "subject_id": "PF-O06",
+      "relationship": "war Opfer des gemeldeten Vorfalls",
+      "object_id": "PF-E01",
+      "information_class": "Beobachtung",
+      "source_ids": [
+        "PF-S09"
+      ],
+      "locator": "IC3 erster Absatz",
+      "validity_period": "um 2025-02-21",
+      "countermechanism_or_limit": "Verwahrungsvorfall; kein Beleg eines Konsensbruchs oder allgemeiner Verlustquoten."
+    },
+    {
+      "relationship_id": "PF-R07",
+      "subject_id": "PF-P03",
+      "relationship": "spezifiziert höhere Account-Abstraction-Infrastruktur im Ethereum-Kontext",
+      "object_id": "PF-N02",
+      "information_class": "Beobachtung",
+      "source_ids": [
+        "PF-S05"
+      ],
+      "locator": "Abstract; Definitions",
+      "validity_period": "gelesene Fassung 2026-11-01",
+      "countermechanism_or_limit": "Keine Garantie nativer Protokoll-AA oder sicherer Adoption."
+    },
+    {
+      "relationship_id": "PF-R08",
+      "subject_id": "PF-P04",
+      "relationship": "spezifiziert EOA-Code-Delegation im Ethereum-Kontext",
+      "object_id": "PF-N02",
+      "information_class": "Beobachtung",
+      "source_ids": [
+        "PF-S06"
+      ],
+      "locator": "Abstract; Security Considerations",
+      "validity_period": "gelesene Fassung 2026-11-01",
+      "countermechanism_or_limit": "Keine Aussage über jede Wallet-Implementierung."
+    },
+    {
+      "relationship_id": "PF-R09",
+      "subject_id": "PF-A04",
+      "relationship": "verändert Halte-/Nachfrageentscheidungen für",
+      "object_id": "PF-T01",
+      "information_class": "Szenarioannahme",
+      "source_ids": [],
+      "locator": "Modellmechanismus des Research Seeds",
+      "validity_period": "Szenario 2026–2040; kein beobachteter Vertrag",
+      "countermechanism_or_limit": "Monetärer Nutzen kann trotz schwächerer Renditeerwartungen Nachfrage tragen."
+    },
+    {
+      "relationship_id": "PF-R10",
+      "subject_id": "PF-A05",
+      "relationship": "stellt abhängig von Erlösen und Kosten PoW-Leistung bereit für",
+      "object_id": "PF-N01",
+      "information_class": "Szenarioannahme",
+      "source_ids": [],
+      "locator": "Modellmechanismus des Research Seeds",
+      "validity_period": "Szenario 2026–2040; kein beobachteter Vertrag",
+      "countermechanism_or_limit": "Kosten und Difficulty passen sich an; Hashrate ist nicht alleinige Angriffskostenmessung."
+    },
+    {
+      "relationship_id": "PF-R11",
+      "subject_id": "PF-A06",
+      "relationship": "koordiniert Blockauswahl auf",
+      "object_id": "PF-N01",
+      "information_class": "Szenarioannahme",
+      "source_ids": [],
+      "locator": "Modellmechanismus des Research Seeds",
+      "validity_period": "Szenario 2026–2040; kein beobachteter Vertrag",
+      "countermechanism_or_limit": "Miner können Pool wechseln; Poolanteil ist nicht Hardwareeigentum."
+    },
+    {
+      "relationship_id": "PF-R12",
+      "subject_id": "PF-A07",
+      "relationship": "stellt Stake und Validierungsdienste bereit für",
+      "object_id": "PF-N02",
+      "information_class": "Szenarioannahme",
+      "source_ids": [],
+      "locator": "Modellmechanismus des Research Seeds",
+      "validity_period": "Szenario 2026–2040; kein beobachteter Vertrag",
+      "countermechanism_or_limit": "Slashing, Kontrolle, Clientdiversität und soziale Abwehr getrennt prüfen."
+    },
+    {
+      "relationship_id": "PF-R13",
+      "subject_id": "PF-A08",
+      "relationship": "entwickelt Wallets und Anwendungen für",
+      "object_id": "PF-N02",
+      "information_class": "Szenarioannahme",
+      "source_ids": [],
+      "locator": "Modellmechanismus des Research Seeds",
+      "validity_period": "Szenario 2026–2040; kein beobachteter Vertrag",
+      "countermechanism_or_limit": "Budgets, Komplexität und neue Delegationsfehler begrenzen Verbesserungen."
+    },
+    {
+      "relationship_id": "PF-R14",
+      "subject_id": "PF-A01",
+      "relationship": "wählt oder verlässt Wallet-/Verwahrungsdienst bei",
+      "object_id": "PF-A10",
+      "information_class": "Szenarioannahme",
+      "source_ids": [],
+      "locator": "Modellmechanismus des Research Seeds",
+      "validity_period": "Szenario 2026–2040; kein beobachteter Vertrag",
+      "countermechanism_or_limit": "Nutzer kann unabhängig verwahren; wahrgenommenes und tatsächliches Risiko unterscheiden."
+    },
+    {
+      "relationship_id": "PF-R15",
+      "subject_id": "PF-A02",
+      "relationship": "nutzt oder ersetzt Zahlungswege über",
+      "object_id": "PF-A09",
+      "information_class": "Szenarioannahme",
+      "source_ids": [],
+      "locator": "Modellmechanismus des Research Seeds",
+      "validity_period": "Szenario 2026–2040; kein beobachteter Vertrag",
+      "countermechanism_or_limit": "On-/Offramp und lokale Alternativen bestimmen Nutzen."
+    },
+    {
+      "relationship_id": "PF-R16",
+      "subject_id": "PF-A11",
+      "relationship": "entscheidet Verteilung von Stablecoins über",
+      "object_id": "PF-N02",
+      "information_class": "Szenarioannahme",
+      "source_ids": [],
+      "locator": "Modellmechanismus des Research Seeds",
+      "validity_period": "Szenario 2026–2040; kein beobachteter Vertrag",
+      "countermechanism_or_limit": "Andere Netze, rechtliche Sperrrechte und private Schienen bleiben Optionen."
+    },
+    {
+      "relationship_id": "PF-R17",
+      "subject_id": "PF-A12",
+      "relationship": "vergleicht offene Abwicklung auf",
+      "object_id": "PF-N02",
+      "information_class": "Szenarioannahme",
+      "source_ids": [],
+      "locator": "Modellmechanismus des Research Seeds",
+      "validity_period": "Szenario 2026–2040; kein beobachteter Vertrag",
+      "countermechanism_or_limit": "Permissioned, hybride und konventionelle Alternativen zulassen."
+    },
+    {
+      "relationship_id": "PF-R18",
+      "subject_id": "PF-A12",
+      "relationship": "vergleicht kontrollierte Architektur am Beispiel",
+      "object_id": "PF-N03",
+      "information_class": "Szenarioannahme",
+      "source_ids": [],
+      "locator": "Modellmechanismus des Research Seeds",
+      "validity_period": "Szenario 2026–2040; kein beobachteter Vertrag",
+      "countermechanism_or_limit": "Keine reale Beschaffungsentscheidung oder Kooperation behauptet."
+    },
+    {
+      "relationship_id": "PF-R19",
+      "subject_id": "PF-A15",
+      "relationship": "konkurriert um Entwicklungsressourcen mit oder schafft Nachfrage für",
+      "object_id": "PF-A08",
+      "information_class": "Szenarioannahme",
+      "source_ids": [],
+      "locator": "Modellmechanismus des Research Seeds",
+      "validity_period": "Szenario 2026–2040; kein beobachteter Vertrag",
+      "countermechanism_or_limit": "Richtung der KI-Wirkung offen, gemeinsamer Finanzierungszyklus möglich."
+    },
+    {
+      "relationship_id": "PF-R20",
+      "subject_id": "PF-A16",
+      "relationship": "kauft Daten-/Settlementleistungen auf",
+      "object_id": "PF-N02",
+      "information_class": "Szenarioannahme",
+      "source_ids": [],
+      "locator": "Modellmechanismus des Research Seeds",
+      "validity_period": "Szenario 2026–2040; kein beobachteter Vertrag",
+      "countermechanism_or_limit": "Mehr Nutzung kann geringere Stückgebühren kompensieren oder auf andere Schichten wechseln."
+    },
+    {
+      "relationship_id": "PF-R21",
+      "subject_id": "PF-A14",
+      "relationship": "bedroht operative Verwahrung von",
+      "object_id": "PF-A10",
+      "information_class": "Szenarioannahme",
+      "source_ids": [],
+      "locator": "Modellmechanismus des Research Seeds",
+      "validity_period": "Szenario 2026–2040; kein beobachteter Vertrag",
+      "countermechanism_or_limit": "Kontrollen, Entdeckung, Recovery und Strafverfolgung können Schaden senken."
+    },
+    {
+      "relationship_id": "PF-R22",
+      "subject_id": "PF-A13",
+      "relationship": "verändert Zulassungs-/Risikobedingungen für",
+      "object_id": "PF-A12",
+      "information_class": "Szenarioannahme",
+      "source_ids": [],
+      "locator": "Modellmechanismus des Research Seeds",
+      "validity_period": "Szenario 2026–2040; kein beobachteter Vertrag",
+      "countermechanism_or_limit": "Jurisdiktion und Mandate unterscheiden; keine konkrete Rechtsänderung vorausgesetzt."
+    },
+    {
+      "relationship_id": "PF-R23",
+      "subject_id": "PF-A03",
+      "relationship": "hält wegen monetären Nutzens",
+      "object_id": "PF-T01",
+      "information_class": "Szenarioannahme",
+      "source_ids": [],
+      "locator": "Modellmechanismus des Research Seeds",
+      "validity_period": "Szenario 2026–2040; kein beobachteter Vertrag",
+      "countermechanism_or_limit": "Präferenz bleibt zu testende Annahme, keine unbedingte Preisstütze."
+    },
+    {
+      "relationship_id": "PF-R24",
+      "subject_id": "PF-A10",
+      "relationship": "passt Sicherheitskontrollen und Entschädigung an gegenüber",
+      "object_id": "PF-A01",
+      "information_class": "Szenarioannahme",
+      "source_ids": [],
+      "locator": "Modellmechanismus des Research Seeds",
+      "validity_period": "Szenario 2026–2040; kein beobachteter Vertrag",
+      "countermechanism_or_limit": "Kapital, Versicherung und Zugriffskontrolle begrenzen Wiederherstellung."
+    }
+  ]
+}

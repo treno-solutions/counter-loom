@@ -6,3 +6,6 @@
 *.pdf binary
 *.xlsx binary
 *.png binary
+# Preserve exact bytes of archived inputs and captured outputs for SHA-256 checks.
+/runs/**/inputs/** -text
+/runs/**/exports/** -text

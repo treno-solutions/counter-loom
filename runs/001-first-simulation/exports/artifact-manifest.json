@@ -1,0 +1,14 @@
+[
+  {
+    "path": "exports/report-page-capture.md",
+    "bytes": 21713,
+    "sha256": "01436ca4fa060d35d31c1fab81ad41de14b9253bb5d6c3324c2358f5fdfcb9f5",
+    "kind": "rendered_page_capture"
+  },
+  {
+    "path": "exports/inspection-record.json",
+    "bytes": 1932,
+    "sha256": "233e3a00e033fb3b336fb07ec4353ee26976b5875082fccb408c9bae5115b658",
+    "kind": "inspection_summary"
+  }
+]

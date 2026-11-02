@@ -1,0 +1,16 @@
+{
+  "checked_on": "2026-11-02",
+  "scope": "repository documentation and staged archive integrity; not simulation or workshop validation",
+  "passed": true,
+  "local_markdown_links_checked": 180,
+  "broken_links": [],
+  "private_indicators": [],
+  "staged_artifact_hashes_checked": 20,
+  "archived_documents_with_explicit_root_reference_base": [
+    "runs/002-permissionless-finance/inputs/SIMULATION_TEMPLATE.md"
+  ],
+  "json_parse": "passed",
+  "python_syntax": "passed",
+  "curated_indexes_protected_from_domain_generator": true,
+  "framework_pilots_performed": false
+}

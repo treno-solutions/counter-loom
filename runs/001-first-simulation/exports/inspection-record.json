@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "record_type": "inspection_summary_not_original_api_export",
+  "compiled_on": "2026-11-02",
+  "observation_date": "2026-11-01",
+  "report_id": "report_fd221991e032",
+  "report_url": "https://fish.treno.solutions/interaction/report_fd221991e032",
+  "project_id": "proj_1a8710f2603c",
+  "simulation_id": "sim_30812a387855",
+  "association_evidence": "The report page requested this simulation endpoint; simulation metadata and run-status were then read directly. No server-side input export was obtained.",
+  "simulation_metadata": {
+    "status": "completed",
+    "current_round": 0,
+    "twitter_status": "not_started",
+    "reddit_status": "not_started",
+    "profiles_count": 24
+  },
+  "run_status": {
+    "runner_status": "completed",
+    "current_round": 24,
+    "total_rounds": 24,
+    "total_actions_count": 86,
+    "twitter_actions_count": 50,
+    "twitter_current_round": 23,
+    "twitter_completed": false,
+    "twitter_running": false,
+    "reddit_actions_count": 36,
+    "reddit_current_round": 24,
+    "reddit_completed": true,
+    "reddit_running": false
+  },
+  "interview_attempt": {
+    "actor": "central_banks_354",
+    "result": "error",
+    "message": "Sorry, an error occurred: Simulation environment not running or closed. Please ensure simulation is started and wait for it to progress."
+  },
+  "operator_statement": {
+    "recorded_on": "2026-11-01",
+    "content": "Memory data are unavailable for this run; availability for a future run has been requested.",
+    "evidence_class": "operator_statement_not_independent_technical_verification"
+  },
+  "limits": [
+    "Action counts were read from status metadata; individual actions were not exported or assessed.",
+    "The two status sources disagree.",
+    "Runtime model, exact code version and actual input mapping are not verified.",
+    "No measured token, monetary-cost or workshop-learning outcome data are available."
+  ]
+}

@@ -1,0 +1,387 @@
+{
+  "schema_version": 1,
+  "entities": [
+    {
+      "entity_id": "PF-A01",
+      "canonical_name": "Kleinanwender Europa/Schweiz",
+      "aliases": [],
+      "entity_type": "representative_model_actor",
+      "information_class": "Szenarioannahme",
+      "role": "Nutzer mit guten konventionellen Alternativen",
+      "source_ids": [],
+      "profile_reference": "research-seed.md#akteure-und-unterschiedliche-interessen"
+    },
+    {
+      "entity_id": "PF-A02",
+      "canonical_name": "Nutzer mit teuren Überweisungen oder eingeschränktem Zugang",
+      "aliases": [],
+      "entity_type": "representative_model_actor",
+      "information_class": "Szenarioannahme",
+      "role": "Zugang und Gesamtkosten",
+      "source_ids": [],
+      "profile_reference": "research-seed.md#akteure-und-unterschiedliche-interessen"
+    },
+    {
+      "entity_id": "PF-A03",
+      "canonical_name": "BTC-Halter ohne Renditeziel",
+      "aliases": [],
+      "entity_type": "representative_model_actor",
+      "information_class": "Szenarioannahme",
+      "role": "Monetärer Nutzen als zu testende Präferenz",
+      "source_ids": [],
+      "profile_reference": "research-seed.md#akteure-und-unterschiedliche-interessen"
+    },
+    {
+      "entity_id": "PF-A04",
+      "canonical_name": "Trader und Allocator",
+      "aliases": [],
+      "entity_type": "representative_model_actor",
+      "information_class": "Szenarioannahme",
+      "role": "Renditeerwartungen und Risiko",
+      "source_ids": [],
+      "profile_reference": "research-seed.md#akteure-und-unterschiedliche-interessen"
+    },
+    {
+      "entity_id": "PF-A05",
+      "canonical_name": "Unabhängiger Miner",
+      "aliases": [],
+      "entity_type": "representative_model_actor",
+      "information_class": "Szenarioannahme",
+      "role": "Betriebsertrag und Kosten",
+      "source_ids": [],
+      "profile_reference": "research-seed.md#akteure-und-unterschiedliche-interessen"
+    },
+    {
+      "entity_id": "PF-A06",
+      "canonical_name": "Miningpoolbetreiber",
+      "aliases": [],
+      "entity_type": "representative_model_actor",
+      "information_class": "Szenarioannahme",
+      "role": "Blockproduktion und Mitgliederbindung",
+      "source_ids": [],
+      "profile_reference": "research-seed.md#akteure-und-unterschiedliche-interessen"
+    },
+    {
+      "entity_id": "PF-A07",
+      "canonical_name": "Validator und Stakinganbieter",
+      "aliases": [],
+      "entity_type": "representative_model_actor",
+      "information_class": "Szenarioannahme",
+      "role": "Ertrag und Slashingrisiko",
+      "source_ids": [],
+      "profile_reference": "research-seed.md#akteure-und-unterschiedliche-interessen"
+    },
+    {
+      "entity_id": "PF-A08",
+      "canonical_name": "Protokoll- und Walletentwickler",
+      "aliases": [],
+      "entity_type": "representative_model_actor",
+      "information_class": "Szenarioannahme",
+      "role": "Wartung, Sicherheit und Produktentwicklung",
+      "source_ids": [],
+      "profile_reference": "research-seed.md#akteure-und-unterschiedliche-interessen"
+    },
+    {
+      "entity_id": "PF-A09",
+      "canonical_name": "Händler und Remittanceanbieter",
+      "aliases": [],
+      "entity_type": "representative_model_actor",
+      "information_class": "Szenarioannahme",
+      "role": "Zahlungsabwicklung und Support",
+      "source_ids": [],
+      "profile_reference": "research-seed.md#akteure-und-unterschiedliche-interessen"
+    },
+    {
+      "entity_id": "PF-A10",
+      "canonical_name": "Börse und Custodian",
+      "aliases": [],
+      "entity_type": "representative_model_actor",
+      "information_class": "Szenarioannahme",
+      "role": "Verwahrung und Haftung",
+      "source_ids": [],
+      "profile_reference": "research-seed.md#akteure-und-unterschiedliche-interessen"
+    },
+    {
+      "entity_id": "PF-A11",
+      "canonical_name": "Stablecoinemittent",
+      "aliases": [],
+      "entity_type": "representative_model_actor",
+      "information_class": "Szenarioannahme",
+      "role": "Rücknahme, Reserven und Distribution",
+      "source_ids": [],
+      "profile_reference": "research-seed.md#akteure-und-unterschiedliche-interessen"
+    },
+    {
+      "entity_id": "PF-A12",
+      "canonical_name": "Bank- und Börsenkonsortium",
+      "aliases": [],
+      "entity_type": "representative_model_actor",
+      "information_class": "Szenarioannahme",
+      "role": "Architekturwahl und Rechtsklarheit",
+      "source_ids": [],
+      "profile_reference": "research-seed.md#akteure-und-unterschiedliche-interessen"
+    },
+    {
+      "entity_id": "PF-A13",
+      "canonical_name": "Aufsicht und Zentralbankrolle",
+      "aliases": [],
+      "entity_type": "representative_model_actor",
+      "information_class": "Szenarioannahme",
+      "role": "Stabilität, Zugang und Durchsetzung",
+      "source_ids": [],
+      "profile_reference": "research-seed.md#akteure-und-unterschiedliche-interessen"
+    },
+    {
+      "entity_id": "PF-A14",
+      "canonical_name": "Angreiferrolle",
+      "aliases": [],
+      "entity_type": "representative_model_actor",
+      "information_class": "Szenarioannahme",
+      "role": "Profit, Störung oder Sabotage; keine technische Angriffsausführung",
+      "source_ids": [],
+      "profile_reference": "research-seed.md#akteure-und-unterschiedliche-interessen"
+    },
+    {
+      "entity_id": "PF-A15",
+      "canonical_name": "KI-Unternehmen und Softwarezahler",
+      "aliases": [],
+      "entity_type": "representative_model_actor",
+      "information_class": "Szenarioannahme",
+      "role": "Automatisierung und Zahlungsinfrastruktur",
+      "source_ids": [],
+      "profile_reference": "research-seed.md#akteure-und-unterschiedliche-interessen"
+    },
+    {
+      "entity_id": "PF-A16",
+      "canonical_name": "L2- und Bridgebetreiber",
+      "aliases": [],
+      "entity_type": "representative_model_actor",
+      "information_class": "Szenarioannahme",
+      "role": "Skalierung, Schichtwahl und Erlös",
+      "source_ids": [],
+      "profile_reference": "research-seed.md#akteure-und-unterschiedliche-interessen"
+    },
+    {
+      "entity_id": "PF-N01",
+      "canonical_name": "Bitcoin",
+      "aliases": [
+        "BTC-Netzwerk"
+      ],
+      "entity_type": "network",
+      "information_class": "Beobachtung",
+      "source_ids": [
+        "PF-S01",
+        "PF-S02"
+      ],
+      "role": "Nur belegte technische oder institutionelle Eigenschaften; keine zugeschriebenen individuellen Strategien."
+    },
+    {
+      "entity_id": "PF-N02",
+      "canonical_name": "Ethereum",
+      "aliases": [
+        "Ethereum L1"
+      ],
+      "entity_type": "network",
+      "information_class": "Beobachtung",
+      "source_ids": [
+        "PF-S04",
+        "PF-S07",
+        "PF-S08"
+      ],
+      "role": "Nur belegte technische oder institutionelle Eigenschaften; keine zugeschriebenen individuellen Strategien."
+    },
+    {
+      "entity_id": "PF-T01",
+      "canonical_name": "BTC",
+      "aliases": [
+        "Bitcoin Token"
+      ],
+      "entity_type": "native_token",
+      "information_class": "Beobachtung",
+      "source_ids": [
+        "PF-S01"
+      ],
+      "role": "Nur belegte technische oder institutionelle Eigenschaften; keine zugeschriebenen individuellen Strategien."
+    },
+    {
+      "entity_id": "PF-T02",
+      "canonical_name": "ETH",
+      "aliases": [
+        "Ether"
+      ],
+      "entity_type": "native_token",
+      "information_class": "Beobachtung",
+      "source_ids": [
+        "PF-S04"
+      ],
+      "role": "Nur belegte technische oder institutionelle Eigenschaften; keine zugeschriebenen individuellen Strategien."
+    },
+    {
+      "entity_id": "PF-O01",
+      "canonical_name": "Bitcoin Core",
+      "aliases": [],
+      "entity_type": "software_project",
+      "information_class": "Beobachtung",
+      "source_ids": [
+        "PF-S01",
+        "PF-S02"
+      ],
+      "role": "Nur belegte technische oder institutionelle Eigenschaften; keine zugeschriebenen individuellen Strategien."
+    },
+    {
+      "entity_id": "PF-O02",
+      "canonical_name": "Circle",
+      "aliases": [],
+      "entity_type": "organisation",
+      "information_class": "Beobachtung",
+      "source_ids": [
+        "PF-S16"
+      ],
+      "role": "Nur belegte technische oder institutionelle Eigenschaften; keine zugeschriebenen individuellen Strategien."
+    },
+    {
+      "entity_id": "PF-T03",
+      "canonical_name": "USDC",
+      "aliases": [
+        "USD Coin"
+      ],
+      "entity_type": "stablecoin",
+      "information_class": "Beobachtung",
+      "source_ids": [
+        "PF-S16"
+      ],
+      "role": "Nur belegte technische oder institutionelle Eigenschaften; keine zugeschriebenen individuellen Strategien."
+    },
+    {
+      "entity_id": "PF-O03",
+      "canonical_name": "J.P. Morgan",
+      "aliases": [
+        "JPMorgan"
+      ],
+      "entity_type": "organisation",
+      "information_class": "Beobachtung",
+      "source_ids": [
+        "PF-S15"
+      ],
+      "role": "Nur belegte technische oder institutionelle Eigenschaften; keine zugeschriebenen individuellen Strategien."
+    },
+    {
+      "entity_id": "PF-N03",
+      "canonical_name": "Kinexys",
+      "aliases": [],
+      "entity_type": "institutional_platform",
+      "information_class": "Beobachtung",
+      "source_ids": [
+        "PF-S15"
+      ],
+      "role": "Nur belegte technische oder institutionelle Eigenschaften; keine zugeschriebenen individuellen Strategien."
+    },
+    {
+      "entity_id": "PF-O04",
+      "canonical_name": "Monetary Authority of Singapore",
+      "aliases": [
+        "MAS"
+      ],
+      "entity_type": "organisation",
+      "information_class": "Beobachtung",
+      "source_ids": [
+        "PF-S17"
+      ],
+      "role": "Nur belegte technische oder institutionelle Eigenschaften; keine zugeschriebenen individuellen Strategien."
+    },
+    {
+      "entity_id": "PF-P01",
+      "canonical_name": "Guardian",
+      "aliases": [
+        "Project Guardian"
+      ],
+      "entity_type": "programme",
+      "information_class": "Beobachtung",
+      "source_ids": [
+        "PF-S17"
+      ],
+      "role": "Nur belegte technische oder institutionelle Eigenschaften; keine zugeschriebenen individuellen Strategien."
+    },
+    {
+      "entity_id": "PF-O05",
+      "canonical_name": "BIS Innovation Hub",
+      "aliases": [],
+      "entity_type": "organisation",
+      "information_class": "Beobachtung",
+      "source_ids": [
+        "PF-S18"
+      ],
+      "role": "Nur belegte technische oder institutionelle Eigenschaften; keine zugeschriebenen individuellen Strategien."
+    },
+    {
+      "entity_id": "PF-P02",
+      "canonical_name": "Project Agorá",
+      "aliases": [
+        "Agora"
+      ],
+      "entity_type": "prototype_project",
+      "information_class": "Beobachtung",
+      "source_ids": [
+        "PF-S18"
+      ],
+      "role": "Nur belegte technische oder institutionelle Eigenschaften; keine zugeschriebenen individuellen Strategien."
+    },
+    {
+      "entity_id": "PF-O06",
+      "canonical_name": "Bybit",
+      "aliases": [],
+      "entity_type": "exchange",
+      "information_class": "Beobachtung",
+      "source_ids": [
+        "PF-S09"
+      ],
+      "role": "Nur belegte technische oder institutionelle Eigenschaften; keine zugeschriebenen individuellen Strategien."
+    },
+    {
+      "entity_id": "PF-O07",
+      "canonical_name": "NIST",
+      "aliases": [],
+      "entity_type": "standards_body",
+      "information_class": "Beobachtung",
+      "source_ids": [
+        "PF-S19"
+      ],
+      "role": "Nur belegte technische oder institutionelle Eigenschaften; keine zugeschriebenen individuellen Strategien."
+    },
+    {
+      "entity_id": "PF-P03",
+      "canonical_name": "ERC-4337",
+      "aliases": [
+        "EIP-4337"
+      ],
+      "entity_type": "technical_standard",
+      "information_class": "Beobachtung",
+      "source_ids": [
+        "PF-S05"
+      ],
+      "role": "Nur belegte technische oder institutionelle Eigenschaften; keine zugeschriebenen individuellen Strategien."
+    },
+    {
+      "entity_id": "PF-P04",
+      "canonical_name": "EIP-7702",
+      "aliases": [],
+      "entity_type": "technical_standard",
+      "information_class": "Beobachtung",
+      "source_ids": [
+        "PF-S06"
+      ],
+      "role": "Nur belegte technische oder institutionelle Eigenschaften; keine zugeschriebenen individuellen Strategien."
+    },
+    {
+      "entity_id": "PF-E01",
+      "canonical_name": "Bybit-Diebstahl Februar 2025",
+      "aliases": [],
+      "entity_type": "historical_event",
+      "information_class": "Historische Schätzung",
+      "source_ids": [
+        "PF-S09"
+      ],
+      "role": "Datierter Vorfall; ungefähre Summe laut Behördenmeldung, keine vollständige technische Ursachenanalyse."
+    }
+  ]
+}
