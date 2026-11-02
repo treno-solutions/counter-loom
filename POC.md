@@ -109,3 +109,7 @@ Das [Staatskreditkonzept](poc/FISCAL_MODEL.md) ergänzt einen begrenzten Geschä
 ## Modell v7 · Leitzins und Vertragsbindung
 
 Der [Modell-Leitzins](poc/RATES_MODEL.md) ist ab der nächsten Monatsgrenze veränderbar. Der variable Betriebskredit nutzt den Vormonatsleitzins, der feste Betriebskredit bleibt bei 2 %. Neue Maschinen- und Staatskredite binden ihr Zinsangebot erst bei tatsächlicher Gutschrift. Staatskreditbeträge behalten ihre eigenen festen Sätze und werden bei Tilgung nach Alter reduziert. Bankansicht und Szenariosteuerung zeigen Konditionen, monatliche Zinsforderungen und die zeitliche Übertragung. Die [V7-Prüfung](qa/rates-v7-plausibility.md) ergänzt unveränderte ältere Ergebnisse; kein empirischer Nachweis einer geldpolitischen Übertragungsstärke.
+
+## Modell v8 · Preise und Kaufkraft
+
+Die [Preisregel](poc/PRICES_MODEL.md) ergänzt eine teilweise, verzögerte Weitergabe zusätzlicher Energie-Stückkosten. Gemeinsame Monatsansichten zeigen Energiekosten, Preise, Kaufkraft, Produktion und Beschäftigung. Haushaltskurven trennen nominale Ausgaben und Warenmengen zu Startpreisen. Neue Maschinenverträge binden den dann aktuellen Preis von acht Werkstatteinheiten; bestehende Verträge behalten ihren Lieferpreis. Alle Parameter sind illustrative Annahmen, keine empirische Inflationskalibrierung. [V8-Prüfung](qa/prices-v8-plausibility.md).

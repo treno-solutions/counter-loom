@@ -1,10 +1,10 @@
-# Bankbilanz · Grundlage v3, erweitert bis v7
+# Bankbilanz · Grundlage v3, erweitert bis v8
 
 Stand: 2. November 2026. Begrenzter Einbank-Test innerhalb der laufenden Welt; keine empirische Kreditvergabe- oder Regulierungsstudie. Alle Beträge und Vertragsbedingungen sind illustrative Annahmen.
 
-## Aktueller Umfang v7
+## Aktueller Umfang v8
 
-Der Maschinenvertrag und die Einlagenbrücke bleiben erhalten. Die [Leitzinsregeln v7](RATES_MODEL.md) trennen den verzögert variablen Alltagskredit, den festen Werkstattkredit sowie bei Gutschrift fest gebundene Maschinen- und Staatskreditbeträge. Die nachfolgend genannten 6 % und 39 € beschreiben den unveränderten Basisfall bei 2 % Modell-Leitzins. Seit v5 sind [Warenexporte](FOREIGN_MODEL.md) enthalten; v6 ergänzt einen [Staatskredit](FISCAL_MODEL.md) bei derselben Bank. Neue Kredit- und Tilgungssummen umfassen Maschinen- und Staatskredit. Die Bankforderung an den Staat stimmt mit dessen Schuld überein; tatsächlich bezahlte Staatszinsen fließen in Bankertrag und Haushaltsausschüttung ein. Die nachfolgenden Abschnitte erklären den ursprünglichen Maschinenfall; die dortige Grenze eines neuen Kredits pro Welt gilt nur für diesen Vertrag.
+Der Maschinenvertrag und die Einlagenbrücke bleiben erhalten. Seit [V8](PRICES_MODEL.md) kostet die Maschine acht aktuelle Werkstatteinheiten; Preis und Kreditbetrag werden bei Gutschrift gebunden. Die Tilgungsrate wird aus diesem Betrag für zwölf Monate centweise aufgerundet, die Schlussrate auf die Restschuld begrenzt. Auch eine verzögerte Lieferung behält den Vertragspreis. Die folgenden Zahlen beschreiben den unveränderten Startpreisfall. Die [Leitzinsregeln v7](RATES_MODEL.md) trennen den verzögert variablen Alltagskredit, den festen Werkstattkredit sowie bei Gutschrift fest gebundene Maschinen- und Staatskreditbeträge. Die nachfolgend genannten 6 % und 39 € beschreiben den unveränderten Basisfall bei 2 % Modell-Leitzins. Seit v5 sind [Warenexporte](FOREIGN_MODEL.md) enthalten; v6 ergänzt einen [Staatskredit](FISCAL_MODEL.md) bei derselben Bank. Neue Kredit- und Tilgungssummen umfassen Maschinen- und Staatskredit. Die Bankforderung an den Staat stimmt mit dessen Schuld überein; tatsächlich bezahlte Staatszinsen fließen in Bankertrag und Haushaltsausschüttung ein. Die nachfolgenden Abschnitte erklären den ursprünglichen Maschinenfall; die dortige Grenze eines neuen Kredits pro Welt gilt nur für diesen Vertrag.
 
 ## Bilanzgrenze und Eröffnung
 

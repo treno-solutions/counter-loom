@@ -67,6 +67,8 @@ class Banking:
         if supplier['inventory'] - supplier.get('reserved_units', 0) < loan.units:
             loan.message = 'Anfrage wartet auf acht verfügbare Werkstatteinheiten für die Maschine.'
             return True
+        loan.amount_cents=loan.units*supplier['price']
+        loan.monthly_principal_cents=(loan.amount_cents+loan.term_months-1)//loan.term_months
         loan.annual_rate_bps=world.monetary.machine_offer()
         loan.policy_rate_at_issue_bps=world.monetary.rate_bps
         before = self.balance(world)
@@ -82,7 +84,7 @@ class Banking:
         loan.message = 'Kreditguthaben und Kreditforderung sind gebucht. Die reservierte Maschine wird in der Abschlussphase geliefert.'
         supplier['reserved_units'] = supplier.get('reserved_units', 0) + loan.units
         world.record('bank', loan.borrower, loan.amount_cents, 'machine_credit', 'Maschinenkredit gutgeschrieben', source_before, target_before, before, 'loan_creation')
-        world.notice('Die Bank schafft 1.200 € Kreditguthaben und eine gleich hohe Forderung. Ihr Eigenkapital wird nicht ausgezahlt.', 'bank')
+        world.notice(f'Die Bank schafft {loan.amount_cents/100:.2f} € Kreditguthaben und eine gleich hohe Forderung. Ihr Eigenkapital wird nicht ausgezahlt.', 'bank')
         return True
 
     def deliver(self, world):
@@ -94,7 +96,7 @@ class Banking:
             loan.message = 'Lieferung wartet auf Zahlungsmittel beziehungsweise reservierte Ware.'
             return
         supplier['reserved_units'] -= loan.units
-        units = world.buy(loan.borrower, loan.supplier, loan.amount_cents, 'machine_purchase')
+        units = world.buy(loan.borrower, loan.supplier, loan.amount_cents, 'machine_purchase', unit_price_cents=loan.amount_cents//loan.units)
         if units != loan.units:
             raise RuntimeError('Reservierte Maschinenlieferung stimmt nicht mit dem Vertrag überein.')
         borrower['capital'] += 1
@@ -102,7 +104,7 @@ class Banking:
         loan.delivery_month = world.month
         loan.status = 'delivered'
         loan.message = 'Maschine bezahlt und geliefert. Ab nächstem Monat wirkt die Kapazität und beginnt der Schuldendienst.'
-        world.notice('Kreditfinanzierte Maschine geliefert: 1.200 € gehen an die Werkstatt, ab Folgemonat +4 Einheiten Kapazität.', loan.borrower)
+        world.notice(f'Kreditfinanzierte Maschine geliefert: {loan.amount_cents/100:.2f} € gehen an die Werkstatt, ab Folgemonat +4 Einheiten Kapazität.', loan.borrower)
 
     def due(self,world,month=None):
         loan=self.loan
@@ -141,7 +143,7 @@ class Banking:
             loan.principal_paid_cents += paid
             self.repaid += paid
             world.record(loan.borrower, 'bank', paid, 'machine_principal', 'Tilgung Maschinenkredit', source_before, target_before, before, 'principal_repayment')
-        loan.overdue_principal_cents = max(0, due_instalments * loan.monthly_principal_cents - loan.principal_paid_cents)
+        loan.overdue_principal_cents = max(0, min(loan.amount_cents,due_instalments * loan.monthly_principal_cents) - loan.principal_paid_cents)
         if loan.overdue_interest_cents or loan.overdue_principal_cents:
             loan.message = 'Eine fällige Zahlung ist nicht vollständig gedeckt. Restschuld und Rückstände bleiben bestehen.'
             world.notice('Maschinenkredit: fällige Zinsen oder Tilgung sind nicht vollständig bezahlt.', loan.borrower)
@@ -164,7 +166,10 @@ class Banking:
     def snapshot(self, world):
         events = [t for t in world.journal if t['kind'] in ('machine_credit', 'machine_purchase', 'machine_interest', 'machine_principal')]
         loan_data=asdict(self.loan)
-        if self.loan.issue_month is None:loan_data['annual_rate_bps']=world.monetary.machine_offer()
+        if self.loan.issue_month is None:
+            loan_data['annual_rate_bps']=world.monetary.machine_offer()
+            loan_data['amount_cents']=self.loan.units*world.nodes[self.loan.supplier]['price']
+            loan_data['monthly_principal_cents']=(loan_data['amount_cents']+self.loan.term_months-1)//self.loan.term_months
         return dict(balance=self.balance(world), loan=loan_data, events=events, initial_deposits_cents=self.initial_deposits,
                     credit_created_cents=self.created, principal_repaid_cents=self.repaid, interest_received_cents=self.interest_received,
                     distributed_cents=self.distributed, expected_deposits_cents=self.initial_deposits+self.created-self.repaid-self.interest_received+self.distributed)

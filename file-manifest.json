@@ -1,13 +1,13 @@
 [
   {
     "path": "BUILD_PLAN.md",
-    "bytes": 19866,
-    "sha256": "2d0b91ad6a5fd49368e966a45fe4eec3aa433cb63604f1301bcf92615f47fbbe"
+    "bytes": 19937,
+    "sha256": "cd6c100ae5622e25bb919e685221e07a0b7c7e794bcc3adf340b1e668c307123"
   },
   {
     "path": "POC.md",
-    "bytes": 13112,
-    "sha256": "96dec33f26e9a075ffb699feeb25f4dfa5de66556d451db966f94ddbe58fa348"
+    "bytes": 13710,
+    "sha256": "5a4591e7792721ce221a1b9835fa51708d0c7396fe988e1b80a3a229b3df4fb2"
   },
   {
     "path": "RESEARCH.md",
@@ -106,8 +106,8 @@
   },
   {
     "path": "poc/source-manifest.json",
-    "bytes": 6762,
-    "sha256": "29a071f335f119de830b25c4e7c1e51a431506d3d4c2e657cd7494d0cc2de189"
+    "bytes": 7343,
+    "sha256": "7b07160a33db9a180683181be282b061005b709496123264ea56a02dca8aa6d2"
   },
   {
     "path": "processed/energy-monthly-prices.csv",
@@ -403,6 +403,21 @@
     "path": "qa/price-data-validation.json",
     "bytes": 468,
     "sha256": "83d457c6513423ab44246f263803bb686d97dee071a4f4850bf19a58fd978f0e"
+  },
+  {
+    "path": "qa/prices-v8-plausibility.json",
+    "bytes": 2568448,
+    "sha256": "f031340466f442bb2e72dcb03d5db7d55c3041a8e6af062121871337d1be75b3"
+  },
+  {
+    "path": "qa/prices-v8-plausibility.md",
+    "bytes": 8826,
+    "sha256": "4181e66c21f73308ef5636b5e04a64b7b98ebb371e46311a353a630963a5655d"
+  },
+  {
+    "path": "qa/prices-v8-verification-2026-11-02.json",
+    "bytes": 3599,
+    "sha256": "e0a25ddd8441010114f3dd0da8125c7e393fd409efa58fcc760083019ea51b37"
   },
   {
     "path": "qa/rates-v7-plausibility.json",

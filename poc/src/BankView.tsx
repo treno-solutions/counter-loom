@@ -28,8 +28,8 @@ export default function BankView({ world, busy, running, onRequest, onRate }: { 
   useEffect(() => { setKind('machine_credit'); setEventId(null); setFollow(true); }, [world.world_id]);
   const activeNow = running && event?.month === world.month && event?.phase === world.phase;
   const links = [
-    { kind: 'machine_credit', d: 'M 230 130 C 340 20 410 20 530 64', x: 375, y: 52, label: 'Kreditguthaben +1.200 €' },
-    { kind: 'machine_purchase', d: 'M 690 120 L 690 238', x: 741, y: 177, label: 'Maschine · 1.200 €' },
+    { kind: 'machine_credit', d: 'M 230 130 C 340 20 410 20 530 64', x: 375, y: 52, label: `Kreditguthaben +${euro(loan.amount_cents)}` },
+    { kind: 'machine_purchase', d: 'M 690 120 L 690 238', x: 741, y: 177, label: `Maschine · ${euro(loan.amount_cents)}` },
     { kind: 'machine_interest', d: 'M 530 89 C 400 101 340 145 230 169', x: 388, y: 135, label: 'Zinsen → Bankertrag' },
     { kind: 'machine_principal', d: 'M 530 106 C 460 242 350 256 230 204', x: 384, y: 233, label: 'Tilgung → Forderung sinkt' },
   ];
