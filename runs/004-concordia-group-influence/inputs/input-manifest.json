@@ -1,0 +1,22 @@
+[
+  {
+    "path": "inputs/design.json",
+    "bytes": 1181,
+    "sha256": "d9d25e8b8fb20c779a6404a5415899cbc6bae20049edd548cb6441fa13d02de8"
+  },
+  {
+    "path": "inputs/people.json",
+    "bytes": 3705,
+    "sha256": "744001d0c25630f5448d0b699a568f723bac395aa7ad411afa401344b1140d05"
+  },
+  {
+    "path": "inputs/scenario.json",
+    "bytes": 1622,
+    "sha256": "bf4a74af8d176dffb230662987034f7f884d7c7541443330e204825664bb7a74"
+  },
+  {
+    "path": "inputs/start-check.md",
+    "bytes": 679,
+    "sha256": "dedaf1441d110f4f0c8d8d33d84070682c486451d4bfd2fa932b697680209498"
+  }
+]

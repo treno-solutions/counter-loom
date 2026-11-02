@@ -45,3 +45,7 @@ Primärquellen: [Personenbaustein](https://github.com/google-deepmind/concordia/
 **Vorrangiger Kandidat für den nächsten begrenzten Verhaltenstest.** Die im aktuellen Quellstand vorhandenen Foren- und Speicherbausteine sowie die bestandenen technischen Tests sprechen dafür, zuerst einen kleinen vorhandenen Concordia-Ansatz zu konfigurieren. Das ist keine abgeschlossene Frameworkwahl und kein Einflussnachweis.
 
 Nicht erforderlich: eigene Agentenengine, reale Käufe, freie Internetrecherche oder eine sofort repräsentative Gesamtbevölkerung. Erforderlich: gleichbleibende Ausgangsprofile, zwei Gruppen, gezielte Nachrichtenzustellung, getrennte Vergleichsbedingungen und neutraler Vorher-/Nachher-Abruf. Ein bezahlter Modelllauf ist in dieser Prüfung nicht gestartet worden.
+
+## Vorgesehener erster Personenversuch
+
+[Versuch 004](../../runs/004-concordia-group-influence/README.md) ist mit acht Fällen und einem begrenzten Vergleich vorbereitet. Der Ablauf ist mit technischem Transport-Testdouble geprüft; keine generativen Personenreaktionen ausgeführt. Eine funktionierende Modellanbindung steht aus. Diese Vorbereitung ändert den Frameworkstatus nicht zu einem abgeschlossenen Persona-Pilot.

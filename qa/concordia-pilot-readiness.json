@@ -1,0 +1,13 @@
+{
+  "checked_on": "2026-11-02",
+  "passed": true,
+  "people": 8,
+  "groups": 2,
+  "input_checksums": "passed",
+  "group_observation_isolation": "passed",
+  "state_round_trip": "passed",
+  "llm_calls": 0,
+  "live_run_ready": false,
+  "missing": "functional model connection and provider budget",
+  "limits": "Technical setup only; no simulated opinions generated."
+}

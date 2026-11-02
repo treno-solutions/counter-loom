@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "run_id": "004-concordia-group-influence",
+  "title": "Kleiner Concordia-Gruppenversuch",
+  "framework": "Concordia",
+  "framework_commit": "f1d3ae6da20b32f686cefc13458cafc695c3b6a2",
+  "protocol_version": "1.0",
+  "readiness_status": "draft",
+  "execution_status": "not_started",
+  "blocking_condition": "awaiting_model_connection",
+  "prepared_on": "2026-11-02",
+  "model": null,
+  "provider": null,
+  "llm_calls": 0,
+  "exports": [],
+  "input_manifest": "inputs/input-manifest.json",
+  "notes": [
+    "Configured Ollama model listing failed during preparation. No API key configured in this task environment.",
+    "No invented conversations or simulated findings are stored."
+  ],
+  "technical_preflight": "passed",
+  "technical_workflow_test": "passed_with_stub_not_generative"
+}
