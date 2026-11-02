@@ -6,6 +6,7 @@ from threading import RLock
 from uuid import uuid4
 from BPTK_Py import Model, Agent, SimultaneousScheduler
 from banking import Banking
+from treasury import Treasury
 from foreign import ForeignTrade
 from firms import initial_company, plan as company_plan, staffing, forecast
 from systems import HouseholdInput, HouseholdSystem, GovernmentSystem, FinanceSystem
@@ -14,8 +15,8 @@ PHASES = ['Produktion & Löhne', 'Steuern & Transfers', 'Konsum & Aufträge', 'I
 RULES = {
  'households': 'Kaufplan: mindestens 1.000 € monatlicher Grundbedarf als illustrative Annahme, darüber 95 % des Nettoeinkommens (nach Konsumeingriff 65 %). Der Grundbedarfsplan kann aus vorhandenem Kontoguthaben finanziert werden. Käufe sind durch Geld, Lager und ganze Gütereinheiten begrenzt; unerfüllte Kaufpläne sind keine gebuchten Ausgaben oder Schulden.',
  'firms': 'Betriebe planen Absatz und Lagerpuffer, begrenzen Produktion durch Personal, Geld und Energie und passen Stellen erst nach zwei Monaten an. Lager wird zu Herstellungskosten bewertet. Positive Gewinne werden versteuert und bei ausreichendem Betriebspuffer teilweise an die sechs Haushaltseigentümer ausgeschüttet. Feste Preise und Löhne; illustrative Regeln.',
- 'government': 'Zwei öffentliche Stellen zu je 2.400 € brutto, bis zu 1.000 € Transfer je unbeschäftigtem Haushalt und bis zu 1.200 € Beschaffung je Betrieb. Alle Zahlungen werden aus dem endlichen Staatskonto geleistet; Einnahmen sind tatsächlich gezahlte Steuern.',
- 'bank': 'Eine Bank führt die Guthaben aller Nichtbanken. Eigenkapital und Kundeneinlagen sind getrennt. Ein begrenzter Maschinenkredit von 1.200 € schafft eine Einlage und eine Kreditforderung; Tilgung baut beide ab. Zinsen sind Bankertrag. Die tatsächlich vereinnahmten Zinsen werden am Monatsende an Haushalte ausgeschüttet.',
+ 'government': 'Zwei öffentliche Stellen zu je 2.400 € brutto, bis zu 1.000 € Transfer je unbeschäftigtem Haushalt und bis zu 1.200 € Beschaffung je Betrieb. Tatsächliche Kassenfehlbeträge können durch einen Staatskredit der Bank bis 50.000 € finanziert werden. Darauf fallen ab Folgemonat 3 % Jahreszins an. Überschüsse tilgen Schuld; nach Ausschöpfen der Kreditgrenze bleibt die endliche Kassenreserve. Kredit ist Finanzierung, keine Steuereinnahme.',
+ 'bank': 'Eine Bank führt die Guthaben aller Nichtbanken. Eigenkapital und Kundeneinlagen sind getrennt. Ein begrenzter Maschinenkredit von 1.200 € schafft eine Einlage und eine Kreditforderung; Tilgung baut beide ab. Zinsen sind Bankertrag. Ein begrenzter Staatskredit finanziert Kassenfehlbeträge innerhalb seines Rahmens. Tatsächlich vereinnahmte Firmen- und Staatszinsen werden am Monatsende an Haushalte ausgeschüttet.',
  'external': 'Ein vereinfachtes Auslandskonto erhält Energiezahlungen und kauft inländische Waren: monatlich bis zu sechs Alltags- und zwei Werkstatteinheiten. Nur Guthaben vom Monatsbeginn finanziert Bestellungen. Bezahlung und Lagerabgang erfolgen gemeinsam; fehlendes Geld oder Ware begrenzt den Rückfluss. Keine Wechselkurse oder vollständige Auslandswirtschaft.'
 }
 
@@ -24,7 +25,7 @@ class SystemAgent(Agent):
         self.model.world.act(self.properties['node_id']['value'])
 
 class World:
-    def __init__(self, essential_budget_cents=100000, export_orders_units=None):
+    def __init__(self, essential_budget_cents=100000, export_orders_units=None, government_credit_limit_cents=5000000, government_annual_rate_bps=300):
         self.id = uuid4().hex[:16]
         self.revision = 0
         self.month = 0
@@ -41,7 +42,7 @@ class World:
         self.propensity = 95
         self._node('alltag', 'Alltag & Versorgung', 'firms', 2400000, employees=['h1','h2'], price=10000, productivity=36, inventory=0, capital=0, loan=1200000, weak_months=0, reserved_units=0, machine_loan_cents=0)
         self._node('werkstatt', 'Werkstatt & Technik', 'firms', 2400000, employees=['h3','h4'], price=15000, productivity=20, inventory=0, capital=0, loan=1200000, weak_months=0, reserved_units=0, machine_loan_cents=0)
-        self._node('staat', 'Staat', 'government', 8000000, employees=['h5','h6'])
+        self._node('staat', 'Staat', 'government', 8000000, employees=['h5','h6'], government_loan_cents=0)
         self._node('bank', 'Finanzsektor', 'bank', 1000000, loan_assets=2400000)
         self._node('ausland', 'Ausland', 'external', 0)
         for i in range(1,7):
@@ -54,6 +55,7 @@ class World:
         self.month_open = deepcopy(self.initial)
         self._reset_metrics()
         self.banking = Banking(self)
+        self.treasury = Treasury(self,government_credit_limit_cents,government_annual_rate_bps)
         self.foreign = ForeignTrade(export_orders_units)
         self.foreign.begin_month(self)
         self.model = Model(starttime=0, stoptime=1200, dt=1, name='Counterloom circular-flow fixture', scheduler=SimultaneousScheduler())
@@ -76,6 +78,8 @@ class World:
     def pay(self, source, target, amount, kind, label, mandatory=False):
         if not isinstance(amount, int) or amount < 0 or source == target:
             raise ValueError('Invalid ledger transfer')
+        if source=='staat' and kind in ('wage','transfer','procurement','government_interest'):
+            self.treasury.ensure_cash(self,amount)
         sender, receiver = self.nodes[source], self.nodes[target]
         paid = min(amount, sender['cash_cents'])
         bank_before = self.banking.balance(self)
@@ -105,6 +109,8 @@ class World:
         firm = self.nodes[seller]
         # A sale, inventory departure and both cash entries form one operation.
         desired = budget // firm['price']
+        if buyer=='staat' and kind=='procurement':
+            self.treasury.ensure_cash(self,min(desired,firm['inventory']-firm.get('reserved_units',0))*firm['price'])
         funded_desired = min(desired,self.nodes[buyer]['cash_cents']//firm['price'])
         if spending_limit is not None:
             funded_desired=min(funded_desired,spending_limit//firm['price'])
@@ -127,6 +133,7 @@ class World:
     def act(self, node_id):
         n = self.nodes[node_id]
         if self.phase == 0 and n['sector'] in ('firms', 'government'):
+            if node_id=='staat':self.treasury.service(self)
             if n['sector']=='firms':
                 n['company']['result']={}
                 p=company_plan(n,self.energy_multiplier,self.machine_due(node_id))
@@ -183,6 +190,7 @@ class World:
         elif self.phase == 4 and n['sector']=='firms':
             self.close_company(n)
         elif self.phase == 4 and node_id=='bank':
+            self.treasury.close(self)
             interest=n['metrics']['interest']
             for h,share in zip(self.households(),FinanceSystem.dividends(interest,6)):
                 paid=self.pay('bank',h['id'],share,'dividend','Zinsausschüttung')
@@ -244,6 +252,7 @@ class World:
             self.month_open={k:n['cash_cents'] for k,n in self.nodes.items()}
             self._reset_metrics()
             self.foreign.begin_month(self)
+            self.treasury.begin_month(self)
             for event in self.pending:
                 self.active.append(dict(event=event, month=self.month))
                 if event=='energy': self.energy_multiplier=2
@@ -290,7 +299,8 @@ class World:
         assert sum(n['cash_cents'] for n in self.nodes.values())==self.initial_money+self.banking.created-self.banking.repaid
         self.banking.check(self)
         self.foreign.check(self)
-        assert self.nodes['bank']['loan_assets']==sum(self.nodes[f]['loan'] for f in ('alltag','werkstatt'))+self.banking.loan.outstanding_cents
+        self.treasury.check(self)
+        assert self.nodes['bank']['loan_assets']==sum(self.nodes[f]['loan'] for f in ('alltag','werkstatt'))+self.banking.loan.outstanding_cents+self.treasury.outstanding_cents
         assert all(self.nodes[f]['inventory']>=self.nodes[f].get('reserved_units',0)>=0 for f in ('alltag','werkstatt'))
         for key in ('alltag','werkstatt'):
             n=self.nodes[key];c=n['company'];m=n['metrics']
@@ -305,7 +315,7 @@ class World:
     def snapshot(self,export=False):
         self.check()
         tx=[t for t in self.journal if t['month']==self.month]
-        result=dict(world_id=self.id, revision=self.revision, month=self.month, phase=self.phase, phase_label=PHASES[self.phase] if self.phase>=0 else 'Bereit zum Start', nodes=deepcopy(list(self.nodes.values())), transactions=deepcopy(tx), notices=deepcopy(self.notices[-35:]), history=deepcopy(self.history[-36:]), pending=list(self.pending), active=deepcopy(self.active), rules=RULES, audit=dict(total_money_cents=self.banking.initial_deposits, current_money_cents=self.banking.balance(self)['customer_deposits_cents'], transaction_count=len(self.journal), open_obligations_cents=sum(x['amount_cents'] for x in self.obligations)+self.banking.loan.overdue_interest_cents+self.banking.loan.overdue_principal_cents, loan_principal_cents=self.nodes['bank']['loan_assets'], llm_calls=0), month_open=dict(self.month_open), initial_balances=dict(self.initial), parameters=dict(energy_multiplier=self.energy_multiplier,consumption_percent=self.propensity,essential_budget_cents=self.essential_budget_cents), classification='illustrative_circular_flow_v5',horizon_months=24,completed=self.month==24 and self.phase==4,banking=self.banking.snapshot(self),foreign_trade=self.foreign.snapshot(self))
+        result=dict(world_id=self.id, revision=self.revision, month=self.month, phase=self.phase, phase_label=PHASES[self.phase] if self.phase>=0 else 'Bereit zum Start', nodes=deepcopy(list(self.nodes.values())), transactions=deepcopy(tx), notices=deepcopy(self.notices[-35:]), history=deepcopy(self.history[-36:]), pending=list(self.pending), active=deepcopy(self.active), rules=RULES, audit=dict(total_money_cents=self.banking.initial_deposits, current_money_cents=self.banking.balance(self)['customer_deposits_cents'], transaction_count=len(self.journal), open_obligations_cents=sum(x['amount_cents'] for x in self.obligations)+self.treasury.overdue_interest_cents+self.banking.loan.overdue_interest_cents+self.banking.loan.overdue_principal_cents, loan_principal_cents=self.nodes['bank']['loan_assets'], llm_calls=0), month_open=dict(self.month_open), initial_balances=dict(self.initial), parameters=dict(energy_multiplier=self.energy_multiplier,consumption_percent=self.propensity,essential_budget_cents=self.essential_budget_cents), classification='illustrative_circular_flow_v6',horizon_months=24,completed=self.month==24 and self.phase==4,banking=self.banking.snapshot(self),foreign_trade=self.foreign.snapshot(self),public_finance=self.treasury.snapshot(self))
         if export:
             result.update(full_journal=deepcopy(self.journal),initial_balances=dict(self.initial),open_obligations=deepcopy(self.obligations),all_history=deepcopy(self.history),all_notices=deepcopy(self.notices),model_document='poc/WORLD_MODEL.md')
         return result

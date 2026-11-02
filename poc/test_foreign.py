@@ -10,7 +10,7 @@ class ForeignTradeTests(unittest.TestCase):
         self.assertEqual(trade['month_imports_cents'],72000)
         self.assertEqual(trade['month_exports_cents'],0)
         self.assertEqual(trade['foreign_cash_cents'],72000)
-        self.assertEqual(trade['domestic_cash_cents'],14528000)
+        self.assertEqual(trade['domestic_cash_cents'],14528000+w.treasury.outstanding_cents)
         self.assertEqual(trade['plan']['budget_cents'],0)
         self.assertTrue(all(o['funded_units']==0 for o in trade['plan']['orders']))
 

@@ -15,16 +15,17 @@ class WorldTests(unittest.TestCase):
                 self.assertGreater(amount,0)
                 self.assertEqual(accounts[tx['source']],tx['source_before'])
                 self.assertEqual(accounts[tx['target']],tx['target_before'])
-                accounts[tx['source']]-=amount; accounts[tx['target']]+=amount
+                if tx['ledger_effect']!='loan_creation':accounts[tx['source']]-=amount
+                if tx['ledger_effect']!='principal_repayment':accounts[tx['target']]+=amount
                 self.assertEqual(accounts[tx['source']],tx['source_after'])
                 self.assertEqual(accounts[tx['target']],tx['target_after'])
             last=len(w.journal)
             self.assertEqual(accounts,{k:n['cash_cents'] for k,n in w.nodes.items()})
-            self.assertEqual(sum(accounts.values()),15600000)
+            self.assertEqual(sum(accounts.values()),15600000+w.banking.created-w.banking.repaid)
             self.assertGreaterEqual(min(accounts.values()),0)
             self.assertTrue(all(w.nodes[f]['inventory']>=0 for f in ['alltag','werkstatt']))
         self.assertEqual(len(w.history),24)
-        self.assertEqual(w.nodes['bank']['loan_assets'],2400000)
+        self.assertEqual(w.nodes['bank']['loan_assets'],2400000+w.treasury.outstanding_cents)
 
     def test_first_real_step_pays_counterparty_then_next_phase_taxes(self):
         w=World(); self.assertEqual(w.month,0);self.assertEqual(w.journal,[])
@@ -134,7 +135,7 @@ class LongRunTests(unittest.TestCase):
         w=World();w.queue('demand');w.queue('energy')
         for _ in range(120):w.step()
         self.assertEqual((w.month,w.phase),(24,4))
-        self.assertEqual(sum(n['cash_cents'] for n in w.nodes.values()),15600000)
+        self.assertEqual(sum(n['cash_cents'] for n in w.nodes.values()),15600000+w.banking.created-w.banking.repaid)
         self.assertGreaterEqual(min(n['cash_cents'] for n in w.nodes.values()),0)
         before=len(w.journal)
         with self.assertRaises(ValueError):w.step()
@@ -164,7 +165,7 @@ class HouseholdReserveRegressionTests(unittest.TestCase):
             self.assertEqual(plan['alltag_budget']+plan['werkstatt_budget'],expected)
 
     def test_existing_cash_is_actually_paid_to_selling_firms(self):
-        w=World()
+        w=World(government_credit_limit_cents=0)
         # Controlled port fixture: no new income, but available household cash and goods.
         w.phase=1;w.month=1
         w.pay('staat','ausland',w.nodes['staat']['cash_cents'],'test_fixture','Expliziter Testanschluss')
@@ -185,4 +186,4 @@ class HouseholdReserveRegressionTests(unittest.TestCase):
             w=World(essential_budget_cents=essential)
             for _ in range(120):w.step()
             self.assertTrue(w.snapshot()['completed'])
-            self.assertEqual(sum(n['cash_cents'] for n in w.nodes.values()),15600000)
+            self.assertEqual(sum(n['cash_cents'] for n in w.nodes.values()),15600000+w.banking.created-w.banking.repaid)

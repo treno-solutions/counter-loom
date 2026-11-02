@@ -99,3 +99,8 @@ Das [V4-Konzept](poc/COMPANY_MODEL.md) begrenzt die aktuelle Umsetzung auf 24 Mo
 ## Modell v5 · Außenwirtschaft mit Warenexporten
 
 Das [Außenhandelskonzept](poc/FOREIGN_MODEL.md) ergänzt den bestehenden Außenanschluss um einen budgetbegrenzten Warenkunden. Nur vorhandenes Anfangsguthaben finanziert seine Bestellungen. Tatsächliche Exportverkäufe verringern Firmenlager und erhöhen Firmenkonten; zugehörige Liefernachweise zeigen Menge, Kosten und Zahlungs-ID. Systemkarte und Auslandsansicht trennen Energiezahlungen, Warenlieferung und Exporterlös. Die [V5-Prüfung](qa/foreign-v5-plausibility.md) ergänzt unverändert erhaltene ältere Belege.
+
+
+## Modell v6 · Staatsfinanzierung mit Zinsen
+
+Das [Staatskreditkonzept](poc/FISCAL_MODEL.md) ergänzt einen begrenzten Geschäftsbankkredit für tatsächliche Kassenfehlbeträge. Zwischenkredite und spätere Steuern werden beim Abschluss abgeglichen; bestehende Schuld verursacht im Folgemonat Zinsen, Überschüsse tilgen. Staatsschuld und Bankforderung, tatsächliche Kasse, Kredite, Zinsen und Tilgung sind getrennt sichtbar. Die [V6-Prüfung](qa/fiscal-v6-plausibility.md) ergänzt die bisherigen unveränderten Belege. Keine Zentralbankfinanzierung, kein Anleihemarkt und kein Nachweis langfristiger fiskalischer Tragfähigkeit.

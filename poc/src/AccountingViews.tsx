@@ -1,12 +1,13 @@
 import { useState } from 'react';
-import { ArrowDownLeft, ArrowUpRight, ChevronDown, CircleHelp, Landmark, ShieldCheck, Wallet } from 'lucide-react';
+import { ArrowDownLeft, ArrowUpRight, ChevronDown, CircleHelp, ShieldCheck, Wallet } from 'lucide-react';
+import GovernmentFinance from './GovernmentFinance';
 import type { SectorId, World } from './world-schema';
 
 const euro = (value: number) => new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR', maximumFractionDigits: value % 100 ? 2 : 0 }).format(value / 100);
 const signed = (value: number) => `${value > 0 ? '+' : ''}${euro(value)}`;
 const sectors: SectorId[] = ['households', 'firms', 'government', 'external'];
 const names: Record<SectorId, string> = { households: 'Haushalte', firms: 'Unternehmen', government: 'Staat', bank: 'Finanzsektor', external: 'Ausland' };
-const kinds: Record<string, string> = { wage: 'Löhne', income_tax: 'Lohnsteuer', profit_tax: 'Gewinnsteuer', company_dividend: 'Gewinnausschüttungen', transfer: 'Transfers', procurement: 'Öffentliche Aufträge', consumption: 'Einkäufe', dividend: 'Zinsausschüttungen', energy: 'Energieimporte', export_sale: 'Warenexporte', interest: 'Kreditzinsen', investment: 'Anlagenkäufe', machine_credit: 'Neues Kreditguthaben', machine_purchase: 'Kreditfinanzierte Maschine', machine_interest: 'Zinsen Maschinenkredit', machine_principal: 'Tilgung Maschinenkredit' };
+const kinds: Record<string, string> = { wage: 'Löhne', income_tax: 'Lohnsteuer', profit_tax: 'Gewinnsteuer', company_dividend: 'Gewinnausschüttungen', transfer: 'Transfers', procurement: 'Öffentliche Aufträge', consumption: 'Einkäufe', dividend: 'Zinsausschüttungen', energy: 'Energieimporte', export_sale: 'Warenexporte', government_credit: 'Staatskredit · Finanzierung', government_interest: 'Zinsen Staatskredit', government_principal: 'Staatliche Kredittilgung', interest: 'Kreditzinsen', investment: 'Anlagenkäufe', machine_credit: 'Neues Kreditguthaben', machine_purchase: 'Kreditfinanzierte Maschine', machine_interest: 'Zinsen Maschinenkredit', machine_principal: 'Tilgung Maschinenkredit' };
 const sum = (values: number[]) => values.reduce((a, b) => a + b, 0);
 
 function account(world: World, ids: string[]) {
@@ -53,21 +54,8 @@ export function MoneyOrigin({ world }: { world: World }) {
   </section>;
 }
 
-export function GovernmentBudget({ world }: { world: World }) {
-  const state = world.nodes.find(n => n.id === 'staat')!;
-  const data = account(world, ['staat']);
-  const gap = data.spending - data.income;
-  const initial = world.initial_balances.staat ?? 0;
-  const remaining = initial ? Math.min(100, state.cash_cents / initial * 100) : 0;
-  const last = world.history.at(-1);
-  const previous = world.history.at(-2)?.government_cash_cents ?? initial;
-  const lastGap = last ? previous - last.government_cash_cents : 0;
-  const months = lastGap > 0 ? state.cash_cents / lastGap : null;
-  return <section className="government-budget" aria-label="Staatshaushalt und Finanzierung">
-    <div className="fiscal-title"><Landmark size={25} /><div><h2>Was bezahlt der Staat — und womit?</h2><p>Steuern sind Einnahmen. Öffentliche Löhne, Transfers und Aufträge sind Ausgaben. Ein verbleibender Fehlbetrag wird hier aus dem vorhandenen Staatskonto bezahlt.</p></div></div>
-    <CashAccount world={world} ids={['staat']} title="Einnahmen und Ausgaben des Staates" />
-    <div className="fiscal-financing"><div><span className="overline">FINANZIERUNG · LAUFENDER MONAT</span><h3>{gap > 0 ? 'Der Staat greift auf vorhandenes Geld zurück.' : gap < 0 ? 'Die Eingänge übersteigen bisher die Ausgaben.' : 'Eingänge und Ausgänge sind bisher ausgeglichen.'}</h3><div className="fiscal-gap"><span>{gap > 0 ? 'Bisheriger Fehlbetrag' : gap < 0 ? 'Bisheriger Überschuss' : 'Saldo'}</span><strong>{euro(Math.abs(gap))}</strong></div><p>{gap > 0 ? 'Dieser Betrag ist die Abnahme des Kontos gegenüber dem Monatsbeginn. Er wurde nicht neu erzeugt.' : 'Der Kontenbestand ergibt sich aus dem Monatsanfang und den tatsächlich verbuchten Zahlungen.'} {world.phase !== 4 && 'Der Monat ist noch nicht abgeschlossen; spätere Steuerzahlungen oder Ausgaben können den Saldo ändern.'}</p><div className="debt-scope"><span>Neue Staatsanleihen / Kredite</span><strong>Noch nicht modelliert</strong></div></div><div className="reserve-card"><span className="overline">VERFÜGBARER PUFFER</span><strong>{euro(state.cash_cents)}</strong><div className="reserve-track"><span style={{ width: `${remaining}%` }} /></div><p>{new Intl.NumberFormat('de-DE', { maximumFractionDigits: 1 }).format(remaining)} % des Anfangskontos von {euro(initial)} sind noch vorhanden.</p>{months !== null && <p className="runway">Bei einem unveränderten Fehlbetrag wie im letzten abgeschlossenen Monat: rechnerisch noch <b>{new Intl.NumberFormat('de-DE', { maximumFractionDigits: 1 }).format(months)} Monate</b>. Diese Fortschreibung hält den Saldo konstant; der tatsächliche weitere Verlauf kann abweichen.</p>}<p>Bei fehlendem Geld werden Zahlungen begrenzt. Das ist ein endlicher Staatskassen-Test, keine vollständige staatliche Schuldenfinanzierung.</p></div></div>
-  </section>;
+export function GovernmentBudget({world,running=false}:{world:World;running?:boolean}) {
+  return <GovernmentFinance world={world} running={running}><CashAccount world={world} ids={['staat']} title="Staatskasse · Geldherkunft und Verwendung"/></GovernmentFinance>;
 }
 
 export function HouseholdPlan({ world, id }: { world: World; id: string }) {

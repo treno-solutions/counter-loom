@@ -1,4 +1,10 @@
-# Laufende Modellwirtschaft · aktuelle Fassung v5
+# Laufende Modellwirtschaft · aktuelle Fassung v6
+
+V6 ergänzt die [Staatsfinanzierung](FISCAL_MODEL.md): monatliche Kassenfehlbeträge werden vorrangig durch einen Staatskredit der bestehenden Geschäftsbank finanziert. Obergrenze 50.000 €, Jahreszins 3 %, Zinsbasis bestehende Schuld am Monatsbeginn. Überschüsse tilgen; untermonatliche Kredite werden beim Abschluss angerechnet. Kreditgutschriften sind Finanzierung und keine Steuereinnahme. Die Bankforderung und die Staatsschuld werden gemeinsam gebucht; Zinsen sind Bankertrag und fließen in die bestehenden tatsächlichen Ausschüttungen ein. Keine Zentralbankfinanzierung oder Anleihemärkte.
+
+Die [V6-Prüfung](../qa/fiscal-v6-plausibility.md) ergänzt die unveränderten Belege älterer Fassungen. Elf Akteure, 24 Monate, feste Preise/Löhne bleiben erhalten. Die aktuelle staatliche Finanzierung ersetzt den früheren ausschließlichen Verbrauch der Staatskasse.
+
+## Außenhandelsgrundlage v5
 
 Die aktuelle Unternehmenslogik steht im [Unternehmenskonzept](COMPANY_MODEL.md), die Geld-/Kreditbuchungen im [Bankkonzept](BANKING_MODEL.md). V5 ergänzt den [Außenhandelsanschluss](FOREIGN_MODEL.md): das vorhandene Auslandskonto kauft tatsächliche Waren und führt dadurch Geld ins Inland zurück. Ein Lernlauf bleibt auf **24 Monate** mit denselben elf Akteuren und festen Preisen/Löhnen begrenzt.
 
@@ -6,7 +12,7 @@ Das Ausland beginnt mit 0 €. Es wünscht monatlich 6 Alltagsgüter / 2 Werksta
 
 Die Reihenfolge bleibt Produktion/Löhne → Steuern/Transfers → Käufe einschließlich Exporten → Investitionen → Abschluss. Der erste Monat hat Energieimporte ohne finanzierbare Exportbestellung. Spätere Exporterlöse fließen in Unternehmensumsatz, Warenkosten und Absatzplanung ein. Der Außenhandelssaldo wird nicht vorgegeben. Inland und Ausland verschieben vorhandene Einlagen; nur die getrennten Bank-/Kreditvorgänge verändern die Summe aller Kundeneinlagen.
 
-[Unabhängige V5-Prüfung](../qa/foreign-v5-plausibility.md). Rückstände, endlicher Staatskassenpuffer, fehlende Abschreibung und feste Preise bleiben bekannte Grenzen. Kein langfristiger Gleichgewichts-, Prognose- oder Workshop-Wirksamkeitsnachweis.
+[Unabhängige V5-Prüfung](../qa/foreign-v5-plausibility.md). Rückstände, endlicher Staatskassenpuffer und Staatskreditrahmen, fehlende Abschreibung und feste Preise bleiben bekannte Grenzen. Kein langfristiger Gleichgewichts-, Prognose- oder Workshop-Wirksamkeitsnachweis.
 
 ## Unternehmensentwicklung v4
 

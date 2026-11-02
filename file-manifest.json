@@ -1,13 +1,13 @@
 [
   {
     "path": "BUILD_PLAN.md",
-    "bytes": 19629,
-    "sha256": "de459de394a6c61f7cb0e7261d9055750c4a42ce485afe5aea92b6da686de9ec"
+    "bytes": 19762,
+    "sha256": "0a4b92fcb3f6a5f64f4b344a163ceb92e285c05d8aaf74c8fbd28d209169f34f"
   },
   {
     "path": "POC.md",
-    "bytes": 11771,
-    "sha256": "89677fbffab2f0ea7050a32bd8ea1b2e3a6ed019824887ba4903f9c64013753a"
+    "bytes": 12408,
+    "sha256": "d6fdbed7752b94285bf992920477cefc8cb09bea76461493aa82081e65f3e422"
   },
   {
     "path": "RESEARCH.md",
@@ -106,8 +106,8 @@
   },
   {
     "path": "poc/source-manifest.json",
-    "bytes": 5299,
-    "sha256": "408283635b96a51079b7a2aee46a2bccfe4e838a6f860f83b154aa7103fb112f"
+    "bytes": 5882,
+    "sha256": "f9887d46c5f7a8d47c78ad6083ae5f5450954386c37304ee31b33c545efc937e"
   },
   {
     "path": "processed/energy-monthly-prices.csv",
@@ -333,6 +333,21 @@
     "path": "qa/fiscal-and-household-v2-2026-11-02.json",
     "bytes": 4049,
     "sha256": "6c38c04a8d88f97f0f8d73d59f2d5ddfb649ab3800802d5151179201198989f1"
+  },
+  {
+    "path": "qa/fiscal-v6-plausibility.json",
+    "bytes": 461785,
+    "sha256": "80c877ef91a2fd63035bd44fe2bc9258a93433fe21a2d6fd9f701f4542365fb0"
+  },
+  {
+    "path": "qa/fiscal-v6-plausibility.md",
+    "bytes": 11216,
+    "sha256": "a1edb6830d694be02abab8d15f0cdcfe2f94c9f041acb68468931465fd441b9e"
+  },
+  {
+    "path": "qa/fiscal-v6-verification-2026-11-02.json",
+    "bytes": 3885,
+    "sha256": "511965a5f52fd461c116d64eecc9ceabeb198889c5cbf6d0301f23aa4f40a4c2"
   },
   {
     "path": "qa/foreign-v5-plausibility.json",
@@ -766,8 +781,8 @@
   },
   {
     "path": "tools/assemble_evidence.py",
-    "bytes": 34794,
-    "sha256": "861f14eecd9d745524415b786a03eec96e25eb22fc8aa2df9a7ec47d620fc826"
+    "bytes": 34831,
+    "sha256": "39f6aa385db851f741c9ca7820a9da5fbd9b47f932f34fad2001a3ca92e11466"
   },
   {
     "path": "tools/check_bank_plausibility.py",
@@ -783,6 +798,11 @@
     "path": "tools/check_concordia_pilot_workflow.py",
     "bytes": 3036,
     "sha256": "c63285186c769bd90227f29b7832814b09a96492a056f81a720524153da24662"
+  },
+  {
+    "path": "tools/check_fiscal_plausibility.py",
+    "bytes": 28972,
+    "sha256": "a3cc132a0c2e418106ff420e2d9600f46856874b0ed7d012aaad4eb8defb5be7"
   },
   {
     "path": "tools/check_foreign_plausibility.py",

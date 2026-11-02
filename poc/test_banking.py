@@ -47,7 +47,7 @@ class BankingTests(unittest.TestCase):
         self.assertEqual(sum(t['amount_cents'] for t in interest),3900)
         self.assertEqual(w.banking.loan.outstanding_cents,0)
         self.assertEqual(w.banking.loan.status,'repaid')
-        self.assertEqual(w.banking.balance(w)['customer_deposits_cents'],14600000)
+        self.assertEqual(w.banking.balance(w)['customer_deposits_cents'],14600000+w.treasury.outstanding_cents)
         old=len(interest)+len(principal)
         for _ in range(5):w.step()
         self.assertEqual(len([t for t in w.journal if t['kind'] in ('machine_interest','machine_principal')]),old)
@@ -112,7 +112,7 @@ class BankingTests(unittest.TestCase):
 
 class PlausibilityRegressionTests(unittest.TestCase):
     def test_unfunded_public_wish_does_not_become_effective_demand(self):
-        w=World();w.pay('staat','ausland',8000000,'fixture','Testanschluss')
+        w=World(government_credit_limit_cents=0);w.pay('staat','ausland',8000000,'fixture','Testanschluss')
         w.nodes['alltag']['inventory']=100
         self.assertEqual(w.buy('staat','alltag',120000,'procurement'),0)
         self.assertEqual(w.nodes['alltag']['metrics']['unmet_units'],0)

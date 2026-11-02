@@ -1,6 +1,10 @@
-# Bankmodul v3 · ein finanzierter Maschinenkauf
+# Bankbilanz · Grundlage v3, erweitert bis v6
 
 Stand: 2. November 2026. Begrenzter Einbank-Test innerhalb der laufenden Welt; keine empirische Kreditvergabe- oder Regulierungsstudie. Alle Beträge und Vertragsbedingungen sind illustrative Annahmen.
+
+## Aktueller Umfang v6
+
+Der Maschinenvertrag und die Einlagenbrücke bleiben erhalten. Seit v5 sind [Warenexporte](FOREIGN_MODEL.md) enthalten; v6 ergänzt einen [Staatskredit](FISCAL_MODEL.md) bei derselben Bank. Neue Kredit- und Tilgungssummen umfassen Maschinen- und Staatskredit. Die Bankforderung an den Staat stimmt mit dessen Schuld überein; tatsächlich bezahlte Staatszinsen fließen in Bankertrag und Haushaltsausschüttung ein. Die nachfolgenden Abschnitte erklären den ursprünglichen Maschinenfall; die dortige Grenze eines neuen Kredits pro Welt gilt nur für diesen Vertrag.
 
 ## Bilanzgrenze und Eröffnung
 
@@ -37,4 +41,4 @@ Geprüft werden getrennte Kreditgutschrift und Lieferung, tatsächliche Gegenpar
 - Deutsche Bundesbank, [Wie Geld entsteht](https://www.bundesbank.de/de/aufgaben/themen/wie-geld-entsteht-665288), 25. April 2017; am 2. November 2026 geprüft: Kreditvergabe kann gleichzeitig Kreditforderung und Kundeneinlage erzeugen; Geldschöpfung ist durch wirtschaftliche, regulatorische und finanzielle Bedingungen begrenzt. Die neue Einbank-Demonstration modelliert diese Grenzen nur im ausdrücklich beschriebenen Umfang.
 - Bank of England, [Money creation in the modern economy](https://www.bankofengland.co.uk/quarterly-bulletin/2014/q1/money-creation-in-the-modern-economy), 14. März 2014, und [How is money created?](https://www.bankofengland.co.uk/explainers/how-is-money-created); am 2. November 2026 geprüft: Einlagenschöpfung durch Bankkredit und Abbau bei Rückzahlung. Quellen sind Mechanismusbelege, keine Kalibrierung der gewählten 1.200 €, 6 % oder zwölf Monate.
 
-Staatliche Anleihefinanzierung, Export-Rückflüsse und realistische Unternehmens-/Haushaltsreaktionen sind weiterhin gesonderte Systeme beziehungsweise offene Modellgrenzen.
+Staatliche Anleihemärkte und Zentralbankoperationen bleiben außerhalb des Modells. Unternehmens-, Außenhandels- und Staatskreditregeln sind in ihren jeweiligen Erweiterungskonzepten dokumentiert; keine Behauptung einer vollständig realistischen Volkswirtschaft.

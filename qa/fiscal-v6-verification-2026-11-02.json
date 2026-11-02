@@ -1,0 +1,105 @@
+{
+  "checked_on": "2026-11-02",
+  "model": "illustrative_circular_flow_v6",
+  "base_revision": "e49ed66",
+  "scope": "Bounded state credit financing and local UI verification; no empirical, legal or workshop validation",
+  "source_files": [
+    {
+      "path": "poc/world.py",
+      "sha256": "05efcf418666da9b5c748f17a7fd82a9bcd4b5f245b97f7127bc79027a43b934"
+    },
+    {
+      "path": "poc/treasury.py",
+      "sha256": "f6f3320ef1ee16c293b43e7f7e0ed9535b0bc4d1dc589c1e511cb3b6de9647cf"
+    },
+    {
+      "path": "poc/banking.py",
+      "sha256": "3bdf8fef042a084d6ee6a1a57f35d2af05361c6c941c67d1de11fbdd95d37d0c"
+    },
+    {
+      "path": "poc/foreign.py",
+      "sha256": "476d7f69784634fafae7c07a195ee5092b472018e29e0e6532f9a7a9025a41b3"
+    },
+    {
+      "path": "poc/firms.py",
+      "sha256": "8daf7a8e723e00a138a140ceac8c6f214679a16225996efa2fa6bf15110ae475"
+    },
+    {
+      "path": "poc/systems.py",
+      "sha256": "3491c16a89d11d2cf54c637ced9a8a9f143e032b30ec26f883fb3218780bccb0"
+    },
+    {
+      "path": "poc/src/App.tsx",
+      "sha256": "23e79ad661f37e55bb7e06ddd60e778d44ed7a0aafa1325d18f7ac89e7347529"
+    },
+    {
+      "path": "poc/src/GovernmentFinance.tsx",
+      "sha256": "dfc5844856e5180d1f6afb11e2a93b9947d5f4a2d5f7d569e7fb70b14b03f06b"
+    },
+    {
+      "path": "poc/src/AccountingViews.tsx",
+      "sha256": "34c613fb63eb0383101d231b1dded832a0f385ccc5378b63e949ee670e0940dd"
+    },
+    {
+      "path": "poc/src/BankView.tsx",
+      "sha256": "7449f1327b7d0515be58758336b653b72015b2f44d9fb41b7b61ede216f85002"
+    },
+    {
+      "path": "poc/src/world-schema.ts",
+      "sha256": "9c9589d15845b5b8cc88b3d6acf931672e38a704538664f1efb932e1a3fc1269"
+    },
+    {
+      "path": "poc/src/styles.css",
+      "sha256": "d36cccd56a6ef6ab85a6abd5f2036bc5bd1363baa6bba9e2c6fbc8d761238b89"
+    }
+  ],
+  "automated_checks": {
+    "unittest_passed": 59,
+    "typescript_and_production_build": "passed",
+    "strict_frontend_schema_snapshots_passed": 968,
+    "altered_state_debt_rejected": true,
+    "http_export_state_credit_interest_history_match_full_journal": true
+  },
+  "independent_audit": {
+    "report": "qa/fiscal-v6-plausibility.md",
+    "worlds": 8,
+    "world_months": 192,
+    "phases": 960,
+    "reconstructed_postings": 9560,
+    "isolated_fiscal_cases": 11,
+    "isolated_postings": 182
+  },
+  "browser_checks": {
+    "browser": "BrowserOS neo",
+    "normal_preview_url": "http://127.0.0.1:5173/",
+    "state_hierarchy_and_flow_diagram": "passed",
+    "root_state_node_shows_cash_and_debt_separately": "passed",
+    "root_credit_and_interest_paths": "passed",
+    "state_interest_receipt_expands_to_real_counterpostings": "passed",
+    "bank_register_has_state_claim": "passed",
+    "mobile_width_390_no_document_overflow": "passed",
+    "mobile_diagram_scroll_with_hint": "passed",
+    "local_font_loading": "passed",
+    "real_autoplay_stops_after_month_24_without_error": "passed",
+    "completed_start_and_step_buttons_disabled": true,
+    "month_1": {
+      "cash_deficit_and_new_credit_cents": 241360,
+      "interest_paid_cents": 0
+    },
+    "month_2": {
+      "taxes_cents": 459266,
+      "primary_spending_cents": 720000,
+      "interest_paid_cents": 603,
+      "cash_deficit_and_new_credit_cents": 261337,
+      "closing_state_cash_cents": 8000000,
+      "state_debt_and_bank_claim_cents": 502697
+    }
+  },
+  "limits": [
+    "Illustrative commercial-bank state credit, not central-bank financing or a bond market.",
+    "Fixed 50000 EUR outstanding credit limit and 3 percent annual interest are scenario assumptions.",
+    "Deficits are financed preferentially to preserve state cash; binding credit limit consumes reserves.",
+    "No real solvency, macroeconomic stability, market interest, inflation or workshop effectiveness established.",
+    "Remaining debt and interest arrears remain explicit at the 24-month horizon."
+  ]
+}

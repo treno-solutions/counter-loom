@@ -154,7 +154,7 @@ class Banking:
         expected = self.initial_deposits + self.created - self.repaid - self.interest_received + self.distributed
         assert balance['customer_deposits_cents'] == expected
         assert world.nodes['alltag'].get('machine_loan_cents', 0) == self.loan.outstanding_cents
-        assert world.nodes['bank']['loan_assets'] == sum(world.nodes[f]['loan'] for f in ('alltag', 'werkstatt')) + self.loan.outstanding_cents
+        assert world.nodes['bank']['loan_assets'] == sum(world.nodes[f]['loan'] for f in ('alltag', 'werkstatt')) + self.loan.outstanding_cents + world.nodes['staat'].get('government_loan_cents',0)
         assert self.loan.principal_paid_cents + self.loan.outstanding_cents == (self.loan.amount_cents if self.loan.issue_month is not None else 0)
 
     def snapshot(self, world):
