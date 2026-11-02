@@ -96,8 +96,8 @@
   },
   {
     "path": "poc/src/App.tsx",
-    "bytes": 27824,
-    "sha256": "23e79ad661f37e55bb7e06ddd60e778d44ed7a0aafa1325d18f7ac89e7347529"
+    "bytes": 27860,
+    "sha256": "c28932a819cf144cfc1a85f93397a3bf64385f75be3c13155568727d5fcf9c91"
   },
   {
     "path": "poc/src/BankView.tsx",
