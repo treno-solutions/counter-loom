@@ -9,7 +9,7 @@ from systems import HouseholdInput, HouseholdSystem, FirmInput, FirmSystem, Gove
 
 PHASES = ['Produktion & Löhne', 'Steuern & Transfers', 'Konsum & Aufträge', 'Investitionen', 'Monatsabschluss']
 RULES = {
- 'households': 'Tatsächlich erhaltenes Einkommen minus 30 % Lohnsteuer bildet das Kaufbudget. Davon werden 95 % konsumiert; nach dem Konsumeingriff 65 %. Nicht ausgegebenes Geld bleibt auf dem Konto. Fehlende Ware oder fehlendes Geld begrenzen den Kauf.',
+ 'households': 'Kaufplan: mindestens 1.000 € monatlicher Grundbedarf als illustrative Annahme, darüber 95 % des Nettoeinkommens (nach Konsumeingriff 65 %). Der Grundbedarfsplan kann aus vorhandenem Kontoguthaben finanziert werden. Käufe sind durch Geld, Lager und ganze Gütereinheiten begrenzt; unerfüllte Kaufpläne sind keine gebuchten Ausgaben oder Schulden.',
  'firms': 'Beschäftigte produzieren und erhalten bis zu 2.400 € Bruttolohn. Firmen zahlen Energie und Kreditzinsen, verkaufen vorhandene Ware und versteuern positive operative Überschüsse mit 20 %. Zwei schwache Monate können eine Stelle kosten; nicht bediente Nachfrage kann bei ausreichender Liquidität eine Einstellung auslösen.',
  'government': 'Zwei öffentliche Stellen zu je 2.400 € brutto, bis zu 1.000 € Transfer je unbeschäftigtem Haushalt und bis zu 1.200 € Beschaffung je Betrieb. Alle Zahlungen werden aus dem endlichen Staatskonto geleistet; Einnahmen sind tatsächlich gezahlte Steuern.',
  'bank': 'Je Betrieb besteht anfangs eine Forderung über 12.000 €. Auf tatsächlich vereinnahmte Kreditzinsen folgt am Monatsende eine gleiche Ausschüttung an die sechs Haushalte. Keine Neukredite, Tilgung oder Geldschöpfung in diesem Ausschnitt.',
@@ -21,7 +21,7 @@ class SystemAgent(Agent):
         self.model.world.act(self.properties['node_id']['value'])
 
 class World:
-    def __init__(self):
+    def __init__(self, essential_budget_cents=100000):
         self.id = uuid4().hex[:16]
         self.revision = 0
         self.month = 0
@@ -33,6 +33,7 @@ class World:
         self.history = []
         self.pending = []
         self.active = []
+        self.essential_budget_cents = essential_budget_cents
         self.energy_multiplier = 1
         self.propensity = 95
         self._node('alltag', 'Alltag & Versorgung', 'firms', 2400000, employees=['h1','h2'], price=10000, productivity=36, inventory=0, capital=0, loan=1200000, weak_months=0)
@@ -59,7 +60,7 @@ class World:
 
     def _reset_metrics(self):
         for n in self.nodes.values():
-            n['metrics'] = dict(income=0, tax=0, sales=0, operating_costs=0, wages=0, interest=0, sold_units=0, unmet_units=0, produced_units=0, investment=0, transfers=0)
+            n['metrics'] = dict(income=0, tax=0, sales=0, operating_costs=0, wages=0, interest=0, sold_units=0, unmet_units=0, produced_units=0, investment=0, transfers=0, consumption_plan=0, consumption_budget=0, consumption_paid=0, reserve_used=0)
 
     def notice(self, text, node='world'):
         self.notices.append(dict(month=self.month, phase=self.phase, node=node, text=text))
@@ -150,7 +151,7 @@ class World:
                 h['dividend_carry'] += paid
 
     def household_outputs(self,n):
-        return HouseholdSystem.outputs(HouseholdInput(n['metrics']['income']-n['metrics']['transfers'],n['metrics']['transfers'],n['metrics']['tax'],n['dividend_carry'],n['cash_cents'],self.propensity))
+        return HouseholdSystem.outputs(HouseholdInput(n['metrics']['income']-n['metrics']['transfers'],n['metrics']['transfers'],n['metrics']['tax'],n['dividend_carry'],n['cash_cents'],self.propensity,self.essential_budget_cents))
 
     def firm_outputs(self,n):
         due=len(n['employees'])*(240000+18000*self.energy_multiplier)+n['loan']*2//1200
@@ -179,9 +180,17 @@ class World:
             hs=self.households();offset=(self.month-1)%6
             for h in hs[offset:]+hs[:offset]:
                 plan=self.household_outputs(h)
+                h['metrics']['consumption_plan']=plan['desired_budget']
+                h['metrics']['consumption_budget']=plan['funded_budget']
+                before_cash=h['cash_cents']
                 h['dividend_carry']=0
                 self.buy(h['id'],'alltag',plan['alltag_budget'])
                 self.buy(h['id'],'werkstatt',plan['werkstatt_budget'])
+                paid=before_cash-h['cash_cents']
+                h['metrics']['consumption_paid']=paid
+                h['metrics']['reserve_used']=max(0,paid-max(0,h['metrics']['income']-h['metrics']['tax']))
+                if plan['funded_budget']<self.essential_budget_cents:
+                    self.notice(f"{h['name']}: Das Grundbedarfsbudget ist wegen fehlender Zahlungsmittel nicht vollständig finanzierbar.",h['id'])
         self.revision+=1
         self.check()
         if self.phase==4:
@@ -207,7 +216,7 @@ class World:
     def snapshot(self,export=False):
         self.check()
         tx=[t for t in self.journal if t['month']==self.month]
-        result=dict(world_id=self.id, revision=self.revision, month=self.month, phase=self.phase, phase_label=PHASES[self.phase] if self.phase>=0 else 'Bereit zum Start', nodes=deepcopy(list(self.nodes.values())), transactions=deepcopy(tx), notices=deepcopy(self.notices[-35:]), history=deepcopy(self.history[-36:]), pending=list(self.pending), active=deepcopy(self.active), rules=RULES, audit=dict(total_money_cents=self.initial_money, current_money_cents=sum(n['cash_cents'] for n in self.nodes.values()), transaction_count=len(self.journal), open_obligations_cents=sum(x['amount_cents'] for x in self.obligations), loan_principal_cents=self.nodes['bank']['loan_assets'], llm_calls=0), month_open=dict(self.month_open), initial_balances=dict(self.initial), parameters=dict(energy_multiplier=self.energy_multiplier,consumption_percent=self.propensity), classification='illustrative_circular_flow_v1')
+        result=dict(world_id=self.id, revision=self.revision, month=self.month, phase=self.phase, phase_label=PHASES[self.phase] if self.phase>=0 else 'Bereit zum Start', nodes=deepcopy(list(self.nodes.values())), transactions=deepcopy(tx), notices=deepcopy(self.notices[-35:]), history=deepcopy(self.history[-36:]), pending=list(self.pending), active=deepcopy(self.active), rules=RULES, audit=dict(total_money_cents=self.initial_money, current_money_cents=sum(n['cash_cents'] for n in self.nodes.values()), transaction_count=len(self.journal), open_obligations_cents=sum(x['amount_cents'] for x in self.obligations), loan_principal_cents=self.nodes['bank']['loan_assets'], llm_calls=0), month_open=dict(self.month_open), initial_balances=dict(self.initial), parameters=dict(energy_multiplier=self.energy_multiplier,consumption_percent=self.propensity,essential_budget_cents=self.essential_budget_cents), classification='illustrative_circular_flow_v2')
         if export:
             result.update(full_journal=deepcopy(self.journal),initial_balances=dict(self.initial),open_obligations=deepcopy(self.obligations),all_history=deepcopy(self.history),all_notices=deepcopy(self.notices),model_document='poc/WORLD_MODEL.md')
         return result

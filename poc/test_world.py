@@ -124,7 +124,7 @@ class StandaloneSystemTests(unittest.TestCase):
         self.assertEqual(wage['alltag_budget']+wage['werkstatt_budget'],159600)
         benefit=HouseholdSystem.outputs(HouseholdInput(0,100000,0,0,300000))
         self.assertEqual(benefit['tax_due'],0)
-        self.assertEqual(benefit['alltag_budget']+benefit['werkstatt_budget'],95000)
+        self.assertEqual(benefit['alltag_budget']+benefit['werkstatt_budget'],100000)
 
     def test_firm_and_finance_rules_without_world(self):
         from systems import FirmInput,FirmSystem,FinanceSystem
@@ -156,3 +156,41 @@ class LongRunTests(unittest.TestCase):
                         self.assertEqual(h['metrics']['income'],h['metrics']['transfers'])
                     found=True;break
         self.assertTrue(found)
+
+
+class HouseholdReserveRegressionTests(unittest.TestCase):
+    def test_no_income_still_has_cash_funded_essential_plan(self):
+        from systems import HouseholdInput,HouseholdSystem
+        for balance,expected in [(300000,100000),(40000,40000),(0,0)]:
+            plan=HouseholdSystem.outputs(HouseholdInput(0,0,0,0,balance))
+            self.assertEqual(plan['desired_budget'],100000)
+            self.assertEqual(plan['funded_budget'],expected)
+            self.assertEqual(plan['alltag_budget']+plan['werkstatt_budget'],expected)
+
+    def test_existing_cash_is_actually_paid_to_selling_firms(self):
+        w=World()
+        # Controlled port fixture: no new income, but available household cash and goods.
+        w.phase=1;w.month=1
+        w.pay('staat','ausland',w.nodes['staat']['cash_cents'],'test_fixture','Expliziter Testanschluss')
+        w.nodes['alltag']['inventory']=100;w.nodes['werkstatt']['inventory']=100
+        before={k:n['cash_cents'] for k,n in w.nodes.items()}
+        w.step()
+        tx=[t for t in w.journal if t['kind']=='consumption']
+        self.assertTrue(tx)
+        total=sum(t['amount_cents'] for t in tx)
+        self.assertEqual(total,570000)
+        self.assertEqual(sum(before[f]-w.nodes[f]['cash_cents'] for f in ['h1','h2','h3','h4','h5','h6']),total)
+        self.assertEqual(sum(w.nodes[f]['cash_cents']-before[f] for f in ['alltag','werkstatt']),total)
+        self.assertTrue(all(h['metrics']['reserve_used']==95000 for h in w.households()))
+
+    def test_month_97_income_only_freeze_is_not_preserved(self):
+        income_only=World(essential_budget_cents=0)
+        with_necessities=World(essential_budget_cents=100000)
+        for _ in range(97*5):
+            income_only.step();with_necessities.step()
+        self.assertEqual(income_only.history[-1]['consumption_cents'],0)
+        self.assertGreater(sum(h['cash_cents'] for h in income_only.households()),0)
+        self.assertGreater(with_necessities.history[-1]['consumption_cents'],0)
+        self.assertGreater(sum(h['metrics']['reserve_used'] for h in with_necessities.households()),0)
+        for w in [income_only,with_necessities]:
+            self.assertEqual(sum(n['cash_cents'] for n in w.nodes.values()),15600000)

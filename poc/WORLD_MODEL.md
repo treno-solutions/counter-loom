@@ -1,6 +1,6 @@
 # Laufender Wirtschaftskreislauf · POC 02
 
-Version 0.1 · 2. November 2026 · Technischer Lernversuch, keine kalibrierte Volkswirtschaft. Dieses Konzept begrenzt die folgende Implementierung. POC 01 bleibt als Haushaltsansicht erhalten.
+Version 0.2 · Modellklassifikation `illustrative_circular_flow_v2` · 2. November 2026 · Technischer Lernversuch, keine kalibrierte Volkswirtschaft. Dieses Konzept begrenzt die folgende Implementierung. POC 01 bleibt als Haushaltsansicht erhalten.
 
 ## Frage und Abnahme
 
@@ -19,7 +19,7 @@ Alle Zahlen und Verhaltensschwellen sind **eigene illustrative Testannahmen**, k
 - Je Haushalt 3.000 € verfügbare Zahlungsmittel; Bruttolohn 2.400 € pro Beschäftigtem, Einkommensteuer 30 %. Unbeschäftigte erhalten, soweit finanzierbar, 1.000 € Transfer.
 - Unternehmen je 24.000 € Zahlungsmittel und 12.000 € bestehende Verbindlichkeit gegenüber dem Finanzsektor. Einfache jährliche Kreditzinsen 2 %, keine neuen Kredite oder Tilgung.
 - Staat 80.000 €, Finanzsektor 10.000 €, Ausland 0 € Zahlungsmittel. Zahlungsmittel sind vereinfachte Abrechnungseinheiten, keine vollständige Bankeinlagen-/Zentralbankbilanz oder Geldmengenstatistik.
-- Haushalt konsumiert 95 % seines tatsächlich verfügbaren laufenden Nettoeinkommens, begrenzt durch sein Konto. Kaufbudget 55 % Alltagsgüter, Rest Werkstattprodukte. Nicht konsumiertes Geld bleibt auf dem Konto; kein Wertpapiermarkt.
+- Haushalt plant den größeren Betrag aus 1.000 € Grundbedarfsbudget und 95 % seines laufenden Nettoeinkommens. Beim Konsumeingriff sinkt der einkommensabhängige Anteil auf 65 %; der Grundbedarfsplan bleibt bestehen. Das gesamte finanzierbare Kaufbudget ist durch den vorhandenen Kontostand begrenzt. Damit kann auch ohne neues Einkommen aus früher angespartem Geld gekauft werden. Die 1.000 € sind eine eigene illustrative Testannahme, keine empirische Bedarfsgrenze. Kaufbudget 55 % Alltagsgüter, Rest Werkstattprodukte. Nicht konsumiertes Geld bleibt auf dem Konto; kein Wertpapiermarkt.
 - Alltagsbetrieb: 36 Einheiten je Beschäftigtem und Monat, 100 € Stückpreis. Werkstatt: 20 Einheiten, 150 €. Energieimportkosten 180 € je aktivem Beschäftigtem/Monat. Produzierte, nicht verkaufte Einheiten bleiben als Lagerbestand erhalten. Fehlende Ware begrenzt tatsächliche Käufe. Käufe erfolgen in ganzen Gütereinheiten; bei Preisen von 100 € beziehungsweise 150 € bleibt auch durch Rundung ungenutztes Kaufbudget auf dem Haushaltskonto. Geplanter Konsumanteil und tatsächlich realisierte Ausgaben sind deshalb verschieden.
 - Öffentliche Beschaffung bis zu 1.200 € je Unternehmen/Monat. Steuer auf positive operative Monatsüberschüsse 20 %. Investitionsausgaben sind ein Vermögenszugang und kein laufender Verbrauch; Güter werden geliefert und beim Lieferanten ausgebucht.
 - Der Alltagsbetrieb kann für 1.200 € acht Werkstatteinheiten als Anlage kaufen, sofern Nachfrage nicht bedient werden konnte oder mindestens 80 % der Monatsproduktion verkauft wurden und nach dem Kauf zwei Monatslohnsummen verfügbar bleiben. Jede solche Anlage erhöht seine Kapazität ab nächstem Monat um vier Einheiten. Keine Abschreibung in diesem ersten Versuch.
@@ -49,3 +49,14 @@ Eine schematische Systemkarte mit Sektorknoten, tatsächlichen Zahlungswegen, Be
 Centgenaue Transfers haben identische Belastung und Gutschrift. Summe aller Zahlungsmittel einschließlich Ausland bleibt konstant. Konten und Lagerbestände sind nicht negativ. Getrennte Prüfung der beiden Seiten von Kreditforderungen/-verbindlichkeiten; keine Addition zum Zahlungsmittelbestand. Einzelsystem mit Testanschluss, unabhängige Ledger-Rekonstruktion, echte Folgeschritte, Neustart, Eingriff ab Monatsgrenze und Auswirkungen auf beide Gegenparteien prüfen. Kein Nachweis empirischer Prognosegüte, realer Geldschöpfung oder pädagogischer Wirkung.
 
 Technische Grundlage: geprüfter [BPTK-Screen](../research/frameworks/bptk-py.md), [Bestands-/Fluss-Architektur](../research/decisions/0004-reduced-hybrid-learning-model.md). Die konkrete kleine Wirtschaft und ihre Regeln sind eigene Szenarioannahmen; es wird keine Übernahme eines validierten Makromodells behauptet. Die übernommenen Framework-Fähigkeiten ersetzen keine fachliche Kalibrierung. Zunächst maximal 240 Monate pro Lauf im Arbeitsspeicher; kein Fortsetzen nach Serverneustart.
+
+
+## Korrektur v2 und sichtbare Zahlungsrechnung
+
+V1 koppelte Käufe allein an neues Einkommen. Ohne neues Einkommen blieb der Kaufplan bei null, selbst bei gefülltem Konto. Der [diagnostizierte Lauf](../qa/circular-flow-v1-limitations-2026-11-02.json) hält die Grenzen und die Verteilung nach 12 beziehungsweise 97 Monaten fest. V2 ergänzt den oben beschriebenen Grundbedarfsplan; fehlendes Geld, Warenmangel und Stückelung begrenzen weiterhin die tatsächlich gebuchten Käufe. Ein nicht erfüllter Kaufplan ist keine Verbindlichkeit.
+
+Die Oberfläche weist je Haushalt Kaufplan, finanzierbares Budget, tatsächlich bezahlte Käufe und den daraus finanzierten Verbrauch älteren Kontoguthabens aus. Letzterer ist der positive Unterschied zwischen bezahlten Käufen und laufendem Einkommen nach Lohnsteuer. Die Bankausschüttung erfolgt erst in der späteren Abschlussphase; sie wird im Kontoauszug getrennt als Eingang sichtbar.
+
+In der Übersicht stehen Anfangsbestand, aktuelle Verteilung und Änderungen aller fünf Sektoren. Die Summe der Änderungen muss null sein. Bei Staat und Einzelsystem gilt: Monatsanfang + tatsächlich eingegangene Zahlungen − tatsächlich ausgegangene Zahlungen = aktuelles Konto. Während eines offenen Monats sind diese Zahlen ausdrücklich unvollständige Monatsflüsse.
+
+Die Staatsansicht trennt Steuern, Ausgaben, Saldo, Rückgriff auf vorhandenes Geld und aktuellen Puffer. Eine konstante Fortschreibung des letzten abgeschlossenen Defizits ist nur eine gekennzeichnete Rechenhilfe, keine Prognose. Neue Anleihen oder Kredite sind weiterhin nicht implementiert. Der vereinfachte Energie-Außenanschluss führt erhaltene Zahlungen weiterhin nicht zurück; die Welt ist kein dauerhaft geschlossener Güter-/Nachfragekreislauf und kein validiertes Gleichgewichtsmodell.

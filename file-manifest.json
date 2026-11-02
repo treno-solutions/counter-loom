@@ -6,8 +6,8 @@
   },
   {
     "path": "POC.md",
-    "bytes": 9075,
-    "sha256": "65945b51729ce02f28144ca357af04dfb55cde99863f64db4754d2602a12a914"
+    "bytes": 9708,
+    "sha256": "8c4336b6d2d9651f1027719fb713c429282c5bdffe866d98b681e3085d28c6de"
   },
   {
     "path": "RESEARCH.md",
@@ -106,8 +106,8 @@
   },
   {
     "path": "poc/source-manifest.json",
-    "bytes": 3421,
-    "sha256": "fa2e21ebc78a1570ddc04043911f5892b9cfab31cf697ff5e02697ab7c5d92bc"
+    "bytes": 3576,
+    "sha256": "a5dd55bb22b3e07ca875fb3658bb30906b5b417a7cf94c7dc218b3e26e846618"
   },
   {
     "path": "processed/energy-monthly-prices.csv",
@@ -265,6 +265,11 @@
     "sha256": "351457e399983e41fdb4ede5b6bf0451dd6f6e08a305e62eacba92830e4b855e"
   },
   {
+    "path": "qa/circular-flow-v1-limitations-2026-11-02.json",
+    "bytes": 1428,
+    "sha256": "89046950c4964122f553d40044182f84f462c2a8daa27362087715e51e8fa7cc"
+  },
+  {
     "path": "qa/concordia-pilot-readiness.json",
     "bytes": 400,
     "sha256": "fedc34acc6b8ce9ebeb0ed3f629b602bc3726d231a9604118aa9fc400f998d9d"
@@ -283,6 +288,11 @@
     "path": "qa/conversion-report.json",
     "bytes": 3164,
     "sha256": "f90e0cd95ee1417089575882e539fab7ec4e31ba24ea138b6fcaedfcd8fed749"
+  },
+  {
+    "path": "qa/fiscal-and-household-v2-2026-11-02.json",
+    "bytes": 4049,
+    "sha256": "6c38c04a8d88f97f0f8d73d59f2d5ddfb649ab3800802d5151179201198989f1"
   },
   {
     "path": "qa/framework-review-validation.json",

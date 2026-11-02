@@ -1,0 +1,85 @@
+{
+  "date": "2026-11-02",
+  "classification": "illustrative_circular_flow_v2",
+  "scope": "Household reserve-consumption correction, fiscal view and provenance of settlement money",
+  "changes": [
+    "Purchase plan is max(1000 EUR essential budget, income-based budget), capped by available household cash",
+    "Unmet purchase plans are not posted as money spent or as liabilities",
+    "Explicit household planned, cash-funded, actual purchases and older-cash use",
+    "Sector initial/current/change reconciliation; no money creation in this fixture",
+    "Government cash account, taxes/outlays, deficit financed from buffer, debt-finance scope explicit",
+    "Partial months clearly distinguished from closed monthly results",
+    "Simplified external energy account explicitly labeled as one-way"
+  ],
+  "assumptions": {
+    "essential_budget_eur": 1000,
+    "empirically_calibrated": false,
+    "model_rules": "poc/WORLD_MODEL.md"
+  },
+  "automated": {
+    "command": "npm test --prefix poc",
+    "passed": 22,
+    "failed": 0,
+    "checks": [
+      "previous conservation/HTTP/system/long-run tests retained",
+      "zero-income household purchase plan with cash, partial cash, and zero cash",
+      "actual reserve-funded purchases debit household and credit supplier equally; controlled fixture pays 5700 EUR",
+      "97-month paired comparison against income-only counterfactual",
+      "240-month stressed accounting and boundary still pass"
+    ]
+  },
+  "paired_month_97": {
+    "method": "Both newly constructed worlds use the current implementation and identical inputs; essential_budget_cents=0 reproduces the old income-only purchase-budget rule. The actual prior-v1 run is separately archived.",
+    "income_only": {
+      "consumption_eur": 0,
+      "household_cash_eur": 102369.2,
+      "government_cash_eur": 0,
+      "external_cash_eur": 35640,
+      "employment_relations": 2,
+      "total_money_eur": 156000
+    },
+    "essential_budget_1000_eur": {
+      "consumption_eur": 4600,
+      "household_cash_eur": 85204,
+      "government_cash_eur": 0,
+      "external_cash_eur": 53460,
+      "employment_relations": 4,
+      "reserve_used_for_month_consumption_eur": 600,
+      "total_money_eur": 156000
+    }
+  },
+  "build": {
+    "command": "npm run build --prefix poc",
+    "result": "passed TypeScript and Vite"
+  },
+  "browser": {
+    "tool": "BrowserOS neo",
+    "checks": [
+      "5 manual phases close month 1; sector changes +1720 / +112 / -2552 / 0 / +720 EUR sum to zero",
+      "expanded source-of-money table has all 5 sectors",
+      "government month 1: 80000 + 4648 - 7200 = 77448 EUR; displayed deficit 2552 EUR",
+      "government month 2 first phase: 77448 + 0 - 4800 = 72648 EUR, explicitly marked incomplete month",
+      "government funding view distinguishes existing cash and unimplemented bond/credit financing",
+      "household 1 month 1: 3000 + 2406.67 - 2120 = 3286.67 EUR; counterpart sources shown",
+      "household plan 1596 EUR, actual purchase 1400 EUR; rounding/stock limits explained",
+      "desktop and 390px fiscal screenshots visually inspected",
+      "320px toolbar clipping found and corrected; final check has no clipped controls or document overflow",
+      "production build creates world and executes a real phase without error",
+      "final console: no errors or warnings"
+    ],
+    "viewports_css_px": [
+      1040,
+      390,
+      320
+    ]
+  },
+  "previous_model_diagnosis": "qa/circular-flow-v1-limitations-2026-11-02.json",
+  "limits": [
+    "Not all model limitations are solved: public financing and export-demand return still absent",
+    "Whole-unit goods can leave unspent budget even when the cash plan is funded",
+    "Nominal employment relations do not guarantee actual salary payment",
+    "No stable-equilibrium, empirical forecasting or educational validation claim",
+    "Reserve-runway display assumes unchanged last-closed-month deficit; not an endogenous forecast",
+    "Rules change requires new run; earlier recorded findings are not overwritten"
+  ]
+}

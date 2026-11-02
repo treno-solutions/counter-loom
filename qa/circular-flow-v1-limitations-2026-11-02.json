@@ -1,0 +1,36 @@
+{
+  "date": "2026-11-02",
+  "classification": "diagnostic_of_superseded_illustrative_rules_not_real_world_finding",
+  "source_commit": "5eb7f1a",
+  "scenario": "No interventions; end of month",
+  "month_12": {
+    "initial_total_eur": 156000,
+    "ending_total_eur": 156000,
+    "sector_changes_eur": {
+      "households": 20640,
+      "firms": 3148,
+      "government": -32428,
+      "bank": 0,
+      "external": 8640
+    }
+  },
+  "month_97": {
+    "household_cash_eur": 102369.2,
+    "firm_cash_eur": 7990.8,
+    "government_cash_eur": 0,
+    "finance_cash_eur": 10000,
+    "external_cash_eur": 35640,
+    "consumption_eur": 0,
+    "private_firm_positions": 0,
+    "nominal_government_positions": 2,
+    "actual_household_income_eur": 0
+  },
+  "diagnosis": [
+    "Household purchase budget used fresh income only and excluded existing cash as a source for ongoing necessities",
+    "No-income households could retain large cash balances while their purchase plan became zero",
+    "Finite government buffer and one-way energy external account drain domestic circulation",
+    "Nominal employer relation is not proof of actual wage payment",
+    "Conservation of cash holds; long-run behavioral plausibility was not established"
+  ],
+  "follow_up": "Explicit household essential-consumption plan bounded by available cash; source-of-funds and fiscal accounting views. External exports and debt finance remain outside scope."
+}

@@ -22,9 +22,13 @@ Die Ansicht ist unter **http://127.0.0.1:5173/** erreichbar. Der Launcher wartet
 2. Die Systemkarte zeigt Haushalte, Unternehmen, Staat, Finanzsektor und einen vereinfachten Energie-Außenanschluss. Kontostände sind Bestände. Verbindungssummen zeigen tatsächlich verbuchte Zahlungen des laufenden Monats. Bewegte Marker kennzeichnen die aktuelle Buchungsphase; sie zählen keine zusätzlichen Zahlungen.
 3. Kleine Kurven zeigen abgeschlossene Monatsbestände und den aktuellen Stand. Jede Box hat eine eigene Skala; die Kurven sind kein Vergleich absoluter Größen zwischen Sektoren. Veränderungen innerhalb eines Monats bewegen den letzten Punkt. Der Konsumverlauf zählt nur abgeschlossene Monate.
 4. Ein System anklicken: Erklärung, Kontensumme und Buchungen erscheinen im Inspektor. Auf schmaleren Ansichten wird dorthin gesprungen; **Zur Systemkarte** führt zurück. Die Karte ist auf kleinen Bildschirmen seitlich verschiebbar.
-5. **In das System hineingehen** zeigt seine Mitglieder. Ein Haushalt oder Betrieb öffnet Konten, Eingänge, Ausgänge und Regeln. Der Navigationspfad führt zurück; Zeit und Modellzustand bleiben über alle Ebenen identisch.
+5. **In das System hineingehen** zeigt seine Mitglieder; beim Staat öffnet sich der Haushalt mit Einnahmen, Ausgaben, Saldo und verbleibendem Anfangspuffer. Ein Haushalt oder Betrieb öffnet Konten, Eingänge, Ausgänge und Regeln. Der Navigationspfad führt zurück; Zeit und Modellzustand bleiben über alle Ebenen identisch.
+Die Übersicht zeigt unter **Das Geld wechselt die Konten** die Änderungen aller Sektoren seit Start. **Verteilung seit Start** öffnet die vollständige Gegenüberstellung. Im Einzelsystem erklärt **Woher kommt das Geld?** die Gleichung Monatsanfang + Eingänge − Ausgänge = aktuelles Konto.
+
 6. Optional **Ereignis auslösen**: Energieimporte verteuern oder Konsumanteil reduzieren. Ein vorgemerkter Eingriff wirkt erst beim nächsten Monatsbeginn. Beschäftigungsänderungen folgen den dokumentierten Schwellen, keinem vorgegebenen Ereignisdrehbuch.
 7. **Lauf mit Buchungen exportieren** erzeugt JSON mit Anfangskonten, vollständigem Zahlungsjournal, aktuellen Zuständen, Annahmen, wirksamen Eingriffen und Monatsgeschichte. **Neu starten** erzeugt den identischen Anfangszustand als neuen Lauf.
+
+Modell v2: Der Grundbedarfsplan von 1.000 € pro Haushalt und Monat darf auch aus vorhandenem Kontoguthaben finanziert werden. Höhere einkommensabhängige Kaufpläne bleiben möglich. Geld- und Warenmangel begrenzen die tatsächlichen Käufe. Die früheren V1-Regeln und ihre Langzeitgrenzen sind [dokumentiert](../qa/circular-flow-v1-limitations-2026-11-02.json).
 
 Läufe leben im Arbeitsspeicher des lokalen Servers. Die Berechnung schreitet durch Anfragen des geöffneten Browsers voran; es gibt keinen unabhängigen Hintergrunddienst nach dem Schließen. Maximal 240 Monate pro Lauf, bis zu 64 gleichzeitig gespeicherte Läufe. Serverneustart verliert die laufenden Welten; ein JSON-Export ist kein implementierter Wiederherstellungspunkt. Bei Fehlern hält die Ansicht an und zeigt den letzten bestätigten Zustand ausdrücklich weiter.
 
@@ -40,7 +44,7 @@ npm start
 
 Die gebaute Ansicht und API sind gemeinsam unter **http://127.0.0.1:8765/** erreichbar. Dies ist ein lokaler POC-Server, keine Produktionsbereitstellung.
 
-Tests prüfen unter anderem unabhängige Ledger-Rekonstruktion, identische Gegenbuchungen, Geld-/Lagerbestände, Systemregeln ohne laufende Welt, Investitionslieferung und spätere Kapazität, steuerfreie Transfers, reproduzierbare Verläufe, Wirkung an Monatsgrenzen, echte HTTP-Schritte, Wiederholschutz und die 240-Monats-Grenze. Die früheren sechs Tests des Haushaltsversuchs bleiben enthalten. Browserprüfungen sind separat im [Prüfprotokoll](../qa/world-poc-verification-2026-11-02.json) dokumentiert.
+Tests prüfen unter anderem unabhängige Ledger-Rekonstruktion, identische Gegenbuchungen, Geld-/Lagerbestände, Systemregeln ohne laufende Welt, Investitionslieferung und spätere Kapazität, steuerfreie Transfers, reproduzierbare Verläufe, Wirkung an Monatsgrenzen, echte HTTP-Schritte, Wiederholschutz und die 240-Monats-Grenze. Die früheren sechs Tests des Haushaltsversuchs bleiben enthalten. Der aktuelle Stand ist im [V2-Prüfprotokoll](../qa/fiscal-and-household-v2-2026-11-02.json) dokumentiert; der [ursprüngliche Prüfstand](../qa/world-poc-verification-2026-11-02.json) bleibt erhalten.
 
 ## Aufbau und Grenzen
 

@@ -79,3 +79,8 @@ Nächster Schritt: Den lokalen POC anhand einer Vorhersagefrage und einer anschl
 Die überarbeitete Ansicht beginnt mit drei bebilderten fiktiven Haushalten. Eine Vorhersagefrage geht dem Auslösen der Zinsänderung voraus. Danach zeigen alle drei Karten den monatlichen Unterschied; die ausgewählte Detailansicht führt vom Einkommen über Kosten und Zinsen bis zum verbleibenden Betrag. Freie Parameter und technische Tabellen sind nachgeordnet. [Prüfstand der Ansicht](qa/poc-guided-view-2026-11-02.json).
 
 Diese Verbesserung der Bedienung macht aus dem Rechenfall keine Volkswirtschaftssimulation. Einkommen und Alltagskosten sind weiterhin vorgegeben; Unternehmen, Beschäftigung und Konsumnachfrage wirken nicht aufeinander zurück. Die Haushaltsansicht kann später als Detailansicht dienen. Als nächster begrenzter Modellschritt ist ein tatsächlich verbundener Wirtschaftskreislauf zu definieren und fachlich zu prüfen. Ein solcher Kreislauf ist hier noch nicht implementiert.
+
+
+## Modell v2 · Geldherkunft und Haushaltskorrektur
+
+Die [V1-Diagnose](qa/circular-flow-v1-limitations-2026-11-02.json) dokumentiert den Stillstand bei fehlendem Einkommen trotz hoher Haushaltsguthaben. Der [V2-Prüfstand](qa/fiscal-and-household-v2-2026-11-02.json) prüft den begrenzten Grundbedarfsplan aus verfügbarem Kontogeld, Gegenbuchungen und den Vergleich nach 97 Monaten. Die Staatsansicht und die sektorale Geldverteilung machen Quellen, Ausgaben und Rücklagenverbrauch sichtbar. Staatliche Kreditfinanzierung und ein Export-Rückfluss des Energie-Außenanschlusses bleiben offene, getrennt zu modellierende Systeme.

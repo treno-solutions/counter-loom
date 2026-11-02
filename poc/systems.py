@@ -12,12 +12,15 @@ class HouseholdInput:
     prior_dividend: int
     cash: int
     consumption_percent: int = 95
+    essential_budget: int = 100000
 
 class HouseholdSystem:
     @staticmethod
     def outputs(data: HouseholdInput):
-        budget=min(data.cash,max(0,data.wage_income+data.transfer_income-data.paid_tax+data.prior_dividend)*data.consumption_percent//100)
-        return {'tax_due': data.wage_income*30//100, 'alltag_budget':budget*55//100, 'werkstatt_budget':budget-budget*55//100}
+        income_budget=max(0,data.wage_income+data.transfer_income-data.paid_tax+data.prior_dividend)*data.consumption_percent//100
+        desired=max(data.essential_budget,income_budget)
+        budget=min(data.cash,desired)
+        return {'tax_due': data.wage_income*30//100, 'alltag_budget':budget*55//100, 'werkstatt_budget':budget-budget*55//100, 'desired_budget':desired, 'funded_budget':budget}
 
 @dataclass(frozen=True)
 class FirmInput:

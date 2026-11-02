@@ -1,13 +1,13 @@
 [
   {
     "path": "poc/README.md",
-    "bytes": 6241,
-    "sha256": "9f073e702d1178908b0fcbf08882737f0c8d2395f3551dc13de362cd16644f88"
+    "bytes": 7100,
+    "sha256": "5aa2a26acef991733e21899196797e42b9a5427084ed84df7389a83a004becb1"
   },
   {
     "path": "poc/WORLD_MODEL.md",
-    "bytes": 8074,
-    "sha256": "ab0c78791acf4e9d9d9e50f801201d70cf66f80d5c3a9e4632c40f0b6727d9f5"
+    "bytes": 10304,
+    "sha256": "d1948cbb4bf39615ba99a68f0dd225b1a385e5fd91c2fd152ca8912601024230"
   },
   {
     "path": "poc/engine.py",
@@ -55,9 +55,14 @@
     "sha256": "463540b9310219ef2fe9f0420125927c59a722aaa2fdd044652fd203fc31ff5f"
   },
   {
+    "path": "poc/src/AccountingViews.tsx",
+    "bytes": 10108,
+    "sha256": "123a938e6cb9246b0265b55251939f7324db8e3daa2ecaeef0a184def060db88"
+  },
+  {
     "path": "poc/src/App.tsx",
-    "bytes": 23611,
-    "sha256": "7c0f948d0fd41d6917d6b29dee61339e80eeaa1ecf37c11a44cfe37a82f1c264"
+    "bytes": 24231,
+    "sha256": "ee427d604062967d6a2d703ff9158e0b77934d5b8705fdc8ad67a931f6a251ad"
   },
   {
     "path": "poc/src/HouseholdApp.tsx",
@@ -81,18 +86,18 @@
   },
   {
     "path": "poc/src/styles.css",
-    "bytes": 23830,
-    "sha256": "ece9637de86f89ed723d77d636e375b7d7025ab44efea327924fca28b29d6fe0"
+    "bytes": 32236,
+    "sha256": "5722afbba26ce6a0dc28b139fd4e395f9492dc3e63fd9d917a9ff958517f85ce"
   },
   {
     "path": "poc/src/world-schema.ts",
-    "bytes": 2831,
-    "sha256": "ffd1042e7235fb0e59cd7e299784554a3fb8f579b4a324de0f946de1992861f0"
+    "bytes": 2950,
+    "sha256": "80440f5734f392ff16d695ee64f0ad5cf157f2353a642201bf52ab7ca9af6a91"
   },
   {
     "path": "poc/systems.py",
-    "bytes": 1763,
-    "sha256": "50ab51d8688a857dc6322cf0f08ddacb70cbfddf6c8187dc416a7ba4a938bbee"
+    "bytes": 1935,
+    "sha256": "8edb6ba806cc68d50ce153838665630b517a9e7347d60a36733395cfd8b2d9db"
   },
   {
     "path": "poc/test_engine.py",
@@ -101,8 +106,8 @@
   },
   {
     "path": "poc/test_world.py",
-    "bytes": 8790,
-    "sha256": "005949639c13ecb5a8e0fbe23819e9c58c68a496040cb3ad7a09de3bf337f6b5"
+    "bytes": 11026,
+    "sha256": "c31751d2ee243a87cb7eab6194c470ceea7abed5013d34e9bf2e6d537bc6ca74"
   },
   {
     "path": "poc/tsconfig.json",
@@ -116,7 +121,7 @@
   },
   {
     "path": "poc/world.py",
-    "bytes": 16092,
-    "sha256": "3d1922c6de693cc037eb93e143e6a6b2aa8dead0289e897acddeade639c95831"
+    "bytes": 17071,
+    "sha256": "9717f8bb129e7b7f8c0739e27e477efccb3b3b78cfe4f23f4ba9648e56d27eda"
   }
 ]
