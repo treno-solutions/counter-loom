@@ -107,7 +107,7 @@
   {
     "path": "poc/source-manifest.json",
     "bytes": 4150,
-    "sha256": "0b9cd6cce3e720e1a63660fb11525d65c2150af935873f1a3cb4663735a8cb11"
+    "sha256": "4fc4c01bed60921b4a3adc62ac4dd6da4b89b4f24a265bf8a3892dfed421d2c0"
   },
   {
     "path": "processed/energy-monthly-prices.csv",
@@ -253,6 +253,11 @@
     "path": "processed/world-silver-survey-2026.pages.json",
     "bytes": 258925,
     "sha256": "5b11ab1ac2dc84d831960e9d36eb2fd8f6ff41975f4afa49e6b789e3d626aaa3"
+  },
+  {
+    "path": "qa/balance-label-verification-2026-11-02.json",
+    "bytes": 1001,
+    "sha256": "3d72a3180fa50c6e14f4acc64eef3b95a1d7151d0e90048a5ae93f6ddfaeda4a"
   },
   {
     "path": "qa/bank-plausibility-review-2026-11-02.json",

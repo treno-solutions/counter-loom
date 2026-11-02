@@ -66,8 +66,8 @@
   },
   {
     "path": "poc/src/AccountingViews.tsx",
-    "bytes": 10822,
-    "sha256": "d6329ad8e5797abf4cb0b2dc86be709e4854d3a5a5eabc8c04ce813bb2930b89"
+    "bytes": 11054,
+    "sha256": "8085f79bd842310693822201d655e3a018dd8205c084842b6204390daf629595"
   },
   {
     "path": "poc/src/App.tsx",
@@ -101,8 +101,8 @@
   },
   {
     "path": "poc/src/styles.css",
-    "bytes": 43761,
-    "sha256": "404d6ce7cfb69f845a6d2f50f825fb9fc76381743bd7127566d34def4a6ca324"
+    "bytes": 44472,
+    "sha256": "53aa3100d2f5188c4c773b10b84a849d222b594568851c9baf05a6ef93b0858f"
   },
   {
     "path": "poc/src/world-schema.ts",

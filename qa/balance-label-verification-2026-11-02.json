@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-02",
+  "scope": "Presentation-only distinction between current deposit stocks and cumulative changes",
+  "change": "Primary sector number is current customer-deposit balance; secondary signed number explicitly says seit Start; total uses same convention",
+  "verification": {
+    "build": "Strict TypeScript and Vite build passed",
+    "browser": "BrowserOS neo",
+    "checks": [
+      "Initial and month1 state display 80000 and77448 EUR as current balance",
+      "Month1 state delta -2552 EUR appears separately with seit Start",
+      "Total shows current146000 EUR with separate zero change",
+      "320px has no document overflow or clipped sector cells"
+    ],
+    "screenshot_arithmetic": {
+      "initial_government_eur": 80000,
+      "government_change_eur": -79914.06,
+      "remaining_government_eur": 85.94
+    }
+  },
+  "core_modified": false,
+  "limits": "Display correction only; finite-state funding and long-run model limitations remain documented separately."
+}
