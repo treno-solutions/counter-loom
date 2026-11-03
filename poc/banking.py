@@ -36,6 +36,7 @@ class Banking:
         self.repaid = 0
         self.interest_received = 0
         self.distributed = 0
+        self.profit_tax_paid = 0
         self.loan = MachineLoan(units=8*world.goods_unit_scale)
 
     def balance(self, world):
@@ -165,7 +166,7 @@ class Banking:
     def check(self, world):
         balance = self.balance(world)
         assert balance['assets_cents'] == balance['liabilities_and_equity_cents']
-        expected = self.initial_deposits + self.created - self.repaid - self.interest_received + self.distributed
+        expected = self.initial_deposits + self.created - self.repaid - self.interest_received + self.distributed + self.profit_tax_paid
         assert balance['customer_deposits_cents'] == expected
         assert world.nodes['alltag'].get('machine_loan_cents', 0) == self.loan.outstanding_cents
         assert world.nodes['bank']['loan_assets'] == sum(world.nodes[f]['loan'] for f in ('alltag', 'werkstatt')) + self.loan.outstanding_cents + world.nodes['staat'].get('government_loan_cents',0)
@@ -180,4 +181,4 @@ class Banking:
             loan_data['monthly_principal_cents']=(loan_data['amount_cents']+self.loan.term_months-1)//self.loan.term_months
         return dict(balance=self.balance(world), loan=loan_data, events=events, initial_deposits_cents=self.initial_deposits,
                     credit_created_cents=self.created, principal_repaid_cents=self.repaid, interest_received_cents=self.interest_received,
-                    distributed_cents=self.distributed, expected_deposits_cents=self.initial_deposits+self.created-self.repaid-self.interest_received+self.distributed)
+                    distributed_cents=self.distributed, profit_tax_paid_cents=self.profit_tax_paid, profit=world.bank_profit.snapshot(), expected_deposits_cents=self.initial_deposits+self.created-self.repaid-self.interest_received+self.distributed+self.profit_tax_paid)

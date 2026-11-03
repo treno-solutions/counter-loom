@@ -29,6 +29,9 @@ class DistributionTax:
         return gross
 
     def settle_bank(self,world):
+        world.bank_profit.close(world)
+
+    def settle_bank_legacy(self,world):
         # Tax from bank payouts can fund overdue state interest. Settle the real
         # cash feedback before reviewing the budget and recording fiscal history.
         while True:

@@ -1,5 +1,7 @@
 # Bankbilanz · Grundlage v3, erweitert bis v8
 
+Aktueller Zusatz v19: [Bankgewinn, Besteuerung und begrenzte Ausschüttung](BANK_PROFIT_MODEL.md). Die frühere sofortige Vollauszahlung der Zinseinnahmen in den historischen Abschnitten unten gilt nur noch in expliziten Legacy-Gegenläufen. Die aktuelle Einlagenbrücke berücksichtigt zusätzlich die Gewinnsteuerzahlungen der Bank.
+
 Die aktuelle Referenz [v18](STABILITY_MODEL.md) ergänzt eigenfinanzierte Maschinenaufträge mit Produktionsplanung und reserviertem Kaufgeld. Der hier beschriebene gesondert angefragte Bankvertrag bleibt bestehen; während eines offenen eigenfinanzierten Auftrags ist eine parallele Kreditanfrage gesperrt.
 
 Stand: 2. November 2026. Begrenzter Einbank-Test innerhalb der laufenden Welt; keine empirische Kreditvergabe- oder Regulierungsstudie. Alle Beträge und Vertragsbedingungen sind illustrative Annahmen.

@@ -1,0 +1,140 @@
+{
+  "date": "2026-11-03",
+  "model": "illustrative_circular_flow_v19",
+  "source_data_sha256": "e182e0e3822495d5dcfbd067996886a27723e40a10340eae44d15c97e8d9de22",
+  "report_script_sha256": "70d2018fabdd6fcca7f35d257404ab8804f68dd23f46e3f07ed8abf3e3d5ded2",
+  "checks": {
+    "legacy_warmup_matches_1440_archived_months": true,
+    "legacy_branches_match_archive": true,
+    "warmup_phases_checked": 14400,
+    "branch_phases_checked": 1800,
+    "common_parents_unchanged": true
+  },
+  "python_tests_passed": 205,
+  "ui_snapshots_passed": 26,
+  "invalid_snapshots_rejected": 8,
+  "frontend_build_passed": true,
+  "bank_view_three_months_checked": true,
+  "journal_income_and_bank_profit_reconciled": true,
+  "same_state_all_60_months_household_neutral": true,
+  "results": {
+    "v18 · alte Bankregel": {
+      "12": {
+        "bank_tax_delta_cents": 0,
+        "bank_dividend_delta_cents": 33000,
+        "bank_retained_delta_cents": 0,
+        "household_income_delta_cents": 13683,
+        "purchases_delta_percent": 0.10345340875259623,
+        "firm_profit_delta_cents": -28191,
+        "state_net_delta_cents": -522
+      },
+      "13": {
+        "bank_tax_delta_cents": 0,
+        "bank_dividend_delta_cents": 36000,
+        "bank_retained_delta_cents": 0,
+        "household_income_delta_cents": 16158,
+        "purchases_delta_percent": 0.09630775073925513,
+        "firm_profit_delta_cents": -31022,
+        "state_net_delta_cents": -161
+      },
+      "60": {
+        "bank_tax_delta_cents": 0,
+        "bank_dividend_delta_cents": 36000,
+        "bank_retained_delta_cents": 0,
+        "household_income_delta_cents": 17316,
+        "purchases_delta_percent": 0.026572247111467107,
+        "firm_profit_delta_cents": -29580,
+        "state_net_delta_cents": 624
+      }
+    },
+    "v19 · Regelwechsel, gleicher Start": {
+      "12": {
+        "bank_tax_delta_cents": 6600,
+        "bank_dividend_delta_cents": 26400,
+        "bank_retained_delta_cents": 0,
+        "household_income_delta_cents": 0,
+        "purchases_delta_percent": 0.0,
+        "firm_profit_delta_cents": -33000,
+        "state_net_delta_cents": 0
+      },
+      "13": {
+        "bank_tax_delta_cents": 7200,
+        "bank_dividend_delta_cents": 27600,
+        "bank_retained_delta_cents": 1200,
+        "household_income_delta_cents": 0,
+        "purchases_delta_percent": 0.0,
+        "firm_profit_delta_cents": -36000,
+        "state_net_delta_cents": 0
+      },
+      "60": {
+        "bank_tax_delta_cents": 7200,
+        "bank_dividend_delta_cents": 28800,
+        "bank_retained_delta_cents": 0,
+        "household_income_delta_cents": 0,
+        "purchases_delta_percent": 0.0,
+        "firm_profit_delta_cents": -36000,
+        "state_net_delta_cents": 0
+      }
+    },
+    "v19 · seit Welteröffnung": {
+      "12": {
+        "bank_tax_delta_cents": 6600,
+        "bank_dividend_delta_cents": 26400,
+        "bank_retained_delta_cents": 0,
+        "household_income_delta_cents": 0,
+        "purchases_delta_percent": 0.0,
+        "firm_profit_delta_cents": -33000,
+        "state_net_delta_cents": 0
+      },
+      "13": {
+        "bank_tax_delta_cents": 7200,
+        "bank_dividend_delta_cents": 27600,
+        "bank_retained_delta_cents": 1200,
+        "household_income_delta_cents": 0,
+        "purchases_delta_percent": 0.0,
+        "firm_profit_delta_cents": -36000,
+        "state_net_delta_cents": 0
+      },
+      "60": {
+        "bank_tax_delta_cents": 7200,
+        "bank_dividend_delta_cents": 28800,
+        "bank_retained_delta_cents": 0,
+        "household_income_delta_cents": 0,
+        "purchases_delta_percent": 0.0,
+        "firm_profit_delta_cents": -36000,
+        "state_net_delta_cents": 0
+      }
+    }
+  },
+  "rule_change_without_shock_12": {
+    "bank_tax_delta_cents": 9600,
+    "bank_dividend_delta_cents": -9600,
+    "bank_retained_delta_cents": 0,
+    "household_income_delta_cents": -22866,
+    "purchases_delta_percent": -0.17936885977969386,
+    "firm_profit_delta_cents": -9066,
+    "state_net_delta_cents": -792
+  },
+  "late_control_ranges_cents": {
+    "households": [
+      1673242,
+      2062053
+    ],
+    "firms": [
+      3424525,
+      3873961
+    ],
+    "government": [
+      8971625,
+      9046143
+    ],
+    "bank": [
+      1000000,
+      1003200
+    ],
+    "government_debt": [
+      0,
+      0
+    ]
+  }
+}

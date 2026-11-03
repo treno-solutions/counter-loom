@@ -106,8 +106,8 @@
   },
   {
     "path": "poc/source-manifest.json",
-    "bytes": 18002,
-    "sha256": "e8cbac7d4aaa2ea74f3cc3c7096ac928abd531113cc14ed7e3bfeef72db6419d"
+    "bytes": 18928,
+    "sha256": "b208b5b6899defcbe463846d21a868dc26c18fa4975e8c7ab1542153f3955a58"
   },
   {
     "path": "processed/energy-monthly-prices.csv",
@@ -268,6 +268,31 @@
     "path": "qa/bank-plausibility-review-2026-11-02.md",
     "bytes": 15461,
     "sha256": "69bf8957639a05f78166ef14a4d755528ee6866d4d41a790e46f25cc63d1c99f"
+  },
+  {
+    "path": "qa/bank-profit-v19-comparison.json",
+    "bytes": 22154782,
+    "sha256": "e182e0e3822495d5dcfbd067996886a27723e40a10340eae44d15c97e8d9de22"
+  },
+  {
+    "path": "qa/bank-profit-v19-comparison.svg",
+    "bytes": 41828,
+    "sha256": "430741895898431199a83134e98ffff4c5fc9ee82639fc1badd1c4aad249c662"
+  },
+  {
+    "path": "qa/bank-profit-v19-plan.md",
+    "bytes": 3843,
+    "sha256": "83ed227448bba07518db94ad9989f680fb442f92939adc8ec8223c09ecb4a5f7"
+  },
+  {
+    "path": "qa/bank-profit-v19-report.md",
+    "bytes": 6538,
+    "sha256": "230eba69bfb8fd6023c0ae74d424c729d3e5cc2c110626c3fb3a3aa708fd7c5e"
+  },
+  {
+    "path": "qa/bank-profit-v19-verification.json",
+    "bytes": 4348,
+    "sha256": "5313849bfa11f1a459cfa88e406c4d58c14728c4abca8509091235bcc7fd992b"
   },
   {
     "path": "qa/bank-ui-integration-2026-11-02.json",

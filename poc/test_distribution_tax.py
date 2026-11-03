@@ -76,9 +76,10 @@ class DistributionTaxTests(unittest.TestCase):
         w.distribution_tax.settle_bank(w)
         self.assertGreater(w.treasury.interest_paid_cents,0)
         self.assertLess(w.treasury.interest_paid_cents,1000)
-        self.assertEqual(w.nodes['bank']['cash_cents'],1000000)
+        self.assertEqual(w.nodes['bank']['cash_cents'],1000000+w.bank_profit.retained)
         self.assertLess(len(w.distribution_tax.receipts),100)
-        self.assertEqual(sum(t['amount_cents'] for t in w.journal if t['kind']=='dividend'),1000+w.treasury.interest_paid_cents)
+        self.assertEqual(sum(t['amount_cents'] for t in w.journal if t['kind']=='dividend'),w.bank_profit.monthly['after_tax_cents']//2)
+        self.assertEqual(w.bank_profit.monthly['profit_before_tax_cents'],1000+w.treasury.interest_paid_cents)
         w.check()
         count=len(w.journal);w.distribution_tax.settle_bank(w);self.assertEqual(len(w.journal),count)
 

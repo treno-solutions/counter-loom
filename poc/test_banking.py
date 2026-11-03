@@ -47,7 +47,7 @@ class BankingTests(unittest.TestCase):
         self.assertEqual(sum(t['amount_cents'] for t in interest),3900)
         self.assertEqual(w.banking.loan.outstanding_cents,0)
         self.assertEqual(w.banking.loan.status,'repaid')
-        self.assertEqual(w.banking.balance(w)['customer_deposits_cents'],14600000+w.treasury.outstanding_cents)
+        self.assertEqual(w.banking.balance(w)['customer_deposits_cents'],14600000+w.treasury.outstanding_cents-w.bank_profit.retained)
         old=len(interest)+len(principal)
         for _ in range(5):w.step()
         self.assertEqual(len([t for t in w.journal if t['kind'] in ('machine_interest','machine_principal')]),old)
@@ -92,7 +92,7 @@ class BankingTests(unittest.TestCase):
         self.assertEqual(w.banking.loan.outstanding_cents,91800)
         self.assertEqual(w.banking.loan.overdue_principal_cents,1800)
         self.assertEqual(w.nodes['alltag']['cash_cents'],0)
-        self.assertEqual(w.nodes['bank']['cash_cents'],1001800)
+        self.assertEqual(w.nodes['bank']['cash_cents'],1000000+w.bank_profit.retained+1800)
         w.check()
 
     def test_duplicate_request_and_api_revision_guard(self):

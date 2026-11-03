@@ -12,7 +12,7 @@ export default function DistributionTaxView({world,source,month}:{world:World;so
  const y=(v:number)=>130-v/max*100;
  return <section className="distribution-tax-view" aria-label="Ausschüttungssteuer und Nettoeinkommen">
   <h4>Ausschüttungen: Brutto → Steuer → Netto · Monat {row.month}</h4>
-  <p>Modellannahme: {(t.rate_bps/100).toLocaleString('de-DE')} % auf tatsächlich ausgezahlte Firmengewinne und Bankzinsen. Einbehalt bei Auszahlung, ohne Freibetrag. Die Gewinnsteuer des Unternehmens bleibt eine eigene Steuer.</p>
+  <p>Modellannahme: {(t.rate_bps/100).toLocaleString('de-DE')} % auf tatsächlich ausgezahlte Firmen- und Bankdividenden. Einbehalt bei Auszahlung, ohne Freibetrag. Die Gewinnsteuer von Unternehmen und Bank bleibt eine eigene Steuer.</p>
   <div className="distribution-tax-flow"><div><span>Brutto ausgeschüttet</span><strong>{money(totals.gross_cents)}</strong></div><div><span>An den Staat einbehalten</span><strong>{money(totals.tax_cents)}</strong></div><div><span>Netto für Haushalte</span><strong>{money(totals.net_cents)}</strong></div></div>
   <div className="distribution-tax-bar" role="img" aria-label={`Von ${money(totals.gross_cents)} brutto gehen ${money(totals.tax_cents)} an den Staat und ${money(totals.net_cents)} netto an Haushalte`}><i style={{width:`${100*totals.tax_cents/Math.max(1,totals.gross_cents)}%`}}/><b style={{width:`${100*totals.net_cents/Math.max(1,totals.gross_cents)}%`}}/></div>
   <p>Orange: Steuer · Grün: Netto. Der Nettobetrag wird in der nächsten Kaufrunde berücksichtigt. Die Überweisung verändert die Verteilung vorhandenen Geldes.</p>

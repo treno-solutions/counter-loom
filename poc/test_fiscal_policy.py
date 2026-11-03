@@ -10,20 +10,20 @@ class FiscalPolicyTests(unittest.TestCase):
     def test_default_spends_existing_cash_instead_of_restoring_eighty_thousand(self):
         w=World(goods_unit_scale=1,distribution_tax_bps=0);self.finish(w);m=w.treasury.monthly(w)
         self.assertEqual(m['reserve_target_cents'],720000)
-        self.assertEqual(m['closing_cash_cents'],7758640)
-        self.assertEqual(m['budget_balance_cents'],-241360)
-        self.assertEqual(m['reserve_draw_cents'],241360)
+        self.assertEqual(m['closing_cash_cents'],7759440)
+        self.assertEqual(m['budget_balance_cents'],-240560)
+        self.assertEqual(m['reserve_draw_cents'],240560)
         self.assertEqual(m['credit_cents'],0)
         self.assertEqual(m['decision'],'hold')
         self.assertEqual(w.treasury.outstanding_cents,0)
 
     def test_borrow_only_the_target_gap_after_all_actual_flows(self):
         w=World(goods_unit_scale=1,distribution_tax_bps=0,government_initial_cash_cents=720000);self.finish(w);m=w.treasury.monthly(w)
-        self.assertEqual(m['policy_cash_before_cents'],478640)
-        self.assertEqual(m['policy_credit_need_cents'],241360)
+        self.assertEqual(m['policy_cash_before_cents'],479440)
+        self.assertEqual(m['policy_credit_need_cents'],240560)
         self.assertEqual(m['closing_cash_cents'],720000)
         self.assertEqual(m['decision'],'borrow')
-        self.assertEqual(m['credit_cents'],241360)
+        self.assertEqual(m['credit_cents'],240560)
 
     def test_surplus_below_target_builds_cash_without_repaying_debt(self):
         w=World(government_initial_cash_cents=0,government_credit_limit_cents=100000)
@@ -59,8 +59,8 @@ class FiscalPolicyTests(unittest.TestCase):
         w=World(goods_unit_scale=1,distribution_tax_bps=0,government_initial_cash_cents=720000,government_credit_limit_cents=0)
         self.finish(w);m=w.treasury.monthly(w)
         self.assertEqual(w.treasury.outstanding_cents,0)
-        self.assertEqual(m['closing_cash_cents'],478640)
-        self.assertEqual(m['unfunded_financing_cents'],241360)
+        self.assertEqual(m['closing_cash_cents'],479440)
+        self.assertEqual(m['unfunded_financing_cents'],240560)
         self.assertEqual(m['decision'],'limited')
         self.assertEqual(m['interest_paid_cents'],0)
         self.assertEqual(sum(h['metrics']['income'] for h in w.households()),1440000)

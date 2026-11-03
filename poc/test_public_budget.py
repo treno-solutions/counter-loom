@@ -85,7 +85,7 @@ class PublicBudgetTests(unittest.TestCase):
         w=World(distribution_tax_bps=0,government_initial_cash_cents=0,government_credit_limit_cents=0)
         w.crisis.queue(w,'both',3,6000);months(w,1)
         a=w.budget.monthly(w)
-        self.assertEqual(w.treasury.monthly(w)['budget_balance_cents'],0)
+        self.assertEqual(w.treasury.monthly(w)['budget_balance_cents'],w.bank_profit.monthly['profit_tax_paid_cents'])
         self.assertLess(a['commitment_balance_cents'],0)
         self.assertGreater(a['social_unfunded_cents'],0)
 

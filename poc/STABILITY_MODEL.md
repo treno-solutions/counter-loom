@@ -61,3 +61,5 @@ Die Datenschnittstelle verwendet `illustrative_circular_flow_v18`. Nach einem Re
 Die [getrennten Schockversuche](../qa/isolated-shocks-v18-report.md) vergleichen höhere Leitzinsen, teurere Energie und eine befristete Betriebsschliessung aus demselben eingeschwungenen Zustand. Ihre Eingriffe verändern keine Wirtschaftsregel; Monatswerte, Gegenbuchungen und verbleibende Abweichungen sind separat dokumentiert.
 
 Die [Diagnose der schwachen Zinswirkung](../qa/rate-transmission-v18-diagnosis.md) verfolgt die tatsächlichen Zinszahlungen und Ausschüttungen, trennt die unterschiedliche Gewinnbesteuerung von inaktiven Kreditfunktionen und benennt fehlende Übertragungswege. Sie verändert keine Wirtschaftsregel.
+
+Aktueller Zusatz v19: [Bankgewinnrechnung und Gewinnverwendung](BANK_PROFIT_MODEL.md). Die hier archivierten v18-Stabilitätsbefunde bleiben historische Vergleiche; für die neue Bankregel werden eigene Kontroll- und Zinsschockläufe dokumentiert.

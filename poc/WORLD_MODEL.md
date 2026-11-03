@@ -1,5 +1,7 @@
 # Laufende Modellwirtschaft · aktuelle Fassung v18
 
+V19 ergänzt eine [eigene Gewinnrechnung der Bank](BANK_PROFIT_MODEL.md) mit 20 % Gewinnsteuer, regulärer Monats- und zusätzlicher Quartalsausschüttung aus Gewinnen oberhalb des geschützten Anfangseigenkapitals. Der Investitionskanal bleibt unverändert. Die nachfolgenden Beschreibungen von v18 und älteren Ständen erklären deren jeweilige Erweiterungen.
+
 V18 ergänzt [Liquiditätsziele, gemeinsame Personalplanung, finanzierungsbezogene Quartalsentscheidungen und bestellbare Maschinen](STABILITY_MODEL.md). Die Oberfläche startet diese ausdrücklich benannte Referenzvariante; historische Einkommensquoten und Verhaltensregeln bleiben als Vergleichsvarianten erhalten. Die Regeln ändern keine Steuer-, Transfer- oder Lohnsätze und führen keine pauschalen Ausgleichszahlungen ein. [Langzeitprüfung und Grenzen](../qa/stability-v18-report.md).
 
 V16 ergänzt die [Makroübersicht](MACRO_ACCOUNTS.md) als reine Beobachtungsebene: nominale BIP-Näherung und Wachstumsraten, Warenmengen zu Startpreisen, private Produktionskennzahl, Leitzins und Beschäftigung. Demografie bleibt unmodelliert. Ein [kontrollierter Vergleich](../qa/consumption-v16-comparison.md) untersucht ausschliesslich die Konsumquote 95 gegenüber 100 %. In dieser historischen Variante bleibt der Einkommensanteil 95 %; v18 startet eine gesonderte Haushaltsregel.

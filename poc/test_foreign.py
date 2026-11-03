@@ -10,7 +10,7 @@ class ForeignTradeTests(unittest.TestCase):
         self.assertEqual(trade['month_imports_cents'],72000)
         self.assertEqual(trade['month_exports_cents'],0)
         self.assertEqual(trade['foreign_cash_cents'],72000)
-        self.assertEqual(trade['domestic_cash_cents'],14528000+w.treasury.outstanding_cents)
+        self.assertEqual(trade['domestic_cash_cents'],14528000+w.treasury.outstanding_cents-w.bank_profit.retained)
         self.assertEqual(trade['plan']['budget_cents'],0)
         self.assertTrue(all(o['funded_units']==0 for o in trade['plan']['orders']))
 
@@ -66,7 +66,7 @@ class ForeignTradeTests(unittest.TestCase):
                     if case in ('demand','both'):w.queue('demand')
                 w.step();t=w.foreign.snapshot(w);b=w.banking
                 self.assertEqual(t['foreign_cash_cents'],t['cumulative_imports_cents']-t['cumulative_exports_cents'])
-                self.assertEqual(t['domestic_cash_cents'],14600000+t['cumulative_net_inflow_cents']+b.created-b.repaid-b.interest_received+b.distributed)
+                self.assertEqual(t['domestic_cash_cents'],14600000+t['cumulative_net_inflow_cents']+b.created-b.repaid-b.interest_received+b.distributed+b.profit_tax_paid)
                 rows=[d for d in t['deliveries'] if d['month']==w.month]
                 self.assertLessEqual(sum(d['amount_cents'] for d in rows),t['plan']['opening_cash_cents'])
             self.assertTrue(w.snapshot()['completed'])
