@@ -90,3 +90,7 @@ Die frühen Monate sind eine Einlaufphase ohne eingeregeltes Gleichgewicht. Ein 
 ### Arbeitszeit und Betriebsentscheidung
 
 **Unternehmen → Betrieb** zeigt aktuellen und geplanten Zustand, Arbeitszeitanteil, Lohn, benötigte Liquidität, Verlusttoleranz und konkrete Prüfbedingungen. Änderungen gelten ab Folgemonat. Die Zeitkurve trennt aktuelle Quote und Folgeplan. Stilllegung löscht weder Anlagen noch Schulden; ein Wiederanlauf benötigt zwei tragfähige Prüfungen und einen finanzierten Start mit einer freien Arbeitskraft. [Betriebsregeln](BUSINESS_MODEL.md), [unabhängiger V10-Audit](../qa/company-v10-plausibility.md). Reduzierte Arbeit erhält im bestehenden Sozialmodell keine staatliche Aufstockung.
+
+## Gegenlauf mit kleineren Gütereinheiten
+
+Der [600-Monats-Vergleich zur Güterstückelung](../qa/goods-granularity-comparison.md) verwendet 100 Teile je bisheriger Einheit und dieselben Steuer- und Verhaltensregeln. [Umrechnung, Systemgrenze und Prüfungen](GOODS_GRANULARITY_EXPERIMENT.md). Die normale Oberfläche startet weiterhin mit den bisherigen Einheiten; der Gegenlauf ist als reproduzierbares Forschungsexperiment verfügbar.

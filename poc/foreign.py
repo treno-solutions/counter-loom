@@ -4,10 +4,11 @@ from copy import deepcopy
 FIRMS = ('alltag', 'werkstatt')
 
 class ForeignTrade:
-    def __init__(self, export_orders_units=None):
+    def __init__(self, export_orders_units=None, unit_scale=1):
         self.orders = dict(export_orders_units if export_orders_units is not None else {'alltag':6,'werkstatt':2})
         if set(self.orders)!=set(FIRMS) or any(type(v) is not int or v<0 for v in self.orders.values()):
             raise ValueError('Foreign orders must be nonnegative whole units for both firms.')
+        self.orders={k:v*unit_scale for k,v in self.orders.items()}
         self.deliveries=[]
         self.plan=self.empty_plan()
         self.last_purchase_month=0

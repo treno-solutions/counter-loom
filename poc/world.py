@@ -31,12 +31,15 @@ class SystemAgent(Agent):
         self.model.world.act(self.properties['node_id']['value'])
 
 class World:
-    def __init__(self, essential_budget_cents=100000, export_orders_units=None, government_credit_limit_cents=5000000, government_annual_rate_bps=300, initial_policy_rate_bps=200, energy_pass_through_bps=5000, government_reserve_months=1, government_initial_cash_cents=8000000, horizon_months=None, distribution_policy='surplus', fiscal_policy='adaptive', distribution_tax_bps=2500):
+    def __init__(self, essential_budget_cents=100000, export_orders_units=None, government_credit_limit_cents=5000000, government_annual_rate_bps=300, initial_policy_rate_bps=200, energy_pass_through_bps=5000, government_reserve_months=1, government_initial_cash_cents=8000000, horizon_months=None, distribution_policy='surplus', fiscal_policy='adaptive', distribution_tax_bps=2500, goods_unit_scale=1):
         if type(government_initial_cash_cents) is not int or government_initial_cash_cents<0:
             raise ValueError('Initial state cash must be nonnegative whole cents.')
         if horizon_months is not None and (type(horizon_months) is not int or horizon_months<1):
             raise ValueError('Optional observation horizon must be a positive whole month.')
         if distribution_policy not in POLICIES:raise ValueError('Ungültige Gewinnverwendung.')
+        if type(goods_unit_scale) is not int or goods_unit_scale not in (1,10,100):
+            raise ValueError('Gütereinheitenteilung muss 1, 10 oder 100 betragen.')
+        self.goods_unit_scale=goods_unit_scale
         self.distribution_policy=distribution_policy
         self.horizon_months=horizon_months
         self.id = uuid4().hex[:16]
@@ -64,7 +67,11 @@ class World:
             employer = 'alltag' if i<3 else 'werkstatt' if i<5 else 'staat'
             self._node(f'h{i}', f'Haushalt {i}', 'households', 300000, employer=employer, dividend_carry=0)
         for key, demand in [('alltag',60),('werkstatt',32)]:
-            self.nodes[key]['company']=initial_company(demand)
+            n=self.nodes[key]
+            n['unit_scale']=goods_unit_scale
+            n['price']//=goods_unit_scale
+            n['productivity']*=goods_unit_scale
+            n['company']=initial_company(demand*goods_unit_scale)
         self.initial = {k:n['cash_cents'] for k,n in self.nodes.items()}
         self.initial_money = sum(self.initial.values())
         self.month_open = deepcopy(self.initial)
@@ -75,7 +82,7 @@ class World:
         self.budget = PublicBudget(self,fiscal_policy)
         self.treasury = Treasury(self,government_credit_limit_cents,government_annual_rate_bps,government_reserve_months)
         self.pricing = Pricing(self,energy_pass_through_bps)
-        self.foreign = ForeignTrade(export_orders_units)
+        self.foreign = ForeignTrade(export_orders_units,goods_unit_scale)
         self.foreign.begin_month(self)
         self.model = Model(starttime=0, stoptime=1200, dt=1, name='Counterloom circular-flow fixture', scheduler=SimultaneousScheduler())
         self.model.world = self
@@ -180,7 +187,7 @@ class World:
                     self.banking.service(self)
                     m['interest_expense']+=self.banking.loan.interest_charged_cents-charged
                 # One common floor for combined labour/machine capacity, matching the plan.
-                labor_capacity=(len(n['employees'])*n['productivity']+n['capital']*4)*m['wages']//max(1,len(n['employees'])*240000)
+                labor_capacity=(len(n['employees'])*n['productivity']+n['capital']*4*self.goods_unit_scale)*m['wages']//max(1,len(n['employees'])*240000)
                 units=min(p['production_units'],labor_capacity,n['cash_cents']//p['energy_unit_cents'])
                 energy=self.pay(node_id,'ausland',units*p['energy_unit_cents'],'energy','Energie für Produktion')
                 m['operating_costs']+=energy
@@ -206,8 +213,9 @@ class World:
             if self.crisis.closed(self,'alltag') or self.crisis.closed(self,'werkstatt'):return
             if self.banking.originate(self) or self.banking.loan.status=='credited': return
             _,reserve=staffing(n,self.energy_multiplier,self.machine_due(node_id,True))
-            machine_cost=8*self.nodes['werkstatt']['price']
-            if n['company']['short_months']>=2 and self.month-n['company']['last_investment_month']>=3 and n['cash_cents']>=reserve+machine_cost and self.nodes['werkstatt']['inventory']-self.nodes['werkstatt'].get('reserved_units',0)>=8:
+            machine_units=8*self.goods_unit_scale
+            machine_cost=machine_units*self.nodes['werkstatt']['price']
+            if n['company']['short_months']>=2 and self.month-n['company']['last_investment_month']>=3 and n['cash_cents']>=reserve+machine_cost and self.nodes['werkstatt']['inventory']-self.nodes['werkstatt'].get('reserved_units',0)>=machine_units:
                 self.buy('alltag','werkstatt',machine_cost,'investment')
                 n['capital']+=1
                 n['metrics']['investment']+=machine_cost
@@ -244,14 +252,14 @@ class World:
         candidate=next((h for h in self.households() if h['employer'] is None),None)
         if self.crisis.closed(self,n['id']):
             option=outlook(n,self.energy_multiplier,staff,c['work_bps'],debt)
-            demand_ok=c['forecast_milli']>=1000; margin_ok=option['projected_gap_cents']==0
+            demand_ok=c['forecast_milli']>=1000*self.goods_unit_scale; margin_ok=option['projected_gap_cents']==0
             cash_ok=n['cash_cents']>=option['required_cash_cents']
             c['next_status']=c['status'];c['next_work_bps']=c['work_bps']
             reason='Angeordnete befristete Schliessung: Verträge und Vor-Krisen-Arbeitszeitplan bleiben erhalten. Keine automatische Entlassung oder Ausschüttung; Schuldendienst und Erhaltungskosten laufen weiter.'
         elif c['status']=='mothballed':
             work=work_target(n,1);option=outlook(n,self.energy_multiplier,1,work,debt)
             if c['profitable_months']>=2 and n['cash_cents']>=option['reserve_cents']:c['loss_used_cents']=0
-            demand_ok=c['forecast_milli']>=1000
+            demand_ok=c['forecast_milli']>=1000*self.goods_unit_scale
             margin_ok=option['projected_gap_cents']==0 and demand_ok
             cash_ok=n['cash_cents']>=option['reserve_cents']
             c['restart_signal']=c['restart_signal']+1 if margin_ok and cash_ok else 0
@@ -281,7 +289,7 @@ class World:
             target=work_target(n,len(n['employees']))
             work=max(MIN_WORK_BPS,min(c['work_bps']+WORK_STEP_BPS,max(c['work_bps']-WORK_STEP_BPS,target)))
             option=outlook(n,self.energy_multiplier,len(n['employees']),work,debt)
-            demand_ok=c['forecast_milli']>=1000;margin_ok=option['projected_gap_cents']==0 and demand_ok
+            demand_ok=c['forecast_milli']>=1000*self.goods_unit_scale;margin_ok=option['projected_gap_cents']==0 and demand_ok
             cash_ok=n['cash_cents']>=option['required_cash_cents']
             if c['profitable_months']>=2 and n['cash_cents']>=option['reserve_cents']:c['loss_used_cents']=0
             room=max(0,c['loss_budget_cents']-c['loss_used_cents'])
@@ -374,7 +382,7 @@ class World:
                 purchased={key:self.buy(h['id'],key,plan[f'{key}_budget']) for key in ('alltag','werkstatt')}
                 desired_split={'alltag':plan['desired_budget']*55//100}
                 desired_split['werkstatt']=plan['desired_budget']-desired_split['alltag']
-                goods=[dict(seller=key,unit_price_cents=self.nodes[key]['price'],base_price_cents=BASE_PRICES[key],
+                goods=[dict(seller=key,unit_price_cents=self.nodes[key]['price'],base_price_cents=BASE_PRICES[key]//self.goods_unit_scale,
                     desired_units=desired_split[key]//self.nodes[key]['price'],paid_units=purchased[key]) for key in ('alltag','werkstatt')]
                 paid=before_cash-h['cash_cents']
                 purchasable=sum(plan[f'{key}_budget']//self.nodes[key]['price']*self.nodes[key]['price'] for key in ('alltag','werkstatt'))
@@ -436,7 +444,7 @@ class World:
     def snapshot(self,export=False):
         self.check()
         tx=[t for t in self.journal if t['month']==self.month]
-        result=dict(world_id=self.id, revision=self.revision, month=self.month, phase=self.phase, phase_label=PHASES[self.phase] if self.phase>=0 else 'Bereit zum Start', nodes=deepcopy(list(self.nodes.values())), transactions=deepcopy(tx), notices=deepcopy(self.notices[-35:]), history=deepcopy(self.history[-36:]), pending=list(self.pending), active=deepcopy(self.active), rules=RULES, audit=dict(total_money_cents=self.banking.initial_deposits, current_money_cents=self.banking.balance(self)['customer_deposits_cents'], transaction_count=len(self.journal), open_obligations_cents=sum(x['amount_cents'] for x in self.obligations)+self.treasury.overdue_interest_cents+self.banking.loan.overdue_interest_cents+self.banking.loan.overdue_principal_cents, loan_principal_cents=self.nodes['bank']['loan_assets'], llm_calls=0), month_open=dict(self.month_open), initial_balances=dict(self.initial), parameters=dict(distribution_tax_bps=self.distribution_tax.rate_bps,fiscal_policy=self.budget.policy,distribution_policy=self.distribution_policy,energy_multiplier=self.energy_multiplier,consumption_percent=self.propensity,essential_budget_cents=self.essential_budget_cents), classification='illustrative_circular_flow_v14',distribution_tax=self.distribution_tax.snapshot(self),public_budget=self.budget.snapshot(self),crisis=self.crisis.snapshot(self),horizon_months=self.horizon_months,completed=self.horizon_months is not None and self.month>=self.horizon_months and self.phase==4,banking=self.banking.snapshot(self),foreign_trade=self.foreign.snapshot(self),public_finance=self.treasury.snapshot(self),monetary_policy=self.monetary.snapshot(self),pricing=self.pricing.snapshot(self))
+        result=dict(world_id=self.id, revision=self.revision, month=self.month, phase=self.phase, phase_label=PHASES[self.phase] if self.phase>=0 else 'Bereit zum Start', nodes=deepcopy(list(self.nodes.values())), transactions=deepcopy(tx), notices=deepcopy(self.notices[-35:]), history=deepcopy(self.history[-36:]), pending=list(self.pending), active=deepcopy(self.active), rules=RULES, audit=dict(total_money_cents=self.banking.initial_deposits, current_money_cents=self.banking.balance(self)['customer_deposits_cents'], transaction_count=len(self.journal), open_obligations_cents=sum(x['amount_cents'] for x in self.obligations)+self.treasury.overdue_interest_cents+self.banking.loan.overdue_interest_cents+self.banking.loan.overdue_principal_cents, loan_principal_cents=self.nodes['bank']['loan_assets'], llm_calls=0), month_open=dict(self.month_open), initial_balances=dict(self.initial), parameters=dict(goods_unit_scale=self.goods_unit_scale,distribution_tax_bps=self.distribution_tax.rate_bps,fiscal_policy=self.budget.policy,distribution_policy=self.distribution_policy,energy_multiplier=self.energy_multiplier,consumption_percent=self.propensity,essential_budget_cents=self.essential_budget_cents), classification='illustrative_circular_flow_v14',distribution_tax=self.distribution_tax.snapshot(self),public_budget=self.budget.snapshot(self),crisis=self.crisis.snapshot(self),horizon_months=self.horizon_months,completed=self.horizon_months is not None and self.month>=self.horizon_months and self.phase==4,banking=self.banking.snapshot(self),foreign_trade=self.foreign.snapshot(self),public_finance=self.treasury.snapshot(self),monetary_policy=self.monetary.snapshot(self),pricing=self.pricing.snapshot(self))
         if self.budget.policy=='adaptive':
             result['rules']=dict(RULES,government='Bis zu zwei öffentliche Stellen mit vollständig bestätigter Monatsfinanzierung. Nach drei Defizitabschlüssen sinkt zunächst die Beschaffung, danach gegebenenfalls die Zahl öffentlicher Stellen. Bei fehlender unmittelbarer Finanzierung werden vor Arbeitsbeginn Stellen und Beschaffung begrenzt. Sozialbedarf und tatsächliche Zahlung bleiben getrennt; knappe Mittel werden anteilig verteilt. Wiederaufbau benötigt anhaltende Deckung und Liquidität. Alte Lohnansprüche werden nicht gelöscht. Die bestehende begrenzte Bankfinanzierung und ihre Zinsen bleiben erhalten. Illustrative Budgetregeln.')
         if export:

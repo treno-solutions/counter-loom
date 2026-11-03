@@ -1,0 +1,45 @@
+{
+  "date": "2026-11-03",
+  "model_family": "illustrative_circular_flow_v14",
+  "experiment": "goods_granularity_100",
+  "tests": {
+    "command": "python -m unittest discover -s poc -p 'test_*.py'",
+    "passed": 159,
+    "new_granularity_tests": 5,
+    "frontend_responses": 78,
+    "frontend_scales": [1, 10, 100],
+    "frontend_scope": "Initial state and every phase through five completed months",
+    "build": "passed",
+    "dimensions": [
+      "Identical initial accounts and bank balance",
+      "Equivalent initial physical production, energy spending and staffing plan",
+      "Same first household budget; actual purchases change with lot size",
+      "Machine cash price, delivery quantity and productivity converted together",
+      "Independent account reconstruction at every posting with fine goods, machine credit and a closure"
+    ]
+  },
+  "comparison": {
+    "months_each": 600,
+    "phases_each": 3000,
+    "unit_scales": [1, 100],
+    "reference_exact_monthly_match": true,
+    "reference": "qa/tax-v14-comparison-2026-11-03.json",
+    "reference_profile": "25 percent distribution tax with adaptive fiscal policy",
+    "taxes_and_fiscal_rules_unchanged": true,
+    "source_hashes_verified": true,
+    "cash_and_budget_identities_checked_every_month": true,
+    "results": "qa/goods-granularity-comparison-2026-11-03.json",
+    "report": "qa/goods-granularity-comparison.md"
+  },
+  "figure": {
+    "path": "qa/goods-granularity-comparison.svg",
+    "tool": "Matplotlib",
+    "visual_review": "Eight full-horizon panels checked; common legend outside data; trailing 12-month means identified"
+  },
+  "scope_limits": [
+    "All goods quantities use finer resolution, including production, inventory and demand rounding; household checkout rounding alone is not separately identified",
+    "No external shocks; cent rounding of energy price changes is not tested by the comparison",
+    "Default remains one original goods unit",
+    "No credit-cap breach within 600 months does not establish unlimited fiscal sustainability"
+  ]
+}

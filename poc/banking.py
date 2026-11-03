@@ -36,7 +36,7 @@ class Banking:
         self.repaid = 0
         self.interest_received = 0
         self.distributed = 0
-        self.loan = MachineLoan()
+        self.loan = MachineLoan(units=8*world.goods_unit_scale)
 
     def balance(self, world):
         deposits = sum(n['cash_cents'] for n in world.nodes.values() if n['sector'] != 'bank')

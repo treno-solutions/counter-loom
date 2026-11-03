@@ -22,14 +22,14 @@ def demand_units(company):
     return (company['forecast_milli']+500)//1000
 
 def full_capacity(firm,staff):
-    return staff*firm['productivity']+firm['capital']*4 if staff else 0
+    return staff*firm['productivity']+firm['capital']*4*firm.get('unit_scale',1) if staff else 0
 
 def outlook(firm,energy_multiplier,staff,work_bps,debt_service=0):
     demand=demand_units(firm['company']);target=ceil(demand/4)
     free=max(0,firm['inventory']-firm.get('reserved_units',0))
     capacity=full_capacity(firm,staff)*work_bps//10000
     units=min(max(0,demand+target-free),capacity)
-    energy=(500 if firm['id']=='alltag' else 900)*energy_multiplier
+    energy=(500 if firm['id']=='alltag' else 900)//firm.get('unit_scale',1)*energy_multiplier
     wages=staff*(WAGE*work_bps//10000)
     interest=firm['loan']*firm['loan_next_rate_bps']//120000
     receipts=min(demand,free+units)*firm['price']
@@ -47,7 +47,7 @@ def work_target(firm,staff):
 def staffing(firm,energy_multiplier,debt_service=0):
     demand=demand_units(firm['company'])
     # Technical need is separate from the ability to finance a whole wage.
-    needed=max(1,ceil(max(0,demand-firm['capital']*4)/firm['productivity'])) if demand else 0
+    needed=max(1,ceil(max(0,demand-firm['capital']*4*firm.get('unit_scale',1))/firm['productivity'])) if demand else 0
     desired=min(4,needed)
     staff=max(1,desired,len(firm['employees']))
     work=max(work_target(firm,staff),firm['company']['next_work_bps'])
@@ -59,7 +59,7 @@ def plan(firm,energy_multiplier,debt_service=0):
     work=firm['company']['work_bps'];staff=len(firm['employees'])
     capacity=full_capacity(firm,staff)*work//10000
     needed=max(0,demand+target-opening)
-    energy=(500 if firm['id']=='alltag' else 900)*energy_multiplier
+    energy=(500 if firm['id']=='alltag' else 900)//firm.get('unit_scale',1)*energy_multiplier
     per_worker=WAGE*work//10000;wages=staff*per_worker
     interest=firm['loan']*firm['loan_rate_bps']//120000
     funded=max(0,firm['cash_cents']-wages-interest-debt_service)//energy

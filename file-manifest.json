@@ -106,8 +106,8 @@
   },
   {
     "path": "poc/source-manifest.json",
-    "bytes": 12224,
-    "sha256": "9e981f344de4d26f2ded9a9492627b678f73808061d36f4a7f50b274f23e41f4"
+    "bytes": 12868,
+    "sha256": "34e14e65ed1d4d395c7fb2622e8ac3f569cb1e9cc0137a6280d731d7975072c8"
   },
   {
     "path": "processed/energy-monthly-prices.csv",
@@ -443,6 +443,26 @@
     "path": "qa/framework-review-validation.json",
     "bytes": 366,
     "sha256": "d634916f390c805ee3e633ec197135aa7c99fb4c6e4f95855b47b3deb78125dd"
+  },
+  {
+    "path": "qa/goods-granularity-comparison-2026-11-03.json",
+    "bytes": 20783703,
+    "sha256": "6bdbd85de2f16469cef1621f7b738e1ef73ea4aebd3a65662169edd1d66bf811"
+  },
+  {
+    "path": "qa/goods-granularity-comparison.md",
+    "bytes": 6286,
+    "sha256": "53c2039d77ca745ac74b62660899db8af4cd92afa9f4432d0e119d0455c6db0a"
+  },
+  {
+    "path": "qa/goods-granularity-comparison.svg",
+    "bytes": 205975,
+    "sha256": "3ece347ec4e99d6c8bbf5eed791e9e7da584ef9f8dcf6988b6c68e8b5c96429b"
+  },
+  {
+    "path": "qa/goods-granularity-verification-2026-11-03.json",
+    "bytes": 2052,
+    "sha256": "28ec30cf14696acb1d88bf13507bed59119b4e7db54a73dda72590e1371cd989"
   },
   {
     "path": "qa/in-gold-we-trust-2026-de-page-368.png",

@@ -137,3 +137,7 @@ Der normale Lauf stoppt nicht automatisch nach Monat 24. Auch nach längerer Beo
 Lange Läufe dienen zum Prüfen von Regeln und Belastungsgrenzen. Sie sind keine kalibrierte Langfristprognose. Fehlende Abschreibung, fehlende Insolvenz-/Lohnrückstandsabwicklung, feste Nominallöhne, keine Demografie und keine veränderte Technologie bleiben relevant. Bei auffälligen Stillständen ist zwischen einer Liquiditäts-/Absatzgrenze und einem Widerspruch der Implementierung zu ihren eigenen Regeln zu unterscheiden. Ein positiver Kontostand, eine bestehende Stelle und eine tatsächliche Zahlung sind verschiedene Größen.
 
 Seit V10 können Personal- und Anfangsverläufe von den beschriebenen V9-Knicken abweichen. Die Regeln und ursprünglichen Audits bleiben ihrer Version zugeordnet; ein veränderter Basispfad ist kein isolierter Effekt eines äußeren Ereignisses.
+
+## Numerische Auflösung der Gütermengen
+
+Ein separater [Gegenlauf über 600 Monate](../qa/goods-granularity-comparison.md) untersucht Hundertstel der bisherigen Gütereinheiten. Der Startwert bleibt `goods_unit_scale=1`; `100` erhöht die Auflösung und rechnet Stückpreise, Energie und reale Kapazitäten gemeinsam um. Die Steuer-, Budget- und Verhaltensregeln bleiben erhalten. [Einheiten und Grenzen des Experiments](GOODS_GRANULARITY_EXPERIMENT.md). Die Gegenüberstellung misst die Wirkung feinerer Warenmengen einschliesslich Produktions- und Lagerrundung.
