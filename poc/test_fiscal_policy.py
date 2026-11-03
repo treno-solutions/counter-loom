@@ -8,7 +8,7 @@ class FiscalPolicyTests(unittest.TestCase):
         for _ in range(5):w.step()
 
     def test_default_spends_existing_cash_instead_of_restoring_eighty_thousand(self):
-        w=World();self.finish(w);m=w.treasury.monthly(w)
+        w=World(distribution_tax_bps=0);self.finish(w);m=w.treasury.monthly(w)
         self.assertEqual(m['reserve_target_cents'],720000)
         self.assertEqual(m['closing_cash_cents'],7758640)
         self.assertEqual(m['budget_balance_cents'],-241360)
@@ -18,7 +18,7 @@ class FiscalPolicyTests(unittest.TestCase):
         self.assertEqual(w.treasury.outstanding_cents,0)
 
     def test_borrow_only_the_target_gap_after_all_actual_flows(self):
-        w=World(government_initial_cash_cents=720000);self.finish(w);m=w.treasury.monthly(w)
+        w=World(distribution_tax_bps=0,government_initial_cash_cents=720000);self.finish(w);m=w.treasury.monthly(w)
         self.assertEqual(m['policy_cash_before_cents'],478640)
         self.assertEqual(m['policy_credit_need_cents'],241360)
         self.assertEqual(m['closing_cash_cents'],720000)
@@ -56,7 +56,7 @@ class FiscalPolicyTests(unittest.TestCase):
         self.assertEqual(w.treasury.reserve_target_cents,expected)
 
     def test_target_is_not_a_blocked_account_and_limit_does_not_create_money(self):
-        w=World(government_initial_cash_cents=720000,government_credit_limit_cents=0)
+        w=World(distribution_tax_bps=0,government_initial_cash_cents=720000,government_credit_limit_cents=0)
         self.finish(w);m=w.treasury.monthly(w)
         self.assertEqual(w.treasury.outstanding_cents,0)
         self.assertEqual(m['closing_cash_cents'],478640)

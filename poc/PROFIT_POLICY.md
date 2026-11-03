@@ -1,5 +1,7 @@
 # Gewinnvortrag, Liquiditätspuffer und zusätzliche Ausschüttungen · v12
 
+Die hier dokumentierte Gewinnverwendung bleibt in v14 erhalten. Die [Ausschüttungssteuer](DISTRIBUTION_TAX_MODEL.md) ergänzt separat einen Einbehalt auf Bruttozahlungen; im historischen v12-Vergleich gilt weiterhin ein Nullsatz.
+
 Stand: 3. November 2026. Illustrative Modellregeln, keine handelsrechtliche Ausschüttungsprüfung. Die normale Oberfläche verwendet `surplus`; `World(distribution_policy='legacy')` erhält für kontrollierte Vergleichsläufe die bisherige Auszahlungsregel. Staat, Steuersätze, Leitzinsen, Kreditgrenzen, Eigentumsanteile und Verhaltensregeln werden durch diese Ergänzung nicht geändert.
 
 ## Zwei verschiedene Bestände

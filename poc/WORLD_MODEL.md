@@ -1,4 +1,6 @@
-# Laufende Modellwirtschaft · aktuelle Fassung v13
+# Laufende Modellwirtschaft · aktuelle Fassung v14
+
+V14 ergänzt die [Ausschüttungssteuer](DISTRIBUTION_TAX_MODEL.md): 25 % illustrative Quellensteuer auf tatsächlich gezahlte Firmen- und Bankausschüttungen. Brutto, Steuer und Netto werden getrennt gebucht und gezeigt. [600-Monats-Vergleich](../qa/tax-v14-comparison.md).
 
 V13 ergänzt ein [anpassendes Staatsbudget](PUBLIC_BUDGET_MODEL.md). Anhaltende Defizite verändern Beschaffung und öffentliche Stellen; aktuelle öffentliche Arbeit wird nur nach bestätigter Finanzierung freigegeben. Alte Lohnansprüche, tatsächliche Nachzahlungen und ungedeckter Sozialbedarf bleiben sichtbar. Das ist eine illustrative ausgabenseitige Reaktion, keine Zusage eines ausgeglichenen Haushalts.
 
@@ -34,7 +36,7 @@ Die Reihenfolge bleibt Produktion/Löhne → Steuern/Transfers → Käufe einsch
 
 ## Unternehmensentwicklung v4
 
-V4 ersetzte die früheren Produktions-, Personal- und Gewinnregeln: geglättete finanzierbare Nachfrage, Lagerpuffer, durch bezahlte Inputs begrenzte Produktion, gleitende Lagerkosten, verzögerte tragfähige Stellenplanung und tatsächliche begrenzte Eigentümerausschüttung. Energie kostet 5 € je Alltags- beziehungsweise 9 € je Werkstatteinheit, beim Energieschock doppelt so viel. Ein Lohn verursacht auch bei ungenutzter Kapazität Aufwand. Die sechs Haushalte sind zu gleichen Teilen Eigentümer. Ausschüttungen sind für den folgenden Kaufplan verfügbar und in diesem begrenzten Steuerrahmen nicht zusätzlich besteuert. Kreditlieferung erfolgt vor dem Unternehmensabschluss; Kreditgutschrift, Tilgung und Maschinenkauf bleiben getrennte Vorgänge.
+V4 ersetzte die früheren Produktions-, Personal- und Gewinnregeln: geglättete finanzierbare Nachfrage, Lagerpuffer, durch bezahlte Inputs begrenzte Produktion, gleitende Lagerkosten, verzögerte tragfähige Stellenplanung und tatsächliche begrenzte Eigentümerausschüttung. Energie kostet 5 € je Alltags- beziehungsweise 9 € je Werkstatteinheit, beim Energieschock doppelt so viel. Ein Lohn verursacht auch bei ungenutzter Kapazität Aufwand. Die sechs Haushalte sind zu gleichen Teilen Eigentümer. Seit v14 gehen Ausschüttungen nach dem getrennten Einbehalt der Ausschüttungssteuer netto in den folgenden Kaufplan ein. Kreditlieferung erfolgt vor dem Unternehmensabschluss; Kreditgutschrift, Tilgung und Maschinenkauf bleiben getrennte Vorgänge.
 
 ## Historische Entwicklung bis v3
 

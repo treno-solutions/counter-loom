@@ -5,7 +5,7 @@ from copy import deepcopy
 from systems import GovernmentSystem
 
 PRIMARY = ('wage','public_wage_arrears','transfer','short_time','procurement')
-TAXES = ('income_tax','arrears_income_tax','profit_tax')
+TAXES = ('income_tax','arrears_income_tax','profit_tax','distribution_tax')
 KINDS = ('government_credit','government_interest','government_principal')
 
 class Treasury:
@@ -148,10 +148,10 @@ class Treasury:
             closing_cash_cents=world.nodes['staat']['cash_cents'],opening_principal_cents=self.opening_principal_cents,
             closing_principal_cents=self.outstanding_cents,unfunded_financing_cents=self.unfunded_financing_cents,interest_basis=deepcopy(self.month_interest_basis),new_interest_charge_cents=self.month_interest_charge_cents)
 
-    def close(self,world):
+    def close(self,world,service_interest=True):
         if self.last_close_month==world.month:return
         self.last_close_month=world.month
-        if self.overdue_interest_cents:self.pay_interest(world)
+        if service_interest and self.overdue_interest_cents:self.pay_interest(world)
         cash=world.nodes['staat']['cash_cents']
         self.policy_cash_before_cents=cash
         self.policy_credit_need_cents=max(0,self.reserve_target_cents-cash)

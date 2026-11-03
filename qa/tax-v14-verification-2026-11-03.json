@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-03",
+  "model": "illustrative_circular_flow_v14",
+  "scope": "Actual distribution withholding, net household spending inputs, state revenue and controlled 600-month comparison",
+  "tests": {
+    "command": "python -m unittest discover -s poc -p 'test_*.py'",
+    "passed": 154,
+    "new_distribution_tax_tests": 9,
+    "frontend_responses": 123,
+    "frontend_rates_bps": [0, 2500, 5000],
+    "frontend_scenarios": "Initial state and all phases across eight months with a three-month closure and constrained state funding",
+    "inconsistent_net_total_rejected": true,
+    "build": "passed"
+  },
+  "comparison": {
+    "months_each": 600,
+    "phases_each": 3000,
+    "fiscal_policy": "adaptive",
+    "distribution_policy": "surplus",
+    "withholding_bps": [0, 2500],
+    "reference_matches_every_archived_adaptive_v13_month": true,
+    "source_hashes_verified": true,
+    "results": "qa/tax-v14-comparison-2026-11-03.json",
+    "report": "qa/tax-v14-comparison.md",
+    "fiscal_cash_and_tax_reconciliation_every_month": true
+  },
+  "browser": {
+    "tool": "BrowserOS neo",
+    "desktop_viewport": [1366, 900],
+    "mobile_viewport": [390, 844],
+    "mobile_document_width": 390,
+    "month_3_gross_cents": 405071,
+    "month_3_withheld_cents": 101266,
+    "month_3_net_cents": 303805,
+    "state_history_selection": "M1: 97280 cents gross, 24318 withheld, 72962 net",
+    "company_history_selection": "Alltag M1: 67200 cents gross, 16800 withheld, 50400 net",
+    "error_alerts": 0,
+    "document_overflow": false
+  },
+  "figure": {
+    "path": "qa/tax-v14-comparison.svg",
+    "tool": "Matplotlib",
+    "format": "SVG",
+    "visual_review": "Eight full-horizon comparison panels checked; common legend outside data"
+  },
+  "limitations": [
+    "Illustrative flat withholding without allowances, not a statutory tax model or policy recommendation",
+    "Both profiles reach the state credit cap and retain substantial unfunded social reference needs",
+    "Equal ownership and unequal employment histories remain assumptions; aggregate consumption is not welfare",
+    "No full accessibility audit"
+  ]
+}

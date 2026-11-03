@@ -8,7 +8,7 @@ Die bisherige Staatslogik hielt zwei öffentliche Arbeitsverträge und feste Bes
 
 V13 trennt deshalb:
 
-- **Wiederkehrende Einnahmen:** tatsächlich eingegangene Lohn- und Gewinnsteuern. Kredite und die Steuer auf eine alte Lohnnachzahlung sind keine wiederkehrende Deckung.
+- **Wiederkehrende Einnahmen:** tatsächlich eingegangene Lohn- und Gewinnsteuern; seit v14 zusätzlich [Ausschüttungssteuer](DISTRIBUTION_TAX_MODEL.md). Im archivierten v13-Vergleich beträgt deren Satz null. Kredite und die Steuer auf eine alte Lohnnachzahlung sind keine wiederkehrende Deckung.
 - **Laufenden Plan und Referenzbedarf:** genehmigte aktuelle öffentliche Löhne, voller Sozial-Referenzbedarf, Beschaffungsbudget und neue Monatszinsen.
 - **Bedarfssaldo:** wiederkehrende Steuern minus diesen Plan und Bedarf. Fehlende Sozialzahlungen verbessern ihn nicht.
 - **Zahlungssaldo:** tatsächlich eingegangene Steuern minus tatsächlich bezahlte laufende Ausgaben und Zinsen. Er ist keine vollständige Erfolgs- oder Verpflichtungsrechnung.

@@ -6,8 +6,8 @@
   },
   {
     "path": "POC.md",
-    "bytes": 17194,
-    "sha256": "4364d8f58eada22cba368a4fefbfa0e51b73923f3ce2280e2e15d841286f85e3"
+    "bytes": 17369,
+    "sha256": "1d609f899bb155dbd551bda3575d0cbc9717140ae83023158ceaca90cab5a657"
   },
   {
     "path": "RESEARCH.md",
@@ -106,8 +106,8 @@
   },
   {
     "path": "poc/source-manifest.json",
-    "bytes": 11286,
-    "sha256": "e267157f129161957ea70c646c38321da14458889fc04e5f089a3ad89f8f8efd"
+    "bytes": 12224,
+    "sha256": "9e981f344de4d26f2ded9a9492627b678f73808061d36f4a7f50b274f23e41f4"
   },
   {
     "path": "processed/energy-monthly-prices.csv",
@@ -538,6 +538,26 @@
     "path": "qa/silver-table-reconciliation.json",
     "bytes": 568,
     "sha256": "686f3d30adbd78d34aa5262a01c62d936a63f27e91aef87332601fac13b7c0b7"
+  },
+  {
+    "path": "qa/tax-v14-comparison-2026-11-03.json",
+    "bytes": 6488111,
+    "sha256": "ac0b311ceff421c108b953582a0f642881a60fdfb18eb9d6fb767f9e8b79c40e"
+  },
+  {
+    "path": "qa/tax-v14-comparison.md",
+    "bytes": 5387,
+    "sha256": "aaef520946dc483db5b05b0e9c95fda19e4d018f4e2b30fe7a29076c8cad485d"
+  },
+  {
+    "path": "qa/tax-v14-comparison.svg",
+    "bytes": 181061,
+    "sha256": "64d9247e5fa1c7dd63d0f8145b982e6a3c7680b1d53494413766a15068f137e9"
+  },
+  {
+    "path": "qa/tax-v14-verification-2026-11-03.json",
+    "bytes": 2128,
+    "sha256": "a28be754f1d3cffb88bd78ba5dac72f2e681a9ce153a264a7699f21acb9c97c0"
   },
   {
     "path": "qa/tinytroupe-pilot-workflow-test.json",

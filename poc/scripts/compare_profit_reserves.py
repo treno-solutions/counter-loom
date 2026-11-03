@@ -10,7 +10,7 @@ from world import World
 
 
 def run(months, policy, reference=None):
-    world=World(distribution_policy=policy,fiscal_policy='legacy')
+    world=World(distribution_tax_bps=0,distribution_policy=policy,fiscal_policy='legacy')
     rows=[];thresholds={};beg=time.monotonic()
     for month in range(1,months+1):
         for _ in range(5):world.step(emit_snapshot=False)
@@ -51,7 +51,7 @@ if __name__=='__main__':
     if not 1<=args.months<=600:parser.error('Choose 1..600 months.')
     reference_path=Path('qa/crisis-v11-long-horizon-2026-11-03.json')
     reference=json.loads(reference_path.read_text())['runs'][0]['monthly'] if reference_path.exists() else None
-    result=dict(model='illustrative_circular_flow_v13',fiscal_policy='legacy',months=args.months,
+    result=dict(model='illustrative_circular_flow_v14',fiscal_policy='legacy',months=args.months,
                 intervention='Only profit distribution policy; unchanged rules for state finance, tax, prices, employment and credit; identical initial conditions; no shocks.',
                 reference='qa/crisis-v11-long-horizon-2026-11-03.json' if reference else None,
                 source_sha256={p:hashlib.sha256(Path(p).read_bytes()).hexdigest() for p in ('poc/world.py','poc/firms.py','poc/profit_distribution.py','poc/treasury.py')},runs=[])

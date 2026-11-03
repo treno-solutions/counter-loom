@@ -7,7 +7,7 @@ const signed = (value: number) => `${value > 0 ? '+' : ''}${euro(value)}`;
 const steps = [
   { kind: 'machine_credit', title: 'Kreditgutschrift', short: 'Geldschöpfung', note: 'Die Bank bucht gleichzeitig ein Kundenguthaben und eine Kreditforderung.' },
   { kind: 'machine_purchase', title: 'Maschinenkauf', short: 'Zahlung', note: 'Der Käufer überweist den Kaufpreis an den Lieferanten. Die gesamte Einlagensumme bleibt gleich.' },
-  { kind: 'machine_interest', title: 'Zinszahlung', short: 'Zinsen', note: 'Zinsen sind Ertrag der Bank. Sie reduzieren die Restschuld nicht. Die Bank schüttet vereinnahmte Zinsen später an Haushalte aus.' },
+  { kind: 'machine_interest', title: 'Zinszahlung', short: 'Zinsen', note: 'Zinsen sind Ertrag der Bank. Sie reduzieren die Restschuld nicht. Die Bank schüttet vereinnahmte Zinsen später an Haushalte aus. Ein Ausschüttungssteuer-Einbehalt geht an den Staat; Haushalten bleibt der Nettobetrag.' },
   { kind: 'machine_principal', title: 'Kredittilgung', short: 'Tilgung', note: 'Kundenguthaben und Kreditforderung sinken um denselben Betrag. Tilgung ist kein Bankertrag.' },
 ];
 

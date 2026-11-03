@@ -82,7 +82,7 @@ class PublicBudgetTests(unittest.TestCase):
         w.check()
 
     def test_unpaid_social_need_does_not_look_like_structural_surplus(self):
-        w=World(government_initial_cash_cents=0,government_credit_limit_cents=0)
+        w=World(distribution_tax_bps=0,government_initial_cash_cents=0,government_credit_limit_cents=0)
         w.crisis.queue(w,'both',3,6000);months(w,1)
         a=w.budget.monthly(w)
         self.assertEqual(w.treasury.monthly(w)['budget_balance_cents'],0)

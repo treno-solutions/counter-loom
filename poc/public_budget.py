@@ -118,7 +118,7 @@ class PublicBudget:
     def amounts(self,world):
         tx=[t for t in world.journal if t['month']==world.month]
         total=lambda kinds,source=None,target=None:sum(t['amount_cents'] for t in tx if t['kind'] in kinds and (source is None or t['source']==source) and (target is None or t['target']==target))
-        recurring=total(('income_tax','profit_tax'),target='staat')
+        recurring=total(('income_tax','profit_tax','distribution_tax'),target='staat')
         social=total(('transfer','short_time'),source='staat')
         current_interest=world.treasury.month_interest_charge_cents
         committed=self.plan['payroll_cents']+self.plan['social_need_cents']+self.plan['procurement_cents']+current_interest

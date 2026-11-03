@@ -10,7 +10,7 @@ from world import World
 
 
 def run(months,policy,reference=None):
-    w=World(distribution_policy='surplus',fiscal_policy=policy)
+    w=World(distribution_tax_bps=0,distribution_policy='surplus',fiscal_policy=policy)
     rows=[];first={};beg=time.monotonic()
     for month in range(1,months+1):
         for _ in range(5):w.step(emit_snapshot=False)
@@ -44,7 +44,7 @@ if __name__=='__main__':
     if not 1<=args.months<=600:parser.error('Choose 1..600 months.')
     path=Path('qa/profit-v12-comparison-2026-11-03.json')
     reference=json.loads(path.read_text())['runs'][1]['monthly'] if path.exists() else None
-    data=dict(model='illustrative_circular_flow_v13',months=args.months,distribution_policy='surplus',
+    data=dict(model='illustrative_circular_flow_v14',months=args.months,distribution_policy='surplus',
               intervention='Only public budget policy differs; identical starting conditions, tax, credit limit, prices and private company rules. No shocks.',
               reference=str(path) if reference else None,source_sha256={p:hashlib.sha256(Path(p).read_bytes()).hexdigest() for p in ('poc/world.py','poc/treasury.py','poc/public_budget.py','poc/profit_distribution.py')},runs=[])
     for policy in ('legacy','adaptive'):

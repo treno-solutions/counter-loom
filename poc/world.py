@@ -8,6 +8,7 @@ from BPTK_Py import Model, Agent, SimultaneousScheduler
 from banking import Banking
 from treasury import Treasury
 from public_budget import PublicBudget
+from distribution_tax import DistributionTax
 from crisis import Closure, STANDBY_COST, compare
 from profit_distribution import allocation, POLICIES
 from rates import MonetaryPolicy
@@ -30,7 +31,7 @@ class SystemAgent(Agent):
         self.model.world.act(self.properties['node_id']['value'])
 
 class World:
-    def __init__(self, essential_budget_cents=100000, export_orders_units=None, government_credit_limit_cents=5000000, government_annual_rate_bps=300, initial_policy_rate_bps=200, energy_pass_through_bps=5000, government_reserve_months=1, government_initial_cash_cents=8000000, horizon_months=None, distribution_policy='surplus', fiscal_policy='adaptive'):
+    def __init__(self, essential_budget_cents=100000, export_orders_units=None, government_credit_limit_cents=5000000, government_annual_rate_bps=300, initial_policy_rate_bps=200, energy_pass_through_bps=5000, government_reserve_months=1, government_initial_cash_cents=8000000, horizon_months=None, distribution_policy='surplus', fiscal_policy='adaptive', distribution_tax_bps=2500):
         if type(government_initial_cash_cents) is not int or government_initial_cash_cents<0:
             raise ValueError('Initial state cash must be nonnegative whole cents.')
         if horizon_months is not None and (type(horizon_months) is not int or horizon_months<1):
@@ -70,6 +71,7 @@ class World:
         self._reset_metrics()
         self.monetary = MonetaryPolicy(self,initial_policy_rate_bps)
         self.banking = Banking(self)
+        self.distribution_tax = DistributionTax(distribution_tax_bps)
         self.budget = PublicBudget(self,fiscal_policy)
         self.treasury = Treasury(self,government_credit_limit_cents,government_annual_rate_bps,government_reserve_months)
         self.pricing = Pricing(self,energy_pass_through_bps)
@@ -87,7 +89,7 @@ class World:
 
     def _reset_metrics(self):
         for n in self.nodes.values():
-            n['metrics'] = dict(income=0, tax=0, sales=0, operating_costs=0, wages=0, interest=0, sold_units=0, unmet_units=0, produced_units=0, investment=0, transfers=0, consumption_plan=0, consumption_budget=0, consumption_paid=0, reserve_used=0, unfunded_units=0, production_plan=0, cost_of_sales=0, production_cost=0, idle_cost=0, interest_expense=0, unpaid_wages=0, short_time=0, closure_cost=0, closure_blocked_units=0)
+            n['metrics'] = dict(distribution_gross=0, distribution_tax=0, distribution_net=0, income=0, tax=0, sales=0, operating_costs=0, wages=0, interest=0, sold_units=0, unmet_units=0, produced_units=0, investment=0, transfers=0, consumption_plan=0, consumption_budget=0, consumption_paid=0, reserve_used=0, unfunded_units=0, production_plan=0, cost_of_sales=0, production_cost=0, idle_cost=0, interest_expense=0, unpaid_wages=0, short_time=0, closure_cost=0, closure_blocked_units=0)
 
     def notice(self, text, node='world'):
         self.notices.append(dict(month=self.month, phase=self.phase, node=node, text=text))
@@ -214,13 +216,11 @@ class World:
         elif self.phase == 4 and n['sector']=='firms':
             self.close_company(n)
         elif self.phase == 4 and node_id=='bank':
+            self.distribution_tax.settle_bank(self)
             self.budget.review(self)
-            self.treasury.close(self)
+            self.treasury.close(self,service_interest=False)
             self.budget.record(self)
-            interest=n['metrics']['interest']
-            for h,share in zip(self.households(),FinanceSystem.dividends(interest,6)):
-                paid=self.pay('bank',h['id'],share,'dividend','Zinsausschüttung')
-                h['dividend_carry'] += paid
+            self.distribution_tax.history.append(self.distribution_tax.monthly(self))
 
     def household_outputs(self,n):
         return HouseholdSystem.outputs(HouseholdInput(n['metrics']['income']-n['metrics']['transfers'],n['metrics']['transfers'],n['metrics']['tax'],n['dividend_carry'],n['cash_cents'],self.propensity,self.essential_budget_cents))
@@ -308,8 +308,8 @@ class World:
         for field,kind,label in [('regular_paid_cents','company_dividend','Gewinnausschüttung'),('extra_paid_cents','company_extra_dividend','Zusätzliche Gewinnausschüttung')]:
             actual=0
             for h,share in zip(self.households(),FinanceSystem.dividends(a[field],6)):
-                paid=self.pay(n['id'],h['id'],share,kind,label)
-                actual+=paid;h['dividend_carry']+=paid
+                paid=self.distribution_tax.pay(self,n['id'],h,share,kind,label)
+                actual+=paid
             assert actual==a[field]
         payout=a['total_paid_cents']
         c['retained_earnings_cents']=a['closing_retained_cents']
@@ -436,11 +436,11 @@ class World:
     def snapshot(self,export=False):
         self.check()
         tx=[t for t in self.journal if t['month']==self.month]
-        result=dict(world_id=self.id, revision=self.revision, month=self.month, phase=self.phase, phase_label=PHASES[self.phase] if self.phase>=0 else 'Bereit zum Start', nodes=deepcopy(list(self.nodes.values())), transactions=deepcopy(tx), notices=deepcopy(self.notices[-35:]), history=deepcopy(self.history[-36:]), pending=list(self.pending), active=deepcopy(self.active), rules=RULES, audit=dict(total_money_cents=self.banking.initial_deposits, current_money_cents=self.banking.balance(self)['customer_deposits_cents'], transaction_count=len(self.journal), open_obligations_cents=sum(x['amount_cents'] for x in self.obligations)+self.treasury.overdue_interest_cents+self.banking.loan.overdue_interest_cents+self.banking.loan.overdue_principal_cents, loan_principal_cents=self.nodes['bank']['loan_assets'], llm_calls=0), month_open=dict(self.month_open), initial_balances=dict(self.initial), parameters=dict(fiscal_policy=self.budget.policy,distribution_policy=self.distribution_policy,energy_multiplier=self.energy_multiplier,consumption_percent=self.propensity,essential_budget_cents=self.essential_budget_cents), classification='illustrative_circular_flow_v13',public_budget=self.budget.snapshot(self),crisis=self.crisis.snapshot(self),horizon_months=self.horizon_months,completed=self.horizon_months is not None and self.month>=self.horizon_months and self.phase==4,banking=self.banking.snapshot(self),foreign_trade=self.foreign.snapshot(self),public_finance=self.treasury.snapshot(self),monetary_policy=self.monetary.snapshot(self),pricing=self.pricing.snapshot(self))
+        result=dict(world_id=self.id, revision=self.revision, month=self.month, phase=self.phase, phase_label=PHASES[self.phase] if self.phase>=0 else 'Bereit zum Start', nodes=deepcopy(list(self.nodes.values())), transactions=deepcopy(tx), notices=deepcopy(self.notices[-35:]), history=deepcopy(self.history[-36:]), pending=list(self.pending), active=deepcopy(self.active), rules=RULES, audit=dict(total_money_cents=self.banking.initial_deposits, current_money_cents=self.banking.balance(self)['customer_deposits_cents'], transaction_count=len(self.journal), open_obligations_cents=sum(x['amount_cents'] for x in self.obligations)+self.treasury.overdue_interest_cents+self.banking.loan.overdue_interest_cents+self.banking.loan.overdue_principal_cents, loan_principal_cents=self.nodes['bank']['loan_assets'], llm_calls=0), month_open=dict(self.month_open), initial_balances=dict(self.initial), parameters=dict(distribution_tax_bps=self.distribution_tax.rate_bps,fiscal_policy=self.budget.policy,distribution_policy=self.distribution_policy,energy_multiplier=self.energy_multiplier,consumption_percent=self.propensity,essential_budget_cents=self.essential_budget_cents), classification='illustrative_circular_flow_v14',distribution_tax=self.distribution_tax.snapshot(self),public_budget=self.budget.snapshot(self),crisis=self.crisis.snapshot(self),horizon_months=self.horizon_months,completed=self.horizon_months is not None and self.month>=self.horizon_months and self.phase==4,banking=self.banking.snapshot(self),foreign_trade=self.foreign.snapshot(self),public_finance=self.treasury.snapshot(self),monetary_policy=self.monetary.snapshot(self),pricing=self.pricing.snapshot(self))
         if self.budget.policy=='adaptive':
             result['rules']=dict(RULES,government='Bis zu zwei öffentliche Stellen mit vollständig bestätigter Monatsfinanzierung. Nach drei Defizitabschlüssen sinkt zunächst die Beschaffung, danach gegebenenfalls die Zahl öffentlicher Stellen. Bei fehlender unmittelbarer Finanzierung werden vor Arbeitsbeginn Stellen und Beschaffung begrenzt. Sozialbedarf und tatsächliche Zahlung bleiben getrennt; knappe Mittel werden anteilig verteilt. Wiederaufbau benötigt anhaltende Deckung und Liquidität. Alte Lohnansprüche werden nicht gelöscht. Die bestehende begrenzte Bankfinanzierung und ihre Zinsen bleiben erhalten. Illustrative Budgetregeln.')
         if export:
-            result.update(all_budget_history=deepcopy(self.budget.history),full_journal=deepcopy(self.journal),initial_balances=dict(self.initial),open_obligations=deepcopy(self.obligations),all_history=deepcopy(self.history),all_notices=deepcopy(self.notices),model_document='poc/WORLD_MODEL.md')
+            result.update(all_distribution_receipts=deepcopy(self.distribution_tax.receipts),all_distribution_history=deepcopy(self.distribution_tax.history),all_budget_history=deepcopy(self.budget.history),full_journal=deepcopy(self.journal),initial_balances=dict(self.initial),open_obligations=deepcopy(self.obligations),all_history=deepcopy(self.history),all_notices=deepcopy(self.notices),model_document='poc/WORLD_MODEL.md')
         return result
 
 
