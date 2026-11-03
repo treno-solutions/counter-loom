@@ -106,8 +106,8 @@
   },
   {
     "path": "poc/source-manifest.json",
-    "bytes": 14239,
-    "sha256": "36ddf45ad52ecc86231e9c0cbd1567d5e34f19f0a5ec5e11ec87c2efc2b04338"
+    "bytes": 14724,
+    "sha256": "ebdf06f77b7c2f32a008e5baf05491fdeae261c768ca711a1fd210c283684c99"
   },
   {
     "path": "processed/energy-monthly-prices.csv",
@@ -383,6 +383,26 @@
     "path": "qa/crisis-v11-verification-2026-11-03.json",
     "bytes": 1798,
     "sha256": "04c03f67e815854d93bf8cded88805077fe7555963f8348446272d699d367472"
+  },
+  {
+    "path": "qa/firm-reactions-v16-diagnosis.md",
+    "bytes": 11304,
+    "sha256": "4ae11f1df4b0f0c4be7962b89337ca055a87546aa0be2a833d822962503ebb48"
+  },
+  {
+    "path": "qa/firm-reactions-v16-diagnosis.svg",
+    "bytes": 78267,
+    "sha256": "e0f7a329d6d95d8da0ceae3abedb8faf1cbaf393744afa6983a54e9471488e10"
+  },
+  {
+    "path": "qa/firm-reactions-v16-traces-2026-11-03.json",
+    "bytes": 22849761,
+    "sha256": "d6dae096365916bba8e73e4fe39f33b361b83b8e27ff478d7f24fec8ec19b15b"
+  },
+  {
+    "path": "qa/firm-reactions-v16-verification-2026-11-03.json",
+    "bytes": 2217,
+    "sha256": "783d1207afe96b19f1da441ac0d7acd0082e3b00feeeda18960e125079cd1690"
   },
   {
     "path": "qa/fiscal-and-household-v2-2026-11-02.json",

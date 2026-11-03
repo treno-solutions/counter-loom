@@ -98,3 +98,7 @@ Die frühen Monate sind eine Einlaufphase ohne eingeregeltes Gleichgewicht. Ein 
 ## Gegenlauf mit kleineren Gütereinheiten
 
 Der [600-Monats-Vergleich zur Güterstückelung](../qa/goods-granularity-comparison.md) verwendet 100 Teile je bisheriger Einheit und dieselben Steuer- und Verhaltensregeln. [Umrechnung, Systemgrenze und Prüfungen](GOODS_GRANULARITY_EXPERIMENT.md). Seit v15 startet die normale Oberfläche mit 100 Teilen. Der archivierte Vergleich bleibt unverändert; historische Reproduktionsskripte setzen den ursprünglichen Faktor ausdrücklich. Zahlengebundene Tests alter Läufe verwenden ebenfalls `goods_unit_scale=1`, während neue Standard- und Buchungstests den feinen Lauf prüfen.
+
+## Prüfung der Firmenreaktionen
+
+Die [Entscheidungsdiagnose beider Konsumläufe](../qa/firm-reactions-v16-diagnosis.md) zeigt harte fiskalische Schwellen und einen wiederholten Personalwechsel der Werkstatt. Im Endmonat stammen die zwei fehlenden Verträge aus öffentlichen Stellen. Die zeitliche Kopplung von Kopfzahl, Arbeitszeit und Transferbedarf ist damit als Plausibilitätsgrenze dokumentiert; die Regeln wurden für diese Prüfung nicht verändert.

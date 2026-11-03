@@ -11,8 +11,8 @@
   },
   {
     "path": "poc/COMPANY_MODEL.md",
-    "bytes": 10021,
-    "sha256": "a859559732299567c3f7973f806b013bc487d68f43f8a86fe97919e6187c3fc9"
+    "bytes": 10409,
+    "sha256": "368f9f9569cd8029fc4bf102371f95761e7fc5d503a412ebcaf00ea379a19e73"
   },
   {
     "path": "poc/CRISIS_MODEL.md",
@@ -71,8 +71,8 @@
   },
   {
     "path": "poc/README.md",
-    "bytes": 17374,
-    "sha256": "04b612435e07dff7895dc840f93c47448c8c9601e6b898cb862b15e851b35bfa"
+    "bytes": 17834,
+    "sha256": "3d4e7675b4b172fbb35f62fa71f9d7ba958c2ccdc8956ce4f42274eb60b20798"
   },
   {
     "path": "poc/WORLD_MODEL.md",
@@ -200,6 +200,11 @@
     "sha256": "502a188d432666b3801939d82083ee89302902345659641d77f73e6cc8361302"
   },
   {
+    "path": "poc/scripts/diagnose_firm_reactions.py",
+    "bytes": 4665,
+    "sha256": "c4fbdb2bbc15ce7593c1defac034661dc9645a6a5d67be7c4b888f5fd89be3be"
+  },
+  {
     "path": "poc/scripts/diagnose_fiscal_balance.py",
     "bytes": 7070,
     "sha256": "18a5b7d1fc27b7fc39425075f6aca2de0f80d6ecd5531b18b8a7400dc08cc800"
@@ -218,6 +223,11 @@
     "path": "poc/scripts/report_distribution_tax.py",
     "bytes": 9283,
     "sha256": "2a4b7def898572aea0dc710044bf8ee28bb463678a74e1acd94d9cfb3805ea7f"
+  },
+  {
+    "path": "poc/scripts/report_firm_reactions.py",
+    "bytes": 15622,
+    "sha256": "364311dbecb4aa9ec3a29fc8a1bb5d9feead5aa6bc4235598f85f051bfbf77af"
   },
   {
     "path": "poc/scripts/report_fiscal_balance.py",
@@ -393,6 +403,11 @@
     "path": "poc/test_engine.py",
     "bytes": 5501,
     "sha256": "280d8d74df0e274011c7cee7d9ce3036ba4bdf3430aaaf3768c5be2eb046b1db"
+  },
+  {
+    "path": "poc/test_firm_reaction_diagnosis.py",
+    "bytes": 1448,
+    "sha256": "3fcec6a38a1274e4f2c136af2dde0ef4ec2fa5095f227ce97828e204e45bc049"
   },
   {
     "path": "poc/test_firms.py",

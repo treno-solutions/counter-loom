@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-03",
+  "model": "illustrative_circular_flow_v16",
+  "scope": "Read-only diagnosis of company and fiscal decisions in the existing 95/100 consumption profiles",
+  "rules_changed": false,
+  "reproduction": {
+    "months_each": 600,
+    "profiles": [95,100],
+    "reference": "qa/consumption-v16-comparison-2026-11-03.json",
+    "all_reference_months_match": true,
+    "firm_decisions_checked": 2400,
+    "executed_staff_options_match_reported_work_and_reserve": true,
+    "source_hashes_verified": true
+  },
+  "tests": {
+    "command": "python -m unittest discover -s poc -p 'test_firm_reaction_diagnosis.py' -q",
+    "passed": 3,
+    "coverage": [
+      "Identical journal and economic history with and without tracing over 45 months",
+      "Same modeled cost and production for one full-time and two half-time workers",
+      "Traced actual staffing option reproduces work share and reserve; first private cut M34"
+    ],
+    "core_model_files_unchanged": true
+  },
+  "observed": {
+    "month_9_balance_95_cents": -3417,
+    "month_9_balance_100_cents": 2170,
+    "procurement_cut_effective_m10_cents": 60000,
+    "public_jobs_end_95": 0,
+    "public_jobs_end_100": 2,
+    "private_jobs_end_each": 4,
+    "private_cuts_95": 63,
+    "private_hires_95": 63,
+    "private_changes_100": 0,
+    "all_private_changes_at_workshop": true,
+    "all_cuts_positive_current_profit": true,
+    "minimum_cash_after_tax_at_cut_cents": 2375290,
+    "first_cut_current_fte_bps": 9266,
+    "first_cut_next_fte_bps": 7133,
+    "h4_net_wage_m34_cents": 77835,
+    "h4_transfer_m35_cents": 100000
+  },
+  "external_context": "ECB Economic Bulletin 4/2024, Higher profit margins have helped firms hoard labour; used for qualitative context, not parameter calibration",
+  "figure": {
+    "path": "qa/firm-reactions-v16-diagnosis.svg",
+    "tool": "Matplotlib",
+    "visual_review": "First 60 months and first-cut FTE comparison checked, units and threshold labeled"
+  },
+  "data": "qa/firm-reactions-v16-traces-2026-11-03.json",
+  "report": "qa/firm-reactions-v16-diagnosis.md",
+  "limit": "No separate causal intervention isolates the end-result contribution of fiscal thresholds, staffing logic or transfer design"
+}
