@@ -1,0 +1,63 @@
+{
+  "date": "2026-11-03",
+  "model": "illustrative_circular_flow_v13",
+  "scope": "Adaptive public budget, funded current public work and 600-month controlled comparison",
+  "tests": {
+    "command": "python -m unittest discover -s poc -p 'test_*.py'",
+    "passed": 145,
+    "new_public_budget_tests": 13,
+    "frontend_reference_adaptive_crisis_responses": 62,
+    "build": "passed",
+    "profit_reference_helper_smoke_months": 12
+  },
+  "comparison": {
+    "months_each": 600,
+    "phases_each": 3000,
+    "distribution_policy": "surplus",
+    "fiscal_policies": [
+      "legacy",
+      "adaptive"
+    ],
+    "reference_matches_every_archived_v12_month": true,
+    "new_public_work_fully_paid_all_600_months": true,
+    "new_public_wage_arrears_all_600_months": 0,
+    "source_hashes_verified": true,
+    "results": "qa/fiscal-v13-comparison-2026-11-03.json",
+    "report": "qa/fiscal-v13-comparison.md"
+  },
+  "browser": {
+    "tool": "BrowserOS neo",
+    "desktop_viewport": [
+      1366,
+      900
+    ],
+    "mobile_viewport": [
+      390,
+      844
+    ],
+    "mobile_document_width": 390,
+    "month_4_procurement_bps": 7500,
+    "month_12_next_procurement_bps": 0,
+    "month_16_public_staff": 1,
+    "month_16_payroll_cents": 240000,
+    "month_16_public_wages_paid_cents": 240000,
+    "month_16_released_household": "h6",
+    "history_selection": "Month 15 shows a public job cut effective month 16.",
+    "history_charts": 5,
+    "error_alerts": 0,
+    "document_overflow": false
+  },
+  "figure": {
+    "path": "qa/fiscal-v13-comparison.svg",
+    "tool": "Matplotlib",
+    "format": "SVG",
+    "visual_review": "Eight comparison panels checked, common legend outside data."
+  },
+  "limitations": [
+    "Illustrative expenditure-side policy, not empirical calibration or a recommendation.",
+    "Removal of current wage arrears is achieved through fewer authorized public jobs; existing claims are not cancelled.",
+    "Higher cumulative household purchases do not measure public-service value or overall welfare.",
+    "Unfunded social reference needs rise and the credit limit is eventually reached in the adaptive run.",
+    "No full accessibility audit."
+  ]
+}

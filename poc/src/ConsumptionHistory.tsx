@@ -15,6 +15,8 @@ export default function ConsumptionHistory({world}:{world:World}) {
  const add=(month:number,text:string)=>events.set(month,[...(events.get(month)??[]),text]);
  for(const e of world.active) add(e.month,e.event==='energy_recovery'?'Energiekosten auf Ausgangspreis zurückgesetzt':e.event==='energy'?'Energiekosten verdoppelt':e.event==='demand'?'Konsumquote auf 65 % gesenkt':'Konsumquote auf 95 % zurückgesetzt');
  for(const e of world.crisis.episodes){add(e.start_month,`Befristete Schliessung · Ersatzquote ${rate(e.replacement_bps)}`); if(e.end_month+1<=world.month)add(e.end_month+1,'Betriebsschliessung aufgehoben');}
+ const budgetNames:Record<string,string>={funding_cut:'Finanzierungsgrenze begrenzt öffentliche Stellen und Beschaffung',cut_procurement:'Staat reduziert Beschaffung',cut_staff:'Öffentliche Stelle entfällt',restore_staff:'Staat finanziert zusätzliche Stelle',restore_procurement:'Staat erhöht Beschaffung'};
+ for(const b of world.public_budget.history)if(b.decision!=='hold'&&b.decision_effective_month<=world.month)add(b.decision_effective_month,budgetNames[b.decision]??b.decision);
  for(const e of world.monetary_policy.changes) add(e.month,`Leitzins: ${rate(e.old_rate_bps)} → ${rate(e.new_rate_bps)}`);
  for(const [i,m] of world.monetary_policy.history.entries()) {
   const before=world.monetary_policy.history[i-1]?.variable_rate_bps??world.monetary_policy.initial_rate_bps;

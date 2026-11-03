@@ -2,6 +2,8 @@
 
 Stand: 3. November 2026. Alle Beträge, Ziele und Regeln sind illustrative Annahmen. Keine Kalibrierung oder Beschreibung realer Staatsschuldenpolitik. Ergänzt [Unternehmen](COMPANY_MODEL.md), [Bankbilanz](BANKING_MODEL.md), [Preise](PRICES_MODEL.md) und [Leitzinsregeln](RATES_MODEL.md). Elf Akteure; der normale Lauf hat keine automatische Monatsgrenze.
 
+Seit V13 ergänzt die [anpassende Budgetregel](PUBLIC_BUDGET_MODEL.md) die hier beschriebene Bankfinanzierung. Im Referenzmodus bleibt die bisherige Ausgabenregel erhalten.
+
 ## Kasse, Haushalt und Schuld
 
 Die Anfangskasse beträgt weiter 80.000 €. Sie wird nicht mehr am Monatsende automatisch wiederhergestellt. Der zahlungsbezogene Haushaltssaldo ist:

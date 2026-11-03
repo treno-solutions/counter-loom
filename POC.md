@@ -131,3 +131,7 @@ Die [drei 600-Monats-Läufe](qa/crisis-v11-plausibility.md) belegen eine verblei
 ## Modell v12 · Gewinnvortrag und zusätzliche Ausschüttungen
 
 Die [Gewinnverwendung](poc/PROFIT_POLICY.md) trennt kumulierte Gewinne und Verluste vom Firmenkonto. Am Quartalsende können positive, noch nicht ausgeschüttete Gewinne oberhalb von Betriebspuffer und gebundenen Maschinenmitteln zusätzlich an Eigentümerhaushalte fliessen. Die Firmenansicht zeigt Bestandsfortschreibung, Liquiditätsgrenzen und echte Zahlungen. Der [kontrollierte 600-Monats-Vergleich](qa/profit-v12-comparison.md) lässt Staats-, Steuer- und übrige Verhaltensregeln unverändert.
+
+## Modell v13 · Anpassendes Staatsbudget
+
+Die [staatliche Budgetregel](poc/PUBLIC_BUDGET_MODEL.md) reagiert nach drei Defizitabschlüssen mit geringerer Beschaffung und gegebenenfalls weniger öffentlichen Stellen. Vor Arbeitsbeginn wird die tatsächliche Finanzierung bestätigt. Bestehende Lohnansprüche werden nicht gelöscht; Soziallücken und entfallene öffentliche Kapazität bleiben sichtbar. Der [600-Monats-Vergleich](qa/fiscal-v13-comparison.md) isoliert das staatliche Regelpaket bei unveränderter Gewinnverwendung und Steuerbasis.

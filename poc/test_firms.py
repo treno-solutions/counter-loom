@@ -92,7 +92,7 @@ class FirmTests(unittest.TestCase):
 
     def test_late_credit_request_is_allowed_before_final_close(self):
         # Preserve the V11 stock fixture; the surplus policy has a different demand path.
-        w=World(horizon_months=24,distribution_policy='legacy')
+        w=World(horizon_months=24,distribution_policy='legacy',fiscal_policy='legacy')
         for _ in range(116):w.step()
         self.assertEqual((w.month,w.phase),(24,0))
         w.banking.request(w)

@@ -1,4 +1,6 @@
-# Laufende Modellwirtschaft · aktuelle Fassung v12
+# Laufende Modellwirtschaft · aktuelle Fassung v13
+
+V13 ergänzt ein [anpassendes Staatsbudget](PUBLIC_BUDGET_MODEL.md). Anhaltende Defizite verändern Beschaffung und öffentliche Stellen; aktuelle öffentliche Arbeit wird nur nach bestätigter Finanzierung freigegeben. Alte Lohnansprüche, tatsächliche Nachzahlungen und ungedeckter Sozialbedarf bleiben sichtbar. Das ist eine illustrative ausgabenseitige Reaktion, keine Zusage eines ausgeglichenen Haushalts.
 
 V12 ergänzt [Gewinnvortrag und zusätzliche Quartalsausschüttungen](PROFIT_POLICY.md). Erwirtschaftete, nach Verlustverrechnung verbleibende Gewinne können oberhalb des Betriebspuffers und gebundener Maschinenmittel an die Eigentümer zurückfliessen. Gewinnvortrag und Kontoguthaben bleiben getrennt. Der Referenzmodus erhält die frühere Auszahlungsregel für kontrollierte Vergleiche; Staats- und Steuerregeln bleiben unverändert.
 

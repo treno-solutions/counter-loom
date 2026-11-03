@@ -6,8 +6,8 @@
   },
   {
     "path": "POC.md",
-    "bytes": 16646,
-    "sha256": "fa8052cbcc7f89c23d46ea82c825f366b4da9d0a9471bdb7e48c968b5e320d5e"
+    "bytes": 17194,
+    "sha256": "4364d8f58eada22cba368a4fefbfa0e51b73923f3ce2280e2e15d841286f85e3"
   },
   {
     "path": "RESEARCH.md",
@@ -106,8 +106,8 @@
   },
   {
     "path": "poc/source-manifest.json",
-    "bytes": 10368,
-    "sha256": "2f2a452f7cf2c6cf703656afa52a0bd5df76ae8f32df2543157b9aa0eab23baf"
+    "bytes": 11286,
+    "sha256": "e267157f129161957ea70c646c38321da14458889fc04e5f089a3ad89f8f8efd"
   },
   {
     "path": "processed/energy-monthly-prices.csv",
@@ -388,6 +388,26 @@
     "path": "qa/fiscal-policy-v9-verification-2026-11-03.json",
     "bytes": 5288,
     "sha256": "f09adf5aafcdbde4e96d5ac6dd20c7f7dd23b69510423e369770e9968957a6b9"
+  },
+  {
+    "path": "qa/fiscal-v13-comparison-2026-11-03.json",
+    "bytes": 3915899,
+    "sha256": "64ae9a0ad98ca605392d1129cebeb44666351d3caef6478ef87ab26f9132a84c"
+  },
+  {
+    "path": "qa/fiscal-v13-comparison.md",
+    "bytes": 8828,
+    "sha256": "57eb8618ff0d3ed5f601f0afb55e9bda0916fdd7db3e5060d185204789106926"
+  },
+  {
+    "path": "qa/fiscal-v13-comparison.svg",
+    "bytes": 155952,
+    "sha256": "a0186767d725783e8a279ee1a8f5e6130c1bb7d66716e060b7dfee9926d81502"
+  },
+  {
+    "path": "qa/fiscal-v13-verification-2026-11-03.json",
+    "bytes": 2177,
+    "sha256": "c3917a0e1607dcd54bcfa4dfff59fa6b775c87fce5a51687733728f182387853"
   },
   {
     "path": "qa/fiscal-v6-plausibility.json",

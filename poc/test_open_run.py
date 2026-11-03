@@ -50,7 +50,8 @@ class OpenRunTests(unittest.TestCase):
             with self.assertRaises(ValueError):World(horizon_months=value)
 
     def test_public_wage_arrears_are_actual_claims_not_a_reserve_target_gap(self):
-        w=World(government_initial_cash_cents=0,government_credit_limit_cents=0)
+        # The reference branch retains these claims; adaptive funded-work tests are separate.
+        w=World(fiscal_policy='legacy',government_initial_cash_cents=0,government_credit_limit_cents=0)
         self.finish(w);m=w.treasury.monthly(w)
         self.assertEqual(m['public_wage_arrears_cents'],480000)
         self.assertEqual(m['unfunded_financing_cents'],m['reserve_target_cents']-m['closing_cash_cents'])

@@ -48,7 +48,8 @@ class FiscalPolicyTests(unittest.TestCase):
         w=World(government_initial_cash_cents=720000)
         self.finish(w);debt=w.treasury.outstanding_cents;w.step()
         self.assertEqual(w.treasury.reserve_target_cents,720000+debt*300//120000)
-        w=World();w.queue('demand')
+        # Preserve the pre-adaptation procurement envelope in this financing fixture.
+        w=World(fiscal_policy='legacy');w.queue('demand')
         for _ in range(15):w.step()
         w.step()
         expected=720000+sum(h['employer'] is None for h in w.households())*100000+w.treasury.month_interest_charge_cents
