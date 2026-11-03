@@ -70,6 +70,13 @@ class Banking:
         if world.nodes['bank']['cash_cents'] <= 0 or not borrower['employees']:
             loan.message = 'Anfrage wartet: positives Bankkapital und ein Betrieb mit Beschäftigten sind Voraussetzung.'
             return True
+        if world.investment_policy=='valuation':
+            a=world.capital_orders.review(world)
+            if not a['credit_profitable'] or not a['credit_available']:
+                loan.status='available'
+                loan.message='Keine Kreditgutschrift: Kapitalwert oder Schuldendienstpuffer reicht nicht. Die Investitionsprüfung zeigt die Rechnung.'
+                world.notice(loan.message,loan.borrower)
+                return True
         if supplier['inventory'] - supplier.get('reserved_units', 0) < loan.units:
             loan.message = f'Anfrage wartet auf {loan.units} verfügbare Werkstatteinheiten für die Maschine.'
             return True
@@ -109,6 +116,7 @@ class Banking:
         if units != loan.units:
             raise RuntimeError('Reservierte Maschinenlieferung stimmt nicht mit dem Vertrag überein.')
         borrower['capital'] += 1
+        if world.investment_policy=='valuation':borrower['company']['last_investment_month']=world.month
         borrower['metrics']['investment'] += loan.amount_cents
         loan.delivery_month = world.month
         loan.status = 'delivered'

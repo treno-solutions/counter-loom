@@ -1,0 +1,1211 @@
+{
+  "date": "2026-11-03",
+  "model": "illustrative_circular_flow_v20",
+  "source_data_sha256": "92872b5f1f2a68a4892205b5cbda6e445a2955e44276437e9b4f3e1fadd15141",
+  "report_script_sha256": "7be6b608a5a1f1d03eba95fc8e444dc6b1204f45e9e63b6c3486c080439b6815",
+  "checks": {
+    "warmup_phases_checked": 14400,
+    "branch_phases_checked": 2400,
+    "v19_anchor_and_both_branches_exact": true,
+    "independent_journal_reconstruction": true,
+    "first_marginal_opportunity_selected_before_shock_branches": true
+  },
+  "python_tests_passed": 213,
+  "ui_snapshots_passed": 28,
+  "invalid_snapshots_rejected": 8,
+  "frontend_build_passed": true,
+  "results": {
+    "v19 · bisherige Regel": {
+      "12": {
+        "investment_delta_cents": 0,
+        "purchases_delta_percent": 0.0,
+        "purchases_delta_cents": 0,
+        "household_income_delta_cents": 0,
+        "non_owner_income_delta_cents": 0,
+        "owner_income_delta_cents": 0,
+        "wages_delta_cents": 0,
+        "stock_gap_delta_cents": 0,
+        "firm_profit_delta_cents": -33000,
+        "state_net_delta_cents": 0,
+        "capital_delta": 0
+      },
+      "13": {
+        "investment_delta_cents": 0,
+        "purchases_delta_percent": 0.0,
+        "purchases_delta_cents": 0,
+        "household_income_delta_cents": 0,
+        "non_owner_income_delta_cents": 0,
+        "owner_income_delta_cents": 0,
+        "wages_delta_cents": 0,
+        "stock_gap_delta_cents": 0,
+        "firm_profit_delta_cents": -36000,
+        "state_net_delta_cents": 0,
+        "capital_delta": 0
+      },
+      "60": {
+        "investment_delta_cents": 0,
+        "purchases_delta_percent": 0.0,
+        "purchases_delta_cents": 0,
+        "household_income_delta_cents": 0,
+        "non_owner_income_delta_cents": 0,
+        "owner_income_delta_cents": 0,
+        "wages_delta_cents": 0,
+        "stock_gap_delta_cents": 0,
+        "firm_profit_delta_cents": -36000,
+        "state_net_delta_cents": 0,
+        "capital_delta": 0
+      }
+    },
+    "v20 · Umstellung aus altem Zustand": {
+      "12": {
+        "investment_delta_cents": 0,
+        "purchases_delta_percent": 0.0,
+        "purchases_delta_cents": 0,
+        "household_income_delta_cents": 0,
+        "non_owner_income_delta_cents": 0,
+        "owner_income_delta_cents": 0,
+        "wages_delta_cents": 0,
+        "stock_gap_delta_cents": 0,
+        "firm_profit_delta_cents": -33000,
+        "state_net_delta_cents": 0,
+        "capital_delta": 0
+      },
+      "13": {
+        "investment_delta_cents": 0,
+        "purchases_delta_percent": 0.0,
+        "purchases_delta_cents": 0,
+        "household_income_delta_cents": 0,
+        "non_owner_income_delta_cents": 0,
+        "owner_income_delta_cents": 0,
+        "wages_delta_cents": 0,
+        "stock_gap_delta_cents": 0,
+        "firm_profit_delta_cents": -36000,
+        "state_net_delta_cents": 0,
+        "capital_delta": 0
+      },
+      "60": {
+        "investment_delta_cents": 0,
+        "purchases_delta_percent": 0.0,
+        "purchases_delta_cents": 0,
+        "household_income_delta_cents": 0,
+        "non_owner_income_delta_cents": 0,
+        "owner_income_delta_cents": 0,
+        "wages_delta_cents": 0,
+        "stock_gap_delta_cents": 0,
+        "firm_profit_delta_cents": -36000,
+        "state_net_delta_cents": 0,
+        "capital_delta": 0
+      }
+    },
+    "v20 · gezieltes Grenzprojekt": {
+      "12": {
+        "investment_delta_cents": -120000,
+        "purchases_delta_percent": 0.9155924851970143,
+        "purchases_delta_cents": 150300,
+        "household_income_delta_cents": 103173,
+        "non_owner_income_delta_cents": 47710,
+        "owner_income_delta_cents": 55463,
+        "wages_delta_cents": 68160,
+        "stock_gap_delta_cents": -96000,
+        "firm_profit_delta_cents": -75035,
+        "state_net_delta_cents": 30538,
+        "capital_delta": -1
+      },
+      "13": {
+        "investment_delta_cents": -120000,
+        "purchases_delta_percent": 0.8405402504674475,
+        "purchases_delta_cents": 148800,
+        "household_income_delta_cents": 104605,
+        "non_owner_income_delta_cents": 51170,
+        "owner_income_delta_cents": 53435,
+        "wages_delta_cents": 73104,
+        "stock_gap_delta_cents": -97200,
+        "firm_profit_delta_cents": -84793,
+        "state_net_delta_cents": 29996,
+        "capital_delta": -1
+      },
+      "60": {
+        "investment_delta_cents": 0,
+        "purchases_delta_percent": 0.008456369423237575,
+        "purchases_delta_cents": 6900,
+        "household_income_delta_cents": 14380,
+        "non_owner_income_delta_cents": 54206,
+        "owner_income_delta_cents": -39826,
+        "wages_delta_cents": 77424,
+        "stock_gap_delta_cents": 4350,
+        "firm_profit_delta_cents": -102024,
+        "state_net_delta_cents": -3420,
+        "capital_delta": 0
+      }
+    },
+    "v20 · neue späte Referenz": {
+      "12": {
+        "investment_delta_cents": 0,
+        "purchases_delta_percent": -0.03082352759861129,
+        "purchases_delta_cents": -4000,
+        "household_income_delta_cents": -5124,
+        "non_owner_income_delta_cents": -1410,
+        "owner_income_delta_cents": -3714,
+        "wages_delta_cents": -2016,
+        "stock_gap_delta_cents": 0,
+        "firm_profit_delta_cents": -35394,
+        "state_net_delta_cents": -2325,
+        "capital_delta": 0
+      },
+      "13": {
+        "investment_delta_cents": 0,
+        "purchases_delta_percent": -0.02868557115770498,
+        "purchases_delta_cents": -4100,
+        "household_income_delta_cents": -4948,
+        "non_owner_income_delta_cents": -1208,
+        "owner_income_delta_cents": -3740,
+        "wages_delta_cents": -1728,
+        "stock_gap_delta_cents": 0,
+        "firm_profit_delta_cents": -38485,
+        "state_net_delta_cents": -2267,
+        "capital_delta": 0
+      },
+      "60": {
+        "investment_delta_cents": 0,
+        "purchases_delta_percent": 0.0038529884549109994,
+        "purchases_delta_cents": 2500,
+        "household_income_delta_cents": 1729,
+        "non_owner_income_delta_cents": 1526,
+        "owner_income_delta_cents": 203,
+        "wages_delta_cents": 2160,
+        "stock_gap_delta_cents": 0,
+        "firm_profit_delta_cents": -35637,
+        "state_net_delta_cents": 769,
+        "capital_delta": 0
+      }
+    }
+  },
+  "opportunity": {
+    "selection": {
+      "month": 113,
+      "control_assessment": {
+        "horizon_months": 24,
+        "lead_months": 1,
+        "discount_rate_bps": 200,
+        "loan_rate_bps": 600,
+        "machine_cost_cents": 120000,
+        "demand_units": 11150,
+        "before": {
+          "units": 11150,
+          "work_bps": 6195,
+          "wages_cents": 297360,
+          "energy_cents": 55750,
+          "sales_cents": 1115000
+        },
+        "after": {
+          "units": 11150,
+          "work_bps": 6060,
+          "wages_cents": 290880,
+          "energy_cents": 55750,
+          "sales_cents": 1115000
+        },
+        "additional_sales_cents": 0,
+        "wage_saving_cents": 6480,
+        "additional_energy_cents": 0,
+        "monthly_before_tax_cents": 6480,
+        "monthly_after_tax_cents": 5184,
+        "cash_npv_cents": 1658,
+        "loan_npv_cents": 55,
+        "cash_value_path": [
+          {
+            "month": 0,
+            "value_cents": -120000
+          },
+          {
+            "month": 1,
+            "value_cents": -120000
+          },
+          {
+            "month": 2,
+            "value_cents": -114833
+          },
+          {
+            "month": 3,
+            "value_cents": -109675
+          },
+          {
+            "month": 4,
+            "value_cents": -104525
+          },
+          {
+            "month": 5,
+            "value_cents": -99384
+          },
+          {
+            "month": 6,
+            "value_cents": -94252
+          },
+          {
+            "month": 7,
+            "value_cents": -89128
+          },
+          {
+            "month": 8,
+            "value_cents": -84013
+          },
+          {
+            "month": 9,
+            "value_cents": -78906
+          },
+          {
+            "month": 10,
+            "value_cents": -73807
+          },
+          {
+            "month": 11,
+            "value_cents": -68718
+          },
+          {
+            "month": 12,
+            "value_cents": -63636
+          },
+          {
+            "month": 13,
+            "value_cents": -58563
+          },
+          {
+            "month": 14,
+            "value_cents": -53499
+          },
+          {
+            "month": 15,
+            "value_cents": -48442
+          },
+          {
+            "month": 16,
+            "value_cents": -43395
+          },
+          {
+            "month": 17,
+            "value_cents": -38355
+          },
+          {
+            "month": 18,
+            "value_cents": -33325
+          },
+          {
+            "month": 19,
+            "value_cents": -28302
+          },
+          {
+            "month": 20,
+            "value_cents": -23288
+          },
+          {
+            "month": 21,
+            "value_cents": -18282
+          },
+          {
+            "month": 22,
+            "value_cents": -13284
+          },
+          {
+            "month": 23,
+            "value_cents": -8295
+          },
+          {
+            "month": 24,
+            "value_cents": -3314
+          },
+          {
+            "month": 25,
+            "value_cents": 1658
+          }
+        ],
+        "loan_value_path": [
+          {
+            "month": 0,
+            "value_cents": 0
+          },
+          {
+            "month": 1,
+            "value_cents": 0
+          },
+          {
+            "month": 2,
+            "value_cents": -5278
+          },
+          {
+            "month": 3,
+            "value_cents": -10508
+          },
+          {
+            "month": 4,
+            "value_cents": -15690
+          },
+          {
+            "month": 5,
+            "value_cents": -20823
+          },
+          {
+            "month": 6,
+            "value_cents": -25908
+          },
+          {
+            "month": 7,
+            "value_cents": -30945
+          },
+          {
+            "month": 8,
+            "value_cents": -35934
+          },
+          {
+            "month": 9,
+            "value_cents": -40875
+          },
+          {
+            "month": 10,
+            "value_cents": -45769
+          },
+          {
+            "month": 11,
+            "value_cents": -50615
+          },
+          {
+            "month": 12,
+            "value_cents": -55414
+          },
+          {
+            "month": 13,
+            "value_cents": -60166
+          },
+          {
+            "month": 14,
+            "value_cents": -55102
+          },
+          {
+            "month": 15,
+            "value_cents": -50046
+          },
+          {
+            "month": 16,
+            "value_cents": -44998
+          },
+          {
+            "month": 17,
+            "value_cents": -39959
+          },
+          {
+            "month": 18,
+            "value_cents": -34928
+          },
+          {
+            "month": 19,
+            "value_cents": -29905
+          },
+          {
+            "month": 20,
+            "value_cents": -24891
+          },
+          {
+            "month": 21,
+            "value_cents": -19885
+          },
+          {
+            "month": 22,
+            "value_cents": -14888
+          },
+          {
+            "month": 23,
+            "value_cents": -9899
+          },
+          {
+            "month": 24,
+            "value_cents": -4918
+          },
+          {
+            "month": 25,
+            "value_cents": 55
+          }
+        ],
+        "loan_interest_cents": 3900,
+        "loan_schedule": [
+          {
+            "month": 1,
+            "opening_principal_cents": 120000,
+            "interest_cents": 600,
+            "principal_cents": 10000
+          },
+          {
+            "month": 2,
+            "opening_principal_cents": 110000,
+            "interest_cents": 550,
+            "principal_cents": 10000
+          },
+          {
+            "month": 3,
+            "opening_principal_cents": 100000,
+            "interest_cents": 500,
+            "principal_cents": 10000
+          },
+          {
+            "month": 4,
+            "opening_principal_cents": 90000,
+            "interest_cents": 450,
+            "principal_cents": 10000
+          },
+          {
+            "month": 5,
+            "opening_principal_cents": 80000,
+            "interest_cents": 400,
+            "principal_cents": 10000
+          },
+          {
+            "month": 6,
+            "opening_principal_cents": 70000,
+            "interest_cents": 350,
+            "principal_cents": 10000
+          },
+          {
+            "month": 7,
+            "opening_principal_cents": 60000,
+            "interest_cents": 300,
+            "principal_cents": 10000
+          },
+          {
+            "month": 8,
+            "opening_principal_cents": 50000,
+            "interest_cents": 250,
+            "principal_cents": 10000
+          },
+          {
+            "month": 9,
+            "opening_principal_cents": 40000,
+            "interest_cents": 200,
+            "principal_cents": 10000
+          },
+          {
+            "month": 10,
+            "opening_principal_cents": 30000,
+            "interest_cents": 150,
+            "principal_cents": 10000
+          },
+          {
+            "month": 11,
+            "opening_principal_cents": 20000,
+            "interest_cents": 100,
+            "principal_cents": 10000
+          },
+          {
+            "month": 12,
+            "opening_principal_cents": 10000,
+            "interest_cents": 50,
+            "principal_cents": 10000
+          }
+        ],
+        "first_debt_service_cents": 10600,
+        "month": 113,
+        "buyer": "alltag",
+        "supplier": "werkstatt",
+        "decision": "invest",
+        "operating_reserve_cents": 621702,
+        "available_cash_cents": 1577664,
+        "cash_required_cents": 741702,
+        "credit_available": true,
+        "credit_profitable": true
+      },
+      "same_cashflows_cash_npv_at_5_percent_cents": -2327,
+      "criterion": "First actually financeable positive cash NPV at 2%, non-positive at 5%, within first 600 control months"
+    },
+    "control_first": {
+      "horizon_months": 24,
+      "lead_months": 1,
+      "discount_rate_bps": 200,
+      "loan_rate_bps": 600,
+      "machine_cost_cents": 120000,
+      "demand_units": 11150,
+      "before": {
+        "units": 11150,
+        "work_bps": 6195,
+        "wages_cents": 297360,
+        "energy_cents": 55750,
+        "sales_cents": 1115000
+      },
+      "after": {
+        "units": 11150,
+        "work_bps": 6060,
+        "wages_cents": 290880,
+        "energy_cents": 55750,
+        "sales_cents": 1115000
+      },
+      "additional_sales_cents": 0,
+      "wage_saving_cents": 6480,
+      "additional_energy_cents": 0,
+      "monthly_before_tax_cents": 6480,
+      "monthly_after_tax_cents": 5184,
+      "cash_npv_cents": 1658,
+      "loan_npv_cents": 55,
+      "cash_value_path": [
+        {
+          "month": 0,
+          "value_cents": -120000
+        },
+        {
+          "month": 1,
+          "value_cents": -120000
+        },
+        {
+          "month": 2,
+          "value_cents": -114833
+        },
+        {
+          "month": 3,
+          "value_cents": -109675
+        },
+        {
+          "month": 4,
+          "value_cents": -104525
+        },
+        {
+          "month": 5,
+          "value_cents": -99384
+        },
+        {
+          "month": 6,
+          "value_cents": -94252
+        },
+        {
+          "month": 7,
+          "value_cents": -89128
+        },
+        {
+          "month": 8,
+          "value_cents": -84013
+        },
+        {
+          "month": 9,
+          "value_cents": -78906
+        },
+        {
+          "month": 10,
+          "value_cents": -73807
+        },
+        {
+          "month": 11,
+          "value_cents": -68718
+        },
+        {
+          "month": 12,
+          "value_cents": -63636
+        },
+        {
+          "month": 13,
+          "value_cents": -58563
+        },
+        {
+          "month": 14,
+          "value_cents": -53499
+        },
+        {
+          "month": 15,
+          "value_cents": -48442
+        },
+        {
+          "month": 16,
+          "value_cents": -43395
+        },
+        {
+          "month": 17,
+          "value_cents": -38355
+        },
+        {
+          "month": 18,
+          "value_cents": -33325
+        },
+        {
+          "month": 19,
+          "value_cents": -28302
+        },
+        {
+          "month": 20,
+          "value_cents": -23288
+        },
+        {
+          "month": 21,
+          "value_cents": -18282
+        },
+        {
+          "month": 22,
+          "value_cents": -13284
+        },
+        {
+          "month": 23,
+          "value_cents": -8295
+        },
+        {
+          "month": 24,
+          "value_cents": -3314
+        },
+        {
+          "month": 25,
+          "value_cents": 1658
+        }
+      ],
+      "loan_value_path": [
+        {
+          "month": 0,
+          "value_cents": 0
+        },
+        {
+          "month": 1,
+          "value_cents": 0
+        },
+        {
+          "month": 2,
+          "value_cents": -5278
+        },
+        {
+          "month": 3,
+          "value_cents": -10508
+        },
+        {
+          "month": 4,
+          "value_cents": -15690
+        },
+        {
+          "month": 5,
+          "value_cents": -20823
+        },
+        {
+          "month": 6,
+          "value_cents": -25908
+        },
+        {
+          "month": 7,
+          "value_cents": -30945
+        },
+        {
+          "month": 8,
+          "value_cents": -35934
+        },
+        {
+          "month": 9,
+          "value_cents": -40875
+        },
+        {
+          "month": 10,
+          "value_cents": -45769
+        },
+        {
+          "month": 11,
+          "value_cents": -50615
+        },
+        {
+          "month": 12,
+          "value_cents": -55414
+        },
+        {
+          "month": 13,
+          "value_cents": -60166
+        },
+        {
+          "month": 14,
+          "value_cents": -55102
+        },
+        {
+          "month": 15,
+          "value_cents": -50046
+        },
+        {
+          "month": 16,
+          "value_cents": -44998
+        },
+        {
+          "month": 17,
+          "value_cents": -39959
+        },
+        {
+          "month": 18,
+          "value_cents": -34928
+        },
+        {
+          "month": 19,
+          "value_cents": -29905
+        },
+        {
+          "month": 20,
+          "value_cents": -24891
+        },
+        {
+          "month": 21,
+          "value_cents": -19885
+        },
+        {
+          "month": 22,
+          "value_cents": -14888
+        },
+        {
+          "month": 23,
+          "value_cents": -9899
+        },
+        {
+          "month": 24,
+          "value_cents": -4918
+        },
+        {
+          "month": 25,
+          "value_cents": 55
+        }
+      ],
+      "loan_interest_cents": 3900,
+      "loan_schedule": [
+        {
+          "month": 1,
+          "opening_principal_cents": 120000,
+          "interest_cents": 600,
+          "principal_cents": 10000
+        },
+        {
+          "month": 2,
+          "opening_principal_cents": 110000,
+          "interest_cents": 550,
+          "principal_cents": 10000
+        },
+        {
+          "month": 3,
+          "opening_principal_cents": 100000,
+          "interest_cents": 500,
+          "principal_cents": 10000
+        },
+        {
+          "month": 4,
+          "opening_principal_cents": 90000,
+          "interest_cents": 450,
+          "principal_cents": 10000
+        },
+        {
+          "month": 5,
+          "opening_principal_cents": 80000,
+          "interest_cents": 400,
+          "principal_cents": 10000
+        },
+        {
+          "month": 6,
+          "opening_principal_cents": 70000,
+          "interest_cents": 350,
+          "principal_cents": 10000
+        },
+        {
+          "month": 7,
+          "opening_principal_cents": 60000,
+          "interest_cents": 300,
+          "principal_cents": 10000
+        },
+        {
+          "month": 8,
+          "opening_principal_cents": 50000,
+          "interest_cents": 250,
+          "principal_cents": 10000
+        },
+        {
+          "month": 9,
+          "opening_principal_cents": 40000,
+          "interest_cents": 200,
+          "principal_cents": 10000
+        },
+        {
+          "month": 10,
+          "opening_principal_cents": 30000,
+          "interest_cents": 150,
+          "principal_cents": 10000
+        },
+        {
+          "month": 11,
+          "opening_principal_cents": 20000,
+          "interest_cents": 100,
+          "principal_cents": 10000
+        },
+        {
+          "month": 12,
+          "opening_principal_cents": 10000,
+          "interest_cents": 50,
+          "principal_cents": 10000
+        }
+      ],
+      "first_debt_service_cents": 10600,
+      "month": 113,
+      "buyer": "alltag",
+      "supplier": "werkstatt",
+      "decision": "invest",
+      "operating_reserve_cents": 621702,
+      "available_cash_cents": 1577664,
+      "cash_required_cents": 741702,
+      "credit_available": true,
+      "credit_profitable": true
+    },
+    "shock_first": {
+      "horizon_months": 24,
+      "lead_months": 1,
+      "discount_rate_bps": 500,
+      "loan_rate_bps": 900,
+      "machine_cost_cents": 120000,
+      "demand_units": 11150,
+      "before": {
+        "units": 11150,
+        "work_bps": 6195,
+        "wages_cents": 297360,
+        "energy_cents": 55750,
+        "sales_cents": 1115000
+      },
+      "after": {
+        "units": 11150,
+        "work_bps": 6060,
+        "wages_cents": 290880,
+        "energy_cents": 55750,
+        "sales_cents": 1115000
+      },
+      "additional_sales_cents": 0,
+      "wage_saving_cents": 6480,
+      "additional_energy_cents": 0,
+      "monthly_before_tax_cents": 6480,
+      "monthly_after_tax_cents": 5184,
+      "cash_npv_cents": -2327,
+      "loan_npv_cents": -3226,
+      "cash_value_path": [
+        {
+          "month": 0,
+          "value_cents": -120000
+        },
+        {
+          "month": 1,
+          "value_cents": -120000
+        },
+        {
+          "month": 2,
+          "value_cents": -114859
+        },
+        {
+          "month": 3,
+          "value_cents": -109739
+        },
+        {
+          "month": 4,
+          "value_cents": -104641
+        },
+        {
+          "month": 5,
+          "value_cents": -99563
+        },
+        {
+          "month": 6,
+          "value_cents": -94507
+        },
+        {
+          "month": 7,
+          "value_cents": -89472
+        },
+        {
+          "month": 8,
+          "value_cents": -84457
+        },
+        {
+          "month": 9,
+          "value_cents": -79464
+        },
+        {
+          "month": 10,
+          "value_cents": -74491
+        },
+        {
+          "month": 11,
+          "value_cents": -69539
+        },
+        {
+          "month": 12,
+          "value_cents": -64607
+        },
+        {
+          "month": 13,
+          "value_cents": -59696
+        },
+        {
+          "month": 14,
+          "value_cents": -54805
+        },
+        {
+          "month": 15,
+          "value_cents": -49934
+        },
+        {
+          "month": 16,
+          "value_cents": -45084
+        },
+        {
+          "month": 17,
+          "value_cents": -40254
+        },
+        {
+          "month": 18,
+          "value_cents": -35444
+        },
+        {
+          "month": 19,
+          "value_cents": -30653
+        },
+        {
+          "month": 20,
+          "value_cents": -25883
+        },
+        {
+          "month": 21,
+          "value_cents": -21133
+        },
+        {
+          "month": 22,
+          "value_cents": -16402
+        },
+        {
+          "month": 23,
+          "value_cents": -11691
+        },
+        {
+          "month": 24,
+          "value_cents": -6999
+        },
+        {
+          "month": 25,
+          "value_cents": -2327
+        }
+      ],
+      "loan_value_path": [
+        {
+          "month": 0,
+          "value_cents": 0
+        },
+        {
+          "month": 1,
+          "value_cents": 0
+        },
+        {
+          "month": 2,
+          "value_cents": -5490
+        },
+        {
+          "month": 3,
+          "value_cents": -10898
+        },
+        {
+          "month": 4,
+          "value_cents": -16225
+        },
+        {
+          "month": 5,
+          "value_cents": -21471
+        },
+        {
+          "month": 6,
+          "value_cents": -26636
+        },
+        {
+          "month": 7,
+          "value_cents": -31722
+        },
+        {
+          "month": 8,
+          "value_cents": -36729
+        },
+        {
+          "month": 9,
+          "value_cents": -41657
+        },
+        {
+          "month": 10,
+          "value_cents": -46507
+        },
+        {
+          "month": 11,
+          "value_cents": -51280
+        },
+        {
+          "month": 12,
+          "value_cents": -55975
+        },
+        {
+          "month": 13,
+          "value_cents": -60595
+        },
+        {
+          "month": 14,
+          "value_cents": -55704
+        },
+        {
+          "month": 15,
+          "value_cents": -50833
+        },
+        {
+          "month": 16,
+          "value_cents": -45983
+        },
+        {
+          "month": 17,
+          "value_cents": -41153
+        },
+        {
+          "month": 18,
+          "value_cents": -36343
+        },
+        {
+          "month": 19,
+          "value_cents": -31552
+        },
+        {
+          "month": 20,
+          "value_cents": -26782
+        },
+        {
+          "month": 21,
+          "value_cents": -22031
+        },
+        {
+          "month": 22,
+          "value_cents": -17301
+        },
+        {
+          "month": 23,
+          "value_cents": -12589
+        },
+        {
+          "month": 24,
+          "value_cents": -7898
+        },
+        {
+          "month": 25,
+          "value_cents": -3226
+        }
+      ],
+      "loan_interest_cents": 5850,
+      "loan_schedule": [
+        {
+          "month": 1,
+          "opening_principal_cents": 120000,
+          "interest_cents": 900,
+          "principal_cents": 10000
+        },
+        {
+          "month": 2,
+          "opening_principal_cents": 110000,
+          "interest_cents": 825,
+          "principal_cents": 10000
+        },
+        {
+          "month": 3,
+          "opening_principal_cents": 100000,
+          "interest_cents": 750,
+          "principal_cents": 10000
+        },
+        {
+          "month": 4,
+          "opening_principal_cents": 90000,
+          "interest_cents": 675,
+          "principal_cents": 10000
+        },
+        {
+          "month": 5,
+          "opening_principal_cents": 80000,
+          "interest_cents": 600,
+          "principal_cents": 10000
+        },
+        {
+          "month": 6,
+          "opening_principal_cents": 70000,
+          "interest_cents": 525,
+          "principal_cents": 10000
+        },
+        {
+          "month": 7,
+          "opening_principal_cents": 60000,
+          "interest_cents": 450,
+          "principal_cents": 10000
+        },
+        {
+          "month": 8,
+          "opening_principal_cents": 50000,
+          "interest_cents": 375,
+          "principal_cents": 10000
+        },
+        {
+          "month": 9,
+          "opening_principal_cents": 40000,
+          "interest_cents": 300,
+          "principal_cents": 10000
+        },
+        {
+          "month": 10,
+          "opening_principal_cents": 30000,
+          "interest_cents": 225,
+          "principal_cents": 10000
+        },
+        {
+          "month": 11,
+          "opening_principal_cents": 20000,
+          "interest_cents": 150,
+          "principal_cents": 10000
+        },
+        {
+          "month": 12,
+          "opening_principal_cents": 10000,
+          "interest_cents": 75,
+          "principal_cents": 10000
+        }
+      ],
+      "first_debt_service_cents": 10900,
+      "month": 113,
+      "buyer": "alltag",
+      "supplier": "werkstatt",
+      "decision": "unprofitable",
+      "operating_reserve_cents": 624702,
+      "available_cash_cents": 1577664,
+      "cash_required_cents": 744702,
+      "credit_available": true,
+      "credit_profitable": false
+    },
+    "actual_payments": {
+      "control": [
+        {
+          "month": 114,
+          "relative_month": 2,
+          "amount_cents": 120000
+        }
+      ],
+      "rate": [
+        {
+          "month": 126,
+          "relative_month": 14,
+          "amount_cents": 120000
+        }
+      ]
+    }
+  },
+  "late_ranges_cents": {
+    "households": [
+      1269771,
+      1756249
+    ],
+    "firms": [
+      2561774,
+      3079925
+    ],
+    "government": [
+      10128990,
+      10259752
+    ],
+    "government_debt": [
+      0,
+      0
+    ],
+    "bank": [
+      1000000,
+      1003200
+    ]
+  },
+  "late_employment": [
+    6,
+    6
+  ],
+  "maximum_late_social_unfunded_cents": 0
+}

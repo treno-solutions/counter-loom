@@ -106,8 +106,8 @@
   },
   {
     "path": "poc/source-manifest.json",
-    "bytes": 18928,
-    "sha256": "b208b5b6899defcbe463846d21a868dc26c18fa4975e8c7ab1542153f3955a58"
+    "bytes": 20475,
+    "sha256": "81c48ca6d8459fea91e413e23f7050c16227ca009858ed649307cc78d4af6fd1"
   },
   {
     "path": "processed/energy-monthly-prices.csv",
@@ -548,6 +548,36 @@
     "path": "qa/in-gold-we-trust-2026-de-page-368.png",
     "bytes": 131058,
     "sha256": "d5ef637444a14b91c8edfd8f75466770c08bb7227e164f16377807463c48d130"
+  },
+  {
+    "path": "qa/investment-v20-comparison.json",
+    "bytes": 33856013,
+    "sha256": "92872b5f1f2a68a4892205b5cbda6e445a2955e44276437e9b4f3e1fadd15141"
+  },
+  {
+    "path": "qa/investment-v20-effects.svg",
+    "bytes": 130431,
+    "sha256": "4b896a10f1e12f3d64b286b94e61f28e3f42c304780b240709b00d8660b91828"
+  },
+  {
+    "path": "qa/investment-v20-opportunity.svg",
+    "bytes": 32760,
+    "sha256": "c03f5c3ec9f83420d21d1566d8a1ed7370133b4eb8e70d93cd45efa230cd53a0"
+  },
+  {
+    "path": "qa/investment-v20-plan.md",
+    "bytes": 5276,
+    "sha256": "40f4a9eac3b7e44eb839776eee7164a3e2fd39aca4f0f6c5a90af0f0147e9f14"
+  },
+  {
+    "path": "qa/investment-v20-report.md",
+    "bytes": 7991,
+    "sha256": "341e0525046359d5816ef3f6277f9ee4d859704fc3191794694f2a6d0d1f4cf8"
+  },
+  {
+    "path": "qa/investment-v20-verification.json",
+    "bytes": 29023,
+    "sha256": "9d99e3ce58ff70b1a0dd020f6032be09dfaa555882473365979edaa1c45ea78e"
   },
   {
     "path": "qa/isolated-shocks-v18-2026-11-03.json",

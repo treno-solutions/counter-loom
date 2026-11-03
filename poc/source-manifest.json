@@ -50,6 +50,11 @@
     "sha256": "f7247ba95cf7e3569c40ea95c6611230f7cdcccd0ebce08cbb7cd9cfe76ebefb"
   },
   {
+    "path": "poc/INVESTMENT_MODEL.md",
+    "bytes": 7852,
+    "sha256": "0b1aea14ad65bd1cd35d183f5a9befb4993c6e04cd1d3aab78bf96e36b0af9c9"
+  },
+  {
     "path": "poc/MACRO_ACCOUNTS.md",
     "bytes": 4789,
     "sha256": "3827eda605aa46e396b920ec7409a1b093b00c0ea1cd5754cf18a3d0fab34934"
@@ -81,8 +86,8 @@
   },
   {
     "path": "poc/STABILITY_MODEL.md",
-    "bytes": 8609,
-    "sha256": "7312aa3ad9a37397ab9e54c87e15881072ee5f884956eed7b95b5d1bf6975700"
+    "bytes": 8898,
+    "sha256": "df55b73e6bcd831f2c2cbcb6a77bbbb2f8269b8976cccc105e773d43af712cf0"
   },
   {
     "path": "poc/STABILITY_PLAN.md",
@@ -91,8 +96,8 @@
   },
   {
     "path": "poc/WORLD_MODEL.md",
-    "bytes": 26702,
-    "sha256": "681b93bd265afbbb50d0cc11087ce0033ba4c35f503d51bb226d4f3bf6b6b764"
+    "bytes": 26991,
+    "sha256": "20508db579cc4abd0870decf5950a4a51d119110d27407fcde444f33a1df9817"
   },
   {
     "path": "poc/bank_profit.py",
@@ -101,13 +106,13 @@
   },
   {
     "path": "poc/banking.py",
-    "bytes": 11769,
-    "sha256": "0d8062e67f8298446ea143cac7e9d9b72df59bcd5b33db2a026efd087624773f"
+    "bytes": 12321,
+    "sha256": "e163ab90cde91b3ac373885a03e27f7412014c932aad9c9be4e750cf3474fb60"
   },
   {
     "path": "poc/capital_orders.py",
-    "bytes": 3568,
-    "sha256": "ae9384b32dd755c6614fede9b6dd53ecaf2910e9387f52f7914741588f99b7bd"
+    "bytes": 6115,
+    "sha256": "ae26a934df4dcb36e3039b37664156abe6211ebde961bb1e58e87d257bc78a0f"
   },
   {
     "path": "poc/crisis.py",
@@ -138,6 +143,11 @@
     "path": "poc/index.html",
     "bytes": 511,
     "sha256": "9360320dd084d67c89b9b3d690c2c325080dab3034873360d77c484387fe53a3"
+  },
+  {
+    "path": "poc/investment.py",
+    "bytes": 3855,
+    "sha256": "1c2ddba263ed018d0651d2f46a4d33dc2e1bf39fb20a26c2b328fe44c6ddf8e3"
   },
   {
     "path": "poc/macro.py",
@@ -200,6 +210,11 @@
     "sha256": "6059a3c8b45df6b4540d80382b5668befac50dc141aa9b4572ea6a8e6034f974"
   },
   {
+    "path": "poc/scripts/check_investment_contract.mts",
+    "bytes": 1584,
+    "sha256": "12c46031d3b72627167e3671add82f7f74bcd714edbf9f825fb835380d98c844"
+  },
+  {
     "path": "poc/scripts/check_stability.py",
     "bytes": 8093,
     "sha256": "7003cd599c23d886f6e2bfc97ab1549264b762e5c110c3683ebe48d862d330c3"
@@ -208,6 +223,11 @@
     "path": "poc/scripts/check_stability_contract.mts",
     "bytes": 477,
     "sha256": "d776192e3930e024041411eaa17d931a9949bc1d237f1fabc475a0ae5417fa64"
+  },
+  {
+    "path": "poc/scripts/collect_investment.py",
+    "bytes": 1407,
+    "sha256": "82a66d713deaa99f5b632e42f2cb358f70c74994dbd34fe17950f1aadf2b67dd"
   },
   {
     "path": "poc/scripts/compare_bank_profit.py",
@@ -228,6 +248,11 @@
     "path": "poc/scripts/compare_goods_granularity.py",
     "bytes": 5023,
     "sha256": "9bc22ef6ed39639d222a9478f8ceb56eba8200348eeb4e341f87379eb235e352"
+  },
+  {
+    "path": "poc/scripts/compare_investment.py",
+    "bytes": 6121,
+    "sha256": "d129253c1deaf2ced055323afb06f75ae30ddc736ad3e35973e9f5e9a53d1f22"
   },
   {
     "path": "poc/scripts/compare_profit_reserves.py",
@@ -263,6 +288,11 @@
     "path": "poc/scripts/diagnose_saving_investment.py",
     "bytes": 7119,
     "sha256": "f0ca57fe4ffaaf7e2ae8a13b59776b9a996124e6d0c359a740f10c1cf0619efd"
+  },
+  {
+    "path": "poc/scripts/investment_contract_fixtures.py",
+    "bytes": 724,
+    "sha256": "4f5e8f5d94b399a6e2d08e0fa5b9bcbfc7e8107e2c150bde4248be2775b0f628"
   },
   {
     "path": "poc/scripts/isolated_shocks.py",
@@ -308,6 +338,11 @@
     "path": "poc/scripts/report_goods_granularity.py",
     "bytes": 11170,
     "sha256": "bfbaf94dfa09dee4a7d55b530f81d6a53a7d41eedd1a33ab8b3c0c1c25ff30dc"
+  },
+  {
+    "path": "poc/scripts/report_investment.py",
+    "bytes": 19271,
+    "sha256": "7be6b608a5a1f1d03eba95fc8e444dc6b1204f45e9e63b6c3486c080439b6815"
   },
   {
     "path": "poc/scripts/report_isolated_shocks.py",
@@ -357,7 +392,7 @@
   {
     "path": "poc/src/App.tsx",
     "bytes": 32014,
-    "sha256": "addea2c7b9a3fd4af7447b14f2e7b8788566fc56471fb29986b83b777527fc9d"
+    "sha256": "68456ca8777521f0dfc13618aa549720a9b11e75648d18223a0424a39dd96b90"
   },
   {
     "path": "poc/src/BankView.tsx",
@@ -366,13 +401,13 @@
   },
   {
     "path": "poc/src/BusinessOperation.tsx",
-    "bytes": 7375,
-    "sha256": "fdd1b3dd3c2b1db07971667b25610ad633f09ece558c7670742c295abc134c30"
+    "bytes": 7397,
+    "sha256": "e56fb972bce38b56474a3096af17bf2d788c3f04d088d4d80e1dc40aef9965b8"
   },
   {
     "path": "poc/src/CapitalOrderView.tsx",
-    "bytes": 2178,
-    "sha256": "9bea2948c9a63ad97a432df198d09793fe4188395f87a362133fdae0af693b87"
+    "bytes": 2392,
+    "sha256": "123769997da758b8cc44e8b4c2ab09d1ba9af9c4ac52e280463b6ddfa9be1d55"
   },
   {
     "path": "poc/src/CompanyView.tsx",
@@ -408,6 +443,11 @@
     "path": "poc/src/HouseholdApp.tsx",
     "bytes": 20656,
     "sha256": "b47d158936b31f7ca41870a3440ab55c0312106027e4d57be0f98d421c198e46"
+  },
+  {
+    "path": "poc/src/InvestmentAppraisal.tsx",
+    "bytes": 5871,
+    "sha256": "c37279105183f33367e31e67984b6104498fefeed0eba22220f07a68f61447b2"
   },
   {
     "path": "poc/src/MacroDashboard.tsx",
@@ -450,6 +490,11 @@
     "sha256": "55485aeee27321a9480a6320ec45e6245c54b2ed0771c77a8eff54d78a92b3cd"
   },
   {
+    "path": "poc/src/investment.css",
+    "bytes": 1591,
+    "sha256": "a140cca071065aac8041561eab4f13b9175406cba751ed7b8a113c2b9b311973"
+  },
+  {
     "path": "poc/src/main.tsx",
     "bytes": 810,
     "sha256": "f95a67149b3f07dbbe77777fae04dcf66fcc1abd4b783ed22ab48f99392f9f95"
@@ -471,8 +516,8 @@
   },
   {
     "path": "poc/src/world-schema.ts",
-    "bytes": 32707,
-    "sha256": "ff40d6422831ed30ca0ed76a199bb8d4856e1b0c1f3a14392a0848687e3b58bf"
+    "bytes": 34997,
+    "sha256": "4d6a1e61688ddafa906143e5f9d048446fe57c8ddfe575947bacb22bc3133922"
   },
   {
     "path": "poc/systems.py",
@@ -542,7 +587,12 @@
   {
     "path": "poc/test_goods_granularity.py",
     "bytes": 5318,
-    "sha256": "22b81641ccde4bc0057892df319c2e9420f1d49f6314ad608a57fff7defec6ea"
+    "sha256": "018231df2ccaf643f3c3cfd5b11e59efacbbd00645dd0fb839a1541d92999b75"
+  },
+  {
+    "path": "poc/test_investment.py",
+    "bytes": 4820,
+    "sha256": "e3369c07950fc5f7d14c283651cfa2c0c20cd46589d058bb31a0a3d836ccfd34"
   },
   {
     "path": "poc/test_isolated_shocks.py",
@@ -626,7 +676,7 @@
   },
   {
     "path": "poc/world.py",
-    "bytes": 47199,
-    "sha256": "26ac3eda40abc298c163b21239fea29348555b278e29fc9145db80804237ea7a"
+    "bytes": 47330,
+    "sha256": "3291cc89f7fec6fda91a6d462e5763b75f0366b4839d6210385014de3c6cf24a"
   }
 ]

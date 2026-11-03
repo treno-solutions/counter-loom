@@ -149,3 +149,5 @@ Seit V10 können Personal- und Anfangsverläufe von den beschriebenen V9-Knicken
 ## Numerische Auflösung der Gütermengen
 
 Ein separater [Gegenlauf über 600 Monate](../qa/goods-granularity-comparison.md) untersucht Hundertstel der bisherigen Gütereinheiten. Seit v15 ist `goods_unit_scale=100` der Startwert; `1` bleibt für historische Kontrollläufe verfügbar. Stückpreise, Energie und reale Kapazitäten sind gemeinsam umgerechnet. Die Steuer-, Budget- und Verhaltensregeln bleiben erhalten. [Einheiten und Grenzen des Experiments](GOODS_GRANULARITY_EXPERIMENT.md). Die Gegenüberstellung misst die Wirkung feinerer Warenmengen einschliesslich Produktions- und Lagerrundung.
+
+Aktueller Zusatz v20: [Wirtschaftlichkeitsprüfung von Maschinen](INVESTMENT_MODEL.md) mit Kapitalwert, explizitem Eigenmittel-Bewertungszins und Kredit-Schuldendienst. Die tatsächliche Produktions-/Zahlungskette bleibt erhalten. Historische Referenzbefunde bleiben getrennt archiviert.

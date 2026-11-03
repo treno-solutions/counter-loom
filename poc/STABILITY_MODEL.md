@@ -63,3 +63,5 @@ Die [getrennten Schockversuche](../qa/isolated-shocks-v18-report.md) vergleichen
 Die [Diagnose der schwachen Zinswirkung](../qa/rate-transmission-v18-diagnosis.md) verfolgt die tatsächlichen Zinszahlungen und Ausschüttungen, trennt die unterschiedliche Gewinnbesteuerung von inaktiven Kreditfunktionen und benennt fehlende Übertragungswege. Sie verändert keine Wirtschaftsregel.
 
 Aktueller Zusatz v19: [Bankgewinnrechnung und Gewinnverwendung](BANK_PROFIT_MODEL.md). Die hier archivierten v18-Stabilitätsbefunde bleiben historische Vergleiche; für die neue Bankregel werden eigene Kontroll- und Zinsschockläufe dokumentiert.
+
+Aktueller Zusatz v20: [Wirtschaftlichkeitsprüfung von Maschinen](INVESTMENT_MODEL.md) mit Kapitalwert, explizitem Eigenmittel-Bewertungszins und Kredit-Schuldendienst. Die tatsächliche Produktions-/Zahlungskette bleibt erhalten. Historische Referenzbefunde bleiben getrennt archiviert.
