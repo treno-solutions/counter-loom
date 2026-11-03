@@ -106,8 +106,8 @@
   },
   {
     "path": "poc/source-manifest.json",
-    "bytes": 13346,
-    "sha256": "f42ea1fb0b0dcf6e6c8b98e7b26c3a0a63e5e64fef7a1138a1d10c0cebb76fba"
+    "bytes": 14239,
+    "sha256": "36ddf45ad52ecc86231e9c0cbd1567d5e34f19f0a5ec5e11ec87c2efc2b04338"
   },
   {
     "path": "processed/energy-monthly-prices.csv",
@@ -345,6 +345,21 @@
     "sha256": "cd03b98b77cf99c12d7c488444b8c4b47f1b3897d5d965d7e3bc955d6889bef4"
   },
   {
+    "path": "qa/consumption-v16-comparison-2026-11-03.json",
+    "bytes": 3502182,
+    "sha256": "01c9cabda4c0a336face03292b0af0080e93baf893cd4f7ef3c8d9cd11efed9a"
+  },
+  {
+    "path": "qa/consumption-v16-comparison.md",
+    "bytes": 5002,
+    "sha256": "a012900a04b7c689dc38acfadb33934bc7d95cbcb7db4870eb282cd9dc2f7710"
+  },
+  {
+    "path": "qa/consumption-v16-comparison.svg",
+    "bytes": 131123,
+    "sha256": "887b600013502ccae3473116de81c8da1cd5d02d65234c8853e4ebd7863d1362"
+  },
+  {
     "path": "qa/conversion-and-validation.md",
     "bytes": 1945,
     "sha256": "96da5424801d4b760d7f1f1db86eaad0eff032645a94e946b3f2e6735419da37"
@@ -493,6 +508,11 @@
     "path": "qa/laptop-layout-verification-2026-11-03.json",
     "bytes": 1084,
     "sha256": "0f6d63af8e2c8ce49bc37f4f154976f2405060a7e9144277cdea1ae5b6701059"
+  },
+  {
+    "path": "qa/macro-consumption-v16-verification-2026-11-03.json",
+    "bytes": 2065,
+    "sha256": "1859dceb07ed92f916b53afc56e6b6cdd9af654468d69eba55b94587b3ffdacc"
   },
   {
     "path": "qa/package-validation.json",

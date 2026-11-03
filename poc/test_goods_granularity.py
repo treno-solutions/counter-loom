@@ -10,7 +10,7 @@ class GoodsGranularityTests(unittest.TestCase):
         self.assertEqual(w.nodes['alltag']['price'],100)
         self.assertEqual(w.nodes['werkstatt']['price'],150)
         self.assertEqual(w.banking.loan.units,800)
-        self.assertEqual(w.snapshot()['classification'],'illustrative_circular_flow_v15')
+        self.assertEqual(w.snapshot()['classification'],'illustrative_circular_flow_v16')
         self.assertIn('800 Werkstatteinheiten',w.snapshot()['rules']['bank'])
         self.assertIn('600 Alltags- und 200 Werkstatteinheiten',w.snapshot()['rules']['external'])
 

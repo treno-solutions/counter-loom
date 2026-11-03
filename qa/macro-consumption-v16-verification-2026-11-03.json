@@ -1,0 +1,49 @@
+{
+  "date": "2026-11-03",
+  "model": "illustrative_circular_flow_v16",
+  "tests": {
+    "passed": 169,
+    "command": "python -m unittest discover -s poc -p 'test_*.py'",
+    "new_macro_tests": 6,
+    "economic_journal_and_history_identical_when_observation_disabled": true,
+    "macro_frontend_responses": 71,
+    "frontend_scope": "Initial state, all phases through 14 months, energy shock and closure",
+    "inconsistent_gdp_sum_rejected": true,
+    "build": "passed"
+  },
+  "controlled_comparison": {
+    "months_each": 600,
+    "consumption_percent": [95,100],
+    "other_rules_unchanged": true,
+    "default_consumption_percent": 95,
+    "reference_95_matches_every_archived_fine_month": true,
+    "source_hashes_verified": true,
+    "data": "qa/consumption-v16-comparison-2026-11-03.json",
+    "report": "qa/consumption-v16-comparison.md"
+  },
+  "browser": {
+    "tool": "BrowserOS neo",
+    "desktop_viewport": [1366,900],
+    "mobile_viewport": [390,844],
+    "mobile_document_width": 390,
+    "history_selection": "M1 selected while M2 is completed",
+    "month_one_gdp_proxy_cents": 1700119,
+    "month_one_private_fte_bps": 40000,
+    "month_one_base_price_goods_productivity_cents": 330000,
+    "demography": "Explicitly not modeled",
+    "error_alerts": 0,
+    "document_overflow": false
+  },
+  "figure": {
+    "path": "qa/consumption-v16-comparison.svg",
+    "tool": "Matplotlib",
+    "review": "Six full-horizon comparison panels checked; nominal GDP approximation and trailing monthly means labeled"
+  },
+  "limits": [
+    "GDP is an illustrative nominal proxy using manufacturing-cost inventory and paid public payroll; not official national accounts",
+    "Goods production per scheduled private FTE at fixed prices is not official GDP per hour",
+    "Birth rates are unknown because no population or age structure exists",
+    "100 percent consumption is a diagnostic intervention and does not become the default",
+    "The 100-percent profile borrows earlier and temporarily carries more debt; end-month comparisons alone are incomplete"
+  ]
+}

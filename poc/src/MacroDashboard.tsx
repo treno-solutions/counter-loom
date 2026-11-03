@@ -1,0 +1,31 @@
+import {useState} from 'react';
+import type {World} from './world-schema';
+const money=(v:number)=>new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR',maximumFractionDigits:0}).format(v/100);
+const number=(v:number)=>v.toLocaleString('de-DE',{maximumFractionDigits:2});
+const pct=(v:number|null)=>v===null?'Nicht verfügbar':`${number(v/100)} %`;
+export default function MacroDashboard({world}:{world:World}) {
+ const [chosen,setChosen]=useState<number|null>(null),[expanded,setExpanded]=useState(false);
+ const rows=world.macro.history,m=rows.find(r=>r.month===chosen)??rows.at(-1);
+ const charts=m?[{title:'BIP-Näherung · nominal',unit:'€ pro Monat',get:(r:typeof m)=>r.gdp_proxy_cents/100},
+ {title:'Warenproduktion · feste Startpreise',unit:'Index · M1 = 100',get:(r:typeof m)=>r.goods_output_index_bps===null?null:r.goods_output_index_bps/100},
+ {title:'Leitzins',unit:'% pro Jahr',get:(r:typeof m)=>r.policy_rate_bps/100},
+ {title:'Beschäftigung · Lohnrunde',unit:'Arbeitsverträge',get:(r:typeof m)=>r.employment_at_production}]:[];
+ const parts=m?[['Haushaltskäufe',m.components.consumption_cents],['Öffentliche Warenkäufe',m.components.public_goods_cents],['Anlagenkäufe',m.components.investment_cents],['Warenexporte',m.components.exports_cents],['− Energieimporte',-m.components.imports_cents],['Lageränderung · Herstellungskosten',m.components.inventory_change_cents],['Öffentliche Arbeit · Lohnkosten als Näherung',m.components.public_services_cents]] as const:[];
+ return <section className="macro-dashboard" aria-labelledby="macro-title">
+  <header><div><span className="overline">MAKROÜBERSICHT</span><h2 id="macro-title">Wirtschaftliche Kennzahlen</h2><p>{m?`Abgeschlossener Monat ${m.month}. ${world.phase!==4?`Monat ${world.month} läuft; seine Kennzahlen stehen nach Abschluss bereit.`:''}`:'Nach dem ersten Monatsabschluss erscheinen Leistung, Produktion und Beschäftigung.'}</p></div>{m&&<label>Monat<select value={m.month} onChange={e=>setChosen(Number(e.target.value))}>{rows.map(r=><option key={r.month} value={r.month}>Monat {r.month}</option>)}</select>{chosen!==null&&<button onClick={()=>setChosen(null)}>Aktuellsten Abschluss zeigen</button>}</label>}</header>
+  <div className="macro-cards">
+   <article><span>BIP-Näherung · nominal</span><strong>{m?money(m.gdp_proxy_cents):'—'}</strong><small>Leistung pro Modellmonat</small></article>
+   <article><span>Wachstum · zum Vormonat</span><strong>{m?pct(m.nominal_growth_mom_bps):'—'}</strong><small>Vorjahr: {m?pct(m.nominal_growth_yoy_bps):'—'} · nominal, einschliesslich Preisänderungen</small></article>
+   <article><span>Leitzins</span><strong>{number((m?.policy_rate_bps??world.monetary_policy.rate_bps)/100)} %</strong><small>{m?'Im gewählten Monatsabschluss':'Aktueller Jahreszins'} · jetzt {number(world.monetary_policy.rate_bps/100)} %</small></article>
+   <article><span>Warenproduktion · Mengenindex</span><strong>{m?.goods_output_index_bps==null?'—':number(m.goods_output_index_bps/100)}</strong><small>M1 = 100 · bewertet zu festen Startpreisen</small></article>
+   <article><span>Produktion je Vollzeitstelle</span><strong>{m?.goods_productivity_cents==null?'—':money(m.goods_productivity_cents)}</strong><small>Private Warenproduktion zu Startpreisen je geplanter Vollzeitstelle und Monat</small></article>
+   <article><span>Beschäftigung · Lohnrunde</span><strong>{m?`${m.employment_at_production} / 6`:'—'}</strong><small>{m?`${number(m.private_fte_bps/10000)} private Vollzeitäquivalente · ${pct(m.unemployment_bps)} ohne Vertrag`:'Verträge und Arbeitszeit werden getrennt gemessen'}</small></article>
+  </div>
+  <div className="macro-context"><span>Geburtenrate: <b>nicht modelliert</b> · {world.macro.household_count} feste Haushalte, keine Personen- oder Altersstruktur.</span>{m&&<span>Warenpreisinflation zum Vorjahr: <b>{pct(m.inflation_yoy_bps)}</b> · zwei Modellwaren</span>}</div>
+  <button className="macro-toggle" aria-expanded={expanded} onClick={()=>setExpanded(!expanded)}>{expanded?'Zeitverläufe und Berechnung schliessen':'Zeitverläufe und BIP-Berechnung öffnen'}</button>
+  {expanded&&m&&<>
+   <div className="macro-charts">{charts.map(chart=>{const vals=rows.map(chart.get).filter((v):v is number=>v!==null);const low=Math.min(0,...vals),high=Math.max(1,...vals),first=rows[0]!.month,last=rows.at(-1)!.month;const x=(mo:number)=>62+(mo-first)*466/Math.max(1,last-first),y=(v:number)=>130-(v-low)/(high-low)*105;let gap=true;const path=rows.map(r=>{const v=chart.get(r);if(v===null){gap=true;return '';}const segment=`${gap?'M':'L'}${x(r.month)},${y(v)}`;gap=false;return segment;}).join(' ');return <figure key={chart.title}><figcaption>{chart.title} · {chart.unit}</figcaption><svg viewBox="0 0 552 164" role="img" aria-label={`${chart.title}, ${chart.unit}, Monate ${first} bis ${last}`}>{[low,(low+high)/2,high].map((v,i)=><g key={i}><line x1="62" x2="528" y1={y(v)} y2={y(v)} className="consumption-grid"/><text x="55" y={y(v)+4} textAnchor="end">{number(v)}</text></g>)}<path d={path} className="macro-line"/>{chart.get(m)!==null&&<circle cx={x(m.month)} cy={y(chart.get(m)!)} r="3" fill="#526f89"/>}<line x1={x(m.month)} x2={x(m.month)} y1="24" y2="130" className="consumption-selection"/>{[...new Set([first,Math.round((first+last)/2),last])].map(mo=><text key={mo} x={x(mo)} y="153" textAnchor="middle">M{mo}</text>)}</svg></figure>;})}</div>
+   <div className="macro-method"><h3>BIP-Näherung · Monat {m.month}</h3><dl>{parts.map(([label,value])=><div key={label}><dt>{label}</dt><dd>{money(value)}</dd></div>)}<div><dt>Summe</dt><dd>{money(m.gdp_proxy_cents)}</dd></div></dl><p>Illustrative Verwendungsrechnung. Kredite, Tilgung, Steuern, Transfers und Ausschüttungen sind keine zusätzliche Produktion. Lager werden zu Herstellungskosten geführt; öffentliche Arbeit wird mit tatsächlich gezahlten aktuellen Löhnen angenähert. Kapitalverschleiss und eine vollständige Dienstleistungswirtschaft fehlen. Dieses Modell-BIP entspricht keiner amtlichen Volkswirtschaftlichen Gesamtrechnung.</p><p>Das Wachstum ist nominal. Der Mengenindex und die Produktionskennzahl verwenden feste Startpreise; sie sind kein reales BIP und keine amtliche Arbeitsproduktivität. Die Grafiken zeigen die letzten 120 Abschlüsse; der Export enthält den gesamten Verlauf.</p></div>
+  </>}
+ </section>;
+}

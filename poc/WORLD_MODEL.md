@@ -1,4 +1,6 @@
-# Laufende Modellwirtschaft · aktuelle Fassung v15
+# Laufende Modellwirtschaft · aktuelle Fassung v16
+
+V16 ergänzt die [Makroübersicht](MACRO_ACCOUNTS.md) als reine Beobachtungsebene: nominale BIP-Näherung und Wachstumsraten, Warenmengen zu Startpreisen, private Produktionskennzahl, Leitzins und Beschäftigung. Demografie bleibt unmodelliert. Ein [kontrollierter Vergleich](../qa/consumption-v16-comparison.md) untersucht ausschliesslich die Konsumquote 95 gegenüber 100 %. Der normale Startwert bleibt 95 %.
 
 V15 übernimmt die feineren Gütereinheiten als Standard: Startpreise 1 € und 1,50 €, entsprechend 0,01 der bisherigen Gütermenge. Reale Kapazitäten, Energie und Maschinenmengen sind gemeinsam umgerechnet; Steuer- und Verhaltensregeln bleiben erhalten. [Diagnose des verbleibenden Staatsdefizits](../qa/fiscal-balance-v15-diagnosis.md). Neue Läufe verwenden `goods_unit_scale=100`; historische Gegenläufe nennen `1` ausdrücklich.
 

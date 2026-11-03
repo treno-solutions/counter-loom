@@ -45,6 +45,11 @@
     "sha256": "f7247ba95cf7e3569c40ea95c6611230f7cdcccd0ebce08cbb7cd9cfe76ebefb"
   },
   {
+    "path": "poc/MACRO_ACCOUNTS.md",
+    "bytes": 4789,
+    "sha256": "3827eda605aa46e396b920ec7409a1b093b00c0ea1cd5754cf18a3d0fab34934"
+  },
+  {
     "path": "poc/PRICES_MODEL.md",
     "bytes": 6908,
     "sha256": "da6caaa1feb9eee70ce1491fb17faee4f76647fa902cf79f8202c3522acc442b"
@@ -66,13 +71,13 @@
   },
   {
     "path": "poc/README.md",
-    "bytes": 17081,
-    "sha256": "5b2d2f6aca6b052c4e49ee7ed68b4b11a149979c216f36a04d99a46e90e8c96f"
+    "bytes": 17374,
+    "sha256": "04b612435e07dff7895dc840f93c47448c8c9601e6b898cb862b15e851b35bfa"
   },
   {
     "path": "poc/WORLD_MODEL.md",
-    "bytes": 25355,
-    "sha256": "dc4b2801dfb0471385256a353b8bbd88f532032e3ceae37f4285cf25c6e7bbb4"
+    "bytes": 25768,
+    "sha256": "57c4bc2acb4f36afd61623302d25e57570e23eacacec452562b5803e7d3bd7ca"
   },
   {
     "path": "poc/banking.py",
@@ -108,6 +113,11 @@
     "path": "poc/index.html",
     "bytes": 511,
     "sha256": "9360320dd084d67c89b9b3d690c2c325080dab3034873360d77c484387fe53a3"
+  },
+  {
+    "path": "poc/macro.py",
+    "bytes": 3544,
+    "sha256": "bf0a853dc28c11879c64b4b04a8a3008ea12ac2188a51d9d447e838eaad99467"
   },
   {
     "path": "poc/package-lock.json",
@@ -160,6 +170,11 @@
     "sha256": "214dbe5cdcb2b53a6d339a69a898fb7228f7f1946f5d9ce220d51c5f5f56f7f1"
   },
   {
+    "path": "poc/scripts/compare_consumption.py",
+    "bytes": 3385,
+    "sha256": "d9ce4a0bd9c729b6385a44e5372f0bd7bae1ddb5d801fcd6b309c45579cc2f8a"
+  },
+  {
     "path": "poc/scripts/compare_distribution_tax.py",
     "bytes": 4024,
     "sha256": "efd529f8941cdd70df7bce658175d476ae411b775ac5038d94db4efad18adcfd"
@@ -193,6 +208,11 @@
     "path": "poc/scripts/python.mjs",
     "bytes": 992,
     "sha256": "27660de705bd5dbad9919d986b028abed6c760829cab1a4e273095403fbf3417"
+  },
+  {
+    "path": "poc/scripts/report_consumption.py",
+    "bytes": 9156,
+    "sha256": "493a5dea332d0abbb4ee239110b3a2761298e922cc7c367f518e2767622ee618"
   },
   {
     "path": "poc/scripts/report_distribution_tax.py",
@@ -236,8 +256,8 @@
   },
   {
     "path": "poc/src/App.tsx",
-    "bytes": 31491,
-    "sha256": "f3f03124a0d8e7b3d31e851aa390cfba1ac222ea06d3b1899235fa29b64f0fa3"
+    "bytes": 31614,
+    "sha256": "09e2d4409e608c339bfef33753c014ffa9dbe9934127ce4227a203c7fc66f135"
   },
   {
     "path": "poc/src/BankView.tsx",
@@ -285,6 +305,11 @@
     "sha256": "b47d158936b31f7ca41870a3440ab55c0312106027e4d57be0f98d421c198e46"
   },
   {
+    "path": "poc/src/MacroDashboard.tsx",
+    "bytes": 6378,
+    "sha256": "ec3970c4d2e213c80e11fc054eece9bd7648cb60f2fc6e1d21143fd5936e8396"
+  },
+  {
     "path": "poc/src/PriceTransmission.tsx",
     "bytes": 6946,
     "sha256": "d9577eb360b95b0022315a2f14415f06afc3a8fe2588732e3b5e0e595e4ce165"
@@ -326,13 +351,13 @@
   },
   {
     "path": "poc/src/treno-theme.css",
-    "bytes": 24714,
-    "sha256": "237aa3a2ff49672b29cb81646ba7dab9243952f95a5fd6765bb5989134db6465"
+    "bytes": 26746,
+    "sha256": "1cfd897aa9d8738f2639d8b09378228f8486a037148e971b214fe9e0be01b235"
   },
   {
     "path": "poc/src/world-schema.ts",
-    "bytes": 26166,
-    "sha256": "99ca31522b80034b8bb77090288ce507c4320d8e931dc4bcfa90e5e8b53b61ac"
+    "bytes": 27341,
+    "sha256": "36b1f2568d67525a740dbeeab48a68e19c2ebc2ffa599a2011709fdb40e41634"
   },
   {
     "path": "poc/systems.py",
@@ -392,7 +417,12 @@
   {
     "path": "poc/test_goods_granularity.py",
     "bytes": 5318,
-    "sha256": "e617204cb8fd1c20782f8932d9573fc0f4114a3049daf3981797d0afbd87a441"
+    "sha256": "17f6ba7d901a17cb6da024e13afe4a4d2185e4c058516d94e9cd27bd6ba04132"
+  },
+  {
+    "path": "poc/test_macro.py",
+    "bytes": 2743,
+    "sha256": "b3af44a082d227bf7aaea39768ff1bfbc988a9ae27f7a522ea5d61d11b617860"
   },
   {
     "path": "poc/test_open_run.py",
@@ -446,7 +476,7 @@
   },
   {
     "path": "poc/world.py",
-    "bytes": 39858,
-    "sha256": "c5461de81311b1de91d2fe5338319d921dbf1ef249afa72a60737d266cf4b1c2"
+    "bytes": 40078,
+    "sha256": "30f5361e39c29f7cbf2888408773191b23931c0f0cb9e39754259a2c27586bd7"
   }
 ]
