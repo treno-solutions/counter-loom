@@ -60,7 +60,7 @@ Nur positives Nachsteuerergebnis kann weiterhin höchstens zur Hälfte ausgesch�
 
 ## Bewusste verbleibende Grenzen
 
-Die Transferregel ist nicht erweitert: Nur unbeschäftigte Haushalte erhalten bei ausreichender Staatskasse bis zu 1.000 €; reduzierte betriebliche Arbeitszeit löst keine Aufstockung aus. Eine 25-%-Stelle zahlt 600 € brutto beziehungsweise 420 € nach Modellsteuer und kann deshalb weniger laufendes Einkommen als Arbeitslosigkeit mit Transfer bedeuten. Dies ist eine Grenze des bestehenden Sozialmodells und keine Aussage über reale Anreize oder Kurzarbeit.
+Seit V11 gilt für angeordnete befristete Schliessungen die separate [Kurzarbeitsregel](CRISIS_MODEL.md). Ausserhalb dieser Episoden ist die Transferregel nicht erweitert: Nur unbeschäftigte Haushalte erhalten bei ausreichender Staatskasse bis zu 1.000 €; reduzierte betriebliche Arbeitszeit löst keine Aufstockung aus. Eine 25-%-Stelle zahlt 600 € brutto beziehungsweise 420 € nach Modellsteuer und kann deshalb weniger laufendes Einkommen als Arbeitslosigkeit mit Transfer bedeuten. Dies ist eine Grenze des bestehenden Sozialmodells und keine Aussage über reale Anreize oder Kurzarbeit.
 
 Kein Insolvenzverfahren, keine allgemeine Nachzahlung alter Lohnansprüche, keine Abschreibung, kein neuer Firmenkreditmarkt und keine Nachfragepreisbildung. Lange Läufe können weiterhin Stagnation, Zahlungslücken oder erneute Stilllegung zeigen. Es wird kein dauerndes Wachstum oder permanenter Wiederanlauf erzwungen. Frühere V9-Ergebnisse bleiben Befunde anderer Regeln.
 

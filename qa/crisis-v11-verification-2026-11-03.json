@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-03",
+  "model": "illustrative_circular_flow_v11",
+  "tests": {
+    "command": "python -m unittest discover -s poc -p 'test_*.py'",
+    "passed": 122,
+    "frontend_contract_world_responses": 54,
+    "frontend_comparison_contract": "passed",
+    "build": "passed"
+  },
+  "long_horizon": {
+    "runs": 3,
+    "months_each": 600,
+    "phases_each": 3000,
+    "results": "qa/crisis-v11-long-horizon-2026-11-03.json",
+    "assessment": "qa/crisis-v11-plausibility.md",
+    "final_closure_counter_guard": "Full exported state and ledger identical at M36 for both stress scenarios after freezing the closure investment-shortage counter; no later closure in these scenarios."
+  },
+  "browser": {
+    "tool": "BrowserOS neo",
+    "desktop_viewport": [
+      1400,
+      1000
+    ],
+    "mobile_viewport": [
+      390,
+      844
+    ],
+    "comparison_charts": 6,
+    "with_support_month_1_paid_cents": 201600,
+    "without_support_reopening_observed_month": 4,
+    "closure_start_end_history_markers": "passed",
+    "company_actual_work_bps_during_closure": 0,
+    "company_saved_plan_bps": 10000,
+    "company_normal_state_cards_hidden_during_mandated_closure": true,
+    "error_alerts": 0,
+    "mobile_document_width": 390
+  },
+  "system_card_layout": {
+    "minimum_diagram_width": 1000,
+    "normal_card_min_height": 190,
+    "amount_stress_text": "1.234.567.890.123,45 €",
+    "stress_node_overflow": 0,
+    "stress_labels_overlapping_cards": 0,
+    "stress_label_pair_overlaps": 0,
+    "mobile_document_overflow": false
+  },
+  "limitations": [
+    "Illustrative rules; no statutory or empirical COVID calibration.",
+    "No complete accessibility audit.",
+    "Long-horizon government payment arrears and firm liquidity concentration remain unresolved model limitations."
+  ]
+}

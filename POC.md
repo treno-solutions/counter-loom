@@ -121,3 +121,9 @@ Die [Staatsfinanzierung](poc/FISCAL_MODEL.md) nutzt vorhandenes Guthaben oberhal
 ## Modell v10 · Arbeitszeit und Betriebszustand
 
 Das [Betriebsmodell](poc/BUSINESS_MODEL.md) trennt Verträge, Arbeitszeit, bezahlten Lohn, technische Kapazität und finanzielle Tragfähigkeit. Der Folgeplan kann anteilige Arbeit, eine begrenzte Verlustbrücke, Stilllegung oder Wiederanlauf nach zwei Prüfungen vorsehen. Firmenansichten zeigen Zustand, Quotenverlauf, Liquidität, Verlusttoleranz und konkrete Gründe. Der offene Wirtschaftslauf und die bisherigen Geld-/Warenbrücken bleiben erhalten; veränderte V9/V10-Ergebnisse folgen anderen Regeln und sind kein Prognosebeweis. [V10-Prüfung](qa/company-v10-plausibility.md).
+
+## Modell v11 · Befristete Schliessung und Einkommensersatz
+
+Das [Krisenmodell](poc/CRISIS_MODEL.md) ergänzt eine befristete Produktions-/Verkaufssperre für einen oder beide Betriebe. Verträge bleiben erhalten; optional ersetzt der Staat 60 % des vorherigen Netto-Arbeitszeitlohns, begrenzt durch tatsächliche Finanzierung. Erhaltungsenergie und Schuldendienst laufen weiter. Ein kontrollierter Vergleich setzt denselben Weltzustand mit und ohne Leistung fort und zeigt Einkommen, Käufe, Firmenkonten und Staatsfinanzierung.
+
+Die [drei 600-Monats-Läufe](qa/crisis-v11-plausibility.md) belegen eine verbleibende Langzeitgrenze: Firmenliquidität sammelt sich an, der Staat erreicht seinen Kreditrahmen und unbezahlte Verpflichtungen wachsen. Haushalte verbrauchen Ersparnisse, ohne Haushaltskredite aufzunehmen. Das Krisenmodul behebt diese allgemeinen Verteilungs- und Budgetregeln nicht; ihre Bearbeitung benötigt eigene Gegenläufe.

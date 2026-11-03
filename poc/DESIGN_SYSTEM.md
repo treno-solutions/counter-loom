@@ -19,6 +19,7 @@ Grüne Aktionsflächen verwenden dunkle Schrift. Sektorfarben bleiben unterschei
 - Poppins für Oberfläche und Überschriften; IBM Plex Sans für Kennzahlen und SVG-Beschriftungen. Beide Schriften werden lokal ausgeliefert.
 - Die Poppins-Lizenz liegt unter [`public/licenses/Poppins-OFL.txt`](public/licenses/Poppins-OFL.txt). Die Treno-Wortmarke ist ein Markenbestandteil, kein generisches Icon.
 - Runde Haupt- und Nebenaktionen, weiße Inhaltskarten und eine dunkle Kennzahlenleiste. Warnungen und Fehler behalten eigene semantische Farben.
+- Die Systemkarte hat ausreichend breite, mitwachsende Boxen. Beträge, Kontotypen, Zusatzangaben und Verlaufskurven stehen in getrennten Zeilen; Karteninhalte werden nicht durch feste Höhen abgeschnitten. Auf kleinen Ansichten bleibt die Karte separat horizontal verschiebbar.
 - Die Zeitsteuerung bleibt beim Scrollen erreichbar. Auf schmalen Bildschirmen wird der Neustart als beschrifteter, für Hilfstechnologien benannter Icon-Button dargestellt. Breite Wirtschaftsdiagramme bleiben innerhalb ihrer Bereiche horizontal verschiebbar.
 - Tastaturfokus bleibt sichtbar; Farbwechsel respektieren reduzierte Bewegung.
 

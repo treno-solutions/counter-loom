@@ -4,7 +4,7 @@ Contract, policy and bounds: FISCAL_MODEL.md. All money in integer cents.
 from copy import deepcopy
 from systems import GovernmentSystem
 
-PRIMARY = ('wage','transfer','procurement')
+PRIMARY = ('wage','transfer','short_time','procurement')
 TAXES = ('income_tax','profit_tax')
 KINDS = ('government_credit','government_interest','government_principal')
 
@@ -46,7 +46,7 @@ class Treasury:
     def plan_reserve(self,world):
         self.planned_primary_cents=(len(world.nodes['staat']['employees'])*GovernmentSystem.wage_per_job
             +sum(h['employer'] is None for h in world.households())*GovernmentSystem.transfer_per_unemployed
-            +2*GovernmentSystem.procurement_per_firm)
+            +2*GovernmentSystem.procurement_per_firm+world.crisis.planned_benefits(world))
         self.reserve_target_cents=self.reserve_months*(self.planned_primary_cents+self.month_interest_charge_cents)
 
     def begin_month(self,world):

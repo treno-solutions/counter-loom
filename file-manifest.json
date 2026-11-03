@@ -6,8 +6,8 @@
   },
   {
     "path": "POC.md",
-    "bytes": 15134,
-    "sha256": "648477504c7666f3962a9bab38a41f625c60e88ec64334045f8b08061f0cb1f0"
+    "bytes": 16078,
+    "sha256": "2be889aab6ff26a15a905dab44f68af2d17301c5cd9a7c6139650048196a5b77"
   },
   {
     "path": "RESEARCH.md",
@@ -106,8 +106,8 @@
   },
   {
     "path": "poc/source-manifest.json",
-    "bytes": 8708,
-    "sha256": "4025b36e325c455c63730ca36954cb2b2323c1df1652102fc6a269cb45ead001"
+    "bytes": 9437,
+    "sha256": "9463ebf262ede383e660b72944aedc87300981d4d3e09944aaf2da347b997af4"
   },
   {
     "path": "processed/energy-monthly-prices.csv",
@@ -348,6 +348,21 @@
     "path": "qa/conversion-report.json",
     "bytes": 3164,
     "sha256": "f90e0cd95ee1417089575882e539fab7ec4e31ba24ea138b6fcaedfcd8fed749"
+  },
+  {
+    "path": "qa/crisis-v11-long-horizon-2026-11-03.json",
+    "bytes": 793726,
+    "sha256": "0c886e5cea5aad9bdc519fafa550470cd2df48ba206cb63e9c843b1886048ee0"
+  },
+  {
+    "path": "qa/crisis-v11-plausibility.md",
+    "bytes": 5181,
+    "sha256": "d4a6a5fac636c602020dcd35037a2cba6f6fb0aee9f25a91895ce4ba5801c284"
+  },
+  {
+    "path": "qa/crisis-v11-verification-2026-11-03.json",
+    "bytes": 1798,
+    "sha256": "04c03f67e815854d93bf8cded88805077fe7555963f8348446272d699d367472"
   },
   {
     "path": "qa/fiscal-and-household-v2-2026-11-02.json",

@@ -7,6 +7,7 @@ from uuid import uuid4
 from BPTK_Py import Model, Agent, SimultaneousScheduler
 from banking import Banking
 from treasury import Treasury
+from crisis import Closure, STANDBY_COST, compare
 from rates import MonetaryPolicy
 from pricing import Pricing, BASE_PRICES
 from foreign import ForeignTrade
@@ -43,6 +44,7 @@ class World:
         self.notices = []
         self.history = []
         self.household_month = []
+        self.crisis = Closure()
         self.pending = []
         self.active = []
         self.essential_budget_cents = essential_budget_cents
@@ -80,7 +82,7 @@ class World:
 
     def _reset_metrics(self):
         for n in self.nodes.values():
-            n['metrics'] = dict(income=0, tax=0, sales=0, operating_costs=0, wages=0, interest=0, sold_units=0, unmet_units=0, produced_units=0, investment=0, transfers=0, consumption_plan=0, consumption_budget=0, consumption_paid=0, reserve_used=0, unfunded_units=0, production_plan=0, cost_of_sales=0, production_cost=0, idle_cost=0, interest_expense=0, unpaid_wages=0)
+            n['metrics'] = dict(income=0, tax=0, sales=0, operating_costs=0, wages=0, interest=0, sold_units=0, unmet_units=0, produced_units=0, investment=0, transfers=0, consumption_plan=0, consumption_budget=0, consumption_paid=0, reserve_used=0, unfunded_units=0, production_plan=0, cost_of_sales=0, production_cost=0, idle_cost=0, interest_expense=0, unpaid_wages=0, short_time=0, closure_cost=0, closure_blocked_units=0)
 
     def notice(self, text, node='world'):
         self.notices.append(dict(month=self.month, phase=self.phase, node=node, text=text))
@@ -88,7 +90,7 @@ class World:
     def pay(self, source, target, amount, kind, label, mandatory=False):
         if not isinstance(amount, int) or amount < 0 or source == target:
             raise ValueError('Invalid ledger transfer')
-        if source=='staat' and kind in ('wage','transfer','procurement','government_interest'):
+        if source=='staat' and kind in ('wage','transfer','short_time','procurement','government_interest'):
             self.treasury.ensure_cash(self,amount)
         sender, receiver = self.nodes[source], self.nodes[target]
         paid = min(amount, sender['cash_cents'])
@@ -121,12 +123,13 @@ class World:
         if type(price) is not int or price<=0:raise ValueError('Unit price must be a positive number of cents.')
         # A sale, inventory departure and both cash entries form one operation.
         desired = budget // price
-        if buyer=='staat' and kind=='procurement':
+        if buyer=='staat' and kind=='procurement' and not self.crisis.closed(self,seller):
             self.treasury.ensure_cash(self,min(desired,firm['inventory']-firm.get('reserved_units',0))*price)
         funded_desired = min(desired,self.nodes[buyer]['cash_cents']//price)
         if spending_limit is not None:
             funded_desired=min(funded_desired,spending_limit//price)
-        units = min(funded_desired, firm['inventory']-firm.get('reserved_units',0))
+        units = 0 if self.crisis.closed(self,seller) else min(funded_desired, firm['inventory']-firm.get('reserved_units',0))
+        if self.crisis.closed(self,seller):firm['metrics']['closure_blocked_units']+=funded_desired
         if units:
             stock_before=firm['inventory']
             paid = self.pay(buyer, seller, units*price, kind, 'Konsum' if kind=='consumption' else 'Öffentlicher Auftrag' if kind=='procurement' else 'Warenexport bezahlt' if kind=='export_sale' else 'Anlage geliefert')
@@ -148,7 +151,9 @@ class World:
             if node_id=='staat':self.treasury.service(self)
             if n['sector']=='firms':
                 n['company']['result']={}
-                p=company_plan(n,self.energy_multiplier,self.machine_due(node_id))
+                plan_node=deepcopy(n) if self.crisis.closed(self,node_id) else n
+                if self.crisis.closed(self,node_id):plan_node['company']['work_bps']=0
+                p=company_plan(plan_node,self.energy_multiplier,self.machine_due(node_id))
                 n['company']['plan']=p
                 n['metrics']['production_plan']=p['production_units']
             for worker in n['employees']:
@@ -177,11 +182,16 @@ class World:
                 productive_wages=m['wages']*units//max(1,labor_capacity)
                 m['production_cost']=productive_wages+energy
                 m['idle_cost']=m['wages']-productive_wages
+                if self.crisis.closed(self,node_id):
+                    upkeep=self.pay(node_id,'ausland',STANDBY_COST,'closure_cost','Erhaltungsenergie bei Schliessung',True)
+                    m['closure_cost']=STANDBY_COST
+                    m['operating_costs']+=upkeep
                 n['inventory']+=units
                 n['company']['inventory_value_cents']+=m['production_cost']
         elif self.phase == 1 and n['sector']=='households':
             n['metrics']['tax'] = self.pay(node_id,'staat',self.household_outputs(n)['tax_due'],'income_tax','Einkommensteuer',True)
         elif self.phase == 1 and node_id=='staat':
+            self.crisis.pay_benefits(self)
             for h in self.households():
                 if h['employer'] is None:
                     transfer = self.pay('staat',h['id'],GovernmentSystem.transfer_per_unemployed,'transfer','Transfer')
@@ -191,6 +201,7 @@ class World:
             for firm in ('alltag','werkstatt'):
                 self.buy('staat',firm,GovernmentSystem.procurement_per_firm,'procurement')
         elif self.phase == 3 and node_id=='alltag':
+            if self.crisis.closed(self,'alltag') or self.crisis.closed(self,'werkstatt'):return
             if self.banking.originate(self) or self.banking.loan.status=='credited': return
             _,reserve=staffing(n,self.energy_multiplier,self.machine_due(node_id,True))
             machine_cost=8*self.nodes['werkstatt']['price']
@@ -218,9 +229,10 @@ class World:
     def close_company(self,n):
         m=n['metrics'];c=n['company'];p=c['plan']
         orders=m['sold_units']+m['unmet_units']
-        forecast(c,orders)
-        c['short_months']=c['short_months']+1 if m['unmet_units']>0 else 0
-        profit=m['sales']-m['cost_of_sales']-m['idle_cost']-m['unpaid_wages']-m['interest_expense']
+        if not self.crisis.closed(self,n['id']):
+            forecast(c,orders)
+            c['short_months']=c['short_months']+1 if m['unmet_units']>0 else 0
+        profit=m['sales']-m['cost_of_sales']-m['idle_cost']-m['unpaid_wages']-m['interest_expense']-m['closure_cost']
         tax_due=max(0,profit)*20//100
         tax=self.pay(n['id'],'staat',tax_due,'profit_tax','Gewinnsteuer',True)
         desired,_=staffing(n,self.energy_multiplier,self.machine_due(n['id'],True))
@@ -228,7 +240,13 @@ class World:
         c['loss_used_cents']+=max(0,-profit)
         debt=self.machine_due(n['id'],True)
         candidate=next((h for h in self.households() if h['employer'] is None),None)
-        if c['status']=='mothballed':
+        if self.crisis.closed(self,n['id']):
+            option=outlook(n,self.energy_multiplier,staff,c['work_bps'],debt)
+            demand_ok=c['forecast_milli']>=1000; margin_ok=option['projected_gap_cents']==0
+            cash_ok=n['cash_cents']>=option['required_cash_cents']
+            c['next_status']=c['status'];c['next_work_bps']=c['work_bps']
+            reason='Angeordnete befristete Schliessung: Verträge und Vor-Krisen-Arbeitszeitplan bleiben erhalten. Keine automatische Entlassung oder Ausschüttung; Schuldendienst und Erhaltungskosten laufen weiter.'
+        elif c['status']=='mothballed':
             work=work_target(n,1);option=outlook(n,self.energy_multiplier,1,work,debt)
             if c['profitable_months']>=2 and n['cash_cents']>=option['reserve_cents']:c['loss_used_cents']=0
             demand_ok=c['forecast_milli']>=1000
@@ -282,7 +300,7 @@ class World:
         arrears=any(o['source']==n['id'] for o in self.obligations)
         if n['id']=='alltag':arrears=arrears or bool(self.banking.loan.overdue_interest_cents or self.banking.loan.overdue_principal_cents)
         after_tax=profit-tax_due
-        payout=0 if arrears or c['next_status']!='operating' else min(max(0,after_tax)//2,max(0,n['cash_cents']-reserve))
+        payout=0 if self.crisis.closed(self,n['id']) or arrears or c['next_status']!='operating' else min(max(0,after_tax)//2,max(0,n['cash_cents']-reserve))
         for h,share in zip(self.households(),FinanceSystem.dividends(payout,6)):
             paid=self.pay(n['id'],h['id'],share,'company_dividend','Gewinnausschüttung')
             h['dividend_carry']+=paid
@@ -312,6 +330,7 @@ class World:
                 company['work_bps']=company['next_work_bps']
             self.household_month = []
             self.monetary.begin_month(self)
+            self.crisis.begin_month(self)
             self.treasury.begin_month(self)
             for event in self.pending:
                 self.active.append(dict(event=event, month=self.month))
@@ -349,7 +368,7 @@ class World:
                     funding_gap_cents=plan['desired_budget']-plan['funded_budget'],
                     stock_gap_cents=purchasable-paid,unit_remainder_cents=plan['funded_budget']-purchasable,
                     income_cents=h['metrics']['income'],tax_cents=h['metrics']['tax'],
-                    transfers_cents=h['metrics']['transfers'],prior_dividend_cents=prior_dividend,cash_before_cents=before_cash))
+                    transfers_cents=h['metrics']['transfers'],short_time_cents=h['metrics']['short_time'],closure_gap_cents=sum(plan[f'{key}_budget']//self.nodes[key]['price']*self.nodes[key]['price'] for key in ('alltag','werkstatt') if self.crisis.closed(self,key)),prior_dividend_cents=prior_dividend,cash_before_cents=before_cash))
                 h['metrics']['consumption_paid']=paid
                 h['metrics']['reserve_used']=max(0,paid-max(0,h['metrics']['income']-h['metrics']['tax']))
                 if plan['funded_budget']<self.essential_budget_cents:
@@ -359,7 +378,7 @@ class World:
         self.check()
         if self.phase==4:
             self.monetary.close(self)
-            self.history.append(dict(month=self.month,market=self.pricing.market(self), consumption_percent=self.propensity,essential_budget_cents=self.essential_budget_cents, households=sorted(deepcopy(self.household_month),key=lambda h:h['id']), consumption_cents=sum(t['amount_cents'] for t in self.journal if t['month']==self.month and t['kind']=='consumption'), employment=sum(h['employer'] is not None for h in self.households()), household_cash_cents=sum(h['cash_cents'] for h in self.households()), government_cash_cents=self.nodes['staat']['cash_cents'],cash_by_sector={s:sum(n['cash_cents'] for n in self.nodes.values() if n['sector']==s) for s in RULES}))
+            self.history.append(dict(month=self.month,crisis=self.crisis.snapshot(self),market=self.pricing.market(self), consumption_percent=self.propensity,essential_budget_cents=self.essential_budget_cents, households=sorted(deepcopy(self.household_month),key=lambda h:h['id']), consumption_cents=sum(t['amount_cents'] for t in self.journal if t['month']==self.month and t['kind']=='consumption'), employment=sum(h['employer'] is not None for h in self.households()), household_cash_cents=sum(h['cash_cents'] for h in self.households()), government_cash_cents=self.nodes['staat']['cash_cents'],cash_by_sector={s:sum(n['cash_cents'] for n in self.nodes.values() if n['sector']==s) for s in RULES}))
         return self.snapshot()
 
     def queue(self,event):
@@ -398,7 +417,7 @@ class World:
     def snapshot(self,export=False):
         self.check()
         tx=[t for t in self.journal if t['month']==self.month]
-        result=dict(world_id=self.id, revision=self.revision, month=self.month, phase=self.phase, phase_label=PHASES[self.phase] if self.phase>=0 else 'Bereit zum Start', nodes=deepcopy(list(self.nodes.values())), transactions=deepcopy(tx), notices=deepcopy(self.notices[-35:]), history=deepcopy(self.history[-36:]), pending=list(self.pending), active=deepcopy(self.active), rules=RULES, audit=dict(total_money_cents=self.banking.initial_deposits, current_money_cents=self.banking.balance(self)['customer_deposits_cents'], transaction_count=len(self.journal), open_obligations_cents=sum(x['amount_cents'] for x in self.obligations)+self.treasury.overdue_interest_cents+self.banking.loan.overdue_interest_cents+self.banking.loan.overdue_principal_cents, loan_principal_cents=self.nodes['bank']['loan_assets'], llm_calls=0), month_open=dict(self.month_open), initial_balances=dict(self.initial), parameters=dict(energy_multiplier=self.energy_multiplier,consumption_percent=self.propensity,essential_budget_cents=self.essential_budget_cents), classification='illustrative_circular_flow_v10',horizon_months=self.horizon_months,completed=self.horizon_months is not None and self.month>=self.horizon_months and self.phase==4,banking=self.banking.snapshot(self),foreign_trade=self.foreign.snapshot(self),public_finance=self.treasury.snapshot(self),monetary_policy=self.monetary.snapshot(self),pricing=self.pricing.snapshot(self))
+        result=dict(world_id=self.id, revision=self.revision, month=self.month, phase=self.phase, phase_label=PHASES[self.phase] if self.phase>=0 else 'Bereit zum Start', nodes=deepcopy(list(self.nodes.values())), transactions=deepcopy(tx), notices=deepcopy(self.notices[-35:]), history=deepcopy(self.history[-36:]), pending=list(self.pending), active=deepcopy(self.active), rules=RULES, audit=dict(total_money_cents=self.banking.initial_deposits, current_money_cents=self.banking.balance(self)['customer_deposits_cents'], transaction_count=len(self.journal), open_obligations_cents=sum(x['amount_cents'] for x in self.obligations)+self.treasury.overdue_interest_cents+self.banking.loan.overdue_interest_cents+self.banking.loan.overdue_principal_cents, loan_principal_cents=self.nodes['bank']['loan_assets'], llm_calls=0), month_open=dict(self.month_open), initial_balances=dict(self.initial), parameters=dict(energy_multiplier=self.energy_multiplier,consumption_percent=self.propensity,essential_budget_cents=self.essential_budget_cents), classification='illustrative_circular_flow_v11',crisis=self.crisis.snapshot(self),horizon_months=self.horizon_months,completed=self.horizon_months is not None and self.month>=self.horizon_months and self.phase==4,banking=self.banking.snapshot(self),foreign_trade=self.foreign.snapshot(self),public_finance=self.treasury.snapshot(self),monetary_policy=self.monetary.snapshot(self),pricing=self.pricing.snapshot(self))
         if export:
             result.update(full_journal=deepcopy(self.journal),initial_balances=dict(self.initial),open_obligations=deepcopy(self.obligations),all_history=deepcopy(self.history),all_notices=deepcopy(self.notices),model_document='poc/WORLD_MODEL.md')
         return result
@@ -414,7 +433,7 @@ def world_request(action,payload):
             if len(WORLDS)>=64:del WORLDS[next(iter(WORLDS))]
             w=World();WORLDS[w.id]=w
             return w.snapshot()
-        required={'world_id'} if action=='export' else {'world_id','revision'} if action in ('step','credit') else {'world_id','revision','annual_rate_bps'} if action=='rate' else {'world_id','revision','event'}
+        required={'world_id'} if action=='export' else {'world_id','revision'} if action in ('step','credit') else {'world_id','revision','firm','duration','replacement_bps'} if action in ('closure','compare') else {'world_id','revision','annual_rate_bps'} if action=='rate' else {'world_id','revision','event'}
         if set(payload)!=required:raise ValueError('Ungültige Anfragefelder.')
         key=payload['world_id']
         if not isinstance(key,str) or key not in WORLDS:raise ValueError('Lauf nicht mehr verfügbar. Bitte die Welt neu starten.')
@@ -424,5 +443,7 @@ def world_request(action,payload):
         if action=='step':return w.step()
         if action=='credit':return w.banking.request(w)
         if action=='event':return w.queue(payload['event'])
+        if action=='closure':return w.crisis.queue(w,payload['firm'],payload['duration'],payload['replacement_bps'])
+        if action=='compare':return compare(w,payload['firm'],payload['duration'],payload['replacement_bps'])
         if action=='rate':return w.monetary.queue(w,payload['annual_rate_bps'])
         raise ValueError('Unbekannte Aktion.')

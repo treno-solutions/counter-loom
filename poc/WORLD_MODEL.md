@@ -1,4 +1,6 @@
-# Laufende Modellwirtschaft · aktuelle Fassung v10
+# Laufende Modellwirtschaft · aktuelle Fassung v11
+
+V11 ergänzt [befristete Betriebsschliessungen und Kurzarbeitsleistung](CRISIS_MODEL.md). Eine angeordnete Produktions-/Verkaufssperre erhält Arbeitsverträge; die Ersatzquote ist in der Oberfläche zwischen 0 und 60 % des vorherigen Netto-Arbeitszeitlohns wählbar. Staatszahlungen sind kassen-/kreditbegrenzt. Erhaltungsenergie von 300 € pro geschlossenem Betrieb und Monat belastet das Firmenkonto. Zwei getrennte Fortsetzungen erlauben einen kontrollierten Vergleich mit sechs Monaten Nachbeobachtung. Keine gesetzliche oder empirische Corona-Nachbildung.
 
 V10 ergänzt [proportionale Arbeitszeit und Betriebszustände](BUSINESS_MODEL.md). Der Vollzeitlohnsatz bleibt fest; private Lohnzahlung und Arbeits-/Anlagenkapazität folgen der geplanten, tatsächlich bezahlten Arbeitszeit. Eine begrenzte Verlustbrücke, Stilllegung und zweistufiger Wiederanlauf ersetzen die reine Vollzeitstellen-Schwelle. Zustände und Quoten werden historisch exportiert.
 

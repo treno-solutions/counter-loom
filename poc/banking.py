@@ -61,6 +61,9 @@ class Banking:
         if loan.status != 'requested':
             return False
         borrower, supplier = world.nodes[loan.borrower], world.nodes[loan.supplier]
+        if world.crisis.closed(world,loan.borrower) or world.crisis.closed(world,loan.supplier):
+            loan.message='Maschinenvertrag wartet bis zur Wiederöffnung; reservierte Ware bleibt erhalten.'
+            return True
         if world.nodes['bank']['cash_cents'] <= 0 or not borrower['employees']:
             loan.message = 'Anfrage wartet: positives Bankkapital und ein Betrieb mit Beschäftigten sind Voraussetzung.'
             return True
@@ -92,6 +95,9 @@ class Banking:
         if loan.status != 'credited':
             return
         borrower, supplier = world.nodes[loan.borrower], world.nodes[loan.supplier]
+        if world.crisis.closed(world,loan.borrower) or world.crisis.closed(world,loan.supplier):
+            loan.message='Maschinenlieferung wartet bis zur Wiederöffnung; Kredit und Reservierung bleiben bestehen.'
+            return
         if borrower['cash_cents'] < loan.amount_cents or supplier['inventory'] < loan.units:
             loan.message = 'Lieferung wartet auf Zahlungsmittel beziehungsweise reservierte Ware.'
             return

@@ -6,8 +6,8 @@
   },
   {
     "path": "poc/BUSINESS_MODEL.md",
-    "bytes": 8361,
-    "sha256": "65d1c9fa03ac7f1d15f2c5ebf9459db95c10c2f37d288afc7fcfa0846a008c77"
+    "bytes": 8494,
+    "sha256": "45981be594b8039fb8a11cfa205cf8f806e3c22cf07de4d9bb838cc73b1a456d"
   },
   {
     "path": "poc/COMPANY_MODEL.md",
@@ -15,9 +15,14 @@
     "sha256": "c9273aa94d8e16db4ca6713f647a3fcc0d5cc9e6ef7cba8f580b71f8b9807b9e"
   },
   {
+    "path": "poc/CRISIS_MODEL.md",
+    "bytes": 7286,
+    "sha256": "b8022f4919983b1edd0da9d8e152956c79cf7cad4a4c07021f4c8046396a80ee"
+  },
+  {
     "path": "poc/DESIGN_SYSTEM.md",
-    "bytes": 1906,
-    "sha256": "7cad32e898c2f14b4cf563e9e1738af045bef34dc174f471a3d60b28fc1541e8"
+    "bytes": 2185,
+    "sha256": "e287f98d84fe0de3c0755ce479f9ed5edb0ae4fd796834e3c6cd0c90f770e1b7"
   },
   {
     "path": "poc/FISCAL_MODEL.md",
@@ -41,18 +46,23 @@
   },
   {
     "path": "poc/README.md",
-    "bytes": 14692,
-    "sha256": "1b59b24468c6f9cbfd503516c31a007ebfeec0ee4232d1ad2b3d62cd73622e10"
+    "bytes": 15219,
+    "sha256": "2e1647a773842178ebecb670680c920ba2da5d24dd13df5a51a497bb97e949fb"
   },
   {
     "path": "poc/WORLD_MODEL.md",
-    "bytes": 22512,
-    "sha256": "a728f903a914663276d660091b9efc106645817e022f9aecc2431562a1e68ad3"
+    "bytes": 23076,
+    "sha256": "3a68bda62173d9de17f27ea118dd90d85abc3ba953609a803a908a283f6a39f1"
   },
   {
     "path": "poc/banking.py",
-    "bytes": 10901,
-    "sha256": "8872f8340d6ff26b6f9e390075a7ce26224995ed7b993b7186cb0888f346e12a"
+    "bytes": 11366,
+    "sha256": "98c8cc19a18364ceb8aa82ed12b9167d4d1d7e1363543b2f52a269df0e4331a2"
+  },
+  {
+    "path": "poc/crisis.py",
+    "bytes": 5522,
+    "sha256": "f5d91c031b9020f5d251dae3337cf2f3ca08643e409ce9b2ac3dc11cf8d49c71"
   },
   {
     "path": "poc/engine.py",
@@ -66,8 +76,8 @@
   },
   {
     "path": "poc/foreign.py",
-    "bytes": 5500,
-    "sha256": "476d7f69784634fafae7c07a195ee5092b472018e29e0e6532f9a7a9025a41b3"
+    "bytes": 5611,
+    "sha256": "68d24fe487537adf3cdec64833616274255db2a6b0884b4b5f9a41e6438fb659"
   },
   {
     "path": "poc/index.html",
@@ -86,8 +96,8 @@
   },
   {
     "path": "poc/pricing.py",
-    "bytes": 3506,
-    "sha256": "6347b2b58428460da65e129136c7b6eebc15e4049edfc01fd5ade959f3975388"
+    "bytes": 3542,
+    "sha256": "46ef41746c898249986bc0cb950503d6e162610d3c4585c10384b46b9dfb57a1"
   },
   {
     "path": "poc/public/brand/treno-wordmark.svg",
@@ -125,19 +135,24 @@
     "sha256": "27660de705bd5dbad9919d986b028abed6c760829cab1a4e273095403fbf3417"
   },
   {
+    "path": "poc/scripts/stress_crisis.py",
+    "bytes": 3457,
+    "sha256": "b16eddaa721fa7e07ad0a1fd2d8724069cc1e68881c2311465dd28b13f36eb51"
+  },
+  {
     "path": "poc/server.py",
-    "bytes": 3961,
-    "sha256": "f13ae474d48ecd4bbaa00b3212c86b80b7f07086bafa7557d2b41ad17b88e195"
+    "bytes": 4027,
+    "sha256": "7e45b6d32d04e9c6a5cf2cc1b84c73854ac16661d812e394479db21d1c66cd32"
   },
   {
     "path": "poc/src/AccountingViews.tsx",
-    "bytes": 9215,
-    "sha256": "341603f2dda84fb9f7650a24451baf97a96774fe26634d91736bed0a4610d991"
+    "bytes": 9311,
+    "sha256": "99b1273b1ef5accb3e7cc8e1ae1191d75daca9738399c3bc4bb0477b6d22facf"
   },
   {
     "path": "poc/src/App.tsx",
-    "bytes": 29613,
-    "sha256": "9f2706658e7317d0d97b52ac297e07655725ff05b872cb09c6485e0c24aa0893"
+    "bytes": 30316,
+    "sha256": "907d078241b88f11b26820b531483a1f3abe8edf9622cb6640a2eaf83e2570b9"
   },
   {
     "path": "poc/src/BankView.tsx",
@@ -146,18 +161,23 @@
   },
   {
     "path": "poc/src/BusinessOperation.tsx",
-    "bytes": 6631,
-    "sha256": "639857468bdb89dfbce2334133bbd018ad4e268bdd41d7120964bb11eb79dd5f"
+    "bytes": 6968,
+    "sha256": "d20bcb46713f2345409bbf884387ac2995137a56d40c74fc046729d4816313f5"
   },
   {
     "path": "poc/src/CompanyView.tsx",
-    "bytes": 6107,
-    "sha256": "69b3bc93f4c9158a313dc59f0e1eccc715ec422eccedd3037450cdd67707c397"
+    "bytes": 6615,
+    "sha256": "669ddd98a28fb97ca24c5dde5a8153c96605ba2c203b07c3b0056b59d64f92cb"
   },
   {
     "path": "poc/src/ConsumptionHistory.tsx",
-    "bytes": 9902,
-    "sha256": "258b3f7ebbf4b9e4497665f610aab379ad5176b99409af72ccb579eab5172917"
+    "bytes": 10309,
+    "sha256": "dee230ccdacbe1310da47419b3e84fb5cde3c7af7e5d893ef2f72f83ea038f5a"
+  },
+  {
+    "path": "poc/src/CrisisPanel.tsx",
+    "bytes": 11208,
+    "sha256": "638101bf56b6caef5285ef91db1d85b17e0b05735c5d81b40973df5912e4c145"
   },
   {
     "path": "poc/src/ForeignView.tsx",
@@ -166,8 +186,8 @@
   },
   {
     "path": "poc/src/GovernmentFinance.tsx",
-    "bytes": 16219,
-    "sha256": "116690decbc5689748fffa2e5fb103a332f66c3f1eb1f7b4cc597c7117aae707"
+    "bytes": 16257,
+    "sha256": "8115e6a587653c9c96669b050c9e92ea5c54001e5d68b0db2ec3e4eff88616f1"
   },
   {
     "path": "poc/src/HouseholdApp.tsx",
@@ -206,13 +226,13 @@
   },
   {
     "path": "poc/src/treno-theme.css",
-    "bytes": 8618,
-    "sha256": "f0b0c47ffa570fbf4fdeee4ec8814d7ae71e5ac05d17e77f458cf47e08abf85c"
+    "bytes": 14405,
+    "sha256": "60ed87a4996578a5d3431e7009867109e2229844aeb27a8b2de6123a4d2a31b9"
   },
   {
     "path": "poc/src/world-schema.ts",
-    "bytes": 19087,
-    "sha256": "c475e1eb0e2412ebfefd15566d4348916dd1f43873cbb1c520b2e3d96531b694"
+    "bytes": 20647,
+    "sha256": "81e157bd5c780052d5ec9518f38ab92e11b6e84f156d59bc8ad9a1ba80935b9f"
   },
   {
     "path": "poc/systems.py",
@@ -233,6 +253,11 @@
     "path": "poc/test_consumption_history.py",
     "bytes": 3666,
     "sha256": "7b5920425f27f187c899f6345c652b287414615e69831f7ab6234b3dc30836ed"
+  },
+  {
+    "path": "poc/test_crisis.py",
+    "bytes": 8127,
+    "sha256": "53e230b84a98871dc17198b0853505099f05def0287ad3a183a11201a449931a"
   },
   {
     "path": "poc/test_engine.py",
@@ -281,8 +306,8 @@
   },
   {
     "path": "poc/treasury.py",
-    "bytes": 12774,
-    "sha256": "a3b7f51c34c15afc9810d8120d0a6a5d5ae770de10102e39992bbca41eac8863"
+    "bytes": 12824,
+    "sha256": "71e9015605433a7067391103d1f405d3e68dfa6bca8653624f2139af270c54f2"
   },
   {
     "path": "poc/tsconfig.json",
@@ -296,7 +321,7 @@
   },
   {
     "path": "poc/world.py",
-    "bytes": 33975,
-    "sha256": "9d5507553b5685918f365f6d1d47373d03bc7eea2bcad3b14c4a79e141ad74e5"
+    "bytes": 36228,
+    "sha256": "857e60a0f92ac29eda408871a65c3a794f9da09d30a0da238086b4c00cfa161e"
   }
 ]

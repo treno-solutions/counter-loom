@@ -41,7 +41,7 @@ class ForeignTrade:
         if units:
             world.notice(f'Ausland kauft {units} Wareneinheiten für {amount/100:.2f} €: bezahlt und aus den Firmenlagern geliefert.','ausland')
         elif self.plan['desired_cents']:
-            world.notice('Auslandsbestellung ohne Lieferung: Anfangsguthaben oder verfügbare Ware reicht nicht. Kein Geldrückfluss.','ausland')
+            world.notice('Auslandsbestellung ohne Lieferung: Anfangsguthaben, verfügbare Ware oder eine betriebliche Verkaufssperre begrenzt den Kauf. Kein Geldrückfluss.','ausland')
 
     def delivery(self,world,seller,units,amount,cost,stock_before,transaction_id):
         self.deliveries.append(dict(transaction_id=transaction_id,month=world.month,phase=world.phase,
@@ -49,10 +49,10 @@ class ForeignTrade:
             cost_cents=cost,inventory_before=stock_before,inventory_after=world.nodes[seller]['inventory']))
 
     def snapshot(self,world):
-        imports=sum(t['amount_cents'] for t in world.journal if t['kind']=='energy')
+        imports=sum(t['amount_cents'] for t in world.journal if t['kind'] in ('energy','closure_cost'))
         exports=sum(d['amount_cents'] for d in self.deliveries)
         current=[d for d in self.deliveries if d['month']==world.month]
-        month_imports=sum(t['amount_cents'] for t in world.journal if t['kind']=='energy' and t['month']==world.month)
+        month_imports=sum(t['amount_cents'] for t in world.journal if t['kind'] in ('energy','closure_cost') and t['month']==world.month)
         month_exports=sum(d['amount_cents'] for d in current)
         return dict(plan=deepcopy(self.plan),deliveries=deepcopy(self.deliveries),
             month_imports_cents=month_imports,month_exports_cents=month_exports,
@@ -62,12 +62,12 @@ class ForeignTrade:
             foreign_cash_cents=world.nodes['ausland']['cash_cents'])
 
     def check(self,world):
-        imports=sum(t['amount_cents'] for t in world.journal if t['kind']=='energy')
+        imports=sum(t['amount_cents'] for t in world.journal if t['kind'] in ('energy','closure_cost'))
         exports=sum(d['amount_cents'] for d in self.deliveries)
         # Fixture/test-port transfers remain explicit so controlled unit tests
         # can wire this system without pretending those flows are trade.
         other=sum(t['amount_cents']*((1 if t['target']=='ausland' else 0)-(1 if t['source']=='ausland' else 0))
-                  for t in world.journal if t['kind'] not in ('energy','export_sale'))
+                  for t in world.journal if t['kind'] not in ('energy','closure_cost','export_sale'))
         assert world.nodes['ausland']['cash_cents']==world.initial['ausland']+imports-exports+other
         tx={t['id']:t for t in world.journal if t['kind']=='export_sale'}
         assert len(tx)==len(self.deliveries)
