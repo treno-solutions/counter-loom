@@ -11,8 +11,8 @@
   },
   {
     "path": "poc/COMPANY_MODEL.md",
-    "bytes": 10951,
-    "sha256": "18fb77a833cfeb5f59b8fa1aa11b64721d2d87bc4e0f4dad73f925a4cbd45d5f"
+    "bytes": 11229,
+    "sha256": "711cdb67381035d2dbc6bfcb42ef63d2ba183de67787f513105a01ec023bed6f"
   },
   {
     "path": "poc/CRISIS_MODEL.md",
@@ -73,6 +73,11 @@
     "path": "poc/README.md",
     "bytes": 17834,
     "sha256": "3d4e7675b4b172fbb35f62fa71f9d7ba958c2ccdc8956ce4f42274eb60b20798"
+  },
+  {
+    "path": "poc/STABILITY_PLAN.md",
+    "bytes": 8330,
+    "sha256": "6ab76d761181d1d89d99f2e541dea39fe3667d354f5daa04e92438be067643f3"
   },
   {
     "path": "poc/WORLD_MODEL.md",
