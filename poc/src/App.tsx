@@ -49,10 +49,10 @@ function BalanceTrend({world,sector}:{world:World;sector:SectorId}){
 
 function SystemMap({world,running,onSelect,selected}:{world:World;running:boolean;onSelect:(s:SectorId)=>void;selected:SectorId}){
  const svg=useRef<SVGSVGElement>(null),canvas=useRef<HTMLDivElement>(null);
- const [scale,setScale]=useState(1);
+ const [scale,setScale]=useState(.85);
  useEffect(()=>{
   const viewport=canvas.current?.parentElement;if(!viewport)return;
-  const resize=new ResizeObserver(([entry])=>{if(entry)setScale(Math.min(1,Math.max(.9,entry.contentRect.width/1000)));});
+  const resize=new ResizeObserver(([entry])=>{if(entry)setScale(Math.min(.85,Math.max(.8,entry.contentRect.width/1000)));});
   resize.observe(viewport);return()=>resize.disconnect();
  },[]);
  useEffect(()=>{if(running)svg.current?.unpauseAnimations();else svg.current?.pauseAnimations();},[running,world.revision]);

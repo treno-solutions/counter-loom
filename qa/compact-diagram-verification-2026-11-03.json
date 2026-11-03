@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-03",
+  "scope": "Compact complete system diagram",
+  "build": "passed",
+  "browser": "BrowserOS neo",
+  "viewport": [
+    1366,
+    900
+  ],
+  "scale": 0.85,
+  "canvas_width": 850,
+  "document_overflow": false,
+  "model_rules_changed": false
+}

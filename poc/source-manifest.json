@@ -21,8 +21,8 @@
   },
   {
     "path": "poc/DESIGN_SYSTEM.md",
-    "bytes": 2388,
-    "sha256": "44b0f0ba31728fcfacb35f97f08deee5b4a994e21f3776fe38f612d06f21cbf0"
+    "bytes": 2387,
+    "sha256": "b1fff0a4662cd497bbfbc3eed52bf0f76039145f92abe3e085c125c1f9587bfa"
   },
   {
     "path": "poc/FISCAL_MODEL.md",
@@ -151,8 +151,8 @@
   },
   {
     "path": "poc/src/App.tsx",
-    "bytes": 30792,
-    "sha256": "bd698289f12a1a4140583a5f145688520c9c2aa7ec559d8c5091eaa2c5fd1b63"
+    "bytes": 30796,
+    "sha256": "ff9d04c3bce2177d018db96d610ed2d3f719b86a55f725b84dd98533f647cb01"
   },
   {
     "path": "poc/src/BankView.tsx",
