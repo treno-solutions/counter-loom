@@ -2,6 +2,8 @@
 
 Stand: 3. November 2026 · Seit V10 gelten [Arbeitszeit, Verlustbrücke, Stilllegung und Wiederanlauf](BUSINESS_MODEL.md). Absatz- und Lagerbuchungen aus v4 gelten mit den [Preis- und Kaufkraftergänzungen v8](PRICES_MODEL.md). Die [Leitzinsregeln](RATES_MODEL.md) ergänzen einen variablen und einen festen Betriebskredit. Der [begrenzte Staatskredit](FISCAL_MODEL.md) ergänzt die Finanzierungsseite. Der [Außenhandelsanschluss v5](FOREIGN_MODEL.md) ergänzt tatsächliche Auslandsbestellungen und Warenexporte. Alle Parameter sind eigene illustrative Annahmen; keine empirische Kalibrierung oder Prognose.
 
+Seit V12 gelten die [Gewinnvortrags- und Quartalsausschüttungsregeln](PROFIT_POLICY.md). Die unten beschriebene frühere 50-%-Ausschüttung bleibt die Regelausschüttung; der begrenzte zusätzliche Rückfluss verwendet kumulierte Gewinne und tatsächliche freie Liquidität.
+
 ## Verbindliche Grenze dieser Version
 
 - Sechs Haushalte, zwei Unternehmen, eine Bank, Staat und der bestehende vereinfachte Außenanschluss für Energieimporte und Warenexporte. Keine weiteren Akteure oder Systemarten.

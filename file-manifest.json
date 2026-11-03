@@ -6,8 +6,8 @@
   },
   {
     "path": "POC.md",
-    "bytes": 16078,
-    "sha256": "2be889aab6ff26a15a905dab44f68af2d17301c5cd9a7c6139650048196a5b77"
+    "bytes": 16646,
+    "sha256": "fa8052cbcc7f89c23d46ea82c825f366b4da9d0a9471bdb7e48c968b5e320d5e"
   },
   {
     "path": "RESEARCH.md",
@@ -106,8 +106,8 @@
   },
   {
     "path": "poc/source-manifest.json",
-    "bytes": 9437,
-    "sha256": "2def3e0b2cac3f78a8aa59a05eb95f9d669c06f68dcc59684a228b693fe6b5cb"
+    "bytes": 10368,
+    "sha256": "2f2a452f7cf2c6cf703656afa52a0bd5df76ae8f32df2543157b9aa0eab23baf"
   },
   {
     "path": "processed/energy-monthly-prices.csv",
@@ -473,6 +473,26 @@
     "path": "qa/prices-v8-verification-2026-11-02.json",
     "bytes": 3599,
     "sha256": "e0a25ddd8441010114f3dd0da8125c7e393fd409efa58fcc760083019ea51b37"
+  },
+  {
+    "path": "qa/profit-v12-comparison-2026-11-03.json",
+    "bytes": 4704771,
+    "sha256": "361f10d7b07edcbc1a981aa521d9acf8371c5db3a1d72bf7a56e865a679274b2"
+  },
+  {
+    "path": "qa/profit-v12-comparison.md",
+    "bytes": 6052,
+    "sha256": "515055b1a44d3ec766e4783d654e9c69a8f40f6d982bd5658d10c319891237f8"
+  },
+  {
+    "path": "qa/profit-v12-comparison.svg",
+    "bytes": 141961,
+    "sha256": "c75f0e7ea20491ca71bff911a55ae7733ef77bf63b47b64d5d3360729f6633e7"
+  },
+  {
+    "path": "qa/profit-v12-verification-2026-11-03.json",
+    "bytes": 1964,
+    "sha256": "c5d96c6548ed793098e48c001227aca1db159343b02f74644048c54ea37b508b"
   },
   {
     "path": "qa/rates-v7-plausibility.json",

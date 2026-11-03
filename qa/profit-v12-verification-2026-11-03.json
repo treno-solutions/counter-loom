@@ -1,0 +1,67 @@
+{
+  "date": "2026-11-03",
+  "model": "illustrative_circular_flow_v12",
+  "scope": "Retained earnings, protected liquidity and quarterly additional dividends",
+  "tests": {
+    "passed": 132,
+    "command": "python -m unittest discover -s poc -p 'test_*.py'",
+    "batch_vs_interactive_full_export": "identical after 35 phases",
+    "frontend_responses_validated": 82,
+    "build": "passed"
+  },
+  "comparison": {
+    "months_each": 600,
+    "phases_each": 3000,
+    "policies": [
+      "legacy",
+      "surplus"
+    ],
+    "same_initial_conditions": true,
+    "state_and_tax_rules_changed": false,
+    "reference_matches_archived_v11_monthly": true,
+    "reference_checked_fields": [
+      "household_cash_cents",
+      "firm_cash_cents",
+      "government_cash_cents",
+      "government_debt_cents",
+      "foreign_cash_cents",
+      "consumption_cents",
+      "employment",
+      "production_units"
+    ],
+    "result": "qa/profit-v12-comparison-2026-11-03.json",
+    "report": "qa/profit-v12-comparison.md",
+    "source_hashes_verified": true
+  },
+  "browser": {
+    "tool": "BrowserOS neo",
+    "desktop_viewport": [
+      1366,
+      900
+    ],
+    "mobile_viewport": [
+      390,
+      844
+    ],
+    "mobile_document_width": 390,
+    "month_3_company": "alltag",
+    "month_3_regular_cents": 77394,
+    "month_3_extra_cents": 216329,
+    "month_3_closing_retained_cents": 0,
+    "historical_month_selector": "month 1 selected and verified",
+    "history_charts": 3,
+    "alerts": 0,
+    "overflow": false
+  },
+  "figure": {
+    "tool": "Matplotlib",
+    "format": "SVG",
+    "path": "qa/profit-v12-comparison.svg",
+    "visual_review": "Six panels reviewed; shared comparison axes per quantity and common legend outside data."
+  },
+  "limitations": [
+    "Illustrative profit policy, not a statutory distribution rule.",
+    "The new policy does not resolve public wage arrears or equalize household outcomes.",
+    "No complete accessibility audit."
+  ]
+}

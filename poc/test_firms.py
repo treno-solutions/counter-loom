@@ -28,10 +28,11 @@ class FirmTests(unittest.TestCase):
                     self.assertEqual(n['inventory'],p['opening_units']+m['produced_units']-m['sold_units'])
                     self.assertEqual(c['inventory_value_cents'],p['opening_value_cents']+m['production_cost']-m['cost_of_sales'])
                     if w.phase==4:
-                        r=c['result'];tx=[t for t in w.journal if t['month']==w.month and t['source']==key and t['kind']=='company_dividend']
+                        r=c['result'];tx=[t for t in w.journal if t['month']==w.month and t['source']==key and t['kind'] in ('company_dividend','company_extra_dividend')]
                         self.assertEqual(r['profit_before_tax_cents'],m['sales']-m['cost_of_sales']-m['idle_cost']-m['unpaid_wages']-m['interest_expense'])
                         self.assertEqual(r['distribution_cents'],sum(t['amount_cents'] for t in tx))
-                        self.assertLessEqual(r['distribution_cents'],max(0,r['after_tax_cents'])//2)
+                        self.assertLessEqual(c['profit_allocation']['regular_paid_cents'],max(0,r['after_tax_cents'])//2)
+                        self.assertLessEqual(r['distribution_cents'],c['profit_allocation']['eligible_profit_cents'])
                         self.assertEqual(r['after_tax_cents'],r['distribution_cents']+r['retained_result_cents'])
                         if r['distribution_cents']:self.assertGreaterEqual(n['cash_cents'],r['reserve_cents'])
 
@@ -90,7 +91,8 @@ class FirmTests(unittest.TestCase):
         self.assertGreaterEqual(r['reserve_cents'],2*len(n['employees'])*(240000*n['company']['next_work_bps']//10000)+10600)
 
     def test_late_credit_request_is_allowed_before_final_close(self):
-        w=World(horizon_months=24)
+        # Preserve the V11 stock fixture; the surplus policy has a different demand path.
+        w=World(horizon_months=24,distribution_policy='legacy')
         for _ in range(116):w.step()
         self.assertEqual((w.month,w.phase),(24,0))
         w.banking.request(w)

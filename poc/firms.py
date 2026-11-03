@@ -2,6 +2,7 @@
 Whole goods, integer cents and work shares in basis points. COMPANY_MODEL.md.
 """
 from math import ceil
+from profit_distribution import initial_allocation
 
 WAGE = 240000
 MIN_WORK_BPS = 2500
@@ -14,7 +15,8 @@ def initial_company(forecast):
                 staff_signal=0, short_months=0, last_investment_month=0,
                 status='operating',next_status='operating',work_bps=10000,next_work_bps=10000,
                 bridge_months=0,loss_used_cents=0,loss_budget_cents=480000,profitable_months=0,restart_signal=0,
-                plan={}, result={})
+                retained_earnings_cents=0,cumulative_after_tax_cents=0,cumulative_regular_cents=0,cumulative_extra_cents=0,
+                profit_allocation=initial_allocation(),plan={}, result={})
 
 def demand_units(company):
     return (company['forecast_milli']+500)//1000

@@ -11,8 +11,8 @@
   },
   {
     "path": "poc/COMPANY_MODEL.md",
-    "bytes": 9744,
-    "sha256": "c9273aa94d8e16db4ca6713f647a3fcc0d5cc9e6ef7cba8f580b71f8b9807b9e"
+    "bytes": 10021,
+    "sha256": "a859559732299567c3f7973f806b013bc487d68f43f8a86fe97919e6187c3fc9"
   },
   {
     "path": "poc/CRISIS_MODEL.md",
@@ -40,19 +40,24 @@
     "sha256": "da6caaa1feb9eee70ce1491fb17faee4f76647fa902cf79f8202c3522acc442b"
   },
   {
+    "path": "poc/PROFIT_POLICY.md",
+    "bytes": 6616,
+    "sha256": "df1c08a7d7e484f056b65ef4293392a6f603deb6f25e37b39fdd0746f62ccb23"
+  },
+  {
     "path": "poc/RATES_MODEL.md",
     "bytes": 5295,
     "sha256": "066344116f9c326e6d62d6fed245ca57a218f9f6e2ef399cd913b8982652e2a4"
   },
   {
     "path": "poc/README.md",
-    "bytes": 15219,
-    "sha256": "2e1647a773842178ebecb670680c920ba2da5d24dd13df5a51a497bb97e949fb"
+    "bytes": 15578,
+    "sha256": "165da3099209ca2ec15909751a5df71e83155b23a70df9aeb23f441a82373a53"
   },
   {
     "path": "poc/WORLD_MODEL.md",
-    "bytes": 23076,
-    "sha256": "3a68bda62173d9de17f27ea118dd90d85abc3ba953609a803a908a283f6a39f1"
+    "bytes": 23516,
+    "sha256": "24578dd6e9243b629b66716b926cad576f2b21b13d1314b75ff0ab60d01a3d7c"
   },
   {
     "path": "poc/banking.py",
@@ -71,8 +76,8 @@
   },
   {
     "path": "poc/firms.py",
-    "bytes": 3774,
-    "sha256": "a43217e430fd40d674ea36a7c8d58f6fd020a108269c294b05c9d0db74040cb6"
+    "bytes": 3988,
+    "sha256": "52e138ec5a125a1e5684121fdd23e2b9a17ef2b0c988a2d7cc21eedc803f9f28"
   },
   {
     "path": "poc/foreign.py",
@@ -100,6 +105,11 @@
     "sha256": "46ef41746c898249986bc0cb950503d6e162610d3c4585c10384b46b9dfb57a1"
   },
   {
+    "path": "poc/profit_distribution.py",
+    "bytes": 2094,
+    "sha256": "1c393848a6fd90b36bbf47d18409f9bf90ea06b590706620d38675a5b03361a0"
+  },
+  {
     "path": "poc/public/brand/treno-wordmark.svg",
     "bytes": 8028,
     "sha256": "798f83b4ce35741ae7332c47ae18cce2f54342f887bf59d866850e1c7486c218"
@@ -125,6 +135,11 @@
     "sha256": "214dbe5cdcb2b53a6d339a69a898fb7228f7f1946f5d9ce220d51c5f5f56f7f1"
   },
   {
+    "path": "poc/scripts/compare_profit_reserves.py",
+    "bytes": 4953,
+    "sha256": "c86e8bbfe10644b6267aaa02bf0d0a1566964762d83ac55c8849c84c80a8a6d8"
+  },
+  {
     "path": "poc/scripts/dev.mjs",
     "bytes": 1394,
     "sha256": "502a188d432666b3801939d82083ee89302902345659641d77f73e6cc8361302"
@@ -135,9 +150,14 @@
     "sha256": "27660de705bd5dbad9919d986b028abed6c760829cab1a4e273095403fbf3417"
   },
   {
+    "path": "poc/scripts/report_profit_reserves.py",
+    "bytes": 9620,
+    "sha256": "72a646bd83e4a383c875c5ae8e66e688fe3b45de7c3019067979103da4b8371d"
+  },
+  {
     "path": "poc/scripts/stress_crisis.py",
-    "bytes": 3457,
-    "sha256": "b16eddaa721fa7e07ad0a1fd2d8724069cc1e68881c2311465dd28b13f36eb51"
+    "bytes": 3639,
+    "sha256": "132f0743cd571408d1f10468ab8f0dde35d1c053d01708d9026b3ac73965b7b2"
   },
   {
     "path": "poc/server.py",
@@ -146,13 +166,13 @@
   },
   {
     "path": "poc/src/AccountingViews.tsx",
-    "bytes": 9311,
-    "sha256": "99b1273b1ef5accb3e7cc8e1ae1191d75daca9738399c3bc4bb0477b6d22facf"
+    "bytes": 9382,
+    "sha256": "1ec3db76d6c327d597be5988d20f5f7420f4b68093fd363c1982c17bd89b6364"
   },
   {
     "path": "poc/src/App.tsx",
-    "bytes": 30796,
-    "sha256": "ff9d04c3bce2177d018db96d610ed2d3f719b86a55f725b84dd98533f647cb01"
+    "bytes": 31030,
+    "sha256": "2ee78354fc1dfe84586204f55acc4fe36917e447b497b2c471cdf257c94141d4"
   },
   {
     "path": "poc/src/BankView.tsx",
@@ -166,8 +186,8 @@
   },
   {
     "path": "poc/src/CompanyView.tsx",
-    "bytes": 6615,
-    "sha256": "669ddd98a28fb97ca24c5dde5a8153c96605ba2c203b07c3b0056b59d64f92cb"
+    "bytes": 6838,
+    "sha256": "bef2f30853f1f9d97896f91215e474c1b86ce77af3334d5f708ab5057dc75e0e"
   },
   {
     "path": "poc/src/ConsumptionHistory.tsx",
@@ -200,6 +220,11 @@
     "sha256": "d9577eb360b95b0022315a2f14415f06afc3a8fe2588732e3b5e0e595e4ce165"
   },
   {
+    "path": "poc/src/ProfitAllocation.tsx",
+    "bytes": 9542,
+    "sha256": "57f098637f738a49ae6ef29956dbed38d8faddf4b1b99c6608f9aec5fef00b95"
+  },
+  {
     "path": "poc/src/RatesView.tsx",
     "bytes": 7935,
     "sha256": "e709f9f0e066b7f5a085f8d15787c4761eeabe4f144466c9a5f8ee2864792fb0"
@@ -226,13 +251,13 @@
   },
   {
     "path": "poc/src/treno-theme.css",
-    "bytes": 14758,
-    "sha256": "440770466e9389bb1f9724f8a49d14f65b1632ac09ea386073ca93594cc375ec"
+    "bytes": 18591,
+    "sha256": "ea738d83f2d04b507b63456397968728d8a9e923a3cdc4f75bfe8b5acae42d0e"
   },
   {
     "path": "poc/src/world-schema.ts",
-    "bytes": 20647,
-    "sha256": "81e157bd5c780052d5ec9518f38ab92e11b6e84f156d59bc8ad9a1ba80935b9f"
+    "bytes": 22455,
+    "sha256": "391a3128a721dfecd1259fe8f5b85c2d4a173fabb44b8fc0d1027d7bd29050f7"
   },
   {
     "path": "poc/systems.py",
@@ -266,8 +291,8 @@
   },
   {
     "path": "poc/test_firms.py",
-    "bytes": 6283,
-    "sha256": "a1c8a414dc9f9f9a5664ed6dc8ac3d5d1351040aa4f6a2b948420ab9b8db182b"
+    "bytes": 6570,
+    "sha256": "68a10f1812118c301c77b761c38f25a2b42cea5c747db72cf0cfd014f301e386"
   },
   {
     "path": "poc/test_fiscal_policy.py",
@@ -288,6 +313,11 @@
     "path": "poc/test_pricing.py",
     "bytes": 5980,
     "sha256": "44964f4c78271a0498f9287b23bcb613d925797d2b3d3e43522afdac538c86fe"
+  },
+  {
+    "path": "poc/test_profit_distribution.py",
+    "bytes": 5193,
+    "sha256": "0a590da18e8fd31897880dcc82890d7288ff6882ba1cf242bdd3ec9d2d35242e"
   },
   {
     "path": "poc/test_rates.py",
@@ -321,7 +351,7 @@
   },
   {
     "path": "poc/world.py",
-    "bytes": 36228,
-    "sha256": "857e60a0f92ac29eda408871a65c3a794f9da09d30a0da238086b4c00cfa161e"
+    "bytes": 37662,
+    "sha256": "fdda4a0b78a2fece3ee0882467dd9e4e52571064faf38d60673ea74b5064ba81"
   }
 ]

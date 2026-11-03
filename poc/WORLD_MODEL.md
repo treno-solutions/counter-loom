@@ -1,4 +1,6 @@
-# Laufende Modellwirtschaft · aktuelle Fassung v11
+# Laufende Modellwirtschaft · aktuelle Fassung v12
+
+V12 ergänzt [Gewinnvortrag und zusätzliche Quartalsausschüttungen](PROFIT_POLICY.md). Erwirtschaftete, nach Verlustverrechnung verbleibende Gewinne können oberhalb des Betriebspuffers und gebundener Maschinenmittel an die Eigentümer zurückfliessen. Gewinnvortrag und Kontoguthaben bleiben getrennt. Der Referenzmodus erhält die frühere Auszahlungsregel für kontrollierte Vergleiche; Staats- und Steuerregeln bleiben unverändert.
 
 V11 ergänzt [befristete Betriebsschliessungen und Kurzarbeitsleistung](CRISIS_MODEL.md). Eine angeordnete Produktions-/Verkaufssperre erhält Arbeitsverträge; die Ersatzquote ist in der Oberfläche zwischen 0 und 60 % des vorherigen Netto-Arbeitszeitlohns wählbar. Staatszahlungen sind kassen-/kreditbegrenzt. Erhaltungsenergie von 300 € pro geschlossenem Betrieb und Monat belastet das Firmenkonto. Zwei getrennte Fortsetzungen erlauben einen kontrollierten Vergleich mit sechs Monaten Nachbeobachtung. Keine gesetzliche oder empirische Corona-Nachbildung.
 

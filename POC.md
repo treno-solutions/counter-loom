@@ -127,3 +127,7 @@ Das [Betriebsmodell](poc/BUSINESS_MODEL.md) trennt Verträge, Arbeitszeit, bezah
 Das [Krisenmodell](poc/CRISIS_MODEL.md) ergänzt eine befristete Produktions-/Verkaufssperre für einen oder beide Betriebe. Verträge bleiben erhalten; optional ersetzt der Staat 60 % des vorherigen Netto-Arbeitszeitlohns, begrenzt durch tatsächliche Finanzierung. Erhaltungsenergie und Schuldendienst laufen weiter. Ein kontrollierter Vergleich setzt denselben Weltzustand mit und ohne Leistung fort und zeigt Einkommen, Käufe, Firmenkonten und Staatsfinanzierung.
 
 Die [drei 600-Monats-Läufe](qa/crisis-v11-plausibility.md) belegen eine verbleibende Langzeitgrenze: Firmenliquidität sammelt sich an, der Staat erreicht seinen Kreditrahmen und unbezahlte Verpflichtungen wachsen. Haushalte verbrauchen Ersparnisse, ohne Haushaltskredite aufzunehmen. Das Krisenmodul behebt diese allgemeinen Verteilungs- und Budgetregeln nicht; ihre Bearbeitung benötigt eigene Gegenläufe.
+
+## Modell v12 · Gewinnvortrag und zusätzliche Ausschüttungen
+
+Die [Gewinnverwendung](poc/PROFIT_POLICY.md) trennt kumulierte Gewinne und Verluste vom Firmenkonto. Am Quartalsende können positive, noch nicht ausgeschüttete Gewinne oberhalb von Betriebspuffer und gebundenen Maschinenmitteln zusätzlich an Eigentümerhaushalte fliessen. Die Firmenansicht zeigt Bestandsfortschreibung, Liquiditätsgrenzen und echte Zahlungen. Der [kontrollierte 600-Monats-Vergleich](qa/profit-v12-comparison.md) lässt Staats-, Steuer- und übrige Verhaltensregeln unverändert.

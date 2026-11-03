@@ -6,13 +6,14 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from world import World
 import argparse
 parser=argparse.ArgumentParser()
+parser.add_argument('--distribution-policy',choices=('legacy','surplus'),default='legacy')
 parser.add_argument('--months',type=int,default=600)
 parser.add_argument('--output',default='.framework-review/crisis-long-horizon.json')
 args=parser.parse_args()
 if args.months<36:parser.error('At least 36 months are needed for the closure and reopening comparison.')
-out={'model':'illustrative_circular_flow_v11','purpose':'Long-horizon rule stress test; not a forecast or calibration','horizon_months':args.months,'runs':[]}
+out={'model':'illustrative_circular_flow_v12','distribution_policy':args.distribution_policy,'purpose':'Long-horizon rule stress test; not a forecast or calibration','horizon_months':args.months,'runs':[]}
 for name,rate in [('baseline',None),('closure_without_support',0),('closure_with_support',6000)]:
- w=World();rows=[];checkpoints=[];first={};beg=time.time()
+ w=World(distribution_policy=args.distribution_policy);rows=[];checkpoints=[];first={};beg=time.time()
  for month in range(1,args.months+1):
   if month==25 and rate is not None:w.crisis.queue(w,'werkstatt',3,rate)
   for _ in range(5):w.step()
