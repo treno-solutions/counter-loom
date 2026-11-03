@@ -11,8 +11,8 @@
   },
   {
     "path": "poc/COMPANY_MODEL.md",
-    "bytes": 10409,
-    "sha256": "368f9f9569cd8029fc4bf102371f95761e7fc5d503a412ebcaf00ea379a19e73"
+    "bytes": 10951,
+    "sha256": "18fb77a833cfeb5f59b8fa1aa11b64721d2d87bc4e0f4dad73f925a4cbd45d5f"
   },
   {
     "path": "poc/CRISIS_MODEL.md",
@@ -210,6 +210,11 @@
     "sha256": "18a5b7d1fc27b7fc39425075f6aca2de0f80d6ecd5531b18b8a7400dc08cc800"
   },
   {
+    "path": "poc/scripts/diagnose_saving_investment.py",
+    "bytes": 7119,
+    "sha256": "f0ca57fe4ffaaf7e2ae8a13b59776b9a996124e6d0c359a740f10c1cf0619efd"
+  },
+  {
     "path": "poc/scripts/python.mjs",
     "bytes": 992,
     "sha256": "27660de705bd5dbad9919d986b028abed6c760829cab1a4e273095403fbf3417"
@@ -248,6 +253,11 @@
     "path": "poc/scripts/report_public_budget.py",
     "bytes": 14004,
     "sha256": "71af4aca348c4423c01c16f595f2746249c29751c93c20b15dcd772988960e55"
+  },
+  {
+    "path": "poc/scripts/report_saving_investment.py",
+    "bytes": 19811,
+    "sha256": "92fc942f95534f037a778ff93dfab7a122c1b2de7e967d9c97379fb19e9aa12e"
   },
   {
     "path": "poc/scripts/stress_crisis.py",
@@ -463,6 +473,11 @@
     "path": "poc/test_rates.py",
     "bytes": 7177,
     "sha256": "d33e25d1806dbf1819b0c4a2fd01beac71210586e2dd6b724ee8011c729cf8d9"
+  },
+  {
+    "path": "poc/test_saving_investment_diagnosis.py",
+    "bytes": 1589,
+    "sha256": "4349869b2c2f79a22e4b2252d483dc0998c205df9b55cbb9381feeb757ad7b59"
   },
   {
     "path": "poc/test_treasury.py",

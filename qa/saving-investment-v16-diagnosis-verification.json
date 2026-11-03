@@ -1,0 +1,870 @@
+{
+  "date": "2026-11-03",
+  "model": "illustrative_circular_flow_v16",
+  "rules_changed": false,
+  "months_each": 600,
+  "profiles": [
+    95,
+    100
+  ],
+  "reference_exact_monthly_match": true,
+  "sector_cash_reconciliations": 1200,
+  "household_saving_decompositions": 1200,
+  "investment_decisions_checked": 1200,
+  "tests_passed": 3,
+  "source_hashes_verified": true,
+  "test_command": "python -m unittest discover -s poc -p test_saving_investment_diagnosis.py -v",
+  "original_reference_sha256": "01c9cabda4c0a336face03292b0af0080e93baf893cd4f7ef3c8d9cd11efed9a",
+  "investment_trace_sha256": "63d2bb46159938c9246d402cbf50d80eddea305a1f59e0d15f308c05134b90a2",
+  "staffing_trace_sha256": "d6dae096365916bba8e73e4fe39f33b361b83b8e27ff478d7f24fec8ec19b15b",
+  "statistics": [
+    {
+      "quota": 95,
+      "shortage_gate_months": 3,
+      "stock_gate_months": 17,
+      "shortage_and_stock_months": 0,
+      "cash_gate_months": 600,
+      "invested_cents": 0,
+      "shortage_gate_details": [
+        {
+          "month": 6,
+          "supplier_free_units": 148,
+          "machine_units": 800
+        },
+        {
+          "month": 7,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 8,
+          "supplier_free_units": 274,
+          "machine_units": 800
+        }
+      ],
+      "average_private_fte": 2.0720549999999998,
+      "average_retention_cents": 13936.466666666667,
+      "average_saving_cents": 18771.591666666667,
+      "average_inventory_change_cents": 305.8833333333333,
+      "average_sector_cash_changes": {
+        "firms": -305.8833333333333,
+        "government": 43.05,
+        "bank": 0.0,
+        "households": 18771.591666666667,
+        "external": -76.79166666666667
+      },
+      "average_debt_change_cents": 18431.966666666667,
+      "average_dividend_timing_cents": 33.891666666666666,
+      "average_stock_gap_cents": 4278.75,
+      "average_unit_remainder_cents": 522.4833333333333,
+      "shortage_months": {
+        "alltag": 5,
+        "werkstatt": 129
+      }
+    },
+    {
+      "quota": 100,
+      "shortage_gate_months": 154,
+      "stock_gate_months": 146,
+      "shortage_and_stock_months": 0,
+      "cash_gate_months": 600,
+      "invested_cents": 0,
+      "shortage_gate_details": [
+        {
+          "month": 5,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 6,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 7,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 8,
+          "supplier_free_units": 112,
+          "machine_units": 800
+        },
+        {
+          "month": 9,
+          "supplier_free_units": 230,
+          "machine_units": 800
+        },
+        {
+          "month": 10,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 11,
+          "supplier_free_units": 112,
+          "machine_units": 800
+        },
+        {
+          "month": 12,
+          "supplier_free_units": 230,
+          "machine_units": 800
+        },
+        {
+          "month": 13,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 14,
+          "supplier_free_units": 112,
+          "machine_units": 800
+        },
+        {
+          "month": 15,
+          "supplier_free_units": 230,
+          "machine_units": 800
+        },
+        {
+          "month": 16,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 17,
+          "supplier_free_units": 112,
+          "machine_units": 800
+        },
+        {
+          "month": 18,
+          "supplier_free_units": 230,
+          "machine_units": 800
+        },
+        {
+          "month": 19,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 20,
+          "supplier_free_units": 112,
+          "machine_units": 800
+        },
+        {
+          "month": 21,
+          "supplier_free_units": 230,
+          "machine_units": 800
+        },
+        {
+          "month": 22,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 23,
+          "supplier_free_units": 112,
+          "machine_units": 800
+        },
+        {
+          "month": 24,
+          "supplier_free_units": 230,
+          "machine_units": 800
+        },
+        {
+          "month": 25,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 26,
+          "supplier_free_units": 112,
+          "machine_units": 800
+        },
+        {
+          "month": 27,
+          "supplier_free_units": 230,
+          "machine_units": 800
+        },
+        {
+          "month": 28,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 29,
+          "supplier_free_units": 112,
+          "machine_units": 800
+        },
+        {
+          "month": 30,
+          "supplier_free_units": 230,
+          "machine_units": 800
+        },
+        {
+          "month": 31,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 32,
+          "supplier_free_units": 112,
+          "machine_units": 800
+        },
+        {
+          "month": 33,
+          "supplier_free_units": 230,
+          "machine_units": 800
+        },
+        {
+          "month": 34,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 35,
+          "supplier_free_units": 112,
+          "machine_units": 800
+        },
+        {
+          "month": 36,
+          "supplier_free_units": 230,
+          "machine_units": 800
+        },
+        {
+          "month": 37,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 38,
+          "supplier_free_units": 112,
+          "machine_units": 800
+        },
+        {
+          "month": 39,
+          "supplier_free_units": 230,
+          "machine_units": 800
+        },
+        {
+          "month": 40,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 41,
+          "supplier_free_units": 112,
+          "machine_units": 800
+        },
+        {
+          "month": 42,
+          "supplier_free_units": 230,
+          "machine_units": 800
+        },
+        {
+          "month": 43,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 44,
+          "supplier_free_units": 112,
+          "machine_units": 800
+        },
+        {
+          "month": 45,
+          "supplier_free_units": 230,
+          "machine_units": 800
+        },
+        {
+          "month": 46,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 47,
+          "supplier_free_units": 112,
+          "machine_units": 800
+        },
+        {
+          "month": 48,
+          "supplier_free_units": 230,
+          "machine_units": 800
+        },
+        {
+          "month": 49,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 50,
+          "supplier_free_units": 112,
+          "machine_units": 800
+        },
+        {
+          "month": 51,
+          "supplier_free_units": 230,
+          "machine_units": 800
+        },
+        {
+          "month": 52,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 53,
+          "supplier_free_units": 112,
+          "machine_units": 800
+        },
+        {
+          "month": 54,
+          "supplier_free_units": 230,
+          "machine_units": 800
+        },
+        {
+          "month": 55,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 56,
+          "supplier_free_units": 112,
+          "machine_units": 800
+        },
+        {
+          "month": 57,
+          "supplier_free_units": 230,
+          "machine_units": 800
+        },
+        {
+          "month": 58,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 59,
+          "supplier_free_units": 112,
+          "machine_units": 800
+        },
+        {
+          "month": 60,
+          "supplier_free_units": 230,
+          "machine_units": 800
+        },
+        {
+          "month": 61,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 62,
+          "supplier_free_units": 112,
+          "machine_units": 800
+        },
+        {
+          "month": 63,
+          "supplier_free_units": 230,
+          "machine_units": 800
+        },
+        {
+          "month": 64,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 65,
+          "supplier_free_units": 112,
+          "machine_units": 800
+        },
+        {
+          "month": 66,
+          "supplier_free_units": 230,
+          "machine_units": 800
+        },
+        {
+          "month": 67,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 68,
+          "supplier_free_units": 112,
+          "machine_units": 800
+        },
+        {
+          "month": 69,
+          "supplier_free_units": 230,
+          "machine_units": 800
+        },
+        {
+          "month": 70,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 71,
+          "supplier_free_units": 112,
+          "machine_units": 800
+        },
+        {
+          "month": 72,
+          "supplier_free_units": 230,
+          "machine_units": 800
+        },
+        {
+          "month": 73,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 74,
+          "supplier_free_units": 112,
+          "machine_units": 800
+        },
+        {
+          "month": 75,
+          "supplier_free_units": 230,
+          "machine_units": 800
+        },
+        {
+          "month": 76,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 77,
+          "supplier_free_units": 112,
+          "machine_units": 800
+        },
+        {
+          "month": 78,
+          "supplier_free_units": 230,
+          "machine_units": 800
+        },
+        {
+          "month": 79,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 80,
+          "supplier_free_units": 112,
+          "machine_units": 800
+        },
+        {
+          "month": 81,
+          "supplier_free_units": 230,
+          "machine_units": 800
+        },
+        {
+          "month": 82,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 83,
+          "supplier_free_units": 112,
+          "machine_units": 800
+        },
+        {
+          "month": 84,
+          "supplier_free_units": 230,
+          "machine_units": 800
+        },
+        {
+          "month": 85,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 86,
+          "supplier_free_units": 112,
+          "machine_units": 800
+        },
+        {
+          "month": 87,
+          "supplier_free_units": 230,
+          "machine_units": 800
+        },
+        {
+          "month": 88,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 89,
+          "supplier_free_units": 112,
+          "machine_units": 800
+        },
+        {
+          "month": 90,
+          "supplier_free_units": 230,
+          "machine_units": 800
+        },
+        {
+          "month": 91,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 92,
+          "supplier_free_units": 112,
+          "machine_units": 800
+        },
+        {
+          "month": 93,
+          "supplier_free_units": 230,
+          "machine_units": 800
+        },
+        {
+          "month": 94,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 95,
+          "supplier_free_units": 112,
+          "machine_units": 800
+        },
+        {
+          "month": 96,
+          "supplier_free_units": 230,
+          "machine_units": 800
+        },
+        {
+          "month": 97,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 98,
+          "supplier_free_units": 112,
+          "machine_units": 800
+        },
+        {
+          "month": 99,
+          "supplier_free_units": 230,
+          "machine_units": 800
+        },
+        {
+          "month": 100,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 101,
+          "supplier_free_units": 112,
+          "machine_units": 800
+        },
+        {
+          "month": 102,
+          "supplier_free_units": 230,
+          "machine_units": 800
+        },
+        {
+          "month": 103,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 104,
+          "supplier_free_units": 112,
+          "machine_units": 800
+        },
+        {
+          "month": 105,
+          "supplier_free_units": 230,
+          "machine_units": 800
+        },
+        {
+          "month": 106,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 107,
+          "supplier_free_units": 112,
+          "machine_units": 800
+        },
+        {
+          "month": 108,
+          "supplier_free_units": 230,
+          "machine_units": 800
+        },
+        {
+          "month": 109,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 110,
+          "supplier_free_units": 112,
+          "machine_units": 800
+        },
+        {
+          "month": 111,
+          "supplier_free_units": 230,
+          "machine_units": 800
+        },
+        {
+          "month": 112,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 113,
+          "supplier_free_units": 112,
+          "machine_units": 800
+        },
+        {
+          "month": 114,
+          "supplier_free_units": 230,
+          "machine_units": 800
+        },
+        {
+          "month": 115,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 116,
+          "supplier_free_units": 112,
+          "machine_units": 800
+        },
+        {
+          "month": 117,
+          "supplier_free_units": 230,
+          "machine_units": 800
+        },
+        {
+          "month": 118,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 119,
+          "supplier_free_units": 112,
+          "machine_units": 800
+        },
+        {
+          "month": 120,
+          "supplier_free_units": 230,
+          "machine_units": 800
+        },
+        {
+          "month": 121,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 122,
+          "supplier_free_units": 112,
+          "machine_units": 800
+        },
+        {
+          "month": 123,
+          "supplier_free_units": 230,
+          "machine_units": 800
+        },
+        {
+          "month": 124,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 125,
+          "supplier_free_units": 112,
+          "machine_units": 800
+        },
+        {
+          "month": 126,
+          "supplier_free_units": 230,
+          "machine_units": 800
+        },
+        {
+          "month": 127,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 128,
+          "supplier_free_units": 112,
+          "machine_units": 800
+        },
+        {
+          "month": 129,
+          "supplier_free_units": 230,
+          "machine_units": 800
+        },
+        {
+          "month": 130,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 131,
+          "supplier_free_units": 112,
+          "machine_units": 800
+        },
+        {
+          "month": 132,
+          "supplier_free_units": 230,
+          "machine_units": 800
+        },
+        {
+          "month": 133,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 134,
+          "supplier_free_units": 106,
+          "machine_units": 800
+        },
+        {
+          "month": 135,
+          "supplier_free_units": 218,
+          "machine_units": 800
+        },
+        {
+          "month": 136,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 137,
+          "supplier_free_units": 106,
+          "machine_units": 800
+        },
+        {
+          "month": 138,
+          "supplier_free_units": 218,
+          "machine_units": 800
+        },
+        {
+          "month": 139,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 140,
+          "supplier_free_units": 106,
+          "machine_units": 800
+        },
+        {
+          "month": 141,
+          "supplier_free_units": 218,
+          "machine_units": 800
+        },
+        {
+          "month": 142,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 143,
+          "supplier_free_units": 106,
+          "machine_units": 800
+        },
+        {
+          "month": 144,
+          "supplier_free_units": 218,
+          "machine_units": 800
+        },
+        {
+          "month": 145,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 146,
+          "supplier_free_units": 106,
+          "machine_units": 800
+        },
+        {
+          "month": 147,
+          "supplier_free_units": 218,
+          "machine_units": 800
+        },
+        {
+          "month": 148,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 149,
+          "supplier_free_units": 106,
+          "machine_units": 800
+        },
+        {
+          "month": 150,
+          "supplier_free_units": 218,
+          "machine_units": 800
+        },
+        {
+          "month": 151,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 152,
+          "supplier_free_units": 106,
+          "machine_units": 800
+        },
+        {
+          "month": 153,
+          "supplier_free_units": 218,
+          "machine_units": 800
+        },
+        {
+          "month": 154,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 155,
+          "supplier_free_units": 100,
+          "machine_units": 800
+        },
+        {
+          "month": 156,
+          "supplier_free_units": 206,
+          "machine_units": 800
+        },
+        {
+          "month": 157,
+          "supplier_free_units": 0,
+          "machine_units": 800
+        },
+        {
+          "month": 158,
+          "supplier_free_units": 300,
+          "machine_units": 800
+        }
+      ],
+      "average_private_fte": 3.9636666666666662,
+      "average_retention_cents": 0.0,
+      "average_saving_cents": 663.225,
+      "average_inventory_change_cents": 2.9833333333333334,
+      "average_sector_cash_changes": {
+        "firms": -2.9833333333333334,
+        "government": -3.2583333333333333,
+        "bank": 0.0,
+        "households": 663.225,
+        "external": -1963.1666666666667
+      },
+      "average_debt_change_cents": -1306.1833333333334,
+      "average_dividend_timing_cents": -2.3583333333333334,
+      "average_stock_gap_cents": 0.0,
+      "average_unit_remainder_cents": 665.5833333333334,
+      "shortage_months": {
+        "alltag": 302,
+        "werkstatt": 55
+      }
+    }
+  ],
+  "limitations": [
+    "No causal intervention isolates total outcome contributions",
+    "Household cash saving differs from national saving",
+    "Rule-based illustrative model; no empirical calibration"
+  ]
+}

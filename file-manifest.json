@@ -106,8 +106,8 @@
   },
   {
     "path": "poc/source-manifest.json",
-    "bytes": 14724,
-    "sha256": "ebdf06f77b7c2f32a008e5baf05491fdeae261c768ca711a1fd210c283684c99"
+    "bytes": 15219,
+    "sha256": "d6b351ef47ff9bd583d28fd7ca6148d77404d316627ab39fe7b3db2792e56acb"
   },
   {
     "path": "processed/energy-monthly-prices.csv",
@@ -613,6 +613,26 @@
     "path": "qa/research-structure-validation.json",
     "bytes": 573,
     "sha256": "3cc6f8a8570f32a92b4fa2a41d138ea96c0c34316927a637cf653891eabda427"
+  },
+  {
+    "path": "qa/saving-investment-v16-diagnosis-verification.json",
+    "bytes": 20572,
+    "sha256": "daa1e1cbfb2b3506b5d2088852d46d98e3f8a6a26ca0c889ce0992662c2c5ed0"
+  },
+  {
+    "path": "qa/saving-investment-v16-diagnosis.md",
+    "bytes": 9431,
+    "sha256": "34f9641d4504f23530605d37b536f63048dd562b56ffa499f3e36443f98d7d16"
+  },
+  {
+    "path": "qa/saving-investment-v16-diagnosis.svg",
+    "bytes": 113400,
+    "sha256": "e46aee8b9464352a1d6816a42882e444d4d89c1df84533c68175b0e309d1e2d3"
+  },
+  {
+    "path": "qa/saving-investment-v16-traces-2026-11-03.json",
+    "bytes": 9245513,
+    "sha256": "63d2bb46159938c9246d402cbf50d80eddea305a1f59e0d15f308c05134b90a2"
   },
   {
     "path": "qa/silver-table-reconciliation.json",
