@@ -1,0 +1,411 @@
+{
+  "date": "2026-11-03",
+  "model": "illustrative_circular_flow_v18",
+  "model_rules_changed": false,
+  "anchor_month": 1440,
+  "anchor_sha256": "c600bfe19b6772341f066f6ec3ffe242dfb1d1446dde596b288ddd5fcd8f3f2d",
+  "common_state_replayed": true,
+  "control_matches_archive": true,
+  "branches": 5,
+  "warmup_phases_checked": 7200,
+  "branch_phases_checked": 1500,
+  "new_tests_passed": 5,
+  "full_python_suite_passed": 199,
+  "source_hashes_verified": true,
+  "independent_ledger_and_income_reconciliation": true,
+  "source_data_sha256": "d92300de58ae06969da14e8cc64908c444344852d9c076114f1a5e708f3af965",
+  "statistics": {
+    "rate": {
+      "case": "rate",
+      "active_months": 12,
+      "bank_net_payout_delta_cents": 24747,
+      "firm_net_payout_delta_cents": -16908,
+      "non_owner_income_delta_cents": 5844,
+      "income_delta_cents": 13683,
+      "real_consumption_delta_percent": 0.10345340875259623,
+      "nominal_consumption_delta_cents": 13900,
+      "profit_delta_cents": -28191,
+      "government_net_delta_active_cents": -522,
+      "government_net_delta_60_cents": 624,
+      "minimum_government_net_delta_cents": -821,
+      "minimum_government_net_relative_month": 24,
+      "minimum_government_closing_cash_cents": 8972634,
+      "taxes_delta_cents": -522,
+      "short_time_delta_cents": 0,
+      "minimum_employment": 6,
+      "minimum_paid_private_fte_bps": 26976,
+      "peak_price_index_bps": 10000,
+      "total_interest_delta_cents": 36000,
+      "end_real_consumption_delta_percent": 0.02196108792995588,
+      "total_real_consumption_delta_percent": 0.026572247111467107,
+      "social_unfunded_cents": 0,
+      "maximum_government_debt_cents": 0,
+      "firms": [
+        {
+          "id": "alltag",
+          "sales_delta_cents": 7400,
+          "profit_delta_cents": -29226,
+          "wages_delta_cents": 3120,
+          "energy_delta_cents": 355,
+          "interest_delta_cents": 33000,
+          "minimum_paid_fte_bps": 11076,
+          "end_cash_delta_cents": -1
+        },
+        {
+          "id": "werkstatt",
+          "sales_delta_cents": 7050,
+          "profit_delta_cents": 1035,
+          "wages_delta_cents": 5232,
+          "energy_delta_cents": 396,
+          "interest_delta_cents": 0,
+          "minimum_paid_fte_bps": 15900,
+          "end_cash_delta_cents": -129
+        }
+      ],
+      "households": [
+        {
+          "id": "h1",
+          "income_delta_cents": 2400,
+          "nominal_consumption_delta_cents": 2800,
+          "base_price_consumption_delta_cents": 2800,
+          "end_cash_delta_cents": -95,
+          "minimum_cash_cents": 279062
+        },
+        {
+          "id": "h2",
+          "income_delta_cents": 2397,
+          "nominal_consumption_delta_cents": 2800,
+          "base_price_consumption_delta_cents": 2800,
+          "end_cash_delta_cents": -244,
+          "minimum_cash_cents": 279024
+        },
+        {
+          "id": "h3",
+          "income_delta_cents": 3136,
+          "nominal_consumption_delta_cents": 2850,
+          "base_price_consumption_delta_cents": 2850,
+          "end_cash_delta_cents": -89,
+          "minimum_cash_cents": 278938
+        },
+        {
+          "id": "h4",
+          "income_delta_cents": 3136,
+          "nominal_consumption_delta_cents": 2850,
+          "base_price_consumption_delta_cents": 2850,
+          "end_cash_delta_cents": -93,
+          "minimum_cash_cents": 278910
+        },
+        {
+          "id": "h5",
+          "income_delta_cents": 1307,
+          "nominal_consumption_delta_cents": 1300,
+          "base_price_consumption_delta_cents": 1300,
+          "end_cash_delta_cents": 41,
+          "minimum_cash_cents": 279095
+        },
+        {
+          "id": "h6",
+          "income_delta_cents": 1307,
+          "nominal_consumption_delta_cents": 1300,
+          "base_price_consumption_delta_cents": 1300,
+          "end_cash_delta_cents": -54,
+          "minimum_cash_cents": 279109
+        }
+      ]
+    },
+    "energy": {
+      "case": "energy",
+      "active_months": 12,
+      "bank_net_payout_delta_cents": -11,
+      "firm_net_payout_delta_cents": -421390,
+      "non_owner_income_delta_cents": -301528,
+      "income_delta_cents": -722929,
+      "real_consumption_delta_percent": -6.72223876153617,
+      "nominal_consumption_delta_cents": -669594,
+      "profit_delta_cents": -702341,
+      "government_net_delta_active_cents": -408879,
+      "government_net_delta_60_cents": 571,
+      "minimum_government_net_delta_cents": -453418,
+      "minimum_government_net_relative_month": 15,
+      "minimum_government_closing_cash_cents": 8529387,
+      "taxes_delta_cents": -410164,
+      "short_time_delta_cents": 0,
+      "minimum_employment": 6,
+      "minimum_paid_private_fte_bps": 24868,
+      "peak_price_index_bps": 10230,
+      "total_interest_delta_cents": 0,
+      "end_real_consumption_delta_percent": -0.24008307991230105,
+      "total_real_consumption_delta_percent": -0.31492206590661986,
+      "social_unfunded_cents": 0,
+      "maximum_government_debt_cents": 0,
+      "firms": [
+        {
+          "id": "alltag",
+          "sales_delta_cents": -195355,
+          "profit_delta_cents": -417085,
+          "wages_delta_cents": -149424,
+          "energy_delta_cents": 381155,
+          "interest_delta_cents": 0,
+          "minimum_paid_fte_bps": 10288,
+          "end_cash_delta_cents": 394
+        },
+        {
+          "id": "werkstatt",
+          "sales_delta_cents": -213024,
+          "profit_delta_cents": -285256,
+          "wages_delta_cents": -281328,
+          "energy_delta_cents": 358344,
+          "interest_delta_cents": 0,
+          "minimum_paid_fte_bps": 14566,
+          "end_cash_delta_cents": 522
+        }
+      ],
+      "households": [
+        {
+          "id": "h1",
+          "income_delta_cents": -122529,
+          "nominal_consumption_delta_cents": -113439,
+          "base_price_consumption_delta_cents": -144150,
+          "end_cash_delta_cents": -629,
+          "minimum_cash_cents": 276913
+        },
+        {
+          "id": "h2",
+          "income_delta_cents": -122531,
+          "nominal_consumption_delta_cents": -113439,
+          "base_price_consumption_delta_cents": -144150,
+          "end_cash_delta_cents": -732,
+          "minimum_cash_cents": 276879
+        },
+        {
+          "id": "h3",
+          "income_delta_cents": -168698,
+          "nominal_consumption_delta_cents": -160064,
+          "base_price_consumption_delta_cents": -200800,
+          "end_cash_delta_cents": 12,
+          "minimum_cash_cents": 276871
+        },
+        {
+          "id": "h4",
+          "income_delta_cents": -168697,
+          "nominal_consumption_delta_cents": -160064,
+          "base_price_consumption_delta_cents": -200800,
+          "end_cash_delta_cents": 123,
+          "minimum_cash_cents": 276871
+        },
+        {
+          "id": "h5",
+          "income_delta_cents": -70236,
+          "nominal_consumption_delta_cents": -61294,
+          "base_price_consumption_delta_cents": -106650,
+          "end_cash_delta_cents": -55,
+          "minimum_cash_cents": 276913
+        },
+        {
+          "id": "h6",
+          "income_delta_cents": -70238,
+          "nominal_consumption_delta_cents": -61294,
+          "base_price_consumption_delta_cents": -106650,
+          "end_cash_delta_cents": -115,
+          "minimum_cash_cents": 276882
+        }
+      ]
+    },
+    "closure_no_support": {
+      "case": "closure_no_support",
+      "active_months": 3,
+      "bank_net_payout_delta_cents": 1,
+      "firm_net_payout_delta_cents": -641060,
+      "non_owner_income_delta_cents": -741150,
+      "income_delta_cents": -1382209,
+      "real_consumption_delta_percent": -60.96275788157543,
+      "nominal_consumption_delta_cents": -2047800,
+      "profit_delta_cents": -1164433,
+      "government_net_delta_active_cents": -655008,
+      "government_net_delta_60_cents": -5958,
+      "minimum_government_net_delta_cents": -851416,
+      "minimum_government_net_relative_month": 6,
+      "minimum_government_closing_cash_cents": 8131936,
+      "taxes_delta_cents": -745008,
+      "short_time_delta_cents": 0,
+      "minimum_employment": 6,
+      "minimum_paid_private_fte_bps": 14760,
+      "peak_price_index_bps": 10000,
+      "total_interest_delta_cents": 0,
+      "end_real_consumption_delta_percent": 0.3096885619954026,
+      "total_real_consumption_delta_percent": -0.2176393572940083,
+      "social_unfunded_cents": 0,
+      "maximum_government_debt_cents": 0,
+      "firms": [
+        {
+          "id": "alltag",
+          "sales_delta_cents": -2074100,
+          "profit_delta_cents": -1138517,
+          "wages_delta_cents": -921744,
+          "energy_delta_cents": -13690,
+          "interest_delta_cents": 0,
+          "minimum_paid_fte_bps": 0,
+          "end_cash_delta_cents": -552
+        },
+        {
+          "id": "werkstatt",
+          "sales_delta_cents": -185100,
+          "profit_delta_cents": -25916,
+          "wages_delta_cents": -137040,
+          "energy_delta_cents": -10278,
+          "interest_delta_cents": 0,
+          "minimum_paid_fte_bps": 14010,
+          "end_cash_delta_cents": -387
+        }
+      ],
+      "households": [
+        {
+          "id": "h1",
+          "income_delta_cents": -429455,
+          "nominal_consumption_delta_cents": -316150,
+          "base_price_consumption_delta_cents": -316150,
+          "end_cash_delta_cents": -1080,
+          "minimum_cash_cents": 230242
+        },
+        {
+          "id": "h2",
+          "income_delta_cents": -429454,
+          "nominal_consumption_delta_cents": -316150,
+          "base_price_consumption_delta_cents": -316150,
+          "end_cash_delta_cents": -1130,
+          "minimum_cash_cents": 230208
+        },
+        {
+          "id": "h3",
+          "income_delta_cents": -154807,
+          "nominal_consumption_delta_cents": -355250,
+          "base_price_consumption_delta_cents": -355250,
+          "end_cash_delta_cents": 2512,
+          "minimum_cash_cents": 281756
+        },
+        {
+          "id": "h4",
+          "income_delta_cents": -154806,
+          "nominal_consumption_delta_cents": -355250,
+          "base_price_consumption_delta_cents": -355250,
+          "end_cash_delta_cents": 1815,
+          "minimum_cash_cents": 280934
+        },
+        {
+          "id": "h5",
+          "income_delta_cents": -106843,
+          "nominal_consumption_delta_cents": -352500,
+          "base_price_consumption_delta_cents": -352500,
+          "end_cash_delta_cents": 2020,
+          "minimum_cash_cents": 281295
+        },
+        {
+          "id": "h6",
+          "income_delta_cents": -106844,
+          "nominal_consumption_delta_cents": -352500,
+          "base_price_consumption_delta_cents": -352500,
+          "end_cash_delta_cents": 2562,
+          "minimum_cash_cents": 281897
+        }
+      ]
+    },
+    "closure_support60": {
+      "case": "closure_support60",
+      "active_months": 3,
+      "bank_net_payout_delta_cents": -5,
+      "firm_net_payout_delta_cents": -636583,
+      "non_owner_income_delta_cents": -375282,
+      "income_delta_cents": -1011870,
+      "real_consumption_delta_percent": -59.38197731535233,
+      "nominal_consumption_delta_cents": -1994700,
+      "profit_delta_cents": -1156977,
+      "government_net_delta_active_cents": -973875,
+      "government_net_delta_60_cents": -10147,
+      "minimum_government_net_delta_cents": -1133283,
+      "minimum_government_net_relative_month": 6,
+      "minimum_government_closing_cash_cents": 7880607,
+      "taxes_delta_cents": -728817,
+      "short_time_delta_cents": 335058,
+      "minimum_employment": 6,
+      "minimum_paid_private_fte_bps": 15850,
+      "peak_price_index_bps": 10000,
+      "total_interest_delta_cents": 0,
+      "end_real_consumption_delta_percent": 0.49914947311999747,
+      "total_real_consumption_delta_percent": 1.23103191870233,
+      "social_unfunded_cents": 0,
+      "maximum_government_debt_cents": 0,
+      "firms": [
+        {
+          "id": "alltag",
+          "sales_delta_cents": -2074100,
+          "profit_delta_cents": -1138517,
+          "wages_delta_cents": -921744,
+          "energy_delta_cents": -13690,
+          "interest_delta_cents": 0,
+          "minimum_paid_fte_bps": 0,
+          "end_cash_delta_cents": -745
+        },
+        {
+          "id": "werkstatt",
+          "sales_delta_cents": -132000,
+          "profit_delta_cents": -18460,
+          "wages_delta_cents": -93024,
+          "energy_delta_cents": -6975,
+          "interest_delta_cents": 0,
+          "minimum_paid_fte_bps": 14306,
+          "end_cash_delta_cents": -1154
+        }
+      ],
+      "households": [
+        {
+          "id": "h1",
+          "income_delta_cents": -261181,
+          "nominal_consumption_delta_cents": -297100,
+          "base_price_consumption_delta_cents": -297100,
+          "end_cash_delta_cents": 232,
+          "minimum_cash_cents": 279502
+        },
+        {
+          "id": "h2",
+          "income_delta_cents": -261180,
+          "nominal_consumption_delta_cents": -297100,
+          "base_price_consumption_delta_cents": -297100,
+          "end_cash_delta_cents": 135,
+          "minimum_cash_cents": 279510
+        },
+        {
+          "id": "h3",
+          "income_delta_cents": -138657,
+          "nominal_consumption_delta_cents": -348050,
+          "base_price_consumption_delta_cents": -348050,
+          "end_cash_delta_cents": 4211,
+          "minimum_cash_cents": 283439
+        },
+        {
+          "id": "h4",
+          "income_delta_cents": -138657,
+          "nominal_consumption_delta_cents": -348050,
+          "base_price_consumption_delta_cents": -348050,
+          "end_cash_delta_cents": 1813,
+          "minimum_cash_cents": 280766
+        },
+        {
+          "id": "h5",
+          "income_delta_cents": -106097,
+          "nominal_consumption_delta_cents": -352200,
+          "base_price_consumption_delta_cents": -352200,
+          "end_cash_delta_cents": 1795,
+          "minimum_cash_cents": 280889
+        },
+        {
+          "id": "h6",
+          "income_delta_cents": -106098,
+          "nominal_consumption_delta_cents": -352200,
+          "base_price_consumption_delta_cents": -352200,
+          "end_cash_delta_cents": 3835,
+          "minimum_cash_cents": 283190
+        }
+      ]
+    }
+  }
+}

@@ -76,8 +76,8 @@
   },
   {
     "path": "poc/STABILITY_MODEL.md",
-    "bytes": 7724,
-    "sha256": "ec4fdd5ee7ab427390d2ec92f6c7c3f1951baaa461284623de815decd5fa6c46"
+    "bytes": 8057,
+    "sha256": "5db332b8cc96fbaf986d821a7ab597d70a422eaf27637b130a26b7ce9f0cbf59"
   },
   {
     "path": "poc/STABILITY_PLAN.md",
@@ -240,6 +240,11 @@
     "sha256": "f0ca57fe4ffaaf7e2ae8a13b59776b9a996124e6d0c359a740f10c1cf0619efd"
   },
   {
+    "path": "poc/scripts/isolated_shocks.py",
+    "bytes": 9858,
+    "sha256": "95c96a527ad31b1daed78cf3a1458741d8e872003a87d401a1606965bcd02740"
+  },
+  {
     "path": "poc/scripts/python.mjs",
     "bytes": 992,
     "sha256": "27660de705bd5dbad9919d986b028abed6c760829cab1a4e273095403fbf3417"
@@ -273,6 +278,11 @@
     "path": "poc/scripts/report_goods_granularity.py",
     "bytes": 11170,
     "sha256": "bfbaf94dfa09dee4a7d55b530f81d6a53a7d41eedd1a33ab8b3c0c1c25ff30dc"
+  },
+  {
+    "path": "poc/scripts/report_isolated_shocks.py",
+    "bytes": 23641,
+    "sha256": "088eb322914c05d1a403276f4766241dafaf632b14330f858fe4356ae4c0c10c"
   },
   {
     "path": "poc/scripts/report_profit_reserves.py",
@@ -498,6 +508,11 @@
     "path": "poc/test_goods_granularity.py",
     "bytes": 5318,
     "sha256": "b3c4fff48e6bbb7908a070ceb69f6eefb4626574888a49fda4fceebd15837cff"
+  },
+  {
+    "path": "poc/test_isolated_shocks.py",
+    "bytes": 3707,
+    "sha256": "3568c3811ce5599eff1bdd8938396b6c85aa80df34def82d0fe955d95b361a9a"
   },
   {
     "path": "poc/test_macro.py",

@@ -57,3 +57,5 @@ In der Makroübersicht öffnet **Liquiditätsziele und Kontodrift** Ziel und Gut
 **Unternehmen → Betrieb** zeigt die gemeinsame Personalplanung und den Maschinenauftrag von Finanzierung über reservierte Teile bis zur bezahlten Lieferung. **Staat → Details** zeigt die Finanzierungsprüfung und ihre beobachteten Eingaben. Der historische Kaufplan je Haushalt erklärt auch die Reserveanpassung.
 
 Die Datenschnittstelle verwendet `illustrative_circular_flow_v18`. Nach einem Rechenkernwechsel sind ein neu geladener Client und ein neuer Lauf erforderlich. Frühere Ergebnisarchive bleiben erhalten. [Prüfplan](STABILITY_PLAN.md) und [Ergebnisvergleich](../qa/stability-v18-report.md) trennen technische Bilanzprüfung, mechanische Korrektur und wirtschaftlichen Stabilitätsbefund.
+
+Die [getrennten Schockversuche](../qa/isolated-shocks-v18-report.md) vergleichen höhere Leitzinsen, teurere Energie und eine befristete Betriebsschliessung aus demselben eingeschwungenen Zustand. Ihre Eingriffe verändern keine Wirtschaftsregel; Monatswerte, Gegenbuchungen und verbleibende Abweichungen sind separat dokumentiert.

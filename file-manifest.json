@@ -106,8 +106,8 @@
   },
   {
     "path": "poc/source-manifest.json",
-    "bytes": 17366,
-    "sha256": "05c9121da39aa5a34037a5a8c647d04c2a6b2efe49f9836217f0f2c6dc4171d6"
+    "bytes": 17836,
+    "sha256": "3ebdff20dc6a0c8715d64e478484c9dfed3aff0a931099cc820f8505a96e345e"
   },
   {
     "path": "processed/energy-monthly-prices.csv",
@@ -523,6 +523,36 @@
     "path": "qa/in-gold-we-trust-2026-de-page-368.png",
     "bytes": 131058,
     "sha256": "d5ef637444a14b91c8edfd8f75466770c08bb7227e164f16377807463c48d130"
+  },
+  {
+    "path": "qa/isolated-shocks-v18-2026-11-03.json",
+    "bytes": 16226494,
+    "sha256": "d92300de58ae06969da14e8cc64908c444344852d9c076114f1a5e708f3af965"
+  },
+  {
+    "path": "qa/isolated-shocks-v18-channels.svg",
+    "bytes": 76013,
+    "sha256": "d2eb02cee1428ee375f5b6c5bf54204161cb31dafdf594f7a2697a2b5497045e"
+  },
+  {
+    "path": "qa/isolated-shocks-v18-overview.svg",
+    "bytes": 137776,
+    "sha256": "d8525624d8e03c7065394512ef7d14dc87ccd409058b68e0907ccf7243d729f6"
+  },
+  {
+    "path": "qa/isolated-shocks-v18-plan.md",
+    "bytes": 3859,
+    "sha256": "f99b950bd4087b85adb604d89e88b96e4718384ffd012dd8f5bc812d6a13cbf1"
+  },
+  {
+    "path": "qa/isolated-shocks-v18-report.md",
+    "bytes": 11784,
+    "sha256": "e486531f5ecda4a47241aec6f1696397ceee78b4f78acac9ebadcf2173d5f614"
+  },
+  {
+    "path": "qa/isolated-shocks-v18-verification.json",
+    "bytes": 14296,
+    "sha256": "f6f5f3ee83204e4e24a156b8903335335c883e7db148a6a6f3aef7ac691a4a82"
   },
   {
     "path": "qa/laptop-layout-verification-2026-11-03.json",
