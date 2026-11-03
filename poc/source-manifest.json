@@ -21,8 +21,8 @@
   },
   {
     "path": "poc/DESIGN_SYSTEM.md",
-    "bytes": 2185,
-    "sha256": "e287f98d84fe0de3c0755ce479f9ed5edb0ae4fd796834e3c6cd0c90f770e1b7"
+    "bytes": 2388,
+    "sha256": "44b0f0ba31728fcfacb35f97f08deee5b4a994e21f3776fe38f612d06f21cbf0"
   },
   {
     "path": "poc/FISCAL_MODEL.md",
@@ -151,8 +151,8 @@
   },
   {
     "path": "poc/src/App.tsx",
-    "bytes": 30316,
-    "sha256": "907d078241b88f11b26820b531483a1f3abe8edf9622cb6640a2eaf83e2570b9"
+    "bytes": 30792,
+    "sha256": "bd698289f12a1a4140583a5f145688520c9c2aa7ec559d8c5091eaa2c5fd1b63"
   },
   {
     "path": "poc/src/BankView.tsx",
@@ -226,8 +226,8 @@
   },
   {
     "path": "poc/src/treno-theme.css",
-    "bytes": 14405,
-    "sha256": "60ed87a4996578a5d3431e7009867109e2229844aeb27a8b2de6123a4d2a31b9"
+    "bytes": 14758,
+    "sha256": "440770466e9389bb1f9724f8a49d14f65b1632ac09ea386073ca93594cc375ec"
   },
   {
     "path": "poc/src/world-schema.ts",

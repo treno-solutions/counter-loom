@@ -1,0 +1,42 @@
+{
+  "date": "2026-11-03",
+  "scope": "Laptop system diagram layout",
+  "build": "passed",
+  "browser": "BrowserOS neo",
+  "viewports": [
+    {
+      "width": 1024,
+      "document_overflow": false,
+      "right_cards_clipped": false
+    },
+    {
+      "width": 1280,
+      "document_overflow": false,
+      "right_cards_clipped": false
+    },
+    {
+      "width": 1366,
+      "document_overflow": false,
+      "right_cards_clipped": false
+    },
+    {
+      "width": 1440,
+      "document_overflow": false,
+      "right_cards_clipped": false
+    },
+    {
+      "width": 1536,
+      "document_overflow": false,
+      "right_cards_clipped": false
+    }
+  ],
+  "mobile": {
+    "width": 390,
+    "document_overflow": false,
+    "diagram_scrolling": "intentional independent horizontal scrolling",
+    "canvas_width": 900
+  },
+  "inspector": "Below diagram at viewport widths <=1450; selection and details navigation verified at 1366.",
+  "scaling": "Cards, connections and labels scale together from 90 to 100 percent; fixed logical canvas 1000 by 760.",
+  "model_rules_changed": false
+}

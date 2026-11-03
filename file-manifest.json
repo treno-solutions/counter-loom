@@ -107,7 +107,7 @@
   {
     "path": "poc/source-manifest.json",
     "bytes": 9437,
-    "sha256": "9463ebf262ede383e660b72944aedc87300981d4d3e09944aaf2da347b997af4"
+    "sha256": "b24ed34510366509e60650870335dd8e21c0b653efe6c8c0f0bd92d0743d07e4"
   },
   {
     "path": "processed/energy-monthly-prices.csv",
@@ -423,6 +423,11 @@
     "path": "qa/in-gold-we-trust-2026-de-page-368.png",
     "bytes": 131058,
     "sha256": "d5ef637444a14b91c8edfd8f75466770c08bb7227e164f16377807463c48d130"
+  },
+  {
+    "path": "qa/laptop-layout-verification-2026-11-03.json",
+    "bytes": 1084,
+    "sha256": "0f6d63af8e2c8ce49bc37f4f154976f2405060a7e9144277cdea1ae5b6701059"
   },
   {
     "path": "qa/package-validation.json",
