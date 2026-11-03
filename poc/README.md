@@ -1,6 +1,8 @@
 # Counterloom POC · laufender Wirtschaftskreislauf
 
-Aktuelle Erweiterung v14: [Ausschüttungssteuer mit Brutto-/Nettoansicht](DISTRIBUTION_TAX_MODEL.md) und [kontrollierter 600-Monats-Vergleich](../qa/tax-v14-comparison.md).
+Seit Modell v15 sind die kleineren Gütereinheiten Standard (Startpreise 1 € und 1,50 €). [Diagnose des verbleibenden Staatsdefizits](../qa/fiscal-balance-v15-diagnosis.md). Vorhandene Exporte dokumentieren weiterhin ihre ursprüngliche Stückelung; für den neuen Standard die Seite neu laden und einen neuen Lauf starten.
+
+Vorherige Erweiterung v14: [Ausschüttungssteuer mit Brutto-/Nettoansicht](DISTRIBUTION_TAX_MODEL.md) und [kontrollierter 600-Monats-Vergleich](../qa/tax-v14-comparison.md).
 
 Eine lokale React-/Tailwind-Ansicht zeigt eine kleine, monatlich laufende Modellwirtschaft. Jeder Schritt wird über eine lokale Python-Schnittstelle mit dem bereits geprüften BPTK-Agentenscheduler neu ausgeführt. [Modellkonzept, Regeln und Systemgrenze](WORLD_MODEL.md). Keine öffentliche Instanz, keine kalibrierte Volkswirtschaft.
 
@@ -41,7 +43,7 @@ Die Übersicht **Guthaben im Inland und Ausland** trennt aktuelle Inlandsguthabe
 
 13. **Staat → Details öffnen → Ausgabenplan und finanzierte öffentliche Arbeit** zeigt Defizitreaktion, genehmigte und bezahlte Stellen, Beschaffung, Soziallücken und alte Lohnansprüche. Monatsauswahl und Verläufe trennen Bedarfssaldo und tatsächlichen Zahlungssaldo. [Budgetregel](PUBLIC_BUDGET_MODEL.md), [600-Monats-Vergleich](../qa/fiscal-v13-comparison.md).
 
-Modell v14: [Systemgrenze und Unternehmenskonzept](COMPANY_MODEL.md). Der Grundbedarfsplan von 1.000 € pro Haushalt und Monat darf auch aus vorhandenem Kontoguthaben finanziert werden. Höhere einkommensabhängige Kaufpläne bleiben möglich. Geld- und Warenmangel begrenzen die tatsächlichen Käufe. Die früheren V1-Regeln und ihre Langzeitgrenzen sind [dokumentiert](../qa/circular-flow-v1-limitations-2026-11-02.json).
+Modell v15: [Systemgrenze und Unternehmenskonzept](COMPANY_MODEL.md). Der Grundbedarfsplan von 1.000 € pro Haushalt und Monat darf auch aus vorhandenem Kontoguthaben finanziert werden. Höhere einkommensabhängige Kaufpläne bleiben möglich. Geld- und Warenmangel begrenzen die tatsächlichen Käufe. Die früheren V1-Regeln und ihre Langzeitgrenzen sind [dokumentiert](../qa/circular-flow-v1-limitations-2026-11-02.json).
 
 Läufe leben im Arbeitsspeicher des lokalen Servers. Die Berechnung schreitet durch Anfragen des geöffneten Browsers voran; es gibt keinen unabhängigen Hintergrunddienst nach dem Schließen. Kein automatischer Stopp nach 24 Monaten; bis zu 64 gleichzeitig gespeicherte Läufe. Die Anzeige zeigt die letzten 36 Abschlüsse, der Export behält die gesamte Vergangenheit. Es gibt keine Zusicherung unbegrenzt langer Rechenzeit oder empirischer Langzeitgültigkeit. Serverneustart verliert die laufenden Welten; ein JSON-Export ist kein implementierter Wiederherstellungspunkt. Bei Fehlern hält die Ansicht an und zeigt den letzten bestätigten Zustand ausdrücklich weiter.
 
@@ -93,4 +95,4 @@ Die frühen Monate sind eine Einlaufphase ohne eingeregeltes Gleichgewicht. Ein 
 
 ## Gegenlauf mit kleineren Gütereinheiten
 
-Der [600-Monats-Vergleich zur Güterstückelung](../qa/goods-granularity-comparison.md) verwendet 100 Teile je bisheriger Einheit und dieselben Steuer- und Verhaltensregeln. [Umrechnung, Systemgrenze und Prüfungen](GOODS_GRANULARITY_EXPERIMENT.md). Die normale Oberfläche startet weiterhin mit den bisherigen Einheiten; der Gegenlauf ist als reproduzierbares Forschungsexperiment verfügbar.
+Der [600-Monats-Vergleich zur Güterstückelung](../qa/goods-granularity-comparison.md) verwendet 100 Teile je bisheriger Einheit und dieselben Steuer- und Verhaltensregeln. [Umrechnung, Systemgrenze und Prüfungen](GOODS_GRANULARITY_EXPERIMENT.md). Seit v15 startet die normale Oberfläche mit 100 Teilen. Der archivierte Vergleich bleibt unverändert; historische Reproduktionsskripte setzen den ursprünglichen Faktor ausdrücklich. Zahlengebundene Tests alter Läufe verwenden ebenfalls `goods_unit_scale=1`, während neue Standard- und Buchungstests den feinen Lauf prüfen.

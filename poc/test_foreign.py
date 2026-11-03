@@ -15,7 +15,7 @@ class ForeignTradeTests(unittest.TestCase):
         self.assertTrue(all(o['funded_units']==0 for o in trade['plan']['orders']))
 
     def test_next_month_exports_pay_and_deliver_whole_goods(self):
-        w=World()
+        w=World(goods_unit_scale=1)
         for _ in range(10):w.step()
         t=w.foreign.snapshot(w);rows=t['deliveries']
         self.assertEqual(t['plan']['budget_cents'],72000)
@@ -31,7 +31,7 @@ class ForeignTradeTests(unittest.TestCase):
             self.assertGreater(d['cost_cents'],0)
 
     def test_cash_available_but_no_stock_means_no_export(self):
-        w=World();w.pay('staat','ausland',100000,'fixture','Expliziter Testanschluss')
+        w=World(goods_unit_scale=1);w.pay('staat','ausland',100000,'fixture','Expliziter Testanschluss')
         w.month=1;w.phase=2;w.foreign.begin_month(w)
         w.foreign.purchase(w)
         self.assertEqual(w.foreign.deliveries,[])
@@ -41,7 +41,7 @@ class ForeignTradeTests(unittest.TestCase):
         w.check()
 
     def test_reserved_goods_are_not_exported_and_execution_is_once_per_month(self):
-        w=World();w.pay('staat','ausland',100000,'fixture','Expliziter Testanschluss')
+        w=World(goods_unit_scale=1);w.pay('staat','ausland',100000,'fixture','Expliziter Testanschluss')
         n=w.nodes['werkstatt'];n['inventory']=8;n['reserved_units']=8
         n['company']['inventory_value_cents']=80000
         w.month=1;w.phase=2;w.foreign.begin_month(w);w.foreign.purchase(w)

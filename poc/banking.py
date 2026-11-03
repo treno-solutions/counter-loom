@@ -68,7 +68,7 @@ class Banking:
             loan.message = 'Anfrage wartet: positives Bankkapital und ein Betrieb mit Beschäftigten sind Voraussetzung.'
             return True
         if supplier['inventory'] - supplier.get('reserved_units', 0) < loan.units:
-            loan.message = 'Anfrage wartet auf acht verfügbare Werkstatteinheiten für die Maschine.'
+            loan.message = f'Anfrage wartet auf {loan.units} verfügbare Werkstatteinheiten für die Maschine.'
             return True
         loan.amount_cents=loan.units*supplier['price']
         loan.monthly_principal_cents=(loan.amount_cents+loan.term_months-1)//loan.term_months
@@ -110,7 +110,7 @@ class Banking:
         loan.delivery_month = world.month
         loan.status = 'delivered'
         loan.message = 'Maschine bezahlt und geliefert. Ab nächstem Monat wirkt die Kapazität und beginnt der Schuldendienst.'
-        world.notice(f'Kreditfinanzierte Maschine geliefert: {loan.amount_cents/100:.2f} € gehen an die Werkstatt, ab Folgemonat +4 Einheiten Vollzeitkapazität, bei Teilzeit anteilig.', loan.borrower)
+        world.notice(f'Kreditfinanzierte Maschine geliefert: {loan.amount_cents/100:.2f} € gehen an die Werkstatt, ab Folgemonat +{4*world.goods_unit_scale} Wareneinheiten Vollzeitkapazität, bei Teilzeit anteilig.', loan.borrower)
 
     def due(self,world,month=None):
         loan=self.loan

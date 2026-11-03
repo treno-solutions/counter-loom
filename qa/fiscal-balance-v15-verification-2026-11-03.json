@@ -1,0 +1,45 @@
+{
+  "date": "2026-11-03",
+  "model": "illustrative_circular_flow_v15",
+  "change": "Default goods_unit_scale is 100; fiscal, tax and behavioral rules unchanged",
+  "tests": {
+    "command": "python -m unittest discover -s poc -p 'test_*.py'",
+    "passed": 163,
+    "historical_numeric_fixtures": "Explicit goods_unit_scale=1 preserves archived whole-unit expectations; independent default and fine-unit accounting tests cover the new standard",
+    "new_diagnostic_tests": 3,
+    "frontend_responses": 122,
+    "frontend_scope": "Current fine default and explicit coarse control, initial state and every phase through 12 months with energy shock and closure",
+    "build": "passed"
+  },
+  "reproduction": {
+    "months": 600,
+    "phases": 3000,
+    "default_matches_archived_fine_run_every_month": true,
+    "reference": "qa/goods-granularity-comparison-2026-11-03.json",
+    "source_hashes_verified": true,
+    "fiscal_and_household_cash_bridges_verified_each_month": true,
+    "window": [481,600],
+    "no_unfunded_social_reference_need_in_window": true,
+    "no_new_machine_credit": true,
+    "bank_equity_unchanged": true
+  },
+  "browser": {
+    "tool": "BrowserOS neo",
+    "desktop_viewport": [1366,900],
+    "mobile_viewport": [390,844],
+    "mobile_document_width": 390,
+    "month_one_household_purchase_cents": 159400,
+    "month_one_household_lot_remainder_cents": 200,
+    "goods_example": "877 units at 1 euro and 478 units at 1.50 euros",
+    "version": 15,
+    "alerts": 0
+  },
+  "figure": {
+    "path": "qa/fiscal-balance-v15-diagnosis.svg",
+    "tool": "Matplotlib",
+    "visual_review": "Revenue and expense stacks plus a cash bridge waterfall; labels and legend checked"
+  },
+  "interpretation": "Accounting diagnosis of the unchanged run; it is not an isolated intervention on saving, shortages, interest or transfers",
+  "data": "qa/fiscal-balance-v15-diagnosis-2026-11-03.json",
+  "report": "qa/fiscal-balance-v15-diagnosis.md"
+}

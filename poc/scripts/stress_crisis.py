@@ -12,9 +12,9 @@ parser.add_argument('--months',type=int,default=600)
 parser.add_argument('--output',default='.framework-review/crisis-long-horizon.json')
 args=parser.parse_args()
 if args.months<36:parser.error('At least 36 months are needed for the closure and reopening comparison.')
-out={'model':'illustrative_circular_flow_v14','fiscal_policy':args.fiscal_policy,'distribution_policy':args.distribution_policy,'purpose':'Long-horizon rule stress test; not a forecast or calibration','horizon_months':args.months,'runs':[]}
+out={'model':'illustrative_circular_flow_v15','fiscal_policy':args.fiscal_policy,'distribution_policy':args.distribution_policy,'purpose':'Long-horizon rule stress test; not a forecast or calibration','horizon_months':args.months,'runs':[]}
 for name,rate in [('baseline',None),('closure_without_support',0),('closure_with_support',6000)]:
- w=World(distribution_tax_bps=0,distribution_policy=args.distribution_policy,fiscal_policy=args.fiscal_policy);rows=[];checkpoints=[];first={};beg=time.time()
+ w=World(goods_unit_scale=1,distribution_tax_bps=0,distribution_policy=args.distribution_policy,fiscal_policy=args.fiscal_policy);rows=[];checkpoints=[];first={};beg=time.time()
  for month in range(1,args.months+1):
   if month==25 and rate is not None:w.crisis.queue(w,'werkstatt',3,rate)
   for _ in range(5):w.step()

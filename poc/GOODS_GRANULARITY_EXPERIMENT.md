@@ -1,10 +1,10 @@
 # Prüfung kleinerer Gütereinheiten
 
-Der kontrollierte Vergleich untersucht, wie die bisherige grobe Stückelung die Modellwirtschaft über 600 Monate verändert. Die normale Modellkonfiguration bleibt bei einer Einheit je bisheriger Gütermenge. Der Forschungsgegenlauf verwendet 100 Teile. [Ergebnisse und Diagramme](../qa/goods-granularity-comparison.md).
+Der kontrollierte Vergleich untersucht, wie die bisherige grobe Stückelung die Modellwirtschaft über 600 Monate verändert. Seit v15 verwendet die normale Modellkonfiguration 100 Teile je bisheriger Gütermenge. Der archivierte Forschungsgegenlauf prüfte vor dieser Übernahme dieselbe feinere Auflösung gegen die ursprüngliche Stückelung. [Ergebnisse und Diagramme](../qa/goods-granularity-comparison.md).
 
 ## Einheitenumrechnung
 
-`World(goods_unit_scale=100)` ersetzt jede ursprüngliche Gütereinheit durch 100 Teile. Unterstützt werden die Teilungsfaktoren 1, 10 und 100, sodass Grundpreise und Energie je Einheit weiterhin in ganzen Cent darstellbar sind. Der Faktor wird mit dem Zustand exportiert. `export_orders_units` in der Konstruktion bleibt in ursprünglichen Einheiten definiert und wird intern umgerechnet.
+`World()` beziehungsweise `World(goods_unit_scale=100)` ersetzt jede ursprüngliche Gütereinheit durch 100 Teile. Unterstützt werden die Teilungsfaktoren 1, 10 und 100, sodass Grundpreise und Energie je Einheit weiterhin in ganzen Cent darstellbar sind. Der Faktor wird mit dem Zustand exportiert. `export_orders_units` in der Konstruktion bleibt in ursprünglichen Einheiten definiert und wird intern umgerechnet.
 
 | Grösse | Umrechnung bei Faktor 100 |
 | --- | --- |

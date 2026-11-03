@@ -9,7 +9,7 @@ class BusinessOperationTests(unittest.TestCase):
         for _ in range(5):w.step()
 
     def test_half_time_pays_half_wages_and_scales_capacity(self):
-        w=World();n=w.nodes['alltag'];n['company']['next_work_bps']=5000
+        w=World(goods_unit_scale=1);n=w.nodes['alltag'];n['company']['next_work_bps']=5000
         w.step();p=n['company']['plan']
         self.assertEqual((p['wage_per_worker_cents'],p['wages_due_cents']),(120000,240000))
         self.assertEqual((p['capacity_units'],n['metrics']['produced_units']),(36,36))
@@ -17,7 +17,7 @@ class BusinessOperationTests(unittest.TestCase):
         w.step();self.assertEqual(w.nodes['h1']['metrics']['tax'],36000)
 
     def test_capacity_rounds_combined_work_and_machine_once(self):
-        w=World();n=w.nodes['alltag'];n['employees'].remove('h2');w.nodes['h2']['employer']=None
+        w=World(goods_unit_scale=1);n=w.nodes['alltag'];n['employees'].remove('h2');w.nodes['h2']['employer']=None
         n['capital']=1;n['company']['forecast_milli']=10000;n['company']['next_work_bps']=3250
         w.step()
         self.assertEqual(n['company']['plan']['capacity_units'],13)
@@ -25,7 +25,7 @@ class BusinessOperationTests(unittest.TestCase):
         self.assertEqual(n['metrics']['wages'],78000)
 
     def test_low_demand_supports_fractional_work(self):
-        w=World();n=w.nodes['alltag'];n['company']['forecast_milli']=10000
+        w=World(goods_unit_scale=1);n=w.nodes['alltag'];n['company']['forecast_milli']=10000
         self.assertEqual(staffing(n,1)[0],1)
         option=outlook(n,1,1,3612)
         self.assertEqual(option['projected_gap_cents'],0)
@@ -62,7 +62,7 @@ class BusinessOperationTests(unittest.TestCase):
         return n
 
     def test_restart_needs_two_funded_checks_and_acts_next_month(self):
-        w=World();n=self.suspend(w);n['company']['forecast_milli']=60000;n['company']['bridge_months']=3
+        w=World(goods_unit_scale=1);n=self.suspend(w);n['company']['forecast_milli']=60000;n['company']['bridge_months']=3
         w.close_company(n)
         self.assertEqual(n['company']['next_status'],'mothballed')
         self.assertEqual(n['company']['restart_signal'],1)

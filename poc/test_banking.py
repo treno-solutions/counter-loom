@@ -4,7 +4,7 @@ from world import World, world_request, WORLDS
 
 class BankingTests(unittest.TestCase):
     def issue(self):
-        w=World();w.banking.request(w)
+        w=World(goods_unit_scale=1);w.banking.request(w)
         for _ in range(4):w.step()
         self.assertEqual(w.banking.loan.status,'credited')
         return w
@@ -112,14 +112,14 @@ class BankingTests(unittest.TestCase):
 
 class PlausibilityRegressionTests(unittest.TestCase):
     def test_unfunded_public_wish_does_not_become_effective_demand(self):
-        w=World(government_credit_limit_cents=0);w.pay('staat','ausland',8000000,'fixture','Testanschluss')
+        w=World(goods_unit_scale=1,government_credit_limit_cents=0);w.pay('staat','ausland',8000000,'fixture','Testanschluss')
         w.nodes['alltag']['inventory']=100
         self.assertEqual(w.buy('staat','alltag',120000,'procurement'),0)
         self.assertEqual(w.nodes['alltag']['metrics']['unmet_units'],0)
         self.assertEqual(w.nodes['alltag']['metrics']['unfunded_units'],12)
 
     def test_zero_cash_does_not_produce_without_paid_energy(self):
-        w=World();w.pay('alltag','ausland',2400000,'fixture','Testanschluss');w.phase=0;w.month=1
+        w=World(goods_unit_scale=1);w.pay('alltag','ausland',2400000,'fixture','Testanschluss');w.phase=0;w.month=1
         w.act('alltag')
         self.assertEqual(w.nodes['alltag']['metrics']['production_plan'],72)
         self.assertEqual(w.nodes['alltag']['metrics']['produced_units'],0)

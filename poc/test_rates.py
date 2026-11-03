@@ -27,7 +27,7 @@ class RateTests(unittest.TestCase):
         self.assertEqual(w.nodes['werkstatt']['company']['plan']['interest_due_cents'],2000)
 
     def test_existing_machine_is_fixed_and_offer_updates(self):
-        w=World();w.banking.request(w);self.finish_month(w)
+        w=World(goods_unit_scale=1);w.banking.request(w);self.finish_month(w)
         w.monetary.queue(w,400);w.step()
         self.assertEqual(w.banking.loan.annual_rate_bps,600)
         self.assertEqual(w.monetary.machine_offer(),800)
@@ -35,7 +35,7 @@ class RateTests(unittest.TestCase):
         self.assertEqual(w.banking.loan.policy_rate_at_issue_bps,200)
 
     def test_new_machine_locks_rate_at_issue_not_request(self):
-        w=World();w.banking.request(w);w.monetary.queue(w,400)
+        w=World(goods_unit_scale=1);w.banking.request(w);w.monetary.queue(w,400)
         self.finish_month(w)
         self.assertEqual(w.banking.loan.annual_rate_bps,800)
         self.assertEqual(w.banking.loan.policy_rate_at_issue_bps,400)
@@ -45,7 +45,7 @@ class RateTests(unittest.TestCase):
         self.assertEqual(w.monetary.machine_offer(),400)
 
     def test_waiting_machine_request_is_not_a_rate_lock(self):
-        w=World();w.banking.request(w)
+        w=World(goods_unit_scale=1);w.banking.request(w)
         w.nodes['werkstatt']['inventory']=0;w.phase=3;w.month=1
         w.banking.originate(w)
         self.assertEqual(w.banking.loan.status,'requested')

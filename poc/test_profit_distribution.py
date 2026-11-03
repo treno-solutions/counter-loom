@@ -66,7 +66,7 @@ class ProfitTests(unittest.TestCase):
         for h in w.household_month:self.assertEqual(h['prior_dividend_cents'],carries[h['id']])
 
     def test_credited_machine_amount_is_protected_in_real_closure_overlap(self):
-        w=World();w.banking.request(w)
+        w=World(goods_unit_scale=1);w.banking.request(w)
         for _ in range(4):w.step()
         self.assertEqual(w.banking.loan.status,'credited')
         # Controlled delivery port: supplier is externally closed before delivery.

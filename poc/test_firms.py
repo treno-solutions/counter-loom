@@ -5,7 +5,7 @@ from firms import plan, staffing, forecast
 
 class FirmTests(unittest.TestCase):
     def test_full_stock_stops_production_but_not_payroll(self):
-        w=World();n=w.nodes['alltag'];n['inventory']=100
+        w=World(goods_unit_scale=1);n=w.nodes['alltag'];n['inventory']=100
         w.step()
         self.assertEqual(n['metrics']['produced_units'],0)
         self.assertEqual(n['metrics']['wages'],480000)
@@ -43,7 +43,7 @@ class FirmTests(unittest.TestCase):
         self.assertEqual(n['metrics']['cost_of_sales'],100)
 
     def test_unfunded_orders_do_not_increase_forecast(self):
-        w=World();n=w.nodes['alltag'];c=n['company']
+        w=World(goods_unit_scale=1);n=w.nodes['alltag'];c=n['company']
         forecast(c,0)
         self.assertEqual(c['forecast_milli'],45000)
         self.assertEqual(plan(n,1)['demand_units'],45)
@@ -80,7 +80,7 @@ class FirmTests(unittest.TestCase):
         self.assertEqual(before,w.snapshot())
 
     def test_working_buffer_covers_retained_staff_and_next_loan_instalment(self):
-        w=World();w.banking.request(w)
+        w=World(goods_unit_scale=1);w.banking.request(w)
         for _ in range(5):w.step()
         for key in ('alltag','werkstatt'):
             n=w.nodes[key];r=n['company']['result']
@@ -92,7 +92,7 @@ class FirmTests(unittest.TestCase):
 
     def test_late_credit_request_is_allowed_before_final_close(self):
         # Preserve the V11 stock fixture; the surplus policy has a different demand path.
-        w=World(horizon_months=24,distribution_policy='legacy',fiscal_policy='legacy')
+        w=World(goods_unit_scale=1,horizon_months=24,distribution_policy='legacy',fiscal_policy='legacy')
         for _ in range(116):w.step()
         self.assertEqual((w.month,w.phase),(24,0))
         w.banking.request(w)

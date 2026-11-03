@@ -1,4 +1,6 @@
-# Laufende Modellwirtschaft · aktuelle Fassung v14
+# Laufende Modellwirtschaft · aktuelle Fassung v15
+
+V15 übernimmt die feineren Gütereinheiten als Standard: Startpreise 1 € und 1,50 €, entsprechend 0,01 der bisherigen Gütermenge. Reale Kapazitäten, Energie und Maschinenmengen sind gemeinsam umgerechnet; Steuer- und Verhaltensregeln bleiben erhalten. [Diagnose des verbleibenden Staatsdefizits](../qa/fiscal-balance-v15-diagnosis.md). Neue Läufe verwenden `goods_unit_scale=100`; historische Gegenläufe nennen `1` ausdrücklich.
 
 V14 ergänzt die [Ausschüttungssteuer](DISTRIBUTION_TAX_MODEL.md): 25 % illustrative Quellensteuer auf tatsächlich gezahlte Firmen- und Bankausschüttungen. Brutto, Steuer und Netto werden getrennt gebucht und gezeigt. [600-Monats-Vergleich](../qa/tax-v14-comparison.md).
 
@@ -36,7 +38,7 @@ Die Reihenfolge bleibt Produktion/Löhne → Steuern/Transfers → Käufe einsch
 
 ## Unternehmensentwicklung v4
 
-V4 ersetzte die früheren Produktions-, Personal- und Gewinnregeln: geglättete finanzierbare Nachfrage, Lagerpuffer, durch bezahlte Inputs begrenzte Produktion, gleitende Lagerkosten, verzögerte tragfähige Stellenplanung und tatsächliche begrenzte Eigentümerausschüttung. Energie kostet 5 € je Alltags- beziehungsweise 9 € je Werkstatteinheit, beim Energieschock doppelt so viel. Ein Lohn verursacht auch bei ungenutzter Kapazität Aufwand. Die sechs Haushalte sind zu gleichen Teilen Eigentümer. Seit v14 gehen Ausschüttungen nach dem getrennten Einbehalt der Ausschüttungssteuer netto in den folgenden Kaufplan ein. Kreditlieferung erfolgt vor dem Unternehmensabschluss; Kreditgutschrift, Tilgung und Maschinenkauf bleiben getrennte Vorgänge.
+V4 ersetzte die früheren Produktions-, Personal- und Gewinnregeln: geglättete finanzierbare Nachfrage, Lagerpuffer, durch bezahlte Inputs begrenzte Produktion, gleitende Lagerkosten, verzögerte tragfähige Stellenplanung und tatsächliche begrenzte Eigentümerausschüttung. In der ursprünglichen Stückelung kostete Energie 5 € je Alltags- beziehungsweise 9 € je Werkstatteinheit. Seit v15 kostet ein Hundertstel 0,05 € beziehungsweise 0,09 €; beim Energieschock jeweils doppelt so viel. Ein Lohn verursacht auch bei ungenutzter Kapazität Aufwand. Die sechs Haushalte sind zu gleichen Teilen Eigentümer. Seit v14 gehen Ausschüttungen nach dem getrennten Einbehalt der Ausschüttungssteuer netto in den folgenden Kaufplan ein. Kreditlieferung erfolgt vor dem Unternehmensabschluss; Kreditgutschrift, Tilgung und Maschinenkauf bleiben getrennte Vorgänge.
 
 ## Historische Entwicklung bis v3
 
@@ -140,4 +142,4 @@ Seit V10 können Personal- und Anfangsverläufe von den beschriebenen V9-Knicken
 
 ## Numerische Auflösung der Gütermengen
 
-Ein separater [Gegenlauf über 600 Monate](../qa/goods-granularity-comparison.md) untersucht Hundertstel der bisherigen Gütereinheiten. Der Startwert bleibt `goods_unit_scale=1`; `100` erhöht die Auflösung und rechnet Stückpreise, Energie und reale Kapazitäten gemeinsam um. Die Steuer-, Budget- und Verhaltensregeln bleiben erhalten. [Einheiten und Grenzen des Experiments](GOODS_GRANULARITY_EXPERIMENT.md). Die Gegenüberstellung misst die Wirkung feinerer Warenmengen einschliesslich Produktions- und Lagerrundung.
+Ein separater [Gegenlauf über 600 Monate](../qa/goods-granularity-comparison.md) untersucht Hundertstel der bisherigen Gütereinheiten. Seit v15 ist `goods_unit_scale=100` der Startwert; `1` bleibt für historische Kontrollläufe verfügbar. Stückpreise, Energie und reale Kapazitäten sind gemeinsam umgerechnet. Die Steuer-, Budget- und Verhaltensregeln bleiben erhalten. [Einheiten und Grenzen des Experiments](GOODS_GRANULARITY_EXPERIMENT.md). Die Gegenüberstellung misst die Wirkung feinerer Warenmengen einschliesslich Produktions- und Lagerrundung.

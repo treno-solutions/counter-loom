@@ -9,14 +9,14 @@ class PricingTests(unittest.TestCase):
         for _ in range(5):w.step()
 
     def test_no_energy_change_keeps_starting_prices_and_index(self):
-        w=World()
+        w=World(goods_unit_scale=1)
         for _ in range(24):
             self.finish(w);m=w.history[-1]['market']
             self.assertEqual([f['unit_price_cents'] for f in m['firms']],[10000,15000])
             self.assertEqual((m['price_index_bps'],m['purchasing_power_bps']),(10000,10000))
 
     def test_lag_limit_and_partial_energy_cost_target(self):
-        w=World();self.finish(w);w.queue('energy');self.finish(w)
+        w=World(goods_unit_scale=1);self.finish(w);w.queue('energy');self.finish(w)
         self.assertEqual([w.nodes[k]['price'] for k in BASE_PRICES],[10000,15000])
         self.assertEqual(w.history[-1]['market']['firms'][0]['energy_unit_cents'],1000)
         for expected in ([10100,15150],[10201,15301],[10250,15450]):
@@ -37,7 +37,7 @@ class PricingTests(unittest.TestCase):
         self.assertEqual(stock,{k:(w.nodes[k]['inventory'],w.nodes[k]['company']['inventory_value_cents']) for k in BASE_PRICES})
 
     def test_higher_prices_buy_less_with_identical_budget_and_available_stock(self):
-        w=World();n=w.nodes['alltag'];n['inventory']=100;n['company']['inventory_value_cents']=500000
+        w=World(goods_unit_scale=1);n=w.nodes['alltag'];n['inventory']=100;n['company']['inventory_value_cents']=500000
         before=w.buy('h1','alltag',100000)
         n['price']=10250
         after=w.buy('h2','alltag',100000)
@@ -45,13 +45,13 @@ class PricingTests(unittest.TestCase):
         self.assertEqual(w.journal[-1]['amount_cents'],9*10250)
 
     def test_foreign_plan_uses_the_new_month_prices(self):
-        w=World();w.queue('energy');self.finish(w);w.step()
+        w=World(goods_unit_scale=1);w.queue('energy');self.finish(w);w.step()
         for o in w.foreign.plan['orders']:
             self.assertEqual(o['desired_cents'],o['desired_units']*w.nodes[o['seller']]['price'])
         self.assertEqual(w.foreign.plan['desired_cents'],6*10100+2*15150)
 
     def test_machine_quote_locks_actual_eight_unit_cost_and_last_repayment(self):
-        w=World();w.nodes['werkstatt']['price']=15451
+        w=World(goods_unit_scale=1);w.nodes['werkstatt']['price']=15451
         quote=w.banking.snapshot(w)['loan'];self.assertEqual(quote['amount_cents'],8*15451)
         w.nodes['werkstatt']['inventory']=8;w.nodes['werkstatt']['company']['inventory_value_cents']=100000
         w.month=1;w.phase=3;w.banking.request(w);w.banking.originate(w)
@@ -66,7 +66,7 @@ class PricingTests(unittest.TestCase):
         self.assertEqual([t['amount_cents'] for t in w.journal if t['kind']=='machine_principal'][-1],10297)
 
     def test_history_goods_reconcile_under_24_month_energy_shock(self):
-        w=World();w.queue('energy')
+        w=World(goods_unit_scale=1);w.queue('energy')
         for _ in range(24):
             self.finish(w);m=w.history[-1]
             for h in m['households']:
@@ -80,7 +80,7 @@ class PricingTests(unittest.TestCase):
         self.assertEqual(w.history[0]['market']['firms'][0]['unit_price_cents'],10000)
 
     def test_reference_and_price_caps_apply_to_decreases_too(self):
-        w=World();w.queue('energy')
+        w=World(goods_unit_scale=1);w.queue('energy')
         for _ in range(5):self.finish(w)
         w.energy_multiplier=1;w.month+=1;w.pricing.begin_month(w)
         self.assertEqual(w.nodes['alltag']['price'],10250)
@@ -90,7 +90,7 @@ class PricingTests(unittest.TestCase):
         self.assertEqual(w.nodes['alltag']['price'],10148)
 
     def test_delayed_machine_delivery_keeps_original_unit_price(self):
-        w=World();w.nodes['werkstatt']['inventory']=8
+        w=World(goods_unit_scale=1);w.nodes['werkstatt']['inventory']=8
         w.nodes['werkstatt']['company']['inventory_value_cents']=100000
         w.month=1;w.phase=3;w.banking.request(w);w.banking.originate(w)
         w.nodes['werkstatt']['price']=15450

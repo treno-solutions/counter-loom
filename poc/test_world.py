@@ -54,7 +54,7 @@ class WorldTests(unittest.TestCase):
         self.assertEqual(sum(n['cash_cents'] for n in w.nodes.values()),total)
 
     def test_investment_delivery_adds_capacity_not_forced_output(self):
-        w=World();w.banking.request(w)
+        w=World(goods_unit_scale=1);w.banking.request(w)
         for _ in range(4):w.step()
         produced=w.nodes['alltag']['metrics']['produced_units']
         w.step()
@@ -165,7 +165,7 @@ class HouseholdReserveRegressionTests(unittest.TestCase):
             self.assertEqual(plan['alltag_budget']+plan['werkstatt_budget'],expected)
 
     def test_existing_cash_is_actually_paid_to_selling_firms(self):
-        w=World(government_credit_limit_cents=0)
+        w=World(goods_unit_scale=1,government_credit_limit_cents=0)
         # Controlled port fixture: no new income, but available household cash and goods.
         w.phase=1;w.month=1
         w.pay('staat','ausland',w.nodes['staat']['cash_cents'],'test_fixture','Expliziter Testanschluss')

@@ -106,8 +106,8 @@
   },
   {
     "path": "poc/source-manifest.json",
-    "bytes": 12868,
-    "sha256": "34e14e65ed1d4d395c7fb2622e8ac3f569cb1e9cc0137a6280d731d7975072c8"
+    "bytes": 13346,
+    "sha256": "f42ea1fb0b0dcf6e6c8b98e7b26c3a0a63e5e64fef7a1138a1d10c0cebb76fba"
   },
   {
     "path": "processed/energy-monthly-prices.csv",
@@ -373,6 +373,26 @@
     "path": "qa/fiscal-and-household-v2-2026-11-02.json",
     "bytes": 4049,
     "sha256": "6c38c04a8d88f97f0f8d73d59f2d5ddfb649ab3800802d5151179201198989f1"
+  },
+  {
+    "path": "qa/fiscal-balance-v15-diagnosis-2026-11-03.json",
+    "bytes": 3006057,
+    "sha256": "93a4c3072a7626eccbcfff4e968460b652b6ce2c457963aa285690559d8f7f6b"
+  },
+  {
+    "path": "qa/fiscal-balance-v15-diagnosis.md",
+    "bytes": 7315,
+    "sha256": "5c7557b832d5e22131046641c89e44b1efec059c04da7c3cd45c7bf328d44282"
+  },
+  {
+    "path": "qa/fiscal-balance-v15-diagnosis.svg",
+    "bytes": 33879,
+    "sha256": "5aa148b973f3f23ea3a229a522fa9522089f94249fdd5025477b4db080001850"
+  },
+  {
+    "path": "qa/fiscal-balance-v15-verification-2026-11-03.json",
+    "bytes": 1954,
+    "sha256": "bea5a64139f7476f3341630838b9c70ff1cf0baff8cb0437ffb98c321d48354f"
   },
   {
     "path": "qa/fiscal-policy-v9-plausibility.json",

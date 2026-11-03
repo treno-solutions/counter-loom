@@ -5,7 +5,7 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from world import World
 
 def run(months,rate,reference):
-    w=World(distribution_tax_bps=rate);rows=[];first={};start=time.monotonic()
+    w=World(goods_unit_scale=1,distribution_tax_bps=rate);rows=[];first={};start=time.monotonic()
     for month in range(1,months+1):
         for _ in range(5):w.step(emit_snapshot=False)
         h=w.history[-1];g=w.treasury.monthly(w);budget=w.budget.monthly(w)
@@ -27,6 +27,6 @@ if __name__=='__main__':
     if not 1<=args.months<=600:p.error('Choose 1..600 months.')
     archive=Path('qa/fiscal-v13-comparison-2026-11-03.json');reference=json.loads(archive.read_text())['runs'][1]['monthly']
     files=('poc/world.py','poc/treasury.py','poc/public_budget.py','poc/distribution_tax.py','poc/profit_distribution.py','poc/scripts/compare_distribution_tax.py')
-    data=dict(model='illustrative_circular_flow_v14',months=args.months,fiscal_policy='adaptive',distribution_policy='surplus',intervention='Only distribution withholding differs: 0 vs 2500 basis points. Identical initial conditions; no shocks. Illustrative assumption, no statutory tax claim.',reference=str(archive),reference_sha256=hashlib.sha256(archive.read_bytes()).hexdigest(),source_sha256={f:hashlib.sha256(Path(f).read_bytes()).hexdigest() for f in files},runs=[])
+    data=dict(model='illustrative_circular_flow_v15',months=args.months,fiscal_policy='adaptive',distribution_policy='surplus',intervention='Only distribution withholding differs: 0 vs 2500 basis points. Identical initial conditions; no shocks. Illustrative assumption, no statutory tax claim.',reference=str(archive),reference_sha256=hashlib.sha256(archive.read_bytes()).hexdigest(),source_sha256={f:hashlib.sha256(Path(f).read_bytes()).hexdigest() for f in files},runs=[])
     for rate in (0,2500):
         data['runs'].append(run(args.months,rate,reference));target=Path(args.output);target.parent.mkdir(parents=True,exist_ok=True);target.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')

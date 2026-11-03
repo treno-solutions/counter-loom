@@ -4,10 +4,20 @@ from world import World
 from firms import plan,full_capacity,staffing
 
 class GoodsGranularityTests(unittest.TestCase):
+    def test_new_world_defaults_to_fine_units(self):
+        w=World()
+        self.assertEqual(w.goods_unit_scale,100)
+        self.assertEqual(w.nodes['alltag']['price'],100)
+        self.assertEqual(w.nodes['werkstatt']['price'],150)
+        self.assertEqual(w.banking.loan.units,800)
+        self.assertEqual(w.snapshot()['classification'],'illustrative_circular_flow_v15')
+        self.assertIn('800 Werkstatteinheiten',w.snapshot()['rules']['bank'])
+        self.assertIn('600 Alltags- und 200 Werkstatteinheiten',w.snapshot()['rules']['external'])
+
     def test_supported_scales_and_unchanged_money_stocks(self):
         for bad in (0,2,-1,True,100.0,'100'):
             with self.assertRaises(ValueError):World(goods_unit_scale=bad)
-        original=World()
+        original=World(goods_unit_scale=1)
         for scale in (10,100):
             w=World(goods_unit_scale=scale)
             self.assertEqual(w.initial,original.initial)
@@ -21,7 +31,7 @@ class GoodsGranularityTests(unittest.TestCase):
             self.assertEqual(w.pricing.market(w)['price_index_bps'],10000)
 
     def test_initial_physical_capacity_energy_and_cash_plans_are_equivalent(self):
-        a,b=World(),World(goods_unit_scale=100)
+        a,b=World(goods_unit_scale=1),World(goods_unit_scale=100)
         for f in ('alltag','werkstatt'):
             na,nb=a.nodes[f],b.nodes[f]
             pa,pb=plan(na,1),plan(nb,1)
@@ -35,7 +45,7 @@ class GoodsGranularityTests(unittest.TestCase):
         self.assertEqual({k:n['cash_cents'] for k,n in a.nodes.items()},{k:n['cash_cents'] for k,n in b.nodes.items()})
 
     def test_first_purchase_reduces_unit_remainder_without_altering_budget(self):
-        a,b=World(),World(goods_unit_scale=100)
+        a,b=World(goods_unit_scale=1),World(goods_unit_scale=100)
         for _ in range(3):a.step(False);b.step(False)
         for ha,hb in zip(a.household_month,b.household_month):
             self.assertEqual(ha['desired_cents'],hb['desired_cents'])

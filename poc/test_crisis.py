@@ -81,7 +81,7 @@ class ClosureTests(unittest.TestCase):
         w.check()
 
     def test_machine_reservation_survives_closed_supplier(self):
-        w=World();w.banking.request(w)
+        w=World(goods_unit_scale=1);w.banking.request(w)
         for _ in range(4):w.step()
         self.assertEqual(w.banking.loan.status,'credited')
         # Queue normally takes effect next month; a credited contract awaiting funds
