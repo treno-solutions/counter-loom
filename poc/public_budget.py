@@ -7,9 +7,19 @@ TRANSFER = GovernmentSystem.transfer_per_unemployed
 PROCUREMENT = GovernmentSystem.procurement_per_firm
 
 class PublicBudget:
-    def __init__(self, world, policy):
-        if policy not in ('legacy','adaptive'):raise ValueError('Ungültige staatliche Budgetregel.')
+    def __init__(self, world, policy, horizon_months=12):
+        if policy not in ('legacy','adaptive','quarterly','buffered_quarterly','funding_only'):raise ValueError('Ungültige staatliche Budgetregel.')
+        if type(horizon_months) is not int or not 1<=horizon_months<=120:raise ValueError('Ungültiger Budgethorizont.')
         self.policy=policy
+        self.horizon_months=horizon_months
+        self.review_balance_cents=0
+        self.review_as_of_month=0
+        self.projected_deficit_cents=0
+        self.financing_headroom_cents=0
+        self.review_credit_cents=0
+        self.review_arrears_cents=0
+        self.review_cash_cents=0
+        self.review_reserve_cents=0
         self.target_staff=2
         self.procurement_bps=10000
         self.next_target_staff=2
@@ -17,7 +27,9 @@ class PublicBudget:
         self.deficit_streak=0
         self.surplus_streak=0
         self.revenues=[]
+        self.balances=[]
         self.history=[]
+        self.review_history=[]
         self.last_begin=0
         self.last_review=0
         self.plan=dict(month=0,requested_staff=len(world.nodes['staat']['employees']),approved_staff=len(world.nodes['staat']['employees']),
@@ -41,13 +53,13 @@ class PublicBudget:
         self.procurement_bps=self.next_procurement_bps
         self.decision='hold';self.reason='Reguläre Budgetprüfung beim Monatsabschluss.';self.effective_month=world.month+1
         state=world.nodes['staat'];old=list(state['employees']);released=[];hired=[]
-        requested=self.target_staff if self.policy=='adaptive' else len(old)
+        requested=self.target_staff if self.policy!='legacy' else len(old)
         interest=world.treasury.overdue_interest_cents+world.treasury.month_interest_charge_cents
         credit=max(0,world.treasury.credit_limit_cents-world.treasury.outstanding_cents) if world.nodes['bank']['cash_cents']>0 else 0
         capacity=max(0,state['cash_cents']+credit-interest)
         approved=len(old)
         hard=False
-        if self.policy=='adaptive':
+        if self.policy!='legacy':
             available=len(old)+sum(h['employer'] is None for h in world.households())
             candidates=range(min(requested,available),-1,-1)
             approved=next((staff for staff in candidates if staff*WAGE+self.social_need(world,staff)<=capacity),0)
@@ -73,7 +85,7 @@ class PublicBudget:
             world.notice(f'Staatsbudget ab Monat {world.month}: {approved} vollständig finanzierte öffentliche Stellen; {len(released)} Verträge beendet, {len(hired)} neu besetzt. Beschaffungsquote {self.procurement_bps/100:g} %. Keine Arbeit gegen ungeklärte Lohnfinanzierung.','staat')
 
     def procurement_per_firm(self):
-        return PROCUREMENT*self.procurement_bps//10000 if self.policy=='adaptive' else PROCUREMENT
+        return PROCUREMENT*self.procurement_bps//10000 if self.policy!='legacy' else PROCUREMENT
 
     def pay_social(self,world):
         if self.policy=='legacy':
@@ -133,6 +145,7 @@ class PublicBudget:
         self.last_review=world.month
         a=self.amounts(world);balance=a['commitment_balance_cents']
         self.revenues.append(a['recurring_taxes_cents'])
+        self.balances.append(balance)
         self.deficit_streak=self.deficit_streak+1 if balance<0 else 0
         self.surplus_streak=self.surplus_streak+1 if balance>0 else 0
         self.next_target_staff=self.target_staff;self.next_procurement_bps=self.procurement_bps
@@ -142,13 +155,35 @@ class PublicBudget:
         if self.policy=='legacy':
             self.reason='Referenzregel: keine strukturelle Budgetanpassung; bisherige Ausgabenversprechen bleiben bestehen.'
             return
+        if self.policy=='funding_only':
+            self.reason='Nur bestätigte Zahlungsfähigkeit begrenzt Ausgaben; keine zusätzlichen strukturellen Kürzungen aus einem Defizitsignal.'
+            return
+        if self.policy in ('quarterly','buffered_quarterly'):
+            if world.month%3:
+                self.reason='Strukturelle Ausgabenprüfung erst am Quartalsende; unmittelbare Finanzierung wird vor Arbeitsbeginn gesichert.'
+                return
+            quarter=sum(self.balances[-3:])
+            self.review_as_of_month=world.month
+            self.review_balance_cents=quarter
+            self.deficit_streak=3 if quarter<0 else 0
+            self.surplus_streak=3 if quarter>0 else 0
+            if self.policy=='buffered_quarterly':
+                self.projected_deficit_cents=max(0,-quarter)*self.horizon_months//3
+                self.review_credit_cents=max(0,world.treasury.credit_limit_cents-world.treasury.outstanding_cents) if world.nodes['bank']['cash_cents']>0 else 0
+                self.review_arrears_cents=sum(o['amount_cents'] for o in world.obligations if o['source']=='staat')+world.treasury.overdue_interest_cents
+                self.review_cash_cents=world.nodes['staat']['cash_cents']
+                self.review_reserve_cents=world.treasury.reserve_target_cents
+                self.financing_headroom_cents=max(0,self.review_cash_cents+self.review_credit_cents-self.review_reserve_cents-self.review_arrears_cents)
+                if quarter<0 and self.projected_deficit_cents<=self.financing_headroom_cents:
+                    self.reason='Quartalsdefizit innerhalb des verfügbaren Finanzierungsraums im gewählten Planungshorizont; keine strukturelle Kürzung.'
+                    return
         if self.deficit_streak>=3:
             if self.procurement_bps:
                 self.next_procurement_bps=max(0,self.procurement_bps-2500);self.decision='cut_procurement'
-                self.reason='Drei Defizitabschlüsse gemessen am geplanten laufenden Bedarf: Beschaffungsquote sinkt ab Folgemonat um 25 Prozentpunkte.'
+                self.reason=('Negativer vollständiger Quartalssaldo' if self.policy in ('quarterly','buffered_quarterly') else 'Drei Defizitabschlüsse')+': Beschaffungsquote sinkt ab Folgemonat um 25 Prozentpunkte.'
             elif self.target_staff:
                 self.next_target_staff=self.target_staff-1;self.decision='cut_staff'
-                self.reason='Drei weitere Defizitabschlüsse bei ausgesetzter Beschaffung: eine öffentliche Stelle entfällt ab Folgemonat.'
+                self.reason=('Negativer vollständiger Quartalssaldo' if self.policy in ('quarterly','buffered_quarterly') else 'Drei weitere Defizitabschlüsse')+' bei ausgesetzter Beschaffung: eine öffentliche Stelle entfällt ab Folgemonat.'
             else:
                 self.reason='Keine weitere Kürzung von Beschaffung oder Stellen möglich. Ein verbleibender Sozial- oder Zinsbedarf bleibt als Finanzierungslücke sichtbar.'
             if self.decision in ('cut_staff','cut_procurement'):self.deficit_streak=0;self.effective_month=world.month+1
@@ -176,12 +211,20 @@ class PublicBudget:
 
     def record(self,world):
         self.history.append(self.monthly(world))
+        self.review_history.append(self.review_snapshot(world))
 
     def check(self,world):
-        if self.policy=='adaptive' and world.phase>=0 and self.plan['month']==world.month:
+        if self.policy!='legacy' and world.phase>=0 and self.plan['month']==world.month:
             assert world.nodes['staat']['metrics']['wages']==self.plan['payroll_cents']
             assert self.plan['payroll_cents']==self.plan['approved_staff']*WAGE
             assert not any(o['source']=='staat' and o['kind']=='wage' and o['month']==world.month for o in world.obligations)
 
+    def review_snapshot(self,world):
+        return dict(month=world.month,as_of_month=self.review_as_of_month,basis_kind='quarter_financing' if self.policy=='buffered_quarterly' else 'quarter_balance' if self.policy=='quarterly' else 'not_applicable',horizon_months=self.horizon_months,balance_cents=self.review_balance_cents,
+            projected_deficit_cents=self.projected_deficit_cents,financing_headroom_cents=self.financing_headroom_cents,
+            credit_cents=self.review_credit_cents,arrears_cents=self.review_arrears_cents,
+            cash_cents=self.review_cash_cents,reserve_cents=self.review_reserve_cents)
+
     def snapshot(self,world):
-        return dict(policy=self.policy,monthly=self.monthly(world),history=deepcopy(self.history[-36:]))
+        return dict(policy=self.policy,monthly=self.monthly(world),history=deepcopy(self.history[-36:]),
+            review=self.review_snapshot(world),review_history=deepcopy(self.review_history[-36:]))

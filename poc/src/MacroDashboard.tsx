@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import StabilityMonitor from './StabilityMonitor';
 import type {World} from './world-schema';
 const money=(v:number)=>new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR',maximumFractionDigits:0}).format(v/100);
 const number=(v:number)=>v.toLocaleString('de-DE',{maximumFractionDigits:2});
@@ -22,6 +23,7 @@ export default function MacroDashboard({world}:{world:World}) {
    <article><span>Beschäftigung · Lohnrunde</span><strong>{m?`${m.employment_at_production} / 6`:'—'}</strong><small>{m?`${number(m.private_fte_bps/10000)} private Vollzeitäquivalente · ${pct(m.unemployment_bps)} ohne Vertrag`:'Verträge und Arbeitszeit werden getrennt gemessen'}</small></article>
   </div>
   <div className="macro-context"><span>Geburtenrate: <b>nicht modelliert</b> · {world.macro.household_count} feste Haushalte, keine Personen- oder Altersstruktur.</span>{m&&<span>Warenpreisinflation zum Vorjahr: <b>{pct(m.inflation_yoy_bps)}</b> · zwei Modellwaren</span>}</div>
+  <StabilityMonitor key={world.world_id} world={world}/>
   <button className="macro-toggle" aria-expanded={expanded} onClick={()=>setExpanded(!expanded)}>{expanded?'Zeitverläufe und Berechnung schliessen':'Zeitverläufe und BIP-Berechnung öffnen'}</button>
   {expanded&&m&&<>
    <div className="macro-charts">{charts.map(chart=>{const vals=rows.map(chart.get).filter((v):v is number=>v!==null);const low=Math.min(0,...vals),high=Math.max(1,...vals),first=rows[0]!.month,last=rows.at(-1)!.month;const x=(mo:number)=>62+(mo-first)*466/Math.max(1,last-first),y=(v:number)=>130-(v-low)/(high-low)*105;let gap=true;const path=rows.map(r=>{const v=chart.get(r);if(v===null){gap=true;return '';}const segment=`${gap?'M':'L'}${x(r.month)},${y(v)}`;gap=false;return segment;}).join(' ');return <figure key={chart.title}><figcaption>{chart.title} · {chart.unit}</figcaption><svg viewBox="0 0 552 164" role="img" aria-label={`${chart.title}, ${chart.unit}, Monate ${first} bis ${last}`}>{[low,(low+high)/2,high].map((v,i)=><g key={i}><line x1="62" x2="528" y1={y(v)} y2={y(v)} className="consumption-grid"/><text x="55" y={y(v)+4} textAnchor="end">{number(v)}</text></g>)}<path d={path} className="macro-line"/>{chart.get(m)!==null&&<circle cx={x(m.month)} cy={y(chart.get(m)!)} r="3" fill="#526f89"/>}<line x1={x(m.month)} x2={x(m.month)} y1="24" y2="130" className="consumption-selection"/>{[...new Set([first,Math.round((first+last)/2),last])].map(mo=><text key={mo} x={x(mo)} y="153" textAnchor="middle">M{mo}</text>)}</svg></figure>;})}</div>

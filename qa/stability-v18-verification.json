@@ -1,0 +1,225 @@
+{
+  "date": "2026-11-03",
+  "model": "illustrative_circular_flow_v18",
+  "tests_passed": 194,
+  "ui_contract_snapshots": 26,
+  "profiles": 14,
+  "months": 10800,
+  "phases": 54000,
+  "source_hashes_verified": true,
+  "reference_screen": true,
+  "perturbed_reference_screen": true,
+  "historical_replay_sha256": "4528cd82f92f252a59d3ac2da62f1c1c163a411f421da9d80c35bdf01437b01c",
+  "historical_months_reproduced": 1200,
+  "data_sha256": {
+    "qa/stability-v18/stable.json": "20e5a8de3a162312a172e597675898b7572adee8a367e0a456953c6465e0ee42",
+    "qa/stability-v18/joint_only.json": "f3d48b7c189768d69a20cf3e01b4b2990f92b03a51fcd437d2091b5b9a27fdfd",
+    "qa/stability-v18/quarter_only.json": "f1e4a4c20847a63ea8b959a5409ddb7142373a022b0775616c8866b80efeb063",
+    "qa/stability-v18/orders_income95.json": "af1661e95d3278b030d94c8764baf72137f40486ea49620bde3447cbfc5f9a11",
+    "qa/stability-v18/income95.json": "387a4222b70731a778f9bc92826eee38e57e2010d138f2505b3c93b3b17b65b7",
+    "qa/stability-v18/funding_only.json": "c324d2865f1615facc9c54b9a8e7ffbd33c484c97016986ea1dc6852d9717c5f",
+    "qa/stability-v18/reserve1.json": "27b31d7966a6cb74522d997c321534f880bb55c03796a2608e2ecf12c4588ee5",
+    "qa/stability-v18/reserve6.json": "d80845f09101581809fe05651a5d1625936084ef14161f6abb87edbc3dc51c3c",
+    "qa/stability-v18/adjust6.json": "6230948c75afa60d10c475f41e0a62e3a8d6fd98f1505129878029f65fbec75c",
+    "qa/stability-v18/adjust24.json": "ccb176295fffbd977aeab34c9449171174508d2218f2cde0e2cadac616a55e11",
+    "qa/stability-v18/fiscal6.json": "88030069d8f3d49e5b75db30012e9e4ee6ac24067f72e8d88bfe30dc76c5cd82",
+    "qa/stability-v18/fiscal24.json": "78968a73754258c6b2a34048583ed5fffa6d94ebf6884c66ef6e8dcf348aff2a",
+    "qa/stability-v18/initial_distribution.json": "102718ee9fb975290b5f40ea50379a0cce63c1f86a7605c2d9f0ee11d8724f2b",
+    "qa/stability-v18/shocks.json": "3dd1aa9c961dd3ec4e332ab2d3f9237720deea3501a6f29974c4d8ed0b8ed9ce"
+  },
+  "criteria": {
+    "window_months": 240,
+    "nominal_drift_tolerance_cents_per_month": 100,
+    "activity_required": true,
+    "holdout_after_month": 600,
+    "real_inventory_drift_tolerance_parts_per_month": 1
+  },
+  "reference_summary": {
+    "windows": [
+      {
+        "first_month": 1321,
+        "last_month": 1560,
+        "drift_cents_per_month": {
+          "households": 2.5125,
+          "firms": 0.4166666666666667,
+          "government": -2.720833333333333,
+          "external": -0.20833333333333334,
+          "bank": 0.0,
+          "government_debt": 0.0,
+          "government_net": -2.720833333333333,
+          "household_target_gap": 2.5125
+        },
+        "mean_consumption_cents": 1119570.625,
+        "mean_private_fte_bps": 31344.475,
+        "production_positive": true,
+        "mean_funding_gap_cents": 0.0,
+        "mean_social_unfunded_cents": 0.0,
+        "mean_basic_purchase_gap_cents": 0.0,
+        "real_inventory_drift_units_per_month": {
+          "alltag": -0.008333333333333333,
+          "werkstatt": 0.0
+        }
+      },
+      {
+        "first_month": 1561,
+        "last_month": 1800,
+        "drift_cents_per_month": {
+          "households": 1.8708333333333333,
+          "firms": 0.55,
+          "government": -2.2875,
+          "external": -0.13333333333333333,
+          "bank": 0.0,
+          "government_debt": 0.0,
+          "government_net": -2.2875,
+          "household_target_gap": 1.8708333333333333
+        },
+        "mean_consumption_cents": 1119571.6666666667,
+        "mean_private_fte_bps": 31344.458333333332,
+        "production_positive": true,
+        "mean_funding_gap_cents": 0.0,
+        "mean_social_unfunded_cents": 0.0,
+        "mean_basic_purchase_gap_cents": 0.0,
+        "real_inventory_drift_units_per_month": {
+          "alltag": 0.0,
+          "werkstatt": -0.004166666666666667
+        }
+      }
+    ],
+    "nominal_drift_screen": true,
+    "activity_screen": true,
+    "supply_financing_screen": true,
+    "real_inventory_screen": true,
+    "stationary_reference_screen": true,
+    "note": "A 600-month screen alone does not establish long-horizon stationarity. Technical tolerance 100 cents/month, declared before evaluation; failed runs retained."
+  },
+  "perturbed_summary": {
+    "windows": [
+      {
+        "first_month": 1321,
+        "last_month": 1560,
+        "drift_cents_per_month": {
+          "households": -2.466666666666667,
+          "firms": -1.075,
+          "government": 3.125,
+          "external": 0.4166666666666667,
+          "bank": 0.0,
+          "government_debt": 0.0,
+          "government_net": 3.125,
+          "household_target_gap": -2.466666666666667
+        },
+        "mean_consumption_cents": 1119587.0833333333,
+        "mean_private_fte_bps": 31344.916666666668,
+        "production_positive": true,
+        "mean_funding_gap_cents": 0.0,
+        "mean_social_unfunded_cents": 0.0,
+        "mean_basic_purchase_gap_cents": 0.0,
+        "real_inventory_drift_units_per_month": {
+          "alltag": 0.0,
+          "werkstatt": 0.008333333333333333
+        }
+      },
+      {
+        "first_month": 1561,
+        "last_month": 1800,
+        "drift_cents_per_month": {
+          "households": 2.2583333333333333,
+          "firms": 0.20416666666666666,
+          "government": -2.3208333333333333,
+          "external": -0.14166666666666666,
+          "bank": 0.0,
+          "government_debt": 0.0,
+          "government_net": -2.3208333333333333,
+          "household_target_gap": 2.2583333333333333
+        },
+        "mean_consumption_cents": 1119571.6666666667,
+        "mean_private_fte_bps": 31344.458333333332,
+        "production_positive": true,
+        "mean_funding_gap_cents": 0.0,
+        "mean_social_unfunded_cents": 0.0,
+        "mean_basic_purchase_gap_cents": 0.0,
+        "real_inventory_drift_units_per_month": {
+          "alltag": -0.004166666666666667,
+          "werkstatt": 0.0
+        }
+      }
+    ],
+    "nominal_drift_screen": true,
+    "activity_screen": true,
+    "supply_financing_screen": true,
+    "real_inventory_screen": true,
+    "stationary_reference_screen": true,
+    "note": "A 600-month screen alone does not establish long-horizon stationarity. Technical tolerance 100 cents/month, declared before evaluation; failed runs retained."
+  },
+  "individual_household_checks": [
+    {
+      "case": "stable",
+      "first_month": 1321,
+      "last_month": 1560,
+      "household_drift_cents_per_month": {
+        "h1": 0.6416666666666667,
+        "h2": 0.7125,
+        "h3": 0.7541666666666667,
+        "h4": 0.32083333333333336,
+        "h5": 0.10833333333333334,
+        "h6": -0.025
+      },
+      "household_min_cash_cents": 278903,
+      "household_aggregate_range_cents": 387063,
+      "consumption_min_cents": 979700,
+      "consumption_max_cents": 1308400
+    },
+    {
+      "case": "stable",
+      "first_month": 1561,
+      "last_month": 1800,
+      "household_drift_cents_per_month": {
+        "h1": 0.5833333333333334,
+        "h2": 0.49166666666666664,
+        "h3": 0.24583333333333332,
+        "h4": 0.625,
+        "h5": -0.1875,
+        "h6": 0.1125
+      },
+      "household_min_cash_cents": 278894,
+      "household_aggregate_range_cents": 387081,
+      "consumption_min_cents": 979700,
+      "consumption_max_cents": 1308400
+    },
+    {
+      "case": "initial_distribution",
+      "first_month": 1321,
+      "last_month": 1560,
+      "household_drift_cents_per_month": {
+        "h1": -0.8416666666666667,
+        "h2": -0.9291666666666667,
+        "h3": -0.6125,
+        "h4": -0.24166666666666667,
+        "h5": 0.35833333333333334,
+        "h6": -0.2
+      },
+      "household_min_cash_cents": 278898,
+      "household_aggregate_range_cents": 387012,
+      "consumption_min_cents": 979700,
+      "consumption_max_cents": 1308400
+    },
+    {
+      "case": "initial_distribution",
+      "first_month": 1561,
+      "last_month": 1800,
+      "household_drift_cents_per_month": {
+        "h1": 0.375,
+        "h2": 1.0583333333333333,
+        "h3": 0.6291666666666667,
+        "h4": 0.2,
+        "h5": -0.14583333333333334,
+        "h6": 0.14166666666666666
+      },
+      "household_min_cash_cents": 278893,
+      "household_aggregate_range_cents": 387145,
+      "consumption_min_cents": 979700,
+      "consumption_max_cents": 1308400
+    }
+  ],
+  "independent_review": "Separate AI code and data review; no remaining blocker for the tested local cyclic reference configuration. No empirical validation.",
+  "limitation": "Finite illustrative model runs; no empirical validation or proof of unlimited stability under arbitrary parameters."
+}

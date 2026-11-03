@@ -46,6 +46,8 @@ class Banking:
                     assets_cents=self.reserves + loans, liabilities_and_equity_cents=deposits + equity)
 
     def request(self, world):
+        if world.capital_orders.pending:
+            raise ValueError('Ein finanzierter Maschinenauftrag ist bereits offen.')
         if world.horizon_months is not None and world.month>=world.horizon_months and world.phase>=3:
             raise ValueError('Die letzte Investitionsphase dieses Lernlaufs ist vorbei. Bitte neu starten.')
         if self.loan.status != 'available':
@@ -138,7 +140,7 @@ class Banking:
         # Cumulative schedule avoids re-creating old unpaid instalments every month.
         due_instalments = min(loan.term_months, world.month - loan.delivery_month)
         due_principal = max(0, min(loan.outstanding_cents, due_instalments * loan.monthly_principal_cents - loan.principal_paid_cents))
-        paid = min(due_principal, world.nodes[loan.borrower]['cash_cents'])
+        paid = min(due_principal, max(0,world.nodes[loan.borrower]['cash_cents']-world.capital_orders.locked(loan.borrower)))
         if paid:
             before = self.balance(world)
             source_before, target_before = world.nodes[loan.borrower]['cash_cents'], world.nodes['bank']['cash_cents']

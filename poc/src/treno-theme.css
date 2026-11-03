@@ -178,3 +178,30 @@
 @media(max-width:700px){.macro-dashboard{padding:16px}.macro-dashboard header{flex-direction:column}.macro-cards{grid-template-columns:repeat(2,minmax(0,1fr))}.macro-cards strong{font-size:20px}.macro-charts{grid-template-columns:1fr}.macro-method dl>div{gap:10px}.macro-context{display:grid}}
 
 .macro-dashboard{scroll-margin-top:100px}@media(max-width:700px){.macro-dashboard{scroll-margin-top:180px}}
+
+.workforce-planning{margin:20px 0;padding:20px;border:1px solid #dbe2d5;border-radius:12px;background:#fff;min-width:0;scroll-margin-top:100px}.workforce-planning header{display:flex;justify-content:space-between;gap:20px}.workforce-planning header label{display:grid;gap:8px;font-size:12px;min-width:130px}.workforce-planning select{padding:9px;border:1px solid #dbe2d5;border-radius:6px;background:white}.workforce-planning p{font-size:13px;line-height:1.6;color:#65745f}.workforce-demand{display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1fr;gap:12px;align-items:center;margin:20px 0 8px}.workforce-demand div{display:grid;gap:8px;min-width:0}.workforce-demand span{font-size:12px;color:#65745f}.workforce-demand strong{font-size:20px}.workforce-before-after{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:20px 0}.workforce-before-after h4{font-size:14px}.workforce-slots{display:grid;gap:10px;margin:12px 0}.workforce-slots>div{display:grid;grid-template-columns:70px minmax(30px,1fr) 70px;gap:10px;align-items:center;font-size:12px}.workforce-slots>div>div{height:18px;background:#edf1e9;border-radius:5px;overflow:hidden}.workforce-slots i{display:block;height:100%;background:#526f89}.workforce-slots.next i{background:#66895a}.workforce-decision{padding:12px;border-left:3px solid #66895a;background:#f5f7f2}.workforce-selected{background:#edf3e8}.workforce-planning figure{margin:20px 0 0}.workforce-planning figcaption{font-size:13px}.workforce-planning svg{width:100%;max-height:230px}.workforce-planning svg text{font-size:10px;fill:#65745f}.workforce-current-line,.workforce-next-line{fill:none;stroke-width:2}.workforce-current-line{stroke:#526f89}.workforce-next-line{stroke:#66895a;stroke-dasharray:4 3}.workforce-planning details summary{font-size:13px;cursor:pointer}
+@media(max-width:700px){.workforce-planning{padding:14px;scroll-margin-top:180px}.workforce-planning header{flex-direction:column}.workforce-demand{grid-template-columns:1fr 1fr}.workforce-demand>b{display:none}.workforce-before-after{grid-template-columns:1fr}.workforce-slots>div{grid-template-columns:65px minmax(20px,1fr) 65px}}
+
+/* Reserves and production orders share the existing detail surfaces. */
+.stability-monitor { border-top: 1px solid var(--border,#dbe3d5); margin-top: 16px; padding-top: 12px; }
+.stability-monitor p,.capital-order-view p { font-size: .875rem; line-height: 1.6; }
+.stability-numbers,.capital-order-stages { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px; margin: 16px 0; }
+.stability-numbers>div,.capital-order-stages>div { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.stability-numbers span,.capital-order-stages span { font-size: .8rem; }
+.stability-numbers strong,.capital-order-stages strong { font-size: 1.25rem; font-variant-numeric: tabular-nums; }
+.stability-numbers small,.capital-order-stages small { line-height: 1.5; }
+.household-reserve-bars { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; margin: 18px 0; }
+.household-reserve-bars>div { display: grid; gap: 7px; min-width: 0; }
+.household-reserve-bars span,.household-reserve-bars small { font-size: .8rem; }
+.reserve-bar { height: 8px; background: #e6ebdf; border-radius: 4px; overflow: hidden; }
+.reserve-bar i { display: block; height: 100%; background: #66895a; }
+.capital-order-view { padding: 20px 0; border-top: 1px solid #dbe3d5; }
+.capital-order-stages { grid-template-columns: minmax(0,1fr) auto minmax(0,1fr) auto minmax(0,1fr); }
+.capital-order-stages>b { align-self: center; }
+.capital-order-stages meter { width: 100%; }
+.fiscal-review-numbers { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; margin: 16px 0; }
+.fiscal-review-numbers>div { display: flex; flex-direction: column; gap: 6px; }
+@media(max-width:700px) { .stability-numbers,.household-reserve-bars,.capital-order-stages,.fiscal-review-numbers { grid-template-columns: 1fr; } .capital-order-stages>b { transform: rotate(90deg); justify-self: center; } .workforce-demand { flex-wrap: wrap; } }
+
+.stability-monitor,.capital-order-view,.fiscal-review { scroll-margin-top: 110px; }
+@media(max-width:700px) { .stability-monitor,.capital-order-view,.fiscal-review { scroll-margin-top: 180px; } }

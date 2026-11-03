@@ -1,6 +1,8 @@
-# Laufende Modellwirtschaft · aktuelle Fassung v16
+# Laufende Modellwirtschaft · aktuelle Fassung v18
 
-V16 ergänzt die [Makroübersicht](MACRO_ACCOUNTS.md) als reine Beobachtungsebene: nominale BIP-Näherung und Wachstumsraten, Warenmengen zu Startpreisen, private Produktionskennzahl, Leitzins und Beschäftigung. Demografie bleibt unmodelliert. Ein [kontrollierter Vergleich](../qa/consumption-v16-comparison.md) untersucht ausschliesslich die Konsumquote 95 gegenüber 100 %. Der normale Startwert bleibt 95 %.
+V18 ergänzt [Liquiditätsziele, gemeinsame Personalplanung, finanzierungsbezogene Quartalsentscheidungen und bestellbare Maschinen](STABILITY_MODEL.md). Die Oberfläche startet diese ausdrücklich benannte Referenzvariante; historische Einkommensquoten und Verhaltensregeln bleiben als Vergleichsvarianten erhalten. Die Regeln ändern keine Steuer-, Transfer- oder Lohnsätze und führen keine pauschalen Ausgleichszahlungen ein. [Langzeitprüfung und Grenzen](../qa/stability-v18-report.md).
+
+V16 ergänzt die [Makroübersicht](MACRO_ACCOUNTS.md) als reine Beobachtungsebene: nominale BIP-Näherung und Wachstumsraten, Warenmengen zu Startpreisen, private Produktionskennzahl, Leitzins und Beschäftigung. Demografie bleibt unmodelliert. Ein [kontrollierter Vergleich](../qa/consumption-v16-comparison.md) untersucht ausschliesslich die Konsumquote 95 gegenüber 100 %. In dieser historischen Variante bleibt der Einkommensanteil 95 %; v18 startet eine gesonderte Haushaltsregel.
 
 V15 übernimmt die feineren Gütereinheiten als Standard: Startpreise 1 € und 1,50 €, entsprechend 0,01 der bisherigen Gütermenge. Reale Kapazitäten, Energie und Maschinenmengen sind gemeinsam umgerechnet; Steuer- und Verhaltensregeln bleiben erhalten. [Diagnose des verbleibenden Staatsdefizits](../qa/fiscal-balance-v15-diagnosis.md). Neue Läufe verwenden `goods_unit_scale=100`; historische Gegenläufe nennen `1` ausdrücklich.
 

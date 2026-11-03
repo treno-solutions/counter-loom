@@ -1,6 +1,8 @@
 # Counterloom POC · laufender Wirtschaftskreislauf
 
-Modell v16 zeigt eine [Makroübersicht](MACRO_ACCOUNTS.md) mit BIP-Näherung, nominalem Wachstum, Warenproduktion, Produktionskennzahl je Vollzeitstelle, Leitzins und Beschäftigung. [600-Monats-Vergleich der Konsumquoten](../qa/consumption-v16-comparison.md). Die normale Quote bleibt 95 %.
+Die aktuelle Referenz [v18](STABILITY_MODEL.md) verwendet Liquiditätsziele für Haushalte, gemeinsame Personal-/Arbeitszeitplanung, einen finanzierungsbezogenen Quartalsentscheid des Staates und finanzierte Maschinenaufträge. Historische Regeln bleiben in den Gegenläufen erhalten. [Langzeitprüfung](../qa/stability-v18-report.md).
+
+Die frühere Fassung v16 ergänzt eine [Makroübersicht](MACRO_ACCOUNTS.md) mit BIP-Näherung, nominalem Wachstum, Warenproduktion, Produktionskennzahl je Vollzeitstelle, Leitzins und Beschäftigung. [600-Monats-Vergleich der Konsumquoten](../qa/consumption-v16-comparison.md). Die historische Einkommensvariante verwendet 95 %; die aktuelle Haushaltsregel ist oben gesondert benannt.
 
 Seit Modell v15 sind die kleineren Gütereinheiten Standard (Startpreise 1 € und 1,50 €). [Diagnose des verbleibenden Staatsdefizits](../qa/fiscal-balance-v15-diagnosis.md). Vorhandene Exporte dokumentieren weiterhin ihre ursprüngliche Stückelung; für den neuen Standard die Seite neu laden und einen neuen Lauf starten.
 
@@ -45,7 +47,7 @@ Die Übersicht **Guthaben im Inland und Ausland** trennt aktuelle Inlandsguthabe
 
 13. **Staat → Details öffnen → Ausgabenplan und finanzierte öffentliche Arbeit** zeigt Defizitreaktion, genehmigte und bezahlte Stellen, Beschaffung, Soziallücken und alte Lohnansprüche. Monatsauswahl und Verläufe trennen Bedarfssaldo und tatsächlichen Zahlungssaldo. [Budgetregel](PUBLIC_BUDGET_MODEL.md), [600-Monats-Vergleich](../qa/fiscal-v13-comparison.md).
 
-Modell v16: [Systemgrenze und Unternehmenskonzept](COMPANY_MODEL.md). Der Grundbedarfsplan von 1.000 € pro Haushalt und Monat darf auch aus vorhandenem Kontoguthaben finanziert werden. Höhere einkommensabhängige Kaufpläne bleiben möglich. Geld- und Warenmangel begrenzen die tatsächlichen Käufe. Die früheren V1-Regeln und ihre Langzeitgrenzen sind [dokumentiert](../qa/circular-flow-v1-limitations-2026-11-02.json).
+Modell v18: [Aktuelle Regeln](STABILITY_MODEL.md), [Systemgrenze und Unternehmenskonzept](COMPANY_MODEL.md). Der Grundbedarfsplan von 1.000 € pro Haushalt und Monat darf auch aus vorhandenem Kontoguthaben finanziert werden. Höhere einkommensabhängige Kaufpläne bleiben möglich. Geld- und Warenmangel begrenzen die tatsächlichen Käufe. Die früheren V1-Regeln und ihre Langzeitgrenzen sind [dokumentiert](../qa/circular-flow-v1-limitations-2026-11-02.json).
 
 Läufe leben im Arbeitsspeicher des lokalen Servers. Die Berechnung schreitet durch Anfragen des geöffneten Browsers voran; es gibt keinen unabhängigen Hintergrunddienst nach dem Schließen. Kein automatischer Stopp nach 24 Monaten; bis zu 64 gleichzeitig gespeicherte Läufe. Die Anzeige zeigt die letzten 36 Abschlüsse, der Export behält die gesamte Vergangenheit. Es gibt keine Zusicherung unbegrenzt langer Rechenzeit oder empirischer Langzeitgültigkeit. Serverneustart verliert die laufenden Welten; ein JSON-Export ist kein implementierter Wiederherstellungspunkt. Bei Fehlern hält die Ansicht an und zeigt den letzten bestätigten Zustand ausdrücklich weiter.
 

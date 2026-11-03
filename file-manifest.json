@@ -106,8 +106,8 @@
   },
   {
     "path": "poc/source-manifest.json",
-    "bytes": 15365,
-    "sha256": "8606d92b8cf04f27a2f7bf60db3d9ee17eceb3c65d513aa90cff3ff40e234efd"
+    "bytes": 17366,
+    "sha256": "05c9121da39aa5a34037a5a8c647d04c2a6b2efe49f9836217f0f2c6dc4171d6"
   },
   {
     "path": "processed/energy-monthly-prices.csv",
@@ -638,6 +638,101 @@
     "path": "qa/silver-table-reconciliation.json",
     "bytes": 568,
     "sha256": "686f3d30adbd78d34aa5262a01c62d936a63f27e91aef87332601fac13b7c0b7"
+  },
+  {
+    "path": "qa/stability-v18-historical-replay.json",
+    "bytes": 3298,
+    "sha256": "4528cd82f92f252a59d3ac2da62f1c1c163a411f421da9d80c35bdf01437b01c"
+  },
+  {
+    "path": "qa/stability-v18-report.md",
+    "bytes": 8868,
+    "sha256": "52f6cd078317bb4cadbed4a93791c97518ff7d4d8f0490fb19f15059feecefc6"
+  },
+  {
+    "path": "qa/stability-v18-report.svg",
+    "bytes": 370251,
+    "sha256": "cabbea5ffe1bdce99a40083e0ab4a9b105f3667ba05adf79d29e86093131ef2f"
+  },
+  {
+    "path": "qa/stability-v18-ui-verification.json",
+    "bytes": 1007,
+    "sha256": "a06e9e611ee665aa90c4083e847b6e25b50e3abdfcc53bc17e8e56e7b3cf0c22"
+  },
+  {
+    "path": "qa/stability-v18-verification.json",
+    "bytes": 8573,
+    "sha256": "5aa7e09d2d1d43bc13b9a8922d0cf7317648e66cf6deab16783a134e1ec53629"
+  },
+  {
+    "path": "qa/stability-v18/adjust24.json",
+    "bytes": 1765220,
+    "sha256": "ccb176295fffbd977aeab34c9449171174508d2218f2cde0e2cadac616a55e11"
+  },
+  {
+    "path": "qa/stability-v18/adjust6.json",
+    "bytes": 1763152,
+    "sha256": "6230948c75afa60d10c475f41e0a62e3a8d6fd98f1505129878029f65fbec75c"
+  },
+  {
+    "path": "qa/stability-v18/fiscal24.json",
+    "bytes": 1764917,
+    "sha256": "78968a73754258c6b2a34048583ed5fffa6d94ebf6884c66ef6e8dcf348aff2a"
+  },
+  {
+    "path": "qa/stability-v18/fiscal6.json",
+    "bytes": 1762698,
+    "sha256": "88030069d8f3d49e5b75db30012e9e4ee6ac24067f72e8d88bfe30dc76c5cd82"
+  },
+  {
+    "path": "qa/stability-v18/funding_only.json",
+    "bytes": 1743621,
+    "sha256": "c324d2865f1615facc9c54b9a8e7ffbd33c484c97016986ea1dc6852d9717c5f"
+  },
+  {
+    "path": "qa/stability-v18/income95.json",
+    "bytes": 1757359,
+    "sha256": "387a4222b70731a778f9bc92826eee38e57e2010d138f2505b3c93b3b17b65b7"
+  },
+  {
+    "path": "qa/stability-v18/initial_distribution.json",
+    "bytes": 5253064,
+    "sha256": "102718ee9fb975290b5f40ea50379a0cce63c1f86a7605c2d9f0ee11d8724f2b"
+  },
+  {
+    "path": "qa/stability-v18/joint_only.json",
+    "bytes": 1686676,
+    "sha256": "f3d48b7c189768d69a20cf3e01b4b2990f92b03a51fcd437d2091b5b9a27fdfd"
+  },
+  {
+    "path": "qa/stability-v18/orders_income95.json",
+    "bytes": 1729764,
+    "sha256": "af1661e95d3278b030d94c8764baf72137f40486ea49620bde3447cbfc5f9a11"
+  },
+  {
+    "path": "qa/stability-v18/quarter_only.json",
+    "bytes": 1729285,
+    "sha256": "f1e4a4c20847a63ea8b959a5409ddb7142373a022b0775616c8866b80efeb063"
+  },
+  {
+    "path": "qa/stability-v18/reserve1.json",
+    "bytes": 1762721,
+    "sha256": "27b31d7966a6cb74522d997c321534f880bb55c03796a2608e2ecf12c4588ee5"
+  },
+  {
+    "path": "qa/stability-v18/reserve6.json",
+    "bytes": 1763457,
+    "sha256": "d80845f09101581809fe05651a5d1625936084ef14161f6abb87edbc3dc51c3c"
+  },
+  {
+    "path": "qa/stability-v18/shocks.json",
+    "bytes": 1761353,
+    "sha256": "3dd1aa9c961dd3ec4e332ab2d3f9237720deea3501a6f29974c4d8ed0b8ed9ce"
+  },
+  {
+    "path": "qa/stability-v18/stable.json",
+    "bytes": 5252354,
+    "sha256": "20e5a8de3a162312a172e597675898b7572adee8a367e0a456953c6465e0ee42"
   },
   {
     "path": "qa/tax-v14-comparison-2026-11-03.json",

@@ -6,10 +6,12 @@ from threading import RLock
 from uuid import uuid4
 from BPTK_Py import Model, Agent, SimultaneousScheduler
 from banking import Banking
+from capital_orders import CapitalOrders
 from treasury import Treasury
 from public_budget import PublicBudget
 from distribution_tax import DistributionTax
 from macro import MacroAccounts
+from workforce import choose as joint_choose, options as workforce_options, requirements as workforce_requirements
 from crisis import Closure, STANDBY_COST, compare
 from profit_distribution import allocation, POLICIES
 from rates import MonetaryPolicy
@@ -32,7 +34,14 @@ class SystemAgent(Agent):
         self.model.world.act(self.properties['node_id']['value'])
 
 class World:
-    def __init__(self, essential_budget_cents=100000, export_orders_units=None, government_credit_limit_cents=5000000, government_annual_rate_bps=300, initial_policy_rate_bps=200, energy_pass_through_bps=5000, government_reserve_months=1, government_initial_cash_cents=8000000, horizon_months=None, distribution_policy='surplus', fiscal_policy='adaptive', distribution_tax_bps=2500, goods_unit_scale=100):
+    def __init__(self, essential_budget_cents=100000, export_orders_units=None, government_credit_limit_cents=5000000, government_annual_rate_bps=300, initial_policy_rate_bps=200, energy_pass_through_bps=5000, government_reserve_months=1, government_initial_cash_cents=8000000, horizon_months=None, distribution_policy='surplus', fiscal_policy='adaptive', distribution_tax_bps=2500, goods_unit_scale=100, workforce_policy='legacy', consumption_policy='income', liquidity_reserve_months=3, liquidity_adjustment_months=12, investment_policy='spot', fiscal_horizon_months=12):
+        if consumption_policy not in ('income','liquidity_target') or type(liquidity_reserve_months) is not int or not 1<=liquidity_reserve_months<=24 or type(liquidity_adjustment_months) is not int or not 1<=liquidity_adjustment_months<=120:
+            raise ValueError('Ungültige Haushaltsregel oder Liquiditätsparameter.')
+        if investment_policy not in ('spot','orders'):raise ValueError('Ungültige Investitionsregel.')
+        self.investment_policy=investment_policy
+        self.consumption_policy=consumption_policy
+        self.liquidity_reserve_months=liquidity_reserve_months
+        self.liquidity_adjustment_months=liquidity_adjustment_months
         if type(government_initial_cash_cents) is not int or government_initial_cash_cents<0:
             raise ValueError('Initial state cash must be nonnegative whole cents.')
         if horizon_months is not None and (type(horizon_months) is not int or horizon_months<1):
@@ -40,6 +49,9 @@ class World:
         if distribution_policy not in POLICIES:raise ValueError('Ungültige Gewinnverwendung.')
         if type(goods_unit_scale) is not int or goods_unit_scale not in (1,10,100):
             raise ValueError('Gütereinheitenteilung muss 1, 10 oder 100 betragen.')
+        if workforce_policy not in ('legacy','joint'):raise ValueError('Ungültige Personalplanung.')
+        self.workforce_policy=workforce_policy
+        self.workforce_history=[]
         self.goods_unit_scale=goods_unit_scale
         self.distribution_policy=distribution_policy
         self.horizon_months=horizon_months
@@ -58,7 +70,7 @@ class World:
         self.active = []
         self.essential_budget_cents = essential_budget_cents
         self.energy_multiplier = 1
-        self.propensity = 95
+        self.propensity = 100 if consumption_policy=='liquidity_target' else 95
         self.macro = MacroAccounts()
         self._node('alltag', 'Alltag & Versorgung', 'firms', 2400000, employees=['h1','h2'], price=10000, productivity=36, inventory=0, capital=0, loan=1200000, weak_months=0, reserved_units=0, machine_loan_cents=0)
         self._node('werkstatt', 'Werkstatt & Technik', 'firms', 2400000, employees=['h3','h4'], price=15000, productivity=20, inventory=0, capital=0, loan=1200000, weak_months=0, reserved_units=0, machine_loan_cents=0)
@@ -80,8 +92,9 @@ class World:
         self._reset_metrics()
         self.monetary = MonetaryPolicy(self,initial_policy_rate_bps)
         self.banking = Banking(self)
+        self.capital_orders = CapitalOrders()
         self.distribution_tax = DistributionTax(distribution_tax_bps)
-        self.budget = PublicBudget(self,fiscal_policy)
+        self.budget = PublicBudget(self,fiscal_policy,fiscal_horizon_months)
         self.treasury = Treasury(self,government_credit_limit_cents,government_annual_rate_bps,government_reserve_months)
         self.pricing = Pricing(self,energy_pass_through_bps)
         self.foreign = ForeignTrade(export_orders_units,goods_unit_scale)
@@ -109,7 +122,8 @@ class World:
         if source=='staat' and kind in ('wage','transfer','short_time','procurement','government_interest'):
             self.treasury.ensure_cash(self,amount)
         sender, receiver = self.nodes[source], self.nodes[target]
-        paid = min(amount, sender['cash_cents'])
+        locked=self.capital_orders.locked(source) if kind!='investment' else 0
+        paid = min(amount, max(0,sender['cash_cents']-locked))
         bank_before = self.banking.balance(self)
         if paid:
             before = [sender['cash_cents'], receiver['cash_cents']]
@@ -169,6 +183,9 @@ class World:
                 n['company']['result']={}
                 plan_node=deepcopy(n) if self.crisis.closed(self,node_id) else n
                 if self.crisis.closed(self,node_id):plan_node['company']['work_bps']=0
+                if self.capital_orders.locked(node_id):
+                    plan_node=deepcopy(plan_node)
+                    plan_node['cash_cents']-=self.capital_orders.locked(node_id)
                 p=company_plan(plan_node,self.energy_multiplier,self.machine_due(node_id))
                 n['company']['plan']=p
                 n['metrics']['production_plan']=p['production_units']
@@ -214,7 +231,10 @@ class World:
         elif self.phase == 3 and node_id=='alltag':
             if self.crisis.closed(self,'alltag') or self.crisis.closed(self,'werkstatt'):return
             if self.banking.originate(self) or self.banking.loan.status=='credited': return
-            _,reserve=staffing(n,self.energy_multiplier,self.machine_due(node_id,True))
+            if self.investment_policy=='orders':
+                self.capital_orders.place_if_needed(self)
+                return
+            _,reserve=self.company_staffing(n,self.machine_due(node_id,True))
             machine_units=8*self.goods_unit_scale
             machine_cost=machine_units*self.nodes['werkstatt']['price']
             if n['company']['short_months']>=2 and self.month-n['company']['last_investment_month']>=3 and n['cash_cents']>=reserve+machine_cost and self.nodes['werkstatt']['inventory']-self.nodes['werkstatt'].get('reserved_units',0)>=machine_units:
@@ -233,10 +253,24 @@ class World:
             self.distribution_tax.history.append(self.distribution_tax.monthly(self))
 
     def household_outputs(self,n):
-        return HouseholdSystem.outputs(HouseholdInput(n['metrics']['income']-n['metrics']['transfers'],n['metrics']['transfers'],n['metrics']['tax'],n['dividend_carry'],n['cash_cents'],self.propensity,self.essential_budget_cents))
+        return HouseholdSystem.outputs(HouseholdInput(n['metrics']['income']-n['metrics']['transfers'],n['metrics']['transfers'],n['metrics']['tax'],n['dividend_carry'],n['cash_cents'],self.propensity,self.essential_budget_cents,self.consumption_policy,self.month_open[n['id']],self.liquidity_reserve_months,self.liquidity_adjustment_months))
+
+    @classmethod
+    def stable(cls, **overrides):
+        parameters=dict(workforce_policy='joint',fiscal_policy='buffered_quarterly',consumption_policy='liquidity_target',investment_policy='orders')
+        parameters.update(overrides)
+        return cls(**parameters)
 
     def machine_due(self,node_id,next_month=False):
         return self.banking.due(self,self.month+1 if next_month else self.month)['total_cents'] if node_id=='alltag' else 0
+
+    def company_staffing(self,n,debt_service=0):
+        if self.capital_orders.locked(n['id']):
+            n=deepcopy(n);n['cash_cents']-=self.capital_orders.locked(n['id'])
+        if self.workforce_policy=='legacy' or not n['employees']:
+            return staffing(n,self.energy_multiplier,debt_service)
+        choice=joint_choose(n,self.energy_multiplier,debt_service,any(h['employer'] is None for h in self.households()))
+        return choice['desired_staff'],choice['selected']['reserve_cents']
 
     def close_company(self,n):
         m=n['metrics'];c=n['company'];p=c['plan']
@@ -247,23 +281,27 @@ class World:
         profit=m['sales']-m['cost_of_sales']-m['idle_cost']-m['unpaid_wages']-m['interest_expense']-m['closure_cost']
         tax_due=max(0,profit)*20//100
         tax=self.pay(n['id'],'staat',tax_due,'profit_tax','Gewinnsteuer',True)
-        desired,_=staffing(n,self.energy_multiplier,self.machine_due(n['id'],True))
+        desired,_=self.company_staffing(n,self.machine_due(n['id'],True))
         staff=len(n['employees']);c['profitable_months']=c['profitable_months']+1 if profit>0 else 0
         c['loss_used_cents']+=max(0,-profit)
         debt=self.machine_due(n['id'],True)
         candidate=next((h for h in self.households() if h['employer'] is None),None)
+        planning_before=deepcopy(n)
+        available_cash=n['cash_cents']-self.capital_orders.locked(n['id'])
+        planning_before['cash_cents']=available_cash
+        planning_reason='Bestehende Regel für Schliessung oder Wiederanlauf.'
         if self.crisis.closed(self,n['id']):
             option=outlook(n,self.energy_multiplier,staff,c['work_bps'],debt)
-            demand_ok=c['forecast_milli']>=1000*self.goods_unit_scale; margin_ok=option['projected_gap_cents']==0
-            cash_ok=n['cash_cents']>=option['required_cash_cents']
+            demand_ok=c['forecast_milli']+c['order_units']*1000>=1000*self.goods_unit_scale; margin_ok=option['projected_gap_cents']==0
+            cash_ok=available_cash>=option['required_cash_cents']
             c['next_status']=c['status'];c['next_work_bps']=c['work_bps']
             reason='Angeordnete befristete Schliessung: Verträge und Vor-Krisen-Arbeitszeitplan bleiben erhalten. Keine automatische Entlassung oder Ausschüttung; Schuldendienst und Erhaltungskosten laufen weiter.'
         elif c['status']=='mothballed':
             work=work_target(n,1);option=outlook(n,self.energy_multiplier,1,work,debt)
-            if c['profitable_months']>=2 and n['cash_cents']>=option['reserve_cents']:c['loss_used_cents']=0
-            demand_ok=c['forecast_milli']>=1000*self.goods_unit_scale
+            if c['profitable_months']>=2 and available_cash>=option['reserve_cents']:c['loss_used_cents']=0
+            demand_ok=c['forecast_milli']+c['order_units']*1000>=1000*self.goods_unit_scale
             margin_ok=option['projected_gap_cents']==0 and demand_ok
-            cash_ok=n['cash_cents']>=option['reserve_cents']
+            cash_ok=available_cash>=option['reserve_cents']
             c['restart_signal']=c['restart_signal']+1 if margin_ok and cash_ok else 0
             ready=c['restart_signal']>=RESTART_CLOSES and candidate is not None
             if ready:
@@ -275,25 +313,35 @@ class World:
                 reason='Stillgelegt: Wiederanlauf benötigt Nachfrage, einen Plan ohne neue Finanzierungslücke, zwei finanzierte Lohnrunden und zwei bestätigte Abschlüsse sowie freie Arbeitskraft.'
         else:
             c['restart_signal']=0
-            direction=1 if desired>staff else -1 if desired<staff else 0
-            old=c['staff_signal'];c['staff_signal']=old+direction if direction and old*direction>0 else direction
-            if abs(c['staff_signal'])>=2:
-                if direction<0 and staff>1:
-                    worker=n['employees'].pop();self.nodes[worker]['employer']=None;c['staff_signal']=0
-                elif direction>0 and candidate is not None:
-                    trial_target=work_target(n,staff+1)
-                    trial_work=max(MIN_WORK_BPS,min(c['work_bps']+WORK_STEP_BPS,max(c['work_bps']-WORK_STEP_BPS,trial_target)))
-                    trial=outlook(n,self.energy_multiplier,staff+1,trial_work,debt)
-                    if c['profitable_months']>=2 and n['cash_cents']>=trial['reserve_cents']:c['loss_used_cents']=0
-                    trial_bridge=c['bridge_months']<MAX_BRIDGE_MONTHS and trial['projected_gap_cents']<=max(0,c['loss_budget_cents']-c['loss_used_cents'])
-                    if n['cash_cents']>=trial['reserve_cents'] and (trial['projected_gap_cents']==0 or trial_bridge):
-                        n['employees'].append(candidate['id']);candidate['employer']=n['id'];c['staff_signal']=0
-            target=work_target(n,len(n['employees']))
-            work=max(MIN_WORK_BPS,min(c['work_bps']+WORK_STEP_BPS,max(c['work_bps']-WORK_STEP_BPS,target)))
-            option=outlook(n,self.energy_multiplier,len(n['employees']),work,debt)
-            demand_ok=c['forecast_milli']>=1000*self.goods_unit_scale;margin_ok=option['projected_gap_cents']==0 and demand_ok
-            cash_ok=n['cash_cents']>=option['required_cash_cents']
-            if c['profitable_months']>=2 and n['cash_cents']>=option['reserve_cents']:c['loss_used_cents']=0
+            if self.workforce_policy=='joint':
+                choice=joint_choose(planning_before,self.energy_multiplier,debt,candidate is not None)
+                desired=choice['desired_staff'];c['staff_signal']=choice['signal']
+                chosen=choice['selected'];planning_reason=choice['reason']
+                if chosen['staff']<staff:
+                    worker=n['employees'].pop();self.nodes[worker]['employer']=None
+                elif chosen['staff']>staff:
+                    n['employees'].append(candidate['id']);candidate['employer']=n['id']
+                work=chosen['work_bps'];option=outlook(n,self.energy_multiplier,len(n['employees']),work,debt)
+            else:
+                direction=1 if desired>staff else -1 if desired<staff else 0
+                old=c['staff_signal'];c['staff_signal']=old+direction if direction and old*direction>0 else direction
+                if abs(c['staff_signal'])>=2:
+                    if direction<0 and staff>1:
+                        worker=n['employees'].pop();self.nodes[worker]['employer']=None;c['staff_signal']=0
+                    elif direction>0 and candidate is not None:
+                        trial_target=work_target(n,staff+1)
+                        trial_work=max(MIN_WORK_BPS,min(c['work_bps']+WORK_STEP_BPS,max(c['work_bps']-WORK_STEP_BPS,trial_target)))
+                        trial=outlook(n,self.energy_multiplier,staff+1,trial_work,debt)
+                        if c['profitable_months']>=2 and available_cash>=trial['reserve_cents']:c['loss_used_cents']=0
+                        trial_bridge=c['bridge_months']<MAX_BRIDGE_MONTHS and trial['projected_gap_cents']<=max(0,c['loss_budget_cents']-c['loss_used_cents'])
+                        if available_cash>=trial['reserve_cents'] and (trial['projected_gap_cents']==0 or trial_bridge):
+                            n['employees'].append(candidate['id']);candidate['employer']=n['id'];c['staff_signal']=0
+                target=work_target(n,len(n['employees']))
+                work=max(MIN_WORK_BPS,min(c['work_bps']+WORK_STEP_BPS,max(c['work_bps']-WORK_STEP_BPS,target)))
+                option=outlook(n,self.energy_multiplier,len(n['employees']),work,debt)
+            demand_ok=c['forecast_milli']+c['order_units']*1000>=1000*self.goods_unit_scale;margin_ok=option['projected_gap_cents']==0 and demand_ok
+            cash_ok=available_cash>=option['required_cash_cents']
+            if c['profitable_months']>=2 and available_cash>=option['reserve_cents']:c['loss_used_cents']=0
             room=max(0,c['loss_budget_cents']-c['loss_used_cents'])
             bridge_ok=cash_ok and c['bridge_months']<MAX_BRIDGE_MONTHS and option['projected_gap_cents']<=room
             if not cash_ok or not margin_ok and not bridge_ok:
@@ -305,7 +353,7 @@ class World:
                 reason='Befristeter Weiterbetrieb aus vorhandener Liquidität: erwartete Finanzierungslücke innerhalb von Verlustbudget und höchstens drei Brückenmonaten.'
             else:
                 c['next_status']='operating';c['next_work_bps']=work;c['bridge_months']=0
-                reason='Tragfähiger Betriebsplan; Arbeitszeit folgt Produktionsbedarf mit höchstens 25 Prozentpunkten Änderung pro Monat.'
+                reason=planning_reason if self.workforce_policy=='joint' else 'Tragfähiger Betriebsplan; Arbeitszeit folgt Produktionsbedarf mit höchstens 25 Prozentpunkten Änderung pro Monat.'
         reserve=option['reserve_cents']
         if len(n['employees'])!=staff or c['next_status']!=c['status'] or c['next_work_bps']!=c['work_bps']:
             self.notice(n['name']+': '+reason+' Gilt ab nächstem Monat.',n['id'])
@@ -313,7 +361,7 @@ class World:
         if n['id']=='alltag':arrears=arrears or bool(self.banking.loan.overdue_interest_cents or self.banking.loan.overdue_principal_cents)
         after_tax=profit-tax_due
         allowed=not self.crisis.closed(self,n['id']) and not arrears and c['next_status']=='operating'
-        investment= self.banking.loan.amount_cents if n['id']=='alltag' and self.banking.loan.status=='credited' else 0
+        investment= (self.banking.loan.amount_cents if n['id']=='alltag' and self.banking.loan.status=='credited' else 0)+self.capital_orders.locked(n['id'])
         a=allocation(c['retained_earnings_cents'],after_tax,n['cash_cents'],reserve,investment,allowed,self.month,self.distribution_policy)
         for field,kind,label in [('regular_paid_cents','company_dividend','Gewinnausschüttung'),('extra_paid_cents','company_extra_dividend','Zusätzliche Gewinnausschüttung')]:
             actual=0
@@ -337,6 +385,16 @@ class World:
                          demand_ok=demand_ok,margin_ok=margin_ok,cash_ok=cash_ok,restart_ready=c['restart_signal']>=RESTART_CLOSES,
                          loss_this_month_cents=max(0,-profit),
                          distribution_reason=a['reason'])
+
+        decision=dict(firm_id=n['id'],month=self.month,policy=self.workforce_policy,
+            current_staff=staff,current_work_bps=planning_before['company']['work_bps'],current_fte_bps=staff*planning_before['company']['work_bps'],
+            production_fte_bps=p.get('staff',0)*p.get('work_bps',0),desired_staff=desired,signal=c['staff_signal'],
+            selected_staff=len(n['employees']),selected_work_bps=c['next_work_bps'],selected_fte_bps=len(n['employees'])*c['next_work_bps'],
+            next_status=c['next_status'],closed=self.crisis.closed(self,n['id']),cash_available_cents=planning_before['cash_cents'],
+            reason=reason,**workforce_requirements(planning_before),
+            options=workforce_options(planning_before,self.energy_multiplier,debt,candidate is not None,self.workforce_policy))
+        c['workforce_decision']=decision
+        self.workforce_history.append(deepcopy(decision))
 
     def households(self):
         return [self.nodes[f'h{i}'] for i in range(1,7)]
@@ -365,13 +423,16 @@ class World:
                 if event=='energy': self.energy_multiplier=2
                 if event=='energy_recovery': self.energy_multiplier=1
                 if event=='demand': self.propensity=65
-                if event=='demand_recovery': self.propensity=95
-                self.notice('Energieimporte kosten ab jetzt wieder den Ausgangspreis.' if event=='energy_recovery' else 'Energieimporte kosten ab jetzt das Doppelte.' if event=='energy' else 'Haushalte planen ab jetzt 95 % ihres Nettoeinkommens für Konsum ein.' if event=='demand_recovery' else 'Haushalte planen ab jetzt 65 % statt 95 % ihres Nettoeinkommens für Konsum ein.')
+                if event=='demand_recovery': self.propensity=100 if self.consumption_policy=='liquidity_target' else 95
+                self.notice('Energieimporte kosten ab jetzt wieder den Ausgangspreis.' if event=='energy_recovery' else 'Energieimporte kosten ab jetzt das Doppelte.' if event=='energy' else f'Haushalte verwenden ab jetzt {self.propensity} % der Einkommensbasis im Kaufplan; die geltende Reserve- und Grundbedarfsregel bleibt bestehen.')
             self.pending=[]
             self.pricing.begin_month(self)
             self.foreign.begin_month(self)
-        if self.phase==4: self.banking.deliver(self)
+        if self.phase==4:
+            self.banking.deliver(self)
+            self.capital_orders.deliver(self)
         self.model.scheduler.run_step(self.model,self.revision,0,collect_data=False)
+        if self.phase==0:self.capital_orders.reserve(self)
         if self.phase==2:
             # Rotate first buyer monthly; budgets depend on money earned by this actual household.
             hs=self.households();offset=(self.month-1)%6
@@ -414,7 +475,7 @@ class World:
         if self.horizon_months is not None and self.month>=self.horizon_months:
             raise ValueError('Der Eingriff ist im letzten Beobachtungsmonat nicht verfügbar.')
         targets={'energy':('energy_multiplier',2),'energy_recovery':('energy_multiplier',1),
-                 'demand':('propensity',65),'demand_recovery':('propensity',95)}
+                 'demand':('propensity',65),'demand_recovery':('propensity',100 if self.consumption_policy=='liquidity_target' else 95)}
         if event not in targets or event in self.pending:
             raise ValueError('Dieses Ereignis ist ungültig oder bereits vorgemerkt.')
         attribute,target=targets[event]
@@ -425,6 +486,7 @@ class World:
         return self.snapshot()
 
     def check(self):
+        self.capital_orders.check(self)
         assert all(n['cash_cents']>=0 for n in self.nodes.values())
         assert sum(n['cash_cents'] for n in self.nodes.values())==self.initial_money+self.banking.created-self.banking.repaid
         self.banking.check(self)
@@ -448,12 +510,18 @@ class World:
     def snapshot(self,export=False):
         self.check()
         tx=[t for t in self.journal if t['month']==self.month]
-        result=dict(world_id=self.id, revision=self.revision, month=self.month, phase=self.phase, phase_label=PHASES[self.phase] if self.phase>=0 else 'Bereit zum Start', nodes=deepcopy(list(self.nodes.values())), transactions=deepcopy(tx), notices=deepcopy(self.notices[-35:]), history=deepcopy(self.history[-36:]), pending=list(self.pending), active=deepcopy(self.active), rules=RULES, audit=dict(total_money_cents=self.banking.initial_deposits, current_money_cents=self.banking.balance(self)['customer_deposits_cents'], transaction_count=len(self.journal), open_obligations_cents=sum(x['amount_cents'] for x in self.obligations)+self.treasury.overdue_interest_cents+self.banking.loan.overdue_interest_cents+self.banking.loan.overdue_principal_cents, loan_principal_cents=self.nodes['bank']['loan_assets'], llm_calls=0), month_open=dict(self.month_open), initial_balances=dict(self.initial), parameters=dict(goods_unit_scale=self.goods_unit_scale,distribution_tax_bps=self.distribution_tax.rate_bps,fiscal_policy=self.budget.policy,distribution_policy=self.distribution_policy,energy_multiplier=self.energy_multiplier,consumption_percent=self.propensity,essential_budget_cents=self.essential_budget_cents), classification='illustrative_circular_flow_v16',macro=self.macro.snapshot(),distribution_tax=self.distribution_tax.snapshot(self),public_budget=self.budget.snapshot(self),crisis=self.crisis.snapshot(self),horizon_months=self.horizon_months,completed=self.horizon_months is not None and self.month>=self.horizon_months and self.phase==4,banking=self.banking.snapshot(self),foreign_trade=self.foreign.snapshot(self),public_finance=self.treasury.snapshot(self),monetary_policy=self.monetary.snapshot(self),pricing=self.pricing.snapshot(self))
-        if self.budget.policy=='adaptive':
+        result=dict(world_id=self.id, revision=self.revision, month=self.month, phase=self.phase, phase_label=PHASES[self.phase] if self.phase>=0 else 'Bereit zum Start', nodes=deepcopy(list(self.nodes.values())), transactions=deepcopy(tx), notices=deepcopy(self.notices[-35:]), history=deepcopy(self.history[-36:]), pending=list(self.pending), active=deepcopy(self.active), rules=RULES, audit=dict(total_money_cents=self.banking.initial_deposits, current_money_cents=self.banking.balance(self)['customer_deposits_cents'], transaction_count=len(self.journal), open_obligations_cents=sum(x['amount_cents'] for x in self.obligations)+self.treasury.overdue_interest_cents+self.banking.loan.overdue_interest_cents+self.banking.loan.overdue_principal_cents, loan_principal_cents=self.nodes['bank']['loan_assets'], llm_calls=0), month_open=dict(self.month_open), initial_balances=dict(self.initial), parameters=dict(investment_policy=self.investment_policy,consumption_policy=self.consumption_policy,liquidity_reserve_months=self.liquidity_reserve_months,liquidity_adjustment_months=self.liquidity_adjustment_months,workforce_policy=self.workforce_policy,goods_unit_scale=self.goods_unit_scale,distribution_tax_bps=self.distribution_tax.rate_bps,fiscal_policy=self.budget.policy,distribution_policy=self.distribution_policy,energy_multiplier=self.energy_multiplier,consumption_percent=self.propensity,essential_budget_cents=self.essential_budget_cents), capital_orders=self.capital_orders.snapshot(),classification='illustrative_circular_flow_v18',workforce_history=deepcopy(self.workforce_history[-72:]),macro=self.macro.snapshot(),distribution_tax=self.distribution_tax.snapshot(self),public_budget=self.budget.snapshot(self),crisis=self.crisis.snapshot(self),horizon_months=self.horizon_months,completed=self.horizon_months is not None and self.month>=self.horizon_months and self.phase==4,banking=self.banking.snapshot(self),foreign_trade=self.foreign.snapshot(self),public_finance=self.treasury.snapshot(self),monetary_policy=self.monetary.snapshot(self),pricing=self.pricing.snapshot(self))
+        if self.budget.policy!='legacy':
             result['rules']=dict(RULES,government='Bis zu zwei öffentliche Stellen mit vollständig bestätigter Monatsfinanzierung. Nach drei Defizitabschlüssen sinkt zunächst die Beschaffung, danach gegebenenfalls die Zahl öffentlicher Stellen. Bei fehlender unmittelbarer Finanzierung werden vor Arbeitsbeginn Stellen und Beschaffung begrenzt. Sozialbedarf und tatsächliche Zahlung bleiben getrennt; knappe Mittel werden anteilig verteilt. Wiederaufbau benötigt anhaltende Deckung und Liquidität. Alte Lohnansprüche werden nicht gelöscht. Die bestehende begrenzte Bankfinanzierung und ihre Zinsen bleiben erhalten. Illustrative Budgetregeln.')
+        if self.consumption_policy=='liquidity_target':
+            result['rules']=dict(result['rules'],households=f'Kaufplan aus {self.propensity} % der Einkommensbasis plus einem {self.liquidity_adjustment_months}tel der Abweichung des Monatsanfangsguthabens vom Liquiditätsziel. Ziel: {self.liquidity_reserve_months} Monate des Grundbedarfs. Der Grundbedarfsplan und tatsächlich verfügbares Geld begrenzen die Käufe. Illustrative Verhaltensannahme; kein dauerhaft vorgegebener Netto-Sparbetrag.')
+        if self.budget.policy in ('quarterly','buffered_quarterly','funding_only'):
+            result['rules']=dict(result['rules'],government='Öffentliche Arbeit nur nach bestätigter Finanzierung. Strukturelle Budgetentscheidungen folgen der ausgewiesenen Finanzpolitik; Quartalsdefizit, Planungshorizont, fällige Verpflichtungen und Finanzierungsraum bleiben getrennt. Keine Löschung alter Ansprüche und keine zusätzlichen Ausgleichszahlungen.')
+        if self.investment_policy=='orders':
+            result['rules']=dict(result['rules'],firms=result['rules']['firms']+' Finanzierte Maschinenaufträge erhöhen den Produktionsbedarf des Lieferanten. Kaufgeld und Teile werden reserviert; Zahlung und Lieferung erfolgen gemeinsam, zusätzliche Kapazität erst ab Folgemonat.')
         result['rules']=dict(result['rules'],bank=RULES['bank'].replace('acht Werkstatteinheiten',f"{self.banking.loan.units} Werkstatteinheiten"),external=RULES['external'].replace('sechs Alltags- und zwei Werkstatteinheiten',f"{self.foreign.orders['alltag']} Alltags- und {self.foreign.orders['werkstatt']} Werkstatteinheiten"))
         if export:
-            result.update(all_macro_history=deepcopy(self.macro.history),all_distribution_receipts=deepcopy(self.distribution_tax.receipts),all_distribution_history=deepcopy(self.distribution_tax.history),all_budget_history=deepcopy(self.budget.history),full_journal=deepcopy(self.journal),initial_balances=dict(self.initial),open_obligations=deepcopy(self.obligations),all_history=deepcopy(self.history),all_notices=deepcopy(self.notices),model_document='poc/WORLD_MODEL.md')
+            result.update(all_budget_review_history=deepcopy(self.budget.review_history),all_workforce_history=deepcopy(self.workforce_history),all_macro_history=deepcopy(self.macro.history),all_distribution_receipts=deepcopy(self.distribution_tax.receipts),all_distribution_history=deepcopy(self.distribution_tax.history),all_budget_history=deepcopy(self.budget.history),full_journal=deepcopy(self.journal),initial_balances=dict(self.initial),open_obligations=deepcopy(self.obligations),all_history=deepcopy(self.history),all_notices=deepcopy(self.notices),model_document='poc/WORLD_MODEL.md')
         return result
 
 
@@ -465,7 +533,7 @@ def world_request(action,payload):
         if action=='create':
             if payload:raise ValueError('Neustart erwartet ein leeres Objekt.')
             if len(WORLDS)>=64:del WORLDS[next(iter(WORLDS))]
-            w=World();WORLDS[w.id]=w
+            w=World.stable();WORLDS[w.id]=w
             return w.snapshot()
         required={'world_id'} if action=='export' else {'world_id','revision'} if action in ('step','credit') else {'world_id','revision','firm','duration','replacement_bps'} if action in ('closure','compare') else {'world_id','revision','annual_rate_bps'} if action=='rate' else {'world_id','revision','event'}
         if set(payload)!=required:raise ValueError('Ungültige Anfragefelder.')

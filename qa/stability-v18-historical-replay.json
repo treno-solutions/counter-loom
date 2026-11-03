@@ -1,0 +1,76 @@
+{
+  "model": "illustrative_circular_flow_v18",
+  "behavior": "Historical v16 policies, new v18 serializer",
+  "months_each": 600,
+  "reference": "qa/consumption-v16-comparison-2026-11-03.json",
+  "reference_sha256": "01c9cabda4c0a336face03292b0af0080e93baf893cd4f7ef3c8d9cd11efed9a",
+  "excluded_fields": [
+    "public_budget.decision_reason (descriptive wording only)"
+  ],
+  "runs": [
+    {
+      "consumption_percent": 95,
+      "all_600_months_exact": true,
+      "scope": "All archived economic fields; descriptive rule wording excluded",
+      "fields": [
+        "month",
+        "household_cash_cents",
+        "firm_cash_cents",
+        "government_cash_cents",
+        "foreign_cash_cents",
+        "government_debt_cents",
+        "consumption_cents",
+        "employment",
+        "public_budget",
+        "taxes_cents",
+        "cash_balance_cents",
+        "macro",
+        "purchase_totals",
+        "planned_retention_cents",
+        "household_saving_cents"
+      ]
+    },
+    {
+      "consumption_percent": 100,
+      "all_600_months_exact": true,
+      "scope": "All archived economic fields; descriptive rule wording excluded",
+      "fields": [
+        "month",
+        "household_cash_cents",
+        "firm_cash_cents",
+        "government_cash_cents",
+        "foreign_cash_cents",
+        "government_debt_cents",
+        "consumption_cents",
+        "employment",
+        "public_budget",
+        "taxes_cents",
+        "cash_balance_cents",
+        "macro",
+        "purchase_totals",
+        "planned_retention_cents",
+        "household_saving_cents"
+      ]
+    }
+  ],
+  "source_sha256": {
+    "poc/banking.py": "700001a5b10e78854096bb288f3803cb31bcf9c172a5e154337154fa1098b2ed",
+    "poc/capital_orders.py": "ae9384b32dd755c6614fede9b6dd53ecaf2910e9387f52f7914741588f99b7bd",
+    "poc/crisis.py": "f5d91c031b9020f5d251dae3337cf2f3ca08643e409ce9b2ac3dc11cf8d49c71",
+    "poc/distribution_tax.py": "7a234b8156c472e9584d84242606bd73ab34f7cc1be3b13f194b57eda2afed24",
+    "poc/engine.py": "1616d7b31cc6d43332b1f63918a2f531194309795f9d4559f1c5475fca944818",
+    "poc/firms.py": "4a376398b35e42b4a912e4bee9d8c7fc90c5109cc834738d6f4fb4402f483654",
+    "poc/foreign.py": "b5ac1ee4bc0116d23d926d0d493079fb89e51dee3f533c84e0d896733cbd6437",
+    "poc/macro.py": "bf0a853dc28c11879c64b4b04a8a3008ea12ac2188a51d9d447e838eaad99467",
+    "poc/pricing.py": "2edc14b46e0a6a6ef0c119447caf277d0d44d41a80eff5898baa680b6e1aab55",
+    "poc/profit_distribution.py": "1c393848a6fd90b36bbf47d18409f9bf90ea06b590706620d38675a5b03361a0",
+    "poc/public_budget.py": "d973eccef010d69788014633c66df9405df1744a5a5436fd12db477bc5c667a1",
+    "poc/rates.py": "9f6337cd122854eecb7b250369d268169ee3986d9284c35f31d0d62835467940",
+    "poc/server.py": "7e45b6d32d04e9c6a5cf2cc1b84c73854ac16661d812e394479db21d1c66cd32",
+    "poc/systems.py": "add13f5727e55388124df5c12ff15d8f662164b7d034303e1910ee6b869c877f",
+    "poc/treasury.py": "18b8af37966668c1f9668f3c845e530e551a7aa99a54f4557d8855a772122c0b",
+    "poc/workforce.py": "a143d5f63d613aef0c34ec5dc6863d0c85d18a3b26ca82c178cae749d7957c2c",
+    "poc/world.py": "e7dfb2cc36244e682031d0de83a4286f5e7fb2e87ac9dde1fd7fd61c9f219a99",
+    "poc/scripts/replay_stability_references.py": "a875358391410001c82d37bc97181e904af354d0f80e10cbfdd0e3ad7dd8715b"
+  }
+}

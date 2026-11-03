@@ -1,6 +1,6 @@
 # Stabilisierung der Modellwirtschaft
 
-Stand: 3. November 2026. Prüf- und Reparaturplan für das bestehende Modell v16, Quellstand `98c20c8`. Vorgeschlagene Verhaltensänderungen sind noch nicht umgesetzt. Eine separate KI-Prüfinstanz hat Quellcode und vorhandene Diagnosen kritisch geprüft; dies ist keine externe empirische Validierung.
+Stand: 3. November 2026. Prüf- und Reparaturplan für das bestehende Modell v16, Quellstand `98c20c8`. Die beschriebenen Mechanismen sind inzwischen als getrennte Varianten in [v18](STABILITY_MODEL.md) umgesetzt; [Prüfergebnisse](../qa/stability-v18-report.md) dokumentieren ihre Grenzen. Eine separate KI-Prüfinstanz hat Quellcode und vorhandene Diagnosen kritisch geprüft; dies ist keine externe empirische Validierung.
 
 Die bisher gefundenen Personal- und Investitionsprobleme sind begründet. Ihre Reparatur allein garantiert aber keine stationäre Wirtschaft. Zuerst muss die Modellschliessung ausdrücklich festlegen, welche Bestände Haushalte langfristig halten möchten und welcher Sektor einen tatsächlich anhaltenden Geldüberschuss finanziert. Danach lassen sich die einzelnen Regler getrennt korrigieren, ohne immer neue Ausgleichszahlungen einzubauen.
 
@@ -38,9 +38,9 @@ Erfolg: Die belegten Wechsel knapp an der Vollzeitgrenze verschwinden, ohne dass
 
 ### Fiskalische Zeitbasis
 
-Zunächst nur die Beurteilungsperiode verändern: wiederkehrende Einnahmen und Bedarf über ein vollständiges Ausschüttungsquartal vergleichen. Die harte Finanzierungsgrenze weiterhin getrennt vor Arbeitsbeginn prüfen. Eingriffshöhe und Wiederaufbauregel bleiben im ersten Gegenlauf unverändert.
+Im isolierten Gegenlauf zunächst nur die Beurteilungsperiode verändern: wiederkehrende Einnahmen und Bedarf über ein vollständiges Ausschüttungsquartal vergleichen. Die harte Finanzierungsgrenze weiterhin getrennt vor Arbeitsbeginn prüfen. Eingriffshöhe und Wiederaufbauregel bleiben im ersten Gegenlauf unverändert.
 
-Erfolg: Eine Verschiebung von Ausschüttungen innerhalb desselben Quartals erzeugt bei gleichen Quartalssummen weniger unterschiedliche politische Entscheidungen. Tatsächlich fehlende Zahlungsmittel dürfen trotzdem Handlungen begrenzen. Eine Verbesserung des Staatssaldos wird nicht vorausgesetzt; beide Konsumvarianten können schlechter abschneiden. Die Grösse fiskalischer Schritte wird erst danach gesondert geprüft.
+Erfolg: Eine Verschiebung von Ausschüttungen innerhalb desselben Quartals erzeugt bei gleichen Quartalssummen weniger unterschiedliche politische Entscheidungen. Tatsächlich fehlende Zahlungsmittel dürfen trotzdem Handlungen begrenzen. Eine Verbesserung des Staatssaldos wird nicht vorausgesetzt; beide Konsumvarianten können schlechter abschneiden. Die anschliessend getrennte Variante `buffered_quarterly` vergleicht die projizierte Finanzierungslücke mit tatsächlicher Kasse und nutzbarem Kreditraum. `funding_only` erhält die reine Vorfinanzierungsgrenze als weitere Kontrolle. Die Grösse fiskalischer Schritte wird nicht auf ein gewünschtes Endergebnis kalibriert.
 
 ### Bestellbarer Maschinenauftrag
 

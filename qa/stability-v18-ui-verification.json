@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-03",
+  "model": "illustrative_circular_flow_v18",
+  "browser": "BrowserOS neo",
+  "build_passed": true,
+  "python_tests_passed": 194,
+  "schema_phase_snapshots_passed": 26,
+  "viewports_checked": [
+    {
+      "width": 1366,
+      "height": 900,
+      "horizontal_page_overflow": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "horizontal_page_overflow": false
+    },
+    {
+      "width": 1040,
+      "horizontal_page_overflow": false
+    }
+  ],
+  "checked": [
+    "Household liquidity goals and account drift disclosure",
+    "Company workforce options and aggregate working hours",
+    "Financed machine order: 800 parts, payment and delivery M6, capacity from M7",
+    "Actual fiscal observation month M6 remains visible in M8",
+    "Recovery to 100 percent disabled when already active",
+    "No UI error alert in checked states"
+  ],
+  "limitations": [
+    "Visual checks cover selected model states and widths, not every state or prototype presentation."
+  ]
+}

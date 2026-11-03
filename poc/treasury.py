@@ -47,7 +47,7 @@ class Treasury:
         self.planned_primary_cents=(len(world.nodes['staat']['employees'])*GovernmentSystem.wage_per_job
             +sum(h['employer'] is None for h in world.households())*GovernmentSystem.transfer_per_unemployed
             +2*GovernmentSystem.procurement_per_firm+world.crisis.planned_benefits(world))
-        if world.budget.policy=='adaptive':
+        if world.budget.policy!='legacy':
             p=world.budget.plan
             self.planned_primary_cents=p['payroll_cents']+p['social_need_cents']+p['procurement_cents']
         self.reserve_target_cents=self.reserve_months*(self.planned_primary_cents+self.month_interest_charge_cents)

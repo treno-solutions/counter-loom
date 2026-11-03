@@ -1,6 +1,8 @@
 # Anpassendes Staatsbudget und finanzierte öffentliche Arbeit · v13
 
-Stand: 3. November 2026. Eigene illustrative Regeln, keine rechtliche Haushalts-, Sozialleistungs- oder Kündigungsordnung. Die normale Modellwelt verwendet `fiscal_policy='adaptive'`. Der Modus `legacy` erhält die bisherige Staatslogik für kontrollierte Vergleiche. Elf Akteure, Gewinnverwendung, Steuersätze, Preise und Kreditrahmen bleiben erhalten; es gibt keine zusätzliche Geldquelle.
+Die aktuelle Referenz [v18](STABILITY_MODEL.md) ergänzt vollständige Quartalsentscheidungen mit einem ausgewiesenen Finanzierungsraum. Die folgenden Abschnitte dokumentieren die erhaltene historische Regel.
+
+Stand: 3. November 2026. Eigene illustrative Regeln, keine rechtliche Haushalts-, Sozialleistungs- oder Kündigungsordnung. Die historische Vergleichsvariante verwendet `fiscal_policy='adaptive'`. Der Modus `legacy` erhält die bisherige Staatslogik für kontrollierte Vergleiche. Elf Akteure, Gewinnverwendung, Steuersätze, Preise und Kreditrahmen bleiben erhalten; es gibt keine zusätzliche Geldquelle.
 
 ## Plan, Zahlung und Verpflichtung
 

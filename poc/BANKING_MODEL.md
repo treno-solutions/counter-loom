@@ -1,5 +1,7 @@
 # Bankbilanz · Grundlage v3, erweitert bis v8
 
+Die aktuelle Referenz [v18](STABILITY_MODEL.md) ergänzt eigenfinanzierte Maschinenaufträge mit Produktionsplanung und reserviertem Kaufgeld. Der hier beschriebene gesondert angefragte Bankvertrag bleibt bestehen; während eines offenen eigenfinanzierten Auftrags ist eine parallele Kreditanfrage gesperrt.
+
 Stand: 2. November 2026. Begrenzter Einbank-Test innerhalb der laufenden Welt; keine empirische Kreditvergabe- oder Regulierungsstudie. Alle Beträge und Vertragsbedingungen sind illustrative Annahmen.
 
 ## Aktueller Umfang v8

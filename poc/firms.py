@@ -11,7 +11,7 @@ MAX_BRIDGE_MONTHS = 3
 RESTART_CLOSES = 2
 
 def initial_company(forecast):
-    return dict(forecast_milli=forecast*1000, inventory_value_cents=0,
+    return dict(order_units=0,order_reserved_units=0,order_price_cents=0,workforce_decision=None,forecast_milli=forecast*1000, inventory_value_cents=0,
                 staff_signal=0, short_months=0, last_investment_month=0,
                 status='operating',next_status='operating',work_bps=10000,next_work_bps=10000,
                 bridge_months=0,loss_used_cents=0,loss_budget_cents=480000,profitable_months=0,restart_signal=0,
@@ -28,11 +28,14 @@ def outlook(firm,energy_multiplier,staff,work_bps,debt_service=0):
     demand=demand_units(firm['company']);target=ceil(demand/4)
     free=max(0,firm['inventory']-firm.get('reserved_units',0))
     capacity=full_capacity(firm,staff)*work_bps//10000
-    units=min(max(0,demand+target-free),capacity)
+    order=firm['company'].get('order_units',0)
+    units=min(max(0,demand+target-free)+order,capacity)
     energy=(500 if firm['id']=='alltag' else 900)//firm.get('unit_scale',1)*energy_multiplier
     wages=staff*(WAGE*work_bps//10000)
     interest=firm['loan']*firm['loan_next_rate_bps']//120000
-    receipts=min(demand,free+units)*firm['price']
+    reserved=min(order,units)
+    order_receipts=(order+firm['company'].get('order_reserved_units',0))*firm['company'].get('order_price_cents',firm['price']) if order and units>=order else 0
+    receipts=min(demand,free+units-reserved)*firm['price']+order_receipts
     outflows=wages+units*energy+interest+debt_service
     return dict(production_units=units,capacity_units=capacity,wages_cents=wages,
                 expected_receipts_cents=receipts,required_cash_cents=outflows,
@@ -41,7 +44,7 @@ def outlook(firm,energy_multiplier,staff,work_bps,debt_service=0):
 
 def work_target(firm,staff):
     demand=demand_units(firm['company']);free=max(0,firm['inventory']-firm.get('reserved_units',0))
-    needed=max(0,demand+ceil(demand/4)-free)
+    needed=max(0,demand+ceil(demand/4)-free)+firm['company'].get('order_units',0)
     return max(MIN_WORK_BPS,min(10000,ceil(needed*10000/max(1,full_capacity(firm,staff)))))
 
 def staffing(firm,energy_multiplier,debt_service=0):
@@ -58,7 +61,7 @@ def plan(firm,energy_multiplier,debt_service=0):
     opening=firm['inventory']-firm.get('reserved_units',0)
     work=firm['company']['work_bps'];staff=len(firm['employees'])
     capacity=full_capacity(firm,staff)*work//10000
-    needed=max(0,demand+target-opening)
+    needed=max(0,demand+target-opening)+firm['company'].get('order_units',0)
     energy=(500 if firm['id']=='alltag' else 900)//firm.get('unit_scale',1)*energy_multiplier
     per_worker=WAGE*work//10000;wages=staff*per_worker
     interest=firm['loan']*firm['loan_rate_bps']//120000
