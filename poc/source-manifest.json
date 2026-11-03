@@ -76,8 +76,8 @@
   },
   {
     "path": "poc/STABILITY_MODEL.md",
-    "bytes": 8057,
-    "sha256": "5db332b8cc96fbaf986d821a7ab597d70a422eaf27637b130a26b7ce9f0cbf59"
+    "bytes": 8360,
+    "sha256": "ddc6f23acdd94b974ce06d048fa39163e0aaba4d82458994f82a92b4e0280dff"
   },
   {
     "path": "poc/STABILITY_PLAN.md",
@@ -233,6 +233,11 @@
     "path": "poc/scripts/diagnose_fiscal_balance.py",
     "bytes": 7070,
     "sha256": "18a5b7d1fc27b7fc39425075f6aca2de0f80d6ecd5531b18b8a7400dc08cc800"
+  },
+  {
+    "path": "poc/scripts/diagnose_rate_transmission.py",
+    "bytes": 5862,
+    "sha256": "d6934500abc9db2ed77a5fd23b32e988d67c1b509c56dd64e3ac075f5f476f87"
   },
   {
     "path": "poc/scripts/diagnose_saving_investment.py",

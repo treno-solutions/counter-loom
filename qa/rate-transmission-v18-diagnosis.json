@@ -1,0 +1,314 @@
+{
+  "date": "2026-11-03",
+  "model": "illustrative_circular_flow_v18",
+  "model_rules_changed": false,
+  "method": "Archived transaction decomposition and source inspection; no new counterfactual simulation",
+  "source": "qa/isolated-shocks-v18-2026-11-03.json",
+  "source_sha256": "d92300de58ae06969da14e8cc64908c444344852d9c076114f1a5e708f3af965",
+  "source_code_sha256": {
+    "poc/world.py": "e7dfb2cc36244e682031d0de83a4286f5e7fb2e87ac9dde1fd7fd61c9f219a99",
+    "poc/firms.py": "4a376398b35e42b4a912e4bee9d8c7fc90c5109cc834738d6f4fb4402f483654",
+    "poc/workforce.py": "a143d5f63d613aef0c34ec5dc6863d0c85d18a3b26ca82c178cae749d7957c2c",
+    "poc/systems.py": "add13f5727e55388124df5c12ff15d8f662164b7d034303e1910ee6b869c877f",
+    "poc/public_budget.py": "d973eccef010d69788014633c66df9405df1744a5a5436fd12db477bc5c667a1",
+    "poc/treasury.py": "18b8af37966668c1f9668f3c845e530e551a7aa99a54f4557d8855a772122c0b",
+    "poc/capital_orders.py": "ae9384b32dd755c6614fede9b6dd53ecaf2910e9387f52f7914741588f99b7bd",
+    "poc/banking.py": "700001a5b10e78854096bb288f3803cb31bcf9c172a5e154337154fa1098b2ed",
+    "poc/foreign.py": "b5ac1ee4bc0116d23d926d0d493079fb89e51dee3f533c84e0d896733cbd6437",
+    "poc/rates.py": "9f6337cd122854eecb7b250369d268169ee3986d9284c35f31d0d62835467940",
+    "poc/pricing.py": "2edc14b46e0a6a6ef0c119447caf277d0d44d41a80eff5898baa680b6e1aab55",
+    "poc/profit_distribution.py": "1c393848a6fd90b36bbf47d18409f9bf90ea06b590706620d38675a5b03361a0",
+    "poc/distribution_tax.py": "7a234b8156c472e9584d84242606bd73ab34f7cc1be3b13f194b57eda2afed24",
+    "poc/macro.py": "bf0a853dc28c11879c64b4b04a8a3008ea12ac2188a51d9d447e838eaad99467",
+    "poc/crisis.py": "f5d91c031b9020f5d251dae3337cf2f3ca08643e409ce9b2ac3dc11cf8d49c71",
+    "poc/scripts/isolated_shocks.py": "95c96a527ad31b1daed78cf3a1458741d8e872003a87d401a1606965bcd02740"
+  },
+  "diagnostic_script_sha256": "d6934500abc9db2ed77a5fd23b32e988d67c1b509c56dd64e3ac075f5f476f87",
+  "windows": {
+    "12": {
+      "control": {
+        "flows_cents": {
+          "wage": 14787888,
+          "interest": 48000,
+          "energy": 815321,
+          "income_tax": 4436350,
+          "procurement": 720000,
+          "consumption": 13436000,
+          "export_sale": 815400,
+          "profit_tax": 1016021,
+          "company_dividend": 2032055,
+          "distribution_tax": 1028002,
+          "dividend": 48000,
+          "company_extra_dividend": 2032065
+        },
+        "bank_net_cents": 36009,
+        "bank_withholding_cents": 11991,
+        "firm_net_cents": 3048109,
+        "non_owner_net_cents": 10351538,
+        "household_income_cents": 13435656,
+        "purchases_cents": 13436000,
+        "firm_sales_cents": 14971400,
+        "firm_profit_cents": 5080141,
+        "government_net_cents": 9046841
+      },
+      "shock": {
+        "flows_cents": {
+          "wage": 14796240,
+          "interest": 81000,
+          "energy": 816072,
+          "income_tax": 4438858,
+          "procurement": 720000,
+          "consumption": 13449900,
+          "export_sale": 815950,
+          "profit_tax": 1010382,
+          "company_dividend": 2020781,
+          "distribution_tax": 1030611,
+          "dividend": 81000,
+          "company_extra_dividend": 2020787
+        },
+        "bank_net_cents": 60756,
+        "bank_withholding_cents": 20244,
+        "firm_net_cents": 3031201,
+        "non_owner_net_cents": 10357382,
+        "household_income_cents": 13449339,
+        "purchases_cents": 13449900,
+        "firm_sales_cents": 14985850,
+        "firm_profit_cents": 5051950,
+        "government_net_cents": 9046319
+      },
+      "delta": {
+        "bank_net_cents": 24747,
+        "bank_withholding_cents": 8253,
+        "firm_net_cents": -16908,
+        "non_owner_net_cents": 5844,
+        "household_income_cents": 13683,
+        "purchases_cents": 13900,
+        "firm_sales_cents": 14450,
+        "firm_profit_cents": -28191,
+        "government_net_cents": -522,
+        "flows_cents": {
+          "company_dividend": -11274,
+          "company_extra_dividend": -11278,
+          "consumption": 13900,
+          "distribution_tax": 2609,
+          "dividend": 33000,
+          "energy": 751,
+          "export_sale": 550,
+          "income_tax": 2508,
+          "interest": 33000,
+          "procurement": 0,
+          "profit_tax": -5639,
+          "wage": 8352
+        }
+      },
+      "extra_interest_as_percent_control_firm_sales": 0.22042026797761063,
+      "purchases_delta_percent": 0.10345340875260495
+    },
+    "13": {
+      "control": {
+        "flows_cents": {
+          "wage": 15915600,
+          "interest": 52000,
+          "energy": 873870,
+          "income_tax": 4774662,
+          "procurement": 780000,
+          "consumption": 14744400,
+          "export_sale": 883000,
+          "profit_tax": 1113535,
+          "company_dividend": 2227083,
+          "distribution_tax": 1077756,
+          "dividend": 52000,
+          "company_extra_dividend": 2032065
+        },
+        "bank_net_cents": 39011,
+        "bank_withholding_cents": 12989,
+        "firm_net_cents": 3194381,
+        "non_owner_net_cents": 11140938,
+        "household_income_cents": 14374330,
+        "purchases_cents": 14744400,
+        "firm_sales_cents": 16407400,
+        "firm_profit_cents": 5567711,
+        "government_net_cents": 8992421
+      },
+      "shock": {
+        "flows_cents": {
+          "wage": 15925488,
+          "interest": 88000,
+          "energy": 874758,
+          "income_tax": 4777630,
+          "procurement": 780000,
+          "consumption": 14758600,
+          "export_sale": 883900,
+          "profit_tax": 1107329,
+          "company_dividend": 2214676,
+          "distribution_tax": 1080833,
+          "dividend": 88000,
+          "company_extra_dividend": 2020787
+        },
+        "bank_net_cents": 66005,
+        "bank_withholding_cents": 21995,
+        "firm_net_cents": 3176625,
+        "non_owner_net_cents": 11147858,
+        "household_income_cents": 14390488,
+        "purchases_cents": 14758600,
+        "firm_sales_cents": 16422500,
+        "firm_profit_cents": 5536689,
+        "government_net_cents": 8992260
+      },
+      "delta": {
+        "bank_net_cents": 26994,
+        "bank_withholding_cents": 9006,
+        "firm_net_cents": -17756,
+        "non_owner_net_cents": 6920,
+        "household_income_cents": 16158,
+        "purchases_cents": 14200,
+        "firm_sales_cents": 15100,
+        "firm_profit_cents": -31022,
+        "government_net_cents": -161,
+        "flows_cents": {
+          "company_dividend": -12407,
+          "company_extra_dividend": -11278,
+          "consumption": 14200,
+          "distribution_tax": 3077,
+          "dividend": 36000,
+          "energy": 888,
+          "export_sale": 900,
+          "income_tax": 2968,
+          "interest": 36000,
+          "procurement": 0,
+          "profit_tax": -6206,
+          "wage": 9888
+        }
+      },
+      "extra_interest_as_percent_control_firm_sales": 0.21941319160866438,
+      "purchases_delta_percent": 0.09630775073926372
+    },
+    "60": {
+      "control": {
+        "flows_cents": {
+          "wage": 73936608,
+          "interest": 240000,
+          "energy": 4076340,
+          "income_tax": 22180904,
+          "procurement": 3600000,
+          "consumption": 67175350,
+          "export_sale": 4076400,
+          "profit_tax": 5079687,
+          "company_dividend": 10159441,
+          "distribution_tax": 5139593,
+          "dividend": 240000,
+          "company_extra_dividend": 10159494
+        },
+        "bank_net_cents": 180044,
+        "bank_withholding_cents": 59956,
+        "firm_net_cents": 15239298,
+        "non_owner_net_cents": 51755704,
+        "household_income_cents": 67175046,
+        "purchases_cents": 67175350,
+        "firm_sales_cents": 74851750,
+        "firm_profit_cents": 25398622,
+        "government_net_cents": 9046652
+      },
+      "shock": {
+        "flows_cents": {
+          "wage": 73948128,
+          "interest": 276000,
+          "energy": 4077380,
+          "income_tax": 22184362,
+          "procurement": 3600000,
+          "consumption": 67193200,
+          "export_sale": 4077400,
+          "profit_tax": 5073771,
+          "company_dividend": 10147608,
+          "distribution_tax": 5142675,
+          "dividend": 276000,
+          "company_extra_dividend": 10147663
+        },
+        "bank_net_cents": 207035,
+        "bank_withholding_cents": 68965,
+        "firm_net_cents": 15221561,
+        "non_owner_net_cents": 51763766,
+        "household_income_cents": 67192362,
+        "purchases_cents": 67193200,
+        "firm_sales_cents": 74870600,
+        "firm_profit_cents": 25369042,
+        "government_net_cents": 9047276
+      },
+      "delta": {
+        "bank_net_cents": 26991,
+        "bank_withholding_cents": 9009,
+        "firm_net_cents": -17737,
+        "non_owner_net_cents": 8062,
+        "household_income_cents": 17316,
+        "purchases_cents": 17850,
+        "firm_sales_cents": 18850,
+        "firm_profit_cents": -29580,
+        "government_net_cents": 624,
+        "flows_cents": {
+          "company_dividend": -11833,
+          "company_extra_dividend": -11831,
+          "consumption": 17850,
+          "distribution_tax": 3082,
+          "dividend": 36000,
+          "energy": 1040,
+          "export_sale": 1000,
+          "income_tax": 3458,
+          "interest": 36000,
+          "procurement": 0,
+          "profit_tax": -5916,
+          "wage": 11520
+        }
+      },
+      "extra_interest_as_percent_control_firm_sales": 0.04809506791758376,
+      "purchases_delta_percent": 0.026572247111477647
+    }
+  },
+  "checks": {
+    "source_hashes_match": true,
+    "bank_pays_all_monthly_received_interest": true,
+    "household_income_decomposition_exact": true
+  },
+  "exposure": {
+    "variable_principal_cents": 1200000,
+    "fixed_principal_cents": 1200000,
+    "additional_monthly_interest_cents": 3000,
+    "higher_variable_rate_relative_months": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "first_policy_change_relative_month": 1,
+    "first_variable_change_relative_month": 2,
+    "principal_new_credit_cents": {
+      "control": 0,
+      "rate": 0
+    },
+    "investment_payments_cents": {
+      "control": 0,
+      "rate": 0
+    },
+    "bank_equity_cents": [
+      1000000
+    ],
+    "government_debt_cents": [
+      0
+    ]
+  },
+  "conditional_accounting_example_cents": {
+    "extra_interest": 3000,
+    "bank_owner_net": 2250,
+    "firm_owner_net": -1800,
+    "household_net": 450,
+    "state_net": -450,
+    "assumes": "Frozen activity, positive firm profit, eventual full distribution, no rounding; not observed causal attribution"
+  }
+}

@@ -59,3 +59,5 @@ In der Makroübersicht öffnet **Liquiditätsziele und Kontodrift** Ziel und Gut
 Die Datenschnittstelle verwendet `illustrative_circular_flow_v18`. Nach einem Rechenkernwechsel sind ein neu geladener Client und ein neuer Lauf erforderlich. Frühere Ergebnisarchive bleiben erhalten. [Prüfplan](STABILITY_PLAN.md) und [Ergebnisvergleich](../qa/stability-v18-report.md) trennen technische Bilanzprüfung, mechanische Korrektur und wirtschaftlichen Stabilitätsbefund.
 
 Die [getrennten Schockversuche](../qa/isolated-shocks-v18-report.md) vergleichen höhere Leitzinsen, teurere Energie und eine befristete Betriebsschliessung aus demselben eingeschwungenen Zustand. Ihre Eingriffe verändern keine Wirtschaftsregel; Monatswerte, Gegenbuchungen und verbleibende Abweichungen sind separat dokumentiert.
+
+Die [Diagnose der schwachen Zinswirkung](../qa/rate-transmission-v18-diagnosis.md) verfolgt die tatsächlichen Zinszahlungen und Ausschüttungen, trennt die unterschiedliche Gewinnbesteuerung von inaktiven Kreditfunktionen und benennt fehlende Übertragungswege. Sie verändert keine Wirtschaftsregel.

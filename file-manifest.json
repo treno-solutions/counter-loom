@@ -106,8 +106,8 @@
   },
   {
     "path": "poc/source-manifest.json",
-    "bytes": 17836,
-    "sha256": "3ebdff20dc6a0c8715d64e478484c9dfed3aff0a931099cc820f8505a96e345e"
+    "bytes": 18002,
+    "sha256": "e8cbac7d4aaa2ea74f3cc3c7096ac928abd531113cc14ed7e3bfeef72db6419d"
   },
   {
     "path": "processed/energy-monthly-prices.csv",
@@ -623,6 +623,16 @@
     "path": "qa/profit-v12-verification-2026-11-03.json",
     "bytes": 1964,
     "sha256": "c5d96c6548ed793098e48c001227aca1db159343b02f74644048c54ea37b508b"
+  },
+  {
+    "path": "qa/rate-transmission-v18-diagnosis.json",
+    "bytes": 10740,
+    "sha256": "35ab785656c9d2cb09c5f0b0330eb607a533229643709cc388bda58d1dd48c43"
+  },
+  {
+    "path": "qa/rate-transmission-v18-diagnosis.md",
+    "bytes": 14727,
+    "sha256": "fb64275e245f0e39f843439305da1b855b0b2b10db489d758d8f2857e3606e75"
   },
   {
     "path": "qa/rates-v7-plausibility.json",
