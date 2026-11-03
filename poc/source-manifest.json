@@ -15,6 +15,11 @@
     "sha256": "c9273aa94d8e16db4ca6713f647a3fcc0d5cc9e6ef7cba8f580b71f8b9807b9e"
   },
   {
+    "path": "poc/DESIGN_SYSTEM.md",
+    "bytes": 1906,
+    "sha256": "7cad32e898c2f14b4cf563e9e1738af045bef34dc174f471a3d60b28fc1541e8"
+  },
+  {
     "path": "poc/FISCAL_MODEL.md",
     "bytes": 7001,
     "sha256": "08d350b3da43584f83f4519cb7a958a1618e0c730a0a308241111ad99c4a2aae"
@@ -36,8 +41,8 @@
   },
   {
     "path": "poc/README.md",
-    "bytes": 14594,
-    "sha256": "9f1115a3a1b456d556e4f81ee768593eefb6e6802b18ccd7083c68cf98db2dc6"
+    "bytes": 14692,
+    "sha256": "1b59b24468c6f9cbfd503516c31a007ebfeec0ee4232d1ad2b3d62cd73622e10"
   },
   {
     "path": "poc/WORLD_MODEL.md",
@@ -71,13 +76,13 @@
   },
   {
     "path": "poc/package-lock.json",
-    "bytes": 61860,
-    "sha256": "65dd2063d3f247cf8d57f4f9cfc3c0540fe461a2be123aff379d9f13737f11b3"
+    "bytes": 62289,
+    "sha256": "3b1b70f5dee9ff090238f50aaf3ee55d880cf085b5762b5decc0b7ef59afb7fd"
   },
   {
     "path": "poc/package.json",
-    "bytes": 731,
-    "sha256": "86bde5e6af1c28611978a784813e6119431f53cabc667bfe5f62c8ae2ccbdb93"
+    "bytes": 767,
+    "sha256": "d42bc4c87fb413c8622cdbe936bbd344c6d1328f5a16d565f3496d9734fb10b4"
   },
   {
     "path": "poc/pricing.py",
@@ -85,9 +90,19 @@
     "sha256": "6347b2b58428460da65e129136c7b6eebc15e4049edfc01fd5ade959f3975388"
   },
   {
+    "path": "poc/public/brand/treno-wordmark.svg",
+    "bytes": 8028,
+    "sha256": "798f83b4ce35741ae7332c47ae18cce2f54342f887bf59d866850e1c7486c218"
+  },
+  {
     "path": "poc/public/favicon.svg",
     "bytes": 277,
     "sha256": "3feb50f740a316d709bf3fea184b4ee2eea29b235c77bd2d2510756a41a9f43e"
+  },
+  {
+    "path": "poc/public/licenses/Poppins-OFL.txt",
+    "bytes": 6175,
+    "sha256": "5c4a92c8f8ce0ab211f4c72889d82383c9644546115d9ba39a4f2d5b8f37014b"
   },
   {
     "path": "poc/rates.py",
@@ -121,13 +136,13 @@
   },
   {
     "path": "poc/src/App.tsx",
-    "bytes": 29330,
-    "sha256": "5b6045544f8d0c1f6fba43d7ca2713893b10c69d1692324ca16026b1321819fc"
+    "bytes": 29613,
+    "sha256": "9f2706658e7317d0d97b52ac297e07655725ff05b872cb09c6485e0c24aa0893"
   },
   {
     "path": "poc/src/BankView.tsx",
-    "bytes": 14644,
-    "sha256": "0275b475651808d2247560de11725962c1a4ca0f5646cd11e346e1cca9142a18"
+    "bytes": 14653,
+    "sha256": "aaa498c99e9767e97af4130cdd5102ff9e65e04f334c299d741375c0842e6ec2"
   },
   {
     "path": "poc/src/BusinessOperation.tsx",
@@ -146,13 +161,13 @@
   },
   {
     "path": "poc/src/ForeignView.tsx",
-    "bytes": 7723,
-    "sha256": "92b5159f0f968a4368ac45bb8f81d498b94dcd1c698405f1e37c74d0ad357d1b"
+    "bytes": 7767,
+    "sha256": "ba6a8da5701347f8440999f9b7fcd7ea86a0533c589373d55724ec75cfd4ddb6"
   },
   {
     "path": "poc/src/GovernmentFinance.tsx",
-    "bytes": 16148,
-    "sha256": "bff6d7d2b5087d32480eab3ac3720c130ac69b65248879d009a6bcbf201478af"
+    "bytes": 16219,
+    "sha256": "116690decbc5689748fffa2e5fb103a332f66c3f1eb1f7b4cc597c7117aae707"
   },
   {
     "path": "poc/src/HouseholdApp.tsx",
@@ -166,8 +181,8 @@
   },
   {
     "path": "poc/src/RatesView.tsx",
-    "bytes": 7926,
-    "sha256": "6e6e8d5a960cad0512dd25eb3429c761258f99919be0d5c8693199c2d7967398"
+    "bytes": 7935,
+    "sha256": "e709f9f0e066b7f5a085f8d15787c4761eeabe4f144466c9a5f8ee2864792fb0"
   },
   {
     "path": "poc/src/household.css",
@@ -176,8 +191,8 @@
   },
   {
     "path": "poc/src/main.tsx",
-    "bytes": 650,
-    "sha256": "6ee20de71473fa92b15bb6fccf5a2069153e616ea44b345a7b3d681ff7f7790d"
+    "bytes": 810,
+    "sha256": "f95a67149b3f07dbbe77777fae04dcf66fcc1abd4b783ed22ab48f99392f9f95"
   },
   {
     "path": "poc/src/schema.ts",
@@ -186,8 +201,13 @@
   },
   {
     "path": "poc/src/styles.css",
-    "bytes": 72402,
-    "sha256": "c0d42aa01baf7442aa7ae7b4440ca44ee2f05f452808ecbfbe8419fe4b1f1a60"
+    "bytes": 80402,
+    "sha256": "2f503f314d826f1c65cfb999597021b14521724d498c29465bb0488eca358a68"
+  },
+  {
+    "path": "poc/src/treno-theme.css",
+    "bytes": 8618,
+    "sha256": "f0b0c47ffa570fbf4fdeee4ec8814d7ae71e5ac05d17e77f458cf47e08abf85c"
   },
   {
     "path": "poc/src/world-schema.ts",

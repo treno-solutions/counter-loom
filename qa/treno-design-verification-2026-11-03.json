@@ -1,0 +1,45 @@
+{
+  "date": "2026-11-03",
+  "scope": "Treno website styling for the current world interface",
+  "model_classification": "illustrative_circular_flow_v10",
+  "economic_rules_changed": false,
+  "build": {
+    "command": "npm --prefix poc run build",
+    "result": "passed"
+  },
+  "browser_checks": {
+    "browser": "BrowserOS neo",
+    "desktop_viewport": [
+      1400,
+      1000
+    ],
+    "mobile_viewport": [
+      390,
+      844
+    ],
+    "desktop_document_width": 1400,
+    "mobile_document_width": 390,
+    "mobile_restart_button_width": 44,
+    "poppins_loaded": true,
+    "brand_image_loaded": true,
+    "error_alerts": 0,
+    "views_opened": [
+      "overview",
+      "company operations",
+      "bank and machine credit",
+      "government finance",
+      "foreign trade",
+      "scenario controls"
+    ],
+    "manual_phase_step": "passed",
+    "diagram_layer_order": [
+      "connections",
+      "labels"
+    ],
+    "visual_review": "Reviewed overview, company operations, foreign trade, scenario controls and mobile header/toolbar. Foreground labels and distinct sector colors retained."
+  },
+  "limitations": [
+    "Visual checks cover representative desktop and mobile viewports, not a complete accessibility audit.",
+    "No economic validation is claimed by this visual change."
+  ]
+}

@@ -2,6 +2,8 @@
 
 Eine lokale React-/Tailwind-Ansicht zeigt eine kleine, monatlich laufende Modellwirtschaft. Jeder Schritt wird über eine lokale Python-Schnittstelle mit dem bereits geprüften BPTK-Agentenscheduler neu ausgeführt. [Modellkonzept, Regeln und Systemgrenze](WORLD_MODEL.md). Keine öffentliche Instanz, keine kalibrierte Volkswirtschaft.
 
+Die Oberfläche folgt der Treno-Website: [Farben, Typografie und Komponenten](DESIGN_SYSTEM.md).
+
 ## Einrichten
 
 Voraussetzungen: Node.js >=20.19 beziehungsweise >=22.12, npm und Python >=3.13. Frontend-Abhängigkeiten sind durch `package-lock.json` gebunden; BPTK-Py ist auf 3.5.0 festgelegt. Mit installiertem `uv` vom Repository-Stamm aus:

@@ -106,8 +106,8 @@
   },
   {
     "path": "poc/source-manifest.json",
-    "bytes": 8095,
-    "sha256": "f6c492ab11f398ab347ecf19bc447c40fc217b8b98b444c45ac41907b919f586"
+    "bytes": 8708,
+    "sha256": "4025b36e325c455c63730ca36954cb2b2323c1df1652102fc6a269cb45ead001"
   },
   {
     "path": "processed/energy-monthly-prices.csv",
@@ -483,6 +483,11 @@
     "path": "qa/tinytroupe-runtime-environment.json",
     "bytes": 797,
     "sha256": "a422bff88177f92f375dca4a683ae5293b84cb1972b2705ca2be39e994aebb54"
+  },
+  {
+    "path": "qa/treno-design-verification-2026-11-03.json",
+    "bytes": 1300,
+    "sha256": "6b88b612b71ca4df9fdef60e56fd92d6bcdb2d74c130df1b7553c34bf7d706ce"
   },
   {
     "path": "qa/usgs-mcs-2026-page-177.png",
